@@ -460,7 +460,7 @@ bytes_to_char = {
     b"\x8A\x5A": "??",
     b"\x8A\x5B": "??",
     b"\x8A\x5C": "??",
-    b"\x8A\x5D": "??",
+    b"\x8A\x5D": "映",
     b"\x8A\x5E": "??",
     b"\x8A\x5F": "??",
     b"\x8A\x60": "??",
@@ -597,7 +597,7 @@ bytes_to_char = {
     b"\x8A\xE3": "??",
     b"\x8A\xE4": "??",
     b"\x8A\xE5": "??",
-    b"\x8A\xE6": "??",
+    b"\x8A\xE6": "楽",
     b"\x8A\xE7": "??",
     b"\x8A\xE8": "??",
     b"\x8A\xE9": "??",
@@ -1871,7 +1871,7 @@ bytes_to_char = {
     b"\x8F\xDD": "??",
     b"\x8F\xDE": "??",
     b"\x8F\xDF": "??",
-    b"\x8F\xE0": "??",
+    b"\x8F\xE0": "像",
     b"\x8F\xE1": "??",
     b"\x8F\xE2": "??",
     b"\x8F\xE3": "??",
@@ -3459,10 +3459,11 @@ def string_to_bytes(s: str) -> list[bytes]:
         return encodings
     return recurse(0)
 
-def prepend_length(bs: bytes) -> bytes:
+def wrap_string(bs: bytes) -> bytes:
     return (
         int(len(bs)).to_bytes(length=4, byteorder="little")
         + bs
+        + b"\x00"
     )
 
 

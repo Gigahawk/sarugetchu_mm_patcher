@@ -1,10 +1,60 @@
-"VS.モード":
-  english: "VS.Mode"
-"ストーリーで遊<あそ>ぶモードです。":
-  english: "Play Story Mode."
+# Common
+"もどる":
+  english: "Return"
+"けってい":
+  english: "Select"
+"はい":
+  english: "Yes"
+"いいえ":
+  english: "No"
+
+
+# Start screen
+"ゲームスタート":
+  english: "Start Game"
+"お楽しみ映像":
+  # Why is this on the main menu?????
+  english: "Fun Video"
+
+# File select screen
+"スロット1":
+  english: "Slot 1"
+"スロット2":
+  english: "Slot 2"
+"スキップ":
+  english: "Skip"
+
+"ファイル1":
+  english: "File 1"
+"ファイル2":
+  english: "File 2"
+"ファイル3":
+  english: "File 3"
+"ファイル4":
+  english: "File 4"
+
+
+# Mode select screen
+"ストーリーモード":
+  english: "Story Mode"
 "コロシアムモード":
   english: "Colosseum Mode"
+"VS.モード":
+  # No need for an extra space, kerning on the period causes a space to appear 
+  # after it in game
+  english: "VS.Mode"
+"ファイルセレクト":
+  english: "File Select"
 "キャラクターエディット":
   english: "Character Edit"
+"パスワード":
+  english: "Password Entry"
+"オプション":
+  english: "Options"
+
+# Mode select screen descriptions
+"ストーリーで遊<あそ>ぶモードです。":
+  english: "Play Story Mode."
+
 "ロングレンジ":
   english: "Long Range"

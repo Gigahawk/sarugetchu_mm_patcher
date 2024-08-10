@@ -15,7 +15,7 @@ from sarugetchu_mm_patcher.index import (
     IndexEntry, get_index_list, index_list_to_bin
 )
 from sarugetchu_mm_patcher.encoding import (
-    string_to_bytes, prepend_length
+    string_to_bytes, wrap_string
 )
 
 EXTRACT_PATH = Path(".extracted")
@@ -62,8 +62,8 @@ def patch_text(iso: Ps2Iso, strings: dict[str, dict[str, Any]]) -> tuple[bytes, 
             new_bytestr = string_to_bytes(info["english"])[0]
             for jb in jap_bytestrs:
                 extracted = extracted.replace(
-                    prepend_length(jb),
-                    prepend_length(new_bytestr),
+                    wrap_string(jb),
+                    wrap_string(new_bytestr),
                 )
         extracted = bytes(extracted)
 
