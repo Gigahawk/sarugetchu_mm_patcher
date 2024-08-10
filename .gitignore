@@ -1,0 +1,5 @@
+**.iso
+**.txt
+*.extracted
+**__pycache__
+**.pyc

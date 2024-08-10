@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "sarugetchu-mm-patcher"
+version = "0.1.0"
+description = ""
+authors = ["Jasper Chan <jasperchan515@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+ps2isopatcher = {git = "https://github.com/Gigahawk/ps2isopatcher.git"}
+
+[tool.poetry.scripts]
+ssmm-patcher = "sarugetchu_mm_patcher.cli:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
