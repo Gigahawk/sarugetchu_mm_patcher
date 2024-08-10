@@ -22,6 +22,11 @@ Regardless, it doesn't seem like the game does any checking of this value so we'
 Each file in DATA1 is a gzip compressed file.
 
 Some files contain strings, this game uses a custom 2 byte text encoding (probably) between 0x889F to 0x95FF inclusive.
+> many strings appear in multiple files, but it seems that most (all?) appear in `00940549`, and so far only patching that file seems to be sufficient for the menus, there may be significant performance uplifts in patching speed by limiting the number of files we try to patch.
+
+> there appear to be duplicates in the encoding table, need to check whether these duplicates are ever used anywhere, significant performance uplifts are possible by removing unused ones from our encoding table, or otherwise providing a mechanism to specify which encoding to use on a per string basis
+
+
 Strings appear to be terminated with a single null byte
 Furigana is supported, with single byte 0x5B being used to indicate the start and 0x5D used to indicate the end
 
