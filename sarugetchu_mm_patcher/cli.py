@@ -17,76 +17,6 @@ EXTRACT_PATH = Path(".extracted")
 DATA0_PATH = "/PDATA/DATA0.BIN;1"
 DATA1_PATH = "/PDATA/DATA1.BIN;1"
 
-MENU_WHITELIST = [
-    #"dd45c596",
-    #"6cc96933",
-    #"3c6cf60b",
-    #"b2b250a8",
-    #"c55668f7",
-    #"87f51e0c",
-    #"1626079d",
-
-    #"4c084c39",
-    #"7243e526",
-
-    #"41f34892",
-
-    "00940549",
-
-    #"cd7a2b3c",
-    #"45912030",
-    #"4abee95e",
-    #"e76bf53f",
-
-    #"e13aef70",
-    #"c35e32d9",
-    #"5973ad65",
-    #"49913fd2",
-    #"f2b5553f",
-    #"a5bebda1",
-    #"dd798eb5",
-    #"143ca181",
-    #"33f84ad2",
-    #"dcd7b35d",
-    #"f2bc8cb1",
-    #"44f20e4a",
-    #"94380757",
-    #"b130371d",
-    #"8d3a2011",
-
-    #"72c71ee8",
-    #"b67e6c4c",
-    #"567ea3b3",
-    #"e1cdd8b9",
-    #"76ec174c",
-    #"06143ebb",
-    #"6e0a878d",
-    #"03a9e5e7",
-    #"f1453e5f",
-    #"5ebb5f0b",
-    #"a707263d",
-    #"604eda0f",
-    #"3a1b68cc",
-    #"3ed3e300",
-    #"96696a96",
-    #"ac56964e",
-    #"fde9fcbf",
-    #"f89bc790",
-    #"65322781",
-    #"7a8e0451",
-    #"2f029adf",
-    #"af89ea93",
-    #"aa3bb564",
-    #"b7a86c3b",
-    #"54110b1e",
-    #"0e36c98a",
-    #"38ff898c",
-    #"dd92277c",
-    #"04f26afc",
-    #"5668b0b6",
-    #"b3fbe4fc",
-]
-
 @click.group()
 def cli():
     pass
@@ -120,12 +50,12 @@ def patch_text(iso: Ps2Iso) -> tuple[bytes, bytes]:
             f.write(extracted)
         click.echo(f"Patching file {entry.name_str}")
         # VS.モード
-        old = b"\x88\xBE\x88\xBB\x89\xD8\x89\xB7\x89\x4E\x89\x9E"
+        old = b"\x0C\x00\x00\x00\x88\xBE\x88\xBB\x89\xD8\x89\xB7\x89\x4E\x89\x9E"
         # VSMODE
-        new = b"\x88\xBE\x88\xBB\x88\xB5\x88\xB7\x88\xAC\x88\xAD"
+        new = b"\x0E\x00\x00\x00\x88\xBE\x88\xBB\x89\xD8\x88\xB5\x88\xB7\x88\xAC\x88\xAD"
 
         # TODO: actually have a list of translations to edit
-        if old in extracted and entry.name_str in MENU_WHITELIST:
+        if old in extracted:
             click.echo(f"Found old string in {entry.name_str}")
             extracted = bytearray(extracted)
             extracted = extracted.replace(old, new)

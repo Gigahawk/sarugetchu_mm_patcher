@@ -2783,7 +2783,7 @@ encoding = {
     b"\x93\x72": "??",
     b"\x93\x73": "??",
     b"\x93\x74": "??",
-    b"\x93\x75": "??",
+    b"\x93\x75": "遊",
     b"\x93\x76": "??",
     b"\x93\x77": "??",
     b"\x93\x78": "??",
@@ -3447,16 +3447,31 @@ cols = 16
 while idx < len(data):
     token = data[idx:idx+2]
     if token in encoding:
-        print(f"{encoding[token]}\t", end="")
+        val = encoding[token]
+        if val == "??":
+            print(f"?{data[idx]:02X}\t", end="")
+            print(f"?{data[idx+1]:02X}\t", end="")
+        else:
+            print(f"{encoding[token]}\t", end="")
         idx += 1
-        if (idx % cols) == 0:
-            print("")
+#        if (idx % cols) == 0:
+#            print("")
         print(f"\t", end="")
         idx += 1
-        if (idx % cols) == 0:
-            print("")
+#        if (idx % cols) == 0:
+#            print("")
+    elif data[idx] == 0x5B:
+        print(f"<\t", end="")
+        idx += 1
+#        if (idx % cols) == 0:
+#            print("")
+    elif data[idx] == 0x5D:
+        print(f">\t", end="")
+        idx += 1
+#        if (idx % cols) == 0:
+#            print("")
     else:
         print(f"{data[idx]:02X}\t", end="")
         idx += 1
-        if (idx % cols) == 0:
-            print("")
+#        if (idx % cols) == 0:
+#            print("")
