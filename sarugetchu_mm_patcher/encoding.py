@@ -1,9 +1,21 @@
 from collections import defaultdict
 
 bytes_to_char = {
-    # Using angle brackets to notate Furigana start and end
+    #
+    # Special characters
+    #
+
+    # Angle bracket
     b"\x5B": "<",
     b"\x5D": ">",
+
+    # String formatting placeholder
+    b"\x25\x73": "%",
+
+
+    #
+    # Regular characters
+    #
     b"\x88\x9F": "1",
     b"\x88\xA0": "2",
     b"\x88\xA1": "3",
@@ -1075,7 +1087,7 @@ bytes_to_char = {
     b"\x8C\xC1": "??",
     b"\x8C\xC2": "??",
     b"\x8C\xC3": "??",
-    b"\x8C\xC4": "??",
+    b"\x8C\xC4": "行",
     b"\x8C\xC5": "??",
     b"\x8C\xC6": "??",
     b"\x8C\xC7": "??",
@@ -1635,7 +1647,7 @@ bytes_to_char = {
     b"\x8E\xF1": "??",
     b"\x8E\xF2": "??",
     b"\x8E\xF3": "??",
-    b"\x8E\xF4": "??",
+    b"\x8E\xF4": "進",
     b"\x8E\xF5": "??",
     b"\x8E\xF6": "??",
     b"\x8E\xF7": "??",
@@ -2887,7 +2899,7 @@ bytes_to_char = {
     b"\x93\xD5": "??",
     b"\x93\xD6": "??",
     b"\x93\xD7": "??",
-    b"\x93\xD8": "??",
+    b"\x93\xD8": "戻",
     b"\x93\xD9": "??",
     b"\x93\xDA": "??",
     b"\x93\xDB": "??",
@@ -3468,50 +3480,46 @@ def wrap_string(bs: bytes) -> bytes:
 
 
 if __name__ == "__main__":
-    from pprint import pprint
-    pprint(string_to_bytes(
-        "VS.モード"
-    ))
-    #with open("00940549", "rb") as f:
-    #    data = f.read()
+    with open("00940549", "rb") as f:
+        data = f.read()
 
-    #idx = 0
+    idx = 0
 
-    #cols = 16
+    cols = 16
 
-    #consec_tokens = 0
-    #while idx < len(data):
-    #    token = data[idx:idx+2]
-    #    if token in bytes_to_char:
-    #        consec_tokens += 1
-    #        val = bytes_to_char[token]
-    #        if val == "??":
-    #            print(f"?{data[idx]:02X}\t", end="")
-    #            print(f"?{data[idx+1]:02X}\t", end="")
-    #        else:
-    #            print(f"{bytes_to_char[token]}\t", end="")
-    #        idx += 1
-    ##        if (idx % cols) == 0:
-    ##            print("")
-    #        print(f"\t", end="")
-    #        idx += 1
-    ##        if (idx % cols) == 0:
-    ##            print("")
-    #    elif data[idx] == 0x5B:
-    #        print(f"<\t", end="")
-    #        idx += 1
-    ##        if (idx % cols) == 0:
-    ##            print("")
-    #    elif data[idx] == 0x5D:
-    #        print(f">\t", end="")
-    #        idx += 1
-    ##        if (idx % cols) == 0:
-    ##            print("")
-    #    else:
-    #        print(f"{data[idx]:02X}\t", end="")
-    ##        if (idx % cols) == 0:
-    ##            print("")
-    #        if consec_tokens > 3 and data[idx] == 0:
+    consec_tokens = 0
+    while idx < len(data):
+        token = data[idx:idx+2]
+        if token in bytes_to_char:
+            consec_tokens += 1
+            val = bytes_to_char[token]
+            if val == "??":
+                print(f"?{data[idx]:02X}\t", end="")
+                print(f"?{data[idx+1]:02X}\t", end="")
+            else:
+                print(f"{bytes_to_char[token]}\t", end="")
+            idx += 1
+    #        if (idx % cols) == 0:
     #            print("")
-    #        idx += 1
-    #        consec_tokens = 0
+            print(f"\t", end="")
+            idx += 1
+    #        if (idx % cols) == 0:
+    #            print("")
+        elif data[idx] == 0x5B:
+            print(f"<\t", end="")
+            idx += 1
+    #        if (idx % cols) == 0:
+    #            print("")
+        elif data[idx] == 0x5D:
+            print(f">\t", end="")
+            idx += 1
+    #        if (idx % cols) == 0:
+    #            print("")
+        else:
+            print(f"{data[idx]:02X}\t", end="")
+    #        if (idx % cols) == 0:
+    #            print("")
+            if consec_tokens > 3 and data[idx] == 0:
+                print("")
+            idx += 1
+            consec_tokens = 0

@@ -8,6 +8,14 @@
 "いいえ":
   english: "No"
 
+# Keyboard
+"けす":
+  english: "Erase"
+"とりけし":
+  english: "Cancel"
+"おわる":
+  english: "Finish"
+
 
 # Start screen
 "ゲームスタート":
@@ -17,6 +25,8 @@
   english: "Fun Video"
 
 # File select screen
+"進行ファイル":
+  english: "Save File"
 "スロット1":
   english: "Slot 1"
 "スロット2":
@@ -24,14 +34,22 @@
 "スキップ":
   english: "Skip"
 
-"ファイル1":
-  english: "File 1"
-"ファイル2":
-  english: "File 2"
-"ファイル3":
-  english: "File 3"
-"ファイル4":
-  english: "File 4"
+"ファイル":
+  english: "File"
+#"ファイル%":
+#  english: "File %"
+#"ファイル1":
+#  english: "File 1"
+#"ファイル2":
+#  english: "File 2"
+#"ファイル3":
+#  english: "File 3"
+#"ファイル4":
+#  english: "File 4"
+
+# Used in string formatting
+"%でよろしいですか?":
+  english: "Accept %?"
 
 
 # Mode select screen
@@ -40,7 +58,7 @@
 "コロシアムモード":
   english: "Colosseum Mode"
 "VS.モード":
-  # No need for an extra space, kerning on the period causes a space to appear 
+  # No need for an extra space, kerning on the period causes a space to appear
   # after it in game
   english: "VS.Mode"
 "ファイルセレクト":
@@ -58,3 +76,12 @@
 
 "ロングレンジ":
   english: "Long Range"
+
+"タイトルに戻<もど>りますか?":
+  english: "Return to the Title Screen?"
+
+# Chips?
+"エルビチップ":
+  english: "Elbi Chip"
+"キセノチップ":
+  english: "Kiseno Chip"
