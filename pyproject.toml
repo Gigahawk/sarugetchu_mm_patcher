@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.12"
 click = "^8.1.7"
 ps2isopatcher = {git = "https://github.com/Gigahawk/ps2isopatcher.git"}
+pyyaml = "^6.0.2"
 
 [tool.poetry.scripts]
 ssmm-patcher = "sarugetchu_mm_patcher.cli:cli"

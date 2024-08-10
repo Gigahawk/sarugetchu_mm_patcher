@@ -1,14 +1,19 @@
-encoding = {
-    b"\x88\x9F": 1,
-    b"\x88\xA0": 2,
-    b"\x88\xA1": 3,
-    b"\x88\xA2": 4,
-    b"\x88\xA3": 5,
-    b"\x88\xA4": 6,
-    b"\x88\xA5": 7,
-    b"\x88\xA6": 8,
-    b"\x88\xA7": 9,
-    b"\x88\xA8": 0,
+from collections import defaultdict
+
+bytes_to_char = {
+    # Using angle brackets to notate Furigana start and end
+    b"\x5B": "<",
+    b"\x5D": ">",
+    b"\x88\x9F": "1",
+    b"\x88\xA0": "2",
+    b"\x88\xA1": "3",
+    b"\x88\xA2": "4",
+    b"\x88\xA3": "5",
+    b"\x88\xA4": "6",
+    b"\x88\xA5": "7",
+    b"\x88\xA6": "8",
+    b"\x88\xA7": "9",
+    b"\x88\xA8": "0",
     b"\x88\xA9": "A",
     b"\x88\xAA": "B",
     b"\x88\xAB": "C",
@@ -3437,41 +3442,75 @@ encoding = {
 # Characters appear to end here
 }
 
-with open("00940549", "rb") as f:
-    data = f.read()
+char_to_bytes = defaultdict(list)
+for b, c in bytes_to_char.items():
+    char_to_bytes[c].append(b)
 
-idx = 0
+def string_to_bytes(s: str) -> list[bytes]:
+    def recurse(idx: int):
+        if idx == len(s):
+            return [b""]
 
-cols = 16
+        char = s[idx]
+        encodings = []
+        for bin_val in char_to_bytes[char]:
+            for suffix in recurse(idx + 1):
+                encodings.append(bin_val + suffix)
+        return encodings
+    return recurse(0)
 
-while idx < len(data):
-    token = data[idx:idx+2]
-    if token in encoding:
-        val = encoding[token]
-        if val == "??":
-            print(f"?{data[idx]:02X}\t", end="")
-            print(f"?{data[idx+1]:02X}\t", end="")
-        else:
-            print(f"{encoding[token]}\t", end="")
-        idx += 1
-#        if (idx % cols) == 0:
-#            print("")
-        print(f"\t", end="")
-        idx += 1
-#        if (idx % cols) == 0:
-#            print("")
-    elif data[idx] == 0x5B:
-        print(f"<\t", end="")
-        idx += 1
-#        if (idx % cols) == 0:
-#            print("")
-    elif data[idx] == 0x5D:
-        print(f">\t", end="")
-        idx += 1
-#        if (idx % cols) == 0:
-#            print("")
-    else:
-        print(f"{data[idx]:02X}\t", end="")
-        idx += 1
-#        if (idx % cols) == 0:
-#            print("")
+def prepend_length(bs: bytes) -> bytes:
+    return (
+        int(len(bs)).to_bytes(length=4, byteorder="little")
+        + bs
+    )
+
+
+if __name__ == "__main__":
+    from pprint import pprint
+    pprint(string_to_bytes(
+        "VS.モード"
+    ))
+    #with open("00940549", "rb") as f:
+    #    data = f.read()
+
+    #idx = 0
+
+    #cols = 16
+
+    #consec_tokens = 0
+    #while idx < len(data):
+    #    token = data[idx:idx+2]
+    #    if token in bytes_to_char:
+    #        consec_tokens += 1
+    #        val = bytes_to_char[token]
+    #        if val == "??":
+    #            print(f"?{data[idx]:02X}\t", end="")
+    #            print(f"?{data[idx+1]:02X}\t", end="")
+    #        else:
+    #            print(f"{bytes_to_char[token]}\t", end="")
+    #        idx += 1
+    ##        if (idx % cols) == 0:
+    ##            print("")
+    #        print(f"\t", end="")
+    #        idx += 1
+    ##        if (idx % cols) == 0:
+    ##            print("")
+    #    elif data[idx] == 0x5B:
+    #        print(f"<\t", end="")
+    #        idx += 1
+    ##        if (idx % cols) == 0:
+    ##            print("")
+    #    elif data[idx] == 0x5D:
+    #        print(f">\t", end="")
+    #        idx += 1
+    ##        if (idx % cols) == 0:
+    ##            print("")
+    #    else:
+    #        print(f"{data[idx]:02X}\t", end="")
+    ##        if (idx % cols) == 0:
+    ##            print("")
+    #        if consec_tokens > 3 and data[idx] == 0:
+    #            print("")
+    #        idx += 1
+    #        consec_tokens = 0

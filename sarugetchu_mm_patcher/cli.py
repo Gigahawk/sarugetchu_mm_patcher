@@ -1,3 +1,4 @@
+from typing import Any
 from pathlib import Path
 import gzip
 import io
@@ -5,12 +6,16 @@ from multiprocessing.pool import ThreadPool, AsyncResult
 import os
 from time import sleep
 
+import yaml
 from ps2isopatcher.iso import Ps2Iso, TreeFile
 import click
 
 import sarugetchu_mm_patcher.util as util
 from sarugetchu_mm_patcher.index import (
     IndexEntry, get_index_list, index_list_to_bin
+)
+from sarugetchu_mm_patcher.encoding import (
+    string_to_bytes, prepend_length
 )
 
 EXTRACT_PATH = Path(".extracted")
@@ -21,7 +26,7 @@ DATA1_PATH = "/PDATA/DATA1.BIN;1"
 def cli():
     pass
 
-def patch_text(iso: Ps2Iso) -> tuple[bytes, bytes]:
+def patch_text(iso: Ps2Iso, strings: dict[str, dict[str, Any]]) -> tuple[bytes, bytes]:
     click.echo("Patching game text")
 
 
@@ -49,17 +54,18 @@ def patch_text(iso: Ps2Iso) -> tuple[bytes, bytes]:
         with open(EXTRACT_PATH / entry.name_str, "wb") as f:
             f.write(extracted)
         click.echo(f"Patching file {entry.name_str}")
-        # VS.モード
-        old = b"\x0C\x00\x00\x00\x88\xBE\x88\xBB\x89\xD8\x89\xB7\x89\x4E\x89\x9E"
-        # VSMODE
-        new = b"\x0E\x00\x00\x00\x88\xBE\x88\xBB\x89\xD8\x88\xB5\x88\xB7\x88\xAC\x88\xAD"
 
-        # TODO: actually have a list of translations to edit
-        if old in extracted:
-            click.echo(f"Found old string in {entry.name_str}")
-            extracted = bytearray(extracted)
-            extracted = extracted.replace(old, new)
-            extracted = bytes(extracted)
+        extracted = bytearray(extracted)
+        for jap_str, info in strings.items():
+            jap_bytestrs = string_to_bytes(jap_str)
+            # TODO: support other langs?
+            new_bytestr = string_to_bytes(info["english"])[0]
+            for jb in jap_bytestrs:
+                extracted = extracted.replace(
+                    prepend_length(jb),
+                    prepend_length(new_bytestr),
+                )
+        extracted = bytes(extracted)
 
         click.echo(f"Recompressing file {entry.name_str}")
         recompressed = io.BytesIO()
@@ -108,10 +114,16 @@ def open_mutable(input: str | os.PathLike) -> AsyncResult:
     type=click.Path(),
 )
 @click.option(
+    "-s", "--strings",
+    default="strings.yaml",
+    show_default=True,
+    type=click.Path(),
+)
+@click.option(
     "--md5/--no-md5",
     default=True,
 )
-def patch(input: str | os.PathLike, md5: bool):
+def patch(input: str | os.PathLike, strings: str | os.PathLike, md5: bool):
     if md5:
         click.echo(f"Checking MD5 on {input}")
         expected_md5 = "946d0aeb90772efd9105b0f785b2c7ec"
@@ -126,7 +138,11 @@ def patch(input: str | os.PathLike, md5: bool):
     iso = Ps2Iso(input)
     iso_async_result = open_mutable(input)
 
-    data0, data1 = patch_text(iso)
+    click.echo(f"Opening translation file {strings}")
+    with open(strings, "r") as f:
+        strings_dict = yaml.safe_load(f)
+
+    data0, data1 = patch_text(iso, strings_dict)
 
     click.echo("Waiting for mutable copy to open")
     iso_mut: Ps2Iso = iso_async_result.get()
