@@ -7,6 +7,8 @@
   english: "Yes"
 "いいえ":
   english: "No"
+"さくじょ":
+  english: "Delete"
 
 # Keyboard
 "けす":
@@ -24,7 +26,7 @@
   # Why is this on the main menu?????
   english: "Fun Video"
 
-# File select screen
+# Memory Card slot select screen
 "進行ファイル":
   english: "Save File"
 "スロット1":
@@ -34,6 +36,14 @@
 "スキップ":
   english: "Skip"
 
+# Memory Card slot select screen descriptions
+"メモリーカードスロットを選<えら>んでください。":
+  english: "Please select a Memory Card slot."
+"進行<しんこう>ファイルを使用<しよう>しないでゲームを始<はじ>めます。":
+  english: "Start the game without a Save File."
+
+
+# File select screen
 "ファイル":
   english: "File"
 #"ファイル%":
@@ -47,9 +57,20 @@
 #"ファイル4":
 #  english: "File 4"
 
-# Used in string formatting
+# File select screen descriptions
+"ファイルを選<えら>んでください。":
+  english: "Please select a file."
+
 "%でよろしいですか?":
   english: "Accept %?"
+
+# File confirm screen
+"エピソードカケル":
+  english: "Episode Kakeru"
+"エピソードスペクター":
+  english: "Episode Specter"
+"ワールドトーナメント":
+  english: "World Tournament"
 
 
 # Mode select screen
@@ -74,11 +95,27 @@
 "ストーリーで遊<あそ>ぶモードです。":
   english: "Play Story Mode."
 
-"ロングレンジ":
-  english: "Long Range"
 
 "タイトルに戻<もど>りますか?":
   english: "Return to the Title Screen?"
+
+"キャラクターファイル":
+  english: "Character File"
+
+# Level names?
+"コンテナターミナル":
+  english: "Container Terminal"
+
+# Weapons?
+"ロングレンジ":
+  english: "Long Range"
+"マシンガン":
+  english: "Machine Gun"
+"ショットガン":
+  english: "Shotgun"
+"バーニア":
+  # ???
+  english: "Vernier scale"
 
 # Chips?
 "エルビチップ":
