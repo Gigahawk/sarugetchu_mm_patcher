@@ -5,7 +5,7 @@ bytes_to_char = {
     # Special characters
     #
 
-    # Angle bracket
+    # Angle brackets as furigana markers
     b"\x5B": "<",
     b"\x5D": ">",
 
@@ -3478,48 +3478,3 @@ def wrap_string(bs: bytes) -> bytes:
         + b"\x00"
     )
 
-
-if __name__ == "__main__":
-    with open("00940549", "rb") as f:
-        data = f.read()
-
-    idx = 0
-
-    cols = 16
-
-    consec_tokens = 0
-    while idx < len(data):
-        token = data[idx:idx+2]
-        if token in bytes_to_char:
-            consec_tokens += 1
-            val = bytes_to_char[token]
-            if val == "??":
-                print(f"?{data[idx]:02X}\t", end="")
-                print(f"?{data[idx+1]:02X}\t", end="")
-            else:
-                print(f"{bytes_to_char[token]}\t", end="")
-            idx += 1
-    #        if (idx % cols) == 0:
-    #            print("")
-            print(f"\t", end="")
-            idx += 1
-    #        if (idx % cols) == 0:
-    #            print("")
-        elif data[idx] == 0x5B:
-            print(f"<\t", end="")
-            idx += 1
-    #        if (idx % cols) == 0:
-    #            print("")
-        elif data[idx] == 0x5D:
-            print(f">\t", end="")
-            idx += 1
-    #        if (idx % cols) == 0:
-    #            print("")
-        else:
-            print(f"{data[idx]:02X}\t", end="")
-    #        if (idx % cols) == 0:
-    #            print("")
-            if consec_tokens > 3 and data[idx] == 0:
-                print("")
-            idx += 1
-            consec_tokens = 0
