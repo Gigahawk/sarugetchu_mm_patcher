@@ -39,7 +39,7 @@ def print_strings():
         )
         actual_length = len(string) - 9
         print(
-            f"\"Found string at {idx} with id {string_id.hex(' ')}; "
+            f"\"Found string at {hex(idx)} with id {string_id.hex(' ')}; "
             f"allocation_length {alloc_len} ({string_len_bytes.hex(' ')}); "
             f"actual length {actual_length}\""
         )
@@ -61,7 +61,11 @@ def print_strings():
             print(f'"{token.hex().upper()}",', end="")
         print("")
         for token in tokens:
-            print(f'"{bytes_to_char[token]}",', end="")
+            char = bytes_to_char[token]
+            if char == "\n":
+                print('"\\n",', end="")
+            else:
+                print(f'"{char}",', end="")
         print("")
 
 def main():

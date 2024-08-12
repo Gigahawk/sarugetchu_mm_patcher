@@ -11,6 +11,7 @@ bytes_to_char = {
 
     # String formatting placeholder
     b"\x25\x73": "%",
+    b"\x0A": "\n",
 
 
     #
