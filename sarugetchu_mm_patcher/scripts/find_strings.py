@@ -12,6 +12,7 @@ class States(Enum):
     STRING_BEGIN = auto()
 
 strings: list[tuple[int, bytes]] = []
+unknown_strings: int = 0
 
 def inspect_string(start_idx, end_idx):
     # Some strings are randomly allocated an extra byte?
@@ -29,7 +30,7 @@ def inspect_string(start_idx, end_idx):
         )
 
 def print_strings():
-    global strings
+    global strings, unknown_strings
     for idx, string in strings:
         string_id = string[0:4]
         string_len_bytes = string[4:8]
@@ -60,16 +61,22 @@ def print_strings():
         for token in tokens:
             print(f'"{token.hex().upper()}",', end="")
         print("")
+        string_contains_unknown = False
         for token in tokens:
             char = bytes_to_char[token]
             if char == "\n":
                 print('"\\n",', end="")
             else:
                 print(f'"{char}",', end="")
+            if char == "??":
+                string_contains_unknown = True
         print("")
+        if string_contains_unknown:
+            unknown_strings += 1
+
 
 def main():
-    global strings
+    global strings, unknown_strings
     state = States.IDLE
 
     idx = 0
@@ -102,6 +109,13 @@ def main():
     strings.sort(key=lambda s: len(s[1]), reverse=True)
 
     print_strings()
+
+    print(f"Total strings: {len(strings)}")
+    print(
+        "Strings with unencoded char: "
+        f"{unknown_strings} ({unknown_strings/len(strings)*100}%)"
+    )
+
 
 
 if __name__ == "__main__":
