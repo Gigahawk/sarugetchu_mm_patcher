@@ -1,3 +1,6 @@
+from googletrans import Translator, LANGCODES
+import yaml
+import re
 from pprint import pprint
 from enum import Enum, auto
 
@@ -11,12 +14,10 @@ class States(Enum):
     IDLE = auto()
     STRING_BEGIN = auto()
 
-strings: list[tuple[int, bytes]] = []
-unknown_strings: int = 0
 
-def inspect_string(start_idx, end_idx):
+def inspect_string(start_idx, end_idx) -> tuple[int, bytes]:
     # Some strings are randomly allocated an extra byte?
-    global strings
+    # Allow for allocation size to be greater than the string length
     max_over = 5
     alloc_length = int.from_bytes(
         data[start_idx-4:start_idx],
@@ -25,60 +26,89 @@ def inspect_string(start_idx, end_idx):
     str_length = end_idx - start_idx
     if str_length <= alloc_length <= (str_length + max_over):
         string = data[start_idx-8:end_idx+1]
-        strings.append(
-            (start_idx, string)
-        )
+        return start_idx, string
 
-def print_strings():
-    global strings, unknown_strings
-    for idx, string in strings:
-        string_id = string[0:4]
-        string_len_bytes = string[4:8]
-        alloc_len = int.from_bytes(
-            string_len_bytes,
-            byteorder="little"
+def build_csv(strings: list[tuple[int, bytes, int, int, list[bytes], str]]):
+    with open("strings.csv", "w") as f:
+        for idx, id, alloc_len, actual_len, tokens, string in strings:
+            f.write(
+                f"\"Found string at {hex(idx)} with id {id.hex(' ')}; "
+                f"allocation_length {alloc_len}; "
+                f"actual length {actual_len}\"\n"
+            )
+            if alloc_len > actual_len:
+                f.write("ALLOC BIGGER THAN STRING LEN\n")
+            # Japanese chars print with non deterministic len, use libreoffice for justification
+            for token in tokens:
+                f.write(f'"{token.hex().upper()}",')
+            f.write("\n")
+            for char in string:
+                f.write(f'"{char}",')
+            f.write("\n")
+
+def has_unknown_tokens(tokens: list[bytes]) -> bool:
+    return any([bytes_to_char[t] == "??" for t in tokens])
+
+def count_unknown_strings(
+        strings: list[tuple[int, bytes, int, int, list[bytes], str]]
+    ):
+    # Count tokens in case some real strings have ?? as text
+    num_unknown = 0
+    for _, _, _, _, tokens, _ in strings:
+        if has_unknown_tokens(tokens):
+            num_unknown += 1
+    print(f"Total strings: {len(strings)}")
+    print(
+        "Strings with unencoded char: "
+        f"{num_unknown} ({num_unknown/len(strings)*100}%)"
+    )
+
+def build_translation_doc(
+        strings: list[tuple[int, bytes, int, int, list[bytes], str]]
+    ):
+    print("Generating translations")
+    translator = Translator()
+    try:
+        with open("strings.yaml", "r") as f:
+            translations = yaml.safe_load(f)
+    except FileNotFoundError:
+        translations = {}
+
+    for _, _, _, _, tokens, string in strings:
+        if has_unknown_tokens(tokens):
+            print("Skipping string with unknown tokens:")
+            print(string)
+            continue
+        if string in translations:
+            print("Skipping string already in translations:")
+            print(string)
+            print(translations[string])
+            continue
+        if not string.strip():
+            print(f"Skipping blank string {repr(string)}")
+            continue
+        print("Translating string:")
+        print(string)
+        # Remove furigana for translation
+        trans_string = re.sub(r"<.+>", "", string)
+        translated = translator.translate(
+            trans_string,
+            src="ja",
+            dest="en"
         )
-        actual_length = len(string) - 9
-        print(
-            f"\"Found string at {hex(idx)} with id {string_id.hex(' ')}; "
-            f"allocation_length {alloc_len} ({string_len_bytes.hex(' ')}); "
-            f"actual length {actual_length}\""
-        )
-        if alloc_len > actual_length:
-            print("ALLOC BIGGER THAN STRING LEN")
-        i = 8
-        tokens: list[bytes] = []
-        while i < len(string) - 1:
-            byte = string[i:i+1]
-            token = string[i:i+2]
-            if token in bytes_to_char:
-                tokens.append(token)
-                i += 2
-                continue
-            tokens.append(byte)
-            i += 1
-        # Japanese chars print with non deterministic len, use libreoffice for justification
-        for token in tokens:
-            print(f'"{token.hex().upper()}",', end="")
-        print("")
-        string_contains_unknown = False
-        for token in tokens:
-            char = bytes_to_char[token]
-            if char == "\n":
-                print('"\\n",', end="")
-            else:
-                print(f'"{char}",', end="")
-            if char == "??":
-                string_contains_unknown = True
-        print("")
-        if string_contains_unknown:
-            unknown_strings += 1
+        print(translated.text)
+        translations[string] = {
+            "english": translated.text
+        }
+        dump = yaml.dump(translations, allow_unicode=True)
+        with open("strings.yaml", "w") as f:
+            f.write(dump)
 
 
-def main():
-    global strings, unknown_strings
+
+def find_string_locs() -> list[tuple[int, bytes]]:
     state = States.IDLE
-
+    strings = []
     idx = 0
     string_start_idx = None
 
@@ -102,19 +132,70 @@ def main():
                 continue
             if byte == b"\x00":
                 # Found end of string
-                inspect_string(string_start_idx, idx)
+                string = inspect_string(string_start_idx, idx)
+                if string is not None:
+                    strings.append(string)
             state = States.IDLE
         idx += 1
 
-    strings.sort(key=lambda s: len(s[1]), reverse=True)
+    #strings.sort(key=lambda s: len(s[1]), reverse=True)
+    return strings
 
-    print_strings()
+def tokenize_string(string: bytes) -> list[bytes]:
+    idx = 0
+    out = []
+    while idx < len(string):
+        byte = string[idx:idx+1]
+        token = string[idx:idx+2]
 
-    print(f"Total strings: {len(strings)}")
-    print(
-        "Strings with unencoded char: "
-        f"{unknown_strings} ({unknown_strings/len(strings)*100}%)"
-    )
+        if token in bytes_to_char:
+            out.append(token)
+            idx += 2
+            continue
+        if byte in bytes_to_char:
+            out.append(byte)
+            idx += 1
+            continue
+        raise ValueError(
+            f"Got invalid byte or token {byte}, {token}"
+        )
+    return out
+
+def stringify_tokens(tokens: list[bytes]) -> str:
+    return "".join(bytes_to_char[t] for t in tokens)
+
+
+def extract_strings(
+        string_locs: list[tuple[int, bytes]]
+    ) -> list[tuple[int, bytes, int, int, list[bytes], str]]:
+    strings = []
+    for idx, string_bytes in string_locs:
+        string_id = string_bytes[0:4]
+        string_len_bytes = string_bytes[4:8]
+        alloc_len = int.from_bytes(
+            string_len_bytes,
+            byteorder="little"
+        )
+        string = string_bytes[8:-1]
+        actual_len = len(string)
+        tokens = tokenize_string(string)
+        stringified_string = stringify_tokens(tokens)
+        strings.append((
+            idx, string_id, alloc_len, actual_len, tokens, stringified_string
+        ))
+    return strings
+
+def main():
+    string_locs = find_string_locs()
+
+    strings = extract_strings(string_locs)
+
+    build_csv(strings)
+
+    count_unknown_strings(strings)
+
+    build_translation_doc(strings)
+
 
 
 

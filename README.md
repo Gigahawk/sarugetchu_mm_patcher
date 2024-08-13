@@ -36,4 +36,7 @@ The second 4 bytes are the length of the string in bytes, not including the null
 ### Kanji Encodings
 
 There's a lot of kanji, quite hard to figure out the encodings for all of them.
-It appears the each row in the kanji keyboard is actually stored inside DATA1 in order, best to update the encoding list one row at a time
+It appears the each row in the kanji keyboard is actually stored inside DATA1 in order, best to update the encoding list one row at a time.
+
+There appear to be some kanji not available through the keyboard?
+Maybe the devs just got lazy and didn't feel like organizing them all

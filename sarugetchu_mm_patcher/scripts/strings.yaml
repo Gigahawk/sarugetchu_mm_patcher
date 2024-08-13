@@ -1,0 +1,3940 @@
+? " あと少<すこ>しで新記録<しんきろく>だったんだよ!\n あと少<すこ>しでウキイシに勝<か>てたんだっ!"
+: english: "There was only a little left!\n There was only a little left!"
+? " あれはすべて私<わたし>が指示<しじ>したことだ!\n 部下<ぶか>に責任<せきにん>はない!"
+: english: "That was all done by me!\n There are no subordinates!"
+? " いたずらしてたんじゃない!\n 調子<ちょうし>が悪<わる>いようだから直<なお>そうとしただけだ!"
+: english: "I wasn't playing a prank!\n I was just trying to keep up!"
+? " こっ、このオレ様<さま>の究極<きゅうきょく>のさぼりテクニックが\n 敗<やぶ>れるとは! さてはただものじゃないなっ!"
+: english: "Hey, this sloppy technique of me\n I can't believe I lost! Well, it's\
+    \ not just a thing!"
+? " じきに仲間<なかま>が助<たす>けにくるぞ!\n きっと来<く>る! たぶん来<く>る!"
+: english: "I'll come join you soon!\n I'm sure it will come!"
+? " ちいさなアタリがきてたんだよ!\n どうして待<ま>ってくれないんだ!"
+: english: "A small atari has arrived!\n Why can't you wait!"
+? " なんだあのマニュアルは! さっぱりわからないぞ!\n いったいだれが書<か>いたんだ!!"
+: english: "What is that manual? I don't understand it at all!\n Who on earth wrote\
+    \ that!!"
+? " ひどいじゃないか!\n のんびり海<うみ>を見<み>てただけなのにっ!"
+: english: "That's fucked up!\n I was just relaxing at the sea!"
+? " まったくいつまで待<ま>たせるんだよ!\n 待<ま>ち伏<ぶ>せするほうの身<み>にもなってくれよ!"
+: english: "How long are you going to make me wait!\n Please be patient!"
+? " オレの待<ま>ち伏<ぶ>せに気<き>がつくとは!\n さすがだ!!"
+: english: "I can't believe how long I've been waiting!\n As expected!!"
+? " オレの待<ま>ち伏<ぶ>せに気<き>がつくとは!\n さてはレーダーだなっ!! ひきょうだぞっ!"
+: english: "I can't believe how long I've been waiting!\n Now it's the radar!! It's\
+    \ a flycatcher!"
+? " オレはお前<まえ>に負<ま>けたんじゃないぞ!\n あったかい日差<ひざ>しに負<ま>けたんだ!"
+: english: "I didn't kill you!\n It was a warm day!"
+? " オレはなにもしてないだろ!\n 画面<がめん>をよく見<み>てくれよ!"
+: english: "I haven't done anything!\n Give me the screen!"
+? " ジョーには負<ま>けられない!\n ヤツにだけは負<ま>けられないんだ。"
+: english: "I can't lose to Joe!\n I just can't lose to him."
+? " ボクのせいじゃないんです!\n ガンがボクをあやつってたんです!"
+: english: "It's not my fault!\n The cancer was controlling me!"
+? " ボクは何<なに>も言<い>わない!\n 何<なに>をされても絶対<ぜったい>に言<い>わないぞ!"
+: english: "What am I doing?\n I won't say anything!"
+? " ヤツは生<い>きている! 本当<ほんとう>だ!\n 信<しん>じてくれ!"
+: english: "He's raw!\n Believe me!"
+? " ワイは実家<じっか>に電話<でんわ>してただけや!\n 親<おや>と話<はなし>して何<なに>が悪<わる>いんじゃー!"
+: english: "I was just staying at my parents' house!\n You're so close!"
+? " 何<なに>がおかしい! ボクはサルだ!\n サルは木<き>に登<のぼ>るものなんだ!"
+: english: "What's wrong? I'm a monkey!\n Monkeys grow!"
+? " 居眠<いねむ>りしてたって!?\n あの時間<じかん>に起<お>きてるほうがおかしいと思<おも>うよ!"
+: english: "Did you fall asleep!?\n It's that time!"
+? " 海<うみ>はみんなのものだろ!\n どうしてボクがゲッチュされないといけないんだ!?"
+: english: "The sea belongs to everyone!\n Why do I have to be fooled!?"
+? " 警備<けいび>の交代時間<こうたいじかん>なのに\n デイビッドが起<お>きてくれないんだよ!!"
+: english: "Even though it's security\n David won't wake up!!"
+? " 邪魔<じゃま>してもムダだ!\n この夏<なつ>の大会<たいかい>はボクらが優勝<ゆうしょう>だ!"
+: english: "There's no point in interfering!\n It's this summer!"
+'"':
+  english: ”
+? '%
+
+  このパスワードでよろしいですか?'
+: english: '%
+
+    Are you sure you want this password?'
+? '%がいっぱいです。
+
+  %を手<て>に入<い>れるには持<も>っている
+
+  %をどれか1つ削除<さくじょ>しなければいけません。
+
+  %を削除<さくじょ>しますか?'
+: english: '% is full.
+
+    holding %
+
+    You must remove one of the %s.
+
+    Do you want to delete %?'
+'%が出現<しゅつげん>しました。':
+  english: '% has appeared.'
+'%でよろしいですか?':
+  english: Is % OK?
+? '%と%を合成<ごうせい>します。
+
+  よろしいですか?'
+: english: 'Combines % and %.
+
+    Are you sure?'
+? '%に
+
+  メモリーカード(PS2)が差<さ>し込<こ>まれていません。
+
+  このままではキャラクターファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。'
+: english: 'to %
+
+    Memory card (PS2) is not inserted.
+
+    If this continues, you will not be able to save the character file.
+
+    Please do it last time.'
+? '%に
+
+  メモリーカード(PS2)が差<さ>し込<こ>まれていません。
+
+  このままでは進行<しんこう>ファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。'
+: english: 'to %
+
+    Memory card (PS2) is not inserted.
+
+    If this continues, you will not be able to save your progress file.
+
+    Please do it last time.'
+? '%にぜんかいロードした
+
+  メモリーカード(PS2)が差<さ>し込<こ>まれていません。
+
+  このままではキャラクターファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。
+
+  キャンセルすると、チップは失<うしな>われてしまいます。'
+: english: 'Fully loaded to %
+
+    Memory card (PS2) is not inserted.
+
+    If this continues, you will not be able to save the character file.
+
+    Please do it last time.
+
+    If you cancel, you will lose your chips.'
+? '%にぜんかいロードした
+
+  メモリーカード(PS2)が差<さ>し込<こ>まれていません。
+
+  このままではキャラクターファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。
+
+  キャンセルすると、チップを受<う>け取<と>ることができません。'
+: english: 'Fully loaded to %
+
+    Memory card (PS2) is not inserted.
+
+    If this continues, you will not be able to save the character file.
+
+    Please do it last time.
+
+    If you cancel, you will not receive a tip.'
+? '%にメモリーカード(PS2)が
+
+  差<さ>し込<こ>まれていません。
+
+  このままではキャラクターファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。
+
+  キャンセルすると、チップは失<うしな>われてしまいます。'
+: english: '% has a memory card (PS2)
+
+    There is no difference.
+
+    If this continues, you will not be able to save the character file.
+
+    Please do it last time.
+
+    If you cancel, you will lose your chips.'
+? '%にメモリーカード(PS2)が
+
+  差<さ>し込<こ>まれていません。
+
+  このままではキャラクターファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。
+
+  キャンセルすると、チップを受<う>け取<と>ることができません。'
+: english: '% has a memory card (PS2)
+
+    There is no difference.
+
+    If this continues, you will not be able to save the character file.
+
+    Please do it last time.
+
+    If you cancel, you will not receive a tip.'
+? '%に前回<ぜんかい>ロードした
+
+  メモリーカード(PS2)が差<さ>し込<こ>まれていません。
+
+  このままではキャラクターファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。'
+: english: 'Last loaded in %
+
+    Memory card (PS2) is not inserted.
+
+    If this continues, you will not be able to save the character file.
+
+    Please do it last time.'
+? '%に前回<ぜんかい>ロードした
+
+  メモリーカード(PS2)が差<さ>し込<こ>まれていません。
+
+  このままでは進行<しんこう>ファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。'
+: english: 'Last loaded in %
+
+    Memory card (PS2) is not inserted.
+
+    If this continues, you will not be able to save your progress file.
+
+    Please do it last time.'
+? '%に前回<ぜんかい>ロードしたメモリーカード(PS2)が差<さ>さって
+
+  いません。前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。'
+: english: '% last time
+
+    not here. Please do it last time.'
+? '%の
+
+  メモリーカード(PS2)が
+
+  抜<ぬ>かれたため
+
+  ロードに失敗<しっぱい>しました。'
+: english: '%of
+
+    Memory card (PS2)
+
+    Because it was pulled out
+
+    Loading failed.'
+? '%の
+
+  メモリーカード(PS2)には
+
+  キャラクターファイルが
+
+  ありません。'
+: english: '%of
+
+    On the memory card (PS2)
+
+    character file
+
+    there is no.'
+? '%の
+
+  メモリーカード(PS2)には
+
+  ミリオンモンキーズの
+
+  ゲームデータがありません。'
+: english: '%of
+
+    On the memory card (PS2)
+
+    million monkeys
+
+    There is no game data.'
+? '%の%を%へムーブします。
+
+  よろしいですか?'
+: english: 'Moves % of % to %.
+
+    Are you sure?'
+? '%の%を削除<さくじょ>して
+
+  %の%をムーブします。 よろしいですか?'
+: english: 'Delete % of %
+
+    Move % of %. Are you sure?'
+'%のキャラクターファイル%の削除<さくじょ>が完了<かんりょう>しました。':
+  english: '%character file% has been deleted.'
+? '%のキャラクターファイルの
+
+  ロードに失敗<しっぱい>しました。'
+: english: '% character file
+
+    Loading failed.'
+? '%のミリオンモンキーズの
+
+  ゲームデータは破損<はそん>しています。
+
+  本体<ほんたい>のブラウザ画面<がめん>で破損<はそん>データを削除<さくじょ>して
+
+  ゲームデータを作<つく>り直<なお>してください。'
+: english: '% Million Monkeys
+
+    Game data is corrupted.
+
+    Main body
+
+    Please create game data.'
+? '%のミリオンモンキーズのゲームデータ作成<さくせい>に
+
+  失敗<しっぱい>しました。'
+: english: '% of Million Monkeys game data creation
+
+    Failed.'
+? '%のメモリーカード(PS2)がぬかれたため
+
+  キャラクターファイルのセーブに失敗<しっぱい>しました。
+
+  このままではキャラクターファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。
+
+  キャンセルすると、チップは失<うしな>われてしまいます。'
+: english: '% memory card (PS2) was removed.
+
+    Failed to save character file.
+
+    If this continues, you will not be able to save the character file.
+
+    Please do it last time.
+
+    If you cancel, you will lose your chips.'
+? '%のメモリーカード(PS2)がぬかれたため
+
+  キャラクターファイルのセーブに失敗<しっぱい>しました。
+
+  このままではキャラクターファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。
+
+  キャンセルすると、チップを受<う>け取<と>ることができません。'
+: english: '% memory card (PS2) was removed.
+
+    Failed to save character file.
+
+    If this continues, you will not be able to save the character file.
+
+    Please do it last time.
+
+    If you cancel, you will not receive a tip.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  キャラクターファイルのセーブに失敗<しっぱい>しました。'
+: english: '% memory card (PS2) was removed.
+
+    Failed to save character file.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  キャラクターファイルのセーブに失敗<しっぱい>しました。
+
+  このままではキャラクターファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。'
+: english: '% memory card (PS2) was removed.
+
+    Failed to save character file.
+
+    If this continues, you will not be able to save the character file.
+
+    Please do it last time.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  キャラクターファイルのロードに失敗<しっぱい>しました。'
+: english: '% memory card (PS2) was removed.
+
+    Failed to load character file.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  キャラクターファイルの削除<さくじょ>に失敗<しっぱい>しました。'
+: english: '% memory card (PS2) was removed.
+
+    Character files have been deleted.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  フォーマットに失敗<しっぱい>しました。'
+: english: '% memory card (PS2) was removed.
+
+    Format failed.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  ミリオンモンキーズのゲームデータ作成<さくせい>に失敗<しっぱい>しました。'
+: english: '% memory card (PS2) was removed.
+
+    I created the game data for Million Monkeys.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  進行<しんこう>ファイルのセーブに失敗<しっぱい>しました。'
+: english: '% memory card (PS2) was removed.
+
+    It has progressed.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  進行<しんこう>ファイルのセーブに失敗<しっぱい>しました。
+
+  このままでは進行<しんこう>ファイルのセーブができません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。'
+: english: '% memory card (PS2) was removed.
+
+    It has progressed.
+
+    If this continues, you will not be able to save your progress file.
+
+    Please do it last time.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  進行<しんこう>ファイルのロードに失敗<しっぱい>しました。'
+: english: '% memory card (PS2) was removed.
+
+    It has progressed.'
+? '%のメモリーカード(PS2)が抜<ぬ>かれたため
+
+  進行<しんこう>ファイルの削除<さくじょ>に失敗<しっぱい>しました。'
+: english: '% memory card (PS2) was removed.
+
+    It has progressed.'
+? '%のメモリーカード(PS2)に
+
+  ミリオンモンキーズのゲームデータを作成<さくせい>しました。'
+: english: '% memory card (PS2)
+
+    I created the game data for Million Monkeys.'
+? '%のメモリーカード(PS2)にある
+
+  キャラクターファイル%の削除<さくじょ>に失敗<しっぱい>しました。'
+: english: '% of memory cards (PS2)
+
+    Character file% has been deleted.'
+? '%のメモリーカード(PS2)にある
+
+  進行<しんこう>ファイル%の削除<さくじょ>に失敗<しっぱい>しました。'
+: english: '% of memory cards (PS2)
+
+    It has progressed.'
+? '%のメモリーカード(PS2)には
+
+  ミリオンモンキーズのゲームデータがありません。'
+: english: '% memory card (PS2) has
+
+    There is no game data for Million Monkeys.'
+? '%のメモリーカード(PS2)には
+
+  ミリオンモンキーズのゲームデータがありません。
+
+  前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。'
+: english: '% memory card (PS2) has
+
+    There is no game data for Million Monkeys.
+
+    Please do it last time.'
+? '%のメモリーカード(PS2)にはミリオンモンキーズの
+
+  ゲームデータがありません。 作成<さくせい>しますか?'
+: english: '% of the memory card (PS2) contains Million Monkeys.
+
+    There is no game data. Do you want to create one?'
+? '%のメモリーカード(PS2)の
+
+  フォーマットが完了<かんりょう>しました。'
+: english: '% of memory cards (PS2)
+
+    Formatting is complete.'
+? '%のメモリーカード(PS2)の
+
+  フォーマットに失敗<しっぱい>しました。'
+: english: '% of memory cards (PS2)
+
+    Format failed.'
+? '%のメモリーカード(PS2)の
+
+  空<あ>き容量<ようりょう>が不足<ふそく>しています。
+
+  ミリオンモンキーズのゲームデータを作成<さくせい>するには
+
+  %KB以上の空<あ>き容量<ようりょう>が必要<ひつよう>です。'
+: english: '% of memory cards (PS2)
+
+    It''s empty.
+
+    How to create Million Monkeys game data
+
+    More than %KB empty.'
+? '%のメモリーカード(PS2)は
+
+  フォーマットされていません。フォーマットしますか?'
+: english: '% memory card (PS2)
+
+    Not formatted. Do you want to format it?'
+'%の進行<しんこう>ファイル%の削除<さくじょ>が完了<かんりょう>しました。':
+  english: '% progressed.'
+? '%の進行<しんこう>ファイルの
+
+  ロードに失敗<しっぱい>しました。'
+: english: '% progress file
+
+    Loading failed.'
+? '%はチップがいっぱいです!
+
+  %をムーブするには持<も>っているチップを
+
+  どれか1つ削除<さくじょ>しなくてはいけません。
+
+  チップを削除<さくじょ>しますか?'
+: english: '% is full of chips!
+
+    To move %, use chips you have
+
+    I have to delete one of them.
+
+    Do you want to remove the chip?'
+'%を入手<にゅうしゅ>しました。':
+  english: I got %.
+'%を本当<ほんとう>に削除<さくじょ>しますか?':
+  english: Are you sure about %?
+'0':
+  english: '0'
+'1':
+  english: '1'
+1-A〜D:
+  english: 1-A~D
+10分:
+  english: 10 minutes
+123456789+ABCDEFGHIJKLMN-PQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!?:
+  english: 123456789+ABCDEFGHIJKLMN-PQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!?
+'1234567890':
+  english: '1234567890'
+15分:
+  english: 15 minutes
+1⋅2:
+  english: 1⋅2
+1戦目セットわく:
+  english: 1st match set exciting
+1枚目<まいめ>のチップを選<えら>んでください。:
+  english: Please take a look at the first one.
+1枚目<まいめ>のチップ選択<せんたく>に戻<もど>ります。:
+  english: Here's the first one.
+'2':
+  english: '2'
+2戦目セットわく:
+  english: 2nd match set is exciting
+2枚目<まいめ>のチップを選<えら>んでください。:
+  english: Please take a look at the second one.
+'3':
+  english: '3'
+3戦目セットわく:
+  english: 3rd match set is coming
+'4':
+  english: '4'
+4戦目セットわく:
+  english: 4th match set is coming
+'5':
+  english: '5'
+5分:
+  english: 5 minutes
+5戦目セットわく:
+  english: 5th match set is coming
+'6':
+  english: '6'
+6戦目セットわく:
+  english: 6th match set is exciting
+'7':
+  english: '7'
+7戦目セットわく:
+  english: 7th game set is coming
+'8':
+  english: '8'
+8戦目セットわく:
+  english: 8th game set is exciting
+8本<ほん>の追尾<ついび>する光<ひかり>の矢<や>を放<はな>ちます。 空中<くうちゅう>の敵<てき>もねらえる便利<べんり>な必殺技<ひっさつわざ>です。:
+  english: There are 8 pieces.
+'9':
+  english: '9'
+':':
+  english: ':'
+?????????:
+  english: '? ? ? ? ? ? ? ? ?'
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz:
+  english: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+BGM:
+  english: BGM
+Bランチャー:
+  english: B launcher
+COM:
+  english: COM
+COM1:
+  english: COM1
+COM2:
+  english: COM2
+COM3:
+  english: COM3
+ENTRY1:
+  english: ENTRY1
+ENTRY2:
+  english: ENTRY2
+ENTRY3:
+  english: ENTRY3
+ENTRY4:
+  english: ENTRY4
+Gクラッシャー:
+  english: G Crusher
+G専用格納庫:
+  english: G-only hangar
+G専用格納庫 AM10:48:
+  english: G-only hangar AM10:48
+HPボーナス:
+  english: HP bonus
+Hランチャー:
+  english: H launcher
+I Feel Love:
+  english: I Feel Love
+MAX:
+  english: MAX
+MIN:
+  english: MIN
+NONE:
+  english: NONE
+OK:
+  english: OK
+PLAYER:
+  english: PLAYER
+PRESS START BUTTON:
+  english: PRESS START BUTTON
+SE:
+  english: back
+? 'SPガチャメカがかいじょ
+
+  されます!'
+: english: 'SP gacha mecha unlocked
+
+    It will be done!'
+SPガチャメカセレクト:
+  english: SP Gacha Mecha Select
+V.R.スペース:
+  english: V.R. Space
+VS.カケル:
+  english: VS.Kakeru
+VS.スペクター:
+  english: VS.Spectre
+VS.ニセスペクター:
+  english: VS.Fake Specter
+VS.ピポトロンG:
+  english: VS. Pipotron G
+VS.モード:
+  english: VS.mode
+Wドリル:
+  english: W drill
+Wハンマー:
+  english: W hammer
+Wメカボー:
+  english: W mechanical bow
+Wレーザー:
+  english: W laser
+? 'Wレーザー
+
+  フルバースト'
+: english: 'W laser
+
+    full burst'
+Wレーザーフルバースト:
+  english: W laser full burst
+Wロッド:
+  english: W rod
+? 'abcde ABCDE 12345
+
+  fghij FGHIJ 67890
+
+  klmno KLMNO *+-&@
+
+  pqrst PQRST ⋅.:_^
+
+  uvwxy UVWXY ωД∀⊃♪
+
+  z○△□Χ Z!?() ♂♀    '
+: english: 'abcde ABCDE 12345
+
+    fghij FGHIJ 67890
+
+    klmno KLMNO *+-&@
+
+    pqrst PQRST ⋅.:_^
+
+    uvwxy UVWXY ωД∀⊃♪
+
+    z○△□Χ Z!?() ♂♀'
+Χボタンと□ボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。:
+  english: Press the Χ and □ buttons at the same time.
+Χボタンにセットするガチャメカを選<えら>んでください。:
+  english: Please select the gacha mecha to set on the Χ button.
+? '⋅⋅⋅何<なに>も聞<き>かないでくれよ。
+
+  どうしてああなったのかわからないんだ。'
+: english: '⋅⋅⋅Please don''t do anything.
+
+    I don''t know how it happened.'
+□ボタンと△ボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。:
+  english: Press the □ and △ buttons at the same time.
+□ボタンにセットするガチャメカを選<えら>んでください。:
+  english: □Please select the gacha mecha to set on the button.
+△ボタンと○ボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。:
+  english: Press the △ and ○ buttons at the same time.
+△ボタンにセットするガチャメカを選<えら>んでください。:
+  english: Please select the gacha mecha to set on the △ button.
+○Χ□△!?()*+-&@⋅.:^_ωД∀⊃♂♀♪〜➝:
+  english: ○Χ□△!?()*+-&@⋅.:^_ωД∀⊃♂♀♪〜➝
+○ボタンとΧボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。:
+  english: Press the ○ and Χ buttons at the same time.
+○ボタンにセットするガチャメカを選<えら>んでください。:
+  english: Please select the Gacha Mecha to set on the ○ button.
+あ:
+  english: a
+あ!:
+  english: a!
+ああああ:
+  english: Aaaaaaaaaaaaaaaaaaaaaaaa
+? 'ああなった時点<じてん>で
+
+  もうおしまいだと思<おも>っていたよ。'
+: english: 'At that point
+
+    I thought it was over.'
+? 'あいうえお はひふへほ がぎぐげご
+
+  かきくけこ まみむめも ざじずぜぞ
+
+  さしすせそ や ゆ よ だぢづでど
+
+  たちつてと らりるれろ ばびぶべぼ
+
+  なにぬねの わゎを ん ぱぴぷぺぽ
+
+  ぁぃぅぇぉ ゃ ゅ ょ っ、。〜ー'
+: english: 'Aiueo hahifuheho gagigugego
+
+    Kakikukeko Mamimumemo Zajizuzezo
+
+    Sashisu seso ya yuyo dadzudedo
+
+    Tachitsutte and Rarilurero Babibubebo
+
+    What''s going on? What''s going on?
+
+    Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. 〜ーー'
+'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんー、。ぁぃぅぇぉがぎぐげござじずぜぞだぢづでどっばびぶべぼぱぴぷぺぽゃゅょゎ ':
+  english: Ai ue okaki ke kosa shi suseso tachi te and naninune no hifuhe homami mumemo
+    yayuyorarirururuwanon. Aaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+? 'あそこからがイイトコロだったのに⋅⋅⋅。
+
+  せっかちさんだなぁ。'
+: english: 'Things got better from there⋅⋅⋅.
+
+    You''re impatient.'
+? 'あっ、あそこはスゴイ高<たか>いんだぞ!
+
+  ダレだって怖<こわ>くなるさ!'
+: english: 'Oh, it''s really expensive there!
+
+    Even the puns are scary!'
+? 'あっ、ピポヘルのライトが見<み>えてたのか〜
+
+  ざんねん⋅⋅⋅'
+: english: 'Ah, did you see the Pipohel light?
+
+    Zannen⋅⋅⋅'
+? 'あと2秒<びょう>! いやあと1秒<びょう>はやく気<き>がつけば
+
+  ゲッチュされることはなかったのに⋅⋅⋅'
+: english: 'If you have 2 seconds left
+
+    Even though I was never cheated on⋅⋅⋅'
+? 'あのエントツの中<なか>に何<なに>があるかって?
+
+  そいつは言<い>えないな⋅⋅⋅'
+: english: 'Is there something inside that guy?
+
+    I can''t say that⋅⋅⋅'
+? 'あの上<うえ>には何<なに>があったんだろうなぁ⋅⋅⋅
+
+  気<き>になってしょうがないよ。'
+: english: 'I guess that top was there⋅⋅⋅
+
+    I can''t help but be worried.'
+あり:
+  english: can be
+? 'あーたしかにボクですね。
+
+  車<くるま>の上<うえ>ではねるのはよくないですね。'
+: english: 'Oh, it''s definitely me.
+
+    It''s not good to get hit by a car.'
+い:
+  english: stomach
+いいえ:
+  english: 'no'
+いつものジャケットとジーンズです。:
+  english: My usual jacket and jeans.
+いつものパンツいっちょうです。:
+  english: I'm wearing my usual pants.
+いつものファー。:
+  english: Usual fur.
+いつものマントとブーツのコスチュームです。:
+  english: This is the usual cloak and boots costume.
+いつもの服<ふく>です。:
+  english: It's my usual clothes.
+いつもの白衣<はくい>です。:
+  english: It's my usual white coat.
+いつもの黒<くろ>いローブです。:
+  english: It's the usual black robe.
+いつも着<き>ているお気<お>に入<い>りのジャケット。:
+  english: The jacket I always wear.
+? 'いやー。
+
+  今回<こんかい>はボートがないからさびしくなっちゃうねー。'
+: english: 'No way.
+
+    This time I don''t have a boat, so it''s going to be lonely.'
+う:
+  english: cormorant
+え:
+  english: picture
+お:
+  english: oh
+おおもの:
+  english: big thing
+おおらか:
+  english: Easy-going
+おくびょう:
+  english: eructation
+おくびょうもの:
+  english: eructation
+おしゃれなキャメルのハーフコートです。:
+  english: A stylish camel half coat.
+おせっかい:
+  english: Meddling
+おためしキャラ:
+  english: Trial character
+おためしキャラを使用<しよう>します。:
+  english: Use a trial character.
+おためしキャラを使用<しよう>します。 おためしキャラではチップを入手<にゅうしゅ>することができません。:
+  english: Trial characters cannot be used.
+おちょうしもの:
+  english: Ochoshimono
+おてんばマチムスメ風<ふう>のコスチュームです。:
+  english: This is a tomboyish and machimusume style costume.
+おわる:
+  english: The end
+お台場:
+  english: Odaiba
+お台場 PM05:32:
+  english: Odaiba PM05:32
+お楽しみ映像:
+  english: Fun video
+お気<き>に入<い>りのワンピースです。:
+  english: This is my favorite dress.
+'お気<き>に入<い>りの服<ふく>です。 ':
+  english: I'm interested.
+お気<き>に入<い>りの白<しろ>のキャミソールです。:
+  english: This is my favorite camisole.
+か:
+  english: mosquito
+かくにん:
+  english: confirmation
+かな:
+  english: kana
+からふぁいる:
+  english: From here
+き:
+  english: tree
+きゅうか中:
+  english: Kyuka Middle School
+きんたろセット:
+  english: Kintaro set
+ぎじゅつしゃ:
+  english: engineer
+く:
+  english: Ku
+け:
+  english: hair
+けす:
+  english: Kesu
+けってい:
+  english: Kitei
+げきつよ:
+  english: Gekitsuyo
+こ:
+  english: child
+? 'このままスキップすると進行<しんこう>ファイルがセーブされません。
+
+  スキップ後<ご>に進行状況<しんこうじょうきょう>をセーブしたい場合<ばあい>は
+
+  プレイ開始前<かいしまえ>にモードセレクト画面<がめん>のファイルセレクトで
+
+  進行<しんこう>ファイルを作成<さくせい>してください。スキップしますか?'
+: english: 'If you skip this step, your progress file will not be saved.
+
+    After skipping
+
+    File selection before starting play
+
+    Please proceed. Do you want to skip?'
+? 'このまま戻<もど>ると優勝<ゆうしょう>していないトーナメントは
+
+  リセットされますがよろしいですか?'
+: english: 'Tournaments that have not been returned are
+
+    Are you sure you want to be reset?'
+このエピソードでは選択<せんたく>できません。:
+  english: Not available in this episode.
+このガチャメカにはセットできません。:
+  english: It cannot be set in this gacha mecha.
+このキャラクターファイル%:%でよろしいですか?:
+  english: Are you sure you want this character file %:%?
+? 'このキャラクターファイル%は破損<はそん>しています。
+
+  新<あたら>しくキャラクターファイルを作<つく>り直<なお>しますか?'
+: english: 'This character file% is corrupted.
+
+    Would you like to update?'
+このキャラクターファイル%を削除<さくじょ>しますか?:
+  english: Do you want to delete this character file%?
+このステージでよろしいですか?:
+  english: Are you happy with this stage?
+このステージにはゲットアミが必要<ひつよう>です。:
+  english: This stage requires Get Ami.
+このステージには乗<の>り物<もの>は持<も>ち込<こ>めません。:
+  english: I can't get to this stage.
+この進行<しんこう>ファイル%でよろしいですか?:
+  english: Are you sure you want this progress file%?
+? 'この進行<しんこう>ファイル%は破損<はそん>しています。
+
+  新<あたら>しく進行<しんこう>ファイルを作<つく>り直<なお>しますか?'
+: english: 'This is progressing.
+
+    Would you like to update?'
+この進行<しんこう>ファイル%を削除<さくじょ>しますか?:
+  english: Will this progress?
+これならクマに勝<か>てるかも!?:
+  english: With this, you might be able to beat the bear!?
+これを着<き>ればピポサルになれる!? きっとサル達<たち>も仲間<なかま>と思<おも>うはず⋅⋅⋅:
+  english: You should wear this⋅⋅⋅
+こわがり:
+  english: scared
+さ:
+  english: difference
+さくじょ:
+  english: delete
+さぼり:
+  english: Lazy
+さぼりキング:
+  english: Lazy King
+し:
+  english: death
+しょうかんカプセル:
+  english: library capsule
+じつはさぼり:
+  english: Actually I slack off
+じどうCOM:
+  english: Jido COM
+す:
+  english: vinegar
+すすむ:
+  english: Proceed
+? 'すでにロードされた
+
+  キャラクターは使用<しよう>できません。'
+: english: 'already loaded
+
+    Characters cannot be used.'
+せ:
+  english: height
+そ:
+  english: So
+そうさ説明:
+  english: Yes, explanation
+そうびへんこう:
+  english: Sobihenkou
+'その打球<だきゅう>は見<み>えないくらい速<はや>い! 自慢<じまん>のバットで援護<えんご>します。       ':
+  english: Hit that ball.
+そらみみ:
+  english: Soramimi
+た:
+  english: Ta
+? 'たっ、たのむから居眠<いねむ>りしてゲッチュされたなんて
+
+  みんなに言<い>わないでよ。'
+: english: 'I-I fell asleep because I was just looking forward to it and got caught.
+
+    Don''t tell everyone.'
+だんじき6日目:
+  english: 6th day of fasting
+ち:
+  english: Chi
+つ:
+  english: Two
+? 'つなぎがピチピチすぎてさ。
+
+  やっぱりパンツ1枚<まい>がきもちいいね。'
+: english: 'The tethers are too tight.
+
+    After all, one pair of pants is comfortable.'
+つよい:
+  english: strong
+つりばか:
+  english: fishing idiot
+て:
+  english: hand
+でちゃダメ:
+  english: Don't do that
+と:
+  english: and
+とりけし:
+  english: Torikeshi
+? 'どうでもいいけどギターだけは返<かえ>してくれよ。
+
+  アレがないと困<こま>るんだよ!'
+: english: 'I don''t care, just give me back the guitar.
+
+    I''d be in trouble without that!'
+どこかで見<み>たような名探偵<めいたんてい>の衣装<いしょう>です。:
+  english: I'll see it somewhere.
+どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>がみどりです。:
+  english: What is the story behind it?
+どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>がむらさきです。:
+  english: What is the story behind Murasaki?
+どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>が金色<きんいろ>です。:
+  english: How did it happen?
+な:
+  english: Na
+なし:
+  english: none
+? 'なぜだー!なぜオレのシニマネがみやぶられたんだー。
+
+  こんなことがあっていいのかー!!'
+: english: 'Why! Why was my cynicism so disrespected?
+
+    Is it okay for something like this to happen?'
+なまいき:
+  english: Lazy
+なまえへんこう:
+  english: Name information
+なんいど設定:
+  english: Any settings
+なんいど設定<せってい>:
+  english: Any settings
+なんいど設定<せってい>に戻<もど>ります。:
+  english: I will set it up as soon as possible.
+? 'なんてことをしてくれたんだ!
+
+  あと少<すこ>しで悟<さと>りがひらけたかもしれないじゃないか!'
+: english: 'What a great thing you did for me!
+
+    Maybe we could have opened up a little more!'
+に:
+  english: to
+ぬ:
+  english: Nu
+ね:
+  english: hey
+ねぶそく:
+  english: Nebusoku
+の:
+  english: of
+のデータを復元中<ふくげんちゅう>。:
+  english: Restoring data.
+は:
+  english: teeth
+はい:
+  english: 'yes'
+はずす:
+  english: Remove
+はそんふぁいる:
+  english: Hasonfare
+ばくすい:
+  english: Exposure
+ひ:
+  english: fire
+ひっさつわざセレクト:
+  english: Secret trick selection
+ひとだのみ:
+  english: Only one person
+ぴちぴちのバナナTシャツです。:
+  english: Pichi Pichi's banana T-shirt.
+ふ:
+  english: debt
+ふたつで1セットの射撃<しゃげき>メカです。 素早<すばや>い運射<れんしゃ>が可能<かのう>。 しかしそのぶん弾切<たまぎ>れが早<はや>いので注意<ちゅうい>しましょう。:
+  english: Let's shoot one set with two.
+ふつう:
+  english: ordinary
+へ:
+  english: fart
+へいわしゅぎ:
+  english: Heiwashugi
+へたくそ:
+  english: I'm so tired
+へんこう:
+  english: change
+へクス:
+  english: hex
+ほ:
+  english: Ho
+ぼうけんか:
+  english: A quarrel
+ま:
+  english: Ma
+まじめ:
+  english: Serious
+まちぶせ2時間:
+  english: Machibuse 2 hours
+まちぶせキング:
+  english: Machibuse King
+まちぶせ隊:
+  english: Machibuse-tai
+まちぼうけ:
+  english: Town adventure
+まぬけ:
+  english: Stupid
+まめ:
+  english: Blister
+? 'まーこんがり焼<や>けたし。
+
+  よしとしようかな。'
+: english: 'It was burnt to a crisp.
+
+    I guess it''s okay.'
+み:
+  english: fruit
+む:
+  english: nothing
+め:
+  english: eye
+? 'めずらしいサカナが
+
+  つれたみャ!'
+: english: 'a rare fish
+
+    I caught it!'
+も:
+  english: too
+もどる:
+  english: Back
+や:
+  english: or
+やせがまん:
+  english: I can't stand being thin
+ゆ:
+  english: hot water
+よ:
+  english: Yo
+よわい:
+  english: Yowaii
+ら:
+  english: and others
+り:
+  english: the law of nature
+る:
+  english: Ru
+れ:
+  english: Re
+ろ:
+  english: reactor
+わ:
+  english: circle
+を:
+  english: of
+を編集中:
+  english: Editing
+ん:
+  english: yeah
+? 'んんー。 ボクの設計<せっけい>はカンペキだ!
+
+  これで昇進<しょうしん>まちがいなしだ!!'
+: english: 'Hmm. My design is perfect!
+
+    This will definitely get you promoted!!'
+ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヲンヴヵヶ:
+  english: Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? 'アイウエオ ハヒフヘホ ガギグゲゴ
+
+  カキクケコ マミムメモ ザジズゼゾ
+
+  サシスセソ ヤ ユ ヨ ダヂヅデド
+
+  タチツテト ラリルレロ バビブベボ
+
+  ナニヌネノ ワヮヲヴン パピプペポ
+
+  ァィゥェォ ャ ュ ョ ッ、。〜ー'
+: english: 'Aiueo hahifuheho gagigego
+
+    Kakikukeko Mamimu Memo Zajizuzezo
+
+    Sasis seso ya yu yo dadidudedo
+
+    Tachitsuteto Rarilurero Babibu Bebo
+
+    naninuneno waowowun papipupepo
+
+    Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. 〜ーー'
+アイス:
+  english: ice
+アイテムをストックできる特殊<とくしゅ>なメカです。 ストックしたアイテムは好<す>きなときに使<つか>うことができます。:
+  english: You can do special things to stock items.
+アイテム出現:
+  english: Item appears
+アイドルとして紅白出場<こうはくしゅつじょう>をねらうウサギ。 歌<うた>の力<ちから>であなたの体力<たいりょく>を回復<かいふく>します。:
+  english: I will be participating in Kohaku as an idol.
+アインス:
+  english: Ains
+アカジャージセット:
+  english: red jersey set
+? 'アクセス中<ちゅう>!
+
+  %の
+
+  メモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししないでください。'
+: english: 'Accessing now!
+
+    %of
+
+    Memory card (PS2)
+
+    Please do not remove it.'
+? 'アクセス中<ちゅう>!
+
+  %のメモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししないでください。'
+: english: 'Accessing now!
+
+    % memory card (PS2)
+
+    Please do not remove it.'
+アスタチップ:
+  english: asta chip
+アタックするステージを選<えら>んでください。:
+  english: Please select the stage to attack.
+アタックブースター:
+  english: attack booster
+アタックブーツ:
+  english: attack boots
+アダムスキー:
+  english: Adamski
+? 'アツくてアツくて⋅⋅⋅。
+
+  意識<いしき>がもうろうとしてました。'
+: english: 'It''s hot, it''s hot⋅⋅⋅.
+
+    I was feeling lightheaded.'
+アフロ:
+  english: Afro
+アマゾンセット:
+  english: amazon set
+アラシヤマ:
+  english: Arashiyama
+アンコクノセンシ:
+  english: Ankoku no Senshi
+アースクエイク:
+  english: earthquake
+? 'アーバンリゾートを
+
+  楽<たの>しむみャ♪'
+: english: 'urban resort
+
+    Enjoy it♪'
+アームショット:
+  english: arm shot
+アーモンチェア:
+  english: armon chair
+アーモンチェアに乗<の>って体当<たいあ>たりする技<わざ>です。 発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。:
+  english: Get on the armon chair.
+アーモンチェアに乗<の>って誘導<ゆうどう>ビームで攻撃<こうげき>します。 ビームを当<あ>てるには敵<てき>に近<ちか>づく必要<ひつよう>があります。:
+  english: There is a ride on the armon chair.
+イアン:
+  english: ian
+イエロージャケット:
+  english: yellow jacket
+イエローボディ:
+  english: yellow body
+イエローローブ:
+  english: yellow robe
+イチロウ:
+  english: Ichiro
+イライラ:
+  english: irritation
+? 'イリュージョン
+
+  フォース'
+: english: 'illusion
+
+    force'
+イリュージョンフォース:
+  english: illusion force
+ウィルスチャル:
+  english: Virschal
+ウイルスに感染<かんせん>し変異<へんい>したチャル。:
+  english: Charu is infected with a virus.
+ウイルスチャル:
+  english: Virus Char
+ウェスタンシェリフセット:
+  english: western sheriff set
+ウキイシ:
+  english: Ukiishi
+ウキャロル:
+  english: Ucarol
+ウッキーピンク:
+  english: Wookie pink
+'ウッキーファイブのリーダー。 画面<がめん>を飛<と>びかって周囲<しゅうい>の全員<ぜんいん>にダメージを与<あた>えます。     ':
+  english: The leader of the Wookiee Five. You can see the screen.
+'ウッキーファイブの歌姫<うたひめ>。 何<なに>が出<で>るかは運<うん>しだいです。          ':
+  english: It depends on the songstress of Wookiee Five.
+ウッキーレッド:
+  english: Wookie red
+ウッシー:
+  english: Ussy
+ウル:
+  english: Ur
+ウワサノアカイサル:
+  english: Rumored Kaisal
+ウンモ:
+  english: Ummo
+? 'エアコンがこわれて修理<しゅうり>してたのさ。
+
+  怖<こわ>くてふるえてたんじゃないよ!'
+: english: 'The air conditioner was broken and I was fixing it.
+
+    I wasn''t shaking because I was scared!'
+エイエンノライバル:
+  english: Eienno Rival
+エイプリル:
+  english: april
+エキゾチックな伊達男<だておとこ>のためのコスチュームです。:
+  english: This is a costume for an exotic date man.
+エクストラ:
+  english: extra
+エクストララウンド結果:
+  english: extra round results
+エジモン:
+  english: Edimon
+エディットを終了<しゅうりょう>して、キャラクターセレクトに進<すす>みます。:
+  english: Finish editing.
+エネルギーの回復<かいふく>をスピードアップするパーツです。 複数<ふくすう>セットすることで、さらに回復<かいふく>のスピードを上<あ>げることができます。:
+  english: It can restore your energy.
+エネルギーの消費<しょうひ>をおさえるパーツです。  複数<ふくすう>セットすることで、さらにエネルギー消費<しょうひ>をおさえることができます。:
+  english: Energy consumption can be reduced.
+エピソードカケル:
+  english: episode kakeru
+エピソードスペクター:
+  english: episode specter
+エピソードセレクトに戻<もど>ります。:
+  english: Return to episode selection.
+エマーソン:
+  english: emerson
+エルビチップ:
+  english: elvi chip
+? 'エレベーターにてメンテナンス中<ちゅう>のところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Elevator undergoing maintenance
+
+    Discovered and captured.'
+エレベーターを使<つか>って艦内奥<かんないおく>に進<すす>んでください。 その先<さき>にブリッジがあるはずです。 スペクターは、そこにいると思<おも>われます。:
+  english: An elevator will be used.
+エレベーターを使<つか>って艦内奥<かんないおく>に進<すす>んでください。 その先<さき>にブリッジがあるはずです。 ニセスペクターは、そこにいると思<おも>われます。:
+  english: An elevator will be used.
+エンゲル:
+  english: Engel
+エンジェルセット:
+  english: angel set
+エンゼルセット:
+  english: angel set
+エントツで遊<あそ>んでいるところを発見<はっけん>されゲッチュされる。:
+  english: He is played with and gets fucked.
+? 'エントツにのぼろうとしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'I was about to climb onto Enttsu.
+
+    Discovered and captured.'
+? 'エントツの上<うえ>から声<こえ>がしたんだ。
+
+  それをたしかめに行<い>こうとしたんだよ。'
+: english: 'There was something up the chimney.
+
+    I wanted to go check it out.'
+エントリーかんりょう:
+  english: Entry requirements
+エントリー設定:
+  english: Entry settings
+エントリー設定<せってい>に戻<もど>ります。:
+  english: Set entry.
+エージェントセット:
+  english: agent set
+エーテ:
+  english: Aete
+オクトー:
+  english: Octo
+オサルバン:
+  english: Osalban
+オデッセイ:
+  english: odyssey
+オフ:
+  english: 'off'
+オプション:
+  english: option
+オプション設定:
+  english: Option settings
+オプション設定<せってい>:
+  english: Option settings
+オリバー:
+  english: Oliver
+オン:
+  english: 'on'
+? 'オールレンジ
+
+  ショット'
+: english: 'all range
+
+    shot'
+オールレンジショット:
+  english: all range shot
+カウガールセット:
+  english: cowgirl set
+カケル:
+  english: Kakeru
+カケルのストーリーで遊<あそ>びます。:
+  english: Play with Kakeru's story.
+'カジノシティのヒーロー。 嵐<あらし>を呼<よ>ぶダンスにみんなを巻<ま>き込<こ>みます。       ':
+  english: Hero of Casino City. I see Arashi.
+カドミチップ:
+  english: cadmi chip
+カナ:
+  english: Kana
+カリウドセット:
+  english: Kaliud set
+カルメンセット:
+  english: carmen set
+カーチス:
+  english: Curtis
+ガチャメカ:
+  english: Gacha mecha
+? 'ガチャメカ
+
+  コントロール'
+: english: 'Gacha mecha
+
+    control'
+ガチャメカにパワーアップパーツをセットします。:
+  english: Set power up parts on Gacha Mecha.
+ガチャメカの名前<なまえ>を変更<へんこう>します。:
+  english: Gachamecha name.
+ガチャメカを開発<かいはつ>します。:
+  english: Develop a gacha mecha.
+ガチャメカコントロール:
+  english: gacha mecha control
+ガチャメカセレクト:
+  english: Gacha Mecha Select
+ガチャメカセレクトに進<すす>みます。:
+  english: Proceed to Gacha Mecha Select.
+ガチャメカセレクトメニューに戻<もど>ります。:
+  english: Return to Gacha Mecha Selection Menu.
+ガチャメカラボ:
+  english: Gacha Mecha Lab
+ガチャメカ制限:
+  english: Gacha mecha limit
+ガチャメカ名:
+  english: Gacha mecha name
+? 'ガラスが割<わ>れなかったらどうしようかと
+
+  正直心配<しょうじきしんぱい>だったよ。'
+: english: 'What if the glass doesn''t break?
+
+    Honestly, I was worried.'
+ガンマンセット:
+  english: gunman set
+ガーネット:
+  english: garnet
+キコーボー:
+  english: Kikobo
+キセノチップ:
+  english: xeno chip
+キャラクターの名前<なまえ>を変更<へんこう>します。:
+  english: Name the character.
+キャラクターの装備<そうび>を変更<へんこう>します。:
+  english: Equip your character.
+キャラクターの設定<せってい>を変更<へんこう>します。:
+  english: Set of characters.
+キャラクターを選<えら>んでください。:
+  english: Please choose a character.
+キャラクターエディット:
+  english: character edit
+キャラクターエディットのメニューに戻<もど>ります。:
+  english: Return to the character edit menu.
+キャラクターセレクトに戻<もど>ります。:
+  english: Return to character select.
+キャラクターセレクトの最初<さいしょ>に戻<もど>ります。:
+  english: The beginning of character selection.
+キャラクターファイル:
+  english: character file
+? 'キャラクターファイル%をセーブ中<ちゅう>!
+
+  %のメモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。'
+: english: 'Saving character file%!
+
+    % memory card (PS2)
+
+    Please do not pull it out.'
+? 'キャラクターファイル%を削除中<さくじょちゅう>!
+
+  %のメモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。'
+: english: 'Deleting character file%!
+
+    % memory card (PS2)
+
+    Please do not pull it out.'
+キャラクターファイルがありません。:
+  english: There is no character file.
+? 'キャラクターファイルにセーブできませんが、
+
+  本当<ほんとうに>にキャンセルしますか?'
+: english: 'Cannot save to character file,
+
+    Are you sure you want to cancel?'
+キャラクターファイルの作成<さくせい>、変更<へんこう>ができます。:
+  english: You can create character files.
+キャラクターファイルをセーブしますか?:
+  english: Do you want to save your character file?
+キャラクターファイルをロードします。:
+  english: Load the character file.
+? 'キャラクターファイルをロード中<ちゅう>!
+
+  %のメモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししないでください。'
+: english: 'Loading character file!
+
+    % memory card (PS2)
+
+    Please do not remove it.'
+キャラクターファイルセレクトに戻<もど>ります。:
+  english: Return to character file selection.
+キャラクターロード:
+  english: character road
+キャラクター名:
+  english: character name
+キャンセル:
+  english: cancel
+キュウキョクマジン:
+  english: Kyukyokumagin
+キュートな小悪魔風<こあくまふう>のコスチューム。翼<つばさ>はダミーです。:
+  english: The cute little devil style is a dummy.
+キラービー:
+  english: killer bee
+キース:
+  english: Keith
+ギガランチャー:
+  english: giga launcher
+ギタリスト:
+  english: guitarist
+クノイチセット:
+  english: Kunoichi set
+クマトオスモウ:
+  english: Kumato Osmo
+? 'クラッシュ
+
+  ハリケーン'
+: english: 'crash
+
+    hurricane'
+クラッシュハリケーン:
+  english: crash hurricane
+クリアボーナス:
+  english: clear bonus
+? 'クレーンにひっかかっているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Caught in a crane
+
+    Discovered and captured.'
+? 'クレーンのフックにひっかかっているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Caught on a crane hook
+
+    Discovered and captured.'
+クロ:
+  english: black
+'クンフーの達人<たつじん>にしてスター。 ヌンチャク衝撃波<しょうげきは>で敵<てき>を攻撃<こうげき>します。     ':
+  english: Master of Kung Fu.
+クールな全身<ぜんしん>ブラックのコスチュームです。:
+  english: A cool all-black costume.
+クールな黒<くろ>いボディカラーです。:
+  english: Cool black body color.
+グリーンアーマー:
+  english: green armor
+グリーンスタイル:
+  english: green style
+グリーンヘアー:
+  english: green hair
+ゲッチュしたピポサルの情報<じょうほう>が見<み>れます。:
+  english: Information about Piposal that got caught.
+ゲッチュボーナス:
+  english: getchu bonus
+ゲットアミ:
+  english: Get Ami
+ゲルマチップ:
+  english: germa chip
+ゲームにもどる:
+  english: return to game
+ゲームの設定<せってい>を変更<へんこう>します。:
+  english: Game settings.
+ゲームスタート:
+  english: game start
+コアクマセット:
+  english: core bear set
+コインボーナス:
+  english: coin bonus
+コザルニクス:
+  english: cosarnicus
+コスチューム:
+  english: costume
+コスチュームを変更<へんこう>します。:
+  english: Change costume.
+コスチュームを開発<かいはつ>します。:
+  english: Develop a costume.
+コバルチップ:
+  english: kobal chip
+コロシアム:
+  english: coliseum
+コロシアムモード:
+  english: coliseum mode
+コロドラゴンセット:
+  english: coro dragon set
+? 'コンクリートジャングルは
+
+  広<ひろ>すぎみャ⋅⋅⋅'
+: english: 'the concrete jungle
+
+    Too wide⋅⋅⋅'
+? 'コンテナの上<うえ>でばくすいしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'The place where it is exposed to air on top of the container
+
+    Discovered and captured.'
+コンテナターミナル:
+  english: container terminal
+コンテナターミナル AM05:08:
+  english: Container terminal AM05:08
+コンテナターミナル PM05:16:
+  english: Container terminal PM05:16
+? 'コンテナターミナルで発見<はっけん>!
+
+  至急回収<しきゅうかいしゅう>に向<む>かってください'
+: english: 'Found at the container terminal!
+
+    Please collect it immediately'
+? 'コンテナターミナルで釣<つ>りをしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Fishing at the container terminal
+
+    Discovered and captured.'
+コンテナターミナルの橋<はし>で発見<はっけん>されゲッチュされる。:
+  english: The container terminal bridge is covered.
+コンビナート:
+  english: industrial complex
+コンビナート AM08:19:
+  english: Complex AM08:19
+コンビナート PM02:36:
+  english: Complex PM02:36
+コンボ:
+  english: combo
+コンボボーナスポイント:
+  english: combo bonus points
+コーネリアス:
+  english: cornelius
+? 'ゴリアック
+
+  ハンド'
+: english: 'Goliac
+
+    hand'
+ゴリアックアイ:
+  english: goliac eye
+ゴリアックハンド:
+  english: goliac hand
+ゴリアックヘッドを起動<きどう>し、レーザーで攻撃<こうげき>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>できますが、空中<くうちゅう>の敵<てき>はねらえません。:
+  english: Do not aim to launch Goliac Head.
+'ゴリアック研究所<けんきゅうじょ>の所長<しょちょう>。 ゴリアックアームで援護<えんご>してくれます。       ':
+  english: Goliac Institute will help you.
+'ゴリアック開発<かいはつ>プロジェクトリーダー。 ゴリアックヘッドで援護<えんご>します。     ':
+  english: Developed by Goliac.
+ゴロウ:
+  english: Gorou
+ゴールドヘアー:
+  english: gold hair
+サイキョウハダレダ:
+  english: Saikyo Hadareda
+サウンド:
+  english: sound
+サウンドの出力形式<しゅつりょくけいしき>を選択<せんたく>してください。:
+  english: Please format the sound output.
+サテラレーザー:
+  english: satella laser
+サブロウ:
+  english: Saburo
+サムライセット:
+  english: samurai set
+? 'サメの口<くち>にはさまっているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'The part stuck in the shark''s mouth
+
+    Discovered and captured.'
+サモイ:
+  english: Samoy
+サルUFO:
+  english: monkey UFO
+サルカケル:
+  english: Sarukakeru
+サルカケルA:
+  english: Salkaker A
+サルカケルB:
+  english: Salkaker B
+サルキチ:
+  english: Sarkichi
+サルキメデス:
+  english: Sarcymedes
+サルケゴール:
+  english: Salkegaard
+サルタン:
+  english: sultan
+サルチーム:
+  english: monkey team
+サルトオドロウ:
+  english: Salt Odrow
+サルトル:
+  english: Sartre
+サルバズーカ:
+  english: Salbazooka
+サルバトーレ:
+  english: salvatore
+サルブック:
+  english: monkey book
+サルベスタ:
+  english: Salvesta
+サルンティーノ:
+  english: Saruntino
+サルンブス:
+  english: Salumbus
+? 'サルース
+
+  ウッキー'
+: english: 'salus
+
+    Wookie'
+サルースウッキー:
+  english: salus wookie
+サル軍<ぐん>とは別<べつ>の人物<じんぶつ>が現<あらわ>れました。 十分注意<じゅうぶんちゅうい>して対応<たいおう>してください。:
+  english: Please monkey army.
+? サル軍<ぐん>はスタジアムに新<あら>たな基地<きち>を建設中<けんせつちゅう>のようです。 エネルギー反応<はんのう>から、空中戦艦<くうちゅうせんかん>と地上<ちじょう>を結<むす>ぶ転送装置<てんそうそうち>も存在<そんざい>すると思<おも>われます。
+  スタジアムの基地<きち>を撃破<げきは>し、基地内<きちない>の転送装置<てんそうそうち>で、空中戦艦<くうちゅうせんかん>に潜入<せんにゅう>してください。
+: english: Please monkey army.
+? 'サル軍基地<ぐんきち>で待<ま>ち伏<ぶ>せているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'The place where the monkey army base is set up
+
+    Discovered and captured.'
+? 'サル軍基地<ぐんきち>にて発見<はっけん>!
+
+  至急回収<しきゅうかいしゅう>に向<む>かってください。'
+: english: 'Monkey army base!
+
+    Please collect it as soon as possible.'
+? 'サル軍残存兵<ぐんざんぞんへい>の中<なか>で確認<かくにん>!
+
+  至急回収願<しきゅうかいしゅうねが>います!'
+: english: 'Monkey army survivors!
+
+    Please collect it as soon as possible!'
+? 'サンシャイン
+
+  アロー'
+: english: 'sunshine
+
+    arrow'
+サンシャインアロー:
+  english: sunshine arrow
+サンタクロースの衣装<いしょう>です。:
+  english: It's a Santa Claus costume.
+サンタセット:
+  english: santa set
+? 'サンダー
+
+  クラック'
+: english: 'thunder
+
+    crack'
+サンダークラック:
+  english: thunder crack
+ザイアス:
+  english: Zaias
+シノビセット:
+  english: shinobi set
+ショダイチャンプ:
+  english: shodai champ
+ショットガン:
+  english: shotgun
+? 'ショーウィンドウで待<ま>ち伏<ぶ>せているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'The place waiting in the show window
+
+    Discovered and captured.'
+? 'ショーウィンドウの中<なか>で待<ま>ち伏<ぶ>せていたが
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'It was displayed in the show window
+
+    Discovered and captured.'
+シロウ:
+  english: Shirou
+ジャグラー:
+  english: juggler
+ジャンパー:
+  english: jumper
+ジャンプし、空中<くうちゅう>から真下<ました>に矢<や>を放<はな>ち、衝撃波<しょうげきは>で攻撃<こうげき>します。 地上<ちじょう>の敵<てき>に有効<ゆうこう>です。:
+  english: Jump and are in the air.
+? 'ジャンプしてるとなんだかハイになっちゃってさ。
+
+  何<なに>してたんだか思<おも>い出<だ>せないよ。'
+: english: 'I got kind of high while jumping.
+
+    I won''t do anything.'
+ジャンプして上空<じょうくう>から地面<じめん>に向<む>かって爆弾<ばくだん>をばらまきます。 地上<ちじょう>の敵<てき>にのみ有効<ゆうこう>です。:
+  english: Jump up into the sky.
+ジャーヌ:
+  english: Jaanu
+ジュライ:
+  english: July
+ジュン:
+  english: Jun
+ジョン:
+  english: john
+ジョー:
+  english: Joe
+ジョージ:
+  english: george
+ジルコチップ:
+  english: zirco chip
+ジロウ:
+  english: Jiro
+スイマー:
+  english: swimmer
+スキップ:
+  english: skip
+スキャンの結果<けっか>、この先<さき>にブリッジに通<つう>じる昇降機<しょうこうき>があることがわかりました! ここを無事通過<ぶじつうか>しエレベーターシャフトを目指<めざ>してください!!:
+  english: Please give me the scan results!!
+スズキ:
+  english: Suzuki
+スタジアム:
+  english: stadium
+スタジアム AM03:20:
+  english: Stadium AM03:20
+スタジアム PM07:49:
+  english: Stadium PM07:49
+スタジアム PM11:18:
+  english: Stadium PM11:18
+スタンバイ:
+  english: stand-by
+? 'スティング
+
+  ボール'
+: english: 'sting
+
+    ball'
+スティングボール:
+  english: sting ball
+ステレオ:
+  english: stereo
+ステージを選<えら>んでください。:
+  english: Please select a stage.
+ステージを選<えら>んで対戦<たいせん>します。:
+  english: Select a stage.
+ステージセレクト:
+  english: stage select
+ステージセレクトに戻<もど>ります。:
+  english: Return to stage select.
+ストーリーで遊<あそ>ぶモードです。:
+  english: This is a story play mode.
+ストーリーモード:
+  english: story mode
+ストーリーモードでは選択<せんたく>できません。:
+  english: Cannot be selected in story mode.
+スパンダー:
+  english: Spander
+スピンショット:
+  english: spin shot
+スピード重視<じゅうし>の小型<こがた>タンクです。 誘導<ゆうどう>ミサイルとガトリング砲<ほう>を装備<そうび>しています。 爆発<ばくはつ>すると使<つか>えなくなるので注意<ちゅうい>しましょう。:
+  english: Focus on speed.
+スペクター:
+  english: Specter
+スペクターのストーリーで遊<あそ>びます。:
+  english: Play with Spectre's story.
+スペシャルモード:
+  english: special mode
+? 'スロット%の
+
+  メモリーカード(PS2)が
+
+  抜<ぬ>かれました。'
+: english: 'slot%
+
+    Memory card (PS2)
+
+    It was pulled out.'
+スロット%のメモリーカード(PS2)のアクセスに失敗<しっぱい>しました!:
+  english: Failed to access memory card (PS2) in slot %!
+? 'スロット%のメモリーカード(PS2)は
+
+  フォーマットされていません。'
+: english: 'The memory card (PS2) in slot % is
+
+    Not formatted.'
+スロット1:
+  english: slot 1
+スロット1-A:
+  english: slot 1-A
+スロット1-B:
+  english: slot 1-B
+スロット1-C:
+  english: slot 1-C
+スロット1-D:
+  english: slot 1-D
+スロット2:
+  english: slot 2
+セカンドファッション:
+  english: second fashion
+セットOK:
+  english: Set OK
+セットかんりょう:
+  english: Set information
+セットしているガチャメカの変更<へんこう>をします。:
+  english: Change the set gacha mecha.
+セットしている必殺技<ひっさつわざ>の変更<へんこう>をします。:
+  english: Perform the set special move.
+セットするガチャメカを選<えら>んでください。:
+  english: Please select the gacha mecha you want to set.
+セットする必殺技<ひっさつわざ>を選<えら>んでください。:
+  english: Please set the special move.
+セットわくを選<えら>んでください。:
+  english: Please choose a set.
+セットわく選択<せんたく>に戻<もど>ります。:
+  english: Select a set.
+セットコロドラゴン:
+  english: set colo dragon
+セットボタンの選択<せんたく>に戻<もど>ります。:
+  english: Select the set button.
+セーブ:
+  english: save
+? 'セーブしていない
+
+  キャラクターファイルはリセットされます。
+
+  このまま戻<もど>りますか?'
+: english: 'Not saved
+
+    Character files will be reset.
+
+    Do you want to go back?'
+? 'セーブをキャンセルしてもキャラクターエディットで
+
+  キャラクターファイルのセーブは可能<かのう>です。
+
+  ここでのセーブをキャンセルしますか?'
+: english: 'Even if you cancel the save, you can still edit the character.
+
+    It is possible to save character files.
+
+    Do you want to cancel the save here?'
+ソニックR:
+  english: Sonic R
+ソニックレボリューション:
+  english: sonic revolution
+タイガーセット:
+  english: tiger set
+タイトルに戻<もど>りますか?:
+  english: Back to the title?
+タイトル画面<がめん>に戻<もど>ります。:
+  english: Title screen.
+タイムボーナス:
+  english: time bonus
+タヌキの着<き>ぐるみです。:
+  english: It's a raccoon costume.
+ダッシュフープ:
+  english: dash hoop
+ダッシュブースター:
+  english: dash booster
+ダッシュブーツ:
+  english: dash boots
+ダッシュモード:
+  english: dash mode
+? 'ダレだ!あんなところで待<ま>ち伏<ぶ>せしようって言<い>ったのは!
+
+  オレじゃないぞ!'
+: english: 'That''s a joke! I was waiting in a place like that!
+
+    It''s not me!'
+ダンサーセット:
+  english: dancer set
+? 'ダンボールに隠<かく>れているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'The place hidden in the cardboard
+
+    Discovered and captured.'
+ダークスタイル:
+  english: dark style
+ダークスペクター:
+  english: dark specter
+? 'ダークネス
+
+  ストリーム'
+: english: 'darkness
+
+    stream'
+ダークネスストリーム:
+  english: darkness stream
+ダークヒロキ:
+  english: dark hiroki
+ダークファッション:
+  english: dark fashion
+ダークヘアー:
+  english: dark hair
+チェーンボーナス:
+  english: chain bonus
+チップ1:
+  english: chip 1
+チップ2:
+  english: chip 2
+? 'チップがいっぱいです!
+
+  %を手<て>に入<い>れるには持<も>っているチップを
+
+  どれか1つ削除<さくじょ>しなくてはいけません。
+
+  チップを削除<さくじょ>しますか?'
+: english: 'It''s full of chips!
+
+    % chips in hand
+
+    I have to delete one of them.
+
+    Do you want to remove the chip?'
+チップを合成<ごうせい>して、アイテムを開発<かいはつ>します。:
+  english: Synthesize the chips.
+チップムーブ:
+  english: chip move
+チップムーブ中<ちゅう>。:
+  english: During a chip move.
+チップ削除:
+  english: chip delete
+? 'チップ合成<ごうせい>できないキャラクターなので
+
+  ムーブできません。'
+: english: 'Because it is a character that cannot be combined with chips.
+
+    Unable to move.'
+? 'チップ合成<ごうせい>で作成<さくせい>した
+
+  %は手<て>に入<はい>りませんがよろしいですか?'
+: english: 'chip synthesized
+
+    I don''t have the %, but is that okay?'
+チャル:
+  english: Charu
+? チャルの腕<うで>にとりつけられた攻撃用<こうげきよう>メカです。 敵<てき>を追尾<ついび>する弾を撃<う>ったり、回転攻撃<かいてんこうげき>で近<ちか>くの敵<てき>をなぎ払<はら>ったりと万能<ばんのう>ですが、攻撃力<こうげきりょく>の低<ひく>さが難点<なんてん>。
+: english: Char's arm.
+チャレンジャー:
+  english: challenger
+チャージ:
+  english: charge
+チームこうたい:
+  english: Team Kotai
+チームせんたく:
+  english: Team Sentaku
+チームメイトを交代<こうたい>します。:
+  english: Switch teammates.
+チーム戦にする:
+  english: make it a team game
+チーム設定:
+  english: Team settings
+ツタンカーモン:
+  english: Tutankamon
+テルルチップ:
+  english: tellurium chips
+? 'ディメンション
+
+  ブレイク'
+: english: 'dimension
+
+    break'
+ディメンションブレイク:
+  english: dimension break
+デイビッド:
+  english: david
+デカボー:
+  english: Decabo
+デビルズトーナメント:
+  english: devils tournament
+デビルズ一次予選ステージ:
+  english: Devils first qualifying stage
+デビルズ二次予選ステージ:
+  english: Devils second qualifying stage
+デビルズ決勝ステージ:
+  english: devils final stage
+デビルズ準決勝ステージ:
+  english: devils semifinal stage
+デュオ:
+  english: duo
+デンセツノタツジン:
+  english: Densetsunotatsujin
+トゲつきグローブ。 ふたつで1セットです。 突<つ>き攻撃<こうげき>でグローブをロケット弾<だん>のように前方<ぜんぽう>にうち出<だ>すことができます。:
+  english: Gloves with spikes. One set includes two. You can poke.
+トゲトゲだらけのハードなコスチュームです。:
+  english: This is a hard costume full of thorns.
+トゲハンマー:
+  english: thorn hammer
+トナカイセット:
+  english: reindeer set
+トノサマセット:
+  english: tonosomerset
+トラジマのアニマル風<ふう>コスチュームです。:
+  english: Torajima's animal style costume.
+トリガーハッピー:
+  english: trigger happy
+トリー:
+  english: Tory
+トレーニングルーム:
+  english: training room
+トレーラーをまもれ:
+  english: protect the trailer
+トロ:
+  english: Toro
+トロコスチューム:
+  english: toro costume
+トロコスチュームをゲットしました。:
+  english: I got the Toro costume.
+トロンイエロー:
+  english: tron yellow
+トロンウィング:
+  english: tron wing
+トロンガッシュ:
+  english: Tron Gash
+トロンキャノン:
+  english: Tron Cannon
+トロンチェーン:
+  english: tron chain
+トロンブルー:
+  english: tron blue
+トロンレッド:
+  english: tron red
+トンファ:
+  english: Tonfa
+トーナメントセレクトに戻<もど>ります。:
+  english: Return to Tournament Select.
+トーナメント形式<けいしき>の大会<たいかい>です。:
+  english: It's a tournament format.
+ドルビープロロジック2:
+  english: Dolby Pro Logic 2
+ナツミ:
+  english: Natsumi
+ナツミにしては珍<めずら>しい女<おんな>の子<こ>らしい衣服<いふく>です。:
+  english: This is rare for Natsumi.
+ナンニンイルノカナ:
+  english: Nannin Irunokana
+ニオブチップ:
+  english: niobium chips
+ニックネームへんこう:
+  english: Nickname Hunkou
+ニンジャ風<ふう>のコスチュームです。:
+  english: A ninja-style costume.
+ネオジチップ:
+  english: neodymium chip
+? 'ネコのしっぽは
+
+  エサじゃないみャ!'
+: english: 'The cat''s tail
+
+    It''s not food!'
+ネットワーク パスワード:
+  english: network password
+ネットワークパスワード:
+  english: network password
+ノコハンマー:
+  english: saw hammer
+ノーべチップ:
+  english: nobechip
+'ノーベル賞<しょう>をめざす理論派<りろんは>ロボ。 箱<はこ>いっぱいの爆弾<ばくだん>で援護<えんご>してくれます。     ':
+  english: He will give you the Nobel Prize.
+ノーマル:
+  english: normal
+ノーマルな白<しろ>いボディカラーです。:
+  english: Normal white body color.
+ノーマルモードで遊<あそ>びます。:
+  english: Play in normal mode.
+? 'ハウンド
+
+  ブラスト'
+: english: 'hound
+
+    blast'
+ハウンドブラスト:
+  english: hound blast
+ハカセ:
+  english: Hakase
+ハグレサンセンシ:
+  english: haguresansenshi
+? 'ハットリ
+
+  モンゾウ'
+: english: 'Hattori
+
+    Monzo'
+ハットリモンゾウ:
+  english: hattrimonzou
+ハルカ:
+  english: Haruka
+'ハロウィンのヒーロー。 お菓子爆弾<かしばくだん>であなたを援護<えんご>します。       ':
+  english: Halloween hero. Candy bomb
+ハード:
+  english: hard
+ハードニイコウゼ:
+  english: hard skin
+ハードモードで遊<あそ>びます。:
+  english: Play in hard mode.
+バイブレーション:
+  english: vibration
+バイブレーションのオン⋅オフを選択<せんたく>してください。:
+  english: Select vibration on/off.
+バックパック:
+  english: backpack
+? 'バナナボートを必死<ひっし>にこいでいるところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'I saw him desperately rowing a banana boat.
+
+    Discovered and captured.'
+バナナロケット:
+  english: banana rocket
+バナナ型<がた>のロケットに乗<の>って体当<たいあ>たりする技<わざ>です。 ロケット発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。:
+  english: Make it banana-shaped.
+バリア:
+  english: barrier
+バルトス:
+  english: bartos
+バーチャルスペース01:
+  english: Virtual space 01
+バーチャルスペース01 --:--:
+  english: Virtual space 01 --:--
+バーチャルスペース02:
+  english: Virtual space 02
+バーチャルスペース02 --:--:
+  english: Virtual space 02 --:--
+バーチャルスペース03:
+  english: Virtual space 03
+バーチャルスペース03 --:--:
+  english: Virtual space 03 --:--
+バーチャルスペース04:
+  english: Virtual space 04
+バーチャルスペース04 --:--:
+  english: Virtual space 04 --:--
+バーチャルスペースに迷<まよ>い込<こ>みました。 罠<わな>にはまってしまった可能性<かのうせい>があります。 危険<きけん>ですので、直<ただ>ちにセキュリティ⋅ホールを見<み>つけ、脱出<だっしゅつ>ルートを探<さが>してください。:
+  english: Get lost in virtual space.
+バーチャルスペースに迷<まよ>い込<こ>んでいます。 危険<きけん>ですので、セキュリティ⋅ホールを見<み>つけ、脱出<だっしゅつ>ルートを探<さが>してください。:
+  english: Get lost in virtual space.
+バーニア:
+  english: vernier
+バーニヤ:
+  english: vernier
+バーニヤモード:
+  english: vernier mode
+バーモン:
+  english: barmon
+? 'バーモンにあったら
+
+  遅<おく>れるなら電話<でんわ>しろよって伝<つた>えてください。'
+: english: 'If you''re in Vermont
+
+    Please delay.'
+パスワード:
+  english: password
+パスワードを入力<にゅうりょく>します。:
+  english: Enter your password.
+パズルボーナス:
+  english: puzzle bonus
+パリで一人暮<ひとりぐ>らしを夢見<ゆめみ>る乙女<おとめ>(?)なイヌ。 占<うらな>いの結果<けっか>がいいと幸<しあわ>せをわけてくれます。:
+  english: It will help you live alone in Paris.
+パワーA:
+  english: Power A
+パワーB:
+  english: Power B
+パワーアップパーツ:
+  english: power up parts
+パワーアップパーツをセットするガチャメカを選<えら>んでください。:
+  english: Please select the gacha mecha you want to set the power up parts to.
+パワーアップパーツをセットするガチャメカ選択<せんたく>に戻<もど>ります。:
+  english: Select the gacha mechanism to set the power up parts.
+パワーアップパーツをセットするパーツスロットを選<えら>んでください。:
+  english: Select the parts slot to set the power-up parts.
+パワーアップパーツを開発<かいはつ>します。:
+  english: Develop power-up parts.
+パンチモード:
+  english: punch mode
+パンプキン:
+  english: pumpkin
+パーツスロット選択<せんたく>に戻<もど>ります。:
+  english: Select the parts slot.
+パープルスタイル:
+  english: purple style
+パープルファー:
+  english: purple fur
+パープルヘアー:
+  english: purple hair
+ヒストリカルアーマー:
+  english: historical armor
+ヒックス:
+  english: Hicks
+ヒツジセット:
+  english: sheep set
+ヒロキ:
+  english: Hiroki
+ビジネスマンセット:
+  english: businessman set
+ビスマチップ:
+  english: bisma chips
+ピエール:
+  english: Pierre
+ピサル:
+  english: Pisar
+? 'ピポサル
+
+  ウェーブ'
+: english: 'piposal
+
+    wave'
+'ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に運続<れんぞく>ヒットします。       ':
+  english: Cannon hit Piposal.
+'ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に運続<れんぞく>ヒットします。        ':
+  english: Cannon hit Piposal.
+ピポサルウェーブ:
+  english: piposal wave
+ピポサル帝国編:
+  english: Piposal Empire Edition
+ピポサル水:
+  english: piposal water
+ピポサル緑:
+  english: piposal green
+ピポサル赤:
+  english: piposal red
+ピポサル青:
+  english: piposal blue
+ピポサル黄:
+  english: piposal yellow
+ピポサル黒:
+  english: piposal black
+ピポトロン:
+  english: Pipotron
+ピポトロンG:
+  english: Pipotron G
+? ピポトロンレッド、ブルー、イエローが乗<の>ったトレーラーが、秋葉原<あきはばら>の地下<ちか>サル軍基地<ぐんきち>に向<む>かっています。 改造<かいぞう>したレーザー砲台<ほうだい>を基地内<きちない>に運<はこ>び込<こ>もうとしていますが、敵<てき>の攻撃<こうげき>を受<う>けています。
+  トレーラーを援護<えんご>し、無事<ぶじ>、地下基地内<ちかきちない>にレーザー砲台<ほうだい>を運<はこ>び込<こ>んでください。
+: english: Pipotron red, blue and yellow ride.
+? ピポトロンレッド、ブルー、イエローが乗<の>ったトレーラーが、秋葉原<あきはばら>の地下<ちか>サル軍基地<ぐんきち>に向<む>かっています。 改造<かいぞう>したレーザー砲台<ほうだい>を基地内<きちない>に運<はこ>び込<こ>もうとしていますが、敵<てき>の攻撃<こうげき>を受<う>けています。
+  東京駅<とうきょうえき>から地下<ちか>ルートを通<とお>って秋葉原<あきはばら>に向<む>かい、トレーラーを援護<えんご>してください。
+: english: Pipotron red, blue and yellow ride.
+ピンクの魔法少女風<まほうしょうじょふう>のコスチュームです。:
+  english: A pink magical girl costume.
+ファイア:
+  english: fire
+ファイル:
+  english: file
+ファイルを選<えら>んでください。:
+  english: Please select a file.
+ファイルセレクト:
+  english: file select
+ファイル選択<せんたく>に戻<もど>ります。:
+  english: Select file.
+ファンキーな黄色<きいろ>いボディカラーです。:
+  english: Funky yellow body color.
+ファーをむらさきに染<そ>めてみた。 脱色<だっしょく>は怖<こわ>かったのでカラーペイントしているだけなので洗<あら>えば落<お>ちる。:
+  english: Dye the fur purple.
+ファーを白<しろ>に染<そ>めてみた。 脱色<だっしょく>は怖<こわ>かったのでカラーペイントしているだけなので洗<あら>えば落<お>ちる。:
+  english: Whitening the fur.
+ファーを青<あお>に染<そ>めてみた。 脱色<だっしょく>は怖<こわ>かったのでカラーペイントしているだけなので洗<あら>えば落<お>ちる。:
+  english: Turn the fur blue.
+フェイズ最終集計結果<さいしゅうしゅうけいけっか>:
+  english: Phase final tally results
+フェイズ途中集計結果<とちゅうしゅうけいけっか>:
+  english: Intermediate phase tally results
+フェブル:
+  english: Febre
+フェルミチップ:
+  english: fermi chip
+フォックス:
+  english: fox
+? 'フォーマット中<ちゅう>!
+
+  %のメモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。'
+: english: 'Formatting in progress!
+
+    % memory card (PS2)
+
+    Please do not pull it out.'
+? 'フライング
+
+  チェア'
+: english: 'flying
+
+    chair'
+フライングチェア:
+  english: flying chair
+? 'フラッシュ
+
+  リング'
+: english: 'flash
+
+    ring'
+フラッシュリング:
+  english: flash ring
+フラットウッズ:
+  english: flat woods
+フランソワ:
+  english: Francois
+フリーごうせい:
+  english: Free service
+ブラスト:
+  english: blast
+ブラックのスリムなスーツのコスチュームです。:
+  english: A black slim suit costume.
+ブラックファー:
+  english: black fur
+ブラックボディ:
+  english: black body
+ブラックローブ:
+  english: black robe
+ブリッジ:
+  english: bridge
+ブリッジ PM03:52:
+  english: Bridge PM03:52
+ブリッジ PM04:10:
+  english: Bridge PM04:10
+ブリッジ PM04:36:
+  english: Bridge PM04:36
+ブリッジ PM04:43:
+  english: Bridge PM04:43
+ブリッジにたどりつくには、この先<さき>の格納庫<かくのうこ>を突破<とっぱ>する必要<ひつよう>があるようです。 敵機械化兵<てききかいかへい>に注意<ちゅうい>してください!:
+  english: Go ahead to reach the bridge!
+? ブリッジに到着<とうちゃく>しました。 中<なか>にスペクターがいると思<おも>われます。 出会<であい>い頭<がしら>の反撃<はんげき>が予想<よそう>されるので、十分注意<じゅうぶんちゅうい>してブリッジ内<ない>に突入<とつにゅう>し、スペクターを確保<かくほ>してください。
+: english: Arrive at the bridge.
+? ブリッジに到着<とうちゃく>しました。 中<なか>にニセスペクターがいると思<おも>われます。 出会<であい>い頭<がしら>の反撃<はんげき>が予想<よそう>されるので、十分注意<じゅうぶんちゅうい>してブリッジ内<ない>に突入<とつにゅう>し、ニセスペクターを確保<かくほ>してください。
+: english: Arrive at the bridge.
+ブリッジ切り離し:
+  english: bridge disconnection
+ブルーアーマー:
+  english: blue armor
+ブルージャケット:
+  english: blue jacket
+ブルースタイル:
+  english: blue style
+ブルーファー:
+  english: blue fur
+ブルーローブ:
+  english: blue robe
+ブロブコアの最期:
+  english: The end of blobcore
+ブロブコアを倒<たお>すには改造<かいぞう>レーザー砲<ほう>が必要<ひつよう>です。:
+  english: Defeat Blobcore.
+プラズマ制御:
+  english: plasma control
+プリマ志望:
+  english: Prima aspiring
+プロメチップ:
+  english: promechip
+ヘビメタセット:
+  english: heavy metal set
+ヘビーアーマー:
+  english: heavy armor
+ヘビータンク:
+  english: heavy tank
+ヘビーメック:
+  english: heavy mech
+ヘルプ文章<ぶんしょう>:
+  english: Help text
+ベリリチップ:
+  english: beryli chip
+ベリーハード:
+  english: Very hard
+ベリーハードモードで遊<あそ>びます。:
+  english: Play in very hard mode.
+? 'ベンチにてくつろいでいるところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Relaxing on a bench
+
+    Discovered and captured.'
+ページおくり:
+  english: Page delivery
+ホルミチップ:
+  english: holmi tip
+ホワイトアーマー:
+  english: white armor
+ホワイトジャケット:
+  english: white jacket
+ホワイトスタイル:
+  english: white style
+ホワイトファー:
+  english: white fur
+ホワイトボディ:
+  english: white body
+ホワイトローブ:
+  english: white robe
+? 'ホント言<い>うとオレも射撃部隊<しゃげきぶたい>に
+
+  くわわりたかったんだけどな⋅⋅⋅'
+: english: 'Honestly
+
+    I wanted to touch it⋅⋅⋅'
+ホント言<い>うと高<たか>いところは苦手<にがて>なんだ⋅⋅⋅。:
+  english: It's true⋅⋅⋅.
+? 'ホーミング
+
+  アロー'
+: english: 'homing
+
+    arrow'
+ホーミングアロー:
+  english: homing arrow
+ホームシック:
+  english: homesick
+? 'ボクのターンを見<み>てくれたか!?
+
+  流<なが>れるようだったろう?'
+: english: 'Did you see my turn!?
+
+    It seemed to flow, right?'
+ボルケーノ:
+  english: Volcano
+ボートキング:
+  english: boat king
+ポケピ:
+  english: pokepi
+ポリスセット:
+  english: police set
+ポンポコDXセット:
+  english: Pon Poko DX set
+ポーズメニュー:
+  english: pause menu
+ポール:
+  english: pole
+マグネチップ:
+  english: magnetic chip
+マシンガン:
+  english: machine gun
+マジョステッキ:
+  english: Majo cane
+マジョッコセット:
+  english: Majocco set
+マスター:
+  english: master
+マチムスメセット:
+  english: machimusume set
+マッコイ:
+  english: McCoy
+マッチセレクトに戻<もど>ります。:
+  english: Return to match select.
+マップいどう:
+  english: map information
+ミッション:
+  english: mission
+ミッションを始<はじ>めます。:
+  english: Start the mission.
+ミッションスタート:
+  english: Mission start
+ミッション結果<けっか>:
+  english: mission results
+ミッション説明<せつめい>に戻<もど>ります。:
+  english: I will explain the mission.
+ミドルアーマー:
+  english: middle armor
+ミドルタンク:
+  english: middle tank
+ミドルメック:
+  english: middle mech
+? 'ミヤモン⋅
+
+  ムサシ'
+: english: 'Miyamon⋅
+
+    Musashi'
+ミヤモン⋅ムサシ:
+  english: Miyamon⋅Musashi
+ミラーフォース:
+  english: mirror force
+? 'ミリオンモンキーズのゲームデータを作成中<さくせいちゅう>!
+
+  %のメモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。'
+: english: 'Creating game data for Million Monkeys!
+
+    % memory card (PS2)
+
+    Please do not pull it out.'
+ミリタリーセット:
+  english: military set
+ムーブするチップ選択<せんたく>に戻<もど>ります。:
+  english: Select the chip to move.
+ムーブに失敗<しっぱい>しました。:
+  english: Move failed.
+ムーブを完了<かんりょう>しました。:
+  english: Move completed.
+ムーブ先<さき>のチップを表示中<ひょうじちゅう>です。○ボタンでムーブの最終確認<さいしゅうかくにん>をします。:
+  english: Make a move.
+メイタンテイセット:
+  english: Meitantei set
+メカハンマー:
+  english: mechanical hammer
+メカボー:
+  english: Mechabo
+メカロッド:
+  english: mechanical rod
+メガランチャー:
+  english: mega launcher
+メトロ:
+  english: Metro
+メトロ AM08:13:
+  english: Metro AM08:13
+メトロ PM06:32:
+  english: Metro PM06:32
+? 'メモリーカード(PS2)が
+
+  %に
+
+  差<さ>し込<こ>まれていません。'
+: english: 'Memory card (PS2)
+
+    to %
+
+    There is no difference.'
+? 'メモリーカード(PS2)が
+
+  %に差<さ>し込<こ>まれていません。'
+: english: 'Memory card (PS2)
+
+    There is no difference in %.'
+? 'メモリーカード(PS2)が差<さ>し込<こ>まれていません。
+
+  ミリオンモンキーズのゲームデータを作成<さくせい>するには
+
+  %KB以上<いじょう>の空<あ>き容量<ようりょう>が必要<ひつよう>です。
+
+  このままゲームを開始<かいし>しますか?'
+: english: 'Memory card (PS2) is not inserted.
+
+    How to create Million Monkeys game data
+
+    More than %KB.
+
+    Do you want to start the game now?'
+? 'メモリーカード(PS2)のアクセスに
+
+  失敗<しっぱい>しました。'
+: english: 'For accessing the memory card (PS2)
+
+    Failed.'
+? 'メモリーカード(PS2)の空<あ>き容量<ようりょう>が不足<ふそく>しています。
+
+  ミリオンモンキーズのゲームデータを作成<さくせい>するには
+
+  %KB以上<いじょう>の空<あ>き容量<ようりょう>が必要<ひつよう>です。
+
+  このままゲームを開始<かいし>しますか?'
+: english: 'The memory card (PS2) is empty.
+
+    How to create Million Monkeys game data
+
+    More than %KB.
+
+    Do you want to start the game now?'
+メモリーカードスロットを選<えら>んでください。:
+  english: Please select a memory card slot.
+メモリーカードスロット選択<せんたく>に戻<もど>ります。:
+  english: Select memory card slot.
+モデル志望:
+  english: aspiring model
+モノラル:
+  english: monaural
+モンサルト:
+  english: Monsarto
+モンタ:
+  english: Monta
+モンチさん:
+  english: Monchi-san
+モンブラン:
+  english: mont blanc
+? 'モードクリアデータを進行<しんこう>ファイルに
+
+  セーブできませんが、本当<ほんとう>にキャンセルしますか?'
+: english: 'Mode clear data to progress file
+
+    I can''t save, do you really want to cancel?'
+モードセレクトに戻<もど>ります。:
+  english: Return to mode select.
+ヨットハーバー:
+  english: yacht harbor
+ヨットハーバー AM11:11:
+  english: Yacht Harbor AM11:11
+ヨットハーバー PM03:07:
+  english: Yacht Harbor PM03:07
+? 'ヨットハーバーでデイビッドを
+
+  起<お>こそうとしているところを発見<はっけん>されゲッチュされる。'
+: english: 'David at Yacht Harbor
+
+    He gets woken up and gets fucked.'
+? 'ヨットハーバーで居眠<いねむ>りしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'I saw you dozing off at the yacht harbor.
+
+    Discovered and captured.'
+? 'ヨットハーバーで発見<はっけん>!
+
+  至急回収<しきゅうかいしゅう>に向<む>かってください。'
+: english: 'Found at Yacht Harbor!
+
+    Please collect it as soon as possible.'
+? 'ヨットハーバーにてくつろいでいるところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Relaxing at the yacht harbor
+
+    Discovered and captured.'
+? 'ヨットハーバーにてねっしょう中<ちゅう>のところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'At the Yacht Harbor
+
+    Discovered and captured.'
+? 'ヨットハーバーにてめいそう中<ちゅう>のところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Measuring at the yacht harbor
+
+    Discovered and captured.'
+? 'ヨットハーバーにてジャグリング中<ちゅう>のところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Juggling at the yacht harbor
+
+    Discovered and captured.'
+? 'ヨットハーバーにて危険<きけん>な芸<げい>をしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'A dangerous situation at the yacht harbor
+
+    Discovered and captured.'
+? 'ヨットハーバーにて日光浴<にっこうよく>の最中<さいちゅう>に
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Sunbathing at the yacht harbor
+
+    Discovered and captured.'
+? 'ヨットハーバーにて日光浴<にっこうよく>をしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Sunbathing at the yacht harbor
+
+    Discovered and captured.'
+? 'ヨットハーバーにて木<き>に登<のぼ>っているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'A tree growing at the yacht harbor
+
+    Discovered and captured.'
+? 'ヨットハーバーにて眠<ねむ>りかけているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'About to fall asleep at the yacht harbor
+
+    Discovered and captured.'
+? 'ヨットハーバーにて釣<つ>り糸<いと>をたれているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Fishing at the yacht harbor
+
+    Discovered and captured.'
+ライトアーマー:
+  english: light armor
+ライトアーマーA:
+  english: Light armor A
+ライトアーマーB:
+  english: Light Armor B
+ライトタンク:
+  english: light tank
+ライトメック:
+  english: light mech
+ラウンド:
+  english: round
+ラウンドを始<はじ>めます。:
+  english: Start the round.
+ラウンドスタート:
+  english: round start
+ラウンド最終結果:
+  english: Round final results
+ラウンド最終集計結果<さいしゅうしゅうけいけっか>:
+  english: Round final tally results
+ラウンド結果<けっか>:
+  english: Round results
+ラウンド途中集計結果<とちゅうしゅうけいけっか>:
+  english: Round results
+ラピッド:
+  english: rapid
+ラルフ:
+  english: ralph
+ランダム:
+  english: random
+ランチャーモード:
+  english: launcher mode
+ランドセルとタテブエのセットです。:
+  english: A set of school bag and vertical bag.
+リゾート風<ふう>のコスチュームです。:
+  english: This is a resort style costume.
+リタイア:
+  english: retirement
+リタイアします。:
+  english: I will retire.
+リッキー:
+  english: ricky
+リッチー:
+  english: Richie
+? 'リップル
+
+  ストーム'
+: english: 'ripple
+
+    storm'
+リップルストーム:
+  english: ripple storm
+リトライ:
+  english: retry
+リノール:
+  english: linole
+リフレク:
+  english: reflect
+リフレクボー:
+  english: reflect bow
+リミッター:
+  english: limiter
+リミッター解除:
+  english: Limiter release
+リモートボム:
+  english: remote bomb
+リンゴー:
+  english: apple
+ルケカルサ:
+  english: Luquecarsa
+ルテニチップ:
+  english: Rutheni chip
+ルール設定:
+  english: Rule settings
+レオサルド:
+  english: leosardo
+レシピごうせい:
+  english: Recipe information
+レシピで合成:
+  english: Synthesize with recipe
+レシピを選<えら>んで合成<ごうせい>します。:
+  english: Choose a recipe.
+レシピ一覧<いちらん>に戻<もど>ります。:
+  english: List of recipes.
+レジェンド:
+  english: legend
+レジェンドトーナメント:
+  english: legend tournament
+レジェンド一次予選ステージ:
+  english: Legend first qualifying stage
+レジェンド二次予選ステージ:
+  english: Legend second qualifying stage
+レジェンド決勝ステージ:
+  english: legend final stage
+レジェンド準決勝ステージ:
+  english: Legend semi-final stage
+レッドアーマー:
+  english: red armor
+レッドジャケット:
+  english: red jacket
+レッドボディ:
+  english: red body
+? 'レフトポールによじ登<のぼ>って
+
+  球場見物<きゅうじょうけんぶつ>していたところを発見<はっけん>。'
+: english: 'Climb up the left pole
+
+    Visiting the stadium.'
+レーザーガン:
+  english: laser gun
+レーザー光線<こうせん>を発射<はっしゃ>する強力<きょうりょく>な射撃<しゃげき>メカです。 運続<れんぞく>で撃<う>ちつづけられますが、ゲージ消費<しょうひ>が早<はや>いので注意<ちゅうい>しましょう。:
+  english: Let's laser beam.
+レーダー:
+  english: radar
+ロケットチェア:
+  english: rocket chair
+ロングレンジ:
+  english: long range
+? 'ロード中<ちゅう>!
+
+  %の
+
+  メモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししないでください。'
+: english: 'Loading!
+
+    %of
+
+    Memory card (PS2)
+
+    Please do not remove it.'
+ワッキー:
+  english: Wacky
+ワルなふんいきを漂<ただよ>わせる派手<はで>な衣装<いしょう>です。:
+  english: It's all about badass fun.
+ワルなふんいきを漂<ただよ>わせる黒<くろ>づくめの服<ふく>です。:
+  english: It's all about badass fun.
+ワープフープ:
+  english: warp hoop
+ワープブースター:
+  english: warp booster
+ワープブーツ:
+  english: warp boots
+ワールドトーナメント:
+  english: world tournament
+ワールド一次予選ステージ:
+  english: World first qualifying stage
+ワールド二次予選ステージ:
+  english: World second qualifying stage
+ワールド決勝ステージ:
+  english: world final stage
+ワールド準決勝ステージ:
+  english: World semi-final stage
+ー:
+  english: '-'
+ーーー:
+  english: ーーーー
+一定時間<いっていじかん>、すべての能力<のうりょく>がパワーアップします。 パワーアップしたハンマーの攻撃力<こうげきりょく>は絶大<ぜつだい>です。:
+  english: It's a certain amount of time.
+一定時間<いっていじかん>、二丁拳銃<にちょうけんじゅう>の弾<たま>が強化弾<きょうかだん>になります。 発動中<はつどうちゅう>は他<ほか>の必殺技<ひっさつわざ>を使<つか>うことができなくなるので注意<ちゅうい>してください。:
+  english: Please wait for a certain amount of time.
+一定時間<いっていじかん>、敵<てき>の動<うご>きがスローになる技<わざ>です。 運続<れんぞく>ヒットがねらいやすくなります。:
+  english: It becomes easier to aim for hits for a certain period of time.
+一定時間<いっていじかん>バリアを張<は>って、無敵状態<むてきじょうたい>になります。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。:
+  english: Please wait for a certain amount of time.
+一定時間<いっていじかん>バリアを張<は>って防御<ぼうぎょ>する技<わざ>です。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。:
+  english: Please wait for a certain amount of time.
+一定時間<いっていじかん>レーザーをはねかえすシールドを発生<はっせい>させるパーツです。 複数<ふくすう>セットすることでシールドの持続時間<じぞくじかん>をのばすことができます。:
+  english: You can extend it for a certain amount of time.
+一度見<いちどみ>たムービーが見<み>れます。:
+  english: You can see it once.
+上空<じょうくう>に戦艦<せんかん>をよびよせ、爆撃<ばくげき>で援護<えんご>してもらう技<わざ>です。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。:
+  english: You can fly.
+上級者<じょうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。:
+  english: I'm an advanced person.
+不明:
+  english: not clear
+? '丙並併兵塀幣平弊柄閉陛米壁癖別
+
+  偏変片編辺返遍便勉弁病碧'
+: english: 'Hei-Nami-Jobei-hei-hei-hei-hei pattern closed majesty rice wall customs
+
+    Phenomena, one side, one side, one side, one side and one side, bentenbenbyoubi'
+両端<りょうたん>に刃<やいば>のついた大型<おおがた>のメカロッドです。 メカロッドより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。:
+  english: Let's do both ends.
+中世<ちゅうせい>の騎土風<きしふう>のコスチュームです。:
+  english: A medieval costume.
+中型<ちゅうがた>のタンクです。 誘導<ゆうどう>ミサイルとガトリング砲<ほう>を装備<そうび>しています。 爆発<ばくはつ>すると使<つか>えなくなるので注意<ちゅうい>しましょう。:
+  english: Let's go for medium size.
+中型<ちゅうがた>のロボットです。 火炎放射<かえんほうしゃ>とガトリング砲<ほう>を装備<そうび>しています。 爆発<ばくはつ>すると使<つか>えなくなるので注意<ちゅうい>しましょう。:
+  english: Let's go for medium size.
+中級者<ちゅうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。:
+  english: I'm an intermediate person.
+主布沼:
+  english: Main cloth marsh
+二丁拳銃<にちょうけんじゅう>にエネルギーを充"<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。:
+  english: It's a dual pistol.
+二丁拳銃<にちょうけんじゅう>にエネルギーを充填<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。:
+  english: It's a dual pistol.
+? '二尼弐肉日乳入尿任妊忍認仁児若
+
+  柔女如人虹錦'
+: english: 'Two nun two meat day milk urination pregnancy tolerance Jinji young
+
+    Jujo Nyojin Rainbow Nishiki'
+二番目<にばんめ>にお気<き>に入<い>りの服<ふく>です。:
+  english: It's the second one.
+? '亜哀愛悪握圧安暗案
+
+  以位依偉医囲委威尉意慰胃為異移維緯衣違遺域育一壱逸印員因姻引院陰隠韻飲
+
+  右宇羽雨運雲
+
+  宮影衛映栄永泳英詠鋭易液疫益駅悦謁越閲円園塩宴延援沿演炎煙猿縁遠鉛
+
+  汚凹央奥往応押桜横欧殴王翁億屋憶乙恩温穏音'
+: english: 'Ai-Ai-Ai-Ai-Ai-Ai-Ai-Ai-Ai-Ai-Ai-Ki-Shu-An-An-An-Ai-Ai
+
+    In the latest, Yoi Medical Survivor''s Enforcement Captain Metropolitan Introduction
+    Areas Introduction Areas Ichiichi Ichiichi Ichi Ichi Ishido House Introduction
+    House
+
+    Right uba rain luck cloud
+
+    Palace shadow Wei Ying Rong Yong Ying Ying Ying Ying Yi Liquid Pestilization Station
+    Yue Yue Review Yuen Salt Banquet Extension Support Flame Smoke Monkey Edge Distant
+    Lead
+
+    In the middle of the filth, in the back of the sky, in the middle of nowhere,
+    in the middle of nowhere, in the middle of nowhere'
+? '亜哀愛悪握圧安暗案行扱阿藍葵茜
+
+  旭昌晃晟彬渥曙梓敦綾鮎嵐晏杏'
+: english: 'Ai Ai Aoi Akane
+
+    Asahi Akisaki Akira Atsushi Akebono Azusa Atsushi Aya Ayu Arashi Anian'
+交代<こうたい>するチームメイトを選<えら>んでください。:
+  english: Please take turns.
+人間<にんげん>になることを夢<ゆめ>みる無邪気<むじゃき>なネコ。 クロたちといっしょに画面中<がめんじゅう>を走<はし>り回<まわ>ります。:
+  english: There are humans.
+他<ほか>のキャラクターにチップを移動<いどう>します。:
+  english: Others.
+他のボタンでとりけし:
+  english: Cancel with other buttons
+? '以位依偉医囲委威尉意慰胃為異移
+
+  維緯衣違遺域育一壱逸印員因姻引
+
+  院陰隠韻飲唯易音芋亥伊莞斐郁磯
+
+  猪巌允胤'
+: english: 'Iiyiyiyi Iiyi Iiyi Iiyi Iiyi Iiyi Iiyi Iiyiyi Iiyi Iiyi Stomach Transfer
+
+    The relationship between the Ii-Ichi Inkan and the Ikui Iku Iku Iku Iku Iku
+
+    Inin Yin Yin Drink Yuiyi On Imo Ikan Ikuiso
+
+    Iwao Masutane'
+体当<たいあ>たりで爆発<ばくはつ>するリモコンメカです。 ボタンでオート走行<そうこう>ですが、右<みぎ>スティックで自由<じゆう>に操作<そうさ>することもできます。:
+  english: You can also try it yourself.
+体験版<たいけんばん>では選択<せんたく>できません。:
+  english: Trial version is not available.
+何<なに>も海<うみ>で練習<れんしゅう>しなくてもいいと思<おも>うんだよね⋅⋅⋅:
+  english: What's going on?⋅⋅⋅
+作成<さくせい>するキャラクターを選<えら>んでください。:
+  english: Please create one.
+作成中<さくせいちゅう>:
+  english: Under construction
+使用<しよう>するキャラクターを選<えら>んでください。:
+  english: Please use it.
+使用<しよう>するキャラクターを選<えら>んでください。 方向<ほうこう>キーの左右<さゆう>でチームを選<えら>ぶことができます。:
+  english: You can use it.
+保安官風<ほあんかんふう>のコスチュームです。:
+  english: It's a sheriff style costume.
+? '修行<しゅぎょう>の道<みち>に
+
+  終<お>わりはないんダス。'
+: english: 'For training
+
+    There''s no end to it.'
+倉庫街:
+  english: warehouse district
+個人戦にする:
+  english: make it an individual match
+? '停泊中<ていはくちゅう>の船<ふね>で遊<あそ>んでいるところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Where it is anchored
+
+    Discovered and captured.'
+? '僕<ぼく>らは休暇中<きゅうかちゅう>だったんだ。
+
+  さぼってたわけじゃないぞ。'
+: english: 'It was me.
+
+    It''s not like I was slacking off.'
+? '入力
+
+  コントロール'
+: english: 'input
+
+    control'
+入力<にゅうりょく>する文字<もじ>を選<えら>んでください。:
+  english: Please enter.
+入力<にゅうりょく>を 終了<しゅうりょう>します。:
+  english: Enter.
+入力<にゅうりょく>を取<と>り消<け>して終了<しゅうりょう>します。:
+  english: Enter.
+入力コントロール:
+  english: input control
+全身<ぜんしん>がむらさきに変色<へんしょく>したダークスペクター。:
+  english: Full body Dark Specter.
+全身<ぜんしん>が白<しろ>く変色<へんしょく>したダークスペクター。:
+  english: Full body Dark Specter.
+全身<ぜんしん>が青<あお>く変色<へんしょく>したダークスペクター。:
+  english: Full body Dark Specter.
+全身<ぜんしん>が黒<くろ>く、いかにも悪<わる>そうなふんいきです。:
+  english: It looks like it's all over.
+公衆電話<こうしゅうでんわ>で話<はな>し中<ちゅう>のところを発見<はっけん>されゲッチュされる。:
+  english: A public phone call is made and a game is made.
+初級者<しょきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。:
+  english: Beginner.
+制限時間:
+  english: time limit
+削除<さくじょ>するチップを選<えら>んで、結果<けっか>をセーブします。:
+  english: Save the deletion.
+削除<さくじょ>するチップを選<えら>んでください。:
+  english: Please delete it.
+前方<ぜんぽう>に大<おお>きな暗黒弾<あんこくだん>を放<はな>ちます。 効果範囲<こうかはんい>が小<ちい>さいかわりに大<おお>きな破壊力<はかいりょく>を持<も>ちます。:
+  english: I'm in front of you.
+前方<ぜんぽう>に巨大<きょだい>な矢<や>を放<はな>つ技<わざ>です。 効果範囲<こうかはんい>が小<ちい>さいかわりに高<たか>い攻撃力<こうげきりょく>を持<も>ちます。:
+  english: I'm in front of you.
+'前方一直線<ぜんぽういっちょくせん>に稲妻<いなづま>が走<はし>ります。 敵<てき>が一直線<いっちょくせん>に並<なら>んだらこの技<わざ>で一掃<いっそう>しましょう。   ':
+  english: Let's move forward in a straight line.
+? '動<うご>かなければ発見<はっけん>されないって聞<き>いたんだけどなぁ。
+
+  別<べつ>のゲームだったかなぁ⋅⋅⋅'
+: english: 'It moved though.
+
+    Maybe it was a different game⋅⋅⋅'
+務夢無矛霧武謀娘:
+  english: Mumumumu Mukai Kiri Musashi Daughter
+北欧<ほくおう>のバイキングの格好<かっこう>です。:
+  english: It's Northern Europe.
+半漁人<はんぎょじん>をイメージしたコスチュームです。:
+  english: This costume is inspired by a half-fisherman.
+? '危険<きけん>なところを見<み>るとチャレンジしたくなるのさ。
+
+  オレをとめてもムダだぜ。'
+: english: 'When something is dangerous, I want to take on the challenge.
+
+    There''s no point in trying to stop me.'
+古代<こだい>の戦土風<せんしふう>のコスチュームです。:
+  english: This is an ancient costume.
+右宇羽雨運雲有畝卯丑唄:
+  english: Right Uba Ameunun Ariune Uushi Uta
+合成<ごうせい>が終<お>わりました。:
+  english: Synthesis finished.
+合成<ごうせい>に失敗<しっぱい>しました。:
+  english: I synthesized it.
+合成<ごうせい>に必要<ひつよう>なチップがありません。:
+  english: No synthetic chips.
+? '合成<ごうせい>に成功<せいこう>しました。
+
+  %を手<て>に入<い>れました。'
+: english: 'I synthesized it.
+
+    I got %.'
+合成<ごうせい>メニューに戻<もど>ります。:
+  english: Synthesize.
+合成中<ごうせいちゅう>⋅⋅⋅:
+  english: Synthesizing⋅⋅⋅
+同<おな>じキャラクターにチップムーブはできません。:
+  english: Chip moves cannot be made on the same character.
+周辺<しゅうへん>の敵<てき>を吸<す>い込<こ>む巨大<きょだい>な竜巻<たつまき>を発生<はっせい>させます。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。:
+  english: Can be around.
+命名明盟迷銘鳴滅免綿面:
+  english: Naming Ming Alliance Mysterious Inscription Melting Menmian Mask
+? '和話賄惑腕湾
+
+
+  '
+: english: Japanese story bribe arm bay
+和話賄惑腕湾枠倭亘:
+  english: Japanese story bribery arm bay frame wawata
+回ミス:
+  english: times mistake
+回転<かいてん>しながらアームショットを乱射<らんしゃ>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>することができます。:
+  english: It can be rotated.
+地下<ちか>ルートを進<すす>み、ピポトロン達<たち>のいる秋葉原<あきはばら>に向<む>かってください。:
+  english: Please go underground.
+? '地下街<ちかがい>でさぼっているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'I was slacking off in the underground mall
+
+    Discovered and captured.'
+? '地下街<ちかがい>でエレベータを待<ま>っているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Where there is an underground shopping mall
+
+    Discovered and captured.'
+? '地下街<ちかがい>で一斉射撃<いっせいしゃげき>を指揮<しき>していたが
+
+  撃破<げきは>されゲッチュされる。'
+: english: 'It was an underground shopping mall
+
+    Destroyed and captured.'
+地下街<ちかがい>で増援部隊<ぞうえんぶたい>を呼<よ>び寄<よ>せたがゲッチュされた。:
+  english: The underground shopping center was robbed.
+? '地下街<ちかがい>で居眠<いねむ>りしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Underground shopping
+
+    Discovered and captured.'
+? '地下街<ちかがい>で待<ま>ち伏<ぶ>せているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'An underground shopping area
+
+    Discovered and captured.'
+? '地下街<ちかがい>で発見<はっけん>!
+
+  至急回収<しきゅうかいしゅう>に向<む>かってください。'
+: english: 'Underground city!
+
+    Please collect it as soon as possible.'
+? '地下街<ちかがい>で自動販売機<じどうはんばいき>にいたずらしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'I was caught playing a prank on the underground mall.
+
+    Discovered and captured.'
+地下街<ちかがい>で隠<かく>れているところを発見<はっけん>されゲッチュされる。:
+  english: He is taken to the underground shopping mall and is fucked.
+? '地下街<ちかがい>にて待<ま>ち伏<ぶ>せ中<ちゅう>に
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'In the underground shopping mall
+
+    Discovered and captured.'
+? '地下街<ちかがい>の時計<とけい>にしがみついているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Clinging to the underground mall
+
+    Discovered and captured.'
+塁涙累類流留瑠:
+  english: Ryuru Rui
+墜落地点:
+  english: crash point
+墜落地点 AM04:00:
+  english: Crash point AM04:00
+変更<へんこう>したキャラクターデータをセーブします。:
+  english: Save the changed character data.
+大<おお>きな翼<つばさ>の形<かたち>をしたバーニアです。 これを装備<そうび>して羽<は>ばたく様<さま>はまるで天使<てんし>のように美<うつく>しく見<み>えることでしょう。:
+  english: It will be great.
+大型<おおがた>のトゲつき鉄球<てっきゅう>です。 メカハンマーより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。:
+  english: Let's make it large.
+大型<おおがた>のメカボーです。 メカボーより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。:
+  english: Let's make it large.
+大爆発:
+  english: big explosion
+天使服<てんしふく>です。バーニアの代<か>わりに天使<てんし>の羽根<はね>で飛<と>べるようになります。:
+  english: You will be able to wear angel clothes.
+女忍者<おんなにんじゃ>、クノイチの格好<かっこう>です。:
+  english: I'm a female ninja.
+好<す>きなチップを選<えら>んで合成<ごうせい>します。:
+  english: I like it.
+? '宮影衛映栄永泳英詠鋭易液疫益駅
+
+  悦謁越閲円園塩宴延援沿演炎煙猿
+
+  縁遠鉛会依回恵絵役慧瑛叡苑'
+: english: 'Miyagage Wei Ying Rong Yong Ying Ying Ying Ying Lili Pessimyi Station
+
+    Excited Audience Extends the Salt Banquet in the Yue Yuan Garden with the Flame
+    and Smoke Monkey
+
+    Kei Eien as Enen Enkai Irie Ei'
+対地衝撃弾:
+  english: ground impact bullet
+小回<こまわ>り重視<じゅうし>のロボットです。 回転<かいてん>パンチと誘導<ゆうどう>ミサイルを装備<そうび>しています。 爆発<ばくはつ>すると使<つか>えなくなるので注意<ちゅうい>しましょう。:
+  english: Let's make a small turn.
+小型<こがた>の転送<てんそう>メカです。 これでピポサルをゲッチュすることができます。 攻撃力<こうげきりょく>はゼロなので注意<ちゅうい>しましょう。:
+  english: Let's make it small.
+? '山<やま>がそこにあるから
+
+  のぼるのみャ!'
+: english: 'Because the mountain is there
+
+    Climb up!'
+山<やま>の狩人<かりゅうど>の格好<かっこう>です。クマやキツネではなくサルを狩<か>ります。:
+  english: Mountains.
+? 川崎方面<かわさきほうめん>にサル軍基地<ぐんきち>が建設中<けんせつちゅう>との情報<じょうほう>が入<はい>りました。 東京<とうきょう>、品川経由<しながわけいゆ>で川崎方面<かわさきほうめん>に向<む>かいます。
+  ただし、秋葉原<あきはばら>、東京間<とうきょうかん>の地上<ちじょう>ルートは、すでに多数<たすう>のサル達<たち>に占領<せんりょう>されており、危険<きけん>なので、地下<ちか>ルートを通<とお>って東京駅<とうきょうえき>を目指<めざ>してください。
+: english: Please head towards Kawasaki.
+巨大<きょだい>なアフロは一流<いちりゅう>ダンサーの証<あかし>です。:
+  english: It's huge.
+巨大<きょだい>なプラズマ球<きゅう>を発生<はっせい>させます。 プラズマ球<きゅう>は操作<そうさ>して敵<てき>にぶつけることができます。:
+  english: You can hit it huge.
+? '巨大<きょだい>なレーザー砲台<ほうだい>に
+
+  感動<かんどう>しているところを発見<はっけん>。'
+: english: 'hugely
+
+    Impressed.'
+巨大<きょだい>な爆風<ばくふう>にまわりの敵<てき>をまきこみます。 ただし、自分<じぶん>もダメージを負<お>うので注意<ちゅうい>してください。:
+  english: Please make it huge.
+巨大<きょだい>な爆風<ばくふう>をまきおこすとんでもない射撃<しゃげき>メカです。 威力<いりょく>は強<つよ>いですが弾数<たまかず>は少<すく>ないです。 むだうちに注意<ちゅうい>しましょう。:
+  english: Let's make it huge.
+? '巨大<きょだい>メカは
+
+  科学者<かがくしゃ>のユメなのだ〜♪'
+: english: 'The giant mecha
+
+    It''s a scientist''s dream~♪'
+? '広<ひろ>い海<うみ>を見<み>ていると⋅⋅⋅
+
+  こまかいことはどうでもよくなってくるよ。'
+: english: 'When it is wide⋅⋅⋅
+
+    The small details will become easier.'
+? 引<ひ>き続<つづ>き、川崎方面<かわさきほうめん>の建設中基地<けんせつちゅうきち>を目指<めざ>してください。 東京駅<とうきょうえき>から地上<ちじょう>に出<で>て、そこからは地上<ちじょう>ルートで川崎<かわさき>を目指<めざ>します。
+  なお、東京駅付近<とうきょうえきふきん>に大型<おおがた>メカ潜伏<せんぷく>の情報<じょうほう>が入<はい>っています! 注意<ちゅうい>してください!!
+: english: Please pull!!
+? '強化弾
+
+  セットアップ'
+: english: 'Reinforced bullet
+
+    set up'
+強化弾セットアップ:
+  english: Reinforcement bullet setup
+弾<たま>の同時発射数<どうじはっしゃすう>を増<ふ>やすパーツです。 最大<さいだい>3レベルまでパワーアップ可能<かのう>ですが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。:
+  english: Let's play.
+弾<たま>の追尾性能<ついびせいのう>をアップするパーツです。 3つまでセットできますが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。:
+  english: Let's play.
+悩能脳濃納農乃之:
+  english: Nono Nono Nono
+? '我<わ>が心<こころ>すでに空<くう>なり。 空<くう>なるが故<ゆえ>、無<む>じゃ。
+
+  わかるかな?'
+: english: 'It''s me.
+
+    Do you understand?'
+? '戦争<せんそう>なんてしちゃいけないよ。
+
+  私<わたし>の居眠<いねむ>りにはそんなメッセージがこめられてるのさ。'
+: english: 'We shouldn''t start a war.
+
+    That''s the kind of message I have in mind.'
+戦艦墜落:
+  english: battleship crash
+戦艦射撃:
+  english: battleship shooting
+所在が確認できていません。:
+  english: The location has not been confirmed.
+掴:
+  english: Grasp
+搬入エレベーター:
+  english: Loading elevator
+搬入エレベーター PM00:31:
+  english: Loading elevator PM00:31
+? '改造<かいぞう>レーザー砲<ほう>が使用可能<しようかのう>になりました。
+
+  必殺技<ひっさつわざ>セレクトで装備<そうび>できます。'
+: english: 'It has been remodeled.
+
+    You can do special moves.'
+改造レーザー砲:
+  english: modified laser gun
+? 攻撃<こうげき>したキャラクターを一定時間氷<いっていじかんこおり>づけにするパーツです。 複数<ふくすう>セットすることで、アイス効果<こうか>の持続時間<じぞくじかん>をのばすことができますが、同時<どうじ>に与<あた>えるダメージが減<へ>ってしまうので注意<ちゅうい>しましょう。
+  また、ファイアパーツ、リフレクパーツを同時<どうじ>にセットすることはできません。
+: english: It cannot be set to attack.
+攻撃力<こうげきりょく>をアップするパーツです。 3つまでセットできますが、同時<どうじ>にエネルギーの回復<かいふく>が遅<おそ>くなるので注意<ちゅうい>しましょう。:
+  english: Let's attack power.
+攻撃力<こうげきりょく>をアップするパーツです。 3つまでセットできますが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。:
+  english: Let's attack power.
+攻撃力<こうげきりょく>を高<たか>めたダッシュメカです。 スピード面<めん>でじゃっかん性能<せいのう>が劣<おと>ります。:
+  english: It has attack power.
+攻撃力重視<こうげきりょくじゅうし>のタンクです。:
+  english: It is a tank that emphasizes attack power.
+攻撃力重視<こうげきりょくじゅうし>のロボットです。:
+  english: It is a robot that emphasizes attack power.
+攻撃力重視<こうげきりょくじゅうし>の射撃<しゃげき>メカです。 直撃<ちょくげき>しなくても爆風<ばくふう>がダメージをあたえてくれます。 ただし弾切<たまぎれ>しやすいので注意<ちゅうい>しましょう。:
+  english: Focus on attack power.
+? 攻撃範囲<こうげきはんい>を広<ひろ>めた射撃<しゃげき>メカです。 近<ちか>くで当<あ>てると大<おお>きなダメージをあたえることができますが、弾数<たまかず>と飛距離<ひきょり>が落<お>ちているので注意<ちゅうい>が必要<ひつよう>です。
+: english: This is the attack range.
+敵<てき>1体<たい>にバナナをぶつけ、無数<むすう>のピポサルに攻撃<こうげき>させます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。:
+  english: Lock-on is recommended for enemies.
+? 敵<てき>の弾<たま>をはねかえす、シールド発生装置<はっせいそうち>です。 3つまでセットでき、エネルギーの消費<しょうひ>が減<へ>りますが、同時<どうじ>にエネルギーの回復<かいふく>が遅<おそ>くなってしまうので注意<ちゅうい>しましょう。
+  また、ファイアパーツ、アイスパーツを同時<どうじ>にセットすることはできません。
+: english: It cannot be set on the enemy.
+敵一体<てきいったい>に体当<たいあ>たりした後<あと>、分身<ぶんしん>して攻撃<こうげき>する技<わざ>です。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。:
+  english: Lock-on is recommended to defeat the enemy.
+文字<もじ>を一<ひと>つ消<け>します。:
+  english: Character
+新<あたら>しいキャラクターファイルを作成<さくせい>しますか?:
+  english: Would you like to update?
+新<あたら>しいピポサルとポケピ情報<じょうほう>が追加<ついか>されました。:
+  english: It has been updated.
+新<あたら>しいピポサル情報<じょうほう>が追加<ついか>されました。:
+  english: It has been updated.
+新<あたら>しいポケピ情報<じょうほう>が追加<ついか>されました。:
+  english: It has been updated.
+新<あたら>しい進行<しんこう>ファイルを作成<さくせい>しますか?:
+  english: Would you like to update?
+? 新<あら>たにサル軍<ぐん>の拠点<きょてん>を発見<はっけん>しました! 他<ほか>にルートはなく、ここを突破<とっぱ>しないと目標<もくひょう>のサル軍基地<ぐんきち>に行<い>くことは出来<でき>ません。
+  十分注意<じゅうぶんちゅうい>しながら前進<ぜんしん>し、サル軍基地<ぐんきち>へ向<む>かってください。
+: english: Please get a new one.
+新たな危機編:
+  english: New crisis edition
+新宿:
+  english: Shinjuku
+新宿 PM00:26:
+  english: Shinjuku PM00:26
+新宿 PM02:16:
+  english: Shinjuku PM02:16
+? '新宿<しんじゅく>でさぼっているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'I was slacking off in Shinjuku.
+
+    Discovered and captured.'
+新宿<しんじゅく>でほふく前進中<ぜんしんちゅう>に発見<はっけん>されゲッチュされる。:
+  english: Shinjuku and get fucked.
+? '新宿<しんじゅく>でガンをうちまくっているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'I saw him fighting cancer in Shinjuku.
+
+    Discovered and captured.'
+? '新宿<しんじゅく>で居眠<いねむ>りしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'While I was in Shinjuku
+
+    Discovered and captured.'
+? '新宿<しんじゅく>で待<ま>ち合<あ>わせ中<ちゅう>のところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'At Shinjuku
+
+    Discovered and captured.'
+? '新宿<しんじゅく>で発見<はっけん>!!
+
+  至急回収<しきゅうかいしゅう>に向<む>かってください。'
+: english: 'Shinjuku!!
+
+    Please collect it as soon as possible.'
+? '新宿<しんじゅく>で自家用車<じかようしゃ>にこだわっていたところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'What I was particular about in Shinjuku
+
+    Discovered and captured.'
+? '新宿<しんじゅく>で車<くるま>の上<うえ>で暴<あば>れているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Shinjuku is empty
+
+    Discovered and captured.'
+? '新宿<しんじゅく>で電話<でんわ>をかけているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'I''m hanging out in Shinjuku
+
+    Discovered and captured.'
+新宿駅<しんじゅくえき>でピポサル軍一個小隊<ぐんいっこしょうたい>が展開中<てんかいちゅう>との情報<じょうほう>をキャッチしました! 直<ただ>ちに現場<げんば>に急行<きゅうこう>してください!!:
+  english: Shinjuku station please!!
+新種<しんしゅ>のピポトロンと思<おも>われる生物<せいぶつ>が現<あらわ>れました。 敵意<てきい>をみせ、攻撃<こうげき>をしかけてくる事<こと>が予想<よそう>されます。 十分注意<じゅうぶんちゅうい>して応戦<おうせん>してください。:
+  english: Please create a new species.
+日本<にほん>のトノサマの格好<かっこう>です。:
+  english: It's Japan.
+? '時計<とけい>が止<と>まっていたのが気<き>になってさ。
+
+  べっ、別<べつ>に降<お>りれなくて困<こま>ってたわけじゃないぜっ。'
+: english: 'Become a clock.
+
+    Hey, it''s not like we broke up.'
+? '時間
+
+  コントロール'
+: english: 'time
+
+    control'
+時間コントロール:
+  english: time control
+暗黒の叫び:
+  english: dark cry
+本当<ほんとう>にリタイアしますか?:
+  english: Do you really want to retire?
+本当にリタイアしますか?:
+  english: Do you really want to retire?
+本当にリトライしますか?:
+  english: Are you sure you want to retry?
+東京:
+  english: Tokyo
+東京 PM10:51:
+  english: Tokyo PM10:51
+東京 PM11:58:
+  english: Tokyo PM11:58
+東京テレポート:
+  english: tokyo teleport
+東京テレポート PM00:00:
+  english: Tokyo Teleport PM00:00
+東京テレポート PM02:02:
+  english: Tokyo Teleport PM02:02
+? 東京方面<とうきょうほうめん>に墜落<ついらく>した空中戦艦<くうちゅうせんかん>の手<て>がかりが必要<ひつよう>です。 東京方面<とうきょうほうめん>に引<ひ>き返<かえ>してください。
+  地上<ちじょう>には未確認生物<みかくにんせいぶつ>が多数出現<たすうしゅつげん>しています。 十分注意<じゅうぶんちゅうい>してください。
+: english: Please head towards Tokyo.
+枠倭亘:
+  english: frame wataru
+森<もり>をイメージした自作<じさく>のアーマーです。:
+  english: Forest armor.
+? '模茂妄毛猛盲網耗目黙問紋門亡望
+
+  木物文聞孟萌杜'
+: english: 'Momo delusion hair blindness net wear out eyes silent question monmon
+    despair
+
+    Wooden pattern Meng Moe Mori'
+? 横浜上空<よこはまじょうくう>に、巨大<きょだい>な空中戦艦<くうちゅうせんかん>が、出現<しゅつげん>しました。 おそらくスペクターが乗<の>っていると思<おも>われます。
+  その直下<ちょっか>にあるスタジアムにもエネルギー反応<はんのう>をキャッチしました。 直<ただ>ちに現場<げんば>に向<む>かってください。
+: english: Please fly over Yokohama.
+? 横浜上空<よこはまじょうくう>に、巨大<きょだい>な空中戦艦<くうちゅうせんかん>が、出現<しゅつげん>しました。 おそらくニセスペクターが乗<の>っていると思<おも>われます。
+  その直下<ちょっか>にあるスタジアムにもエネルギー反応<はんのう>をキャッチしました。 直<ただ>ちに現場<げんば>に向<む>かってください。
+: english: Please fly over Yokohama.
+? '次<つぎ>にステージをクリアするまで進行<しんこう>ファイルは
+
+  セーブできませんが、本当<ほんとう>にキャンセルしますか?'
+: english: 'The next file is
+
+    I can''t save, do you really want to cancel?'
+? '次<つぎ>はもっと大<おお>きな会場<かいじょう>で
+
+  コンサートっすよ〜♪'
+: english: 'next
+
+    It''s a concert♪'
+次<つぎ>へ進<すす>む:
+  english: Next
+気功<きこう>を発射<はっしゃ>することができる不思議<ふしぎ>なメカボーです。 気功<きこう>の発射<はっしゃ>にはエネルギーが必要<ひつよう>なので注意<ちゅうい>しましょう。:
+  english: Let's do qigong.
+気功刀:
+  english: Qigong sword
+? '水族館<すいぞくかん>の壁<かべ>にへばりついてふるえている状態<じょうたい>を
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'an aquarium
+
+    Discovered and captured.'
+氷結刀:
+  english: freezing sword
+? '汚凹央奥往応押桜横欧殴王翁億屋
+
+  憶乙恩温穏音和悪皇黄遠卸虞於旺
+
+  鳳治'
+: english: 'In the middle of the filth
+
+    Remembering the good, the warm, the calm, the harmonious, the evil, the emperor,
+    Huang, the whole world.
+
+    Houji'
+? '波<なみ>にゆられながら
+
+  魚<さかな>とたわむれているところを発見<はっけん>。'
+: english: 'While being swayed by the waves
+
+    fish.'
+注(ちゅうい)意:
+  english: Note
+? '洋服店<ようふくてん>で
+
+  ショッピング中<ちゅう>のところを発見<はっけん>。'
+: english: 'at a clothing store
+
+    Shopping.'
+? '浮<う>き輪<わ>であそんでいるところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'I saw you playing on the float
+
+    Discovered and captured.'
+海<うみ>をイメージした自作<じさく>のアーマーです。:
+  english: It's sea armor.
+? '海辺<うみべ>にてシンクロの練習中<れんしゅうちゅう>のところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'by the seaside
+
+    Discovered and captured.'
+? '港<みなと>の煙突<えんとつ>の上<うえ>で
+
+  セキこんでいたところを発見<はっけん>。'
+: english: 'at the port
+
+    I discovered where I was having sex.'
+湾岸:
+  english: Gulf Coast
+演技派:
+  english: acting style
+? 火炎<かえん>の追加<ついか>ダメージを与<あた>えるパーツです。 複数<ふくすう>セットすることで、炎<ほのお>のレベルを上<あ>げることができますが、同時<どうじ>にガチャメカのエネルギーの消費<しょうひ>が増加<ぞうか>するので注意<ちゅうい>しましょう。
+  また、アイスパーツ、リフレクパーツを同時<どうじ>にセットすることはできません。
+: english: It cannot be set in flame.
+火炎刀:
+  english: flame sword
+? '灯台<とうだい>の上<うえ>で
+
+  修行<しゅぎょう>しているところを発見<はっけん>。'
+: english: 'at the lighthouse
+
+    Training.'
+? '灯台<とうだい>の上<うえ>で居眠<いねむ>りしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Where there is a lighthouse
+
+    Discovered and captured.'
+? '炉路露労廊朗楼浪漏老郎六録論糧
+
+  緑呂禄'
+: english: 'Rōji Rororo Rōro Namirou Roro Rokurokuronsu
+
+    Midoroku'
+炎<ほのお>をイメージした自作<じさく>のアーマーです。:
+  english: It's a flame armor.
+無効<むこう>なパスワードです。 もう一度入力<いちどにゅうりょく>しますか?:
+  english: Do you want to disable it?
+無効<むこう>な組<く>み合<あ>わせです。設定<せってい>し直<なお>して下<くだ>さい。:
+  english: Invalid.
+燃<も>えるような赤<あか>のボディカラーです。:
+  english: It is a hot body color.
+爆風<ばくふう>の範囲<はんい>が大<おお>きくなるパーツです。 3段階<だんかい>までパワーアップできますが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。:
+  english: Let's have a blast.
+? '獲得<かくとく>したチップのうち、手<て>に入<い>れていないチップは
+
+  持<も>っているチップを削除<さくじょ>しないと手<て>に入<はい>りません。
+
+  このままキャラクターデータをセーブしますか?'
+: english: 'Unearned chips
+
+    I don''t have it.
+
+    Do you want to save your character data?'
+獲得<かくとく>チップ:
+  english: earned chips
+獲得チップ:
+  english: earned chips
+現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。:
+  english: Please manifest.
+? '現在使用中<げんざいしようちゅう>の進行<しんこう>ファイル%を削除<さくじょ>しようとしています。
+
+  進行状況<しんこうじょうきょう>がリセットされますが、よろしいですか?'
+: english: 'Currently trying to use.
+
+    Your progress will be reset. Are you sure you want to do this?'
+白衣<はくい>のほかに唯一持<ゆいいつも>っている外出着<がいしゅつぎ>です。:
+  english: It's a white coat.
+目<め>の前<まえ>に巨大<きょだい>なメカボーを振<ふ>り下<お>ろし、衝撃波<しょうげきは>で攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>に有効<ゆうこう>です。:
+  english: It's the eyes.
+相手<あいて>にムーブするチップを選<えら>んでください。:
+  english: Please deal with me.
+真<ま>っ赤<か>なジャケット。 ついでに頭<あたま>も赤<あか>く決<き>めてみました。:
+  english: I tried to get it right.
+真<ま>っ赤<か>なジャージとメガネは知性<ちせい>の証<あかし>です。:
+  english: It's true.
+砂漠仕様<さばくしよう>の黄色<きいろ>いローブです。:
+  english: A desert-style robe.
+破損領域:
+  english: damaged area
+秋葉原:
+  english: Akihabara
+秋葉原 AM10:32:
+  english: Akihabara AM10:32
+秋葉原 PM04:01:
+  english: Akihabara PM04:01
+? 秋葉原中央通<あきはばらちゅうおうどお>り地下<ちか>にサル軍基地<ぐんきち>を発見<はっけん>しました! そこにサル軍輸送部隊<ぐんゆそうぶたい>が向<む>かっています。
+  トレーラーで巨大兵器<きょだいへいき>を運<はこ>び込<こ>もうとしているようです。 搬入<はんにゅう>を阻止<そし>してください!
+: english: Please pass through Akihabara Chuo!
+空<そら>をイメージした自作<じさく>のアーマーです。:
+  english: It's empty armor.
+空き:
+  english: Vacant
+空き領域:
+  english: free space
+? 空中戦艦<くうちゅうせんかん>の墜落現場<ついらくげんば>を発見<はっけん>しました! ブロブコアは通常<つうじょう>の攻撃<こうげき>では倒<たお>すことができません。
+  改造<かいぞう>レーザー砲<ほう>を使<つか>って、止<とど>めをさしてください。
+: english: Please look out for the air battleship.
+? 空中戦艦<くうちゅうせんかん>は、東京方面<とうきょうほうめん>に墜落<ついらく>したとの情報<じょうほう>が入<はい>りました。 手<て>がかりを探<さが>すために東京方面<とうきょうほうめん>に引<ひ>き返<かえ>してください。
+  地上<ちじょう>には謎<なぞ>のモンスターが多数出現<たすうしゅつげん>しています。 十分注意<じゅうぶんちゅうい>してください。
+: english: Air battleship please.
+? '空中戦艦内搬入<くうちゅうせんかんないはんにゅう>エレベーターにて発見<はっけん>!
+
+  至急回収願<しきゅうかいしゅうねが>います!'
+: english: 'Transported into the air battleship!
+
+    Please collect it as soon as possible!'
+? '空中戦艦内転送<くうちゅうせんかんないてんそう>ルームにて発見<はっけん>!
+
+  至急回収願<しきゅうかいしゅうねが>います!'
+: english: 'Transfer within the air battleship!
+
+    Please collect it as soon as possible!'
+空中戦艦編:
+  english: Air battleship edition
+空移:
+  english: air transfer
+結果:
+  english: result
+緊急ニュース1:
+  english: Urgent news 1
+緊急ニュース2:
+  english: Emergency news 2
+緊急ニュース3:
+  english: Emergency news 3
+罠:
+  english: trap
+? '自由<じゆう>の女神<めがみ>も
+
+  ソフトクリームが大好<だいす>きニャ♪'
+: english: 'Freedom too
+
+    I love soft serve ice cream♪'
+? '船<ふね>の甲板<かんぱん>で
+
+  釣<つ>りをしていたところを発見<はっけん>。'
+: english: 'by boat
+
+    Fishing.'
+英数:
+  english: alphanumeric
+落<お>ち着<つ>いた色<いろ>のジャケット。 大人<おとな>びた感<かん>じが漂<ただよ>っている?:
+  english: Is it falling?
+? '行扱阿藍葵茜旭昌晃晟彬渥曙梓敦綾鮎嵐晏杏
+
+  唯易音芋亥伊莞斐郁磯猪巌允胤
+
+  右宇羽雨運雲有畝卯丑唄
+
+  会依回恵絵役慧瑛叡苑
+
+  和悪皇黄遠卸虞於旺鳳治'
+: english: 'Handled by Aoi Aoi Akane Asahi Masa Akira Akira Atsushi Akebono Azusa
+    Atsushi Aya Ayu Arashi Anian
+
+    Yuiyune Imohai Ikan Hii Iku Iso Iwao Mitane
+
+    Right Uba Ameunun Ariune Uushi Uta
+
+    Keie Eien as Eie Eie
+
+    The Emperor of Harmony and Evil Huang Yuan Wholesale'
+? '街灯<がいとう>の上<うえ>で危険<きけん>な芸<げい>をしているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Where the street lamps are turned on
+
+    Discovered and captured.'
+衛星<えいせい>からの射撃<しゃげき>を誘導<ゆうどう>するリモコンメカです。 ボタンでオート走行<そうこう>ですが、右<みぎ>スティックで自由<じゆう>に操作<そうさ>することもできます。:
+  english: It can also be a satellite.
+装備変更<そうびへんこう>のメニューに戻<もど>ります。:
+  english: Change equipment.
+西部劇風<せいぶげきふう>の保安官<ほあんかん>の衣装<いしょう>です。:
+  english: It's like a western movie.
+西部劇風<せいぶげきふう>の衣装<いしょう>です。:
+  english: It's like a western movie.
+見<み>たいムービーを選<えら>んでください。:
+  english: Please take a look.
+? '見晴<みは>らしはいいけど
+
+  ケムリでまっ黒<くろ>みャ〜。'
+: english: 'The view is nice though
+
+    It''s pitch black with kemuri.'
+解説:
+  english: Explanation
+評価<ひょうか>ポイント:
+  english: Evaluation points
+評価ポイント:
+  english: Evaluation points
+? 誘導性能<ゆうどうせいのう>を持<も>った射撃<しゃげき>メカです。 空<そら>を飛<と>ぶ敵<てき>には効果大<こうかだい>です。 Bランチャーとくらべて攻撃力<こうげきりょく>が少<すこ>し弱<よわ>くなっているので注意<ちゅうい>しましょう。
+: english: Let's talk about induction performance.
+謎:
+  english: mystery
+謎の男再び:
+  english: mysterious man again
+? '転送<てんそう>ルームにてメンテナンス中<ちゅう>に
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'to transfer
+
+    Discovered and captured.'
+転送ルーム:
+  english: transfer room
+転送ルーム AM01:00:
+  english: Transfer room AM01:00
+? 転送装置<てんそうそうち>の解析<かいせき>に成功<せいこう>しました。 空中戦艦後部<くうちゅうせんかんこうぶ>の転送<てんそう>ルームへのゲートが開<ひら>いています。
+  直<ただ>ちに潜入<せんにゅう>し、第一<だいいち>ブリッジにいると思<おも>われる、スペクターを探<さが>してください。
+: english: Transfer device please.
+? 転送装置<てんそうそうち>の解析<かいせき>に成功<せいこう>しました。 空中戦艦後部<くうちゅうせんかんこうぶ>の転送<てんそう>ルームへのゲートが開<ひら>いています。
+  直<ただ>ちに潜入<せんにゅう>し、第一<だいいち>ブリッジにいると思<おも>われる、ニセスペクターを探<さが>してください。
+: english: Transfer device please.
+近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 カケルたちのメカボーと違<ちが>い、突<つ>き攻撃<こうげき>で弾<たま>を撃<う>つことができます。:
+  english: You can get closer.
+近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 他<ほか>のキャラのメカボーよりも多段<ただん>ヒットしやすくなっています。:
+  english: It has become easier to hit recently.
+近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 突<つ>き攻撃<こうげき>でつかまえた敵<てき>の体力<たいりょく>を吸<す>い取<と>ることができます。:
+  english: You can get closer.
+近<ちか>くの敵一体<てきいったい>を掴<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。:
+  english: Lock-on is recommended for getting closer.
+? 近距離<きんきょり>の敵<てき>に対<たい>し、技<わざ>ストックゲージを3本消費<ぼんしょうひ>して、衛星反射<えいせいはんしゃ>レーザー砲<ほう>を発射<はっしゃ>します。
+  必殺技<ひっさつわざ>を入力<にゅうりょく>してからレーザー砲発射<ほうはっしゃ>までには時間<じかん>がかかりますので注意<ちゅうい>してください。
+: english: Please stay close.
+迷彩模様<めいさいもよう>の軍隊風<ぐんたいふう>コスチュームです。:
+  english: A camouflage costume.
+通信兵:
+  english: signal soldier
+? '進行<しんこう>ファイル%をセーブ中<ちゅう>!
+
+  %のメモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。'
+: english: 'Progress!
+
+    % memory card (PS2)
+
+    Please do not pull it out.'
+? '進行<しんこう>ファイル%を削除中<さくじょちゅう>!
+
+  %のメモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。'
+: english: 'Progress!
+
+    % memory card (PS2)
+
+    Please do not pull it out.'
+進行<しんこう>ファイルの作成<さくせい>、変更<へんこう>ができます。:
+  english: You can proceed.
+? '進行<しんこう>ファイルはセーブできませんが
+
+  本当<ほんとう>にキャンセルしますか?'
+: english: 'Progress files cannot be saved
+
+    Are you sure you want to cancel?'
+? '進行<しんこう>ファイルをロード中<ちゅう>!
+
+  %のメモリーカード(PS2)を
+
+  抜<ぬ>き差<さ>ししないでください。'
+: english: 'Progress!
+
+    % memory card (PS2)
+
+    Please do not remove it.'
+進行<しんこう>ファイルを使用<しよう>しないでゲームを始<はじ>めます。:
+  english: I can proceed.
+進行ファイル:
+  english: progress file
+運射性能<れんしゃせいのう>と弾数<たまかず>を高<たか>めた射撃<しゃげき>メカです。 飛距離<ひきょり>と一撃<いちげき>の威力<いりょく>が落<お>ちているので注意<ちゅうい>しましょう。:
+  english: Let's improve the performance.
+? '都会<とかい>にはエクセレントな服<ふく>が
+
+  いっぱいね♪'
+: english: 'The city
+
+    Lots of them♪'
+都市迷彩<としめいさい>のブルーのローブです。:
+  english: A blue urban camouflage robe.
+? '重力
+
+  コントロール'
+: english: 'gravity
+
+    control'
+重力コントロール:
+  english: gravity control
+重機格納庫:
+  english: heavy equipment hangar
+重機格納庫 AM06:16:
+  english: Heavy equipment hangar AM06:16
+? '野球場<やきゅうじょう>には魔物<まもの>が
+
+  住<す>んでるのみャ♪'
+: english: 'The baseball field
+
+    I just live there♪'
+金髪<きんぱつ>に似合<にあ>う白<しろ>いジャケット。 ちょっとはじけすぎかも⋅⋅⋅:
+  english: Blonde jacket. It might be a little too loud⋅⋅⋅
+? '釣<つ>れなくてもいい。
+
+  海<うみ>が見<み>れればオレはそれで満足<まんぞく>さ。'
+: english: 'It doesn''t matter if you can''t catch it.
+
+    The sea.'
+? '鉄骨<てっこつ>にしがみついているところを
+
+  発見<はっけん>されゲッチュされる。'
+: english: 'Clinging to the steel frame
+
+    Discovered and captured.'
+隠しキャラクター:
+  english: hidden character
+集中砲火:
+  english: barrage
+電磁バリア:
+  english: electromagnetic barrier
+音量<おんりょう>のバランスを選択<せんたく>してください。:
+  english: Please turn up the volume.
+飛距離<ひきょり>を伸<の>ばすパーツです。 3つまでセットできますが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。:
+  english: Let's fly.
+? '駅<えき>ビルでフリークライミングに
+
+  挑戦<ちょうせん>しているところを発見<はっけん>。'
+: english: 'Free climbing at the station building
+
+    challenge.'
+高<たか>くジャンプするためのメカ。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。:
+  english: It can be expensive.
+高<たか>く羽<は>ばたくことのできるアクマのような外見<がいけん>の翼<つばさ>。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。:
+  english: It can be expensive.
+? '高級<こうきゅう>ホテルの一室<いっしつ>で
+
+  エレガントに過<す>ごしているところを発見<はっけん>。'
+: english: 'high class
+
+    Elegant.'
+'高速<こうそく>で回転<かいてん>し、近<ちか>くの敵<てき>を上空<じょうくう>にまきあげます。 空中<くうちゅう>の敵<てき>にも有効<ゆうこう>です。    ':
+  english: It's fast.
+高速<こうそく>で回転<かいてん>しながら光<ひかり>の矢<や>を乱射<らんしゃ>します。 広範囲<こうはんい>の敵<てき>に有効<ゆうこう>ですが、空中<くうちゅう>の敵<てき>はねらえません。:
+  english: You can't aim for high speed.
+高速<こうそく>で移動<いどう>するためのダッシュメカです。 体当<たいあ>たりで攻撃<こうげき>することもできます。 使<つか>いすぎるとオーバーヒートしやすいので注意<ちゅうい>しましょう。:
+  english: Let's go fast.
+魔法少女<まほうしょうじょ>が持<も>っていそうな形<かたち>のメカボーです。 突<つ>き攻撃<こうげき>のハートマーク弾<だん>はゆっくりじわじわと進<すす>む攻撃<こうげき>になっています。:
+  english: She has become a magical girl.
