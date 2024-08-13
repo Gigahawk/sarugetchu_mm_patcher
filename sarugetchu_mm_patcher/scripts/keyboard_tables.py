@@ -198,6 +198,21 @@ keyboard_tables = [
         "8E65 8E66 8E67 8E68 8E69 8E6A 8E6B 8E6C 8E6D 8E6E 8E6F 8E70 8E71 8E72 8E73 0A "
         "8E74 8E75 8E76 8E77 8E78 8E79 8E7A 8E7B 8E7C 8E7D 8E7E 8E80 8E81 8E82 8E83"
     ),
+    # し table 2
+    (
+        "あ 諸 助 叙 女 如 序 徐 除 商 傷 償 勝 匠 あ\n"
+        "唱 あ あ 将 小 少 あ 床 あ あ 衝 承 あ 抄 招\n"
+        "昇 昭 肖 松 沼 消 渉 焼 焦 あ 症 硝 礁 祥 称\n"
+        "章 笑 粧 紹 訟 証 あ 詳 象 賞 鐘 障 上 丈 乗\n"
+        "あ 剰 城 場 壌 嬢 常 情 条 浄 状 あ 縄 あ あ\n"
+        "醸 錠 嘱 植 殖 織 職 色 触 食 飾 辱 伸 信 侵",
+        "8E84 8E85 8E86 8E87 8E88 8E89 8E8A 8E8B 8E8C 8E8D 8E8E 8E8F 8E90 8E91 8E92 0A "
+        "8E93 8E94 8E95 8E96 8E97 8E98 8E99 8E9A 8E9B 8E9C 8E9D 8E9E 8E9F 8EA0 8EA1 0A "
+        "8EA2 8EA3 8EA4 8EA5 8EA6 8EA7 8EA8 8EA9 8EAA 8EAB 8EAC 8EAD 8EAE 8EAF 8EB0 0A "
+        "8EB1 8EB2 8EB3 8EB4 8EB5 8EB6 8EB7 8EB8 8EB9 8EBA 8EBB 8EBC 8EBD 8EBE 8EBF 0A "
+        "8EC0 8EC1 8EC2 8EC3 8EC4 8EC5 8EC6 8EC7 8EC8 8EC9 8ECA 8ECB 8ECC 8ECD 8ECE 0A "
+        "8ECF 8ED0 8ED1 8ED2 8ED3 8ED4 8ED5 8ED6 8ED7 8ED8 8ED9 8EDA 8EDB 8EDC 8EDD"
+    ),
     # し table 3
     (
         "唇 娠 あ あ 心 慎 振 新 森 津 浸 深 申 真 神\n"
