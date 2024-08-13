@@ -59,7 +59,7 @@ keyboard_tables = [
     (
         "活 渇 滑 褐 轄 乾 冠 刊 勘 勧 喚 堪 完 官 寒\n"
         "寛 巻 干 幹 患 感 慣 憾 換 敢 肝 あ 款 歓 汗\n"
-        "あ 環 甘 監 看 管 簡 あ 缶 艦 あ あ 還 鑑 聞\n"
+        "あ 環 甘 監 看 管 簡 あ 缶 艦 あ あ 還 鑑 間\n"
         "閑 関 陥 館 丸 含 岸 岩 眼 あ 顔 願 客 合 月\n"
         "甲 元 掛 且 垣 刈 株 潟 貝 伽 袈 あ 樺 魁 凱\n"
         "楓 馨 あ あ 嵩 霞 叶 あ あ 茅 あ",
@@ -122,6 +122,11 @@ keyboard_tables = [
         "8C82 8C83 8C84 8C85 8C86 8C87 8C88 8C89 8C8A 8C8B 8C8C 8C8D 8C8E 8C8F 8C90 0A "
         "8C91 8C92 8C93 8C94 8C95 8A92 8A93 8A9B 8C78 8B7C 8AAA 8A91 8A99 8ACD 8AC9"
     ),
+    # け table 1
+    (
+        "京 境 競 間 眼 圭 あ 桂 拳 絢 あ",
+        "8BBF 8BC6 8BD4 8B5A 8B63 949A 949B 949C 949D 949E 949F"
+    ),
     # こ table 0
     (
         "個 古 呼 固 孤 己 庫 弧 戸 故 枯 湖 あ 雇 あ\n"
@@ -137,6 +142,32 @@ keyboard_tables = [
         "8CD2 8CD3 8CD4 8CD5 8CD6 8CD7 8CD8 8CD9 8CDA 8CDB 8CDC 8CDD 8CDE 8CDF 8CE0 0A "
         "8CE1 8CE2 8CE3 8CE4 8CE5 8CE6 8CE7 8CE8 8CE9 8CEA 8CEB 8CEC 8CED 8CEE 8CEF"
     ),
+    # こ table 1
+    (
+        "あ あ 克 刻 告 国 穀 あ 酷 黒 あ 骨 今 困 あ\n"
+        "婚 あ 恨 昆 根 混 紺 魂 去 虚 御 期 仰 格 耗\n"
+        "強 業 郷 極 建 献 金 勤 あ 権 言 込 胡 あ あ\n"
+        "あ あ 鯉 あ あ あ あ 鴻 あ 駒 あ あ",
+        "8CF0 8CF1 8CF2 8CF3 8CF4 8CF5 8CF6 8CF7 8CF8 8CF9 8CFA 8CFB 8CFC 8D40 8D41 0A "
+        "8D42 8D43 8D44 8D45 8D46 8D47 8D48 8D49 8BB4 8BB9 8BBC 8B77 8BD9 8AD7 9356 0A "
+        "8BC8 8BDF 8BD5 8BDC 8C76 8C7D 8BEC 8BE1 8C8D 8C7B 8C94 94A0 94A1 94A2 94A3 0A "
+        "94A4 94A5 94A6 94A7 94A8 94A9 94AA 94AB 94AC 94AD 94AE 94AF"
+    ),
+    # さ table 0
+    (
+        "佐 唆 左 差 あ 砂 詐 鎖 座 催 債 再 あ あ 彩\n"
+        "才 採 最 栽 済 災 砕 祭 細 菜 裁 載 際 斎 剤\n"
+        "在 材 罪 財 あ 作 削 搾 昨 策 索 酢 錯 冊 あ\n"
+        "あ 撮 擦 札 殺 あ 三 あ 参 山 惨 散 あ 産 算\n"
+        "あ あ 酸 あ 残 茶 切 西 崎 咲 皿 沙 あ あ あ\n"
+        "あ あ あ あ 笹 あ あ 聡 爽 あ",
+        "8D4A 8D4B 8D4C 8D4D 8D4E 8D4F 8D50 8D51 8D52 8D53 8D54 8D55 8D56 8D57 8D58 0A "
+        "8D59 8D5A 8D5B 8D5C 8D5D 8D5E 8D5F 8D60 8D61 8D62 8D63 8D64 8D65 8D66 8D67 0A "
+        "8D68 8D69 8D6A 8D6B 8D6C 8D6D 8D6E 8D6F 8D70 8D71 8D72 8D73 8D74 8D75 8D76 0A "
+        "8D77 8D78 8D79 8D7A 8D7B 8D7C 8D7D 8D7E 8D80 8D81 8D82 8D83 8D84 8D85 8D86 0A "
+        "8D87 8D88 8D89 8D8A 8D8B 908E 8F87 8F6F 94B0 94B1 94B2 94B3 94B4 94B5 94B6 0A "
+        "94B7 94B8 94B9 94BA 94BB 94BC 94BD 94BE 94BF 94C0"
+    ),
     # し table 0
     (
         "仕 伺 使 刺 史 司 嗣 四 土 始 姉 姿 子 市 師\n"
@@ -151,6 +182,21 @@ keyboard_tables = [
         "8DB9 8DBA 8DBB 8DBC 8DBD 8DBE 8DBF 8DC0 8DC1 8DC2 8DC3 8DC4 8DC5 8DC6 8DC7 0A "
         "8DC8 8DC9 8DCA 8DCB 8DCC 8DCD 8DCE 8DCF 8DD0 8DD1 8DD2 8DD3 8DD4 8DD5 8DD6 0A "
         "8DD7 8DD8 8DD9 8DDA 8DDB 8DDC 8DDD 8DDE 8DDF 8DE0 8DE1 8DE2 8DE3 8DE4 8DE5"
+    ),
+    # し table 1
+    (
+        "あ 尺 あ あ 釈 寂 あ 若 主 取 守 手 朱 殊 狩\n"
+        "珠 種 趣 酒 首 あ 受 寿 授 樹 需 収 周 囚 宗\n"
+        "就 州 修 あ 拾 秀 秋 終 習 臭 舟 衆 あ 週 あ\n"
+        "集 あ 住 充 十 従 柔 汁 渋 獣 縦 重 銃 叔 宿\n"
+        "あ 祝 縮 あ あ あ 出 術 述 俊 春 あ 准 循 旬\n"
+        "あ 準 潤 盾 純 巡 遵 順 処 初 あ 所 書 あ あ",
+        "8DE6 8DE7 8DE8 8DE9 8DEA 8DEB 8DEC 8DED 8DEE 8DEF 8DF0 8DF1 8DF2 8DF3 8DF4 0A "
+        "8DF5 8DF6 8DF7 8DF8 8DF9 8DFA 8DFB 8DFC 8E40 8E41 8E42 8E43 8E44 8E45 8E46 0A "
+        "8E47 8E48 8E49 8E4A 8E4B 8E4C 8E4D 8E4E 8E4F 8E50 8E51 8E52 8E53 8E54 8E55 0A "
+        "8E56 8E57 8E58 8E59 8E5A 8E5B 8E5C 8E5D 8E5E 8E5F 8E60 8E61 8E62 8E63 8E64 0A "
+        "8E65 8E66 8E67 8E68 8E69 8E6A 8E6B 8E6C 8E6D 8E6E 8E6F 8E70 8E71 8E72 8E73 0A "
+        "8E74 8E75 8E76 8E77 8E78 8E79 8E7A 8E7B 8E7C 8E7D 8E7E 8E80 8E81 8E82 8E83"
     ),
     # し table 3
     (
