@@ -26,7 +26,7 @@ keyboard_tables = [
     (
         "宮 影 衛 映 栄 永 泳 英 詠 鋭 易 液 疫 益 駅\n"
         "悦 謁 越 閲 円 園 塩 宴 延 援 沿 演 炎 煙 猿\n"
-        "縁 遠 鉛 会 依 回 恵 繧 役 慧 瑛 叡 苑",
+        "縁 遠 鉛 会 依 回 恵 絵 役 慧 瑛 叡 苑",
         "8A5A 8A5B 8A5C 8A5D 8A5E 8A5F 8A60 8A61 8A62 8A63 8A64 8A65 8A66 8A67 8A68 0A "
         "8A69 8A6A 8A6B 8A6C 8A6D 8A6E 8A6F 8A70 8A71 8A72 8A73 8A74 8A75 8A76 8A77 0A "
         "8A78 8A79 8A7A 8AB8 89F0 8AB9 8C4E 8AC8 935F 9464 9465 9466 9467"
@@ -101,7 +101,7 @@ keyboard_tables = [
     # く table 0
     (
         "区 苦 駆 具 愚 空 偶 あ あ 屈 掘 君 勲 あ 訓\n"
-        "あ 軍 郡 句 久 九 供 功 口 工 庫 紅 責 宮 あ\n"
+        "あ 軍 郡 句 久 九 供 功 口 工 庫 紅 貢 宮 あ\n"
         "玖 あ 楠 熊 あ",
         "8BEF 8BF0 8BF1 8BF2 8BF3 8BF4 8BF5 8BF6 8BF7 8BF8 8BF9 8BFA 8BFB 8BFC 8C40 0A "
         "8C41 8C42 8C43 8C44 8B9F 8BA1 8BC1 8CB6 8CB9 8CBF 8C9C 8CD8 8CE2 8BA4 9494 0A "
@@ -282,6 +282,11 @@ for table in keyboard_tables:
             print(f"UNKNOWN: {b}")
         else:
             print(b, k)
+            if b in prelim_table and prelim_table[b] != k:
+                raise ValueError(
+                    f"{b} has two values {k} "
+                    f"and {prelim_table[b]}"
+                )
             prelim_table[b] = k
     print("")
 
