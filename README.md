@@ -5,16 +5,23 @@ PDATA/DATA0.BIN and DATA2.BIN appear to be some kind of index file describing th
 
 Each entry is 12 bytes long, and denotes a file entry
 
+The first 4 bytes are a CRC-like hash of the filename of the file entry (see the gen_crc command for implementation).
+See below for known hashes
+
 The middle 4 bytes are the offset into the big data file (DATA0 is the index for DATA1)
 Multiply this value by 2048 bytes to get the start of each entry
 
 The last 4 bytes are the size of the file in bytes.
 
-No idea what the first byte is, a hash/checksum or name of some kind?
-SPECULATION:
-at compile time each file gets hashed and stored into this index.
-Compiler keeps track of this hash and any time the code needs to access a file it replaces it with the hash.
-Regardless, it doesn't seem like the game does any checking of this value so we're free to modify the file content.
+### Known hashes
+
+```
+1F A8 A5 BF: package/mod310.tar.gz
+B0 FF CA DB: gz/system.gz
+5D 55 E9 BE: gz/system_bd.gz
+00 94 05 49: gz/menu_common.gz
+05 F7 CA E8: gz/menu_title.gz
+```
 
 
 
@@ -22,9 +29,13 @@ Regardless, it doesn't seem like the game does any checking of this value so we'
 Each file in DATA1 is a gzip compressed file.
 
 Some files contain strings, this game uses a custom 2 byte text encoding (probably) between 0x889F to 0x95FF inclusive.
-> many strings appear in multiple files, but it seems that most (all?) appear in `00940549`, and so far only patching that file seems to be sufficient for the menus, there may be significant performance uplifts in patching speed by limiting the number of files we try to patch.
+> many strings appear in multiple files, but it seems that most (all?) appear in `00940549/menu_common`, and so far only patching that file seems to be sufficient for the menus, there may be significant performance uplifts in patching speed by limiting the number of files we try to patch.
+
+> It seems like patching a string with increased file size causes gameplay to not load (menus are fine), likely some offset gets moved that causes a crash
+> EDIT: there's a `menu_common/icon.bimg` entry in the `menu_common` file  that contains an 0x001A4A29 that needs to be patched to point to the same place after the file size changes
 
 > there appear to be duplicates in the encoding table, need to check whether these duplicates are ever used anywhere, significant performance uplifts are possible by removing unused ones from our encoding table, or otherwise providing a mechanism to specify which encoding to use on a per string basis
+> EDIT: these are likely not valid, they don't appear to be used anywhere, likely these indices are not used and some random glyphs get shown
 
 
 Strings appear to be terminated with a single null byte
