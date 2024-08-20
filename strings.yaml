@@ -9,6 +9,12 @@
   english: "No"
 "さくじょ":
   english: "Delete"
+"注(ちゅうい)意":
+  english: "Attention"
+"%でよろしいですか?":
+  english: "Accept %?"
+"へんこう":
+  english: "Modify"
 
 # Keyboard
 "けす":
@@ -42,6 +48,13 @@
 "進行<しんこう>ファイルを使用<しよう>しないでゲームを始<はじ>めます。":
   english: "Start the game without a Save File."
 
+# Memory Card select warnings
+"アクセス中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししないでください。":
+  english: "Accessing save data!\nDo not remove the\nMemory Card in %"
+"進行<しんこう>ファイルをロード中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししないでください。":
+  english: "Loading save file!\nDo not remove the\nMemory Card in %"
+"このままスキップすると進行<しんこう>ファイルがセーブされません。\nスキップ後<ご>に進行状況<しんこうじょうきょう>をセーブしたい場合<ばあい>は\nプレイ開始前<かいしまえ>にモードセレクト画面<がめん>のファイルセレクトで\n進行<しんこう>ファイルを作成<さくせい>してください。スキップしますか?":
+  english: "Progress will not be saved.\nCreate a save file on the\nFile Select screen to save\nprogress.\nStart game without saving?"
 
 # File select screen
 "ファイル":
@@ -56,13 +69,21 @@
 #  english: "File 3"
 #"ファイル4":
 #  english: "File 4"
+"空き領域":
+  english: "Free Slot"
 
 # File select screen descriptions
 "ファイルを選<えら>んでください。":
   english: "Please select a file."
+"メモリーカードスロット選択<せんたく>に戻<もど>ります。":
+  english: "Return to Memory Card selection"
 
-"%でよろしいですか?":
-  english: "Accept %?"
+# File select screen dialogs
+"新<あたら>しい進行<しんこう>ファイルを作成<さくせい>しますか?":
+  english: "Create a new save file?"
+"この進行<しんこう>ファイル%を削除<さくじょ>しますか?":
+  english: "Delete File%?"
+
 
 # File confirm screen
 "エピソードカケル":
@@ -72,6 +93,13 @@
 "ワールドトーナメント":
   english: "World Tournament"
 
+# File confirm screen descriptions
+"ファイル選択<せんたく>に戻<もど>ります。":
+  english: "Return to file selection"
+
+# File confirm screen dialogs
+"この進行<しんこう>ファイル%でよろしいですか?":
+  english: "Accept File%?"
 
 # Mode select screen
 "ストーリーモード":
@@ -79,8 +107,6 @@
 "コロシアムモード":
   english: "Colosseum Mode"
 "VS.モード":
-  # No need for an extra space, kerning on the period causes a space to appear
-  # after it in game
   english: "VS.Mode"
 "ファイルセレクト":
   english: "File Select"
@@ -94,17 +120,58 @@
 # Mode select screen descriptions
 "ストーリーで遊<あそ>ぶモードです。":
   english: "Play Story Mode."
+"トーナメント形式<けいしき>の大会<たいかい>です。":
+  english: "Play matches in a tournament format."
+"ステージを選<えら>んで対戦<たいせん>します。":
+  english: "Select a stage and battle."
+"進行<しんこう>ファイルの作成<さくせい>、変更<へんこう>ができます。":
+  english: "Create or change save files."
+"キャラクターファイルの作成<さくせい>、変更<へんこう>ができます。":
+  english: "Create or edit character files."
+"パスワードを入力<にゅうりょく>します。":
+  english: "Enter passwords."
+"ゲームの設定<せってい>を変更<へんこう>します。":
+  english: "Change game settings."
+"タイトル画面<がめん>に戻<もど>ります。":
+  english: "Return to the title screen."
 
-
+# Mode select screen warnings
 "タイトルに戻<もど>りますか?":
   english: "Return to the Title Screen?"
+
+# Options screen
+"サウンド":
+  english: "Sound"
+"モノラル":
+  english: "Mono"
+"ステレオ":
+  english: "Stereo"
+"ドルビープロロジック2":
+  english: "Dolby Pro Logic 2"
+"バイブレーション":
+  english: "Vibration"
+"オン":
+  english: "On"
+"オフ":
+  english: "Off"
+
+# Options screen warnings
+"進行<しんこう>ファイル%をセーブ中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
+  english: "Saving File%!\nDo not remove the\nMemory Card in %"
+
 
 "キャラクターファイル":
   english: "Character File"
 
 # Level names?
+"東京テレポート":
+  english: "Tokyo Teleport"
 "コンテナターミナル":
-  english: "Container Terminal"
+  # Full name doesn't fit on File Select screen
+  #english: "Container Terminal"
+  english: "Container Term"
+"ピポサル帝国編":
+  english: "Piposaru Empire Ed."
 
 # Weapons?
 "ロングレンジ":
@@ -122,3 +189,7 @@
   english: "Elbi Chip"
 "キセノチップ":
   english: "Kiseno Chip"
+
+"おためしキャラ":
+  #id: "cc 86 3b ff"
+  english: "Default Character"
