@@ -42,8 +42,8 @@ def build_csv(strings: list[tuple[int, bytes, int, int, list[bytes], str]]):
             for token in tokens:
                 f.write(f'"{token.hex().upper()}",')
             f.write("\n")
-            for char in string:
-                f.write(f'"{char}",')
+            for token in tokens:
+                f.write(f'"{bytes_to_char[token]}",')
             f.write("\n")
 
 def has_unknown_tokens(tokens: list[bytes]) -> bool:
@@ -104,7 +104,24 @@ def build_translation_doc(
         with open("strings.yaml", "w") as f:
             f.write(dump)
 
-
+def find_index_spacing(strings: list[tuple[int, bytes, int, int, list[bytes], str]]):
+    last_idx = 0
+    last_len = 0
+    last_id = 0
+    for idx, id, _, actual_len, _, _ in strings:
+        id_int = int.from_bytes(id, byteorder="little")
+        idx_diff = idx - last_idx
+        id_diff = id_int - last_id
+        len_extra = last_len + 9
+        print(
+            f"String at idx {idx} ({hex(idx)}), difference: {idx_diff}, "
+            f"last_len + 9: {len_extra}, match {len_extra == idx_diff}, "
+            f"id: {id.hex()} ({hex(id_int)}), "
+            f"id difference: {id_diff} ({hex(id_diff)}), "
+        )
+        last_idx = idx
+        last_len = actual_len
+        last_id = id_int
 
 def find_string_locs() -> list[tuple[int, bytes]]:
     state = States.IDLE
@@ -195,6 +212,8 @@ def main():
     count_unknown_strings(strings)
 
     build_translation_doc(strings)
+
+    find_index_spacing(strings)
 
 
 
