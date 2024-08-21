@@ -200,7 +200,11 @@ def open_mutable(input: str | os.PathLike) -> AsyncResult:
 @click.option(
     "--patch-string",
     multiple=True,
-    default=["00940549", "3C6CF60B"],
+    default=[
+        "00940549",  # gz/menu_common.gz
+        "3C6CF60B",  # gz/menu_vs.gz
+        "87F51E0C",  # gz/menu_story.01_boss01_gori01.gz
+    ],
 )
 def patch(
     input: str | os.PathLike,
