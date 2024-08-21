@@ -1,3 +1,4 @@
+from pprint import pformat
 from typing import Any, Iterable
 from pathlib import Path
 import gzip
@@ -58,8 +59,8 @@ def patch_text(
         strings: dict[str, dict[str, Any]],
         patch_files: Iterable[str]
     ) -> tuple[bytes, bytes]:
+    patch_files = [f.lower() for f in patch_files]
     click.echo(f"Patching game text in the following files: {patch_files}")
-
 
     paths = [DATA0_PATH, DATA1_PATH]
     def _extract(path) -> bytes:
@@ -97,27 +98,36 @@ def patch_text(
         extracted = bytearray(extracted)
         for jap_str, info in strings.items():
             jap_bytestrs = string_to_bytes(jap_str)
-            # TODO: support other langs?
-            new_bytestr = string_to_bytes(info["english"])[0]
-            id = info.get("id", None)
-            if id:
-                id = bytes.fromhex(id)
-            for jb in jap_bytestrs:
-                extracted = extracted.replace(
-                    wrap_string(jb, id=id),
-                    wrap_string(new_bytestr, id=id),
-                )
 
-        # HACK: This offset has something to do with `menu_common/icon.bimg`
-        # If it's not patched the game crashes when trying to go to gameplay
+            # TODO: support other langs?
+            english = info["english"]
+            if isinstance(english, str):
+                id = None
+                try:
+                    bs = string_to_bytes(english)[0]
+                except IndexError as e:
+                    click.echo(
+                        f"Error: could not encode {repr(english)}"
+                    )
+                    raise e
+                replacements = {id: bs}
+            elif isinstance(english, dict):
+                replacements = {}
+                for id, s in english.items():
+                    replacements[bytes.fromhex(id)] = string_to_bytes(s)[0]
+            else:
+                raise ValueError(f"invalid translation structure {english}")
+
+            for jb in jap_bytestrs:
+                for id, new_bytestr in replacements.items():
+                    extracted = extracted.replace(
+                        wrap_string(jb, id=id),
+                        wrap_string(new_bytestr, id=id),
+                    )
+
         patched_uncompressed_size = len(extracted)
         len_diff = patched_uncompressed_size - orig_uncompressed_size
-        orig_addr = 0x001A4A29
-        new_addr = orig_addr + len_diff
-        extracted = extracted.replace(
-            orig_addr.to_bytes(length=4, byteorder="little"),
-            new_addr.to_bytes(length=4, byteorder="little"),
-        )
+        extracted = util.patch_offsets(extracted, len_diff)
 
         extracted = bytes(extracted)
         with open(f".extracted/{entry.name_str}_patched", "wb") as f:
@@ -190,7 +200,7 @@ def open_mutable(input: str | os.PathLike) -> AsyncResult:
 @click.option(
     "--patch-string",
     multiple=True,
-    default=["00940549"],
+    default=["00940549", "3C6CF60B"],
 )
 def patch(
     input: str | os.PathLike,
@@ -257,21 +267,20 @@ def print_headers(
     type=str
 )
 def gen_crc(pack_path: str):
-    crc = 0
-    for c in pack_path:
-        crc = (crc * 0x25) + ord(c)
-        crc &= 0xFFFFFFFF
-    crc = crc.to_bytes(length=4, byteorder="little")
+    crc = util.gen_packinfo_hash(pack_path)
     print(f"{crc.hex(sep=' ').upper()}: {pack_path}")
 
-
-
-
-
-
-
-
-
+@cli.command()
+@click.option(
+    "-s", "--strings",
+    default="strings.yaml",
+    show_default=True,
+    type=click.Path(),
+)
+def print_strings(strings):
+    with open(strings, "r") as f:
+        strings_dict = yaml.safe_load(f)
+    click.echo(pformat(strings_dict))
 
 
 if __name__ == "__main__":

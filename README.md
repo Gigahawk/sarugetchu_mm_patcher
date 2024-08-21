@@ -21,6 +21,7 @@ B0 FF CA DB: gz/system.gz
 5D 55 E9 BE: gz/system_bd.gz
 00 94 05 49: gz/menu_common.gz
 05 F7 CA E8: gz/menu_title.gz
+3C 6C F6 0B: gz/menu_vs.gz
 ```
 
 
@@ -51,3 +52,7 @@ It appears the each row in the kanji keyboard is actually stored inside DATA1 in
 
 There appear to be some kanji not available through the keyboard?
 Maybe the devs just got lazy and didn't feel like organizing them all
+
+The kanji table appears to be banked, The 95Dx range of entries appear to represent some rarely used punctuation in most contexts, but in some (special attacks?) they map to some kanji
+
+## Known issues

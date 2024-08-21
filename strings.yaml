@@ -15,6 +15,13 @@
   english: "Accept %?"
 "へんこう":
   english: "Modify"
+"スキップ":
+  english: "Skip"
+"キャンセル":
+  english: "Cancel"
+マップいどう:
+  english: "Move Map"
+
 
 # Keyboard
 "けす":
@@ -39,8 +46,6 @@
   english: "Slot 1"
 "スロット2":
   english: "Slot 2"
-"スキップ":
-  english: "Skip"
 
 # Memory Card slot select screen descriptions
 "メモリーカードスロットを選<えら>んでください。":
@@ -76,7 +81,7 @@
 "ファイルを選<えら>んでください。":
   english: "Please select a file."
 "メモリーカードスロット選択<せんたく>に戻<もど>ります。":
-  english: "Return to Memory Card selection"
+  english: "Return to Memory Card selection."
 
 # File select screen dialogs
 "新<あたら>しい進行<しんこう>ファイルを作成<さくせい>しますか?":
@@ -85,21 +90,18 @@
   english: "Delete File%?"
 
 
-# File confirm screen
-"エピソードカケル":
-  english: "Episode Kakeru"
-"エピソードスペクター":
-  english: "Episode Specter"
-"ワールドトーナメント":
-  english: "World Tournament"
 
 # File confirm screen descriptions
 "ファイル選択<せんたく>に戻<もど>ります。":
-  english: "Return to file selection"
+  english: "Return to file selection."
 
 # File confirm screen dialogs
 "この進行<しんこう>ファイル%でよろしいですか?":
   english: "Accept File%?"
+
+# Character load screen dialogs
+"キャラクターファイルがありません。":
+  english: "There is no character file."
 
 # Mode select screen
 "ストーリーモード":
@@ -116,6 +118,22 @@
   english: "Password Entry"
 "オプション":
   english: "Options"
+
+# Story mode episode select screen
+"エピソードカケル":
+  english: "Episode Kakeru"
+"エピソードスペクター":
+  english: "Episode Specter"
+
+# Story mode episode select descriptions
+"カケルのストーリーで遊<あそ>びます。":
+  english: Play Kakeru's story.
+"スペクターのストーリーで遊<あそ>びます。":
+  english: "Play with Spectre's story."
+
+# Story mode character select descriptions
+"おためしキャラを使用<しよう>します。 おためしキャラではチップを入手<にゅうしゅ>することができません。":
+  english: "Pick a default character.You cannot use chips with a default character."
 
 # Mode select screen descriptions
 "ストーリーで遊<あそ>ぶモードです。":
@@ -134,10 +152,862 @@
   english: "Change game settings."
 "タイトル画面<がめん>に戻<もど>ります。":
   english: "Return to the title screen."
+"モードセレクトに戻<もど>ります。":
+  english: "Return to the mode select screen."
 
 # Mode select screen warnings
 "タイトルに戻<もど>りますか?":
   english: "Return to the Title Screen?"
+
+# Colosseum Mode screen
+"ワールドトーナメント":
+  english: "World Tournament"
+"レジェンドトーナメント":
+  english: "Legend Tournament"
+"デビルズトーナメント":
+  english: "Devils Tournament"
+
+# Colosseum Mode screen descriptions
+"初級者<しょきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
+  english: "Start a beginners tournament."
+
+# Colosseum Mode character select screen descriptions
+"キャラクターファイルをロードします。":
+  english: "Load a character file."
+"おためしキャラを使用<しよう>します。":
+  english: "Pick a default character."
+"トーナメントセレクトに戻<もど>ります。":
+  english: Return to Tournament Select.
+
+# Colosseum Mode match select screen
+"ワールド一次予選ステージ":
+  english: "World Pre-qualifiers"
+"ワールド二次予選ステージ":
+  english: "World Qualifiers"
+"ワールド準決勝ステージ":
+  english: "World Semifinals"
+"ワールド決勝ステージ":
+  english: "World Finals"
+"ステージセレクト":
+  english: "Stage Select"
+
+# Colosseum Mode match select screen descriptions
+"キャラクターの設定<せってい>を変更<へんこう>します。":
+  english: "Modify your character."
+"キャラクターセレクトに戻<もど>ります。":
+  english: "Return to the character select screen."
+
+# Colosseum Mode match select screen dialogs
+"このステージでよろしいですか?":
+  english: "Is this stage OK?"
+
+# Colosseum Mode stage title screen warnings
+"本当<ほんとう>にリタイアしますか?":
+  english: "Do you really want to retire?"
+
+
+
+# VS. Mode rule settings screen
+"ルール設定":
+  english: Rule Settings
+"次<つぎ>へ進<すす>む":
+  english: "Next"
+"チーム設定":
+  english: "Teams"
+"個人戦にする":
+  english: "Solo"
+"チーム戦にする":
+  english: "Teams"
+"隠しキャラクター":
+  english: "Hidden Characters"
+"ガチャメカ制限":
+  english: "Gadget Restrictions"
+"アイテム出現":
+  english: "Item Drops"
+# These translations may not make sense in all contexts
+# TODO: check if it's used anywhere else
+"あり":
+  english: "Enable"
+"なし":
+  english: "Disable"
+"制限時間":
+  english: "Time Limit"
+"5分":
+  english: "5 min"
+"10分":
+  english: "10 min"
+"15分":
+  english: "15 min"
+
+# VS. Mode entry settings screen
+"エントリー設定":
+  english: "Entry Settings"
+#ENTRY1:
+#  english: ENTRY1
+#ENTRY2:
+#  english: ENTRY2
+#ENTRY3:
+#  english: ENTRY3
+#ENTRY4:
+#  english: ENTRY4
+#PLAYER:
+#  english: PLAYER
+#COM:
+#  english: COM
+#NONE:
+#  english: NONE
+
+# VS. Mode stage select screen
+"1戦目セットわく":
+  english: "Round 1"
+"2戦目セットわく":
+  english: "Round 2"
+"3戦目セットわく":
+  english: "Round 3"
+"4戦目セットわく":
+  english: "Round 4"
+"5戦目セットわく":
+  english: "Round 5"
+"6戦目セットわく":
+  english: "Round 6"
+"7戦目セットわく":
+  english: "Round 7"
+"8戦目セットわく":
+  english: "Round 8"
+"セットかんりょう":
+  english: "Done"
+"ランダム":
+  english: "Random"
+"コロシアム":
+  english: "Colosseum"
+"メトロ":
+  english: "Metro"
+"倉庫街":
+  english: "Warehouse District"
+"トレーニングルーム":
+  english: "Training Room"
+"ヨットハーバー":
+  english: "Yacht Harbor"
+湾岸:
+  english: "Gulf Coast"
+"V.R.スペース":
+  english: "V.R.Space"
+
+# VS. Mode stage select screen descriptions
+"セットわくを選<えら>んでください。":
+  english: "Please choose a round."
+"ステージを選<えら>んでください。":
+  english: Please select a stage.
+"エディットを終了<しゅうりょう>して、キャラクターセレクトに進<すす>みます。":
+  english: "Finish editing, proceed to Character Select."
+"セットわく選択<せんたく>に戻<もど>ります。":
+  english: "Return to round selection."
+"エントリー設定<せってい>に戻<もど>ります。":
+  english: "Return to the Entry Settings screen."
+
+# VS. Mode stage select screen warnings
+"無効<むこう>な組<く>み合<あ>わせです。設定<せってい>し直<なお>して下<くだ>さい。":
+  # This string sounds somewhat generic, is it used in multiple places?
+  # If not we should make this more specific to this stage select
+  english: "Invalid selection.\nPlease try again."
+
+# VS. Mode character select screen
+"キャラクターロード":
+  english: "Load Character"
+"じどうCOM":
+  # じどう means automatic, but the button appears to randomize the AI selections
+  english: "Randomize"
+"チームせんたく":
+  english: "Change Team"
+"エントリーかんりょう":
+  english: "Done"
+
+# VS. Mode character select screen descriptions
+"使用<しよう>するキャラクターを選<えら>んでください。 方向<ほうこう>キーの左右<さゆう>でチームを選<えら>ぶことができます。":
+  english: "Please select the character you want to use. You can select your team by pressing left or right on the D-Pad."
+"使用<しよう>するキャラクターを選<えら>んでください。":
+  english: "Please select the character you want to use."
+
+# VS. Mode character select screen warnings
+"アクセス中<ちゅう>!\n%の\nメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししないでください。":
+  english: "Accessing!\nDo not remove\nthe Memory Card\nin %."
+"ロード中<ちゅう>!\n%の\nメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししないでください。":
+  # What's the difference between loading and accessing?
+  english: "Loading!\nDo not remove\nthe Memory Card\nin %."
+
+# VS. Mode Stage Title screen
+"スタンバイ":
+  english: "Standby"
+"リタイア":
+  english: "Retire"
+
+# VS. Mode Stage Title screen descriptions
+"ガチャメカセレクトに進<すす>みます。":
+  english: "Continue to Gadget selection."
+
+"リタイアします。":
+  english: "Retire."
+
+# VS. Mode Gadget select screen
+"ガチャメカセレクト":
+  english: "Pick Gadgets"
+"ひっさつわざセレクト":
+  english: "Pick Final Moves"
+"チームこうたい":
+  # This is more like Select Team Member but hopefully it's not
+  # used anywhere else
+  english: "Change Fighter"
+"ラウンドスタート":
+  english: "Start Round"
+
+# VS. Mode Special Move select screen
+## Kakeru
+"ディメンションブレイク":
+  english: "Dimension Break"
+"ディメンション\nブレイク":
+  english: "Dimension\nBreak"
+"クラッシュハリケーン":
+  english: "Crash Hurricane"
+"クラッシュ\nハリケーン":
+  english: "Crash\nHrcn."
+"ソニックレボリューション":
+  english: "Sonic Revolution"
+"ソニックR":
+  english: "Sonic\nRev."
+"サンダークラック":
+  english: "Thunder Crack"
+"サンダー\nクラック":
+  english: "Thunder\nCrack"
+## Professor
+"プラズマ制御":
+  english:
+    #"c80d107f": "1Plasma Control"
+    #"290e107f": "2Plasma Control"
+    "d9eb20a2": "Plasma Control"
+    "3aec20a2": "Plasma\nControl"
+"電磁バリア":
+  english:
+    #"eb0e107f": "EM1Barrier"
+    #"4c0f107f": "EM2Barrier"
+    "fcec20a2": "EM Barrier"
+    "5ded20a2": "EM\nBarrier"
+"大爆発":
+  # Big Explosion
+  english:
+    #"0e10107f": "1Explosion"
+    #"6f10107f": "2Explosion"
+    "1fee20a2": "Explosion"
+    "80ee20a2": "Explsn"
+"リミッター解除":
+  english:
+    #"b94c1525": "1Limit Break"
+    "2a71796e": "Limit\nBreak"
+    #"3111107f": "3Limit Break"
+    "42ef20a2": "Limit Break"
+"集中砲火":
+  english:
+    # Concentrated Fire
+    #"7b4d1525": "1Fire Blast"
+    #"dc4d1525": "2Fire Blast"
+    "ec71796e": "Fire Blast"
+    "4d72796e": "Fire\nBlast"
+## Natsumi
+"'光音響弾":
+  # No idea why 95D5 encodes to 閃 in this context,
+  # It's possible that there are overlapping encoding
+  # tables that can be bank switched somehow
+  english:
+    "fad82ea2": "Flash Bang"
+    "5bd92ea2": "Flash\nBang"
+#"閃光音響弾":
+#  english: "Flasqbang"
+#  #english:
+#  #  "e9fa1d7f": "Flash1ang"
+#  #  "4afb1d7f": "Flash2ang"
+"フラッシュリング":
+  english: "Flash Ring"
+"フラッシュ\nリング":
+  english: "Flash\nRing"
+"強化弾セットアップ":
+  # Enhanced Ammo Setup
+  english: "Enhanced Ammo"
+"強化弾\nセットアップ":
+  english: "Enhanced\nAmmo"
+"対地衝撃弾":
+  english:
+    #"3a265c2a": "Gnd.1mpact Bullet"
+    "ab4ac073": "Gnd.Impct.\nBullet"
+    #"52fe1d7f": "Gnd.3mpact Bullet"
+    "63dc2ea2": "Gnd.Impact Bullet"
+"Wレーザーフルバースト":
+  # W Laser Full Burst
+  english: "W Laser Burst"
+"Wレーザー\nフルバースト":
+  english: "W Laser\nBurst"
+## Charu
+"ガチャメカコントロール":
+  english: "Gadget Control"
+"ガチャメカ\nコントロール":
+  english: "Gadget\nControl"
+"入力コントロール":
+  english: "Input Control"
+"入力\nコントロール":
+  english: "Input\nControl"
+"重力コントロール":
+  english: "Gravity Control"
+"重力\nコントロール":
+  english: "Gravity\nControl"
+"時間コントロール":
+  english: "Time Control"
+"時間\nコントロール":
+  english: "Time\nControl"
+"オールレンジショット":
+  english: "All Range Shot"
+"オールレンジ\nショット":
+  english: "All Range\nShot"
+"イリュージョンフォース":
+  english: "Illusion Force"
+"イリュージョン\nフォース":
+  english: "Illusion\nForce"
+"ミラーフォース":
+  english:
+    #"c302a32f": "Mirror1Force"
+    #"2403a32f": "Mirror2Force"
+    "34270779": "Mirror Force"
+    "95270779": "Mirror\nForce"
+## Haruka
+"サンシャインアロー":
+  english: "Sunshine Arrow"
+"サンシャイン\nアロー":
+  english: "Sunshine\nArrow"
+"リップルストーム":
+  english: "Ripple Storm"
+"リップル\nストーム":
+  english: "Ripple\nStorm"
+"スピンショット":
+  english:
+    #"71d7397f": "Spin1Shot"
+    #"d2d7397f": "Spin2Shot"
+    "82b54aa2": "Spin Shot"
+    "e3b54aa2": "Spin\nShot"
+"ホーミングアロー":
+  english: "Homing Arrow"
+"ホーミング\nアロー":
+  english: "Homing\nArrow"
+### Summons
+### See https://apeescape.fandom.com/wiki/Special_Attacks#Monkey_Summons
+"モンタ":
+  english: "Monta"
+"ハットリモンゾウ":
+  english: "Hattori Monzo"
+"ハットリ\nモンゾウ":
+  english: "Hattori\nMonzo"
+"ツタンカーモン":
+  english: "Tutanchimp"
+"ウッキーピンク":
+  english:
+    "09e64222": "Monkey\nPink"
+    #"154e5c62": "Monkey2Pink"
+    #"987ee082": "Monkey3Pink"
+    "447f6a93": "Monkey Pink"
+"サモイ":
+  #english: "Samoi"
+  # Wiki uses this name
+  english: "Samui"
+"モンチさん":
+  english:
+    "cbe64222": "Monki-\nSan"
+    #"60cdf844": "Monki2San"
+    #"5a7fe082": "Monki3San"
+    "2f7059db": "Monki-San"
+"エジモン":
+  # TODO: check if this is right,
+  # he apparently holds up a lightbulb
+  english: "Edison"
+"ウッキーレッド":
+  english:
+    "8de74222": "Monkey\nRed"
+    #"e4cef844": "Monkey2Red"
+    #"1c80e082": "Monkey3Red"
+    "b37159db": "Monkey Red"
+"アフロ":
+  english: "Afro"
+"パンプキン":
+  english: "Pumpkin"
+"サルースウッキー":
+  # TODO: what is this?
+  english: "Salus Monkey"
+"サルース\nウッキー":
+  english: "Salus\nMonkey"
+"ミヤモン⋅ムサシ":
+  # TODO: Check if this is right, apparently he
+  # lunges at an enemy with swords
+  english: "Miyamoto"
+"ミヤモン⋅\nムサシ":
+  english: "Miyamoto"
+"ワッキー":
+  english: "Wakkie"
+## Saru Team
+"サルバズーカ":
+  english:
+    "4cc2477f": "Saru1Bazooka"
+    "adc2477f": "Saru2Bazooka"
+    "af89717f": "Saru3Bazooka"
+    "108a717f": "Saru4Bazooka"
+    "49e75684": "Saru5Bazooka"
+    "aae75684": "Saru6Bazooka"
+    "5da058a2": "Saru Bazooka"
+    "bea058a2": "Saru\nBazooka"
+    "c06782a2": "Saru Bazooka"
+    "216882a2": "Saru\nBazooka"
+    "5ac567a7": "Saru9Bazooka"
+    "bbc567a7": "Saru0Bazooka"
+"バナナロケット":
+  english:
+    #"6fc3477f": "Banana Rocket"
+    #"d0c3477f": "Banana Rocket"
+    #"6ce85684": "Banana Rocket"
+    #"cde85684": "Banana Rocket"
+    "80a158a2": "Banana Rocket"
+    "e1a158a2": "Banana\nRocket"
+    #"7dc667a7": "Banana Rocket"
+    #"dec667a7": "Banana Rocket"
+"ピポサルウェーブ":
+  english: "Piposaru Wave"
+"ピポサル\nウェーブ":
+  english: "Saru\nWave"
+"サル乱舞":
+  english:
+    #"9ab6ed24": "Saru Dance"
+    #"bdb2303a": "Saru Dance"
+    #"403f054a": "Saru Dance"
+    #"0bdb516e": "Saru Dance"
+    #"b5c5477f": "Saru Dance"
+    #"188d717f": "Saru Dance"
+    "2ed79483": "Saru\nDance"
+    #"b2ea5684": "Saru1Dance"
+    "b1636993": "Saru\nDance"
+    "c6a358a2": "Saru Dance"
+    "296b82a2": "Saru Dance"
+    #"c3c867a7": "Saru4Dance"
+"ゴリアックアイ":
+  # What is Goliac?
+  english:
+    #"5cb7ed24": "Goliac1Eye"
+    #"bdb7ed24": "Goliac2Eye"
+    #"7fb3303a": "Goliac3Eye"
+    #"e0b3303a": "Goliac4Eye"
+    #"0240054a": "Goliac5Eye"
+    #"6340054a": "Goliac6Eye"
+    #"cddb516e": "Goliac7Eye"
+    #"2edc516e": "Goliac8Eye"
+    "f0d79483": "Goliac Eye"
+    "51d89483": "Goliac\nEye"
+    "73646993": "Goliac Eye"
+    "d4646993": "Goliac\nEye"
+"戦艦射撃":
+  english:
+    #"7fb8ed24": "Battleship1Canon"
+    #"e0b8ed24": "Battleship2Canon"
+    #"a2b4303a": "Battleship3Canon"
+    #"03b5303a": "Battleship4Canon"
+    #"2541054a": "Battleship5Canon"
+    #"8641054a": "Battleship6Canon"
+    #"f0dc516e": "Battleship7Canon"
+    #"51dd516e": "Battleship8Canon"
+    "13d99483": "Battleship Canon"
+    "74d99483": "B.ship\nCanon"
+    "96656993": "Battleship Canon"
+    "f7656993": "B.ship\nCanon"
+"サルUFO":
+  english: "Saru UFO"
+"ゴリアックハンド":
+  english: "Goliac Hand"
+"ゴリアック\nハンド":
+  english: "Goliac\nHand"
+## Pipotron
+"トロンガッシュ":
+  english:
+    #"6daf557f": "Tron1Gash"
+    #"ceaf557f": "Tron2Gash"
+    "7e8d66a2": "Tron Gash"
+    "df8d66a2": "Tron\nGash"
+"トロンキャノン":
+  english:
+    #"90b0557f": "Tron1Cannon"
+    #"f1b0557f": "Tron2Cannon"
+    "a18e66a2": "Tron Cannon"
+    "028f66a2": "Tron\nCannon"
+"ダークネスストリーム":
+  english: "Dark Stream"
+"ダークネス\nストリーム":
+  english: "Dark\nStream"
+"暗黒の叫び":
+  english:
+    #"3e8c773f": "Dark1Scream"
+    #"d6b2557f": "Dark2Scream"
+    "afb0db88": "Dark\nScream"
+    "e79066a2": "Dark Scream"
+## Specter
+"ロケットチェア":
+  english:
+    #"d28a717f": "Rocket1Chair"
+    #"338b717f": "Rocket2Chair"
+    "e36882a2": "Rocket Chair"
+    "446982a2": "Rocket\nChair"
+"フライングチェア":
+  english: "Flying Chair"
+"フライング\nチェア":
+  english: "Flying\nChair"
+"アーモンチェア":
+  # TODO: What does this mean?
+  english:
+    #"8565054a": "Amon1Chair"
+    #"e665054a": "Amon2Chair"
+    "f6896993": "Amon Chair"
+    "578a6993": "Amon\nChair"
+## Pipotron G
+"スティングボール":
+  english: "Sting Ball"
+"スティング\nボール":
+  english: "Sting\nBall"
+"ハウンドブラスト":
+  english: "Hound Blast"
+"ハウンド\nブラスト":
+  english: "Hound\nBlast"
+"アースクエイク":
+  english:
+    #"16797f7f": "Earth1uake"
+    #"77797f7f": "Earth2uake"
+    "275790a2": "Earthquake"
+    "885790a2": "Earth-\nquake"
+Gクラッシャー:
+  english:
+    #"c1184c4f": "G1Crasher"
+    #"397a7f7f": "G2Crasher"
+    "323db098": "G-\nCrasher"
+    "4a5890a2": "G-Crasher"
+
+
+
+# VS. Mode team member select screen
+## Saru Team
+## Omitting Piposaru for brevity, doesn't really make much
+## sense for the name to include the type of creature they are.
+## Also not direct translating the names, "Water" and "Green"
+## sound stupid as names.
+"ピポサル黄":
+  english: "Ki"
+"ピポサル赤":
+  english: "Akai"
+"ピポサル青":
+  english: "Aoi"
+"ピポサル黒":
+  english: "Kuro"
+"ピポサル緑":
+  english: "Midori"
+"ピポサル水":
+  english: "Mizu"
+## Pipotron
+"トロンレッド":
+  english: "Tron Red"
+"トロンブルー":
+  english: "Tron Blue"
+トロンイエロー:
+  english: "Tron Yellow"
+
+
+# Character edit slot select screen warnings
+"キャラクターファイルをロード中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししないでください。":
+  english: "Loading character file!\nDo not remove the\nMemory Card in %."
+"キャラクターファイル%を削除中<さくじょちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
+  english: "Deleting character File%!\nDo not remove the\nMemory Card in % or\npower off the console."
+
+# Character edit file select screen dialogs
+"このキャラクターファイル%:%でよろしいですか?":
+  english: "Accept File%:%?"
+"新<あたら>しいキャラクターファイルを作成<さくせい>しますか?":
+  english: "Create a new character file?"
+"このキャラクターファイル%を削除<さくじょ>しますか?":
+  english: "Delete character File%?"
+"%のキャラクターファイル%の削除<さくじょ>が完了<かんりょう>しました。":
+  # TODO: Figure out if there's a way to reorder placeholders
+  english: "%'s character File% has been deleted."
+
+# Default character select screen
+"カケル":
+  english: "Kakeru"
+"ハカセ":
+  english: "Professor"
+"ナツミ":
+  english: "Natsumi"
+"チャル":
+  # Apparently known as Casi in the west
+  english: "Charu"
+"ハルカ":
+  # Apparently known as Helga in the west
+  english: "Haruka"
+"サルチーム":
+  english: "Saru Team"
+"ピポトロン":
+  english: "Pipotron"
+"スペクター":
+  english: "Specter"
+"ピポトロンG":
+  english: "Pipotron G"
+
+# Default character select screen descriptions
+"作成<さくせい>するキャラクターを選<えら>んでください。":
+  english: "Select a character to create."
+
+# Character edit screen
+"そうびへんこう":
+  english: "Modify Equipment"
+"サルブック":
+  english: "Saru Book"
+"ニックネームへんこう":
+  english: "Change Nickname"
+"エクストラ":
+  english: "Extras"
+"ガチャメカラボ":
+  english: "Gadget Lab"
+"チップムーブ":
+  english: "Move Chips"
+"セーブ":
+  english: "Save"
+
+# Character edit screen descriptions
+"キャラクターの装備<そうび>を変更<へんこう>します。":
+  english: "Change the character's equipment."
+"ゲッチュしたピポサルの情報<じょうほう>が見<み>れます。":
+  english: "See information on caught Piposarus."
+"キャラクターの名前<なまえ>を変更<へんこう>します。":
+  english: "Change the character's name."
+"一度見<いちどみ>たムービーが見<み>れます。":
+  english: "View previously seen movies."
+"チップを合成<ごうせい>して、アイテムを開発<かいはつ>します。":
+  english: "Combine chips into items."
+"他<ほか>のキャラクターにチップを移動<いどう>します。":
+  english: "Move chips to other characters."
+"変更<へんこう>したキャラクターデータをセーブします。":
+  english: "Save changes to the character."
+"キャラクターエディットのメニューに戻<もど>ります。":
+  english: "Return to the Character Edit menu."
+
+# Character edit screen warnings
+"セーブしていない\nキャラクターファイルはリセットされます。\nこのまま戻<もど>りますか?":
+  english: "Character changes have\nnot been saved.\nReturn anyways?"
+"キャラクターファイル%をセーブ中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
+  english: "Saving character File%!\nDo not remove the\nMemory Card in % or\npower off the console."
+
+# Character edit screen dialogs
+"キャラクターファイルをセーブしますか?":
+  english: "Save the character file?"
+
+# Modify equipment screen
+"パワーアップパーツ":
+  english: "Power Up Parts"
+"コスチューム":
+  english: "Costumes"
+"しょうかんカプセル":
+  english: "Summoning Capsules"
+
+# Modify equipment screen descriptions
+"ガチャメカにパワーアップパーツをセットします。":
+  english: "Set Power Up Parts on Gadgets."
+"コスチュームを変更<へんこう>します。":
+  english: "Change costumes."
+"召喚<しょうかん>カプセルの情報<じょうほう>が見<み>れます。":
+  english: "See information on summoning capsules"
+"装備変更<そうびへんこう>のメニューに戻<もど>ります。":
+  english: "Return to Modify Equipment screen"
+
+# Power Up Parts screen (Weapons)
+# There are some weapon descriptions at
+# https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%AB%E3%82%B2%E3%83%83%E3%83%81%E3%83%A5_%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A2%E3%83%B3%E3%82%AD%E3%83%BC%E3%82%BA
+## Sword/Mechabo type
+## In English games these are usually known as Stun Clubs, however
+## there are a bunch of different types that are hard to translate
+## so for consistency I will use the Japanese names
+### Mecha Bo
+"メカボー":
+  #english: "Stun Club"  # Mech Bo/Mech Club?
+  english: "Mecha Bo"
+"メカハンマー":
+  #english: "Stun Hammer"  # Mech Hammer?
+  english: "Mecha Hammer"
+"トロンチェーン":
+  english: "Tron Chain"
+"メカロッド":
+  english: "Mecha Rod"
+"アームショット":
+  english: "Arm Shot"
+### Big Bo
+"デカボー":
+  # Presumably short for でかい ボー?
+  english: "Big Bo"
+"トゲハンマー":
+  english: "Thorn Hammer"
+### W Mecha Bo
+"Wメカボー":
+  # What does the W stand for?
+  english: "W Mecha Bo"
+"ノコハンマー":
+  english: "Saw Hammer"
+"Wロッド":
+  english: "W Rod"
+"トンファ":
+  english: "Tonfa"
+"Wドリル":
+  english: "W Drill"
+### Kiko Bo
+"キコーボー":
+  # What does this mean?
+  # Looking up kiko on jisho the closest thing is https://jisho.org/word/%E6%A9%9F%E6%A7%8B 
+  # ChatGPT suggests it could also be https://jisho.org/word/%E6%A9%9F%E6%A2%B0
+  # Both of these apparently mean machine of some sort, but we can't use Mecha Bo
+  # again so I'm just going to leave it as Kiko Bo
+  english: "Kiko Bo"
+"マジョステッキ":
+  english: "Magic Wand"
+"Wハンマー":
+  # Why is this here and not part of W Mecha Bo?
+  english: "W Hammer"
+### Reflect Bo
+"リフレクボー":
+  english: "Reflect Bo"
+"火炎刀":
+  english: "Flame Sword"
+"氷結刀":
+  english: "Ice Sword"
+"気功刀":
+  # No idea what this is
+  english: "Spirit Sword"
+### Pipotron G
+"パンチモード":
+  english: "Punch Mode"
+## Gun type
+"レーザーガン":
+  english: "Laser Gun"
+"マシンガン":
+  english: "Machine Gun"
+"ショットガン":
+  english: "Shotgun"
+"Wレーザー":
+  english: "W Laser"
+## Launcher type
+### Launchers
+"Bランチャー":
+  # Beam Launcher?
+  english: "B Launcher"
+"Hランチャー":
+  # Homing Launcher?
+  english: "H Launcher"
+"メガランチャー":
+  english: "Mega Launcher"
+"ギガランチャー":
+  english: "Giga Launcher"
+### Pipotron G
+"ランチャーモード":
+  english: "Launcher Mode"
+## Remote Control type
+### Remote control weapons
+"リモートボム":
+  # R.C. Car?
+  english: "Remote Bomb"
+"キラービー":
+  english: "Killer Bee"
+"サテラレーザー":
+  # Satellite Laser?
+  english: "Satella Laser"
+## Boot type
+### Dash Boots
+"ダッシュブーツ":
+  english: "Dash Boots"
+"ダッシュブースター":
+  english: "Dash Booster"
+"ダッシュフープ":
+  english: "Dash Hoop"
+### Attack Boots
+"アタックブーツ":
+  english: "Attack Boots"
+"アタックブースター":
+  english: "Attack Booster"
+### Warp Boots
+"ワープブーツ":
+  english: "Warp Boots"
+"ワープブースター":
+  english: "Warp Booster"
+"ワープフープ":
+  english: "Warp Hoop"
+### Pipotron G
+"ダッシュモード":
+  english: "Dash Mode"
+# Get Net type
+"ゲットアミ":
+  english: "Get Net"
+# Misc.
+### Pipotron G
+"スペシャルモード":
+  english: "Special Mode"
+
+# Power Up Parts screen descriptions
+"パワーアップパーツをセットするガチャメカを選<えら>んでください。":
+  english: Please select the gadget to set power up parts on.
+
+# Costumes screen
+"ノーマル":
+  english: "Default"
+"ライトアーマー":
+  english: "Light Armor"
+"ライトアーマーA":
+  english: "Light Armor A"
+"ライトアーマーB":
+  english: "Light Armor B"
+"ホワイトボディ":
+  english: "White Body"
+"イエローボディ":
+  english: "Yellow Body"
+"レッドボディ":
+  english: "Red Body"
+"ブラックボディ":
+  english: "Black Body"
+
+# Costumes screen descriptions
+"お気<き>に入<い>りの服<ふく>です。 ":  # There's randomly a space at the end of this one
+  # Kakeru's default
+  english: "My favorite outfit."
+"いつものジャケットとジーンズです。":
+  # Natsumi's default
+  english: "My usual jacket and jeans."
+"いつもの白衣<はくい>です。":
+  # Professor's default
+  english: "My usual white coat."
+"お気<き>に入<い>りの白<しろ>のキャミソールです。":
+  # Charu's default
+  english: "My favorite white camisole."
+"いつものパンツいっちょうです。":
+  # Saru Team's default
+  english: "My usual pants."
+"いつものマントとブーツのコスチュームです。":
+  english: "My usual cloak and boots costume."
+"ノーマルな白<しろ>いボディカラーです。":
+  # Pipotron G's default
+  english: "The normal white body color."
+"ファンキーな黄色<きいろ>いボディカラーです。":
+  english: "A funky yellow body color."
+"燃<も>えるような赤<あか>のボディカラーです。":
+  english: "A hot red body color."
+"クールな黒<くろ>いボディカラーです。":
+  english: "A cool black body color."
+"ブルーの戦闘服風<せんとうふくふう>のコスチュームです。":
+  english: "A blue combat uniform costume."
+
+
+
+
+
+
 
 # Options screen
 "サウンド":
@@ -176,10 +1046,6 @@
 # Weapons?
 "ロングレンジ":
   english: "Long Range"
-"マシンガン":
-  english: "Machine Gun"
-"ショットガン":
-  english: "Shotgun"
 "バーニア":
   # ???
   english: "Vernier scale"
@@ -191,5 +1057,4 @@
   english: "Kiseno Chip"
 
 "おためしキャラ":
-  #id: "cc 86 3b ff"
   english: "Default Character"
