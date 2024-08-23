@@ -3,3 +3,4 @@
 *.extracted
 **__pycache__
 **.pyc
+result

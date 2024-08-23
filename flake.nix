@@ -99,24 +99,25 @@
           nativeBuildInputs = (
             [
               ps2str.packages.${system}.default
+              pkgs.jq
               pkgs.ffmpeg
             ] ++ old.nativeBuildInputs
           );
-          # TODO: per file bitrate
           buildPhase = ''
             ${old.buildPhase}
 
             export FONTCONFIG_FILE=${fontconfig_file}
 
-
-            find ${self}/subs -type f -name '*_jp.srt' | sed "s#${self}/subs/##" | \
+            find ${self}/subs -type f -name '*.json' | \
               xargs -P ${processes} -I {} bash -c '
-                subs_file="{}"
-                base_name="''${subs_file%_jp.srt}"
+                meta_file="{}"
+                subs_file="$(dirname $meta_file)/$(jq -r '.file' $meta_file)"
+                bitrate="$(jq -r '.bitrate' $meta_file)"
+                base_name="$(echo ''${meta_file%.json} | sed 's#${self}/subs/##')"
                 ffmpeg \
                   -i "''${base_name}.m2v" \
-                  -vf "subtitles=${self}/subs/$subs_file" \
-                  -b:v 2M \
+                  -vf "subtitles=$subs_file" \
+                  -b:v "$bitrate" \
                   "''${base_name}-sub.m2v"
                 cat <<EOF > "''${base_name}.mux"
             pss
@@ -128,7 +129,6 @@
                 end
             end
             EOF
-                cat "''${base_name}.mux"
                 ps2str mux "''${base_name}.mux" "''${base_name}-sub.PSS"
               '
             wait
