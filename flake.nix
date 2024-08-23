@@ -17,6 +17,12 @@
       #poetryEnv = mkPoetryEnv {
       #  projectDir = ./.;
       #};
+      fontconfig_file = pkgs.makeFontsConf {
+        fontDirectories = [
+          pkgs.freefont_ttf
+          pkgs.rounded-mgenplus
+        ];
+      };
     in {
       #devShells.default = pkgs.mkShell {
       #  buildInputs = [
@@ -35,6 +41,9 @@
           pkgs.ffmpeg
           pkgs.openai-whisper
         ];
+        shellHook = ''
+          export FONTCONFIG_FILE=${fontconfig_file}
+        '';
       };
     });
 }

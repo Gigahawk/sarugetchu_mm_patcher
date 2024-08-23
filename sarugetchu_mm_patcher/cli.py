@@ -175,6 +175,58 @@ def patch_text(
     click.echo("Done repacking")
     return data0, data1
 
+def _write_mux_file(path: Path, m2v_path: Path, ss2_path: Path):
+    template = f"""
+pss
+
+	stream video:0
+		input "{m2v_path.resolve()}"
+	end
+
+	stream pcm:0
+		input "{ss2_path.resolve()}"
+	end
+end
+"""
+    with open(path, "w") as f:
+        f.write(template)
+
+def patch_cutscenes(
+    iso: Ps2Iso,
+    subs: dict[str, dict[str, str]],
+) -> list[tuple[str, bytes]]:
+    changes = []
+    for path, info in subs.items():
+        pss_file = (Path("/") / path).with_suffix(".PSS;1")
+        m2v_file = (EXTRACT_PATH / path).with_suffix(".m2v")
+        ss2_file = (EXTRACT_PATH / path).with_suffix(".ss2")
+        subbed_file = (EXTRACT_PATH / path).with_suffix(".sub.m2v")
+        mux_file = (EXTRACT_PATH / path).with_suffix(".mux")
+        srt_file = Path("subs") / info["srt"]
+        remuxed_file = (EXTRACT_PATH / path).with_suffix(".sub.PSS")
+        bitrate = info.get("bitrate", "2M")
+        pf: TreeFile = iso.get_object(str(pss_file))
+        _export_video(pf)
+        cmd = [
+            "ffmpeg", "-y",
+            "-i", str(m2v_file),
+            "-vf", f"subtitles={srt_file}",
+            "-b:v", bitrate,
+            str(subbed_file)
+        ]
+        click.echo(f"Encoding subs into {path} with cmd {cmd}")
+        subprocess.run(cmd)
+
+        _write_mux_file(mux_file, subbed_file, ss2_file)
+        cmd = [
+            "ps2str", "mux", str(mux_file), str(remuxed_file)
+        ]
+        click.echo(f"Encoding done for {path}, remuxing with cmd {cmd}")
+        subprocess.run(cmd)
+        click.echo(f"Remuxing done for {path}, reading file back")
+        with open(remuxed_file, "rb") as f:
+            changes.append((str(pss_file), f.read()))
+    return changes
 
 def open_mutable(input: str | os.PathLike) -> AsyncResult:
     def _thread():
@@ -204,12 +256,6 @@ input_opt = click.option(
 @cli.command()
 @input_opt
 @click.option(
-    "-s", "--strings",
-    default="strings.yaml",
-    show_default=True,
-    type=click.Path(),
-)
-@click.option(
     "--md5/--no-md5",
     default=True,
 )
@@ -224,7 +270,6 @@ input_opt = click.option(
 )
 def patch(
     input: str | os.PathLike,
-    strings: str | os.PathLike,
     md5: bool,
     patch_string: Iterable[str],
 ):
@@ -239,8 +284,8 @@ def patch(
             exit(1)
         click.echo("MD5 OK")
 
-    click.echo(f"Opening translation file {strings}")
-    with open(strings, "r") as f:
+    click.echo(f"Opening text translation file strings.yaml")
+    with open("strings.yaml", "r") as f:
         strings_dict = yaml.safe_load(f)
     if not strings_dict:
         strings_dict = {}
@@ -249,16 +294,22 @@ def patch(
 
     data0, data1 = patch_text(iso, strings_dict, patch_string)
 
-    with open("ST00K_REMUXED.pss", "rb") as f:
-        movie_data = f.read()
+    click.echo(f"Opening cutscene translation file subs.yaml")
+    with open("subs.yaml", "r") as f:
+        subs_dict = yaml.safe_load(f)
+    if not subs_dict:
+        subs_dict = {}
+
+    cutscene_replacements = patch_cutscenes(iso, subs_dict)
 
     click.echo("Waiting for mutable copy to open")
     iso_mut: Ps2Iso = iso_async_result.get()
-    iso_mut.replace_files([
-        (DATA0_PATH, data0),
-        (DATA1_PATH, data1),
-        ("/RAW/MPEG/GAME/ST00K.PSS;1", movie_data),
-    ])
+    iso_mut.replace_files(
+        [
+            (DATA0_PATH, data0),
+            (DATA1_PATH, data1),
+        ] + cutscene_replacements
+    )
 
     click.echo("Exporting patched ISO")
     iso_mut.write("patched.iso")
@@ -305,7 +356,7 @@ def print_strings(strings):
         strings_dict = yaml.safe_load(f)
     click.echo(pformat(strings_dict))
 
-def _export_video(file: TreeFile):
+def _export_video(file: TreeFile, recombine=False):
     click.echo(f"Exporting {file.path}")
     file.export(
         EXTRACT_PATH, preserve_path=True
@@ -329,17 +380,18 @@ def _export_video(file: TreeFile):
     subprocess.run(cmd)
     click.echo(f"Done demuxing video {src_path}")
 
-    cmd = [
-        "ffmpeg",
-        "-i", str(video_path),
-        "-i", str(audio_path),
-        "-c:v", "copy",
-        "-c:a", "aac",
-        str(combined_path),
-    ]
-    click.echo(f"Combining {src_path} video streams to mp4 with command: {cmd}")
-    subprocess.run(cmd)
-    click.echo(f"Done combining {src_path} video streams")
+    if recombine:
+        cmd = [
+            "ffmpeg",
+            "-i", str(video_path),
+            "-i", str(audio_path),
+            "-c:v", "copy",
+            "-c:a", "aac",
+            str(combined_path),
+        ]
+        click.echo(f"Combining {src_path} video streams to mp4 with command: {cmd}")
+        subprocess.run(cmd)
+        click.echo(f"Done combining {src_path} video streams")
 
 
 @cli.command()
@@ -351,7 +403,7 @@ def dump_video(input):
             for file in files:
                 path = file.path.split(";")[0].upper()
                 if path.endswith(".PSS"):
-                    tpe.submit(_export_video, file)
+                    tpe.submit(_export_video, file, {"recombine": True})
 
     # HACK: console seems to get messed up by the concurrency
     subprocess.run(["stty", "sane"])
