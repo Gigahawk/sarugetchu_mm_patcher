@@ -1,5 +1,13 @@
 # Notes
 
+# Building with nix
+
+Ensure the iso you have is:
+    - named `mm.iso`
+    - matches the md5 `946d0aeb90772efd9105b0f785b2c7ec`
+
+Then run `nix-store --add-fixed sha256 mm.iso`
+
 ## Index
 PDATA/DATA0.BIN and DATA2.BIN appear to be some kind of index file describing the contents of the bigger DATA1.BIN and DATA3.BIN respectively
 
