@@ -260,6 +260,10 @@ input_opt = click.option(
     default=True,
 )
 @click.option(
+    "--cutscenes/--no-cutscenes",
+    default=True,
+)
+@click.option(
     "--patch-string",
     multiple=True,
     default=[
@@ -271,6 +275,7 @@ input_opt = click.option(
 def patch(
     input: str | os.PathLike,
     md5: bool,
+    cutscenes: bool,
     patch_string: Iterable[str],
 ):
     if md5:
@@ -300,7 +305,10 @@ def patch(
     if not subs_dict:
         subs_dict = {}
 
-    cutscene_replacements = patch_cutscenes(iso, subs_dict)
+    if cutscenes:
+        cutscene_replacements = patch_cutscenes(iso, subs_dict)
+    else:
+        cutscene_replacements = []
 
     click.echo("Waiting for mutable copy to open")
     iso_mut: Ps2Iso = iso_async_result.get()
