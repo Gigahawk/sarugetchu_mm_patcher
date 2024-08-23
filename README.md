@@ -36,8 +36,9 @@ C9 44 8B A5: gz/menu1.gz
 A6 0A 8C A5: gz/menu2.gz
 24 5D C6 40: gz/menu_character_01.gz
 01 23 C7 40: gz/menu_character_02.gz
-# Hopefully these are story menus?
+# Presumably these are story menus
 87 F5 1E 0C: gz/menu_story.01_boss01_gori01.gz
+41 F3 48 92: gz/menu_story.02_city01_a.gz
 
 # Presumably these are models/skins?
 C7 09 3B CA: gz/pcdress.kakeruwear00.gz
@@ -91,5 +92,16 @@ There appear to be some kanji not available through the keyboard?
 Maybe the devs just got lazy and didn't feel like organizing them all
 
 The kanji table appears to be banked, The 95Dx range of entries appear to represent some rarely used punctuation in most contexts, but in some (special attacks?) they map to some kanji
+
+## PSS Cutscenes
+
+Cutscenes are stored inside the `RAW/MPEG`.
+They use Sony's weird proprietary extensions to MPEG2 and need to be demuxed properly.
+There is currently a demuxer written python under `mux.py` but it is unbearably slow and will probably have to be rewritten in C or something to get something usable.
+
+> We're using ssmm-demux to demux and ps2str to remux
+
+
+
 
 ## Known issues

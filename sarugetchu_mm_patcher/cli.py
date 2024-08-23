@@ -1,17 +1,20 @@
+import subprocess
 from pprint import pformat
 from typing import Any, Iterable
 from pathlib import Path
 import gzip
 import io
+from concurrent.futures import ThreadPoolExecutor
 from multiprocessing.pool import ThreadPool, AsyncResult
 import os
 from time import sleep
 
 import yaml
-from ps2isopatcher.iso import Ps2Iso, TreeFile
+from ps2isopatcher.iso import Ps2Iso, TreeFile, walk_tree
 import click
 
 import sarugetchu_mm_patcher.util as util
+import sarugetchu_mm_patcher.mux as mux
 from sarugetchu_mm_patcher.index import (
     IndexEntry, get_index_list, index_list_to_bin
 )
@@ -180,13 +183,26 @@ def open_mutable(input: str | os.PathLike) -> AsyncResult:
     async_result = pool.apply_async(_thread)
     return async_result
 
-@cli.command()
-@click.option(
+def open_iso(
+        input: str | os.PathLike, mutable=False
+) -> tuple[Ps2Iso, AsyncResult | None]:
+    click.echo(f"Opening {input}")
+    iso = Ps2Iso(input)
+    if mutable:
+        iso_async_result = open_mutable(input)
+    else:
+        iso_async_result = None
+    return iso, iso_async_result
+
+input_opt = click.option(
     "-i", "--input",
     default="Sarugetchu - Million Monkeys (Japan).iso",
     show_default=True,
     type=click.Path(),
 )
+
+@cli.command()
+@input_opt
 @click.option(
     "-s", "--strings",
     default="strings.yaml",
@@ -222,9 +238,6 @@ def patch(
             click.echo(f"Expected: {expected_md5}")
             exit(1)
         click.echo("MD5 OK")
-    click.echo(f"Opening {input}")
-    iso = Ps2Iso(input)
-    iso_async_result = open_mutable(input)
 
     click.echo(f"Opening translation file {strings}")
     with open(strings, "r") as f:
@@ -232,13 +245,19 @@ def patch(
     if not strings_dict:
         strings_dict = {}
 
+    iso, iso_async_result = open_iso(input, mutable=True)
+
     data0, data1 = patch_text(iso, strings_dict, patch_string)
+
+    with open("ST00K_REMUXED.pss", "rb") as f:
+        movie_data = f.read()
 
     click.echo("Waiting for mutable copy to open")
     iso_mut: Ps2Iso = iso_async_result.get()
     iso_mut.replace_files([
         (DATA0_PATH, data0),
         (DATA1_PATH, data1),
+        ("/RAW/MPEG/GAME/ST00K.PSS;1", movie_data),
     ])
 
     click.echo("Exporting patched ISO")
@@ -286,6 +305,71 @@ def print_strings(strings):
         strings_dict = yaml.safe_load(f)
     click.echo(pformat(strings_dict))
 
+def _export_video(file: TreeFile):
+    click.echo(f"Exporting {file.path}")
+    file.export(
+        EXTRACT_PATH, preserve_path=True
+    )
+    src_path = EXTRACT_PATH / file.path_no_ver[1:]
+    video_path = src_path.with_suffix(".m2v")
+    audio_path = src_path.with_suffix(".ss2")
+    combined_path = src_path.with_suffix(".mp4")
+    click.echo(f"Done exporting {file.path}")
+    # For some reason ps2str breaks on some of the files, use ssmm-demux instead
+    #cmd = [
+    #    "ps2str", "demux",
+    #    "-d", str(EXTRACT_PATH / file.parent.path[1:]),
+    #    str(EXTRACT_PATH / file.path_no_ver[1:]),
+    #]
+    cmd = [
+        "ssmm-demux",
+        str(src_path),
+    ]
+    click.echo(f"Demuxing video {src_path} with command: {cmd}")
+    subprocess.run(cmd)
+    click.echo(f"Done demuxing video {src_path}")
+
+    cmd = [
+        "ffmpeg",
+        "-i", str(video_path),
+        "-i", str(audio_path),
+        "-c:v", "copy",
+        "-c:a", "aac",
+        str(combined_path),
+    ]
+    click.echo(f"Combining {src_path} video streams to mp4 with command: {cmd}")
+    subprocess.run(cmd)
+    click.echo(f"Done combining {src_path} video streams")
+
+
+@cli.command()
+@input_opt
+def dump_video(input):
+    iso, _ = open_iso(input)
+    with ThreadPoolExecutor(max_workers=64) as tpe:
+        for _, _, files in walk_tree(iso.tree):
+            for file in files:
+                path = file.path.split(";")[0].upper()
+                if path.endswith(".PSS"):
+                    tpe.submit(_export_video, file)
+
+    # HACK: console seems to get messed up by the concurrency
+    subprocess.run(["stty", "sane"])
+
+
+
+#@cli.command()
+#@click.argument(
+#    "pss_file",
+#    type=click.Path(),
+#)
+#def demux(pss_file):
+#    data = FileBytes(pss_file)
+#    vid_stream, aud_stream = mux.demux(data)
+#    #with open("video.m2v", "wb") as f:
+#    #    f.write(vid_stream)
+#    #with open("audio.ss2", "wb") as f:
+#    #    f.write(aud_stream)
 
 if __name__ == "__main__":
     cli()

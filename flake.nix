@@ -5,9 +5,11 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     poetry2nix.url = "github:nix-community/poetry2nix";
+    ps2str.url = "github:Gigahawk/ps2str-nix";
+    ssmm-mux.url = "github:Gigahawk/ssmm-mux";
   };
 
-  outputs = { self, nixpkgs, flake-utils, poetry2nix, ... }:
+  outputs = { self, nixpkgs, flake-utils, poetry2nix, ps2str, ssmm-mux, ... }:
     flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
@@ -27,7 +29,11 @@
           pkgs.bashInteractive
         ];
         packages = [
+          ssmm-mux.packages.${system}.default
+          ps2str.packages.${system}.default
           pkgs.poetry
+          pkgs.ffmpeg
+          pkgs.openai-whisper
         ];
       };
     });
