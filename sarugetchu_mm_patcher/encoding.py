@@ -6,13 +6,26 @@ bytes_to_char = {
     #
 
     # Angle brackets as furigana markers
+    # TODO: this should really be square brackets [ ]
     b"\x5B": "<",
     b"\x5D": ">",
 
-    # String formatting placeholder
+    # String formatting placeholder (%s)
     b"\x25\x73": "%",
+    # Tab characters always seem to get inserted at the end
+    # of the line no matter where they are in the string
+    # Does not seem to do anything if they show up past the first
+    # newline \n
+    b"\x09": "\t",
     b"\x0A": "\n",
 
+    # Despite the above codes matching up to ASCII
+    # these don't seem to be implmented.
+    # The standard alphanums are also not implemented
+    #b"\x08": "\b",
+    #b"\x0B": "\v",
+    #b"\x0C": "\f",
+    #b"\x0D": "\r",
 
     #
     # Regular characters
