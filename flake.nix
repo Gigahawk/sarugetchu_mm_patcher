@@ -19,6 +19,13 @@
         url = "";
         sha256 = "0nbsaqdvczcygk4frfyiiy4y3w7v6qc9ig3jvbiy032a11f5aycb";
       });
+      version = "1";
+      resourceFiles = [
+        "070_00940549" # gz/menu_common.gz
+        "084_87f51e0c" # gz/menu_story.01_boss01_gori01.gz
+        "118_3c6cf60b" # gz/menu_vs.gz
+      ];
+      resourceFilesStr = builtins.concatStringsSep "\n" resourceFiles;
       inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; })
         mkPoetryEnv mkPoetryApplication defaultPoetryOverrides;
       #poetryEnv = mkPoetryEnv {
@@ -33,7 +40,7 @@
     in {
       packages = {
         ssmm-patcher = mkPoetryApplication {
-          projectDir = self;
+          projectDir = ./ssmm-patcher;
           overrides = defaultPoetryOverrides.extend
             (self: super: {
               ps2isopatcher = super.ps2isopatcher.overridePythonAttrs
@@ -50,7 +57,7 @@
         extracted-iso = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-extracted-iso";
-          version = "1";
+          inherit version;
           srcs = [
             mm_iso
           ];
@@ -187,12 +194,44 @@
             wait
           '';
         });
+        data-patched = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-data-patched";
+          inherit version;
+          src = ./strings.yaml;
+
+          nativeBuildInputs = [
+            self.packages.${system}.default
+          ];
+
+          unpackPhase = ''
+            cp $src strings.yaml
+          '';
+
+          buildPhase = ''
+            ls
+            echo "${resourceFilesStr}" | \
+              xargs -P ${processes} -I {} \
+                ssmm-patcher patch-resource \
+                  "${self.packages.${system}.data-extracted}/DATA1/{}"
+          '';
+
+          installPhase = ''
+            find . -name '*_patched' -type f | \
+              xargs -P ${processes} \
+                -I {} install -Dm 755 "{}" "$out/DATA1_patched/{}"
+            wait
+          '';
+        };
       };
-      #devShells.default = pkgs.mkShell {
-      #  buildInputs = [
-      #    poetryEnv
-      #  ];
-      #};
+      devShells.default = pkgs.mkShell {
+        #buildInputs = [
+        #  poetryEnv
+        #];
+        packages = [
+          self.packages.${system}.default
+        ];
+      };
       devShells.poetry = pkgs.mkShell {
         buildInputs = [
           # Required to make poetry shell work properly

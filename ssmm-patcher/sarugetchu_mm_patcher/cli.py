@@ -454,6 +454,72 @@ def unpack_data(index_path, data_path, output_path):
         p.close()
         p.join()
 
+@cli.command()
+@click.argument(
+    "resource_path",
+    type=click.Path(),
+)
+@click.option(
+    "-s", "--strings-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def patch_resource(resource_path, strings_path, output_path):
+    resource_path = Path(resource_path)
+    if strings_path is None:
+        strings_path = Path(os.getcwd()) / "strings.yaml"
+    else:
+        strings_path = Path(strings_path)
+    if output_path is None:
+        output_path = Path(os.getcwd()) / f"{resource_path.stem}_patched"
+    else:
+        output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(strings_path, "r") as f:
+        strings_dict = yaml.safe_load(f)
+    if not strings_dict:
+        raise ValueError(f"Empty strings file {strings_path}")
+    with open(resource_path, "rb") as f:
+        resource_bytes = bytearray(f.read())
+    for jap_str, info in strings_dict.items():
+        jap_bytestrs = string_to_bytes(jap_str)
+
+        # TODO: support other langs?
+        english = info["english"]
+        if isinstance(english, str):
+            id = None
+            try:
+                bs = string_to_bytes(english)[0]
+            except IndexError as e:
+                click.echo(
+                    f"Error: could not encode {repr(english)}"
+                )
+                raise e
+            replacements = {id: bs}
+        elif isinstance(english, dict):
+            replacements = {}
+            for id, s in english.items():
+                replacements[bytes.fromhex(id)] = string_to_bytes(s)[0]
+        else:
+            raise ValueError(f"invalid translation structure {english}")
+
+        for jb in jap_bytestrs:
+            for id, new_bytestr in replacements.items():
+                resource_bytes = resource_bytes.replace(
+                    wrap_string(jb, id=id),
+                    wrap_string(new_bytestr, id=id),
+                )
+    with open(output_path, "wb") as f:
+        f.write(resource_bytes)
+
 #@cli.command()
 #@click.argument(
 #    "pss_file",
