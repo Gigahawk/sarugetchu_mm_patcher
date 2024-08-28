@@ -324,7 +324,7 @@ develop = false
 type = "git"
 url = "https://github.com/Gigahawk/ps2isopatcher.git"
 reference = "HEAD"
-resolved_reference = "51f6898e420d6dfe135d917ff3ed044ede563389"
+resolved_reference = "98a08a4e6add4134f286e0df396effd549f1c0f9"
 
 [[package]]
 name = "pyyaml"

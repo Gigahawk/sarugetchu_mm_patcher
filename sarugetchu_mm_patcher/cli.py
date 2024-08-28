@@ -416,7 +416,43 @@ def dump_video(input):
     # HACK: console seems to get messed up by the concurrency
     subprocess.run(["stty", "sane"])
 
-
+@cli.command()
+@click.argument(
+    "index_path",
+    type=click.Path(),
+)
+@click.argument(
+    "data_path",
+    type=click.Path(),
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def unpack_data(index_path, data_path, output_path):
+    index_path = Path(index_path)
+    data_path = Path(data_path)
+    if output_path is None:
+        output_path = Path(os.getcwd()) / data_path.stem
+    else:
+        output_path = Path(output_path)
+    output_path.mkdir(exist_ok=True, parents=True)
+    with open(index_path, "rb") as f:
+        index_bytes = f.read()
+    with open(data_path, "rb") as f:
+        data_bytes = f.read()
+    def _dump_entry(t: tuple[int, IndexEntry]):
+        idx, entry = t
+        start = entry.address*2048
+        with open(output_path / f"{idx:03}_{entry.name_str}", "wb") as f:
+            f.write(data_bytes[start:start + entry.size])
+    index_list = get_index_list(index_bytes)
+    with ThreadPool(processes=32) as p:
+        p.imap_unordered(_dump_entry, enumerate(index_list))
+        p.close()
+        p.join()
 
 #@cli.command()
 #@click.argument(

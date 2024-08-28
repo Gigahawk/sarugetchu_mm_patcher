@@ -19,7 +19,8 @@
         url = "";
         sha256 = "0nbsaqdvczcygk4frfyiiy4y3w7v6qc9ig3jvbiy032a11f5aycb";
       });
-      inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; }) mkPoetryEnv defaultPoetryOverrides;
+      inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; })
+        mkPoetryEnv mkPoetryApplication defaultPoetryOverrides;
       #poetryEnv = mkPoetryEnv {
       #  projectDir = ./.;
       #};
@@ -31,6 +32,21 @@
       };
     in {
       packages = {
+        ssmm-patcher = mkPoetryApplication {
+          projectDir = self;
+          overrides = defaultPoetryOverrides.extend
+            (self: super: {
+              ps2isopatcher = super.ps2isopatcher.overridePythonAttrs
+              (
+                old: {
+                  buildInputs = (old.buildInputs or [ ]) ++ [
+                    super.poetry
+                  ];
+                }
+              );
+            });
+        };
+        default = self.packages.${system}.ssmm-patcher;
         extracted-iso = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-extracted-iso";
@@ -135,7 +151,39 @@
           '';
           installPhase = ''
             find . -name '*-sub.PSS' | \
-              xargs -I {} install -Dm 755 "{}" "$out/remuxed/{}"
+              xargs -P ${processes} \
+                -I {} install -Dm 755 "{}" "$out/remuxed/{}"
+            wait
+          '';
+        });
+        data-unpacked = self.packages.${system}.extracted-iso.overrideAttrs(old: {
+          pname = "mm-data-unpacked";
+          nativeBuildInputs = (
+            [
+              self.packages.${system}.ssmm-patcher
+            ] ++ old.nativeBuildInputs
+          );
+          buildPhase = ''
+            ssmm-patcher unpack-data PDATA/DATA0.BIN PDATA/DATA1.BIN -o PDATA/DATA1
+
+            # All files in DATA1 are gzip files
+            find PDATA/DATA1 -type f | \
+              xargs -P ${processes} -I {} mv "{}" "{}.gz"
+            wait
+          '';
+          installPhase = ''
+            mkdir -p "$out/DATA1"
+            cp -a PDATA/DATA1/* "$out/DATA1"
+          '';
+        });
+        data-extracted = self.packages.${system}.data-unpacked.overrideAttrs(old: {
+          pname = "mm-data-extracted";
+          buildPhase = ''
+            ${old.buildPhase}
+
+            # All files in DATA1 are gzip files
+            find PDATA/DATA1 -type f | \
+              xargs -P ${processes} -I {} gzip -d "{}"
             wait
           '';
         });
