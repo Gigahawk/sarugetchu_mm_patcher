@@ -140,12 +140,7 @@
           '';
         });
       };
-      #devShells.default = pkgs.mkShell {
-      #  buildInputs = [
-      #    poetryEnv
-      #  ];
-      #};
-      devShells.poetry = pkgs.mkShell {
+      devShells.default = pkgs.mkShell {
         buildInputs = [
           # Required to make poetry shell work properly
           pkgs.bashInteractive
@@ -156,6 +151,7 @@
           pkgs.poetry
           pkgs.ffmpeg
           pkgs.openai-whisper
+          pkgs.zig
         ];
         shellHook = ''
           export FONTCONFIG_FILE=${fontconfig_file}
