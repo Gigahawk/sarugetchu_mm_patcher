@@ -214,7 +214,7 @@
               xargs -P ${processes} -I {} bash -c '
                 ssmm-patcher patch-resource \
                   "${self.packages.${system}.data-extracted}/DATA1/{}"
-                gzip "{}_patched"
+                gzip -9 "{}_patched"
               '
           '';
 
@@ -273,14 +273,15 @@
           ];
 
           unpackPhase = ''
-            cp $src mm.iso
+            true
           '';
 
           buildPhase = ''
             ps2isopatcher patch \
               -r "/PDATA/DATA0.BIN;1" "${self.packages.${system}.data-repacked}/PDATA/DATA0.BIN" \
               -r "/PDATA/DATA1.BIN;1" "${self.packages.${system}.data-repacked}/PDATA/DATA1.BIN" \
-              mm.iso
+              -o mm_patched.iso \
+              "$src"
             ls
           '';
 
