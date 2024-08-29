@@ -173,6 +173,10 @@ def patch_text(
         address += util.blocks_required(size)
     data0 = index_list_to_bin(new_index_list)
     click.echo("Done repacking")
+    with open(EXTRACT_PATH / "DATA0_patched.BIN", "wb") as f:
+        f.write(data0)
+    with open(EXTRACT_PATH / "DATA1_patched.BIN", "wb") as f:
+        f.write(data1)
     return data0, data1
 
 def _write_mux_file(path: Path, m2v_path: Path, ss2_path: Path):
@@ -485,6 +489,7 @@ def pack_data(index_path, data_path, entry):
             address = 0
             index_list = []
             for hash, entry_name in entry:
+                print(f"Creating entry for {hash}")
                 hash_bytes = bytes.fromhex(hash)
                 if len(hash_bytes) != 4:
                     raise ValueError(f"Invalid hash {hash}")
@@ -537,6 +542,7 @@ def patch_resource(resource_path, strings_path, output_path):
         raise ValueError(f"Empty strings file {strings_path}")
     with open(resource_path, "rb") as f:
         resource_bytes = bytearray(f.read())
+    orig_size = len(resource_bytes)
     for jap_str, info in strings_dict.items():
         jap_bytestrs = string_to_bytes(jap_str)
 
@@ -565,6 +571,9 @@ def patch_resource(resource_path, strings_path, output_path):
                     wrap_string(jb, id=id),
                     wrap_string(new_bytestr, id=id),
                 )
+    new_size = len(resource_bytes)
+    size_diff = new_size - orig_size
+    resource_bytes = util.patch_offsets(resource_bytes, size_diff)
     with open(output_path, "wb") as f:
         f.write(resource_bytes)
 

@@ -7,9 +7,10 @@
     poetry2nix.url = "github:nix-community/poetry2nix";
     ps2str.url = "github:Gigahawk/ps2str-nix";
     ssmm-mux.url = "github:Gigahawk/ssmm-mux";
+    ps2isopatcher.url = "github:Gigahawk/ps2isopatcher";
   };
 
-  outputs = { self, nixpkgs, flake-utils, poetry2nix, ps2str, ssmm-mux, ... }:
+  outputs = { self, nixpkgs, flake-utils, poetry2nix, ps2str, ssmm-mux, ps2isopatcher, ... }:
     flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
@@ -54,9 +55,9 @@
             });
         };
         default = self.packages.${system}.ssmm-patcher;
-        extracted-iso = with import nixpkgs { inherit system; };
+        iso-extracted = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
-          pname = "mm-extracted-iso";
+          pname = "mm-iso-extracted";
           inherit version;
           srcs = [
             mm_iso
@@ -69,7 +70,7 @@
             7z x "''${srcs[0]}"
           '';
         };
-        cutscenes-demuxed = self.packages.${system}.extracted-iso.overrideAttrs(old: {
+        cutscenes-demuxed = self.packages.${system}.iso-extracted.overrideAttrs(old: {
           pname = "mm-cutscenes-demuxed";
           nativeBuildInputs = (
             [
@@ -163,7 +164,7 @@
             wait
           '';
         });
-        data-unpacked = self.packages.${system}.extracted-iso.overrideAttrs(old: {
+        data-unpacked = self.packages.${system}.iso-extracted.overrideAttrs(old: {
           pname = "mm-data-unpacked";
           nativeBuildInputs = (
             [
@@ -259,6 +260,32 @@
               xargs -P ${processes} \
                 -I {} install -Dm 755 "{}" "$out/PDATA/{}"
             wait
+          '';
+        };
+        iso-patched = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-iso-patched";
+          inherit version;
+          src = mm_iso;
+
+          nativeBuildInputs = [
+            ps2isopatcher.packages.${system}.default
+          ];
+
+          unpackPhase = ''
+            cp $src mm.iso
+          '';
+
+          buildPhase = ''
+            ps2isopatcher patch \
+              -r "/PDATA/DATA0.BIN;1" "${self.packages.${system}.data-repacked}/PDATA/DATA0.BIN" \
+              -r "/PDATA/DATA1.BIN;1" "${self.packages.${system}.data-repacked}/PDATA/DATA1.BIN" \
+              mm.iso
+            ls
+          '';
+
+          installPhase = ''
+            install -Dm 755 "mm_patched.iso" "$out/iso/mm_patched.iso"
           '';
         };
       };

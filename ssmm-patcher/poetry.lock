@@ -320,11 +320,14 @@ python-versions = "^3.7"
 files = []
 develop = false
 
+[package.dependencies]
+click = "^8.1.7"
+
 [package.source]
 type = "git"
 url = "https://github.com/Gigahawk/ps2isopatcher.git"
 reference = "HEAD"
-resolved_reference = "98a08a4e6add4134f286e0df396effd549f1c0f9"
+resolved_reference = "108871d8787d102db5dfff34435dd2f2c9ccb8e8"
 
 [[package]]
 name = "pyyaml"
