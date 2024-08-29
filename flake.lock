@@ -332,11 +332,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1724366870,
-        "narHash": "sha256-EtC3KF0b6yJZ61PAcMIDwsKU9FUAlpi0jV6iWQuYRww=",
+        "lastModified": 1724957968,
+        "narHash": "sha256-ULB+XMeK6BVJNixXmG1Zu6vPWyIgAUdZ+1hSK08QUoc=",
         "owner": "Gigahawk",
         "repo": "ssmm-mux",
-        "rev": "1131435dd99e231b2c757f538f25cd64e7627995",
+        "rev": "2b61587dd7a96b71b6ba563d5abe469233de388b",
         "type": "github"
       },
       "original": {

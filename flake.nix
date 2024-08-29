@@ -69,46 +69,80 @@
           unpackPhase = ''
             7z x "''${srcs[0]}"
           '';
-        };
-        cutscenes-demuxed = self.packages.${system}.iso-extracted.overrideAttrs(old: {
-          pname = "mm-cutscenes-demuxed";
-          nativeBuildInputs = (
-            [
-              ssmm-mux.packages.${system}.default
-            ] ++ old.nativeBuildInputs
-          );
+
           buildPhase = ''
-            find . -name '*.PSS' -type f | \
-              xargs -P ${processes} -I {} ssmm-demux {}
+            true
+          '';
+
+          installPhase = ''
+            find . -type f | \
+              xargs -P ${processes} -I {} install -Dm 755 "{}" "$out/extracted/{}"
             wait
           '';
+
+          fixupPhase = ''
+            true
+          '';
+        };
+        cutscenes-demuxed = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-cutscenes-demuxed";
+          inherit version;
+          src = null;
+
+          nativeBuildInputs = [
+            ssmm-mux.packages.${system}.default
+          ];
+
+          unpackPhase = ''
+            true
+          '';
+
+          buildPhase = ''
+            find ${self.packages.${system}.iso-extracted} -name '*.PSS' -type f | \
+              xargs -P ${processes} -I {} bash -c '
+                input="{}"
+                output="''${input#${self.packages.${system}.iso-extracted}/extracted/}"
+                mkdir -p $(dirname "$output")
+                ssmm-demux "$input" "$output"
+              '
+            wait
+          '';
+
           installPhase = ''
             find . \
               \( -name '*.m2v' -o -name '*.ss2' \) | \
                 xargs -P ${processes} -I {} install -Dm 755 "{}" "$out/demuxed/{}"
             wait
           '';
-        });
-        cutscenes-mp4 = self.packages.${system}.cutscenes-demuxed.overrideAttrs(old: {
+        };
+        cutscenes-mp4 = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
           pname = "mm-cutscenes-mp4";
-          nativeBuildInputs = (
-            [
+          inherit version;
+          src = null;
+
+          nativeBuildInputs = [
               pkgs.ffmpeg
-            ] ++ old.nativeBuildInputs
-          );
+          ];
+
+          unpackPhase = ''
+            true
+          '';
+
           buildPhase = ''
-
-            ${old.buildPhase}
-
-            find . -name '*.PSS' -type f | \
+            find ${self.packages.${system}.cutscenes-demuxed} -name '*.m2v' -type f | \
               xargs -P ${processes} -I {} bash -c '
-                input_file="{}"
-                base_name="''${input_file%.PSS}"
+                m2v="{}"
+                base_name="''${m2v%.m2v}"
+                ss2="''${base_name}.ss2"
+                output="''${base_name#${self.packages.${system}.cutscenes-demuxed}/demuxed/}.mp4"
+                mkdir -p $(dirname "$output")
                 ffmpeg \
-                  -i "''${base_name}.m2v" \
-                  -i "''${base_name}.ss2" \
+                  -i "$m2v" \
+                  -i "$ss2" \
                   -c:v copy -c:a aac \
-                  "''${base_name}.mp4"
+                  "$output"
             '
             wait
           '';
@@ -117,62 +151,83 @@
               xargs -P ${processes} -I {} install -Dm 755 "{}" "$out/mp4/{}"
             wait
           '';
-        });
-        cutscenes-remuxed = self.packages.${system}.cutscenes-demuxed.overrideAttrs(old: {
+        };
+        cutscenes-remuxed = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
           pname = "mm-cutscenes-remuxed";
-          nativeBuildInputs = (
-            [
-              ps2str.packages.${system}.default
-              pkgs.jq
-              pkgs.ffmpeg
-            ] ++ old.nativeBuildInputs
-          );
-          buildPhase = ''
-            ${old.buildPhase}
+          inherit version;
+          src = ./subs;
+          nativeBuildInputs = [
+            ps2str.packages.${system}.default
+            pkgs.jq
+            pkgs.ffmpeg
+          ];
 
+          unpackPhase = ''
+            true
+          '';
+
+          buildPhase = ''
             export FONTCONFIG_FILE=${fontconfig_file}
 
-            find ${self}/subs -type f -name '*.json' | \
+            find $src -type f -name '*.json' | \
               xargs -P ${processes} -I {} bash -c '
                 meta_file="{}"
                 subs_file="$(dirname $meta_file)/$(jq -r '.file' $meta_file)"
                 bitrate="$(jq -r '.bitrate' $meta_file)"
-                base_name="$(echo ''${meta_file%.json} | sed 's#${self}/subs/##')"
+                base_name=$(echo ''${meta_file%.json} | sed "s#$src/##")
+                m2v="${self.packages.${system}.cutscenes-demuxed}/demuxed/$base_name.m2v"
+                ss2="${self.packages.${system}.cutscenes-demuxed}/demuxed/$base_name.ss2"
+                mux="''${base_name}.mux"
+                m2v_subbed="''${base_name}-sub.m2v"
+                pss_subbed="''${base_name}-sub.PSS"
+                mkdir -p $(dirname "$base_name")
                 ffmpeg \
-                  -i "''${base_name}.m2v" \
+                  -i "$m2v" \
                   -vf "subtitles=$subs_file" \
                   -b:v "$bitrate" \
-                  "''${base_name}-sub.m2v"
-                cat <<EOF > "''${base_name}.mux"
+                  "$m2v_subbed"
+                cat <<EOF > "$mux"
             pss
                 stream video:0
-                    input "''${base_name}-sub.m2v"
+                    input "$m2v_subbed"
                 end
                 stream pcm:0
-                    input "''${base_name}.ss2"
+                    input "$ss2"
                 end
             end
             EOF
-                ps2str mux "''${base_name}.mux" "''${base_name}-sub.PSS"
+                ps2str mux "$mux" "$pss_subbed"
               '
             wait
           '';
+
           installPhase = ''
             find . -name '*-sub.PSS' | \
               xargs -P ${processes} \
                 -I {} install -Dm 755 "{}" "$out/remuxed/{}"
             wait
           '';
-        });
-        data-unpacked = self.packages.${system}.iso-extracted.overrideAttrs(old: {
+        };
+        data-unpacked = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
           pname = "mm-data-unpacked";
-          nativeBuildInputs = (
-            [
-              self.packages.${system}.ssmm-patcher
-            ] ++ old.nativeBuildInputs
-          );
+          inherit version;
+          src = null;
+
+          nativeBuildInputs = [
+            self.packages.${system}.ssmm-patcher
+          ];
+
+          unpackPhase = ''
+            true
+          '';
+
           buildPhase = ''
-            ssmm-patcher unpack-data PDATA/DATA0.BIN PDATA/DATA1.BIN -o PDATA/DATA1
+            ssmm-patcher unpack-data \
+              ${self.packages.${system}.iso-extracted}/extracted/PDATA/DATA0.BIN \
+              ${self.packages.${system}.iso-extracted}/extracted/PDATA/DATA1.BIN \
+              -o PDATA/DATA1
 
             # All files in DATA1 are gzip files
             find PDATA/DATA1 -type f | \
@@ -183,18 +238,35 @@
             mkdir -p "$out/DATA1"
             cp -a PDATA/DATA1/* "$out/DATA1"
           '';
-        });
-        data-extracted = self.packages.${system}.data-unpacked.overrideAttrs(old: {
+        };
+        data-extracted = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
           pname = "mm-data-extracted";
-          buildPhase = ''
-            ${old.buildPhase}
+          inherit version;
+          src = null;
 
+          unpackPhase = ''
+            true
+          '';
+
+          buildPhase = ''
+            mkdir -p DATA1
             # All files in DATA1 are gzip files
-            find PDATA/DATA1 -type f | \
-              xargs -P ${processes} -I {} gzip -d "{}"
+            find ${self.packages.${system}.data-unpacked}/DATA1 -type f | \
+              xargs -P ${processes} -I {} bash -c '
+                input="{}"
+                base_name=$(basename "$input")
+                output="''${base_name%.gz}"
+                gzip -d -c "$input" > "DATA1/$output"
+              '
             wait
           '';
-        });
+
+          installPhase = ''
+            mkdir -p "$out/DATA1"
+            cp DATA1/* "$out/DATA1"
+          '';
+        };
         data-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-patched";
@@ -206,13 +278,14 @@
           ];
 
           unpackPhase = ''
-            cp $src strings.yaml
+            true
           '';
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
               xargs -P ${processes} -I {} bash -c '
                 ssmm-patcher patch-resource \
+                  -s $src \
                   "${self.packages.${system}.data-extracted}/DATA1/{}"
                 gzip -9 "{}_patched"
               '
