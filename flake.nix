@@ -277,12 +277,19 @@
           '';
 
           buildPhase = ''
-            ps2isopatcher patch \
-              -r "/PDATA/DATA0.BIN;1" "${self.packages.${system}.data-repacked}/PDATA/DATA0.BIN" \
-              -r "/PDATA/DATA1.BIN;1" "${self.packages.${system}.data-repacked}/PDATA/DATA1.BIN" \
-              -o mm_patched.iso \
-              "$src"
-            ls
+            cmd="ps2isopatcher patch"
+            cmd+=" -r \"/PDATA/DATA0.BIN;1\" \"${self.packages.${system}.data-repacked}/PDATA/DATA0.BIN\""
+            cmd+=" -r \"/PDATA/DATA1.BIN;1\" \"${self.packages.${system}.data-repacked}/PDATA/DATA1.BIN\""
+            pushd "${self.packages.${system}.cutscenes-remuxed}/remuxed"
+            for m in $(find . -type f); do
+              abspath=$(readlink -f "$m")
+              isopath="''${m#.}"
+              isopath="''${isopath%-sub*}.''${isopath##*.};1"
+              cmd+=" -r \"$isopath\" \"$abspath\""
+            done
+            popd
+            cmd+=" -o mm_patched.iso \"$src\""
+            eval $cmd
           '';
 
           installPhase = ''
