@@ -455,6 +455,54 @@ def unpack_data(index_path, data_path, output_path):
         p.join()
 
 @cli.command()
+@click.option(
+    "-i", "--index-path",
+    default=None,
+    type=click.Path(),
+)
+@click.option(
+    "-d", "--data-path",
+    default=None,
+    type=click.Path(),
+)
+@click.option(
+    "-e", "--entry",
+    nargs=2,
+    type=click.Tuple([str, click.Path()]),
+    multiple=True
+)
+def pack_data(index_path, data_path, entry):
+    if index_path is None:
+        index_path = Path(os.getcwd()) / "DATA0.BIN"
+    else:
+        index_path = Path(index_path)
+    if data_path is None:
+        data_path = Path(os.getcwd()) / "DATA1.BIN"
+    else:
+        data_path = Path(data_path)
+    with open(index_path, "wb") as index_file:
+        with open(data_path, "wb") as data_file:
+            address = 0
+            index_list = []
+            for hash, entry_name in entry:
+                hash_bytes = bytes.fromhex(hash)
+                if len(hash_bytes) != 4:
+                    raise ValueError(f"Invalid hash {hash}")
+                with open(entry_name, "rb") as entry_file:
+                    entry_bytes = entry_file.read()
+                size = len(entry_bytes)
+                padded = util.pad(entry_bytes)
+                index = IndexEntry(
+                    hash_bytes,
+                    address,
+                    size,
+                )
+                index_list.append(index)
+                data_file.write(padded)
+                address += util.blocks_required(size)
+            index_file.write(index_list_to_bin(index_list))
+
+@cli.command()
 @click.argument(
     "resource_path",
     type=click.Path(),

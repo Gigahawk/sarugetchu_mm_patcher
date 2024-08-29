@@ -209,17 +209,55 @@
           '';
 
           buildPhase = ''
-            ls
             echo "${resourceFilesStr}" | \
-              xargs -P ${processes} -I {} \
+              xargs -P ${processes} -I {} bash -c '
                 ssmm-patcher patch-resource \
                   "${self.packages.${system}.data-extracted}/DATA1/{}"
+                gzip "{}_patched"
+              '
           '';
 
           installPhase = ''
-            find . -name '*_patched' -type f | \
+            find . -name '*_patched.gz' -type f | \
               xargs -P ${processes} \
                 -I {} install -Dm 755 "{}" "$out/DATA1_patched/{}"
+            wait
+          '';
+        };
+        data-repacked = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-data-repacked";
+          inherit version;
+          src = null;
+
+          nativeBuildInputs = [
+            self.packages.${system}.default
+          ];
+
+          unpackPhase = ''
+            true
+          '';
+
+          buildPhase = ''
+            cmd="ssmm-patcher pack-data"
+            for f in ${self.packages.${system}.data-unpacked}/DATA1/*; do
+              name=$(basename "''${f%.gz}")
+              hash="''${name#*_}"
+              patched="${self.packages.${system}.data-patched}/DATA1_patched/''${name}_patched.gz"
+              if [[ -e "$patched" ]]; then
+                cmd+=" -e $hash $patched"
+              else
+                cmd+=" -e $hash $f"
+              fi
+            done
+            eval $cmd
+            ls
+          '';
+
+          installPhase = ''
+            find . -name '*.BIN' -type f | \
+              xargs -P ${processes} \
+                -I {} install -Dm 755 "{}" "$out/PDATA/{}"
             wait
           '';
         };
