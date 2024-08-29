@@ -361,12 +361,13 @@
               cmd+=" -r \"$isopath\" \"$abspath\""
             done
             popd
-            cmd+=" -o mm_patched.iso \"$src\""
+            mkdir -p "$out/iso"
+            cmd+=" -o \"$out/iso/mm_patched.iso\" \"$src\""
             eval $cmd
           '';
 
           installPhase = ''
-            install -Dm 755 "mm_patched.iso" "$out/iso/mm_patched.iso"
+            true
           '';
         };
       };
