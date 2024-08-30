@@ -88,8 +88,14 @@
   english: "Create a new save file?"
 "この進行<しんこう>ファイル%を削除<さくじょ>しますか?":
   english: "Delete File%?"
+"現在使用中<げんざいしようちゅう>の進行<しんこう>ファイル%を削除<さくじょ>しようとしています。\n進行状況<しんこうじょうきょう>がリセットされますが、よろしいですか?":
+  english: "Delete the currently loaded File%?\nThis will reset your progress."
+"%の進行<しんこう>ファイル%の削除<さくじょ>が完了<かんりょう>しました。":
+  english: "% save File% has been deleted."
 
-
+# File select screen warnings
+"進行<しんこう>ファイル%を削除中<さくじょちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
+  english: "Deleting save File%!\nDo not remove the\nMemory Card in % or\npower off the console."
 
 # File confirm screen descriptions
 "ファイル選択<せんたく>に戻<もど>ります。":
@@ -129,11 +135,28 @@
 "カケルのストーリーで遊<あそ>びます。":
   english: Play Kakeru's story.
 "スペクターのストーリーで遊<あそ>びます。":
-  english: "Play with Spectre's story."
+  english: "Play Specter's story."
+"エピソードセレクトに戻<もど>ります。":
+  english: "Return to episode selection."
 
 # Story mode character select descriptions
 "おためしキャラを使用<しよう>します。 おためしキャラではチップを入手<にゅうしゅ>することができません。":
   english: "Pick a default character.You cannot use chips with a default character."
+
+# Story mode mission screen
+"ページおくり":
+  english: "Next Pg."
+
+# Story mode mission screen description
+"ステージセレクトに戻<もど>ります。":
+  english: "Return to stage select."
+
+# Story mode missions
+## Tokyo Teleport PM00:00
+"東京テレポート PM00:00":
+  english: "Tokyo Teleport PM00:00"
+
+
 
 # Mode select screen descriptions
 "ストーリーで遊<あそ>ぶモードです。":
@@ -178,6 +201,10 @@
   english: "Pick a default character."
 "トーナメントセレクトに戻<もど>ります。":
   english: Return to Tournament Select.
+
+# Colosseum Mode default character select screen descriptions
+"キャラクターを選<えら>んでください。":
+  english: "Please select a character."
 
 # Colosseum Mode match select screen
 "ワールド一次予選ステージ":
@@ -732,7 +759,7 @@ Gクラッシャー:
   english: "Delete character File%?"
 "%のキャラクターファイル%の削除<さくじょ>が完了<かんりょう>しました。":
   # TODO: Figure out if there's a way to reorder placeholders
-  english: "%'s character File% has been deleted."
+  english: "% character File%\nhas been deleted."
 
 # Default character select screen
 "カケル":
@@ -1004,11 +1031,6 @@ Gクラッシャー:
   english: "A blue combat uniform costume."
 
 
-
-
-
-
-
 # Options screen
 "サウンド":
   english: "Sound"
@@ -1030,6 +1052,8 @@ Gクラッシャー:
   english: "Saving File%!\nDo not remove the\nMemory Card in %"
 
 
+
+# Misc
 "キャラクターファイル":
   english: "Character File"
 

@@ -232,6 +232,7 @@ def main():
     files = [
         "00940549",
         "3c6cf60b",
+        "87f51e0c",
     ]
     for f in files:
         sf = StringFinder(f)
