@@ -390,6 +390,9 @@
           pkgs.poetry
           pkgs.ffmpeg
           pkgs.openai-whisper
+          pkgs.go
+          pkgs.gleam
+          pkgs.erlang
         ];
         shellHook = ''
           export FONTCONFIG_FILE=${fontconfig_file}
