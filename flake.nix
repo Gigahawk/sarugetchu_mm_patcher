@@ -8,12 +8,25 @@
     ps2str.url = "github:Gigahawk/ps2str-nix";
     ssmm-mux.url = "github:Gigahawk/ssmm-mux";
     ps2isopatcher.url = "github:Gigahawk/ps2isopatcher";
+    # Waiting for merge of https://github.com/NixOS/nixpkgs/pull/339716
+    nixpkgs-clps2c.url = "github:Gigahawk/nixpkgs?ref=clps2c-compiler";
   };
 
-  outputs = { self, nixpkgs, flake-utils, poetry2nix, ps2str, ssmm-mux, ps2isopatcher, ... }:
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    poetry2nix,
+    ps2str,
+    ssmm-mux,
+    ps2isopatcher,
+    nixpkgs-clps2c,
+    ...
+  }:
     flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
+      pkgs-clps2c = import nixpkgs-clps2c { inherit system; };
       processes = "32";
       mm_iso = (pkgs.requireFile {
         name = "mm.iso";
@@ -390,6 +403,7 @@
           pkgs.poetry
           pkgs.ffmpeg
           pkgs.openai-whisper
+          pkgs-clps2c.clps2c-compiler
         ];
         shellHook = ''
           export FONTCONFIG_FILE=${fontconfig_file}

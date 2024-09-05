@@ -1,0 +1,51 @@
+// Hardcode a string containing a newline to print with
+WriteBytes 0x00659000 "0A 00"
+// Hacky println like function
+ASM_START 0x00658000
+    // Store return address in t2 so we don't lose it when making the log call
+    daddu $t2,$ra,$zero
+    // Store a0 in t1 to restore later
+    daddu $t1,$a0,$zero
+    // Call the logging func
+    jal 0x00100A18
+    nop
+    addiu $a0,$zero,0x00659000
+    jal 0x00100A18
+    nop
+    daddu $a0,$t1,$zero
+    jr $t2
+ASM_END
+
+// Rewrite the PackFs hash func, saving enough instructions to call our println
+// func
+ASM_START 0x00485e60
+    // Store return address in t0 so we don't lose it when making the log call
+    daddu $t0,$ra,$zero
+    // Call the println func
+    jal 0x00658000
+    // Set up v0 as hash, t4 as curr_char
+    daddu $v0,$zero,$zero
+    daddu $t4,$zero,$zero
+    // This implements:
+    // hash = (((hash << 3) + hash) << 2) + curr_char
+    // which is apparently equivalent to:
+    // hash = hash*0x25 + curr_char
+    LoopStart: dsll $t7,$v0,0x3
+    daddu $t7,$t7,$v0
+    dsll $t7,$t7,0x2
+    daddu $t7,$t7,$v0
+    // Load the char pointed to by a0
+    daddu $v0,$t7,$t4
+    lbu $t4,0x0($a0)
+    andi $t4,$t4,0xff
+    // If our character isn't null, keep looping.
+    // Note that the loop always runs once, however since we hash and curr_char
+    // to 0 the first iteration does nothing.
+    // Also increment a0 during the branch instruction.
+    bne $t4,$zero,LoopStart
+    addiu $a0,$a0,0x1
+    // Left and right shift the output to truncate it
+    dsll32 $v0,$v0,0x0
+    jr $t0
+    dsra32 $v0,$v0,0x0
+ASM_END
