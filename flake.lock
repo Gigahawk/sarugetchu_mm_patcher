@@ -167,6 +167,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-clps2c": {
+      "locked": {
+        "lastModified": 1725515388,
+        "narHash": "sha256-o/U2mwaHIKfOh/noYBZsBBwxcRckQ8eHGKWLqfYj850=",
+        "owner": "Gigahawk",
+        "repo": "nixpkgs",
+        "rev": "c5af3a04bb736a36d7d7c7b2aff10d6242ae3968",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Gigahawk",
+        "ref": "clps2c-compiler",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1719763542,
@@ -320,6 +336,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-clps2c": "nixpkgs-clps2c",
         "poetry2nix": "poetry2nix",
         "ps2isopatcher": "ps2isopatcher",
         "ps2str": "ps2str",

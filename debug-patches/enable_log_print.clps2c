@@ -1,0 +1,11 @@
+// Overwrite the last few instuctions of some logging func to actually
+// print somewhere
+ASM_START 00100a38
+    // syscall 0x75 apparently prints from the EE debug serial port?
+    addiu $v1,$zero,0x75
+    syscall 0
+    jr $ra
+    // Restore the stack pointer (first few instructions in this func sets
+    // this up for some reason)
+    addiu $sp,$sp,0x40
+ASM_END
