@@ -64,10 +64,11 @@ class StringFinder:
             if self.has_unknown_tokens(tokens):
                 num_unknown += 1
         print(f"Total strings: {len(strings)}")
-        print(
-            "Strings with unencoded char: "
-            f"{num_unknown} ({num_unknown/len(strings)*100}%)"
-        )
+        if len(strings) != 0:
+            print(
+                "Strings with unencoded char: "
+                f"{num_unknown} ({num_unknown/len(strings)*100}%)"
+            )
 
     def build_translation_doc(
             self,
@@ -230,9 +231,13 @@ class StringFinder:
 
 def main():
     files = [
-        "00940549",
+        "2f62887b",
         "3c6cf60b",
+        "5c272d50",
         "87f51e0c",
+        "95d0e0fc",
+        "00940549",
+        "aa6f7a50",
     ]
     for f in files:
         sf = StringFinder(f)
