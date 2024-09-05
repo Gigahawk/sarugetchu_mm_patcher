@@ -23,54 +23,14 @@ The last 4 bytes are the size of the file in bytes.
 
 ### Known hashes
 
-```
-# Contains .irx libraries
-1F A8 A5 BF: package/mod310.tar.gz
+See `data0_hashes.csv`
 
-# ???
-B0 FF CA DB: gz/system.gz
-5D 55 E9 BE: gz/system_bd.gz
-B1 FC 2C 81: gz/game_common.gz
-5C 27 2D 50: gz/game_common.story.gz
-
-# Contains many strings presumably common to many menus
-00 94 05 49: gz/menu_common.gz
-# Presumably contains strings specific to the title screen
-05 F7 CA E8: gz/menu_title.gz
-# Contains strings specific to VS. Mode
-3C 6C F6 0B: gz/menu_vs.gz
-# No idea what these menus are for
-C9 44 8B A5: gz/menu1.gz
-A6 0A 8C A5: gz/menu2.gz
-24 5D C6 40: gz/menu_character_01.gz
-01 23 C7 40: gz/menu_character_02.gz
-# Presumably these are story menus
-87 F5 1E 0C: gz/menu_story.01_boss01_gori01.gz
-41 F3 48 92: gz/menu_story.02_city01_a.gz
-
-# Presumably these are models/skins?
-C7 09 3B CA: gz/pcdress.kakeruwear00.gz
-7C 97 49 A4: gz/pcdress.challwear00.gz
-27 BC 67 A4: gz/pcdress.challwear12.gz
-F8 7A AD DA: gz/pcdress.spectorwear00.gz
-
-# Presumably these are character models/behavior?
-26 57 13 81: gz/pcchara.kakeru.gz
-
-# No idea
-25 D6 29 5A: gz/pcsebd.kakeru.gz
-
-# Gacha files?
-60 27 FD EE: gz/pcgacha.gfm.spector.vnr.gz
-
-# Probably stage data?
-2F 62 88 7B: gz/stage.01_boss01_gori01_bd.gz
-
-# Probably boss data?
-95 D0 E0 FC: gz/boss.01_boss01_gori01.gz
-```
-
-
+To update this:
+1. compile and enable the patches in the `debug-patches` folder
+1. play the game in pcsx2 until you load the menu/file you're looking for
+    - ensure the log window is open
+1. save the log file
+1. run `cat <logfile> | dos2unix | grep -E '\.gz$' | uniq | ssmm-patcher update-hash-list data0_hashes.csv`
 
 ## DATA1
 Each file in DATA1 is a gzip compressed file.

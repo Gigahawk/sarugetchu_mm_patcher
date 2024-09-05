@@ -406,6 +406,7 @@
           pkgs.go
           pkgs.gleam
           pkgs.erlang
+          pkgs.dos2unix
           pkgs-clps2c.clps2c-compiler
         ];
         shellHook = ''
