@@ -403,6 +403,7 @@
           pkgs.poetry
           pkgs.ffmpeg
           pkgs.openai-whisper
+          pkgs.dos2unix
           pkgs-clps2c.clps2c-compiler
         ];
         shellHook = ''

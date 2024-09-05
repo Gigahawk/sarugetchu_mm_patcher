@@ -1,3 +1,5 @@
+import sys
+import csv
 import subprocess
 from pprint import pformat
 from typing import Any, Iterable
@@ -352,9 +354,49 @@ def print_headers(
     "pack_path",
     type=str
 )
-def gen_crc(pack_path: str):
-    crc = util.gen_packinfo_hash(pack_path)
-    print(f"{crc.hex(sep=' ').upper()}: {pack_path}")
+def print_hash(pack_path: str):
+    hash = util.gen_packinfo_hash(pack_path)
+    print(f"{hash.hex(sep=' ').upper()}: {pack_path}")
+
+def _get_row_idx(rows: list[list[Any]], hash: int) -> int | None:
+    return next(
+        (idx for idx, row in enumerate(rows) if row[0] == hash),
+        None
+    )
+
+@cli.command()
+@click.argument(
+    "csv_path",
+    type=click.Path()
+)
+def update_hash_list(csv_path):
+    with open(csv_path, "r", newline="") as csvfile:
+        reader = csv.reader(csvfile)
+        rows = [row for row in reader]
+    for row in rows:
+        row[0] = int(row[0], 16)
+
+    for line in sys.stdin.readlines():
+        line = line.strip()
+        hash = util.gen_packinfo_hash(line)
+        row_idx = _get_row_idx(rows, int.from_bytes(hash))
+        if row_idx is None:
+            click.echo(
+                f"Warning: '{line}' evaluates to {hash.hex(sep=' ').upper()}, "
+                f"which is not a hash that shows up in {csv_path}"
+            )
+        else:
+            if len(rows[row_idx]) > 1:
+                rows[row_idx][1] = line
+            else:
+                rows[row_idx].append(line)
+
+    for row in rows:
+        row[0] = f"{row[0]:08x}"
+    with open(csv_path, "w", newline="") as csvfile:
+        writer = csv.writer(csvfile, dialect=csv.unix_dialect)
+        for row in rows:
+            writer.writerow(row)
 
 @cli.command()
 @click.option(
