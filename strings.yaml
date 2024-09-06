@@ -143,20 +143,41 @@
 "おためしキャラを使用<しよう>します。 おためしキャラではチップを入手<にゅうしゅ>することができません。":
   english: "Pick a default character.You cannot use chips with a default character."
 
+# Story mode stage select descriptions
+
 # Story mode mission screen
 "ページおくり":
   english: "Next Pg."
 
-# Story mode mission screen description
+# Story mode mission screen descriptions
 "ステージセレクトに戻<もど>ります。":
   english: "Return to stage select."
+
+# Story mode standby screen
+"ミッションスタート":
+  english: "Start mission"
+
+# Story mode standby screen descriptions
+"セットしているガチャメカの変更<へんこう>をします。":
+  english: "Change Gadget assignments."
+"セットしている必殺技<ひっさつわざ>の変更<へんこう>をします。":
+  english: "Change Final Move assignments."
+"チームメイトを交代<こうたい>します。":
+  english: "Switch teammates."
+"ミッションを始<はじ>めます。":
+  english: "Start the mission."
+"ミッション説明<せつめい>に戻<もど>ります。":
+  english: "Return to mission description."
 
 # Story mode missions
 ## Tokyo Teleport PM00:00
 "東京テレポート PM00:00":
   english: "Tokyo Teleport PM00:00"
-
-
+#"アーマードゴリアックを撃退<げきたい>せよ!➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
+"アーマードゴリアックを撃退<げきたい>せよ!\x1F➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
+  english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
+"現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。":
+  english: "Intercept the mech that showed up."
 
 # Mode select screen descriptions
 "ストーリーで遊<あそ>ぶモードです。":

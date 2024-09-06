@@ -35,6 +35,7 @@
       });
       version = "1";
       resourceFiles = [
+        "044_5c272d50" # gz/game_common.story.gz
         "070_00940549" # gz/menu_common.gz
         "084_87f51e0c" # gz/menu_story.01_boss01_gori01.gz
         "118_3c6cf60b" # gz/menu_vs.gz
