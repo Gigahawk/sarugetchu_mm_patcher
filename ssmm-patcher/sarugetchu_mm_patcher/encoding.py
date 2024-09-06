@@ -27,6 +27,16 @@ bytes_to_char = {
     #b"\x0C": "\f",
     #b"\x0D": "\r",
 
+    # Seems to be used to indicate a paginated string
+    b"\x3E": "\f",
+
+    # No idea what this is supposed to be, seems to show up
+    # in some paginated strings.
+    # It happens to match the ASCII code for a space,
+    # but for convenience I'm using an ASCII space to map
+    # to the Japanese space, assign the unit separator char for now
+    b"\x20": "\x1F",
+
     #
     # Regular characters
     #
@@ -795,7 +805,7 @@ bytes_to_char = {
     b"\x8B\x88": "騎",
     b"\x8B\x89": "鬼",
     b"\x8B\x8A": "偽",
-    b"\x8B\x8B": "儀",
+    b"\x8B\x8B": "儀",  # Shows up more than once???
     b"\x8B\x8C": "??",
     b"\x8B\x8D": "??",
     b"\x8B\x8E": "技",
@@ -821,7 +831,7 @@ bytes_to_char = {
     b"\x8B\xA2": "休",
     b"\x8B\xA3": "吸",
     b"\x8B\xA4": "宮",
-    b"\x8B\xA5": "??",
+    b"\x8B\xA5": "弓",
     b"\x8B\xA6": "急",
     b"\x8B\xA7": "??",
     b"\x8B\xA8": "旧",
@@ -1026,7 +1036,7 @@ bytes_to_char = {
     b"\x8C\x6F": "健",
     b"\x8C\x70": "兼",
     b"\x8C\x71": "券",
-    b"\x8C\x72": "??",
+    b"\x8C\x72": "剣",
     b"\x8C\x73": "圏",
     b"\x8C\x74": "堅",
     b"\x8C\x75": "嫌",
@@ -1153,7 +1163,7 @@ bytes_to_char = {
     b"\x8C\xEE": "号",
     b"\x8C\xEF": "合",
     b"\x8C\xF0": "??",
-    b"\x8C\xF1": "??",
+    b"\x8C\xF1": "豪",
     b"\x8C\xF2": "克",
     b"\x8C\xF3": "刻",
     b"\x8C\xF4": "告",
@@ -1287,7 +1297,7 @@ bytes_to_char = {
     b"\x8D\x74": "錯",
     b"\x8D\x75": "冊",
     b"\x8D\x76": "??",
-    b"\x8D\x77": "??",
+    b"\x8D\x77": "察",
     b"\x8D\x78": "撮",
     b"\x8D\x79": "擦",
     b"\x8D\x7A": "札",
@@ -1394,7 +1404,7 @@ bytes_to_char = {
     b"\x8D\xDF": "者",
     b"\x8D\xE0": "謝",
     b"\x8D\xE1": "車",
-    b"\x8D\xE2": "??",
+    b"\x8D\xE2": "遮",
     b"\x8D\xE3": "蛇",
     b"\x8D\xE4": "邪",
     b"\x8D\xE5": "借",
@@ -1536,7 +1546,7 @@ bytes_to_char = {
     b"\x8E\x6D": "述",
     b"\x8E\x6E": "俊",
     b"\x8E\x6F": "春",
-    b"\x8E\x70": "??",
+    b"\x8E\x70": "瞬",
     b"\x8E\x71": "准",
     b"\x8E\x72": "循",
     b"\x8E\x73": "旬",
@@ -1824,7 +1834,7 @@ bytes_to_char = {
     b"\x8F\x8D": "節",
     b"\x8F\x8E": "設",
     b"\x8F\x8F": "説",
-    b"\x8F\x90": "??",
+    b"\x8F\x90": "雪",
     b"\x8F\x91": "絶",
     b"\x8F\x92": "??",
     b"\x8F\x93": "仙",
@@ -1915,7 +1925,7 @@ bytes_to_char = {
     b"\x8F\xE8": "側",
     b"\x8F\xE9": "則",
     b"\x8F\xEA": "即",
-    b"\x8F\xEB": "??",
+    b"\x8F\xEB": "息",
     b"\x8F\xEC": "??",
     b"\x8F\xED": "測",
     b"\x8F\xEE": "足",
@@ -2021,7 +2031,7 @@ bytes_to_char = {
     b"\x90\x52": "袋",
     b"\x90\x53": "??",
     b"\x90\x54": "退",
-    b"\x90\x55": "??",
+    b"\x90\x55": "逮",
     b"\x90\x56": "隊",
     b"\x90\x57": "代",
     b"\x90\x58": "台",
@@ -2083,7 +2093,7 @@ bytes_to_char = {
     b"\x90\x90": "着",
     b"\x90\x91": "中",
     b"\x90\x92": "仲",
-    b"\x90\x93": "??",
+    b"\x90\x93": "宙",
     b"\x90\x94": "忠",
     b"\x90\x95": "抽",
     b"\x90\x96": "昼",
@@ -2103,7 +2113,7 @@ bytes_to_char = {
     b"\x90\xA4": "??",
     b"\x90\xA5": "張",
     b"\x90\xA6": "??",
-    b"\x90\xA7": "??",
+    b"\x90\xA7": "徴",
     b"\x90\xA8": "懲",
     b"\x90\xA9": "挑",
     b"\x90\xAA": "朝",
@@ -2287,7 +2297,7 @@ bytes_to_char = {
     b"\x91\x5C": "??",
     b"\x91\x5D": "豆",
     b"\x91\x5E": "踏",
-    b"\x91\x5F": "??",
+    b"\x91\x5F": "逃",
     b"\x91\x60": "透",
     b"\x91\x61": "闘",
     b"\x91\x62": "陶",
@@ -3421,10 +3431,10 @@ bytes_to_char = {
     b"\x95\xCA": "??",
     b"\x95\xCB": "謎",
     b"\x95\xCC": "罠",
-    b"\x95\xCD": "??",
-    b"\x95\xCE": "??",
-    b"\x95\xCF": "??",
-    b"\x95\xD0": "??",
+    b"\x95\xCD": "骸",
+    b"\x95\xCE": "狙",  # This has more than one encoding used in certain strings???
+    b"\x95\xCF": "儀",
+    b"\x95\xD0": "狙",
     b"\x95\xD1": "α",
     b"\x95\xD2": "β",
     b"\x95\xD3": "γ",  # Lower case gamma
@@ -3432,17 +3442,17 @@ bytes_to_char = {
     b"\x95\xD5": "'",
     b"\x95\xD6": "\"",  # Is this ever used? seems to show up inside a typo (ID df da 2e a2)
     b"\x95\xD7": "??",  # This is a % sign but we're using it as a placeholder character, TODO find a new one I guess
-    b"\x95\xD8": "??",
+    b"\x95\xD8": "儀",
     b"\x95\xD9": "??",
-    b"\x95\xDA": "??",
+    b"\x95\xDA": "隕",
     b"\x95\xDB": "??",
     b"\x95\xDC": "??",
     b"\x95\xDD": "掴",
     b"\x95\xDE": "閃",
     b"\x95\xDF": "填",
-    b"\x95\xE0": "??",
+    b"\x95\xE0": "蹴",
     b"\x95\xE1": "??",
-    b"\x95\xE2": "??",
+    b"\x95\xE2": "痺",
     b"\x95\xE3": "??",
     b"\x95\xE4": "??",
     b"\x95\xE5": "??",
@@ -3496,6 +3506,42 @@ def string_to_bytes(s: str) -> list[bytes]:
     out = recurse(0)
     return out
 
+def tokenize_string(string: bytes) -> list[bytes]:
+    idx = 0
+    out = []
+    while idx < len(string):
+        byte = string[idx:idx+1]
+        token = string[idx:idx+2]
+        #print(idx)
+        #print(byte.hex())
+        #print(token.hex())
+
+        if token in bytes_to_char:
+            out.append(token)
+            #print("TOKEN IS VALID")
+            print(bytes_to_char[token], end="")
+            idx += 2
+            continue
+        if byte in bytes_to_char:
+            out.append(byte)
+            #print("BYTE IS VALID")
+            print(bytes_to_char[byte], end="")
+            idx += 1
+            continue
+        raise ValueError(
+            f"Got invalid byte or token. "
+            f"Byte: {byte.hex()}, Token: {token.hex()} "
+            f"String: {string.hex(sep=" ")}"
+        )
+    return out
+
+def bytes_to_string(bts: bytes) -> str:
+    tokens = tokenize_string(bts)
+    return tokens_to_string(tokens)
+
+def tokens_to_string(tokens: list[bytes]) -> str:
+    return "".join(bytes_to_char[token] for token in tokens)
+
 def wrap_string(bs: bytes, id: bytes|None = None) -> bytes:
     out = (
         int(len(bs)).to_bytes(length=4, byteorder="little")
@@ -3505,4 +3551,14 @@ def wrap_string(bs: bytes, id: bytes|None = None) -> bytes:
     if id:
         return id + out
     return out
+
+def is_kanji(c: bytes | str) -> bool:
+    # Assume unknown chars are kanji
+    if c == "??":
+        return True
+    if isinstance(c, str):
+        c = char_to_bytes[c]
+    if int.from_bytes(c, "big") >= 0x89E5:
+        return True
+    return False
 

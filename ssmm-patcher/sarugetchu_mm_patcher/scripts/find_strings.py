@@ -1,11 +1,18 @@
-from googletrans import Translator, LANGCODES
-import yaml
+from enum import Enum, auto
 import re
 from pprint import pprint
-from enum import Enum, auto
+from pathlib import Path
+from multiprocessing import Pool
+
+from googletrans import Translator, LANGCODES
+import yaml
+from httpcore._exceptions import ConnectTimeout
 
 
-from sarugetchu_mm_patcher.encoding import bytes_to_char
+from sarugetchu_mm_patcher.encoding import (
+    bytes_to_char, is_kanji, tokens_to_string,
+    tokenize_string
+)
 
 
 class States(Enum):
@@ -13,9 +20,9 @@ class States(Enum):
     STRING_BEGIN = auto()
 
 class StringFinder:
-    def __init__(self, name):
-        self.name = name
-        with open(name, "rb") as f:
+    def __init__(self, path: Path):
+        self.path = path
+        with open(path, "rb") as f:
             self.data = f.read()
 
 
@@ -34,7 +41,7 @@ class StringFinder:
             return start_idx, string
 
     def build_csv(self, strings: list[tuple[int, bytes, int, int, list[bytes], str]]):
-        with open(f"strings_{self.name}.csv", "w") as f:
+        with open(f"strings/strings_{self.path.name}.csv", "w") as f:
             for idx, id, alloc_len, actual_len, tokens, string in strings:
                 f.write(
                     f"\"Found string at {hex(idx)} with id {id.hex(' ')}; "
@@ -48,7 +55,11 @@ class StringFinder:
                     f.write(f'"{token.hex().upper()}",')
                 f.write("\n")
                 for token in tokens:
-                    f.write(f'"{bytes_to_char[token]}",')
+                    char = bytes_to_char[token]
+                    if char in ["\n", "\f"]:
+                        f.write(f'"{repr(char).strip("'")}",')
+                    else:
+                        f.write(f'"{char}",')
                 f.write("\n")
 
     def has_unknown_tokens(self, tokens: list[bytes]) -> bool:
@@ -60,9 +71,27 @@ class StringFinder:
         ):
         # Count tokens in case some real strings have ?? as text
         num_unknown = 0
-        for _, _, _, _, tokens, _ in strings:
+        for _, _, _, _, tokens, string in strings:
             if self.has_unknown_tokens(tokens):
                 num_unknown += 1
+                if b"\x5B" in tokens:
+                    print("Found string with unknown token containing furigana:")
+                    print(string)
+                    curr_kanji_tokens = []
+                    for token in tokens:
+                        if is_kanji(token):
+                            curr_kanji_tokens.append(token)
+                        elif curr_kanji_tokens and token != b"\x5D":
+                            curr_kanji_tokens.append(token)
+                        elif curr_kanji_tokens and token == b"\x5D":
+                            curr_kanji_tokens.append(token)
+                            if self.has_unknown_tokens(curr_kanji_tokens):
+                                print(tokens_to_string(curr_kanji_tokens))
+                                print(" ".join(t.hex() for t in curr_kanji_tokens))
+                            curr_kanji_tokens = []
+                        else:
+                            curr_kanji_tokens = []
+
         print(f"Total strings: {len(strings)}")
         if len(strings) != 0:
             print(
@@ -77,7 +106,7 @@ class StringFinder:
         print("Generating translations")
         translator = Translator()
         try:
-            with open(f"strings_{self.name}.yaml", "r") as f:
+            with open(f"strings/strings_{self.path.name}.yaml", "r") as f:
                 translations = yaml.safe_load(f)
         except FileNotFoundError:
             translations = {}
@@ -102,16 +131,21 @@ class StringFinder:
             print(string)
             # Remove furigana for translation
             trans_string = re.sub(r"<.+>", "", string)
-            translated = translator.translate(
-                trans_string,
-                src="ja",
-                dest="en"
-            )
-            print(translated.text)
-            translations[string]["english"] = translated.text
+            try:
+                translated = translator.translate(
+                    trans_string,
+                    src="ja",
+                    dest="en"
+                )
+                print(translated.text)
+                translations[string]["english"] = translated.text
+            except ConnectTimeout:
+                print(
+                    "Failed to connect to google translate, likely being rate limited"
+                )
 
-        dump = yaml.dump(translations, allow_unicode=True)
-        with open(f"strings_{self.name}.yaml", "w") as f:
+        dump = yaml.dump(translations, allow_unicode=True, default_style='"')
+        with open(f"strings/strings_{self.path.name}.yaml", "w") as f:
             f.write(dump)
 
     def find_index_spacing(
@@ -145,6 +179,13 @@ class StringFinder:
         while idx < len(self.data):
             byte = self.data[idx:idx+1]
             token = self.data[idx:idx+2]
+            #if idx >= 0x28C44A:
+            #if idx >= 0x28c58c:
+            #    print(state)
+            #    print(hex(idx))
+            #    print(byte.hex())
+            #    print(token.hex())
+            #    import pdb;pdb.set_trace()
             if state == States.IDLE:
                 # Presumably a string never starts with furigana?
                 if token in bytes_to_char:
@@ -171,26 +212,6 @@ class StringFinder:
         #strings.sort(key=lambda s: len(s[1]), reverse=True)
         return strings
 
-    def tokenize_string(self, string: bytes) -> list[bytes]:
-        idx = 0
-        out = []
-        while idx < len(string):
-            byte = string[idx:idx+1]
-            token = string[idx:idx+2]
-
-            if token in bytes_to_char:
-                out.append(token)
-                idx += 2
-                continue
-            if byte in bytes_to_char:
-                out.append(byte)
-                idx += 1
-                continue
-            raise ValueError(
-                f"Got invalid byte or token {byte}, {token}"
-            )
-        return out
-
     def stringify_tokens(self, tokens: list[bytes]) -> str:
         return "".join(bytes_to_char[t] for t in tokens)
 
@@ -209,7 +230,7 @@ class StringFinder:
             )
             string = string_bytes[8:-1]
             actual_len = len(string)
-            tokens = self.tokenize_string(string)
+            tokens = tokenize_string(string)
             stringified_string = self.stringify_tokens(tokens)
             strings.append((
                 idx, string_id, alloc_len, actual_len, tokens, stringified_string
@@ -229,19 +250,33 @@ class StringFinder:
 
         self.find_index_spacing(strings)
 
+def run_stringfinder(fpath: Path):
+    sf = StringFinder(fpath)
+    sf.main()
+
 def main():
-    files = [
-        "2f62887b",
-        "3c6cf60b",
-        "5c272d50",
-        "87f51e0c",
-        "95d0e0fc",
-        "00940549",
-        "aa6f7a50",
-    ]
-    for f in files:
-        sf = StringFinder(f)
-        sf.main()
+    #files = [
+    #    #"2f62887b",  # gz/stage.01_boss01_gori01_bd.gz
+    #    #"3c6cf60b",
+    #    #"5c272d50",  # gz/game_common.story.gz
+    #    "87f51e0c",  # gz/menu_story.01_boss01_gori01.gz
+    #    #"95d0e0fc",  # gz/boss.01_boss01_gori01.gz
+    #    #"00940549",  # gz/menu_common.gz
+    #    #"aa6f7a50",  # gz/stage.01_boss01_gori01.gz
+    #]
+    path = Path("result/DATA1")
+
+    fpaths = [f for f in path.glob("**/*") if f.is_file()]
+    with Pool(256) as p:
+        p.map(run_stringfinder, fpaths)
+
+
+
+    #for f in path.glob("**/*"):
+    #    if not f.is_file():
+    #        continue
+    #    sf = StringFinder(f)
+    #    sf.main()
 
 
 if __name__ == "__main__":

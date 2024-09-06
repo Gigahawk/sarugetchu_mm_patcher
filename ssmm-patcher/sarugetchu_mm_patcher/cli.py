@@ -21,7 +21,7 @@ from sarugetchu_mm_patcher.index import (
     IndexEntry, get_index_list, index_list_to_bin
 )
 from sarugetchu_mm_patcher.encoding import (
-    string_to_bytes, wrap_string
+    string_to_bytes, wrap_string, bytes_to_string
 )
 
 EXTRACT_PATH = Path(".extracted")
@@ -364,17 +364,21 @@ def _get_row_idx(rows: list[list[Any]], hash: int) -> int | None:
         None
     )
 
+def _read_csv(csv_path) -> list[list[Any]]:
+    with open(csv_path, "r", newline="") as csvfile:
+        reader = csv.reader(csvfile)
+        rows = [row for row in reader]
+    for row in rows:
+        row[0] = int(row[0], 16)
+    return rows
+
 @cli.command()
 @click.argument(
     "csv_path",
     type=click.Path()
 )
 def update_hash_list(csv_path):
-    with open(csv_path, "r", newline="") as csvfile:
-        reader = csv.reader(csvfile)
-        rows = [row for row in reader]
-    for row in rows:
-        row[0] = int(row[0], 16)
+    rows = _read_csv(csv_path)
 
     for line in sys.stdin.readlines():
         line = line.strip()
@@ -618,6 +622,64 @@ def patch_resource(resource_path, strings_path, output_path):
     resource_bytes = util.patch_offsets(resource_bytes, size_diff)
     with open(output_path, "wb") as f:
         f.write(resource_bytes)
+
+@cli.command()
+@click.argument(
+    "target",
+    type=str,
+)
+@click.argument(
+    "extracted_path",
+    type=click.Path(),
+)
+@click.option(
+    "-c", "--csv-path",
+    type=click.Path(),
+    default=None
+)
+@click.option(
+    "--print-to-null/--no-print-to-null",
+    default=True,
+)
+def find_string(target, extracted_path, csv_path, print_to_null):
+    if csv_path is not None:
+        rows = _read_csv(csv_path)
+    else:
+        rows = []
+
+    target_bytes = string_to_bytes(target)
+    click.echo(f"Looking for '{target}'")
+    for tb in target_bytes:
+        click.echo(tb.hex(sep=" "))
+    extracted_path = Path(extracted_path)
+    for path in extracted_path.glob("**/*"):
+        if not path.is_file():
+            continue
+        with open(path, "rb") as f:
+            data = f.read()
+        for tb in target_bytes:
+            if tb in data:
+                try:
+                    hash = int(str(path).split("_")[-1], 16)
+                except ValueError:
+                    hash = 0
+                row_idx = _get_row_idx(rows, hash)
+                if row_idx is not None:
+                    name = rows[row_idx][1]
+                else:
+                    name = ""
+                file_idx = data.index(tb)
+                if print_to_null:
+                    null_idx = data.index(b"\x00", file_idx)
+                    tb = data[file_idx:null_idx]
+                string = bytes_to_string(tb)
+                click.echo(
+                    f"Found match in {path} ({name}) at {hex(file_idx)}:{tb.hex(sep=" ")}"
+                )
+                click.echo(string)
+                click.echo(tb.hex(sep=" "))
+
+
 
 #@cli.command()
 #@click.argument(
