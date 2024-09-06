@@ -1,0 +1,146 @@
+"Found string at 0x139447 with id 0a 00 00 00; allocation_length 3; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"8D00",
+"??",
+"Found string at 0x14467c with id 00 00 00 00; allocation_length 5; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"9500",
+"??",
+"Found string at 0x233c3a with id ee 3b bf 17; allocation_length 4; actual length 4"
+"88C0","88FB",
+"X","ま",
+"Found string at 0x233c47 with id 4f 3c bf 17; allocation_length 4; actual length 4"
+"88C0","88C4",
+"X","b",
+"Found string at 0x233c54 with id b0 3c bf 17; allocation_length 58; actual length 58"
+"88DB","88AC","889F","88DC","88BB","88C2","88C3","88C4","88EA","88C0","88C4","88FC","88C0","88FB","88F5","88F6","88F7","5B","88D7","88B7","88F8","88F3","5D","88D0","88B1","88F3","88F9","88C8","88B2","88FA",
+"y","D","1","z","S","Z","a","b","せ","X","b","み","X","ま","の","は","ひ","<","u","O","ふ","ぬ",">","n","I","ぬ","へ","f","J","ほ",
+"Found string at 0x233caf with id 27 7e 05 1d; allocation_length 14; actual length 14"
+"88BA","88BB","88BC","88BD","88BE","88BF","88BB",
+"R","S","T","U","V","W","S",
+"Found string at 0x233cc6 with id 88 7e 05 1d; allocation_length 14; actual length 14"
+"88C0","88C1","88C2","88C3","88C4","88C5","88C6",
+"X","Y","Z","a","b","c","d",
+"Found string at 0x233cdd with id e9 7e 05 1d; allocation_length 10; actual length 10"
+"88C7","88B9","88C8","88C9","88CA",
+"e","Q","f","g","h",
+"Found string at 0x233cf0 with id a2 0c 82 27; allocation_length 24; actual length 24"
+"88C0","88C1","88C2","88C3","88C4","88C5","88C6","5B","88D7","88B0","88B1","88B2","5D",
+"X","Y","Z","a","b","c","d","<","u","H","I","J",">",
+"Found string at 0x233d3f with id c8 7a 7b 30; allocation_length 10; actual length 10"
+"88C7","88B9","88C8","88C9","88CA",
+"e","Q","f","g","h",
+"Found string at 0x233d52 with id 2e 25 e2 33; allocation_length 6; actual length 6"
+"88B3","88B4","88B5",
+"K","L","M",
+"Found string at 0x233d61 with id 8f 25 e2 33; allocation_length 10; actual length 10"
+"88C0","88C1","88C2","88C3","88C4",
+"X","Y","Z","a","b",
+"Found string at 0x233d74 with id f0 25 e2 33; allocation_length 8; actual length 8"
+"88A0","88AA","88AB","88AC",
+"2","B","C","D",
+"Found string at 0x233d85 with id 51 26 e2 33; allocation_length 8; actual length 8"
+"88A0","88AD","88AC","88AE",
+"2","E","D","F",
+"Found string at 0x233d96 with id 2d 23 78 3a; allocation_length 8; actual length 8"
+"88B6","88B7","88B8","88B9",
+"N","O","P","Q",
+"Found string at 0x233dc1 with id 86 e2 80 48; allocation_length 6; actual length 6"
+"88B3","88B4","88B5",
+"K","L","M",
+"Found string at 0x233dd0 with id e7 e2 80 48; allocation_length 10; actual length 10"
+"88C0","88C1","88C2","88C3","88C4",
+"X","Y","Z","a","b",
+"Found string at 0x233de3 with id 48 e3 80 48; allocation_length 8; actual length 8"
+"88A0","88AA","88AB","88AC",
+"2","B","C","D",
+"Found string at 0x233df4 with id a9 e3 80 48; allocation_length 8; actual length 8"
+"88A0","88AD","88AC","88AE",
+"2","E","D","F",
+"Found string at 0x233e05 with id 79 4c d0 52; allocation_length 8; actual length 8"
+"88D8","88D9","88C4","88DA",
+"v","w","b","x",
+"Found string at 0x233e16 with id da 4c d0 52; allocation_length 16; actual length 16"
+"88DB","88AC","889F","88DC","88BB","88C2","88C3","88C4",
+"y","D","1","z","S","Z","a","b",
+"Found string at 0x233e2f with id 3b 4d d0 52; allocation_length 6; actual length 6"
+"88DD","88DE","88A5",
+"あ","い","7",
+"Found string at 0x233e3e with id 9c 4d d0 52; allocation_length 4; actual length 4"
+"88DF","88E0",
+"う","え",
+"Found string at 0x233e59 with id bd 02 87 58; allocation_length 16; actual length 16"
+"88A3","88A4","88A5","88A6","88A7","88A8","88A7","88A9",
+"5","6","7","8","9","0","9","A",
+"Found string at 0x233e72 with id ea d3 21 5d; allocation_length 8; actual length 8"
+"88AF","88B0","88B1","88B2",
+"G","H","I","J",
+"Found string at 0x233e9a with id 79 cf e1 62; allocation_length 4; actual length 4"
+"88D5","88B2",
+"s","J",
+"Found string at 0x233f01 with id d6 23 98 7d; allocation_length 6; actual length 6"
+"88B3","88B4","88B5",
+"K","L","M",
+"Found string at 0x233f34 with id 49 7b cf 86; allocation_length 8; actual length 8"
+"88E1","88E2","88AB","88E3",
+"お","か","C","き",
+"Found string at 0x233f45 with id aa 7b cf 86; allocation_length 8; actual length 8"
+"88E4","88E5","88DC","88C0",
+"く","け","z","X",
+"Found string at 0x233f56 with id 0b 7c cf 86; allocation_length 22; actual length 22"
+"88DA","88E3","88E6","88BB","88C1","88E7","88E7","88A2","88A1","88E8","88E9",
+"x","き","こ","S","Y","さ","さ","4","3","し","す",
+"Found string at 0x233f75 with id 6c 7c cf 86; allocation_length 70; actual length 70"
+"88D8","88D9","88C4","88DA","88EA","88EB","88EC","88ED","88EE","5B","88D0","88EF","88F0","88F1","88F2","88F3","88AF","88B2","88D0","88F4","5D","88F5","88F6","88F7","5B","88D7","88B7","88F8","88F3","5D","88D0","88B1","88F3","88F9","88C8","88B2","88FA",
+"v","w","b","x","せ","そ","た","ち","つ","<","n","て","と","な","に","ぬ","G","J","n","ね",">","の","は","ひ","<","u","O","ふ","ぬ",">","n","I","ぬ","へ","f","J","ほ",
+"Found string at 0x233fd1 with id 60 82 ac 8d; allocation_length 6; actual length 6"
+"88B3","88B4","88B5",
+"K","L","M",
+"Found string at 0x233ff4 with id c5 85 7a 94; allocation_length 14; actual length 14"
+"88CB","88BB","88CC","88CD","88B3","88B4","88B5",
+"i","S","j","k","K","L","M",
+"Found string at 0x23400b with id ae da c7 95; allocation_length 8; actual length 8"
+"88A0","88AA","88AB","88AC",
+"2","B","C","D",
+"Found string at 0x23401c with id 0f db c7 95; allocation_length 8; actual length 8"
+"88A0","88AD","88AC","88AE",
+"2","E","D","F",
+"Found string at 0x23402d with id 10 39 d8 95; allocation_length 8; actual length 8"
+"88A0","88AD","88AC","88AE",
+"2","E","D","F",
+"Found string at 0x234057 with id 3f 1f ea 9f; allocation_length 6; actual length 6"
+"88B3","88B4","88B5",
+"K","L","M",
+"Found string at 0x234066 with id a0 1f ea 9f; allocation_length 10; actual length 10"
+"88C0","88C1","88C2","88C3","88C4",
+"X","Y","Z","a","b",
+"Found string at 0x234079 with id 01 20 ea 9f; allocation_length 8; actual length 8"
+"88A0","88AD","88AC","88AE",
+"2","E","D","F",
+"Found string at 0x23408a with id 45 f1 ea 9f; allocation_length 6; actual length 6"
+"88B2","88B2","88D6",
+"J","J","t",
+"Found string at 0x234099 with id ac 96 c1 aa; allocation_length 24; actual length 24"
+"88CE","88CF","88CD","88A0","88AA","88AB","88AC","88D0","88D1","88D2","88D3","88D4",
+"l","m","k","2","B","C","D","n","o","p","q","r",
+"Found string at 0x2340ba with id 0d 97 c1 aa; allocation_length 24; actual length 24"
+"88CE","88CF","88CD","88A0","88AD","88AC","88AE","88D0","88D1","88D2","88D3","88D4",
+"l","m","k","2","E","D","F","n","o","p","q","r",
+"Found string at 0x23416d with id 7b b7 ad d7; allocation_length 8; actual length 8"
+"88A0","88AA","88AB","88AC",
+"2","B","C","D",
+"Found string at 0x23417e with id 78 90 a4 da; allocation_length 8; actual length 8"
+"889F","88A0","88A1","88A2",
+"1","2","3","4",
+"Found string at 0x23419c with id 9e 42 f7 e1; allocation_length 10; actual length 10"
+"88C0","88C1","88C2","88C3","88C4",
+"X","Y","Z","a","b",
+"Found string at 0x2341af with id f8 68 9e ea; allocation_length 6; actual length 6"
+"88A5","8940","8941",
+"7","む","め",
+"Found string at 0x2341be with id 59 69 9e ea; allocation_length 6; actual length 6"
+"88A5","8942","8943",
+"7","も","や",
+"Found string at 0x2341cd with id ba 69 9e ea; allocation_length 56; actual length 56"
+"8944","8945","5B","8946","88B7","88F1","88F2","88B9","5D","88EA","88DB","88AB","88C4","88E4","88F5","88F6","88F7","5B","88D7","88B7","88F8","88F3","5D","88D0","88B1","88F3","88F9","88C8","88B2","88FA",
+"ゆ","よ","<","ら","O","な","に","Q",">","せ","y","C","b","く","の","は","ひ","<","u","O","ふ","ぬ",">","n","I","ぬ","へ","f","J","ほ",

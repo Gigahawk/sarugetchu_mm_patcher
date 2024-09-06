@@ -1,0 +1,24 @@
+"Found string at 0xa3cf with id 00 00 00 00; allocation_length 5; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"9000",
+"??",
+"Found string at 0xc45d with id 00 48 00 00; allocation_length 5; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"9000",
+"??",
+"Found string at 0x10c288 with id 00 00 00 51; allocation_length 4; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"8A00",
+"??",
+"Found string at 0x129724 with id 00 00 00 00; allocation_length 4; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"9000",
+"??",
+"Found string at 0x158c0b with id 00 00 00 00; allocation_length 7; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"8C00",
+"??",
+"Found string at 0x18e2fd with id 02 00 00 00; allocation_length 4; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"8C00",
+"??",

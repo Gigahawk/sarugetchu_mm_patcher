@@ -1,0 +1,16 @@
+"Found string at 0x8b0f with id 00 00 00 3f; allocation_length 7; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"9570",
+"遥",
+"Found string at 0x9d2f with id 00 00 00 3f; allocation_length 7; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"9138",
+"??",
+"Found string at 0x9ddb with id 00 00 00 3f; allocation_length 7; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"8B44",
+"憾",
+"Found string at 0x9e88 with id 00 00 00 3f; allocation_length 7; actual length 2"
+ALLOC BIGGER THAN STRING LEN
+"8F51",
+"髄",
