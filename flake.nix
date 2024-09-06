@@ -300,7 +300,30 @@
                 ssmm-patcher patch-resource \
                   -s $src \
                   "${self.packages.${system}.data-extracted}/DATA1/{}"
-                gzip -9 "{}_patched"
+              '
+          '';
+
+          installPhase = ''
+            find . -name '*_patched' -type f | \
+              xargs -P ${processes} \
+                -I {} install -Dm 755 "{}" "$out/DATA1_patched/{}"
+            wait
+          '';
+        };
+        data-patched-compressed = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-data-patched-compressed";
+          inherit version;
+          src = null;
+
+          unpackPhase = ''
+            true
+          '';
+
+          buildPhase = ''
+            echo "${resourceFilesStr}" | \
+              xargs -P ${processes} -I {} bash -c '
+                gzip -9 -c "${self.packages.${system}.data-patched}/DATA1_patched/{}_patched" > "{}_patched.gz"
               '
           '';
 
@@ -330,7 +353,7 @@
             for f in ${self.packages.${system}.data-unpacked}/DATA1/*; do
               name=$(basename "''${f%.gz}")
               hash="''${name#*_}"
-              patched="${self.packages.${system}.data-patched}/DATA1_patched/''${name}_patched.gz"
+              patched="${self.packages.${system}.data-patched-compressed}/DATA1_patched/''${name}_patched.gz"
               if [[ -e "$patched" ]]; then
                 cmd+=" -e $hash $patched"
               else
