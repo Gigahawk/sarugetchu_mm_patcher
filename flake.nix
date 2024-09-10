@@ -28,11 +28,42 @@
       pkgs = import nixpkgs { inherit system; };
       pkgs-clps2c = import nixpkgs-clps2c { inherit system; };
       processes = "32";
-      mm_iso = (pkgs.requireFile {
+      mm-jp-iso = (pkgs.requireFile {
         name = "mm.iso";
         url = "";
         sha256 = "0nbsaqdvczcygk4frfyiiy4y3w7v6qc9ig3jvbiy032a11f5aycb";
       });
+      mm-cn-iso = (pkgs.requireFile {
+        name = "mm_cn.iso";
+        url = "";
+        sha256 = "1gm322c4sfzy7k5w9zwrwzlx8wad9cqpjla9ldxx8w8iycz19hys";
+      });
+      cutscenes-demuxed-buildPhase = iso-extracted: ''
+        find ${iso-extracted} -name '*.PSS' -type f | \
+          xargs -P ${processes} -I {} bash -c '
+            input="{}"
+            output="''${input#${iso-extracted}/extracted/}"
+            mkdir -p $(dirname "$output")
+            ssmm-demux "$input" "$output"
+          '
+        wait
+      '';
+      cutscenes-mp4-buildPhase = cutscenes-demuxed: ''
+        find ${cutscenes-demuxed} -name '*.m2v' -type f | \
+          xargs -P ${processes} -I {} bash -c '
+            m2v="{}"
+            base_name="''${m2v%.m2v}"
+            ss2="''${base_name}.ss2"
+            output="''${base_name#${cutscenes-demuxed}/demuxed/}.mp4"
+            mkdir -p $(dirname "$output")
+            ffmpeg \
+              -i "$m2v" \
+              -i "$ss2" \
+              -c:v copy -c:a aac \
+              "$output"
+        '
+        wait
+      '';
       version = "1";
       resourceFiles = [
         "044_5c272d50" # gz/game_common.story.gz
@@ -69,12 +100,12 @@
             });
         };
         default = self.packages.${system}.ssmm-patcher;
-        iso-extracted = with import nixpkgs { inherit system; };
+        iso-jp-extracted = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
-          pname = "mm-iso-extracted";
+          pname = "mm-jp-iso-extracted";
           inherit version;
           srcs = [
-            mm_iso
+            mm-jp-iso
           ];
           sourceRoot = ".";
 
@@ -98,9 +129,15 @@
             true
           '';
         };
-        cutscenes-demuxed = with import nixpkgs { inherit system; };
+        iso-cn-extracted = self.packages.${system}.iso-jp-extracted.overrideAttrs (old: {
+          pname = "mm-cn-iso-extracted";
+          srcs = [
+            mm-cn-iso
+          ];
+        });
+        cutscenes-jp-demuxed = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
-          pname = "mm-cutscenes-demuxed";
+          pname = "mm-jp-cutscenes-demuxed";
           inherit version;
           src = null;
 
@@ -112,16 +149,7 @@
             true
           '';
 
-          buildPhase = ''
-            find ${self.packages.${system}.iso-extracted} -name '*.PSS' -type f | \
-              xargs -P ${processes} -I {} bash -c '
-                input="{}"
-                output="''${input#${self.packages.${system}.iso-extracted}/extracted/}"
-                mkdir -p $(dirname "$output")
-                ssmm-demux "$input" "$output"
-              '
-            wait
-          '';
+          buildPhase = cutscenes-demuxed-buildPhase self.packages.${system}.iso-jp-extracted;
 
           installPhase = ''
             find . \
@@ -130,9 +158,13 @@
             wait
           '';
         };
-        cutscenes-mp4 = with import nixpkgs { inherit system; };
+        cutscenes-cn-demuxed = self.packages.${system}.cutscenes-jp-demuxed.overrideAttrs (old: {
+          pname = "mm-cn-cutscenes-demuxed";
+          buildPhase = cutscenes-demuxed-buildPhase self.packages.${system}.iso-cn-extracted;
+        });
+        cutscenes-jp-mp4 = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
-          pname = "mm-cutscenes-mp4";
+          pname = "mm-jp-cutscenes-mp4";
           inherit version;
           src = null;
 
@@ -144,28 +176,18 @@
             true
           '';
 
-          buildPhase = ''
-            find ${self.packages.${system}.cutscenes-demuxed} -name '*.m2v' -type f | \
-              xargs -P ${processes} -I {} bash -c '
-                m2v="{}"
-                base_name="''${m2v%.m2v}"
-                ss2="''${base_name}.ss2"
-                output="''${base_name#${self.packages.${system}.cutscenes-demuxed}/demuxed/}.mp4"
-                mkdir -p $(dirname "$output")
-                ffmpeg \
-                  -i "$m2v" \
-                  -i "$ss2" \
-                  -c:v copy -c:a aac \
-                  "$output"
-            '
-            wait
-          '';
+          buildPhase = cutscenes-mp4-buildPhase self.packages.${system}.cutscenes-jp-demuxed;
+
           installPhase = ''
             find . -name '*.mp4' | \
               xargs -P ${processes} -I {} install -Dm 755 "{}" "$out/mp4/{}"
             wait
           '';
         };
+        cutscenes-cn-mp4 = self.packages.${system}.cutscenes-jp-mp4.overrideAttrs (old: {
+          pname = "mm-cn-cutscenes-mp4";
+          buildPhase = cutscenes-mp4-buildPhase self.packages.${system}.cutscenes-cn-demuxed;
+        });
         cutscenes-remuxed = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-cutscenes-remuxed";
@@ -190,8 +212,8 @@
                 subs_file="$(dirname $meta_file)/$(jq -r '.file' $meta_file)"
                 bitrate="$(jq -r '.bitrate' $meta_file)"
                 base_name=$(echo ''${meta_file%.json} | sed "s#$src/##")
-                m2v="${self.packages.${system}.cutscenes-demuxed}/demuxed/$base_name.m2v"
-                ss2="${self.packages.${system}.cutscenes-demuxed}/demuxed/$base_name.ss2"
+                m2v="${self.packages.${system}.cutscenes-jp-demuxed}/demuxed/$base_name.m2v"
+                ss2="${self.packages.${system}.cutscenes-jp-demuxed}/demuxed/$base_name.ss2"
                 mux="''${base_name}.mux"
                 m2v_subbed="''${base_name}-sub.m2v"
                 pss_subbed="''${base_name}-sub.PSS"
@@ -239,8 +261,8 @@
 
           buildPhase = ''
             ssmm-patcher unpack-data \
-              ${self.packages.${system}.iso-extracted}/extracted/PDATA/DATA0.BIN \
-              ${self.packages.${system}.iso-extracted}/extracted/PDATA/DATA1.BIN \
+              ${self.packages.${system}.iso-jp-extracted}/extracted/PDATA/DATA0.BIN \
+              ${self.packages.${system}.iso-jp-extracted}/extracted/PDATA/DATA1.BIN \
               -o PDATA/DATA1
 
             # All files in DATA1 are gzip files
@@ -376,7 +398,7 @@
         stdenv.mkDerivation rec {
           pname = "mm-iso-patched";
           inherit version;
-          src = mm_iso;
+          src = mm-jp-iso;
 
           nativeBuildInputs = [
             ps2isopatcher.packages.${system}.default
