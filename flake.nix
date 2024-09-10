@@ -245,6 +245,35 @@
             wait
           '';
         };
+        cutscenes-size-diff = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "cutscenes-size-diff";
+          inherit version;
+          src = null;
+
+          unpackPhase = ''
+            true
+          '';
+
+          buildPhase = ''
+            report=""
+            pushd "${self.packages.${system}.cutscenes-remuxed}/remuxed"
+            for m in $(find . -type f); do
+              abspath=$(readlink -f "$m")
+              isopath="''${m#.}"
+              isopath="''${isopath%-sub*}.''${isopath##*.}"
+              patchedsize=$(wc -c < $m)
+              origsize=$(wc -c < "${self.packages.${system}.iso-jp-extracted}/extracted/$isopath")
+              report+="$isopath: orig is $origsize, patched is $patchedsize, diff: $(($origsize-$patchedsize))\n"
+            done
+            popd
+            echo -e "$report" > report.txt
+          '';
+
+          installPhase = ''
+            install -Dm 755 "report.txt" "$out/report.txt"
+          '';
+        };
         data-unpacked = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-unpacked";
