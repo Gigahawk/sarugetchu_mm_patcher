@@ -197,6 +197,9 @@
             ps2str.packages.${system}.default
             pkgs.jq
             pkgs.ffmpeg
+
+            # For xxd single quote hack
+            pkgs.unixtools.xxd
           ];
 
           unpackPhase = ''
@@ -215,12 +218,18 @@
                 m2v="${self.packages.${system}.cutscenes-jp-demuxed}/demuxed/$base_name.m2v"
                 ss2="${self.packages.${system}.cutscenes-jp-demuxed}/demuxed/$base_name.ss2"
                 mux="''${base_name}.mux"
+                subtitle_filter="subtitles=$subs_file:force_style="
+                echo "$subtitle_filter"
+                # Hack to get single quotes in this string without breaking parsing
+                subtitle_filter+=$(echo 27 | xxd -p -r)
+                subtitle_filter+="FontName=FreeSans,FontSize=20,MarginV=25"
+                subtitle_filter+=$(echo 27 | xxd -p -r)
                 m2v_subbed="''${base_name}-sub.m2v"
                 pss_subbed="''${base_name}-sub.PSS"
                 mkdir -p $(dirname "$base_name")
                 ffmpeg \
                   -i "$m2v" \
-                  -vf "subtitles=$subs_file" \
+                  -vf "$subtitle_filter" \
                   -b:v "$bitrate" \
                   "$m2v_subbed"
                 cat <<EOF > "$mux"
@@ -479,6 +488,7 @@
           pkgs.ffmpeg
           pkgs.openai-whisper
           pkgs.dos2unix
+          pkgs.vlc
           pkgs-clps2c.clps2c-compiler
         ];
         shellHook = ''
