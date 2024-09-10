@@ -157,7 +157,25 @@
 "ミッションスタート":
   english: "Start mission"
 
-# Story mode standby screen descriptions
+# Story mode missions
+## Tokyo Teleport PM00:00
+"東京テレポート PM00:00":
+  english: "Tokyo Teleport PM00:00"
+#"アーマードゴリアックを撃退<げきたい>せよ!➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
+"アーマードゴリアックを撃退<げきたい>せよ!\x1F➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
+  english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
+"現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。":
+  english: "Intercept the mech that showed up."
+
+# Load character slot select screen
+"キャラクターファイル":
+  english: "Character File"
+
+# Load character slot select screen descriptions
+"キャラクターセレクトの最初<さいしょ>に戻<もど>ります。":
+  english: "Return to character select."
+
+# Loadout settings screen descriptions
 "セットしているガチャメカの変更<へんこう>をします。":
   english: "Change Gadget assignments."
 "セットしている必殺技<ひっさつわざ>の変更<へんこう>をします。":
@@ -169,15 +187,31 @@
 "ミッション説明<せつめい>に戻<もど>ります。":
   english: "Return to mission description."
 
-# Story mode missions
-## Tokyo Teleport PM00:00
-"東京テレポート PM00:00":
-  english: "Tokyo Teleport PM00:00"
-#"アーマードゴリアックを撃退<げきたい>せよ!➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
-"アーマードゴリアックを撃退<げきたい>せよ!\x1F➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
-  english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
-"現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。":
-  english: "Intercept the mech that showed up."
+# Gadget button assignemnt screen descriptions
+"△ボタンにセットするガチャメカを選<えら>んでください。":
+  english: "Assign a gadget to △."
+"○ボタンにセットするガチャメカを選<えら>んでください。":
+  english: "Assign a gadget to ○."
+"Χボタンにセットするガチャメカを選<えら>んでください。":
+  english: "Assign a gadget to Χ."
+"□ボタンにセットするガチャメカを選<えら>んでください。":
+  english: "Assign a gadget to □."
+"ガチャメカセレクトメニューに戻<もど>ります。":
+  english: "Return to loadout selection"
+
+# Gadget select screen descriptions
+"セットボタンの選択<せんたく>に戻<もど>ります。":
+  english: "Return to gadget button assignment."
+
+# Final move button assignemnt screen descriptions
+"△ボタンと○ボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。":
+  english: "Assign a final move to activate when △ and ○ are pressed together."
+"○ボタンとΧボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。":
+  english: "Assign a final move to activate when ○ and Χ are pressed together."
+"Χボタンと□ボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。":
+  english: "Assign a final move to activate when Χ and □ are pressed together."
+"□ボタンと△ボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。":
+  english: "Assign a final move to activate when □ and △ are pressed together."
 
 # Mode select screen descriptions
 "ストーリーで遊<あそ>ぶモードです。":
@@ -414,18 +448,26 @@
   english: "Dimension Break"
 "ディメンション\nブレイク":
   english: "Dimension\nBreak"
+"目<め>の前<まえ>に巨大<きょだい>なメカボーを振<ふ>り下<お>ろし、衝撃波<しょうげきは>で攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>に有効<ゆうこう>です。":
+  english: "Swing down a giant Mecha Bo in front of you creating a shock wave. Effective against close-range enemies."
 "クラッシュハリケーン":
   english: "Crash Hurricane"
 "クラッシュ\nハリケーン":
   english: "Crash\nHrcn."
+"高速<こうそく>で回転<かいてん>し、近<ちか>くの敵<てき>を上空<じょうくう>にまきあげます。 空中<くうちゅう>の敵<てき>にも有効<ゆうこう>です。    ":
+  english: "Spin at high speed and launch nearby enemies into the air. Also effective against airborne enemies."
 "ソニックレボリューション":
   english: "Sonic Revolution"
 "ソニックR":
   english: "Sonic\nRev."
+"巨大<きょだい>なメカボーで回転儀<かいてんぎ>りを出<だ>しながら駆<か>け抜<ぬ>けます。 地上<ちじょう>の敵<てき>に有効<ゆうこう>です。":
+  english: "Spin a giant Mecha Bo as you dash around. Effective against enemies on the ground."
 "サンダークラック":
   english: "Thunder Crack"
 "サンダー\nクラック":
   english: "Thunder\nCrack"
+"前方一直線<ぜんぽういっちょくせん>に稲妻<いなづま>が走<はし>ります。 敵<てき>が一直線<いっちょくせん>に並<なら>んだらこの技<わざ>で一掃<いっそう>しましょう。   ":
+  english: "Shoot a lightning bolt straight ahead. Effective against enemies standing in a straight line."
 ## Professor
 "プラズマ制御":
   english:
@@ -881,6 +923,8 @@ Gクラッシャー:
 "メカボー":
   #english: "Stun Club"  # Mech Bo/Mech Club?
   english: "Mecha Bo"
+"近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 使用<しよう>にエネルギーを消費<しょうひ>しないのが特徴<とくちょう>です。":
+  english: "A gadget for melee attacks. It does not require energy to use."
 "メカハンマー":
   #english: "Stun Hammer"  # Mech Hammer?
   english: "Mecha Hammer"
@@ -937,6 +981,8 @@ Gクラッシャー:
 ## Gun type
 "レーザーガン":
   english: "Laser Gun"
+"遠<とお>くの敵<てき>を攻撃<こうげき>できる射撃<しゃげき>メカです。 攻撃力<こうげきりょく>は弱<よわ>いですが、弾数<たまかず>が多<おお>いのが特徴<とくちょう>です。":
+  english: "A shooting gadget that can attack from a distance. Its attack power is weak but it has a large number of bullets."
 "マシンガン":
   english: "Machine Gun"
 "ショットガン":
@@ -963,6 +1009,8 @@ Gクラッシャー:
 "リモートボム":
   # R.C. Car?
   english: "Remote Bomb"
+"体当<たいあ>たりで爆発<ばくはつ>するリモコンメカです。 ボタンでオート走行<そうこう>ですが、右<みぎ>スティックで自由<じゆう>に操作<そうさ>することもできます。":
+  english: "A remote controlled gadget that explodes when it rams into something. Pressing its button will automatically drive it towards a nearby target, or it can be controlled directly with the right stick."
 "キラービー":
   english: "Killer Bee"
 "サテラレーザー":
@@ -972,6 +1020,8 @@ Gクラッシャー:
 ### Dash Boots
 "ダッシュブーツ":
   english: "Dash Boots"
+"高速<こうそく>で移動<いどう>するためのダッシュメカです。 体当<たいあ>たりで攻撃<こうげき>することもできます。 使<つか>いすぎるとオーバーヒートしやすいので注意<ちゅうい>しましょう。":
+  english: "A gadget for moving at high speed. It can also attack by ramming into enemies. Be careful, it can overheat if used too much."
 "ダッシュブースター":
   english: "Dash Booster"
 "ダッシュフープ":
@@ -994,6 +1044,8 @@ Gクラッシャー:
 # Get Net type
 "ゲットアミ":
   english: "Get Net"
+"小型<こがた>の転送<てんそう>メカです。 これでピポサルをゲッチュすることができます。 攻撃力<こうげきりょく>はゼロなので注意<ちゅうい>しましょう。":
+  english: "A small teleportation gadget. You can use it to capture apes. Be careful, it has zero attack power."
 # Misc.
 ### Pipotron G
 "スペシャルモード":
@@ -1071,12 +1123,6 @@ Gクラッシャー:
 # Options screen warnings
 "進行<しんこう>ファイル%をセーブ中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
   english: "Saving File%!\nDo not remove the\nMemory Card in %"
-
-
-
-# Misc
-"キャラクターファイル":
-  english: "Character File"
 
 # Level names?
 "東京テレポート":
