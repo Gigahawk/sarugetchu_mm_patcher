@@ -32,6 +32,11 @@ def patch_offsets(
         b"work/sound_data/midi/SGMM_02.bdm",
         b"work/sound_data/midi/SGMM_02.hd",
         b"work/sound_data/midi/SGMM_02.mid",
+        b"work/sound_data/sadpcm/BGM/SGMM_01_gradius.sts"
+        b"work/sound_data/sadpcm/BGM/SGMM_21.sts"
+        b"work/sound_data/sadpcm/BGM/SGMM_26.sts"
+        b"work/sound_data/sadpcm/BGM/SGMM_27.sts"
+        b"work/sound_data/sadpcm/BGM/SGMM_28.sts"
     ]
     for target in targets:
         try:

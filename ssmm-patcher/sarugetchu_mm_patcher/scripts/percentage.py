@@ -1,11 +1,13 @@
-from sarugetchu_mm_patcher.encoding import bytes_to_char
+from sarugetchu_mm_patcher.encoding import EncodingTranslator
 
-num_entries = len(bytes_to_char)
+encoder = EncodingTranslator()
+
+num_entries = len(encoder.bytes_to_char)
 
 num_filled = sum(
     [
         0 if c == "??" else 1
-        for c in bytes_to_char.values()
+        for c in encoder.bytes_to_char.values()
     ]
 )
 print(f"Total entries: {num_entries}")

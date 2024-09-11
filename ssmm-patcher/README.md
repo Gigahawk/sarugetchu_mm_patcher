@@ -51,15 +51,20 @@ Furigana is supported, with single byte 0x5B being used to indicate the start an
 There is an 8 byte long structure prior to the start of the string, the first 4 bytes appear to be some monotonically increasing index or ID, for some reason it seems to increase by 0x61 every time.
 The second 4 bytes are the length of the string in bytes, not including the null byte (this is probably used by the code to allocate space to render the text onscreen, setting the string to something longer without updating this value causes the game to not start)
 
-### Kanji Encodings
+### Encodings
+
+It turns out this game uses a bunch of unique nonstandard text encodings.
+Most of them use the same/very similar ones, but some use ones that are completely different (such as the pause menu)
+
+It's possible that the headers of some of the files stores which encoding to use, but for now I'm just manually deriving them.
+
+#### Kanji
 
 There's a lot of kanji, quite hard to figure out the encodings for all of them.
 It appears the each row in the kanji keyboard is actually stored inside DATA1 in order, best to update the encoding list one row at a time.
 
 There appear to be some kanji not available through the keyboard?
 Maybe the devs just got lazy and didn't feel like organizing them all
-
-The kanji table appears to be banked, The 95Dx range of entries appear to represent some rarely used punctuation in most contexts, but in some (special attacks?) they map to some kanji
 
 ## PSS Cutscenes
 

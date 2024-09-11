@@ -20,9 +20,7 @@ import sarugetchu_mm_patcher.mux as mux
 from sarugetchu_mm_patcher.index import (
     IndexEntry, get_index_list, index_list_to_bin
 )
-from sarugetchu_mm_patcher.encoding import (
-    string_to_bytes, wrap_string, bytes_to_string
-)
+from sarugetchu_mm_patcher.encoding import EncodingTranslator
 
 EXTRACT_PATH = Path(".extracted")
 DATA0_PATH = "/PDATA/DATA0.BIN;1"
@@ -58,128 +56,6 @@ def _print_headers(
         click.echo(
             f"{entry.name_str}: {extracted[0:header_len].hex(sep=' ').upper()}"
         )
-
-def patch_text(
-        iso: Ps2Iso,
-        strings: dict[str, dict[str, Any]],
-        patch_files: Iterable[str]
-    ) -> tuple[bytes, bytes]:
-    patch_files = [f.lower() for f in patch_files]
-    click.echo(f"Patching game text in the following files: {patch_files}")
-
-    paths = [DATA0_PATH, DATA1_PATH]
-    def _extract(path) -> bytes:
-        click.echo(f"Opening {path}")
-        f: TreeFile = iso.get_object(path)
-        data = f.data
-        click.echo(f"Done extracting {path}")
-        return data
-    with ThreadPool(processes=2) as p:
-        index, archives = p.map(_extract, paths)
-    index_list = get_index_list(index)
-
-    def _patch_archive(entry: IndexEntry) -> bytes:
-        click.echo(f"Extracting file {entry.name_str}")
-        start = entry.address*iso.block_size
-        archive = archives[
-            start:start + entry.size
-        ]
-        if entry.name_str not in patch_files:
-            click.echo(f"Not patching file {entry.name_str}")
-            return util.pad(archive), len(archive)
-        with io.BytesIO(archive) as bio:
-            with gzip.GzipFile(fileobj=bio, mode="rb") as gzip_file:
-                extracted = gzip_file.read()
-                orig_uncompressed_size = len(extracted)
-                click.echo(
-                    f"Done extracting file {entry.name_str}, "
-                    f"uncompressed size is {orig_uncompressed_size}, "
-                    f"({hex(orig_uncompressed_size)})"
-                )
-        click.echo(f"Patching file {entry.name_str}")
-        with open(f".extracted/{entry.name_str}", "wb") as f:
-            f.write(extracted)
-
-        extracted = bytearray(extracted)
-        for jap_str, info in strings.items():
-            jap_bytestrs = string_to_bytes(jap_str)
-
-            # TODO: support other langs?
-            english = info["english"]
-            if isinstance(english, str):
-                id = None
-                try:
-                    bs = string_to_bytes(english)[0]
-                except IndexError as e:
-                    click.echo(
-                        f"Error: could not encode {repr(english)}"
-                    )
-                    raise e
-                replacements = {id: bs}
-            elif isinstance(english, dict):
-                replacements = {}
-                for id, s in english.items():
-                    replacements[bytes.fromhex(id)] = string_to_bytes(s)[0]
-            else:
-                raise ValueError(f"invalid translation structure {english}")
-
-            for jb in jap_bytestrs:
-                for id, new_bytestr in replacements.items():
-                    extracted = extracted.replace(
-                        wrap_string(jb, id=id),
-                        wrap_string(new_bytestr, id=id),
-                    )
-
-        patched_uncompressed_size = len(extracted)
-        len_diff = patched_uncompressed_size - orig_uncompressed_size
-        extracted = util.patch_offsets(extracted, len_diff)
-
-        extracted = bytes(extracted)
-        with open(f".extracted/{entry.name_str}_patched", "wb") as f:
-            f.write(extracted)
-
-        click.echo(
-            f"Finished patching file {entry.name_str}, "
-            f"new uncompressed size: {patched_uncompressed_size}, "
-            f"({hex(patched_uncompressed_size)}), "
-            f"size increased by {len_diff}"
-        )
-
-        click.echo(f"Recompressing file {entry.name_str}")
-        recompressed = io.BytesIO()
-        with gzip.GzipFile(fileobj=recompressed, mode="wb") as gzip_file:
-            gzip_file.write(extracted)
-        recompressed = recompressed.getvalue()
-        new_size = len(recompressed)
-        padded = util.pad(recompressed)
-        click.echo(
-            f"Finished patching file {entry.name_str}, "
-            f"new size is {new_size}, was {entry.size}")
-        return padded, new_size
-
-    with ThreadPool(processes=16) as p:
-        files = p.map(_patch_archive, index_list)
-
-    click.echo("Repacking archive and updating index")
-    new_index_list = []
-    data1 = bytearray()
-    address = 0
-    for index, (bin, size) in zip(index_list, files):
-        new_index = IndexEntry(
-            index.name,
-            address,
-            size
-        )
-        new_index_list.append(new_index)
-        data1 += bin
-        address += util.blocks_required(size)
-    data0 = index_list_to_bin(new_index_list)
-    click.echo("Done repacking")
-    with open(EXTRACT_PATH / "DATA0_patched.BIN", "wb") as f:
-        f.write(data0)
-    with open(EXTRACT_PATH / "DATA1_patched.BIN", "wb") as f:
-        f.write(data1)
-    return data0, data1
 
 def _write_mux_file(path: Path, m2v_path: Path, ss2_path: Path):
     template = f"""
@@ -258,76 +134,6 @@ input_opt = click.option(
     show_default=True,
     type=click.Path(),
 )
-
-@cli.command()
-@input_opt
-@click.option(
-    "--md5/--no-md5",
-    default=True,
-)
-@click.option(
-    "--cutscenes/--no-cutscenes",
-    default=True,
-)
-@click.option(
-    "--patch-string",
-    multiple=True,
-    default=[
-        "00940549",  # gz/menu_common.gz
-        "3C6CF60B",  # gz/menu_vs.gz
-        "87F51E0C",  # gz/menu_story.01_boss01_gori01.gz
-    ],
-)
-def patch(
-    input: str | os.PathLike,
-    md5: bool,
-    cutscenes: bool,
-    patch_string: Iterable[str],
-):
-    if md5:
-        click.echo(f"Checking MD5 on {input}")
-        expected_md5 = "946d0aeb90772efd9105b0f785b2c7ec"
-        actual_md5 = util.md5(input)
-        if expected_md5 != actual_md5:
-            click.echo("Error: MD5 mismatch")
-            click.echo(f"Got:      {actual_md5}")
-            click.echo(f"Expected: {expected_md5}")
-            exit(1)
-        click.echo("MD5 OK")
-
-    click.echo(f"Opening text translation file strings.yaml")
-    with open("strings.yaml", "r") as f:
-        strings_dict = yaml.safe_load(f)
-    if not strings_dict:
-        strings_dict = {}
-
-    iso, iso_async_result = open_iso(input, mutable=True)
-
-    data0, data1 = patch_text(iso, strings_dict, patch_string)
-
-    click.echo(f"Opening cutscene translation file subs.yaml")
-    with open("subs.yaml", "r") as f:
-        subs_dict = yaml.safe_load(f)
-    if not subs_dict:
-        subs_dict = {}
-
-    if cutscenes:
-        cutscene_replacements = patch_cutscenes(iso, subs_dict)
-    else:
-        cutscene_replacements = []
-
-    click.echo("Waiting for mutable copy to open")
-    iso_mut: Ps2Iso = iso_async_result.get()
-    iso_mut.replace_files(
-        [
-            (DATA0_PATH, data0),
-            (DATA1_PATH, data1),
-        ] + cutscene_replacements
-    )
-
-    click.echo("Exporting patched ISO")
-    iso_mut.write("patched.iso")
-    click.echo("Done")
 
 @cli.command()
 @click.option(
@@ -565,12 +371,18 @@ def pack_data(index_path, data_path, entry):
     type=click.Path(),
 )
 @click.option(
+    "--hash",
+    default=None,
+    type=str
+)
+@click.option(
     "-o", "--output-path",
     default=None,
     show_default=True,
     type=click.Path(),
 )
-def patch_resource(resource_path, strings_path, output_path):
+def patch_resource(resource_path, strings_path, hash, output_path):
+    encoder = EncodingTranslator(hash)
     resource_path = Path(resource_path)
     if strings_path is None:
         strings_path = Path(os.getcwd()) / "strings.yaml"
@@ -590,14 +402,19 @@ def patch_resource(resource_path, strings_path, output_path):
         resource_bytes = bytearray(f.read())
     orig_size = len(resource_bytes)
     for jap_str, info in strings_dict.items():
-        jap_bytestrs = string_to_bytes(jap_str)
+        jap_bytestrs = encoder.string_to_bytes(jap_str)
 
         # TODO: support other langs?
-        english = info["english"]
+        try:
+            english = info["english"]
+        except KeyError:
+            click.echo(f"Error: did not find english data for {jap_str}")
+            raise
+
         if isinstance(english, str):
             id = None
             try:
-                bs = string_to_bytes(english)[0]
+                bs = encoder.string_to_bytes(english)[0]
             except IndexError as e:
                 click.echo(
                     f"Error: could not encode {repr(english)}"
@@ -607,15 +424,15 @@ def patch_resource(resource_path, strings_path, output_path):
         elif isinstance(english, dict):
             replacements = {}
             for id, s in english.items():
-                replacements[bytes.fromhex(id)] = string_to_bytes(s)[0]
+                replacements[bytes.fromhex(id)] = encoder.string_to_bytes(s)[0]
         else:
             raise ValueError(f"invalid translation structure {english}")
 
         for jb in jap_bytestrs:
             for id, new_bytestr in replacements.items():
                 resource_bytes = resource_bytes.replace(
-                    wrap_string(jb, id=id),
-                    wrap_string(new_bytestr, id=id),
+                    encoder.wrap_string(jb, id=id),
+                    encoder.wrap_string(new_bytestr, id=id),
                 )
     new_size = len(resource_bytes)
     size_diff = new_size - orig_size
@@ -638,16 +455,30 @@ def patch_resource(resource_path, strings_path, output_path):
     default=None
 )
 @click.option(
+    "--hex/--no-hex", "hex_",
+    default=False,
+)
+@click.option(
+    "--hash",
+    default=None,
+    type=str
+)
+@click.option(
     "--print-to-null/--no-print-to-null",
     default=True,
 )
-def find_string(target, extracted_path, csv_path, print_to_null):
+def find_string(target, extracted_path, csv_path, print_to_null, hash, hex_):
     if csv_path is not None:
         rows = _read_csv(csv_path)
     else:
         rows = []
-
-    target_bytes = string_to_bytes(target)
+    encoder = EncodingTranslator(hash)
+    if not hex_:
+        target_bytes = encoder.string_to_bytes(target)
+    else:
+        _target_bytes = bytes(bytearray.fromhex(target))
+        target = encoder.bytes_to_string(_target_bytes)
+        target_bytes = [_target_bytes]
     click.echo(f"Looking for '{target}'")
     for tb in target_bytes:
         click.echo(tb.hex(sep=" "))
@@ -672,27 +503,12 @@ def find_string(target, extracted_path, csv_path, print_to_null):
                 if print_to_null:
                     null_idx = data.index(b"\x00", file_idx)
                     tb = data[file_idx:null_idx]
-                string = bytes_to_string(tb)
+                string = encoder.bytes_to_string(tb)
                 click.echo(
                     f"Found match in {path} ({name}) at {hex(file_idx)}:{tb.hex(sep=" ")}"
                 )
                 click.echo(string)
                 click.echo(tb.hex(sep=" "))
-
-
-
-#@cli.command()
-#@click.argument(
-#    "pss_file",
-#    type=click.Path(),
-#)
-#def demux(pss_file):
-#    data = FileBytes(pss_file)
-#    vid_stream, aud_stream = mux.demux(data)
-#    #with open("video.m2v", "wb") as f:
-#    #    f.write(vid_stream)
-#    #with open("audio.ss2", "wb") as f:
-#    #    f.write(aud_stream)
 
 if __name__ == "__main__":
     cli()

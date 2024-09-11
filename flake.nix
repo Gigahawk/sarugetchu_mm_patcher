@@ -66,11 +66,84 @@
       '';
       version = "1";
       resourceFiles = [
-        "044_5c272d50" # gz/game_common.story.gz
-        "045_3cecf223" # gz/game_common.vs.gz
+        #"043_b1fc2c81" # gz/game_common.gz
+        #"044_5c272d50" # gz/game_common.story.gz
+        #"045_3cecf223" # gz/game_common.vs.gz
+        # "046_8205e9b5" # gz/game_common_sound_bd.gz
+        #"066_c9448ba5" # gz/menu1.gz
+        #"067_a60a8ca5" # gz/menu2.gz
+        #"068_245dc640" # gz/menu_character_01.gz
+        #"069_0123c740" # gz/menu_character_02.gz
         "070_00940549" # gz/menu_common.gz
+        #"083_88455768" # gz/menu_sound.gz"
         "084_87f51e0c" # gz/menu_story.01_boss01_gori01.gz
+        #"117_05f7cae8" # gz/menu_title.gz
         "118_3c6cf60b" # gz/menu_vs.gz
+
+        # Stage files are needed for patching the pause menu
+        # TODO: figure out how to change the encoding for these files?
+        #"637_aa6f7a50" # gz/stage.01_boss01_gori01.gz
+        #"639_a7383ea3"
+        #"641_58401ea3"
+        #"643_fd32e82a"
+        #"645_b7bee92a"
+        #"647_b3534589"
+        #"649_780f6c0f"
+        #"651_e9757ff7"
+        #"653_4516e70a"
+        #"655_f3aac06d"
+        #"657_20e3e63d"
+        #"659_15659caa"
+        #"661_aaa8edb2"
+        #"663_47c63baf"
+        #"665_8468b140"
+        #"667_25e6d796"
+        #"669_8e73be1d"
+        #"671_d0473e6c"
+        #"673_21262baa"
+        #"675_e781ab51"
+        #"677_8ed5ded3"
+        #"679_5fd46f14"
+        #"681_db175d62"
+        #"683_9ce158f2"
+        #"685_ad4e55a8"
+        #"687_89e08f98"
+        #"689_71a9e042"
+        #"691_cdb2d8bf"
+        #"693_25839e9b"
+        #"695_306a9905"
+        #"697_8df2c654"
+        #"699_9f2c20a8"
+        #"701_932551d9"
+        #"703_e4c7004d"
+        #"705_5b48bba4"
+        #"707_6cc0093a"
+        #"709_0320b216"
+        #"711_d4165a9b"
+        #"713_80fe334e"
+        #"715_bcf2c6fc"
+        #"717_45e16020"
+        #"719_20b329ab"
+        #"721_da3e2bab"
+        #"723_b2516b88"
+        #"725_d990ef67"
+        #"727_3e11f98e"
+        #"729_8ef4f33d"
+        #"731_a32b0671"
+        #"733_ff7a6abd"
+        #"735_0a42108c"
+        #"737_e5d5ceb1" # gz/stage.50_k1.gz
+        #"739_2ff511d3"
+        #"741_1e656e38" # gz/stage.52_metro.gz
+        #"743_9ce16be2" # gz/stage.53_bay.gz
+        #"745_2b6aedc3" # gz/stage.54_UFO.gz
+        #"747_48d02db6" # gz/stage.55_park.gz
+        #"749_4cde5405" # gz/stage.56_daiba.gz
+        #"751_ea0603ba"
+        #"753_1988ae91" # gz/stage.58_UFO2.gz
+        #"755_f25230cc"
+        #"757_4dbdde02"
+        #"759_b0ffcadb"
       ];
       resourceFilesStr = builtins.concatStringsSep "\n" resourceFiles;
       inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; })
@@ -308,10 +381,17 @@
             find PDATA/DATA1 -type f | \
               xargs -P ${processes} -I {} mv "{}" "{}.gz"
             wait
+
+            ssmm-patcher unpack-data \
+              ${self.packages.${system}.iso-jp-extracted}/extracted/PDATA/DATA2.BIN \
+              ${self.packages.${system}.iso-jp-extracted}/extracted/PDATA/DATA3.BIN \
+              -o PDATA/DATA3
           '';
           installPhase = ''
             mkdir -p "$out/DATA1"
             cp -a PDATA/DATA1/* "$out/DATA1"
+            mkdir -p "$out/DATA3"
+            cp -a PDATA/DATA3/* "$out/DATA3"
           '';
         };
         data-extracted = with import nixpkgs { inherit system; };

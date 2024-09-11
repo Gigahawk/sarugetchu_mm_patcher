@@ -1,10 +1,7 @@
 from collections import defaultdict
 
-bytes_to_char = {
-    #
-    # Special characters
-    #
-
+# Presumably these encodings never change
+BYTES_TO_CHAR_SPECIAL = {
     # Angle brackets as furigana markers
     # TODO: this should really be square brackets [ ]
     b"\x5B": "<",
@@ -37,9 +34,10 @@ bytes_to_char = {
     # to the Japanese space, assign the unit separator char for now
     b"\x20": "\x1F",
 
-    #
-    # Regular characters
-    #
+}
+
+BYTES_TO_CHAR_DEFAULT = {
+    **BYTES_TO_CHAR_SPECIAL,
 
     # Numerics
     b"\x88\x9F": "1",
@@ -3485,80 +3483,205 @@ bytes_to_char = {
 # Characters appear to end here
 }
 
-char_to_bytes = defaultdict(list)
-for b, c in bytes_to_char.items():
-    char_to_bytes[c].append(b)
+BYTES_TO_CHAR_VS_PAUSE = {
+    **BYTES_TO_CHAR_SPECIAL,
 
-# There's no English comma, use the Japanese one
-char_to_bytes[","] = char_to_bytes["、"]
+    b"\x88\x9F": "ー",
+    b"\x88\xA0": "リ",
+    b"\x88\xA1": "ト",
+    b"\x88\xA2": "ラ",
+    b"\x88\xA3": "イ",
+    b"\x88\xA4": "タ",
+    b"\x88\xA5": "ア",
+    b"\x88\xA6": "け",
+    b"\x88\xA7": "っ",
+    b"\x88\xA8": "て",
+    b"\x88\xA9": "い",
+    b"\x88\xAA": "も",
+    b"\x88\xAB": "ど",
+    b"\x88\xAC": "る",
+    b"\x88\xAD": "へ",
+    b"\x88\xAE": "ん",
+    b"\x88\xAF": "こ",
+    b"\x88\xB0": "う",
+    b"\x88\xB1": "ポ",
+    b"\x88\xB2": "ズ",
+    b"\x88\xB3": "メ",
+    b"\x88\xB4": "ニ",
+    b"\x88\xB5": "ュ",
+    b"\x88\xB6": "オ",
+    b"\x88\xB7": "プ",
+    b"\x88\xB8": "シ",
+    b"\x88\xB9": "ョ",
+    b"\x88\xBA": "ン",
+    b"\x88\xBB": "??",
+    b"\x88\xBC": "??",
+    b"\x88\xBD": "そ",
+    b"\x88\xBE": "さ",
+    b"\x88\xBF": "??",
+    b"\x88\xC0": "??",
+    b"\x88\xC1": "ゲ",
+    b"\x88\xC2": "ム",
+    b"\x88\xC3": "に",
+    b"\x88\xC4": "本",
+    b"\x88\xC5": "当",
+    b"\x88\xC6": "し",
+    b"\x88\xC7": "ま",
+    b"\x88\xC8": "す",
+    b"\x88\xC9": "か",
+    b"\x88\xCA": "？",
+    b"\x88\xCB": "は",
+    b"\x88\xCC": "え",
+    b"\x88\xCD": "せ",
+    b"\x88\xCE": "サ",
+    b"\x88\xCF": "ウ",
+    b"\x88\xD0": "ド",
+    b"\x88\xD1": "バ",
+    b"\x88\xD2": "ブ",
+    b"\x88\xD3": "レ",
+    b"\x88\xD4": "B",
+    b"\x88\xD5": "G",
+    b"\x88\xD6": "M",
+    b"\x88\xD7": "S",
+    b"\x88\xD8": "E",
+    b"\x88\xD9": "モ",
+    b"\x88\xDA": "ノ",
+    b"\x88\xDB": "ル",
+    b"\x88\xDC": "ス",
+    b"\x88\xDD": "テ",
+    b"\x88\xDE": "ビ",
+    b"\x88\xDF": "ロ",
+    b"\x88\xE0": "ジ",
+    b"\x88\xE1": "ッ",
+    b"\x88\xE2": "ク",
+    b"\x88\xE3": "2",
+    b"\x88\xE4": "の",
+    b"\x88\xE5": "出",
+    b"\x88\xE6": "カ",
+    b"\x88\xE7": "??",
+    b"\x88\xE8": "??",
+    b"\x88\xE9": "ゅ",
+    b"\x88\xEA": "つ",
+    b"\x88\xEB": "り",
+    b"\x88\xEC": "ょ",
+    b"\x88\xED": "く",
+    b"\x88\xEE": "を",
+    b"\x88\xEF": "??",
+    b"\x88\xF0": "??",
+    b"\x88\xF1": "??",
+    b"\x88\xF2": "た",
+    b"\x88\xF3": "だ",
+    b"\x88\xF4": "。",
+    b"\x88\xF5": "フ",
+    b"\x88\xF6": "??", # TODO: this is Center dot
+    b"\x88\xF7": "1", # TODO: is this l or I?
+    b"\x88\xF8": "N",
+    b"\x88\xF9": "A",
+    b"\x88\xFA": "X",
+    b"\x88\xFB": "??",
+    b"\x88\xFC": "??",
+    #b"\x88\xFD": "ー", # Duplicated?
+    #b"\x88\xFE": "ー",
+    #b"\x88\xFF": "ー",
+    b"\x89\x00": "お",
+    # Valid encodings seem to end here
+}
 
-def string_to_bytes(s: str) -> list[bytes]:
-    def recurse(idx: int):
-        if idx == len(s):
-            return [b""]
+ENCODING_MAP = {
+    "00940549": BYTES_TO_CHAR_DEFAULT,
+    "87F51E0C": BYTES_TO_CHAR_DEFAULT,
+    "3C6CF60B": BYTES_TO_CHAR_DEFAULT,
+}
 
-        char = s[idx]
-        encodings = []
-        for bin_val in char_to_bytes[char]:
-            for suffix in recurse(idx + 1):
-                encodings.append(bin_val + suffix)
-        return encodings
-    out = recurse(0)
-    return out
+class EncodingTranslator:
+    def __init__(self, hash: str|None=None):
+        if isinstance(hash, str):
+            hash = hash.upper()
+        self.bytes_to_char = ENCODING_MAP.get(hash, BYTES_TO_CHAR_DEFAULT)
 
-def tokenize_string(string: bytes) -> list[bytes]:
-    idx = 0
-    out = []
-    while idx < len(string):
-        byte = string[idx:idx+1]
-        token = string[idx:idx+2]
-        #print(idx)
-        #print(byte.hex())
-        #print(token.hex())
+        self.char_to_bytes = defaultdict(list)
+        for b, c in self.bytes_to_char.items():
+            self.char_to_bytes[c].append(b)
 
-        if token in bytes_to_char:
-            out.append(token)
-            #print("TOKEN IS VALID")
-            print(bytes_to_char[token], end="")
-            idx += 2
-            continue
-        if byte in bytes_to_char:
-            out.append(byte)
-            #print("BYTE IS VALID")
-            print(bytes_to_char[byte], end="")
-            idx += 1
-            continue
-        raise ValueError(
-            f"Got invalid byte or token. "
-            f"Byte: {byte.hex()}, Token: {token.hex()} "
-            f"String: {string.hex(sep=" ")}"
+        try:
+            # There's no English comma, use the Japanese one
+            self.char_to_bytes[","] = self.char_to_bytes["、"]
+        except KeyError:
+            pass
+
+    def string_to_bytes(self, s: str) -> list[bytes]:
+        def recurse(idx: int):
+            if idx == len(s):
+                return [b""]
+
+            char = s[idx]
+            encodings = []
+            for bin_val in self.char_to_bytes[char]:
+                for suffix in recurse(idx + 1):
+                    encodings.append(bin_val + suffix)
+            return encodings
+        out = recurse(0)
+        return out
+
+    def tokenize_string(self, string: bytes) -> list[bytes]:
+        idx = 0
+        out = []
+        while idx < len(string):
+            byte = string[idx:idx+1]
+            token = string[idx:idx+2]
+            #print(idx)
+            #print(byte.hex())
+            #print(token.hex())
+
+            if token in self.bytes_to_char:
+                out.append(token)
+                #print("TOKEN IS VALID")
+                print(self.bytes_to_char[token], end="")
+                idx += 2
+                continue
+            if byte in self.bytes_to_char:
+                out.append(byte)
+                #print("BYTE IS VALID")
+                print(self.bytes_to_char[byte], end="")
+                idx += 1
+                continue
+            raise ValueError(
+                f"Got invalid byte or token. "
+                f"Byte: {byte.hex()}, Token: {token.hex()} "
+                f"String: {string.hex(sep=" ")}"
+            )
+        return out
+
+    def bytes_to_string(self, bts: bytes) -> str:
+        tokens = self.tokenize_string(bts)
+        return self.tokens_to_string(tokens)
+
+    def tokens_to_string(self, tokens: list[bytes]) -> str:
+        return "".join(self.bytes_to_char[token] for token in tokens)
+
+    def wrap_string(self, bs: bytes, id: bytes|None = None) -> bytes:
+        out = (
+            int(len(bs)).to_bytes(length=4, byteorder="little")
+            + bs
+            + b"\x00"
         )
-    return out
+        if id:
+            return id + out
+        return out
 
-def bytes_to_string(bts: bytes) -> str:
-    tokens = tokenize_string(bts)
-    return tokens_to_string(tokens)
-
-def tokens_to_string(tokens: list[bytes]) -> str:
-    return "".join(bytes_to_char[token] for token in tokens)
-
-def wrap_string(bs: bytes, id: bytes|None = None) -> bytes:
-    out = (
-        int(len(bs)).to_bytes(length=4, byteorder="little")
-        + bs
-        + b"\x00"
-    )
-    if id:
-        return id + out
-    return out
-
-def is_kanji(c: bytes | str) -> bool:
-    # Assume unknown chars are kanji
-    if c == "??":
-        return True
-    if isinstance(c, str):
-        c = char_to_bytes[c]
-    if int.from_bytes(c, "big") >= 0x89E5:
-        return True
-    return False
-
+    def is_kanji(self, c: bytes | str) -> bool:
+        # Assume unknown chars are kanji
+        if c == "??":
+            return True
+        if isinstance(c, bytes):
+            c = self.bytes_to_char[c]
+        if len(c) != 1:
+            raise ValueError(
+                f"Can't check whether multichar string '{c}' is a kanji"
+            )
+        # Check if the character is in the range of CJK Unified Ideographs
+        return (
+            '\u4E00' <= c <= '\u9FFF' or  # CJK Unified Ideographs
+            '\u3400' <= c <= '\u4DBF' or  # CJK Unified Ideographs Extension A
+            '\uF900' <= c <= '\uFAFF'     # CJK Compatibility Ideographs
+        )

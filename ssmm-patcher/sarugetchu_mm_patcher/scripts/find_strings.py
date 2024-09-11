@@ -9,11 +9,9 @@ import yaml
 from httpcore._exceptions import ConnectTimeout
 
 
-from sarugetchu_mm_patcher.encoding import (
-    bytes_to_char, is_kanji, tokens_to_string,
-    tokenize_string
-)
+from sarugetchu_mm_patcher.encoding import EncodingTranslator
 
+maybe_pause = []
 
 class States(Enum):
     IDLE = auto()
@@ -22,6 +20,9 @@ class States(Enum):
 class StringFinder:
     def __init__(self, path: Path):
         self.path = path
+        self.encoder = EncodingTranslator(
+            self.path.name.split("_")[1]
+        )
         with open(path, "rb") as f:
             self.data = f.read()
 
@@ -55,15 +56,23 @@ class StringFinder:
                     f.write(f'"{token.hex().upper()}",')
                 f.write("\n")
                 for token in tokens:
-                    char = bytes_to_char[token]
+                    char = self.encoder.bytes_to_char[token]
                     if char in ["\n", "\f"]:
                         f.write(f'"{repr(char).strip("'")}",')
                     else:
                         f.write(f'"{char}",')
                 f.write("\n")
 
+    def find_potential_pause_menu(self, strings: list[tuple[int, bytes, int, int, list[bytes], str]]):
+        global maybe_pause
+        for idx, id, alloc_len, actual_len, tokens, string in strings:
+            if actual_len == 14:
+                if tokens[1] == tokens[-1]:
+                    maybe_pause.append(string)
+
+
     def has_unknown_tokens(self, tokens: list[bytes]) -> bool:
-        return any([bytes_to_char[t] == "??" for t in tokens])
+        return any([self.encoder.bytes_to_char[t] == "??" for t in tokens])
 
     def count_unknown_strings(
             self,
@@ -79,14 +88,14 @@ class StringFinder:
                     print(string)
                     curr_kanji_tokens = []
                     for token in tokens:
-                        if is_kanji(token):
+                        if self.encoder.is_kanji(token):
                             curr_kanji_tokens.append(token)
                         elif curr_kanji_tokens and token != b"\x5D":
                             curr_kanji_tokens.append(token)
                         elif curr_kanji_tokens and token == b"\x5D":
                             curr_kanji_tokens.append(token)
                             if self.has_unknown_tokens(curr_kanji_tokens):
-                                print(tokens_to_string(curr_kanji_tokens))
+                                print(self.encoder.tokens_to_string(curr_kanji_tokens))
                                 print(" ".join(t.hex() for t in curr_kanji_tokens))
                             curr_kanji_tokens = []
                         else:
@@ -109,6 +118,8 @@ class StringFinder:
             with open(f"strings/strings_{self.path.name}.yaml", "r") as f:
                 translations = yaml.safe_load(f)
         except FileNotFoundError:
+            translations = {}
+        if translations is None:
             translations = {}
 
         for idx, id, _, _, tokens, string in strings:
@@ -188,17 +199,17 @@ class StringFinder:
             #    import pdb;pdb.set_trace()
             if state == States.IDLE:
                 # Presumably a string never starts with furigana?
-                if token in bytes_to_char:
+                if token in self.encoder.bytes_to_char:
                     state = States.STRING_BEGIN
                     string_start_idx = idx
                     idx += 2
                     continue
             if state == States.STRING_BEGIN:
-                if token in bytes_to_char:
+                if token in self.encoder.bytes_to_char:
                     idx += 2
                     continue
                 # Furigana markers
-                if byte in bytes_to_char:
+                if byte in self.encoder.bytes_to_char:
                     idx += 1
                     continue
                 if byte == b"\x00":
@@ -213,7 +224,7 @@ class StringFinder:
         return strings
 
     def stringify_tokens(self, tokens: list[bytes]) -> str:
-        return "".join(bytes_to_char[t] for t in tokens)
+        return "".join(self.encoder.bytes_to_char[t] for t in tokens)
 
 
     def extract_strings(
@@ -230,7 +241,7 @@ class StringFinder:
             )
             string = string_bytes[8:-1]
             actual_len = len(string)
-            tokens = tokenize_string(string)
+            tokens = self.encoder.tokenize_string(string)
             stringified_string = self.stringify_tokens(tokens)
             strings.append((
                 idx, string_id, alloc_len, actual_len, tokens, stringified_string
@@ -244,11 +255,14 @@ class StringFinder:
 
         self.build_csv(strings)
 
+        self.find_potential_pause_menu(strings)
+
         self.count_unknown_strings(strings)
 
         self.build_translation_doc(strings)
 
         self.find_index_spacing(strings)
+
 
 def run_stringfinder(fpath: Path):
     sf = StringFinder(fpath)
@@ -267,8 +281,15 @@ def main():
     path = Path("result/DATA1")
 
     fpaths = [f for f in path.glob("**/*") if f.is_file()]
-    with Pool(256) as p:
-        p.map(run_stringfinder, fpaths)
+    #with Pool(256) as p:
+    #    p.map(run_stringfinder, fpaths)
+    for fpath in fpaths:
+        run_stringfinder(fpath)
+    import pdb;pdb.set_trace()
+    with open(f"strings/maybe_pause.txt", "w") as f:
+        for string in list(set(maybe_pause)):
+            f.write(f'"{string}":\n')
+            f.write(f'  english: "WWWWWWW"\n')
 
 
 

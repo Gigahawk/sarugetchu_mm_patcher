@@ -31,6 +31,73 @@
 "おわる":
   english: "Finish"
 
+# Pause Menu (Many different encodings depending on menu file)
+# TODO: use correct encoding
+#"ポーズメニュー":
+  #english: "Pause Menu"
+#"T2UVWX2":
+  #english: "WWWWWWW"
+#"bcd1eCc":
+  #english: "WWWWWWW"
+#"Zab1cda":
+  #english: "WWWWWWW"
+#"bcdefgc":
+  #english: "WWWWWWW"
+#"VWXYZaW":
+  #english: "WWWWWWW"
+#"TUVWXYU":
+  #english: "WWWWWWW"
+#"abcdefb":
+  #english: "WWWWWWW"
+#"パープルファー":
+  #english: "WWWWWWW"
+#"c5defg5":
+  #english: "WWWWWWW"
+#"defghie":
+  #english: "WWWWWWW"
+#"そうびへんこう":
+  #english: "WWWWWWW"
+#"ゴールドヘアー":
+  #english: "WWWWWWW"
+#"eEfghiE":
+  #english: "WWWWWWW"
+#"56STUV6":
+  #english: "WWWWWWW"
+#"w5xyzあ5":
+  #english: "WWWWWWW"
+#"I1JKLM1":  # Appears to be used for all of the V.S. Mode stages
+#  english: "NOPQRSTUVWXYZ"
+#"c5FstP5":
+#  english: "WWWWWWW"
+#"Zabcdea":
+#  english: "WWWWWWW"
+#"STUVWXT":
+#  english: "WWWWWWW"
+#"efghijf":
+#  english: "WWWWWWW"
+#"e6fghi6":
+#  english: "WWWWWWW"
+#"f6ghij6":
+#  english: "WWWWWWW"
+#"パープルヘアー":
+#  english: "WWWWWWW"
+#"ブルースタイル":
+#  english: "WWWWWWW"
+#"QRSTUVR":
+#  english: "WWWWWWW"
+#"S4TUVW4":
+#  english: "WWWWWWW"
+#"56TUVW6":
+#  english: "WWWWWWW"
+#"YW9:ZAW":
+#  english: "WWWWWWW"
+#"RSTUVWS":
+#  english: "WWWWWWW"
+#"U6VWXY6":
+#  english: "WWWWWWW"
+#"a5bcde5":
+#  english: "WWWWWWW"
+
 
 # Start screen
 "ゲームスタート":

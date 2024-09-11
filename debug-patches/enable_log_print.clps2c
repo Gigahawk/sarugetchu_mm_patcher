@@ -9,3 +9,9 @@ ASM_START 00100a38
     // this up for some reason)
     addiu $sp,$sp,0x40
 ASM_END
+
+ASM_START 001009b0
+    addiu $v1,$zero,0x75
+    syscall 0
+    // There's a return immediately following this that we can take advantage of
+ASM_END
