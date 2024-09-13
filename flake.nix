@@ -214,14 +214,11 @@
           pname = "mm-jp-cutscenes-demuxed";
           inherit version;
           src = null;
+          dontUnpack = true;
 
           nativeBuildInputs = [
             ssmm-mux.packages.${system}.default
           ];
-
-          unpackPhase = ''
-            true
-          '';
 
           buildPhase = cutscenes-demuxed-buildPhase self.packages.${system}.iso-jp-extracted;
 
@@ -241,14 +238,11 @@
           pname = "mm-jp-cutscenes-mp4";
           inherit version;
           src = null;
+          dontUnpack = true;
 
           nativeBuildInputs = [
               pkgs.ffmpeg
           ];
-
-          unpackPhase = ''
-            true
-          '';
 
           buildPhase = cutscenes-mp4-buildPhase self.packages.${system}.cutscenes-jp-demuxed;
 
@@ -267,6 +261,8 @@
           pname = "mm-cutscenes-remuxed";
           inherit version;
           src = ./subs;
+          dontUnpack = true;
+
           nativeBuildInputs = [
             ps2str.packages.${system}.default
             pkgs.jq
@@ -275,10 +271,6 @@
             # For xxd single quote hack
             pkgs.unixtools.xxd
           ];
-
-          unpackPhase = ''
-            true
-          '';
 
           buildPhase = ''
             export FONTCONFIG_FILE=${fontconfig_file}
@@ -333,10 +325,7 @@
           pname = "cutscenes-size-diff";
           inherit version;
           src = null;
-
-          unpackPhase = ''
-            true
-          '';
+          dontUnpack = true;
 
           buildPhase = ''
             report=""
@@ -362,14 +351,11 @@
           pname = "mm-data-unpacked";
           inherit version;
           src = null;
+          dontUnpack = true;
 
           nativeBuildInputs = [
             self.packages.${system}.ssmm-patcher
           ];
-
-          unpackPhase = ''
-            true
-          '';
 
           buildPhase = ''
             ssmm-patcher unpack-data \
@@ -399,10 +385,7 @@
           pname = "mm-data-extracted";
           inherit version;
           src = null;
-
-          unpackPhase = ''
-            true
-          '';
+          dontUnpack = true;
 
           buildPhase = ''
             mkdir -p DATA1
@@ -427,14 +410,11 @@
           pname = "mm-data-patched";
           inherit version;
           src = ./strings.yaml;
+          dontUnpack = true;
 
           nativeBuildInputs = [
             self.packages.${system}.default
           ];
-
-          unpackPhase = ''
-            true
-          '';
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
@@ -457,10 +437,7 @@
           pname = "mm-data-patched-compressed";
           inherit version;
           src = null;
-
-          unpackPhase = ''
-            true
-          '';
+          dontUnpack = true;
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
@@ -481,14 +458,11 @@
           pname = "mm-data-repacked";
           inherit version;
           src = null;
+          dontUnpack = true;
 
           nativeBuildInputs = [
             self.packages.${system}.default
           ];
-
-          unpackPhase = ''
-            true
-          '';
 
           buildPhase = ''
             cmd="ssmm-patcher pack-data"
@@ -518,14 +492,11 @@
           pname = "mm-iso-patched";
           inherit version;
           src = mm-jp-iso;
+          dontUnpack = true;
 
           nativeBuildInputs = [
             ps2isopatcher.packages.${system}.default
           ];
-
-          unpackPhase = ''
-            true
-          '';
 
           buildPhase = ''
             cmd="ps2isopatcher patch"
