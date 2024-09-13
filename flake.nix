@@ -541,6 +541,7 @@
           pkgs.openai-whisper
           pkgs.dos2unix
           pkgs.vlc
+          pkgs.rsbkb  # bgrep
           pkgs-clps2c.clps2c-compiler
         ];
         shellHook = ''
