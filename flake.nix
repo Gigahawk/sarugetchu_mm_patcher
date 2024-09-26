@@ -400,6 +400,52 @@
           pname = "mm-cn-data-unpacked";
           buildPhase = data-unpacked-buildPhase self.packages.${system}.iso-cn-extracted;
         });
+        data-jp-unpacked-named = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-jp-data-unpacked-named";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            self.packages.${system}.ssmm-patcher
+          ];
+
+          buildPhase = ''
+            true
+          '';
+
+          installPhase = ''
+            find ${self.packages.${system}.data-jp-unpacked}/DATA1 -type f | \
+              xargs -P ${processes} -I {} bash -c '
+                input="{}"
+                base_name=$(basename "$input")
+                hash="''${base_name#*_}"
+                hash="''${hash%.gz}"
+                path=$(ssmm-patcher hash-to-path ${./data0_hashes.csv} $hash)
+                if [[ $? -eq 0 ]]; then
+                  dir=$(dirname $path)
+                  mkdir -p "$out/DATA1/$dir"
+                  cp "$input" "$out/DATA1/$path"
+                fi
+              '
+            wait
+            find ${self.packages.${system}.data-jp-unpacked}/DATA3 -type f | \
+              xargs -P ${processes} -I {} bash -c '
+                input="{}"
+                base_name=$(basename "$input")
+                hash="''${base_name#*_}"
+                hash="''${hash%.gz}"
+                path=$(ssmm-patcher hash-to-path ${./data2_hashes.csv} $hash)
+                if [[ $? -eq 0 ]]; then
+                  dir=$(dirname $path)
+                  mkdir -p "$out/DATA3/$dir"
+                  cp "$input" "$out/DATA3/$path"
+                fi
+              '
+            wait
+          '';
+        };
         data-jp-extracted = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-jp-data-extracted";

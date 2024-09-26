@@ -241,6 +241,27 @@ def validate_hash_list(csv_path):
         click.echo("All hashes OK")
 
 @cli.command()
+@click.argument(
+    "csv_path",
+    type=click.Path()
+)
+@click.argument(
+    "hash",
+    type=str
+)
+def hash_to_path(csv_path, hash):
+    rows = _read_csv(csv_path)
+    row_idx = _get_row_idx(rows, int(hash, 16))
+    if row_idx is None:
+        click.echo(f"Error: Hash '{hash}' is not present in {csv_path}")
+        exit(1)
+    path = rows[row_idx][1]
+    if not path:
+        click.echo(f"Hash '{hash}' does not have a known path name")
+        exit(2)
+    click.echo(path)
+
+@cli.command()
 @click.option(
     "-s", "--strings",
     default="strings.yaml",
