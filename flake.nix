@@ -88,11 +88,23 @@
         find ${data-unpacked}/DATA1 -type f | \
           xargs -P ${processes} -I {} bash -c '
             input="{}"
-            base_name=$(basename "$input")
+            base_name="''${input#${data-unpacked}/DATA1/}"
+            if [[ "$(dirname $base_name)" != "." ]]; then
+              mkdir -p "DATA1/$(dirname $base_name)"
+            fi
             output="''${base_name%.gz}"
             gzip -d -c "$input" > "DATA1/$output"
           '
         wait
+      '';
+      data-extracted-base-installPhase = data-extracted: ''
+        find ${data-extracted}/DATA1 -type f | \
+          xargs -P ${processes} -I {} bash -c '
+            input="{}"
+            base_name="''${input#${data-extracted}/}"
+            output="$out/''${base_name}.base"
+            ssmm-patcher extract-base -o "$output" "$input"
+          '
       '';
       version = "1";
       resourceFiles = [
@@ -457,12 +469,33 @@
 
           installPhase = ''
             mkdir -p "$out/DATA1"
-            cp DATA1/* "$out/DATA1"
+            cp -r DATA1/* "$out/DATA1"
           '';
         };
         data-cn-extracted = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
           pname = "mm-cn-data-extracted";
           buildPhase = data-extracted-buildPhase self.packages.${system}.data-cn-unpacked;
+        });
+        data-jp-extracted-named = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
+          pname = "mm-jp-data-extracted-named";
+          buildPhase = data-extracted-buildPhase self.packages.${system}.data-jp-unpacked-named;
+        });
+        data-jp-extracted-base = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-jp-data-extracted-base";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            self.packages.${system}.ssmm-patcher
+          ];
+
+          installPhase = data-extracted-base-installPhase self.packages.${system}.data-jp-extracted;
+        };
+        data-jp-extracted-named-base = self.packages.${system}.data-jp-extracted-base.overrideAttrs (old: {
+          pname = "mm-jp-data-extracted-named-base";
+          installPhase = data-extracted-base-installPhase self.packages.${system}.data-jp-extracted-named;
         });
         data-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {

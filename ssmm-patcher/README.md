@@ -8,6 +8,26 @@ Ensure the iso you have is:
 
 Then run `nix-store --add-fixed sha256 mm.iso`
 
+## Differences between Japanese and Chinese version
+
+- Videos are different, mostly subtitled
+- Code is different, appears to be a newer revision or something?
+- All of DATA2 and DATA3 are identical, likely these contain 3d models etc. that don't change with language
+- A lot of DATA0 and DATA1 is different, likely these are things that contain text/images of text
+    - Some files are identical:
+        - `00ff15d2`: probably an unused `stage.51_XXX_bd.gz`
+        - `1fa8a5bf`: `package/mod310.tar.gz`
+        - `57ff733f`: no clue, maybe stage 59 bd?
+        - `63f4d7b2`: probably an unused `stage.57_XXX_bd.gz`
+        - `9560bc50`: `gz/stage.55_park_bd.gz`
+        - `b0ffcadb`: `system.gz`
+        - `b3534589`: no clue, probably a story related stage (non bd, maybe unused?)
+    - Some files are only present in the japanese version:
+        - `9315b91a`: no clue,
+        - `70dbb91a`: no clue, immediately follows `9315b91a`
+
+
+
 ## Index
 PDATA/DATA0.BIN and DATA2.BIN appear to be some kind of index file describing the contents of the bigger DATA1.BIN and DATA3.BIN respectively
 
@@ -33,8 +53,21 @@ To update this:
 1. run `cat <logfile> | dos2unix | grep -E '\.gz$' | uniq | ssmm-patcher update-hash-list data0_hashes.csv`
 
 ## DATA1
-Each file in DATA1 is a gzip compressed file.
+Each file in DATA1 is a gzip compressed file with file names like `gz/xxx.gz`.
 
+
+The beginning of each file appears to have a header of some sort
+
+- 1 byte: file type??? (seems to always be 1)
+- 4 bytes: buff_size (appears to be the length of the header/main content?)
+    - If we jump to the end of the buff there is sometimes a string containing part of the file name?
+
+Nearish the end of each file there appear to be file names preceded by pointers or something?
+
+The code makes reference to a bunch of `tar/xxx.tar.gz` files with similar file names to their `gz/` counterparts, but these files do not appear to be anywhere in the game data other than the ps2 library files `package/mod310.tar.gz`.
+They are likely in older/debug versions of the game?
+
+### Strings
 Some files contain strings, this game uses a custom 2 byte text encoding (probably) between 0x889F to 0x95FF inclusive.
 > many strings appear in multiple files, but it seems that most (all?) appear in `00940549/menu_common`, and so far only patching that file seems to be sufficient for the menus, there may be significant performance uplifts in patching speed by limiting the number of files we try to patch.
 
