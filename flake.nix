@@ -8,6 +8,7 @@
     ps2str.url = "github:Gigahawk/ps2str-nix";
     ssmm-mux.url = "github:Gigahawk/ssmm-mux";
     ps2isopatcher.url = "github:Gigahawk/ps2isopatcher";
+    bgrep.url = "github:Gigahawk/bgrep-nix";
     # Waiting for merge of https://github.com/NixOS/nixpkgs/pull/339716
     nixpkgs-clps2c.url = "github:Gigahawk/nixpkgs?ref=clps2c-compiler";
   };
@@ -20,6 +21,7 @@
     ps2str,
     ssmm-mux,
     ps2isopatcher,
+    bgrep,
     nixpkgs-clps2c,
     ...
   }:
@@ -62,6 +64,34 @@
               -c:v copy -c:a aac \
               "$output"
         '
+        wait
+      '';
+      data-unpacked-buildPhase = iso-extracted: ''
+        ssmm-patcher unpack-data \
+          ${iso-extracted}/extracted/PDATA/DATA0.BIN \
+          ${iso-extracted}/extracted/PDATA/DATA1.BIN \
+          -o PDATA/DATA1
+
+        # All files in DATA1 are gzip files
+        find PDATA/DATA1 -type f | \
+          xargs -P ${processes} -I {} mv "{}" "{}.gz"
+        wait
+
+        ssmm-patcher unpack-data \
+          ${iso-extracted}/extracted/PDATA/DATA2.BIN \
+          ${iso-extracted}/extracted/PDATA/DATA3.BIN \
+          -o PDATA/DATA3
+      '';
+      data-extracted-buildPhase = data-unpacked: ''
+        mkdir -p DATA1
+        # All files in DATA1 are gzip files
+        find ${data-unpacked}/DATA1 -type f | \
+          xargs -P ${processes} -I {} bash -c '
+            input="{}"
+            base_name=$(basename "$input")
+            output="''${base_name%.gz}"
+            gzip -d -c "$input" > "DATA1/$output"
+          '
         wait
       '';
       version = "1";
@@ -346,9 +376,9 @@
             install -Dm 755 "report.txt" "$out/report.txt"
           '';
         };
-        data-unpacked = with import nixpkgs { inherit system; };
+        data-jp-unpacked = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
-          pname = "mm-data-unpacked";
+          pname = "mm-jp-data-unpacked";
           inherit version;
           src = null;
           dontUnpack = true;
@@ -357,22 +387,8 @@
             self.packages.${system}.ssmm-patcher
           ];
 
-          buildPhase = ''
-            ssmm-patcher unpack-data \
-              ${self.packages.${system}.iso-jp-extracted}/extracted/PDATA/DATA0.BIN \
-              ${self.packages.${system}.iso-jp-extracted}/extracted/PDATA/DATA1.BIN \
-              -o PDATA/DATA1
+          buildPhase = data-unpacked-buildPhase self.packages.${system}.iso-jp-extracted;
 
-            # All files in DATA1 are gzip files
-            find PDATA/DATA1 -type f | \
-              xargs -P ${processes} -I {} mv "{}" "{}.gz"
-            wait
-
-            ssmm-patcher unpack-data \
-              ${self.packages.${system}.iso-jp-extracted}/extracted/PDATA/DATA2.BIN \
-              ${self.packages.${system}.iso-jp-extracted}/extracted/PDATA/DATA3.BIN \
-              -o PDATA/DATA3
-          '';
           installPhase = ''
             mkdir -p "$out/DATA1"
             cp -a PDATA/DATA1/* "$out/DATA1"
@@ -380,31 +396,28 @@
             cp -a PDATA/DATA3/* "$out/DATA3"
           '';
         };
-        data-extracted = with import nixpkgs { inherit system; };
+        data-cn-unpacked = self.packages.${system}.data-jp-unpacked.overrideAttrs (old: {
+          pname = "mm-cn-data-unpacked";
+          buildPhase = data-unpacked-buildPhase self.packages.${system}.iso-cn-extracted;
+        });
+        data-jp-extracted = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
-          pname = "mm-data-extracted";
+          pname = "mm-jp-data-extracted";
           inherit version;
           src = null;
           dontUnpack = true;
 
-          buildPhase = ''
-            mkdir -p DATA1
-            # All files in DATA1 are gzip files
-            find ${self.packages.${system}.data-unpacked}/DATA1 -type f | \
-              xargs -P ${processes} -I {} bash -c '
-                input="{}"
-                base_name=$(basename "$input")
-                output="''${base_name%.gz}"
-                gzip -d -c "$input" > "DATA1/$output"
-              '
-            wait
-          '';
+          buildPhase = data-extracted-buildPhase self.packages.${system}.data-jp-unpacked;
 
           installPhase = ''
             mkdir -p "$out/DATA1"
             cp DATA1/* "$out/DATA1"
           '';
         };
+        data-cn-extracted = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
+          pname = "mm-cn-data-extracted";
+          buildPhase = data-extracted-buildPhase self.packages.${system}.data-cn-unpacked;
+        });
         data-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-patched";
@@ -421,7 +434,7 @@
               xargs -P ${processes} -I {} bash -c '
                 ssmm-patcher patch-resource \
                   -s $src \
-                  "${self.packages.${system}.data-extracted}/DATA1/{}"
+                  "${self.packages.${system}.data-jp-extracted}/DATA1/{}"
               '
           '';
 
@@ -466,7 +479,7 @@
 
           buildPhase = ''
             cmd="ssmm-patcher pack-data"
-            for f in ${self.packages.${system}.data-unpacked}/DATA1/*; do
+            for f in ${self.packages.${system}.data-jp-unpacked}/DATA1/*; do
               name=$(basename "''${f%.gz}")
               hash="''${name#*_}"
               patched="${self.packages.${system}.data-patched-compressed}/DATA1_patched/''${name}_patched.gz"
@@ -536,6 +549,7 @@
         packages = [
           ssmm-mux.packages.${system}.default
           ps2str.packages.${system}.default
+          #bgrep.packages.${system}.default
           pkgs.poetry
           pkgs.ffmpeg
           pkgs.openai-whisper
