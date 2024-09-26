@@ -209,6 +209,38 @@ def update_hash_list(csv_path):
             writer.writerow(row)
 
 @cli.command()
+@click.argument(
+    "csv_path",
+    type=click.Path()
+)
+def validate_hash_list(csv_path):
+    rows = _read_csv(csv_path)
+    ok = True
+    num_rows = len(rows)
+    num_named = 0
+    for row in rows:
+        hash, name = row
+        if not name:
+            continue
+        num_named += 1
+        hash = hash.to_bytes(4, "big").hex().lower()
+        calc_hash = util.gen_packinfo_hash(name).hex().lower()
+        if hash != calc_hash:
+            click.echo(
+                f"Error: '{name}' is linked to '{hash}', "
+                f"but hashes to '{calc_hash}'"
+            )
+            ok = False
+    click.echo(
+        f"{num_named}/{num_rows} rows have names "
+        f"({num_named/num_rows*100:.2f}%)"
+    )
+    if not ok:
+        raise ValueError("Some hashes are incorrect")
+    else:
+        click.echo("All hashes OK")
+
+@cli.command()
 @click.option(
     "-s", "--strings",
     default="strings.yaml",
