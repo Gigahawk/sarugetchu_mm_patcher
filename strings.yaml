@@ -1,3 +1,5 @@
+
+
 # Common
 "もどる":
   english: "Return"
@@ -233,6 +235,14 @@
   english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
 "現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。":
   english: "Intercept the mech that showed up."
+
+# Mission complete screen?
+"HPボーナス":
+  english: "HP Bonus"
+"タイムボーナス":
+  english: "Time Bonus"
+"クリアボーナス":
+  english: "Clear Bonus"
 
 # Load character slot select screen
 "キャラクターファイル":
@@ -1213,6 +1223,8 @@ Gクラッシャー:
   english: "Elbi Chip"
 "キセノチップ":
   english: "Kiseno Chip"
+"マグネチップ":
+  english: "Magnet Chip"
 
 "おためしキャラ":
   english: "Default Character"
