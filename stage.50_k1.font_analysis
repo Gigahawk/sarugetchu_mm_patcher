@@ -1,0 +1,54 @@
+font data starts at 0x000008C5
+	pointer to 0x000008C5 at 0x000D6348
+	char width (0x0018, 0d24) at 0x000D6341
+	char height (0x0012, 0d18) at 0x000D6343
+	number of images? (0x005F) at 0x000D
+		pointer to 0x000D633B at 0x000D6CCE and 0x000D6D03
+			pointer to 0x000D6CBA at 0x000D7B9A (possibly related to .gf0)
+				pointer to 0x000D7B9A at 0x000FD1DC (related to .gf)
+			pointer to 0x000D6CEF at 0x000D7BB4 (possibly related to .gf1)
+				pointer to 0x000D7BB4 at 0x000FD1E0 (related to .gf)
+
+				
+Some other image data starts at 0x00009B65
+	pointer to 0x00009B65 at 0x000D637B
+		pointer to 0x000D636E at 0x000D6D38
+			pointer to 0x000D6D24 at 0x000D7BCE (possibly related to ..../hone01.tga)
+				
+				
+				
+BA 6C 0D 00 00 00 01 00 09 00 00 00 35 30 5F 6B 31 2E 67 66 30 00 00 00 00 00
+EF 6C 0D 00 00 00 01 00 09 00 00 00 35 30 5F 6B 31 2E 67 66 31 00 00 00 00 00
+
+0B 00 00 00 (strlen)
+62 61 63 6B 67 72 6F 75 6E 64 30 00 (background0)
+02 00 00 00 
+3B 63 0D 00 (ptr to font data struct)
+18 00 (font width)
+12 00 (font height)
+D8 1C FF FF 14 01 05 05 
+4C 63 0D 00 (pointer to palette struct?)
+08 00 02 00 
+DA 1C FF FF 00 01 03 01 
+00
+
+0B 00 00 00 
+62 61 63 6B 67 72 6F 75 6E 64 30 00 
+02 00 00 00 
+3B 63 0D 00 
+18 00 
+12 00 
+E0 1C FF FF 14 01 05 05 
+5D 63 0D 00 
+08 00 02 00 
+E2 1C FF FF 00 01 03 01 
+00
+
+04 00 00 00 00 00 08 00 02 00 01 00 00 E5 5B 00 00
+04 00 00 00 00 00 08 00 02 00 01 00 00 25 5C 00 00
+
+The two different palettes are 24bit color (8r8g8b8a), arranged in a 8x2 grid (this detail appears to be irrelevant other than to indicate theres 16 colors per palette
+The actual font data uses 2bpp, but data for two characters is interlaced in to 4 bit groups.
+The correct pixel data comes from using the correct palette, which arranges the four possible colors for a 2bpp pixel in a different sequence such that the 4bit address into the palette lands on the correct color.
+This means the font images are technically 4bpp, with a redundant palette that only achieves 2bpp color depth.
+No idea how the drop shadow works, presumably this is handled elsewhere maybe by a GS instruction?
