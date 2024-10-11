@@ -699,13 +699,20 @@ def patch_font(font_src_path, resource_path, output_path):
         for token, char in BYTES_TO_CHAR_MINIMAL.items():
             if token in BYTES_TO_CHAR_SPECIAL:
                 continue
+            target_token_idx = token_to_idx(token)
+            if target_token_idx % 2:
+                continue
             target_token_idx = token_to_idx(token)//2
+            _token_idx_orig = token_to_idx(token)
+            print(f"Patching target token {token} with texture idx {target_token_idx}, raw idx {_token_idx_orig}")
             source_token = translator.char_to_bytes[char][0]
             source_token_idx = token_to_idx(source_token)//2
+            _src_token_idx_orig = token_to_idx(source_token)
+            print(f"Pulling data from source token {source_token} with texture idx {source_token_idx}, raw idx {_src_token_idx_orig}")
             pxl_data = source_ex.get_pixel_bytes(source_token_idx)
             #_source_img = source_ex.get_image(source_token_idx)
             #_source_img.save(
-            #    sanitize_filename(f"{char}_{source_token}_{source_token_idx}.png")
+            #    sanitize_filename(f"{_token_idx_orig}_{source_token}_{source_token_idx}_{char}.png")
             #)
 
             target_ex.overwrite_pixel_bytes(target_token_idx, pxl_data)

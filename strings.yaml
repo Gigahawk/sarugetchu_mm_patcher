@@ -41,6 +41,19 @@
 "リトライ":
   english: "Restart"
 
+# Pause Menu dialogs
+"本当にリタイアしますか？":
+  #english: "Are you sure you want to retire?"
+  english: "1234567890\nABCDEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyz"
+"本当にリトライしますか？":
+  #english: "Are you sure you want to restart?"
+  english: "ー、。ぁヶ○Χ□△!?()*+-&@⋅.:^_ω〜➝ ァ'\""
+
+
+
+
+
+
 #"そうびへんこう":
 #  english: "WWWWWWW"
 #"ゴールドヘアー":
@@ -1132,6 +1145,8 @@ Gクラッシャー:
 
 
 # Options screen
+"オプション設定":
+  english: "Options"
 "サウンド":
   english: "Sound"
 "モノラル":
@@ -1146,6 +1161,11 @@ Gクラッシャー:
   english: "On"
 "オフ":
   english: "Off"
+# For menus with patched encodings
+"BGM":
+  english: "BGM"
+"SE":
+  english: "SE"
 
 # Options screen warnings
 "進行<しんこう>ファイル%をセーブ中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":

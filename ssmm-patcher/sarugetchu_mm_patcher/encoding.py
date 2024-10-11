@@ -3515,8 +3515,8 @@ BYTES_TO_CHAR_VS_PAUSE = {
     b"\x88\xB8": "シ",
     b"\x88\xB9": "ョ",
     b"\x88\xBA": "ン",
-    b"\x88\xBB": "??",
-    b"\x88\xBC": "??",
+    b"\x88\xBB": "設",
+    b"\x88\xBC": "定",
     b"\x88\xBD": "そ",
     b"\x88\xBE": "さ",
     b"\x88\xBF": "??",
@@ -3803,18 +3803,37 @@ class EncodingTranslator:
             '\u3400' <= c <= '\u4DBF' or  # CJK Unified Ideographs Extension A
             '\uF900' <= c <= '\uFAFF'     # CJK Compatibility Ideographs
         )
+def _token_to_offset(token: bytes) -> int:
+    # Not sure what this actually does, but it's copied from the decomp
+    if len(token) != 2:
+        raise ValueError(f"Invalid token {token}")
+    token_int = int.from_bytes(token, byteorder="big")
+
+    group = token_int >> 8
+    group_base = group - 0x81
+    item = token_int & 0xFF
+    if 0x1E < group_base:
+        group_base = group
+        if group - 0xE0 < 0x10:
+            group_base = group - 0xC1
+    group_base_2 = group_base*2
+    group_base = item - 0x40
+    if 0x3E < group_base:
+        if item - 0x80 < 0x1F:
+            group_base = item - 0x41
+        else:
+            var1 = item - 0x9F
+            group_base = item
+            if var1 < 0x5E:
+                group_base_2 += 1
+                group_base = var1
+    out = (group_base_2 + 1)*0x100 + group_base + 0x2021
+    return out
 
 def token_to_idx(token: bytes) -> int:
-    token_int = int.from_bytes(token, byteorder="big")
-    token_idx = 0x889F
-    idx = 0
-    while True:
-        if token_idx == token_int:
-            return idx
-        if token_idx > 0x9600:
-            raise ValueError(f"Token {token} is not a valid token")
-
-        idx += 1
-        token_idx += 1
-        if token_idx & 0xFF == 0xFD:
-            token_idx += 67
+    # Copied from decomp
+    ofst = _token_to_offset(token)
+    out = (ofst >> 8) * 0x5e + (ofst & 0xff) - 0x11C1
+    if out < 0:
+        out = 0
+    return out
