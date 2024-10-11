@@ -106,6 +106,36 @@
             ssmm-patcher extract-base -o "$output" "$input"
           '
       '';
+      data-unpacked-named-installPhase = data-unpacked: ''
+        find ${data-unpacked}/DATA1 -type f | \
+          xargs -P ${processes} -I {} bash -c '
+            input="{}"
+            base_name=$(basename "$input")
+            hash="''${base_name#*_}"
+            hash="''${hash%.gz}"
+            path=$(ssmm-patcher hash-to-path ${./data0_hashes.csv} $hash)
+            if [[ $? -eq 0 ]]; then
+              dir=$(dirname $path)
+              mkdir -p "$out/DATA1/$dir"
+              cp "$input" "$out/DATA1/$path"
+            fi
+          '
+        wait
+        find ${data-unpacked}/DATA3 -type f | \
+          xargs -P ${processes} -I {} bash -c '
+            input="{}"
+            base_name=$(basename "$input")
+            hash="''${base_name#*_}"
+            hash="''${hash%.gz}"
+            path=$(ssmm-patcher hash-to-path ${./data2_hashes.csv} $hash)
+            if [[ $? -eq 0 ]]; then
+              dir=$(dirname $path)
+              mkdir -p "$out/DATA3/$dir"
+              cp "$input" "$out/DATA3/$path"
+            fi
+          '
+        wait
+      '';
       version = "1";
       resourceFiles = [
         #"043_b1fc2c81" # gz/game_common.gz
@@ -174,7 +204,7 @@
         #"731_a32b0671"
         #"733_ff7a6abd"
         #"735_0a42108c"
-        #"737_e5d5ceb1" # gz/stage.50_k1.gz
+        "737_e5d5ceb1" # gz/stage.50_k1.gz
         #"739_2ff511d3"
         #"741_1e656e38" # gz/stage.52_metro.gz
         #"743_9ce16be2" # gz/stage.53_bay.gz
@@ -427,37 +457,12 @@
             true
           '';
 
-          installPhase = ''
-            find ${self.packages.${system}.data-jp-unpacked}/DATA1 -type f | \
-              xargs -P ${processes} -I {} bash -c '
-                input="{}"
-                base_name=$(basename "$input")
-                hash="''${base_name#*_}"
-                hash="''${hash%.gz}"
-                path=$(ssmm-patcher hash-to-path ${./data0_hashes.csv} $hash)
-                if [[ $? -eq 0 ]]; then
-                  dir=$(dirname $path)
-                  mkdir -p "$out/DATA1/$dir"
-                  cp "$input" "$out/DATA1/$path"
-                fi
-              '
-            wait
-            find ${self.packages.${system}.data-jp-unpacked}/DATA3 -type f | \
-              xargs -P ${processes} -I {} bash -c '
-                input="{}"
-                base_name=$(basename "$input")
-                hash="''${base_name#*_}"
-                hash="''${hash%.gz}"
-                path=$(ssmm-patcher hash-to-path ${./data2_hashes.csv} $hash)
-                if [[ $? -eq 0 ]]; then
-                  dir=$(dirname $path)
-                  mkdir -p "$out/DATA3/$dir"
-                  cp "$input" "$out/DATA3/$path"
-                fi
-              '
-            wait
-          '';
+          installPhase = data-unpacked-named-installPhase self.packages.${system}.data-jp-unpacked;
         };
+        data-cn-unpacked-named = self.packages.${system}.data-jp-unpacked-named.overrideAttrs (old: {
+          pname = "mm-cn-data-unpacked-named";
+          installPhase = data-unpacked-named-installPhase self.packages.${system}.data-cn-unpacked;
+        });
         data-jp-extracted = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-jp-data-extracted";
@@ -515,7 +520,35 @@
                   -s $src \
                   "${self.packages.${system}.data-jp-extracted}/DATA1/{}"
               '
+
+            cp "${self.packages.${system}.data-jp-extracted}/DATA1/737_e5d5ceb1" 737_e5d5ceb1_patched
+            chmod 777 737_e5d5ceb1_patched
+            #printf '\xFF%.0s' {1..21271} | dd of=737_e5d5ceb1_patched bs=1 seek=2245 conv=notrunc
+            printf '\xFF%.0s' {1..2000} | dd of=737_e5d5ceb1_patched bs=1 seek=679413 conv=notrunc
+            #printf '\xE5%.0s' {1..1} | dd of=737_e5d5ceb1_patched bs=1 seek=877418 conv=notrunc
+            #printf '\x5B%.0s' {1..1} | dd of=737_e5d5ceb1_patched bs=1 seek=877419 conv=notrunc
           '';
+          # byte 0xFF start 2254 len 64, whites out first thirdish of 一 and リ (zeroth and first char)
+          # byte 0xFF start 2254 len 128, whites out first two thirdsish of 一 and リ (zeroth and first char)
+          # byte 0xFF start 2254 len 256, whites out all of of 一 and リ (zeroth and first char) and top little bit of ト and ラ (second/third)
+          # byte 0xFF start 2254 len 1, no apparent changes
+          # byte 0xFF start 2256 len 1, no apparent changes
+          # byte 0xFF start 2256 len 8, whites out first 90% of second line of 一 and リ (zeroth and first char)
+          # byte 0xFF start 2256 len 4, whites out first 20% of second line of 一 and リ (zeroth and first char)
+          # byte 0xFF start 2256 len 2, whites out first (2 pixels?) of second line of 一 and リ (zeroth and first char)
+          # byte 0xFF start 2257 len 1, whites out first (2 pixels?) of second line of 一 and リ (zeroth and first char)
+          # byte 0xF0 start 2257 len 8, causes dots on first 90% of second line of 一 and リ (zeroth and first char)
+          # byte 0x0F start 2257 len 8, causes dots on first 90% of second line of 一 and リ (zeroth and first char)
+          # byte 0xAA start 2257 len 8, bright grey on 16px of second line of 一 and リ (zeroth and first char)
+          # byte 0xFF start 2257 len 8, white on 16px of second line of 一 and リ (zeroth and first char)
+          # byte 0xCC start 2257 len 8, white on 16px of second line of リ (first char)
+          # byte 0x33 start 2257 len 8, white on 16px of second line of 一 (zeroth char)
+          # byte 0x03 start 2257 len 1, white on first px of second line of 一 (zeroth char)
+          # byte 0x33 start 2257 len 9, white on all of second line (18px) of 一 (zeroth char)
+          # byte 0x33 start 2257 len 10, white on all of second line (18px) of 一 (zeroth char)
+          # byte 0x33 start 2257 len 33, white on all of three lines after first (18px) of 一 (zeroth char)
+          # byte 0x33 start 2257 len 13, white on all of second line (18px) and 2px of next line of 一 (zeroth char)
+          # byte 0x33 start 2245 len 1, white on first 2px of first line of 一 (zeroth char)
 
           installPhase = ''
             find . -name '*_patched' -type f | \
@@ -536,6 +569,7 @@
               xargs -P ${processes} -I {} bash -c '
                 gzip -9 -c "${self.packages.${system}.data-patched}/DATA1_patched/{}_patched" > "{}_patched.gz"
               '
+            #cp ${self.packages.${system}.data-cn-unpacked}/DATA1/735_e5d5ceb1.gz 737_e5d5ceb1_patched.gz
           '';
 
           installPhase = ''

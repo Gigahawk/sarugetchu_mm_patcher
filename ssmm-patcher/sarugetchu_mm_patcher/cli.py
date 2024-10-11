@@ -14,6 +14,7 @@ from time import sleep
 import yaml
 from ps2isopatcher.iso import Ps2Iso, TreeFile, walk_tree
 import click
+from pathvalidate import sanitize_filepath
 
 import sarugetchu_mm_patcher.util as util
 import sarugetchu_mm_patcher.mux as mux
@@ -592,6 +593,84 @@ def find_string(target, extracted_path, csv_path, print_to_null, hash, hex_):
                 )
                 click.echo(string)
                 click.echo(tb.hex(sep=" "))
+@cli.command()
+@click.argument(
+    "resource_path",
+    type=click.Path(),
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def dump_textures(resource_path, output_path):
+    resource_path = Path(resource_path)
+    if output_path is None:
+        output_path = Path(os.getcwd()) / f"{resource_path.stem}_textures"
+    else:
+        output_path = Path(output_path)
+    output_path.mkdir(parents=True, exist_ok=True)
+    with open(resource_path, "rb") as f:
+        resource_bytes = bytearray(f.read())
+
+    texture_extensions = [
+        b".gf0\x00",
+        b".gf1\x00",
+        # Seems to just produce garbage, probably not being parsed correctly
+        b".tga\x00",
+    ]
+    for ext in texture_extensions:
+        string_data = util.find_strings(resource_bytes, ext)
+        for sd in string_data:
+            click.echo(f"Found file entry {sd['value']}")
+            img_struct_addr_idx = sd["start"] - 0xC
+            img_struct_addr = int.from_bytes(
+                resource_bytes[img_struct_addr_idx:img_struct_addr_idx + 4],
+                byteorder="little"
+            )
+            click.echo(f"Image struct header is at {hex(img_struct_addr)}")
+            img_struct = util.parse_img_struct(resource_bytes, img_struct_addr)
+            click.echo("img_struct:")
+            util.HexPrettyPrinter().pprint(img_struct)
+            px_data_struct = util.parse_pixel_data_struct(
+                resource_bytes,
+                img_struct["px_data_struct_addr"]
+            )
+            click.echo("px_data_struct:")
+            util.HexPrettyPrinter().pprint(px_data_struct)
+            plt_data_struct = util.parse_pixel_data_struct(
+                resource_bytes,
+                img_struct["plt_data_struct_addr"]
+            )
+            click.echo("plt_data_struct:")
+            util.HexPrettyPrinter().pprint(plt_data_struct)
+            _out_path: Path = sanitize_filepath(output_path / sd["value"].decode())
+            _out_path.mkdir(parents=True, exist_ok=True)
+            for img_idx in range(0, px_data_struct["num_imgs"]):
+                # TODO: only support 4bpp for now
+                px_start = (
+                    px_data_struct["data_addr"]
+                    + (
+                        img_idx
+                        *px_data_struct["width"]
+                        *px_data_struct["height"]
+                        /2
+                    )
+                    # Random garbage at the end???
+                    + img_idx*8
+                )
+                if int(px_start) != px_start:
+                    raise ValueError(f"Got px_start {px_start}")
+                px_start = int(px_start)
+                img = util.dump_image(
+                    resource_bytes,
+                    px_start,
+                    plt_data_struct["data_addr"],
+                    px_data_struct["width"],
+                    px_data_struct["height"],
+                )
+                img.save(_out_path / f"{img_idx:04d}.png")
 
 if __name__ == "__main__":
     cli()

@@ -12,6 +12,8 @@ ps2isopatcher = {git = "https://github.com/Gigahawk/ps2isopatcher.git"}
 pyyaml = "^6.0.2"
 googletrans = "3.1.a0"
 bitstring = "^4.2.3"
+pillow = "^10.4.0"
+pathvalidate = "^3.2.1"
 
 [tool.poetry.scripts]
 ssmm-patcher = "sarugetchu_mm_patcher.cli:cli"
