@@ -21,7 +21,11 @@ import sarugetchu_mm_patcher.mux as mux
 from sarugetchu_mm_patcher.index import (
     IndexEntry, get_index_list, index_list_to_bin
 )
-from sarugetchu_mm_patcher.encoding import EncodingTranslator
+from sarugetchu_mm_patcher.encoding import (
+    EncodingTranslator,
+    BYTES_TO_CHAR_MINIMAL, BYTES_TO_CHAR_DEFAULT, BYTES_TO_CHAR_SPECIAL,
+    token_to_idx
+)
 
 EXTRACT_PATH = Path(".extracted")
 DATA0_PATH = "/PDATA/DATA0.BIN;1"
@@ -624,53 +628,73 @@ def dump_textures(resource_path, output_path):
         string_data = util.find_strings(resource_bytes, ext)
         for sd in string_data:
             click.echo(f"Found file entry {sd['value']}")
-            img_struct_addr_idx = sd["start"] - 0xC
-            img_struct_addr = int.from_bytes(
-                resource_bytes[img_struct_addr_idx:img_struct_addr_idx + 4],
-                byteorder="little"
-            )
-            click.echo(f"Image struct header is at {hex(img_struct_addr)}")
-            img_struct = util.parse_img_struct(resource_bytes, img_struct_addr)
+            ex = util.ImgExtractor(resource_bytes, sd["value"])
+            click.echo(f"Image struct is at {hex(ex.img_struct_addr)}")
             click.echo("img_struct:")
-            util.HexPrettyPrinter().pprint(img_struct)
-            px_data_struct = util.parse_pixel_data_struct(
-                resource_bytes,
-                img_struct["px_data_struct_addr"]
-            )
+            util.HexPrettyPrinter().pprint(ex.img_struct)
             click.echo("px_data_struct:")
-            util.HexPrettyPrinter().pprint(px_data_struct)
-            plt_data_struct = util.parse_pixel_data_struct(
-                resource_bytes,
-                img_struct["plt_data_struct_addr"]
-            )
+            util.HexPrettyPrinter().pprint(ex.px_data_struct)
             click.echo("plt_data_struct:")
-            util.HexPrettyPrinter().pprint(plt_data_struct)
+            util.HexPrettyPrinter().pprint(ex.plt_data_struct)
             _out_path: Path = sanitize_filepath(output_path / sd["value"].decode())
             _out_path.mkdir(parents=True, exist_ok=True)
-            for img_idx in range(0, px_data_struct["num_imgs"]):
-                # TODO: only support 4bpp for now
-                px_start = (
-                    px_data_struct["data_addr"]
-                    + (
-                        img_idx
-                        *px_data_struct["width"]
-                        *px_data_struct["height"]
-                        /2
-                    )
-                    # Random garbage at the end???
-                    + img_idx*8
-                )
-                if int(px_start) != px_start:
-                    raise ValueError(f"Got px_start {px_start}")
-                px_start = int(px_start)
-                img = util.dump_image(
-                    resource_bytes,
-                    px_start,
-                    plt_data_struct["data_addr"],
-                    px_data_struct["width"],
-                    px_data_struct["height"],
-                )
+            for img_idx in range(ex.num_imgs):
+                img = ex.get_image(img_idx)
                 img.save(_out_path / f"{img_idx:04d}.png")
+
+@cli.command()
+@click.argument(
+    "font_src_path",
+    type=click.Path(),
+)
+@click.argument(
+    "resource_path",
+    type=click.Path(),
+)
+@click.option(
+    "--hash",
+    default=None,
+    type=str
+)
+@click.option(
+    "--font-name",
+    default=".gf0",
+    type=str
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def patch_font(font_src_path, resource_path, hash, font_name, output_path):
+    font_src_path = Path(font_src_path)
+    resource_path = Path(resource_path)
+    if output_path is None:
+        output_path = Path(os.getcwd()) / f"{resource_path.stem}_patched"
+    else:
+        output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(font_src_path, "rb") as f:
+        font_src_bytes = bytearray(f.read())
+    with open(resource_path, "rb") as f:
+        resource_bytes = bytearray(f.read())
+
+    translator = EncodingTranslator(encoding=BYTES_TO_CHAR_DEFAULT)
+    source_ex = util.ImgExtractor(font_src_bytes, "sv_msg.gf0")
+    target_ex = util.ImgExtractor(resource_bytes, font_name)
+    for token, char in BYTES_TO_CHAR_MINIMAL.items():
+        if token in BYTES_TO_CHAR_SPECIAL:
+            continue
+        target_token_idx = token_to_idx(token)
+        source_token = translator.char_to_bytes[char][0]
+        source_token_idx = token_to_idx(source_token)
+        pxl_data = source_ex.get_pixel_bytes(source_token_idx)
+        target_ex.overwrite_pixel_bytes(target_token_idx, pxl_data)
+    with open(output_path, "wb") as f:
+        f.write(target_ex.data)
+
 
 if __name__ == "__main__":
     cli()

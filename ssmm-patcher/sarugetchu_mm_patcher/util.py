@@ -239,3 +239,84 @@ def dump_image(
                 a = 255
             img.putpixel((x, y), (r, g, b, a))
     return img
+
+
+class ImgExtractor:
+    def __init__(self, data: bytes, fname: str):
+        self.data = data
+        string_data = find_strings(self.data, fname)[0]
+        img_struct_addr_idx = string_data["start"] - 0xC
+        self.img_struct_addr = int.from_bytes(
+            self.data[img_struct_addr_idx:img_struct_addr_idx + 4],
+            byteorder="little"
+        )
+        self.img_struct = parse_img_struct(self.data, self.img_struct_addr)
+        self.px_data_struct = parse_pixel_data_struct(
+            self.data, self.img_struct["px_data_struct_addr"]
+        )
+        self.plt_data_struct = parse_pixel_data_struct(
+            self.data, self.img_struct["plt_data_struct_addr"]
+        )
+
+    @property
+    def num_imgs(self) -> int:
+        return self.px_data_struct["num_imgs"]
+
+    def _px_start(self, idx: int) -> int:
+        # TODO: only support 4bpp for now
+        px_start = (
+            self.px_data_struct["data_addr"]
+            + (
+                idx
+                *self.px_data_struct["width"]
+                *self.px_data_struct["height"]
+                /2
+            )
+            # Random garbage at the end???
+            + idx*8
+        )
+        if int(px_start) != px_start:
+            raise ValueError(f"Got px_start {px_start}")
+        px_start = int(px_start)
+        return px_start
+
+    def get_image(self, idx: int) -> Image:
+        if idx >= self.num_imgs:
+            raise ValueError(
+                f"Only {self.num_imgs} available, {idx} is not a valid index"
+            )
+        px_start = self._px_start(idx)
+        img = dump_image(
+            self.data,
+            px_start,
+            self.plt_data_struct["data_addr"],
+            self.px_data_struct["width"],
+            self.px_data_struct["height"],
+        )
+        return img
+
+    def get_pixel_bytes(self, idx: int) -> bytes:
+        if idx >= self.num_imgs:
+            raise ValueError(
+                f"Only {self.num_imgs} available, {idx} is not a valid index"
+            )
+        px_start = self._px_start(idx)
+        px_end = int(
+            px_start
+            + (
+                self.px_data_struct["width"]
+                *self.px_data_struct["height"]
+                /2
+            )
+        )
+
+        return self.data[px_start:px_end]
+    def overwrite_pixel_bytes(self, idx: int, pxl_data: bytes):
+        px_start = self._px_start(idx)
+        # Allow writing to data
+        if not isinstance(self.data, bytearray):
+            self.data = bytearray(self.data)
+        self.data[px_start:px_start + len(pxl_data)] = pxl_data
+
+
+

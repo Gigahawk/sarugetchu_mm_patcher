@@ -244,6 +244,8 @@
                 }
               );
             });
+          # Dependency check is broken for git dependencies on current nixpkgs
+          dontCheckRuntimeDeps = true;
         };
         default = self.packages.${system}.ssmm-patcher;
         iso-jp-extracted = with import nixpkgs { inherit system; };
@@ -521,12 +523,16 @@
                   "${self.packages.${system}.data-jp-extracted}/DATA1/{}"
               '
 
-            cp "${self.packages.${system}.data-jp-extracted}/DATA1/737_e5d5ceb1" 737_e5d5ceb1_patched
-            chmod 777 737_e5d5ceb1_patched
+            ssmm-patcher patch-font \
+              "${self.packages.${system}.data-jp-extracted}/DATA1/070_00940549" \
+              "${self.packages.${system}.data-jp-extracted}/DATA1/737_e5d5ceb1"
+
+            #cp "${self.packages.${system}.data-jp-extracted}/DATA1/737_e5d5ceb1" 737_e5d5ceb1_patched
+            #chmod 777 737_e5d5ceb1_patched
             #printf '\xFF%.0s' {1..21271} | dd of=737_e5d5ceb1_patched bs=1 seek=2245 conv=notrunc
-            printf '\xFF%.0s' {1..2000} | dd of=737_e5d5ceb1_patched bs=1 seek=679413 conv=notrunc
-            #printf '\xE5%.0s' {1..1} | dd of=737_e5d5ceb1_patched bs=1 seek=877418 conv=notrunc
-            #printf '\x5B%.0s' {1..1} | dd of=737_e5d5ceb1_patched bs=1 seek=877419 conv=notrunc
+            ##printf '\xFF%.0s' {1..2000} | dd of=737_e5d5ceb1_patched bs=1 seek=679413 conv=notrunc
+            ##printf '\xE5%.0s' {1..1} | dd of=737_e5d5ceb1_patched bs=1 seek=877418 conv=notrunc
+            ##printf '\x5B%.0s' {1..1} | dd of=737_e5d5ceb1_patched bs=1 seek=877419 conv=notrunc
           '';
           # byte 0xFF start 2254 len 64, whites out first thirdish of 一 and リ (zeroth and first char)
           # byte 0xFF start 2254 len 128, whites out first two thirdsish of 一 and リ (zeroth and first char)

@@ -1,4 +1,5 @@
 from collections import defaultdict
+import sarugetchu_mm_patcher.util as util
 
 # Presumably these encodings never change
 BYTES_TO_CHAR_SPECIAL = {
@@ -3587,6 +3588,113 @@ BYTES_TO_CHAR_VS_PAUSE = {
     # Valid encodings seem to end here
 }
 
+# Minimal encoding to patch into files with encodings that don't
+# contain all the characters we need
+BYTES_TO_CHAR_MINIMAL = {
+    **BYTES_TO_CHAR_SPECIAL,
+
+    # Numerics
+    b"\x88\x9F": "1",
+    b"\x88\xA0": "2",
+    b"\x88\xA1": "3",
+    b"\x88\xA2": "4",
+    b"\x88\xA3": "5",
+    b"\x88\xA4": "6",
+    b"\x88\xA5": "7",
+    b"\x88\xA6": "8",
+    b"\x88\xA7": "9",
+    b"\x88\xA8": "0",
+
+    # Capital letters
+    b"\x88\xA9": "A",
+    b"\x88\xAA": "B",
+    b"\x88\xAB": "C",
+    b"\x88\xAC": "D",
+    b"\x88\xAD": "E",
+    b"\x88\xAE": "F",
+    b"\x88\xAF": "G",
+    b"\x88\xB0": "H",
+    b"\x88\xB1": "I",
+    b"\x88\xB2": "J",
+    b"\x88\xB3": "K",
+    b"\x88\xB4": "L",
+    b"\x88\xB5": "M",
+    b"\x88\xB6": "N",
+    b"\x88\xB7": "O",
+    b"\x88\xB8": "P",
+    b"\x88\xB9": "Q",
+    b"\x88\xBA": "R",
+    b"\x88\xBB": "S",
+    b"\x88\xBC": "T",
+    b"\x88\xBD": "U",
+    b"\x88\xBE": "V",
+    b"\x88\xBF": "W",
+    b"\x88\xC0": "X",
+    b"\x88\xC1": "Y",
+    b"\x88\xC2": "Z",
+
+    # Lowercase letters
+    b"\x88\xC3": "a",
+    b"\x88\xC4": "b",
+    b"\x88\xC5": "c",
+    b"\x88\xC6": "d",
+    b"\x88\xC7": "e",
+    b"\x88\xC8": "f",
+    b"\x88\xC9": "g",
+    b"\x88\xCA": "h",
+    b"\x88\xCB": "i",
+    b"\x88\xCC": "j",
+    b"\x88\xCD": "k",
+    b"\x88\xCE": "l",
+    b"\x88\xCF": "m",
+    b"\x88\xD0": "n",
+    b"\x88\xD1": "o",
+    b"\x88\xD2": "p",
+    b"\x88\xD3": "q",
+    b"\x88\xD4": "r",
+    b"\x88\xD5": "s",
+    b"\x88\xD6": "t",
+    b"\x88\xD7": "u",
+    b"\x88\xD8": "v",
+    b"\x88\xD9": "w",
+    b"\x88\xDA": "x",
+    b"\x88\xDB": "y",
+    b"\x88\xDC": "z",
+
+    # Comma and period are two different images unfortunately
+    b"\x88\xDD": "ー",
+    b"\x88\xDE": "、",
+    b"\x88\xDF": "。",
+    b"\x88\xE0": "ぁ",
+
+    # Misc punctuation
+    b"\x88\xE1": "△",
+    b"\x88\xE2": "!",
+    b"\x88\xE3": "?",
+    b"\x88\xE4": "(",
+    b"\x88\xE5": ")",
+    b"\x88\xE6": "*",
+    b"\x88\xE7": "+",
+    b"\x88\xE8": "-",
+    b"\x88\xE9": "&",
+    b"\x88\xEA": "@",
+    b"\x88\xEB": "⋅",
+    b"\x88\xEC": ".",
+    b"\x88\xED": ":",
+    b"\x88\xEE": "^",
+    b"\x88\xEF": "_",
+    b"\x88\xF0": "ω",
+    b"\x88\xF1": "Д",
+    b"\x88\xF2": "∀",
+    b"\x88\xF3": "⊃",
+    b"\x88\xF4": "♂",
+    b"\x88\xF5": "♀",
+    b"\x88\xF6": "♪",
+    b"\x89\xF7": "〜",
+    b"\x89\xF8": "➝",
+
+}
+
 ENCODING_MAP = {
     "00940549": BYTES_TO_CHAR_DEFAULT,
     "87F51E0C": BYTES_TO_CHAR_DEFAULT,
@@ -3594,10 +3702,13 @@ ENCODING_MAP = {
 }
 
 class EncodingTranslator:
-    def __init__(self, hash: str|None=None):
+    def __init__(self, hash: str|None=None, encoding: dict[bytes,str]|None=None):
         if isinstance(hash, str):
             hash = hash.upper()
-        self.bytes_to_char = ENCODING_MAP.get(hash, BYTES_TO_CHAR_DEFAULT)
+        if encoding:
+            self.bytes_to_char = encoding
+        else:
+            self.bytes_to_char = ENCODING_MAP.get(hash, BYTES_TO_CHAR_DEFAULT)
 
         self.char_to_bytes = defaultdict(list)
         for b, c in self.bytes_to_char.items():
@@ -3685,3 +3796,18 @@ class EncodingTranslator:
             '\u3400' <= c <= '\u4DBF' or  # CJK Unified Ideographs Extension A
             '\uF900' <= c <= '\uFAFF'     # CJK Compatibility Ideographs
         )
+
+def token_to_idx(token: bytes) -> int:
+    token_int = int.from_bytes(token, byteorder="big")
+    token_idx = 0x889F
+    idx = 0
+    while True:
+        if token_idx == token_int:
+            return idx
+        if token_idx > 0x9600:
+            raise ValueError(f"Token {token} is not a valid token")
+
+        idx += 1
+        token_idx += 1
+        if token_idx & 0xFF == 0xFD:
+            token_idx += 67
