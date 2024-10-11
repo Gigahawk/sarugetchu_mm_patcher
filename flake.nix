@@ -518,14 +518,18 @@
           buildPhase = ''
             echo "${resourceFilesStr}" | \
               xargs -P ${processes} -I {} bash -c '
+                name="{}"
+                hash="''${name#*_}"
+                ssmm-patcher patch-font \
+                  -o "{}" \
+                  "${self.packages.${system}.data-jp-extracted}/DATA1/070_00940549" \
+                  "${self.packages.${system}.data-jp-extracted}/DATA1/{}"
+
                 ssmm-patcher patch-resource \
                   -s $src \
-                  "${self.packages.${system}.data-jp-extracted}/DATA1/{}"
+                  --hash "$hash" \
+                  "{}"
               '
-
-            ssmm-patcher patch-font \
-              "${self.packages.${system}.data-jp-extracted}/DATA1/070_00940549" \
-              "${self.packages.${system}.data-jp-extracted}/DATA1/737_e5d5ceb1"
 
             #cp "${self.packages.${system}.data-jp-extracted}/DATA1/737_e5d5ceb1" 737_e5d5ceb1_patched
             #chmod 777 737_e5d5ceb1_patched

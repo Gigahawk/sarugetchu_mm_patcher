@@ -3668,37 +3668,41 @@ BYTES_TO_CHAR_MINIMAL = {
     b"\x88\xE0": "ぁ",
 
     # Misc punctuation
-    b"\x88\xE1": "△",
-    b"\x88\xE2": "!",
-    b"\x88\xE3": "?",
-    b"\x88\xE4": "(",
-    b"\x88\xE5": ")",
-    b"\x88\xE6": "*",
-    b"\x88\xE7": "+",
-    b"\x88\xE8": "-",
-    b"\x88\xE9": "&",
-    b"\x88\xEA": "@",
-    b"\x88\xEB": "⋅",
-    b"\x88\xEC": ".",
-    b"\x88\xED": ":",
-    b"\x88\xEE": "^",
-    b"\x88\xEF": "_",
-    b"\x88\xF0": "ω",
-    b"\x88\xF1": "Д",
-    b"\x88\xF2": "∀",
-    b"\x88\xF3": "⊃",
-    b"\x88\xF4": "♂",
-    b"\x88\xF5": "♀",
-    b"\x88\xF6": "♪",
-    b"\x89\xF7": "〜",
-    b"\x89\xF8": "➝",
-
+    b"\x88\xE1": "ヶ",
+    b"\x88\xE2": "○",
+    b"\x88\xE3": "Χ",
+    b"\x88\xE4": "□",
+    b"\x88\xE5": "△",
+    b"\x88\xE6": "!",
+    b"\x88\xE7": "?",
+    b"\x88\xE8": "(",
+    b"\x88\xE9": ")",
+    b"\x88\xEA": "*",
+    b"\x88\xEB": "+",
+    b"\x88\xEC": "-",
+    b"\x88\xED": "&",
+    b"\x88\xEE": "@",
+    b"\x88\xEF": "⋅",
+    b"\x88\xF0": ".",
+    b"\x88\xF1": ":",
+    b"\x88\xF2": "^",
+    b"\x88\xF3": "_",
+    b"\x88\xF4": "ω",
+    b"\x88\xF5": "〜",
+    b"\x88\xF6": "➝",
+    b"\x89\xF7": " ",
+    b"\x89\xF8": "ァ",
+    b"\x89\xF9": "'",
+    b"\x89\xFA": "\"",
+    #b"\x95\xFB":
+    #b"\x95\xFC":
 }
 
 ENCODING_MAP = {
-    "00940549": BYTES_TO_CHAR_DEFAULT,
-    "87F51E0C": BYTES_TO_CHAR_DEFAULT,
-    "3C6CF60B": BYTES_TO_CHAR_DEFAULT,
+    "00940549": BYTES_TO_CHAR_DEFAULT,  # gz/menu_common.gz
+    "87F51E0C": BYTES_TO_CHAR_DEFAULT,  # gz/menu_story.01_boss01_gori01.gz
+    "3C6CF60B": BYTES_TO_CHAR_DEFAULT,  # gz/menu_vs.gz
+    "E5D5CEB1": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.50_k1.gz
 }
 
 class EncodingTranslator:
@@ -3708,7 +3712,7 @@ class EncodingTranslator:
         if encoding:
             self.bytes_to_char = encoding
         else:
-            self.bytes_to_char = ENCODING_MAP.get(hash, BYTES_TO_CHAR_DEFAULT)
+            self.bytes_to_char = ENCODING_MAP[hash]
 
         self.char_to_bytes = defaultdict(list)
         for b, c in self.bytes_to_char.items():
@@ -3722,6 +3726,9 @@ class EncodingTranslator:
 
     def string_to_bytes(self, s: str) -> list[bytes]:
         def recurse(idx: int):
+            #if s == "Accept %?":
+            #    import pdb;pdb.set_trace()
+
             if idx == len(s):
                 return [b""]
 

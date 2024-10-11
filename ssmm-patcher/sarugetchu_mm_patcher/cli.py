@@ -1,6 +1,7 @@
 import sys
 import csv
 import subprocess
+import hashlib
 from pprint import pformat
 from typing import Any, Iterable
 from pathlib import Path
@@ -15,6 +16,7 @@ import yaml
 from ps2isopatcher.iso import Ps2Iso, TreeFile, walk_tree
 import click
 from pathvalidate import sanitize_filepath
+from pathvalidate import sanitize_filename
 
 import sarugetchu_mm_patcher.util as util
 import sarugetchu_mm_patcher.mux as mux
@@ -440,7 +442,7 @@ def pack_data(index_path, data_path, entry):
     type=click.Path(),
 )
 def patch_resource(resource_path, strings_path, hash, output_path):
-    encoder = EncodingTranslator(hash)
+    source_encoder = EncodingTranslator(hash)
     resource_path = Path(resource_path)
     if strings_path is None:
         strings_path = Path(os.getcwd()) / "strings.yaml"
@@ -458,9 +460,16 @@ def patch_resource(resource_path, strings_path, hash, output_path):
         raise ValueError(f"Empty strings file {strings_path}")
     with open(resource_path, "rb") as f:
         resource_bytes = bytearray(f.read())
-    orig_size = len(resource_bytes)
+
+    if util.find_strings(resource_bytes, "sv_msg.gf0"):
+        # Sorta hacky, technically this should always be the default font
+        target_encoder = EncodingTranslator(hash)
+    else:
+        target_encoder = EncodingTranslator(encoding=BYTES_TO_CHAR_MINIMAL)
+
+    orig_offset_idxs = util.cache_file_offset_idxs(resource_bytes)
     for jap_str, info in strings_dict.items():
-        jap_bytestrs = encoder.string_to_bytes(jap_str)
+        jap_bytestrs = source_encoder.string_to_bytes(jap_str)
 
         # TODO: support other langs?
         try:
@@ -472,7 +481,7 @@ def patch_resource(resource_path, strings_path, hash, output_path):
         if isinstance(english, str):
             id = None
             try:
-                bs = encoder.string_to_bytes(english)[0]
+                bs = target_encoder.string_to_bytes(english)[0]
             except IndexError as e:
                 click.echo(
                     f"Error: could not encode {repr(english)}"
@@ -482,19 +491,19 @@ def patch_resource(resource_path, strings_path, hash, output_path):
         elif isinstance(english, dict):
             replacements = {}
             for id, s in english.items():
-                replacements[bytes.fromhex(id)] = encoder.string_to_bytes(s)[0]
+                replacements[bytes.fromhex(id)] = target_encoder.string_to_bytes(s)[0]
         else:
             raise ValueError(f"invalid translation structure {english}")
 
         for jb in jap_bytestrs:
             for id, new_bytestr in replacements.items():
                 resource_bytes = resource_bytes.replace(
-                    encoder.wrap_string(jb, id=id),
-                    encoder.wrap_string(new_bytestr, id=id),
+                    source_encoder.wrap_string(jb, id=id),
+                    target_encoder.wrap_string(new_bytestr, id=id),
                 )
-    new_size = len(resource_bytes)
-    size_diff = new_size - orig_size
-    resource_bytes = util.patch_offsets(resource_bytes, size_diff)
+
+    new_offset_idxs = util.cache_file_offset_idxs(resource_bytes)
+    resource_bytes = util.patch_offsets(resource_bytes, orig_offset_idxs, new_offset_idxs)
     with open(output_path, "wb") as f:
         f.write(resource_bytes)
 
@@ -652,24 +661,15 @@ def dump_textures(resource_path, output_path):
     type=click.Path(),
 )
 @click.option(
-    "--hash",
-    default=None,
-    type=str
-)
-@click.option(
-    "--font-name",
-    default=".gf0",
-    type=str
-)
-@click.option(
     "-o", "--output-path",
     default=None,
     show_default=True,
     type=click.Path(),
 )
-def patch_font(font_src_path, resource_path, hash, font_name, output_path):
+def patch_font(font_src_path, resource_path, output_path):
     font_src_path = Path(font_src_path)
     resource_path = Path(resource_path)
+
     if output_path is None:
         output_path = Path(os.getcwd()) / f"{resource_path.stem}_patched"
     else:
@@ -683,17 +683,35 @@ def patch_font(font_src_path, resource_path, hash, font_name, output_path):
 
     translator = EncodingTranslator(encoding=BYTES_TO_CHAR_DEFAULT)
     source_ex = util.ImgExtractor(font_src_bytes, "sv_msg.gf0")
-    target_ex = util.ImgExtractor(resource_bytes, font_name)
-    for token, char in BYTES_TO_CHAR_MINIMAL.items():
-        if token in BYTES_TO_CHAR_SPECIAL:
+    string_data = util.find_strings(resource_bytes, ".gf0")
+    blacklist = [
+        # Don't patch the base font
+        b"sv_msg.gf0",
+        # This file appears to have smaller 16x16 images, not sure what it's
+        # used for
+        b"sv_msg_2.gf0"
+    ]
+    for sd in string_data:
+        if sd["value"] in blacklist:
             continue
-        target_token_idx = token_to_idx(token)
-        source_token = translator.char_to_bytes[char][0]
-        source_token_idx = token_to_idx(source_token)
-        pxl_data = source_ex.get_pixel_bytes(source_token_idx)
-        target_ex.overwrite_pixel_bytes(target_token_idx, pxl_data)
+        click.echo(f"Patching {resource_path} / {sd['value']}")
+        target_ex = util.ImgExtractor(resource_bytes, sd["value"])
+        for token, char in BYTES_TO_CHAR_MINIMAL.items():
+            if token in BYTES_TO_CHAR_SPECIAL:
+                continue
+            target_token_idx = token_to_idx(token)//2
+            source_token = translator.char_to_bytes[char][0]
+            source_token_idx = token_to_idx(source_token)//2
+            pxl_data = source_ex.get_pixel_bytes(source_token_idx)
+            #_source_img = source_ex.get_image(source_token_idx)
+            #_source_img.save(
+            #    sanitize_filename(f"{char}_{source_token}_{source_token_idx}.png")
+            #)
+
+            target_ex.overwrite_pixel_bytes(target_token_idx, pxl_data)
+        resource_bytes = target_ex.data
     with open(output_path, "wb") as f:
-        f.write(target_ex.data)
+        f.write(resource_bytes)
 
 
 if __name__ == "__main__":

@@ -34,33 +34,46 @@ def pad(data: bytes, block_size: int=2048) -> bytes:
     data += bytes(pad_len)
     return data
 
-def patch_offsets(
-        file: bytearray,
-        size_diff: int,
-    ) -> bytearray:
+def cache_file_offset_idxs(
+    file: bytearray,
+) -> dict[bytes, int]:
     targets = [
         b"menu_common/icon.bimg",
         b"work/sound_data/midi/SGMM_02.bdm",
         b"work/sound_data/midi/SGMM_02.hd",
         b"work/sound_data/midi/SGMM_02.mid",
-        b"work/sound_data/sadpcm/BGM/SGMM_01_gradius.sts"
-        b"work/sound_data/sadpcm/BGM/SGMM_21.sts"
-        b"work/sound_data/sadpcm/BGM/SGMM_26.sts"
-        b"work/sound_data/sadpcm/BGM/SGMM_27.sts"
-        b"work/sound_data/sadpcm/BGM/SGMM_28.sts"
+        b"work/sound_data/sadpcm/BGM/SGMM_01_gradius.sts",
+        b"work/sound_data/sadpcm/BGM/SGMM_21.sts",
+        b"work/sound_data/sadpcm/BGM/SGMM_26.sts",
+        b"work/sound_data/sadpcm/BGM/SGMM_27.sts",
+        b"work/sound_data/sadpcm/BGM/SGMM_28.sts",
+        b"work/sound_data/se/ST50.hd",
+        b"work/sound_data/se/ST50.sed",
     ]
+    out = {}
     for target in targets:
         try:
             target_start_idx = file.index(target)
         except:
             continue
         offset_start_idx = target_start_idx - 8
-        offset = int.from_bytes(
-            file[offset_start_idx:offset_start_idx + 4],
+        out[target] = offset_start_idx
+    return out
+
+def patch_offsets(
+    file: bytearray,
+    orig_offset_idxs: dict[bytes, int],
+    new_offset_idxs: dict[bytes, int]
+) -> bytearray:
+    for target, orig_offset_idx in orig_offset_idxs.items():
+        print(f"Patching offset for {target}")
+        new_offset_idx = new_offset_idxs[target]
+        orig_offset = int.from_bytes(
+            file[new_offset_idx:new_offset_idx + 4],
             byteorder="little"
         )
-        new_offset = offset + size_diff
-        file[offset_start_idx:offset_start_idx + 4] = new_offset.to_bytes(
+        new_offset = orig_offset + (new_offset_idx - orig_offset_idx)
+        file[new_offset_idx:new_offset_idx + 4] = new_offset.to_bytes(
             length=4, byteorder="little"
         )
     return file
@@ -309,8 +322,8 @@ class ImgExtractor:
                 /2
             )
         )
-
         return self.data[px_start:px_end]
+
     def overwrite_pixel_bytes(self, idx: int, pxl_data: bytes):
         px_start = self._px_start(idx)
         # Allow writing to data
