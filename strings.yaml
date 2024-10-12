@@ -43,11 +43,9 @@
 
 # Pause Menu dialogs
 "本当にリタイアしますか？":
-  #english: "Are you sure you want to retire?"
-  english: "1234567890\nABCDEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyz"
+  english: "Are you sure you want to retire?"
 "本当にリトライしますか？":
-  #english: "Are you sure you want to restart?"
-  english: "ー、。ぁヶ○Χ□△!?()*+-&@⋅.:^_ω〜➝ ァ'\""
+  english: "Are you sure you want to restart?"
 
 
 
