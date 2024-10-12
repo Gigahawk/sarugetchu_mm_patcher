@@ -579,7 +579,6 @@
               xargs -P ${processes} -I {} bash -c '
                 gzip -9 -c "${self.packages.${system}.data-patched}/DATA1_patched/{}_patched" > "{}_patched.gz"
               '
-            #cp ${self.packages.${system}.data-cn-unpacked}/DATA1/735_e5d5ceb1.gz 737_e5d5ceb1_patched.gz
           '';
 
           installPhase = ''
