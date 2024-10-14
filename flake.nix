@@ -205,17 +205,17 @@
         #"733_ff7a6abd"
         #"735_0a42108c"
         "737_e5d5ceb1" # gz/stage.50_k1.gz
-        #"739_2ff511d3"
-        #"741_1e656e38" # gz/stage.52_metro.gz
-        #"743_9ce16be2" # gz/stage.53_bay.gz
-        #"745_2b6aedc3" # gz/stage.54_UFO.gz
-        #"747_48d02db6" # gz/stage.55_park.gz
-        #"749_4cde5405" # gz/stage.56_daiba.gz
-        #"751_ea0603ba"
-        #"753_1988ae91" # gz/stage.58_UFO2.gz
-        #"755_f25230cc"
-        #"757_4dbdde02"
-        #"759_b0ffcadb"
+        "739_2ff511d3" # gz/stage.51_city.gz
+        "741_1e656e38" # gz/stage.52_metro.gz
+        "743_9ce16be2" # gz/stage.53_bay.gz
+        "745_2b6aedc3" # gz/stage.54_UFO.gz
+        "747_48d02db6" # gz/stage.55_park.gz
+        "749_4cde5405" # gz/stage.56_daiba.gz
+        "751_ea0603ba" # gz/stage.57_k1death.gz
+        "753_1988ae91" # gz/stage.58_UFO2.gz
+        "755_f25230cc" # gz/stage.60_k1.gz
+        "757_4dbdde02" # gz/stage.60_k1death.gz
+        #"759_b0ffcadb" # gz/system.gz
       ];
       resourceFilesStr = builtins.concatStringsSep "\n" resourceFiles;
       inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; })

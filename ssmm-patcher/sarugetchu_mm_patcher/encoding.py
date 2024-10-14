@@ -3703,6 +3703,16 @@ ENCODING_MAP = {
     "87F51E0C": BYTES_TO_CHAR_DEFAULT,  # gz/menu_story.01_boss01_gori01.gz
     "3C6CF60B": BYTES_TO_CHAR_DEFAULT,  # gz/menu_vs.gz
     "E5D5CEB1": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.50_k1.gz
+    "2FF511D3": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.51_city.gz
+    "1E656E38": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.52_metro.gz
+    "9CE16BE2": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.53_bay.gz
+    "2B6AEDC3": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.54_UFO.gz
+    "48D02DB6": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.55_park.gz
+    "4CDE5405": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.56_daiba.gz
+    "EA0603BA": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.57_k1death.gz
+    "1988AE91": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.58_UFO2.gz
+    "F25230CC": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.60_k1.gz
+    "4DBDDE02": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.60_k1death.gz
 }
 
 class EncodingTranslator:

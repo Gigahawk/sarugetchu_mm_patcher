@@ -49,6 +49,8 @@ def cache_file_offset_idxs(
         b"work/sound_data/sadpcm/BGM/SGMM_28.sts",
         b"work/sound_data/se/ST50.hd",
         b"work/sound_data/se/ST50.sed",
+        b"work/sound_data/se/ST53.hd",
+        b"work/sound_data/se/ST53.sed",
     ]
     out = {}
     for target in targets:
