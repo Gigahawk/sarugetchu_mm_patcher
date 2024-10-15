@@ -141,7 +141,8 @@
         #"043_b1fc2c81" # gz/game_common.gz
         #"044_5c272d50" # gz/game_common.story.gz
         #"045_3cecf223" # gz/game_common.vs.gz
-        # "046_8205e9b5" # gz/game_common_sound_bd.gz
+        #"046_8205e9b5" # gz/game_common_sound_bd.gz
+        "048_4abee95e" # gz/game_result.vs.gz
         #"066_c9448ba5" # gz/menu1.gz
         #"067_a60a8ca5" # gz/menu2.gz
         #"068_245dc640" # gz/menu_character_01.gz
@@ -216,6 +217,18 @@
         "755_f25230cc" # gz/stage.60_k1.gz
         "757_4dbdde02" # gz/stage.60_k1death.gz
         #"759_b0ffcadb" # gz/system.gz
+        "774_54110b1e" # gz/victory.vs.chall.gz
+        "775_38ff898c" # gz/victory.vs.goritron.gz
+        "776_dd92277c" # gz/victory.vs.hakase.gz
+        "777_04f26afc" # gz/victory.vs.haruka.gz
+        "778_5668b0b6" # gz/victory.vs.hiroki.gz
+        "779_b3fbe4fc" # gz/victory.vs.kakeru.gz
+        "780_33f84ad2" # gz/victory.vs.legend.gz
+        "781_b130371d" # gz/victory.vs.natsumi.gz
+        "782_76ec174c" # gz/victory.vs.pipo6.gz
+        "783_a707263d" # gz/victory.vs.pipotron.gz
+        "784_f89bc790" # gz/victory.vs.spector.gz
+        "785_aa3bb564" # gz/victory.vs.volcano.gz
       ];
       resourceFilesStr = builtins.concatStringsSep "\n" resourceFiles;
       inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; })

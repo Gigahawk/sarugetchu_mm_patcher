@@ -845,6 +845,17 @@ Gクラッシャー:
   english: "Tron Yellow"
 
 
+# VS. Mode result screen
+"ラウンド最終結果":
+  english: "Final Results"
+"コンボボーナスポイント":
+  english: "Combo Bonuses"
+"ラウンド":
+  english: "Round"
+"結果":
+  english: "Results"
+
+
 # Character edit slot select screen warnings
 "キャラクターファイルをロード中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししないでください。":
   english: "Loading character file!\nDo not remove the\nMemory Card in %."

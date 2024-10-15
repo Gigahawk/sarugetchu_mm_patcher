@@ -3697,6 +3697,7 @@ BYTES_TO_CHAR_MINIMAL = {
 }
 
 ENCODING_MAP = {
+    "4ABEE95E": BYTES_TO_CHAR_DEFAULT,  # gz/game_result.vs.gz
     "00940549": BYTES_TO_CHAR_DEFAULT,  # gz/menu_common.gz
     "87F51E0C": BYTES_TO_CHAR_DEFAULT,  # gz/menu_story.01_boss01_gori01.gz
     "3C6CF60B": BYTES_TO_CHAR_DEFAULT,  # gz/menu_vs.gz
@@ -3711,6 +3712,18 @@ ENCODING_MAP = {
     "1988AE91": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.58_UFO2.gz
     "F25230CC": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.60_k1.gz
     "4DBDDE02": BYTES_TO_CHAR_VS_PAUSE, # gz/stage.60_k1death.gz
+    "54110B1E": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.chall.gz
+    "38FF898C": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.goritron.gz
+    "DD92277C": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.hakase.gz
+    "04F26AFC": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.haruka.gz
+    "5668B0B6": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.hiroki.gz
+    "B3FBE4FC": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.kakeru.gz
+    "33F84AD2": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.legend.gz
+    "B130371D": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.natsumi.gz
+    "76EC174C": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.pipo6.gz
+    "A707263D": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.pipotron.gz
+    "F89BC790": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.spector.gz
+    "AA3BB564": BYTES_TO_CHAR_DEFAULT,  # gz/victory.vs.volcano.gz
 }
 
 class EncodingTranslator:
