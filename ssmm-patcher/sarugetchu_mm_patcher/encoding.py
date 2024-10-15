@@ -3690,12 +3690,10 @@ BYTES_TO_CHAR_MINIMAL = {
     b"\x88\xF4": "ω",
     b"\x88\xF5": "〜",
     b"\x88\xF6": "➝",
-    b"\x89\xF7": " ",
-    b"\x89\xF8": "ァ",
-    b"\x89\xF9": "'",
-    b"\x89\xFA": "\"",
-    #b"\x95\xFB":
-    #b"\x95\xFC":
+    b"\x88\xF7": " ",
+    b"\x88\xF8": "ァ",
+    b"\x88\xF9": "'",
+    b"\x88\xFA": "\"",
 }
 
 ENCODING_MAP = {
