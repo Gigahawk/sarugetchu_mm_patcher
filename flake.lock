@@ -114,11 +114,11 @@
         "systems": "systems_8"
       },
       "locked": {
-        "lastModified": 1710146030,
-        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
+        "lastModified": 1726560853,
+        "narHash": "sha256-X6rJYSESBVr3hBoH0WbKE5KvhPU5bloyZ2L4K60/fPQ=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "rev": "c1dfcf08411b08f6b8615f7d8971a2bfa81d5e8a",
         "type": "github"
       },
       "original": {
@@ -206,11 +206,11 @@
     },
     "nixpkgs-clps2c": {
       "locked": {
-        "lastModified": 1725515388,
-        "narHash": "sha256-o/U2mwaHIKfOh/noYBZsBBwxcRckQ8eHGKWLqfYj850=",
+        "lastModified": 1726597304,
+        "narHash": "sha256-FicI9xGe3ED1rWVi1Ww1GVWTxjhm2wTKwS4iNZO4s9M=",
         "owner": "Gigahawk",
         "repo": "nixpkgs",
-        "rev": "c5af3a04bb736a36d7d7c7b2aff10d6242ae3968",
+        "rev": "38239670ba7b26643f850c1882e7dd4e507db6a7",
         "type": "github"
       },
       "original": {
@@ -270,16 +270,16 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1724357302,
-        "narHash": "sha256-VFd9RnXurkRVDU+lSKwWdUjNMC69rh50tdk851PVizg=",
-        "owner": "Gigahawk",
+        "lastModified": 1728492678,
+        "narHash": "sha256-9UTxR8eukdg+XZeHgxW5hQA9fIKHsKCdOIUycTryeVw=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "008c1b5848be29728c8fd8b11c3993fc53e90b2c",
+        "rev": "5633bcff0c6162b9e4b5f1264264611e950c8ec7",
         "type": "github"
       },
       "original": {
-        "owner": "Gigahawk",
-        "ref": "wiseunpacker",
+        "owner": "nixos",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -372,11 +372,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1724360753,
-        "narHash": "sha256-+G64wBNturjn3OiEPbuzIPO4gJ5iKH3O0OejAVlmoJ8=",
+        "lastModified": 1728979148,
+        "narHash": "sha256-K8iYyfEIrPHb/gzUpsnp4TTlBrFtv1h7GIIjCj3UR/s=",
         "owner": "Gigahawk",
         "repo": "ps2str-nix",
-        "rev": "ac3f019550cc6bf5ec710cbf95f6b8354d2333dd",
+        "rev": "854a73fc1449094937987a64edc151043fde7db3",
         "type": "github"
       },
       "original": {
