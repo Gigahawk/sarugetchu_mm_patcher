@@ -142,6 +142,7 @@
         #"044_5c272d50" # gz/game_common.story.gz
         #"045_3cecf223" # gz/game_common.vs.gz
         #"046_8205e9b5" # gz/game_common_sound_bd.gz
+        "047_7243e526" #gz/game_result.story.gz
         "048_4abee95e" # gz/game_result.vs.gz
         #"066_c9448ba5" # gz/menu1.gz
         #"067_a60a8ca5" # gz/menu2.gz
@@ -154,8 +155,7 @@
         "118_3c6cf60b" # gz/menu_vs.gz
 
         # Stage files are needed for patching the pause menu
-        # TODO: figure out how to change the encoding for these files?
-        #"637_aa6f7a50" # gz/stage.01_boss01_gori01.gz
+        "637_aa6f7a50" # gz/stage.01_boss01_gori01.gz
         #"639_a7383ea3"
         #"641_58401ea3"
         #"643_fd32e82a"

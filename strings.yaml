@@ -190,14 +190,22 @@
 # Story mode missions
 ## Tokyo Teleport PM00:00
 "東京テレポート PM00:00":
-  english: "Tokyo Teleport PM00:00"
+  english: "Tokyo Teleport\nPM00:00"
+" PM00:00":
+  english: " PM00:00"
 #"アーマードゴリアックを撃退<げきたい>せよ!➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
 "アーマードゴリアックを撃退<げきたい>せよ!\x1F➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
   english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
 "現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。":
   english: "Intercept the mech that showed up."
 
-# Mission complete screen?
+# Mission complete screen
+"ミッション":
+  english: "Mission"
+"評価ポイント":
+  english: "Bonus"
+"獲得チップ":
+  english: "Chips"
 "HPボーナス":
   english: "HP Bonus"
 "タイムボーナス":
@@ -432,6 +440,8 @@
   english: "Invalid selection.\nPlease try again."
 
 # VS. Mode character select screen
+"おためしキャラ":
+  english: "Default Character"
 "キャラクターロード":
   english: "Load Character"
 "じどうCOM":
@@ -1197,13 +1207,15 @@ Gクラッシャー:
 #  # ???
 #  english: "Vernier scale"
 
-# Chips?
-"エルビチップ":
-  english: "Elbi Chip"
-"キセノチップ":
-  english: "Kiseno Chip"
+# Chips
 "マグネチップ":
-  english: "Magnet Chip"
+  english: "Magnesium Chip"
+"コバルチップ":
+  english: "Cobalt Chip"
+"ゲルマチップ":
+  english: "Germanium Chip"
+"エルビチップ":
+  english: "Erbium Chip"
+"キセノチップ":
+  english: "Xenon Chip"
 
-"おためしキャラ":
-  english: "Default Character"
