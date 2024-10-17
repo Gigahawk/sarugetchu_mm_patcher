@@ -620,7 +620,7 @@ def find_string(target, extracted_path, csv_path, print_to_null, hash, hex_):
 def dump_textures(resource_path, output_path):
     resource_path = Path(resource_path)
     if output_path is None:
-        output_path = Path(os.getcwd()) / f"{resource_path.stem}_textures"
+        output_path = Path(os.getcwd()) / f"{resource_path}_textures"
     else:
         output_path = Path(output_path)
     output_path.mkdir(parents=True, exist_ok=True)
@@ -645,7 +645,10 @@ def dump_textures(resource_path, output_path):
             util.HexPrettyPrinter().pprint(ex.px_data_struct)
             click.echo("plt_data_struct:")
             util.HexPrettyPrinter().pprint(ex.plt_data_struct)
-            _out_path: Path = sanitize_filepath(output_path / sd["value"].decode())
+            img_name = sd["value"].decode()
+            while img_name[0] in ["/", "\\"]:
+                img_name = img_name[1:]
+            _out_path: Path = sanitize_filepath(output_path / img_name)
             _out_path.mkdir(parents=True, exist_ok=True)
             for img_idx in range(ex.num_imgs):
                 img = ex.get_image(img_idx)
