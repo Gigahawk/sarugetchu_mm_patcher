@@ -981,36 +981,36 @@ Gクラッシャー:
 ### Mecha Bo
 "メカボー":
   #english: "Stun Club"  # Mech Bo/Mech Club?
-  english: "Mecha Bo"
+  english: "MechBo"
 "近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 使用<しよう>にエネルギーを消費<しょうひ>しないのが特徴<とくちょう>です。":
   english: "A gadget for melee attacks. It does not require energy to use."
 "メカハンマー":
   #english: "Stun Hammer"  # Mech Hammer?
-  english: "Mecha Hammer"
+  english: "MechHammr"
 "トロンチェーン":
-  english: "Tron Chain"
+  english: "TronChain"
 "メカロッド":
-  english: "Mecha Rod"
+  english: "MechRod"
 "アームショット":
-  english: "Arm Shot"
+  english: "ArmShot"
 ### Big Bo
 "デカボー":
   # Presumably short for でかい ボー?
-  english: "Big Bo"
+  english: "BigBo"
 "トゲハンマー":
-  english: "Thorn Hammer"
+  english: "ThrnHammr"
 ### W Mecha Bo
 "Wメカボー":
   # What does the W stand for?
-  english: "W Mecha Bo"
+  english: "WMechBo"
 "ノコハンマー":
-  english: "Saw Hammer"
+  english: "SawHammr"
 "Wロッド":
-  english: "W Rod"
+  english: "WRod"
 "トンファ":
   english: "Tonfa"
 "Wドリル":
-  english: "W Drill"
+  english: "WDrill"
 ### Kiko Bo
 "キコーボー":
   # What does this mean?
@@ -1018,97 +1018,97 @@ Gクラッシャー:
   # ChatGPT suggests it could also be https://jisho.org/word/%E6%A9%9F%E6%A2%B0
   # Both of these apparently mean machine of some sort, but we can't use Mecha Bo
   # again so I'm just going to leave it as Kiko Bo
-  english: "Kiko Bo"
+  english: "KikoBo"
 "マジョステッキ":
-  english: "Magic Wand"
+  english: "MagicWand"
 "Wハンマー":
   # Why is this here and not part of W Mecha Bo?
-  english: "W Hammer"
+  english: "WHammer"
 ### Reflect Bo
 "リフレクボー":
-  english: "Reflect Bo"
+  english: "ReflectBo"
 "火炎刀":
-  english: "Flame Sword"
+  english: "FlameSwrd"
 "氷結刀":
-  english: "Ice Sword"
+  english: "IceSwrd"
 "気功刀":
   # No idea what this is
-  english: "Spirit Sword"
+  english: "SpirtSwrd"
 ### Pipotron G
 "パンチモード":
-  english: "Punch Mode"
+  english: "PunchMode"
 ## Gun type
 "レーザーガン":
-  english: "Laser Gun"
+  english: "LaserGun"
 "遠<とお>くの敵<てき>を攻撃<こうげき>できる射撃<しゃげき>メカです。 攻撃力<こうげきりょく>は弱<よわ>いですが、弾数<たまかず>が多<おお>いのが特徴<とくちょう>です。":
   english: "A shooting gadget that can attack from a distance. Its attack power is weak but it has a large number of bullets."
 "マシンガン":
-  english: "Machine Gun"
+  english: "MchnGun"
 "ショットガン":
   english: "Shotgun"
 "Wレーザー":
-  english: "W Laser"
+  english: "WLaser"
 ## Launcher type
 ### Launchers
 "Bランチャー":
   # Beam Launcher?
-  english: "B Launcher"
+  english: "B.Lnchr"
 "Hランチャー":
   # Homing Launcher?
-  english: "H Launcher"
+  english: "H.Lnchr"
 "メガランチャー":
-  english: "Mega Launcher"
+  english: "MegaLnchr"
 "ギガランチャー":
-  english: "Giga Launcher"
+  english: "GigaLnchr"
 ### Pipotron G
 "ランチャーモード":
-  english: "Launcher Mode"
+  english: "LnchrMode"
 ## Remote Control type
 ### Remote control weapons
 "リモートボム":
   # R.C. Car?
-  english: "Remote Bomb"
+  english: "RCBomb"
 "体当<たいあ>たりで爆発<ばくはつ>するリモコンメカです。 ボタンでオート走行<そうこう>ですが、右<みぎ>スティックで自由<じゆう>に操作<そうさ>することもできます。":
   english: "A remote controlled gadget that explodes when it rams into something. Pressing its button will automatically drive it towards a nearby target, or it can be controlled directly with the right stick."
 "キラービー":
-  english: "Killer Bee"
+  english: "KillerBee"
 "サテラレーザー":
   # Satellite Laser?
-  english: "Satella Laser"
+  english: "StltLaser"
 ## Boot type
 ### Dash Boots
 "ダッシュブーツ":
-  english: "Dash Boots"
+  english: "DashBoots"
 "高速<こうそく>で移動<いどう>するためのダッシュメカです。 体当<たいあ>たりで攻撃<こうげき>することもできます。 使<つか>いすぎるとオーバーヒートしやすいので注意<ちゅうい>しましょう。":
   english: "A gadget for moving at high speed. It can also attack by ramming into enemies. Be careful, it can overheat if used too much."
 "ダッシュブースター":
-  english: "Dash Booster"
+  english: "DashBstr"
 "ダッシュフープ":
-  english: "Dash Hoop"
+  english: "DashHoop"
 ### Attack Boots
 "アタックブーツ":
-  english: "Attack Boots"
+  english: "AtkBoots"
 "アタックブースター":
-  english: "Attack Booster"
+  english: "AtkBstr"
 ### Warp Boots
 "ワープブーツ":
-  english: "Warp Boots"
+  english: "WarpBoots"
 "ワープブースター":
-  english: "Warp Booster"
+  english: "WarpBstr"
 "ワープフープ":
-  english: "Warp Hoop"
+  english: "WarpHoop"
 ### Pipotron G
 "ダッシュモード":
-  english: "Dash Mode"
+  english: "DashMode"
 # Get Net type
 "ゲットアミ":
-  english: "Get Net"
+  english: "GetNet"
 "小型<こがた>の転送<てんそう>メカです。 これでピポサルをゲッチュすることができます。 攻撃力<こうげきりょく>はゼロなので注意<ちゅうい>しましょう。":
   english: "A small teleportation gadget. You can use it to capture apes. Be careful, it has zero attack power."
 # Misc.
 ### Pipotron G
 "スペシャルモード":
-  english: "Special Mode"
+  english: "SpclMode"
 
 # Power Up Parts screen descriptions
 "パワーアップパーツをセットするガチャメカを選<えら>んでください。":
