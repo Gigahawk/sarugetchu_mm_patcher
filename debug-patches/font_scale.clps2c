@@ -1,0 +1,25 @@
+//// Kana scale
+//WriteFloat 0x0070d404 0.5
+
+ASM_START 0x003f9e74
+    // Some random stuff that happens in this range
+    sw $s1,0x4($s0)
+    lui $t5,0xfe
+    li $t4,0x2
+    ori $t5,$t5,0xf000
+
+    // Original FPU code
+    //lui $t7,0x71
+    //addiu $t7,$t7,-0x2bfc
+    //lwc1 $f0,0x0($t7)
+    //swc1 $f0,0xc($s0)
+    //swc1 $f0,0x8($s0)
+
+    // Set vertical scale to 1
+    lui $t7,0x3f80
+    sw $t7,0xc($s0)
+    // Set horizontal scale to 0.6875
+    lui $t7,0x3f30
+    sw $t7,0x8($s0)
+    nop
+ASM_END
