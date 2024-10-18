@@ -336,6 +336,36 @@ class ImgExtractor:
         )
         return self.data[px_start:px_end]
 
+    def shrink_pixel_bytes(self, data: bytes, ratio: float) -> bytes:
+        width = self.px_data_struct["width"]
+        height = self.px_data_struct["height"]
+        pixels = []
+        for y in range(height):
+            for x in range(width):
+                row_idx = int(x*ratio)
+                if row_idx >= width:
+                    pixels.append(0)
+                    continue
+                src_px_idx = y*width + row_idx
+                # TODO: not all images are 4bpp, need to figure out how
+                # this is controlled
+                src_byte_idx = src_px_idx // 2
+                src_px_bits = data[src_byte_idx]
+                if src_px_idx % 2:
+                    src_px_bits = src_px_bits >> 4
+                else:
+                    src_px_bits = src_px_bits & 0xF
+                pixels.append(src_px_bits)
+        # Ensure pixel list length is even
+        if len(pixels) % 2:
+            pixels.append(0)
+        new_bytes = []
+        for i in range(0, len(pixels), 2):
+            new_bytes.append(
+                pixels[i + 1] << 4 | pixels[i]
+            )
+        return bytes(new_bytes)
+
     def overwrite_pixel_bytes(self, idx: int, pxl_data: bytes):
         px_start = self._px_start(idx)
         # Allow writing to data
