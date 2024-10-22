@@ -91,15 +91,15 @@
 "このままスキップすると進行<しんこう>ファイルがセーブされません。\nスキップ後<ご>に進行状況<しんこうじょうきょう>をセーブしたい場合<ばあい>は\nプレイ開始前<かいしまえ>にモードセレクト画面<がめん>のファイルセレクトで\n進行<しんこう>ファイルを作成<さくせい>してください。スキップしますか?":
   english: "Progress will not be saved.\nCreate a save file on the\nFile Select screen to save\nprogress.\nStart game without saving?"
 "%のメモリーカード(PS2)にはミリオンモンキーズの\nゲームデータがありません。 作成<さくせい>しますか?":
-  english: "There is no save data in memory card %.\nDo you want to create it?"
+  english: "There is no save data in Memory Card %.\nDo you want to create it?"
 "%のメモリーカード(PS2)は\nフォーマットされていません。フォーマットしますか?":
-  english: "The % memory card is not formatted.\nDo you want to format it?"
+  english: "The % Memory Card is not formatted.\nDo you want to format it?"
 "フォーマット中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
   english: "Formatting!\nDo not remove the\nMemory Card in % or\npower off the console."
 "ミリオンモンキーズのゲームデータを作成中<さくせいちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
   english: "Creating game data!\nDo not remove the\nMemory Card in % or\npower off the console."
 "%のメモリーカード(PS2)に\nミリオンモンキーズのゲームデータを作成<さくせい>しました。":
-  "english": "Game data created in memory card %."
+  "english": "Game data created in Memory Card %."
 
 
 # File select screen
@@ -138,11 +138,9 @@
 "進行<しんこう>ファイル%を削除中<さくじょちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
   english: "Deleting save File%!\nDo not remove the\nMemory Card in % or\npower off the console."
 "メモリーカード(PS2)が差<さ>し込<こ>まれていません。\nミリオンモンキーズのゲームデータを作成<さくせい>するには\n%KB以上<いじょう>の空<あ>き容量<ようりょう>が必要<ひつよう>です。\nこのままゲームを開始<かいし>しますか?":
-  english: "Memory card (PS2) is not inserted.\nHow to create Million Monkeys game\
-    \ data\nMore than %KB.\nDo you want to start the game now?"
-  english: "No memory card is inserted.\nAt least %KB of free space is\nrequired to create save data.\nDo you want to start the game anyway?"
+  english: "No Memory Card is inserted.\nAt least %KB of free space is\nrequired to create save data.\nDo you want to start the game anyway?"
 "メモリーカード(PS2)が\n%に差<さ>し込<こ>まれていません。":
-  english: "No memory card is inserted in %."
+  english: "No Memory Card is inserted in %."
 
 # File confirm screen descriptions
 "ファイル選択<せんたく>に戻<もど>ります。":
@@ -482,7 +480,7 @@
   # What's the difference between loading and accessing?
   english: "Loading!\nDo not remove\nthe Memory Card\nin %."
 "%の\nメモリーカード(PS2)には\nキャラクターファイルが\nありません。":
-  english: "There is no\ncharacter data\nin memory card\n%."
+  english: "There is no\ncharacter data\nin Memory Card\n%."
 
 
 # VS. Mode Stage Title screen
