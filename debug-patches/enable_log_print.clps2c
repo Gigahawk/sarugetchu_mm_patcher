@@ -1,4 +1,4 @@
-// Overwrite the last few instuctions of some logging func to actually
+// Overwrite the last few instuctions of some printf like func to actually
 // print somewhere
 ASM_START 00100a38
     // syscall 0x75 apparently prints from the EE debug serial port?
@@ -10,8 +10,24 @@ ASM_START 00100a38
     addiu $sp,$sp,0x40
 ASM_END
 
+// Patch the logging (assert?) function
 ASM_START 001009b0
     addiu $v1,$zero,0x75
     syscall 0
     // There's a return immediately following this that we can take advantage of
 ASM_END
+
+// Another printf like function, but one fewer nop and no extra returns,
+ASM_START 001009c4
+    // Overwrite the instruction that zeros the return, hopefully this
+    // doesn't cause problems
+    addiu $v1,$zero,0x75
+ASM_END
+ASM_START 001009e4
+    syscall 0
+    jr $ra
+    // Restore the stack pointer (first few instructions in this func sets
+    // this up for some reason)
+    addiu $sp,$sp,0x40
+ASM_END
+
