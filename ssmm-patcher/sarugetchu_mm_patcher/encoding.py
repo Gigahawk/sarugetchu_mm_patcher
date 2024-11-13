@@ -2840,6 +2840,123 @@ BYTES_TO_CHAR_TOKYO_TELEPORT = {
 
 }
 
+BYTES_TO_CHAR_SHINJUKU = {
+    **BYTES_TO_CHAR_SPECIAL,
+
+    b"\x88\x9F": "新",
+    b"\x88\xA0": "宿",
+    b"\x88\xA1": "南",
+    b"\x88\xA2": "口",
+    b"\x88\xA3": " ",
+    b"\x88\xA4": "P",
+    b"\x88\xA5": "M",
+    b"\x88\xA6": "0",
+    b"\x88\xA7": "2",
+    b"\x88\xA8": ":",
+    b"\x88\xA9": "1",
+    b"\x88\xAA": "6",
+    b"\x88\xAB": "ピ",
+    b"\x88\xAC": "エ",
+    b"\x88\xAD": "ー",
+    b"\x88\xAE": "ル",
+    b"\x88\xAF": "を",
+    b"\x88\xB0": "発",
+    b"\x88\xB1": "見",
+    b"\x88\xB2": "し",
+    b"\x88\xB3": "ま",
+    b"\x88\xB4": "た",
+    b"\x88\xB5": "!",
+    b"\x88\xB6": "リ",
+    b"\x88\xB7": "ト",
+    b"\x88\xB8": "ラ",
+    b"\x88\xB9": "イ",
+    b"\x88\xBA": "タ",
+    b"\x88\xBB": "ア",
+    b"\x88\xBC": "け",
+    b"\x88\xBD": "っ",
+    b"\x88\xBE": "て",
+    b"\x88\xBF": "い",
+    b"\x88\xC0": "も",
+    b"\x88\xC1": "ど",
+    b"\x88\xC2": "る",
+    b"\x88\xC3": "へ",
+    b"\x88\xC4": "ん",
+    b"\x88\xC5": "こ",
+    b"\x88\xC6": "う",
+    b"\x88\xC7": "ポ",
+    b"\x88\xC8": "ズ",
+    b"\x88\xC9": "メ",
+    b"\x88\xCA": "ニ",
+    b"\x88\xCB": "ュ",
+    b"\x88\xCC": "オ",
+    b"\x88\xCD": "プ",
+    b"\x88\xCE": "シ",
+    b"\x88\xCF": "ョ",
+    b"\x88\xD0": "ン",
+    b"\x88\xD1": "設",
+    b"\x88\xD2": "定",
+    b"\x88\xD3": "そ",
+    b"\x88\xD4": "さ",
+    b"\x88\xD5": "説",
+    b"\x88\xD6": "明",
+    b"\x88\xD7": "ゲ",
+    b"\x88\xD8": "ム",
+    b"\x88\xD9": "に",
+    b"\x88\xDA": "本",
+    b"\x88\xDB": "当",
+    b"\x88\xDC": "す",
+    b"\x88\xDD": "か",
+    b"\x88\xDE": "？",
+    b"\x88\xDF": "は",
+    b"\x88\xE0": "え",
+    b"\x88\xE1": "せ",
+    b"\x88\xE2": "サ",
+    b"\x88\xE3": "ウ",
+    b"\x88\xE4": "ド",
+    b"\x88\xE5": "バ",
+    b"\x88\xE6": "ブ",
+    b"\x88\xE7": "レ",
+    b"\x88\xE8": "B",
+    b"\x88\xE9": "G",
+    b"\x88\xEA": "S",
+    b"\x88\xEB": "E",
+    b"\x88\xEC": "ホ",
+    b"\x88\xED": "ノ",
+    b"\x88\xEE": "ス",
+    b"\x88\xEF": "テ",
+    b"\x88\xF0": "ビ",
+    b"\x88\xF1": "ロ",
+    b"\x88\xF2": "ジ",
+    b"\x88\xF3": "ッ",
+    b"\x88\xF4": "ク",
+    b"\x88\xF5": "の",
+    b"\x88\xF6": "出",
+    b"\x88\xF7": "カ",
+    b"\x88\xF8": "形",
+    b"\x88\xF9": "式",
+    b"\x88\xFA": "ゅ",
+    b"\x88\xFB": "つ",
+    b"\x88\xFC": "り",
+    b"\x89\x40": "ょ",
+    b"\x89\x41": "く",
+    b"\x89\x42": "き",
+    b"\x89\x43": "選",
+    b"\x89\x44": "択",
+    b"\x89\x45": "だ",
+    b"\x89\x46": "。", # For some reason this is duplicated
+    b"\x89\x47": "フ",
+    b"\x89\x48": "??", # TODO: center dot
+
+    b"\x89\x49": "1", # TODO: is this 1 or I?
+    b"\x89\x4A": "N",
+    b"\x89\x4B": "A",
+    b"\x89\x4C": "X",
+    b"\x89\x4D": "音",
+    b"\x89\x4E": "量",
+    b"\x89\x4F": "お",
+    # Valid encodings seem to end here
+}
+
 # Minimal encoding to patch into files with encodings that don't
 # contain all the characters we need
 BYTES_TO_CHAR_MINIMAL = {
@@ -2953,8 +3070,10 @@ ENCODING_MAP = {
     "4ABEE95E": BYTES_TO_CHAR_DEFAULT,        # gz/game_result.vs.gz
     "00940549": BYTES_TO_CHAR_DEFAULT,        # gz/menu_common.gz
     "87F51E0C": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.01_boss01_gori01.gz
+    "41F34892": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.02_city01_a.gz
     "3C6CF60B": BYTES_TO_CHAR_DEFAULT,        # gz/menu_vs.gz
     "AA6F7A50": BYTES_TO_CHAR_TOKYO_TELEPORT, # gz/stage.01_boss01_gori01.gz
+    "58401EA3": BYTES_TO_CHAR_SHINJUKU,       # gz/stage.02_city01_a.gz
     "E5D5CEB1": BYTES_TO_CHAR_VS_PAUSE,       # gz/stage.50_k1.gz
     "2FF511D3": BYTES_TO_CHAR_VS_PAUSE,       # gz/stage.51_city.gz
     "1E656E38": BYTES_TO_CHAR_VS_PAUSE,       # gz/stage.52_metro.gz
@@ -3112,3 +3231,17 @@ def token_to_idx(token: bytes) -> int:
     if out < 0:
         out = 0
     return out
+
+# HACK: precompute idx to token
+# Ideally we would just have a function calculate this on the fly
+# but I can't be bothered to reverse it
+_idx_to_token = None
+def idx_to_token(idx: int) -> bytes:
+    global _idx_to_token
+    if _idx_to_token is None:
+        _idx_to_token = {
+            token_to_idx(token): token
+            for token in BYTES_TO_CHAR_DEFAULT.keys()
+            if token not in BYTES_TO_CHAR_SPECIAL.keys()
+        }
+    return _idx_to_token[idx]

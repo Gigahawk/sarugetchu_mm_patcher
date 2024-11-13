@@ -151,13 +151,14 @@
         "070_00940549" # gz/menu_common.gz
         #"083_88455768" # gz/menu_sound.gz"
         "084_87f51e0c" # gz/menu_story.01_boss01_gori01.gz
+        "085_41f34892" # gz/menu_story.02_city01_a.gz
         #"117_05f7cae8" # gz/menu_title.gz
         "118_3c6cf60b" # gz/menu_vs.gz
 
         # Stage files are needed for patching the pause menu
         "637_aa6f7a50" # gz/stage.01_boss01_gori01.gz
         #"639_a7383ea3"
-        #"641_58401ea3"
+        "641_58401ea3" # gz/stage.02_city01_a.gz
         #"643_fd32e82a"
         #"645_b7bee92a"
         #"647_b3534589"

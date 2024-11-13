@@ -1,3 +1,4 @@
+from collections import defaultdict
 import sys
 import csv
 import subprocess
@@ -26,7 +27,8 @@ from sarugetchu_mm_patcher.index import (
 from sarugetchu_mm_patcher.encoding import (
     EncodingTranslator,
     BYTES_TO_CHAR_MINIMAL, BYTES_TO_CHAR_DEFAULT, BYTES_TO_CHAR_SPECIAL,
-    token_to_idx
+    token_to_idx,
+    idx_to_token
 )
 
 EXTRACT_PATH = Path(".extracted")
@@ -459,7 +461,7 @@ def patch_resource(resource_path, strings_path, hash, output_path):
     if not strings_dict:
         raise ValueError(f"Empty strings file {strings_path}")
     with open(resource_path, "rb") as f:
-        resource_bytes = bytearray(f.read())
+        resource_bytes = util.TrackedByteArray(f.read())
 
     if util.find_strings(resource_bytes, "sv_msg.gf0"):
         # Sorta hacky, technically this should always be the default font
@@ -467,7 +469,6 @@ def patch_resource(resource_path, strings_path, hash, output_path):
     else:
         target_encoder = EncodingTranslator(encoding=BYTES_TO_CHAR_MINIMAL)
 
-    orig_offset_idxs = util.cache_file_offset_idxs(resource_bytes)
     for jap_str, info in strings_dict.items():
         jap_bytestrs = source_encoder.string_to_bytes(jap_str)
 
@@ -497,13 +498,13 @@ def patch_resource(resource_path, strings_path, hash, output_path):
 
         for jb in jap_bytestrs:
             for id, new_bytestr in replacements.items():
-                resource_bytes = resource_bytes.replace(
+                resource_bytes.replace_in_place(
                     source_encoder.wrap_string(jb, id=id),
                     target_encoder.wrap_string(new_bytestr, id=id),
                 )
 
-    new_offset_idxs = util.cache_file_offset_idxs(resource_bytes)
-    resource_bytes = util.patch_offsets(resource_bytes, orig_offset_idxs, new_offset_idxs)
+    resource_bytes = util.patch_file_offsets(resource_bytes)
+    #resource_bytes = util.patch_entity_addrs(resource_bytes, orig_entity_offset_idxs)
     with open(output_path, "wb") as f:
         f.write(resource_bytes)
 
@@ -653,6 +654,64 @@ def dump_textures(resource_path, output_path):
             for img_idx in range(ex.num_imgs):
                 img = ex.get_image(img_idx)
                 img.save(_out_path / f"{img_idx:04d}.png")
+
+@cli.command()
+@click.argument(
+    "resource_path",
+    type=click.Path(),
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def dump_fonts(resource_path, output_path):
+    resource_path = Path(resource_path)
+    if output_path is None:
+        output_path = Path(os.getcwd()) / f"{resource_path}_fonts"
+    else:
+        output_path = Path(output_path)
+    output_path.mkdir(parents=True, exist_ok=True)
+    with open(resource_path, "rb") as f:
+        resource_bytes = bytearray(f.read())
+
+    texture_extensions = [
+        b".gf0\x00",
+        b".gf1\x00",
+    ]
+    for ext in texture_extensions:
+        string_data = util.find_strings(resource_bytes, ext)
+        for sd in string_data:
+            click.echo(f"Found file entry {sd['value']}")
+            ex = util.ImgExtractor(resource_bytes, sd["value"])
+            click.echo(f"Image struct is at {hex(ex.img_struct_addr)}")
+            click.echo("img_struct:")
+            util.HexPrettyPrinter().pprint(ex.img_struct)
+            click.echo("px_data_struct:")
+            util.HexPrettyPrinter().pprint(ex.px_data_struct)
+            click.echo("plt_data_struct:")
+            util.HexPrettyPrinter().pprint(ex.plt_data_struct)
+            img_name = sd["value"].decode()
+            idx_ofst = int(img_name[-1])
+            while img_name[0] in ["/", "\\"]:
+                img_name = img_name[1:]
+            _out_path: Path = sanitize_filepath(output_path / img_name)
+            _out_path = _out_path.with_suffix("")
+            _out_path.mkdir(parents=True, exist_ok=True)
+            for img_idx in range(ex.num_imgs):
+                font_idx = img_idx*2 + idx_ofst
+                img = ex.get_image(img_idx)
+                try:
+                    token = idx_to_token(font_idx).hex().upper()
+                except KeyError:
+                    click.echo(f"Warning: no token precomputed for index {font_idx}")
+                    token = "????"
+                img.save(
+                    _out_path
+                    / f"{font_idx:04d}_{token}.png"
+                )
+
 
 @cli.command()
 @click.argument(

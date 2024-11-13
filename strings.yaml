@@ -204,15 +204,29 @@
 
 # Story mode missions
 ## Tokyo Teleport PM00:00
+# Japanese is weird, AM/PM sometimes comes first, and 0:00 is used
+# interchangably with 12:00 when using 12 hour time
+# https://en.wikipedia.org/wiki/Date_and_time_notation_in_Japan#Time
 "東京テレポート PM00:00":
-  english: "Tokyo Teleport\nPM00:00"
+  english: "Tokyo Teleport\n12:00PM"
 " PM00:00":
-  english: " PM00:00"
+  english: " 12:00PM"
+"東京テレポート":
+  english: "Tokyo Teleport"
+"現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。":
+  english: "Intercept the mech that showed up."
 #"アーマードゴリアックを撃退<げきたい>せよ!➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
 "アーマードゴリアックを撃退<げきたい>せよ!\x1F➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
   english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
-"現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。":
-  english: "Intercept the mech that showed up."
+## Shinjuku
+"新宿":
+  english: "Shinjuku"
+"新宿 PM02:16":
+  "english": "Shinjuku\n02:16PM"
+"新宿駅<しんじゅくえき>でピポサル軍一個小隊<ぐんいっこしょうたい>が展開中<てんかいちゅう>との情報<じょうほう>をキャッチしました! 直<ただ>ちに現場<げんば>に急行<きゅうこう>してください!!":
+  "english": "We have received intel that a platoon of Piposaru troops is currently deployed at Shinjuku Station! Please rush to the scene immediately!!"
+"ターゲットをすべて倒<たお>せ!➝\n\fTARGETマークのついたサル兵<へい>を\nすべて倒<たお>してください。":
+  "english": "Defeat all targets!➝\n\fDefeat all monkey soldiers with\nTARGET marks."
 
 # Mission complete screen
 "ミッション":
@@ -1223,8 +1237,6 @@ Gクラッシャー:
   english: "EN"
 
 # Level names?
-"東京テレポート":
-  english: "Tokyo Teleport"
 "コンテナターミナル":
   # Full name doesn't fit on File Select screen
   #english: "Container Terminal"

@@ -1,3 +1,4 @@
+from collections.abc import Buffer
 import string
 from typing import Any
 from math import ceil
@@ -34,9 +35,84 @@ def pad(data: bytes, block_size: int=2048) -> bytes:
     data += bytes(pad_len)
     return data
 
-def cache_file_offset_idxs(
-    file: bytearray,
-) -> dict[bytes, int]:
+class TrackedByteArray(bytearray):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._changes: list[tuple[int, int, int]]= []
+
+    def __setitem__(self, key, value):
+        if isinstance(key, slice):
+            # TODO: what happens on negatives?
+            old_len = key.stop - key.start
+            new_len = len(value)
+            if old_len != new_len:
+                self._changes.append((
+                    key.start,
+                    old_len,
+                    new_len,
+                ))
+        super().__setitem__(key, value)
+
+    def find_all(
+        self,
+        sub: Buffer,
+        start: int=0,
+        end: int | None = None
+    ) -> list[int]:
+        out = []
+        if end is None:
+            end = len(self)
+        while True:
+            idx = self.find(sub, start, end)
+            if idx == -1:
+                break
+            out.append(idx)
+            start = idx + len(sub)
+            if start >= end:
+                break
+        return out
+
+    def replace_in_place(self, old: Buffer, new: Buffer, count: int=-1):
+        if not old:
+            raise ValueError(f"Cannot match nil substring {old}")
+        idx = 0
+        new_len = len(new)
+        old_len = len(old)
+        len_diff = new_len - old_len
+        idxs = self.find_all(old)
+        curr_count = 0
+        for idx in idxs:
+            if count == 0:
+                break
+            idx += curr_count*len_diff
+            if self[idx:idx + old_len] == old:
+                self[idx:idx + old_len] = new
+                idx += new_len
+                curr_count += 1
+                count -= 1
+            else:
+                idx += 1
+
+    def get_new_index(self, orig_idx: int) -> int:
+        for oidx, olen, nlen in self._changes:
+            if orig_idx <= oidx:
+                # TODO: is this correct? this should probably be a continue
+                return orig_idx
+            if nlen > olen and orig_idx < oidx + olen:
+                return orig_idx
+            len_diff = nlen - olen
+            new_idx = orig_idx + len_diff
+            if len_diff < 0 and orig_idx <= oidx - len_diff:
+                raise ValueError(
+                    f"Original idx {hex(orig_idx)} refers to "
+                    f"deleted space near {hex(new_idx)}"
+                )
+            orig_idx = new_idx
+        return orig_idx
+
+def patch_file_offsets(
+    file: TrackedByteArray,
+) -> bytearray:
     targets = [
         b"menu_common/icon.bimg",
         b"work/sound_data/midi/SGMM_02.bdm",
@@ -51,43 +127,78 @@ def cache_file_offset_idxs(
         b"work/sound_data/sadpcm/BGM/SGMM_37.sts",
         b"work/sound_data/sadpcm/JINGLE/Congratulations.sts",
         b"work/sound_data/sadpcm/JINGLE/Congratulations_Victory.sts",
+        b"work/sound_data/sadpcm/JINGLE/Miss_kakeru.sts",
         b"work/sound_data/sadpcm/JINGLE/Winner_taisenmode.sts",
         b"work/sound_data/sadpcm/JINGLE/You_Lose.sts",
+        b"work/sound_data/se/PC_kakeru.hd",
+        b"work/sound_data/se/PC_kakeru.sed",
         b"work/sound_data/se/ST01.hd",
         b"work/sound_data/se/ST01.sed",
+        b"work/sound_data/se/ST02.hd",
+        b"work/sound_data/se/ST02.sed",
         b"work/sound_data/se/ST012.hd",
         b"work/sound_data/se/ST012.sed",
+        b"work/sound_data/se/ST022.hd",
+        b"work/sound_data/se/ST022.sed",
         b"work/sound_data/se/ST50.hd",
         b"work/sound_data/se/ST50.sed",
         b"work/sound_data/se/ST53.hd",
         b"work/sound_data/se/ST53.sed",
+        b"work/sound_data/se/vehicle.hd",
+        b"work/sound_data/se/vehicle.sed",
+        b"work/sound_data/se/mecha.hd",
+        b"work/sound_data/se/mecha.sed",
     ]
-    out = {}
     for target in targets:
         try:
             target_start_idx = file.index(target)
         except:
             continue
         offset_start_idx = target_start_idx - 8
-        out[target] = offset_start_idx
-    return out
-
-def patch_offsets(
-    file: bytearray,
-    orig_offset_idxs: dict[bytes, int],
-    new_offset_idxs: dict[bytes, int]
-) -> bytearray:
-    for target, orig_offset_idx in orig_offset_idxs.items():
-        print(f"Patching offset for {target}")
-        new_offset_idx = new_offset_idxs[target]
-        orig_offset = int.from_bytes(
-            file[new_offset_idx:new_offset_idx + 4],
+        offset = int.from_bytes(
+            file[offset_start_idx:offset_start_idx + 4],
             byteorder="little"
         )
-        new_offset = orig_offset + (new_offset_idx - orig_offset_idx)
-        file[new_offset_idx:new_offset_idx + 4] = new_offset.to_bytes(
+        new_offset = file.get_new_index(offset)
+        print(
+            f"Patching file offset for {target} from "
+            f"{hex(offset)} to {hex(new_offset)}"
+        )
+        file[offset_start_idx:offset_start_idx + 4] = new_offset.to_bytes(
             length=4, byteorder="little"
         )
+    return file
+
+def patch_img_struct_offsets(
+    file: bytearray,
+    orig_offsets: dict[int, int],
+) -> bytearray:
+    names = [
+        b"boss_smoke"
+    ]
+    for name in entity_names:
+        found = find_strings(file, name)
+        for entry in found:
+            for offset in [0x5, 0x15]:
+                addr_offset: int = entry["end"] + offset
+                addr = int.from_bytes(
+                    file[addr_offset:addr_offset + 4],
+                    byteorder="little"
+                )
+                try:
+                    orig_offset = orig_offsets[addr]
+                except:
+                    continue
+                new_addr = addr + (addr_offset - orig_offset)
+                diff = new_addr - addr
+                print(
+                    f"Patching {entry['value']} address from "
+                    f"{hex(addr)} to {hex(new_addr)} "
+                    f"(diff {hex(diff)})"
+                )
+                file[addr_offset:addr_offset + 4] = new_addr.to_bytes(
+                    4, "little"
+                )
     return file
 
 def gen_packinfo_hash(pack_path: str) -> bytes:
@@ -372,6 +483,5 @@ class ImgExtractor:
         if not isinstance(self.data, bytearray):
             self.data = bytearray(self.data)
         self.data[px_start:px_start + len(pxl_data)] = pxl_data
-
 
 
