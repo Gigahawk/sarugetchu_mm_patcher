@@ -1,0 +1,5 @@
+**
+!.gitignore
+!includes
+!**/*.hexpat
+!**/*.hexproj
