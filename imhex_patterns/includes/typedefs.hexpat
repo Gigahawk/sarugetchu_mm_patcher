@@ -439,13 +439,47 @@ struct File {
         le u32 colission2_len;
         Collision2 collisions2[colission2_len];
 
+    // idk?FUN_0061e8c0
+        le u32 idk15_len;
+        if (idk15_len != 0) {
+            assert(false, "Check idk?FUN_0061e8c0");
+        }
 
+    // idk?FUN_0061f348
+        le u32 idk16_len;
+        if (idk16_len != 0) {
+            assert(false, "Check idk?FUN_0061f348");
+        }
 
+    // idk?FUN_0061f990
+        le u32 idk17_len;
+        if (idk17_len != 0) {
+            assert(false, "Check idk?FUN_0061f990");
+        }
 
+    // idk?FUN_0061f6d0
+        le u32 idk18_len;
+        if (idk18_len != 0) {
+            assert(false, "Check idk?FUN_0061f6d0");
+        }
 
-
-
-
-
+    // idk?FUN_006205e0
+        le u32 idk19_exists;
+        if (idk19_exists != 0) {
+            // idk?FUN_00620678
+                le u8 idk20[0x10];
+                le u8 idk21[0x10];
+                le u8 idk22[0x10];
+                le u32 idk23_exists;
+                if (idk23_exists != 0) {
+                    le u32 idk24;
+                    // transform_FUN_0050dd68
+                }
+                le u32 idk25;
+                if (idk25 != 0) {
+                    le u32 idk26;
+                    // transform_FUN_0050dd68
+                }
+        }
 
 };

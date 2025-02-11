@@ -67,6 +67,14 @@ Nearish the end of each file there appear to be file names preceded by pointers 
 The code makes reference to a bunch of `tar/xxx.tar.gz` files with similar file names to their `gz/` counterparts, but these files do not appear to be anywhere in the game data other than the ps2 library files `package/mod310.tar.gz`.
 They are likely in older/debug versions of the game?
 
+### File Structure
+
+Many files are loaded by a function at `0x0061d340` (currently dubbed `DO_A_LOT_OF_STUFF_WITH_OFFSETS`).
+When this function is called, the file to be loaded should be logged to serial (if debug logging patch has been enabled), and the file should have been loaded to `0x0076CC00` in memory.
+The first parameter (register `a0`) contains a pointer to a struct.
+The first 4 bytes of the struct is just a pointer to the start of the data (should be `0x0076CC00`).
+The next 4 bytes is a seek pointer into the data, when the function is first called this should be identical to the start pointer.
+
 ### Strings
 Some files contain strings, this game uses a custom 2 byte text encoding (probably) between 0x889F to 0x95FF inclusive.
 > many strings appear in multiple files, but it seems that most (all?) appear in `00940549/menu_common`, and so far only patching that file seems to be sufficient for the menus, there may be significant performance uplifts in patching speed by limiting the number of files we try to patch.
