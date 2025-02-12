@@ -5,6 +5,14 @@ fn as_hex(u128 value) {
     return std::format("{:X}", value);
 };
 
+struct MaybeString {
+    // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+    le u32 str_len [[format("as_hex")]];
+    if (str_len != 0) {
+        char string[str_len + 1];
+    }
+};
+
 struct PixelData {
     le u32 idk1;
     le u16 idk2;
@@ -54,6 +62,24 @@ struct ImgFile {
     le u8 height;
     le u32 num_entries;
     le ImgSubFilePtr entries[num_entries];
+};
+
+struct TextureFile {
+    // load_font_resource?FUN_0061fad8
+        le u16 num_textures;
+        le u16 idk1;
+        MaybeString file_name;
+        le u8 prob_width;
+        le u8 prob_height;
+        le u32 num_subfile_ptrs;
+        // Code seems to always assume 2 or 0 pointers?
+        if (num_subfile_ptrs == 2) {
+            le ImgSubFilePtr subfile_ptrs[2];
+        } else if (num_subfile_ptrs == 0) {
+
+        } else {
+            assert(false, "Check load_font_resource?FUN_0061fad8");
+        }
 };
 
 struct IdkSubResource {
@@ -126,13 +152,6 @@ struct Joint {
     le u16 idk2[12];
 };
 
-struct MaybeString {
-    // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
-    le u32 str_len [[format("as_hex")]];
-    if (str_len != 0) {
-        char string[str_len + 1];
-    }
-};
 
 struct JointClass0Subclass4 {
     le u32 idk1;
@@ -316,6 +335,7 @@ struct TextureFactory {
         ImgSubFilePadded img_sub_files[img_subfile_len];
 };
 
+
 struct File {
 // DO_A_LOT_OF_STUFF_WITH_OFFSETS
     // copy_file_base
@@ -481,5 +501,27 @@ struct File {
                     // transform_FUN_0050dd68
                 }
         }
+
+    // idk?FUN_00620350
+        le u16 idk27;
+        le u16 idk28;
+        if (idk27 != 0) {
+            assert(false, "Check idk?FUN_00620350");
+        }
+        if (idk28 != 0) {
+            assert(false, "Check idk?FUN_00620350");
+        }
+
+    // idk?FUN_00629c18
+        le u32 idk29;
+        if (idk29 != 0) {
+            assert(false, "Check idk?FUN_00629c18");
+        }
+
+    // idk_font_resource_loader?FUN_0061fca8
+        le u32 idk30_res_len;
+        TextureFile texture_files[idk30_res_len];
+
+
 
 };
