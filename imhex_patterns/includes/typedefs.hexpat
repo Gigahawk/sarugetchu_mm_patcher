@@ -335,7 +335,68 @@ struct TextureFactory {
         ImgSubFilePadded img_sub_files[img_subfile_len];
 };
 
+struct idk_FUN_006280b0 {
+    // idk?FUN_00627e58
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT 5x
+            MaybeString mbs1;
+            MaybeString mbs2;
+            MaybeString mbs3;
+            MaybeString mbs4;
+            MaybeString mbs5;
+        le u32 idk1;
+        if (idk1 != 0) {
+            assert(false, "Check idk?FUN_00627e58");
+        }
+};
 
+struct idk_FUN_005d2450 {
+    // idk?FUN_005d2450
+        le u32 idk1_len;
+        if (idk1_len != 0) {
+            le u32 idk2[idk1_len];
+        }
+};
+
+struct idk_FUN_00626a20 {
+    // idk?FUN_00626a20
+        le u32 idk1;
+        // idk?FUN_005d2450
+            idk_FUN_005d2450 idk2;
+};
+
+struct idk_FUN_00626a90 {
+    // idk?FUN_00626a90
+        le u32 idk1;
+        le u32 idk2;
+        le u32 idk3;
+        // idk?FUN_005d2450
+            idk_FUN_005d2450 idk4;
+};
+
+struct idk_music_FUN_0062ab70 {
+    // idk_music?FUN_0062ab70
+        le u8 idk01;
+        le u8 idk02;
+        le u8 idk03;
+        le u8 idk04;
+
+        le u16 idk05;
+        le u16 idk06;
+        le u16 idk07;
+        le u16 idk08;
+
+        le u32 idk09;
+        le u32 idk10;
+        le u32 idk11;
+        le u32 idk12;
+        le u32 idk13;
+        le u32 idk14;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x11
+        MaybeString mbs[11];
+
+
+};
 struct File {
 // DO_A_LOT_OF_STUFF_WITH_OFFSETS
     // copy_file_base
@@ -518,10 +579,308 @@ struct File {
             assert(false, "Check idk?FUN_00629c18");
         }
 
-    // idk_font_resource_loader?FUN_0061fca8
+    // load_font_resource_array?FUN_0061fca8
         le u32 idk30_res_len;
         TextureFile texture_files[idk30_res_len];
 
+    // idk?FUN_0062afa8
+        le u32 idk31;
+        if (idk31 != 0) {
+            assert(false, "Check idk?FUN_0062afa8");
+        }
 
+    // idk?FUN_00622278
+        le u32 idk32;
+        if (idk32 != 0) {
+            assert(false, "Check idk?FUN_00622278");
+        }
 
+    // idk?FUN_00627538
+        le u32 idk33;
+        if (idk33 != 0) {
+            assert(false, "Check idk?FUN_00627538");
+        }
+
+    // idk?FUN_006280b0
+        le u32 idk34_len;
+        // idk?FUN_00627e58 called in loop
+        idk_FUN_006280b0 idk35[idk34_len];
+
+    // idk_data_inspector?FUN_00621b80
+        le u32 tnum;
+        if (tnum != 0) {
+            assert(false, "Check idk_data_inspector?FUN_00621b80");
+        }
+
+    // idk?FUN_00628988
+        le u32 idk36;
+        if (idk36 != 0) {
+            assert(false, "Check idk?FUN_00628988");
+        }
+        le u32 idk37;
+        if (idk37 != 0) {
+            assert(false, "Check idk?FUN_00628988");
+        }
+
+    // idk?FUN_0061fd68
+        le u32 idk38;
+        if (idk38 != 0) {
+            assert(false, "Check idk?FUN_0061fd68");
+        }
+
+    // idk?FUN_00620120
+        le u32 idk39;
+        if (idk39 != 0) {
+            assert(false, "Check idk?FUN_00620120");
+        }
+
+    // idk?FUN_006256f0
+        le u32 idk40;
+        if (idk40 != 0) {
+            assert(false, "Check idk?FUN_006256f0");
+        }
+
+    // idk?FUN_006259c8
+        le u32 idk41;
+        if (idk41 != 0) {
+            assert(false, "Check idk?FUN_006259c8");
+        }
+
+    // idk?FUN_00625ca0
+        le u32 idk42;
+        if (idk42 != 0) {
+            assert(false, "Check idk?FUN_00625ca0");
+        }
+
+    // idk?FUN_00625f80
+        le u32 idk43;
+        if (idk43 != 0) {
+            assert(false, "Check idk?FUN_00625f80");
+        }
+
+    // idk?FUN_00626298
+        le u32 idk44;
+        if (idk44 != 0) {
+            assert(false, "Check idk?FUN_00626298");
+        }
+
+    // idk?FUN_006266a8
+        le u32 idk45;
+        if (idk45 != 0) {
+            assert(false, "Check idk?FUN_006266a8");
+        }
+
+    // idk?FUN_00627a08
+        le u32 idk46;
+        if (idk46 != 0) {
+            assert(false, "Check idk?FUN_00627a08");
+        }
+
+    // idk?FUN_00624bb8
+        le u32 idk47;
+        if (idk47 != 0) {
+            assert(false, "Check idk?FUN_00624bb8");
+        }
+        le u32 idk48;
+        if (idk48 != 0) {
+            assert(false, "Check idk?FUN_00624bb8");
+        }
+        le u32 idk49;
+        if (idk49 != 0) {
+            assert(false, "Check idk?FUN_00624bb8");
+        }
+
+    // idk?FUN_0062a570
+        // idk?FUN_0062a130
+            // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+                MaybeString idk_mbs1;
+            le u32 idk50;
+            if (idk50 != 0) {
+                assert(false, "Check idk?FUN_0062a130");
+            }
+            le u32 idk51;
+            if (idk51 != 0) {
+                assert(false, "Check idk?FUN_0062a130");
+            }
+            le u32 idk52;
+            le u32 idk53;
+            // idk?FUN_005d2450
+                idk_FUN_005d2450 idk54;
+
+    // idk?FUN_00626b30
+        le u32 idk55_len;
+        // idk?FUN_00626a20 called in a loop
+            idk_FUN_00626a20 idk56[idk55_len];
+        le u32 idk57_len;
+        // idk?FUN_00626a90 called in a loop
+            idk_FUN_00626a90 idk58[idk57_len];
+        le u32 idk59;
+
+    // idk?FUN_0062a908
+        le u32 idk60;
+        if (idk60 != 0) {
+            assert(false, "Check idk?FUN_0062a908");
+        }
+
+    // idk?FUN_00620298
+        le u32 idk61_fsize;
+        // copy_to_buffer
+            le u8 idk_phz_collision_file[idk61_fsize];
+
+    // idk?FUN_00620440
+        le u32 idk62;
+        if (idk62 != 0) {
+            assert(false, "Check idk?FUN_00620440");
+        }
+
+    // idk?FUN_0061ff50
+        le u32 idk63;
+        if (idk63 != 0) {
+            assert(false, "Check idk?FUN_0061ff50");
+        }
+
+    // idk?FUN_00621f70
+        le u32 idk64;
+        if (idk64 != 0) {
+            assert(false, "Check idk?FUN_00621f70");
+        }
+        // idk?FUN_006268c0
+            le u32 idk65;
+            if (idk65 != 0) {
+                assert(false, "Check idk?FUN_006268c0");
+            }
+
+    // idk?FUN_00625318
+        le u32 idk66;
+        if (idk66 != 0) {
+            assert(false, "Check idk?FUN_00625318");
+        }
+
+    // idk?FUN_00620968
+        le u32 idk67;
+        le u32 idk_load_masterarray;
+        if (idk_load_masterarray != 0) {
+            assert(false, "Check idk?FUN_00620968");
+        }
+        le u32 idk68;
+        if (idk68 != 0) {
+            le u32 idk69;
+            // transform_FUN_0050dd68
+        }
+
+    // idk?FUN_00620ad8
+        le u8 idk70;
+        if (idk70 != 0) {
+            // idk_music?FUN_0062ab70
+            idk_music_FUN_0062ab70 idk_music;
+        }
+
+    // idk?FUN_00623f68
+        le u32 idk71;
+        if (idk71 != 0) {
+            assert(false, "Check idk?FUN_00623f68");
+        }
+
+    // idk?FUN_00623598
+        // idk?FUN_006225b8
+            le u32 idk72;
+            if (idk72 != 0) {
+                assert(false, "Check idk?FUN_006225b8");
+            }
+        // idk?FUN_00622790
+            // idk?FUN_005d2450
+                idk_FUN_005d2450 idk73;
+        // idk?FUN_00622840
+            le u32 idk74;
+            if (idk74 != 0) {
+                assert(false, "Check idk?FUN_00622840");
+            }
+        // idk?FUN_00622a80
+            // idk?FUN_005d2450
+                idk_FUN_005d2450 idk75;
+        // idk?FUN_00622d48
+            le u32 idk76;
+            if (idk76 != 0) {
+                assert(false, "Check idk?FUN_00622d48");
+            }
+        // idk?FUN_00623020
+            le u32 idk77;
+            if (idk77 != 0) {
+                assert(false, "Check idk?FUN_00623020");
+            }
+        // idk?FUN_00623360
+            le u32 idk78;
+            if (idk78 != 0) {
+                assert(false, "Check idk?FUN_00623360");
+            }
+
+    // idk?FUN_00621a20
+        le u8 idk79;
+        if (idk79 != 0) {
+            assert(false, "Check idk?FUN_00621a20");
+        }
+
+    // idk?FUN_006243f8
+        le u32 idk80;
+        if (idk80 != 0) {
+            assert(false, "Check idk?FUN_006243f8");
+        }
+
+    // idk?FUN_00628f28
+        le u32 idk81;
+        if (idk81 != 0) {
+            assert(false, "Check idk?FUN_00628f28");
+        }
+
+    // idk?FUN_00620d80
+        le u8 idk82;
+        if (idk82 != 0) {
+            assert(false, "Check idk?FUN_00620d80");
+        }
+        le u8 idk82_2;
+        if (idk82_2 != 0) {
+            assert(false, "Check idk?FUN_00620d80");
+        }
+
+    // idk?FUN_00620e60
+        le u8 idk83;
+        if (idk83 != 0) {
+            assert(false, "Check idk?FUN_00620e60");
+        }
+
+    // idk_camera?FUN_00620f50
+        le u8 idk84;
+        if (idk84 != 0) {
+            assert(false, "Check idk_camera?FUN_00620f50");
+        }
+
+    // idk?FUN_006211d0
+        le u32 idk85;
+        if (idk85 != 0) {
+            assert(false, "Check idk?FUN_006211d0");
+        }
+
+    // idk?FUN_00621600
+        le u32 idk86;
+        if (idk86 != 0) {
+            assert(false, "Check idk?FUN_00621600");
+        }
+
+    // idk?FUN_00621808
+        le u32 idk87;
+        if (idk87 != 0) {
+            assert(false, "Check idk?FUN_00621808");
+        }
+
+    // idk?FUN_00629758
+        le u32 idk88;
+        if (idk88 != 0) {
+            assert(false, "Check idk?FUN_00629758");
+        }
+
+    // idk?FUN_00621ab0
+        le u8 idk89;
+        if (idk89 != 0) {
+            assert(false, "Check idk?FUN_00621ab0");
+        }
 };
