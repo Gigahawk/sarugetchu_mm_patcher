@@ -161,30 +161,50 @@ struct JointClass0Subclass4 {
     le u32 idk5;
 };
 
-struct JointClass0 {
-    le u32 sub_class_id;
-    if (sub_class_id == 3) {
-        le u32 idk1;
-        le u32 idk2;
-        le u32 idk3;
-        // TODO: i think theres a loop/array here
-        assert(false, "joint class 0 subclass 3 not implemented");
-    } else if (sub_class_id == 2) {
-        le u32 idk1;
-        le u32 idk2;
-        le u32 idk3;
-        le u32 idk4;
-        le u32 idk5;
-    } else if (sub_class_id == 4) {
-        le u32 idk1;
-        le u32 idk2;
-        le u32 data_len;
-        JointClass0Subclass4 data[data_len];
-    } else {
-        assert(false, "Unknown joint class 0 subclass id");
+union JointClass0Subclass3Ptr {
+    le u32 nullptr;
+    if (nullptr != 0) {
+        le u32 *ptr: u32;
     }
-    le u32 idk_end;
-    MaybeString maybe_string;
+} [[inline]];
+
+struct JointClass0Subclass3Pair {
+    le u32 idk1;
+    le u32 idk2;
+};
+
+struct JointClass0Subclass3 {
+    // idk_load_joint_class0_subclass3?FUN_0062cf58
+        le u32 idk1;
+        le u32 idk2;
+        le u32 idk3_len;
+        JointClass0Subclass3Ptr idk_ptr[idk3_len];
+        le u32 idk4_len;
+        JointClass0Subclass3Pair idk_pairs[idk4_len];
+};
+
+struct JointClass0 {
+    // idk_load_joint_class0_thing?FUN_0062cd20
+        le u32 sub_class_id;
+        if (sub_class_id == 3) {
+            // idk_load_joint_class0_subclass3?FUN_0062cf58
+                JointClass0Subclass3 data;
+        } else if (sub_class_id == 2) {
+            le u32 idk1;
+            le u32 idk2;
+            le u32 idk3;
+            le u32 idk4;
+            le u32 idk5;
+        } else if (sub_class_id == 4) {
+            le u32 idk1;
+            le u32 idk2;
+            le u32 data_len;
+            JointClass0Subclass4 data[data_len];
+        } else {
+            assert(false, "Unknown joint class 0 subclass id");
+        }
+        le u32 idk_end;
+        MaybeString maybe_string;
 };
 
 struct JointClass1 {
@@ -192,12 +212,16 @@ struct JointClass1 {
 };
 
 struct Joint2 {
-    // rendernodeinterfacep_instantiate
+    // rendernodeinterfacep_instantiate_FUN_0062c288
     le u32 class_id;
     if (class_id == 0) {
-        MaybeString maybe_name;
-        le u32 joint_data_len;
-        JointClass0 idk_joint_data[joint_data_len];
+        // parse_joint_class_0_FUN_0062c500
+            // PRIOR_TO_LOADING_SOMETHING_IMPORTANT 5x
+                MaybeString maybe_name;
+            // idk_load_joint_class0_things?FUN_0062c3f0
+                le u32 joint_data_len;
+                // idk_load_joint_class0_thing?FUN_0062cd20 called in a loop
+                    JointClass0 idk_joint_data[joint_data_len];
         u8 maybe_end;
         if (maybe_end != 0) {
             le u32 some_ptr;
@@ -211,23 +235,50 @@ struct Joint2 {
     }
 };
 
+struct idk_joint_name_thing_FUN_00632f28_data {
+    // idk_joint_name_thing?FUN_00632f28 (first loop)
+    // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+        MaybeString name1;
+    // idk_joint_name?FUN_00633120
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name2;
+};
+
+struct idk_joint_name_thing_FUN_00632f28 {
+    // idk_joint_name_thing?FUN_00632f28
+        le u32 idk1_len;
+        idk_joint_name_thing_FUN_00632f28_data data[idk1_len];
+};
+
 struct Joint3SubData {
-    MaybeString maybe_string1;
-    MaybeString maybe_string2;
+    // load_joint3_data?FUN_00632ce8 (first loop)
+    // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+        MaybeString name;
+    // idk_joint_name_thing?FUN_00632f28
+        idk_joint_name_thing_FUN_00632f28 data;
+
 };
 
 struct Joint3Data {
-    MaybeString name;
-    le u32 idk_len;
-
+    // load_joint3_data?FUN_00632ce8
+        le u32 data_len;
+        Joint3SubData data[data_len];
 };
 
+union Joint3Ptr {
+    le u32 nullptr;
+    if (nullptr != 0) {
+        le u32 *ptr: u32;
+    }
+} [[inline]];
+
 struct Joint3 {
-    le u32 ptrs_len;
-    le u32 ptrs[ptrs_len];
-    le u32 ptr2;
-    le u32 data_len;
-    Joint3Data data[data_len];
+    // load_joint3_thing?FUN_0062de20
+        le u32 ptrs_len;
+        Joint3Ptr ptrs[ptrs_len];
+        le u32 *ptr2: u32;
+        // load_joint3_data?FUN_00632ce8
+            Joint3Data data;
 
 };
 
@@ -397,6 +448,431 @@ struct idk_music_FUN_0062ab70 {
 
 
 };
+
+struct idk_particle_FUN_0062b7c0 {
+    // idk_particle?FUN_0062b7c0
+        le u32 idk1;
+        le u16 idk2;
+        le u16 idk3;
+        le u64 idk4;
+        le u64 idk5;
+        le u64 idk6;
+        le u8 idk7;
+        le u8 idk8;
+        le u32 idk9;
+};
+
+struct idk_particle_FUN_0062b908 {
+    // idk_particle?FUN_0062b908
+        le u16 idk1;
+        le u32 idk2;
+        le u32 idk3;
+        le u16 idk4;
+        le u32 idk5[3];
+        // TODO: THIS IS PROBABLY NOT ALWAYS 1
+        idk_particle_FUN_0062b7c0 idk6[1];
+};
+
+struct idk_particle_FUN_0062c708 {
+    // idk_particle?FUN_0062c708
+        // idk_particle?FUN_0062b908
+            idk_particle_FUN_0062b908 idk1;
+
+        le u32 idk2;
+
+        // transform_FUN_0050dd68
+
+        le u32 idk3;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name2;
+
+
+
+};
+
+struct idk_particles_FUN_0062b1d8_data {
+    // idk_particles?FUN_0062b1d8 (first loop)
+    // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+        MaybeString name;
+    // idk_particle?FUN_0062c708
+        idk_particle_FUN_0062c708 data;
+};
+
+struct idk_particle_thing_FUN_0062b3f0 {
+    // idk_particle_thing?FUN_0062b3f0
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name2;
+        le u32 idk01;
+        le u32 idk02;
+
+        le u8 idk03;
+
+        le u8 idk04[0x10];
+
+        le u32 idk05;
+        le u32 idk06;
+        le u32 idk07;
+        le u32 idk08;
+        le u32 idk09;
+        le u32 idk10;
+        le u32 idk11;
+        le u32 idk12;
+
+        le u8 idk13[0x10];
+        le u8 idk14[0x10];
+        le u8 idk15[0x10];
+
+        le u32 idk16;
+        le u32 idk17;
+        le u32 idk18;
+        le u32 idk19;
+        le u32 idk20;
+        le u32 idk21;
+
+        le u16 idk22;
+        le u16 idk23;
+
+        le u8 idk24;
+};
+
+struct idk_FUN_0061e178 {
+    // idk?FUN_0061e178
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name;
+        le u32 idk1_len;
+        le u32 idk2[idk1_len];
+        le u32 idk3;
+        le u32 idk4;
+
+};
+
+struct idk_FUN_0061e2f8 {
+    // idk?FUN_0061e2f8
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name;
+        le u32 idk1;
+        // idk?FUN_0061e178 called in a loop
+            idk_FUN_0061e178 idk2[idk1];
+
+};
+
+struct idk_FUN_0061e598 {
+    // idk?FUN_0061e598
+        le u32 idk1;
+        if (idk1 != 0) {
+            le u32 idk2;
+        }
+};
+
+struct idk_FUN_0061e638 {
+    // idk?FUN_0061e638
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name;
+        le u32 idk1_len;
+        // idk?FUN_0061e598 called in a loop
+            idk_FUN_0061e598 idk2[idk1_len];
+
+};
+
+struct idk_FUN_0061e768 {
+    // idk?FUN_0061e768
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name;
+        le u32 idk1_len;
+        // idk?FUN_0061e638 called in a loop
+            idk_FUN_0061e638 idk2[idk1_len];
+
+
+};
+
+
+struct idk_FUN_0061f0d8 {
+    // idk?FUN_0061f0d8
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x4
+            MaybeString name1;
+            MaybeString name2;
+            MaybeString name3;
+            MaybeString name4;
+
+        le u32 idk1;
+
+        // transform_FUN_0050dd68
+
+        le u32 idk2;
+        le u32 idk3;
+        le u32 idk4;
+};
+
+struct idk_FUN_0061f1f0 {
+    // idk?FUN_0061f1f0
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name;
+        le u32 idk1_len;
+        // idk?FUN_0061f0d8 called in a loop
+            idk_FUN_0061f0d8 data[idk1_len];
+
+};
+
+
+struct idk_FUN_0061f850 {
+    // idk?FUN_0061f850
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name;
+        le u32 idk1_len;
+        le u32 idk_data[idk1_len];
+};
+
+using trapdatabase_instantiater_FUN_00630e88;
+
+struct idk_FUN_00631d00_data {
+    // idk?FUN_00631d00 (first loop)
+        le u8 idk_ptr_exists;
+        if (idk_ptr_exists == 0) {
+            trapdatabase_instantiater_FUN_00630e88 ptr_data;
+        } else {
+            le u32 *idk_ptr: u32;
+        }
+
+};
+
+struct idk_FUN_00631d00 {
+    // idk?FUN_00631d00
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name;
+        le u32 idk1;
+        le u32 idk2;
+        le u32 idk3;
+        idk_FUN_00631d00_data idk_data[idk3];
+
+};
+
+struct idk_FUN_00631e90 {
+    // idk?FUN_00631e90
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+
+        le u8 idk01;
+        le u8 idk02;
+        le u8 idk03;
+
+        le u32 idk04;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name2;
+
+        le u8 idk05;
+        le u8 idk06;
+        le u8 idk07;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name3;
+
+        le u8 idk08;
+
+        le u32 idk09;
+        le u32 idk10;
+        le u32 idk11;
+
+};
+
+struct idk_FUN_00632120 {
+    // idk?FUN_00632120
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+
+        le u32 idk1;
+};
+
+struct idk_FUN_006321b8 {
+    // idk?FUN_006321b8
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+
+        le u8 idk1;
+};
+
+struct idk_FUN_00632250 {
+    // idk?FUN_00632250
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x2
+            MaybeString name1;
+            MaybeString name2;
+
+};
+
+struct idk_FUN_00632438 {
+    // idk?FUN_00632438
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+};
+
+struct idk_FUN_006324a0 {
+    // idk?FUN_006324a0
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+
+        le u32 idk1;
+        le u32 idk2;
+};
+
+struct idk_FUN_006325d0 {
+    // idk?FUN_006325d0
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+
+        le u32 idk1;
+};
+
+struct idk_FUN_00632668 {
+    // idk?FUN_00632668
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+
+        le u32 idk1;
+        le u32 idk2;
+        le u32 idk3;
+
+};
+
+struct idk_FUN_00632760 {
+    // idk?FUN_00632760
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x2
+            MaybeString name1;
+            MaybeString name2;
+
+        le u8 idk1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x4
+            MaybeString name3;
+            MaybeString name4;
+            MaybeString name5;
+            MaybeString name6;
+};
+
+struct idk_FUN_00632890 {
+    // idk?FUN_00632890
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x2
+            MaybeString name1;
+            MaybeString name2;
+};
+
+struct idk_FUN_00632ae0 {
+    // idk?FUN_00632ae0
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x2
+            MaybeString name1;
+            MaybeString name2;
+
+        le u32 idk1;
+};
+
+struct idk_FUN_00632b98 {
+    // idk?FUN_00632b98
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x2
+            MaybeString name1;
+            MaybeString name2;
+
+        le u32 idk1;
+};
+
+
+struct trapdatabase_instantiater_FUN_00630e88 {
+    // trapdatabase_instantiater?FUN_00630e88
+        le u32 class_id;
+        if (class_id == 0) {
+            // idk?FUN_00631e90
+                idk_FUN_00631e90 data0;
+        } else if (class_id == 1) {
+            // idk?FUN_00632120
+                idk_FUN_00632120 data1;
+        } else if (class_id == 2) {
+            // idk?FUN_006321b8
+                idk_FUN_006321b8 data2;
+        } else if (class_id == 3) {
+            // idk?FUN_00632250
+                idk_FUN_00632250 data3;
+
+        } else if (class_id == 6) {
+            // idk?FUN_00632438
+                idk_FUN_00632438 data6;
+        } else if (class_id == 7) {
+            // idk?FUN_006324a0
+                idk_FUN_006324a0 data7;
+        } else if (class_id == 9) {
+            // idk?FUN_006325d0
+                idk_FUN_006325d0 data9;
+        } else if (class_id == 10) { // 0xa
+            // idk?FUN_00632668
+                idk_FUN_00632668 data10;
+        } else if (class_id == 11) { // 0xb
+            // idk?FUN_00632760
+                idk_FUN_00632760 data11;
+        } else if (class_id == 12) { // 0xc
+            // idk?FUN_00632890
+                idk_FUN_00632890 data12;
+        } else if (class_id == 16) { // 0x10
+            // idk?FUN_00632ae0
+                idk_FUN_00632ae0 data16;
+        } else if (class_id == 17) { // 0x11
+            // idk?FUN_00632b98
+                idk_FUN_00632b98 data17;
+        } else {
+            std::print(class_id);
+            assert(false, "Invalid class ID");
+        }
+};
+
+struct idk_FUN_00620120_data {
+    // idk?FUN_00620120 (first loop)
+        le u8 idk_ptr_exists;
+        if (idk_ptr_exists == 0) {
+            // trapdatabase_instantiater?FUN_00630e88
+                trapdatabase_instantiater_FUN_00630e88 data;
+
+        } else {
+            le u32 idk1;
+        }
+};
+
 struct File {
 // DO_A_LOT_OF_STUFF_WITH_OFFSETS
     // copy_file_base
@@ -419,16 +895,18 @@ struct File {
         le u32 idk2_len [[format("as_hex")]];
         Idk2 idk2s[idk2_len];
         le u32 joints2_len [[format("as_hex")]];
-        Joint2 joints2[joints2_len];
+        // rendernodeinterfacep_instantiate_FUN_0062c288 called in a loop
+            Joint2 joints2[joints2_len];
         le u32 idk3_len [[format("as_hex")]];
         if (idk3_len != 0) {
             assert(false, "Check FUN_0062ba50");
         }
         le u32 maybe_ptr1;
 
-    // load_joints3?
+    // load_joint3_things?FUN_0062df88
         le u32 joints3_len [[format("as_hex")]];
-        Joint3 joints3[joints3_len];
+        // load_joint3_thing?FUN_0062de20 called in a loop
+            Joint3 joints3[joints3_len];
 
     // EVENTUALLY_EVENTUALLY_DO_SMTH_WITH_STRING
         le u32 num_strs;
@@ -466,19 +944,18 @@ struct File {
             assert(false, "Check idk?FUN_0061e050");
         }
 
-    // idk?FUN_0062b1d8
-        SubFile data2;
-        TextureFactory texturefactory2;
+    // idk_particles?FUN_0062b1d8
+        // copy_file_base
+            SubFile data2;
+        // texturefactory_instantiate_FUN_0062f4a8
+            TextureFactory texturefactory2;
         le u32 idk6_len;
-        if (idk6_len != 0) {
-            assert(false, "Check idk?FUN_0062b1d8");
-        }
+        idk_particles_FUN_0062b1d8_data data[idk6_len];
 
     // idk?FUN_0062b690
         le u32 idk7_len;
-        if (idk7_len != 0) {
-            assert(false, "Check idk?FUN_0062b690");
-        }
+        // idk_particle_thing?FUN_0062b3f0 called in a loop
+            idk_particle_thing_FUN_0062b3f0 idk7_data[idk7_len];
 
     // idk?FUN_0062e160
         le u32 idk8_len;
@@ -488,9 +965,8 @@ struct File {
 
     // idk?FUN_0061e450
         le u32 idk9_len;
-        if (idk9_len != 0) {
-            assert(false, "Check idk?FUN_0061e450");
-        }
+        // idk?FUN_0061e2f8 called in a loop
+            idk_FUN_0061e2f8 idk9_data[idk9_len];
 
     // idk?FUN_0061ebf8
         le u32 idk10_len;
@@ -522,21 +998,18 @@ struct File {
 
     // idk?FUN_0061e8c0
         le u32 idk15_len;
-        if (idk15_len != 0) {
-            assert(false, "Check idk?FUN_0061e8c0");
-        }
+        // idk?FUN_0061e768 called in a loop
+            idk_FUN_0061e768 idk15_data[idk15_len];
 
     // idk?FUN_0061f348
         le u32 idk16_len;
-        if (idk16_len != 0) {
-            assert(false, "Check idk?FUN_0061f348");
-        }
+        // idk?FUN_0061f1f0 called in a loop
+            idk_FUN_0061f1f0 idk16_data[idk16_len];
 
     // idk?FUN_0061f990
         le u32 idk17_len;
-        if (idk17_len != 0) {
-            assert(false, "Check idk?FUN_0061f990");
-        }
+        // idk?FUN_0061f850 called in a loop
+            idk_FUN_0061f850 idk17_data[idk17_len];
 
     // idk?FUN_0061f6d0
         le u32 idk18_len;
@@ -629,10 +1102,8 @@ struct File {
         }
 
     // idk?FUN_00620120
-        le u32 idk39;
-        if (idk39 != 0) {
-            assert(false, "Check idk?FUN_00620120");
-        }
+        le u32 idk39_len;
+        idk_FUN_00620120_data idk39_data[idk39_len];
 
     // idk?FUN_006256f0
         le u32 idk40;
