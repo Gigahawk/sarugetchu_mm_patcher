@@ -14,38 +14,81 @@ struct MaybeString {
 };
 
 struct PixelData {
-    le u32 idk1;
-    le u16 idk2;
-    le u16 width;
-    le u16 height;
-    le u24 num_imgs;
-    le u32 *data: u32;
+    // idk_load_pixel_data?FUN_0062ee20
+        le u32 idk_img_layers;
+        le u16 idk2;
+        le u16 width;
+        le u16 height;
+        le u16 num_imgs;
+        le u8 data_inline;
+        if (data_inline == 0) {
+            le u32 *idk_data_ptr: u32;
+        } else {
+            le u8 idk_data[idk_img_layers*num_imgs*0x10];
+        }
 };
 struct ImgMetaEntry {
-    le PixelData *data: u32;
-    le u16 width;
-    le u16 height;
-    le u32 idk1;
-    le u32 idk2;
+    // idk_load_img_meta_entry?FUN_0062efc8
+        le PixelData *data: u32;
+        le u16 width;
+        le u16 height;
+        le u32 idk1;
+        le u32 idk2;
 };
 struct ImgMeta {
-    le u32 type_len;
-    char type[type_len + 1];
-    le u32 num_entries;
-    ImgMetaEntry entries[num_entries];
-    u8 _null;
+    // idk_load_image_meta?FUN_0062f100
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString type;
+
+        le u32 num_entries;
+
+        // idk_load_img_meta_entry?FUN_0062efc8 called in a loop
+            ImgMetaEntry entries[num_entries];
+
+        u8 idk1;
 };
 
 struct ImgSubFile {
-    le ImgMeta *metadata: u32;
-    le u32 idk1;
-    le u32 fname_len;
-    char fname[fname_len + 1];
+    // idk_load_img_subfile?FUN_0062f298
+        le ImgMeta *metadata: u32;
+        le u16 idk1;
+        le u16 idk2;
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString fname;
+};
+
+struct ImgSubFile2 {
+    // idk_load_img_subfile2?FUN_0062f350
+        le ImgMeta *metadata: u32;
+
+        le u16 idk1;
+        le u16 idk2;
+        le u16 idk3;
+        le u16 idk4;
+        le u16 idk5;
+        le u16 idk6;
+        le u16 idk7;
+        le u16 idk8;
+        le u16 idk9;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString fname;
+
 };
 
 struct ImgSubFilePadded{
-    le u32 idk;
-    ImgSubFile img_sub_file;
+    // texturefactory_instantiate_FUN_0062f4a8 (last loop)
+        le u32 class_id;
+        if (class_id == 0) {
+            // idk_load_img_subfile?FUN_0062f298
+                ImgSubFile img_sub_file;
+        } else if (class_id == 1) {
+            // idk_load_img_subfile2?FUN_0062f350
+                ImgSubFile2 img_sub_file2;
+        } else {
+            std::print(class_id);
+            assert(false, "Invalid class id");
+        }
 };
 
 union ImgSubFilePtr {
@@ -375,15 +418,18 @@ struct SubFile {
 };
 
 struct TextureFactory {
-    // texturefactory_instantiate
+    // texturefactory_instantiate_FUN_0062f4a8
         // copy_file_base
             SubFile data;
         le u32 pixel_data_len [[format("as_hex")]];
         le u32 img_meta_len [[format("as_hex")]];
         le u32 img_subfile_len [[format("as_hex")]];
-        PixelData pixel_data[pixel_data_len];
-        ImgMeta img_meta[img_meta_len];
+        // idk_load_pixel_data?FUN_0062ee20 called in a loop
+            PixelData pixel_data[pixel_data_len];
+        // idk_load_image_meta?FUN_0062f100 called in a loop
+            ImgMeta img_meta[img_meta_len];
         ImgSubFilePadded img_sub_files[img_subfile_len];
+
 };
 
 struct idk_FUN_006280b0 {
@@ -873,6 +919,43 @@ struct idk_FUN_00620120_data {
         }
 };
 
+struct idk_joints_FUN_0062ba50_data {
+    // idk_joints?FUN_0062ba50 (first loop)
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x2
+            MaybeString joint1;
+            MaybeString joint2;
+};
+
+struct idk_joints_FUN_0062ba50 {
+    // idk_joints?FUN_0062ba50
+        le u32 idk_len;
+        idk_joints_FUN_0062ba50_data data[idk_len];
+};
+
+struct idk_FUN_0062d8f8 {
+    // idk?FUN_0062d8f8
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x2
+            MaybeString name;
+
+        le u32 idk01;
+
+        le u16 idk02;
+        le u16 idk03;
+        le u16 idk04;
+        le u16 idk05;
+        le u16 idk06;
+        le u16 idk07;
+        le u16 idk08;
+        le u16 idk09;
+        le u16 idk10;
+        le u16 idk11;
+        le u16 idk12;
+        le u16 idk13;
+        le u16 idk14;
+
+        le u32 idk15;
+};
+
 struct File {
 // DO_A_LOT_OF_STUFF_WITH_OFFSETS
     // copy_file_base
@@ -882,10 +965,10 @@ struct File {
     // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
         MaybeString idk_maybe_string;
 
-    // renderdata_instantiate
+    // renderdata_instantiate_FUN_0062bc80
         // copy_file_base
             SubFile renderdata;
-        // texturefactory_instantiate
+        // texturefactory_instantiate_FUN_0062f4a8
             TextureFactory texturefactory;
         le u32 idk_res_len [[format("as_hex")]];
         IdkResource idk_resources[idk_res_len];
@@ -897,10 +980,8 @@ struct File {
         le u32 joints2_len [[format("as_hex")]];
         // rendernodeinterfacep_instantiate_FUN_0062c288 called in a loop
             Joint2 joints2[joints2_len];
-        le u32 idk3_len [[format("as_hex")]];
-        if (idk3_len != 0) {
-            assert(false, "Check FUN_0062ba50");
-        }
+        // idk_joints?FUN_0062ba50
+            idk_joints_FUN_0062ba50 idk_joints;
         le u32 maybe_ptr1;
 
     // load_joint3_things?FUN_0062df88
@@ -918,9 +999,8 @@ struct File {
 
     // idk?FUN_0062dbb0
         le u32 idk4_len;
-        if (idk4_len != 0) {
-            assert(false, "Check idk?FUN_0062dbb0");
-        }
+        // idk?FUN_0062d8f8 called in a loop
+            idk_FUN_0062d8f8 idk4_data[idk4_len];
 
     // load_cameras?FUN_0062dce8
         le u32 cameras_len;
