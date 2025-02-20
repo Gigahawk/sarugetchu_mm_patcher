@@ -94,6 +94,11 @@ The second 4 bytes are the length of the string in bytes, not including the null
 
 #### Files Known to Contain Strings
 
+- `game_result.story`
+- `game_result.vs`
+- `menu_common`
+- `menu_story.xxx`
+- `menu_vs`
 - `stage.01_boss01_gori01`
 - `stage.02_city01_a`
 - `stage.03_city02_a`
@@ -120,6 +125,7 @@ The second 4 bytes are the length of the string in bytes, not including the null
 - `stage.58_UFO2`
 - `stage.60_k1`
 - `stage.60_k1death`
+- `victory.xxx`
 
 
 

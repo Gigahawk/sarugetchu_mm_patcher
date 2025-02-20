@@ -142,7 +142,7 @@
         #"044_5c272d50" # gz/game_common.story.gz
         #"045_3cecf223" # gz/game_common.vs.gz
         #"046_8205e9b5" # gz/game_common_sound_bd.gz
-        "047_7243e526" #gz/game_result.story.gz
+        "047_7243e526" # gz/game_result.story.gz
         "048_4abee95e" # gz/game_result.vs.gz
         #"066_c9448ba5" # gz/menu1.gz
         #"067_a60a8ca5" # gz/menu2.gz
@@ -691,6 +691,7 @@
           pkgs.openai-whisper
           pkgs.dos2unix
           pkgs.vlc
+          pkgs.imhex
           pkgs.rsbkb  # bgrep
           pkgs-clps2c.clps2c-compiler
         ];
