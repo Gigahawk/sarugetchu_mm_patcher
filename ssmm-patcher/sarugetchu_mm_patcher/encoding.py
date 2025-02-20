@@ -3148,13 +3148,13 @@ class EncodingTranslator:
             if token in self.bytes_to_char:
                 out.append(token)
                 #print("TOKEN IS VALID")
-                print(self.bytes_to_char[token], end="")
+                #print(self.bytes_to_char[token], end="")
                 idx += 2
                 continue
             if byte in self.bytes_to_char:
                 out.append(byte)
                 #print("BYTE IS VALID")
-                print(self.bytes_to_char[byte], end="")
+                #print(self.bytes_to_char[byte], end="")
                 idx += 1
                 continue
             raise ValueError(

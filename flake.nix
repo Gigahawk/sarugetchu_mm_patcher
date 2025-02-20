@@ -484,6 +484,29 @@
             cp -r DATA1/* "$out/DATA1"
           '';
         };
+        data-imhex-analysis = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-data-imhex-analysis";
+          inherit version;
+          src = ./imhex_patterns;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            pkgs.imhex
+          ];
+
+          buildPhase = ''
+            mkdir -p $out/analysis
+            echo "${resourceFilesStr}" | \
+              xargs -P ${processes} -I {} bash -c '
+                imhex --pl format --verbose --metadata \
+                  --includes "$src/includes/" \
+                  --input "${self.packages.${system}.data-jp-extracted}/DATA1/{}" \
+                  --pattern "$src/main.hexpat" \
+                  --output "$out/analysis/{}.json"
+              '
+          '';
+        };
         data-cn-extracted = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
           pname = "mm-cn-data-extracted";
           buildPhase = data-extracted-buildPhase self.packages.${system}.data-cn-unpacked;
