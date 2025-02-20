@@ -670,23 +670,28 @@ def dump_strings(imhex_json, name_hash, output_path):
             if alloc_len > actual_len:
                 f.write("ALLOC BIGGER THAN STRING LEN\n")
 
-            string_tokens = translator.tokenize_string(string_raw)
+            try:
+                string_tokens = translator.tokenize_string(string_raw)
 
-            line_out = ""
-            for token in string_tokens:
-                line_out += f'"{token.hex().upper()}",'
-            f.write(line_out)
-            f.write("\n")
+                line_out = ""
+                for token in string_tokens:
+                    line_out += f'"{token.hex().upper()}",'
+                f.write(line_out)
+                f.write("\n")
 
-            line_out = ""
-            for token in string_tokens:
-                char = translator.bytes_to_char[token]
-                if char in ["\n", "\f"]:
-                    line_out += f'"{repr(char).strip("'")}",'
-                else:
-                    line_out += f'"{char}",'
-            f.write(line_out)
-            f.write("\n")
+                line_out = ""
+                for token in string_tokens:
+                    char = translator.bytes_to_char[token]
+                    if char in ["\n", "\f"]:
+                        line_out += f'"{repr(char).strip("'")}",'
+                    else:
+                        line_out += f'"{char}",'
+                f.write(line_out)
+                f.write("\n")
+            except ValueError:
+                f.write("STRING CONTAINS INVALID TOKENS\n")
+                f.write(f'"{string_raw.hex(" ")}"\n')
+                f.write(f'"{string_raw}"\n')
 
 @cli.command()
 @click.argument(
