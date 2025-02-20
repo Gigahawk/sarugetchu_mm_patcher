@@ -510,36 +510,6 @@ def patch_resource(resource_path, strings_path, hash, output_path):
 
 @cli.command()
 @click.argument(
-    "resource_path",
-    type=click.Path(),
-)
-@click.option(
-    "-o", "--output-path",
-    default=None,
-    show_default=True,
-    type=click.Path(),
-)
-def extract_base(resource_path, output_path):
-    resource_path = Path(resource_path)
-    if output_path is None:
-        output_path = Path(os.getcwd()) / f"{resource_path.stem}.base"
-    else:
-        output_path = Path(output_path)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-
-    with open(resource_path, "rb") as f:
-        resource_bytes = f.read()
-    if resource_bytes[0] == 0:
-        # When the game opens a resource file it only reads the rest
-        # of the file if this byte isn't 0
-        click.echo("Warning: first byte is null")
-    buff_size = int.from_bytes(resource_bytes[1:5], "little")
-    base_bytes = resource_bytes[5:5+buff_size]
-    with open(output_path, "wb") as f:
-        f.write(base_bytes)
-
-@cli.command()
-@click.argument(
     "target",
     type=str,
 )

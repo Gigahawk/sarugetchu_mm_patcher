@@ -97,15 +97,6 @@
           '
         wait
       '';
-      data-extracted-base-installPhase = data-extracted: ''
-        find ${data-extracted}/DATA1 -type f | \
-          xargs -P ${processes} -I {} bash -c '
-            input="{}"
-            base_name="''${input#${data-extracted}/}"
-            output="$out/''${base_name}.base"
-            ssmm-patcher extract-base -o "$output" "$input"
-          '
-      '';
       data-unpacked-named-installPhase = data-unpacked: ''
         find ${data-unpacked}/DATA1 -type f | \
           xargs -P ${processes} -I {} bash -c '
@@ -500,23 +491,6 @@
         data-jp-extracted-named = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
           pname = "mm-jp-data-extracted-named";
           buildPhase = data-extracted-buildPhase self.packages.${system}.data-jp-unpacked-named;
-        });
-        data-jp-extracted-base = with import nixpkgs { inherit system; };
-        stdenv.mkDerivation rec {
-          pname = "mm-jp-data-extracted-base";
-          inherit version;
-          src = null;
-          dontUnpack = true;
-
-          nativeBuildInputs = [
-            self.packages.${system}.ssmm-patcher
-          ];
-
-          installPhase = data-extracted-base-installPhase self.packages.${system}.data-jp-extracted;
-        };
-        data-jp-extracted-named-base = self.packages.${system}.data-jp-extracted-base.overrideAttrs (old: {
-          pname = "mm-jp-data-extracted-named-base";
-          installPhase = data-extracted-base-installPhase self.packages.${system}.data-jp-extracted-named;
         });
         data-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
