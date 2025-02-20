@@ -92,6 +92,41 @@ Furigana is supported, with single byte 0x5B being used to indicate the start an
 There is an 8 byte long structure prior to the start of the string, the first 4 bytes appear to be some monotonically increasing index or ID, for some reason it seems to increase by 0x61 every time.
 The second 4 bytes are the length of the string in bytes, not including the null byte (this is probably used by the code to allocate space to render the text onscreen, setting the string to something longer without updating this value causes the game to not start)
 
+#### Files Known to Contain Strings
+
+- `stage.01_boss01_gori01`
+- `stage.02_city01_a`
+- `stage.03_city02_a`
+- `stage.04_metro01_a`
+- `stage.05_boss02_boss`
+- `stage.06_bay01_a`
+- `stage.07_bay02_a`
+- `stage.08_park01_a`
+- `stage.09_stadium_a`
+- `stage.10_boss03_fly`
+- `stage.11_hangar01_a`
+- `stage.12_hangar02_a`
+- `stage.13_boss04_gori02`
+- `stage.14_elevator_a`
+- `stage.15_kakeru_spector`
+- `stage.50_k1`
+- `stage.51_city`
+- `stage.52_metro`
+- `stage.53_bay`
+- `stage.54_UFO`
+- `stage.55_park`
+- `stage.56_daiba`
+- `stage.57_k1death`
+- `stage.58_UFO2`
+- `stage.60_k1`
+- `stage.60_k1death`
+
+
+
+
+
+
+
 ### Encodings
 
 It turns out this game uses a bunch of unique nonstandard text encodings.
