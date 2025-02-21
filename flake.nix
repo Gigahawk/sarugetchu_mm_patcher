@@ -540,35 +540,7 @@
                   "{}" \
                   "${self.packages.${system}.data-imhex-analysis}/analysis/{}.json"
               '
-
-            #cp "${self.packages.${system}.data-jp-extracted}/DATA1/737_e5d5ceb1" 737_e5d5ceb1_patched
-            #chmod 777 737_e5d5ceb1_patched
-            #printf '\xFF%.0s' {1..21271} | dd of=737_e5d5ceb1_patched bs=1 seek=2245 conv=notrunc
-            ##printf '\xFF%.0s' {1..2000} | dd of=737_e5d5ceb1_patched bs=1 seek=679413 conv=notrunc
-            ##printf '\xE5%.0s' {1..1} | dd of=737_e5d5ceb1_patched bs=1 seek=877418 conv=notrunc
-            ##printf '\x5B%.0s' {1..1} | dd of=737_e5d5ceb1_patched bs=1 seek=877419 conv=notrunc
           '';
-          # byte 0xFF start 2254 len 64, whites out first thirdish of 一 and リ (zeroth and first char)
-          # byte 0xFF start 2254 len 128, whites out first two thirdsish of 一 and リ (zeroth and first char)
-          # byte 0xFF start 2254 len 256, whites out all of of 一 and リ (zeroth and first char) and top little bit of ト and ラ (second/third)
-          # byte 0xFF start 2254 len 1, no apparent changes
-          # byte 0xFF start 2256 len 1, no apparent changes
-          # byte 0xFF start 2256 len 8, whites out first 90% of second line of 一 and リ (zeroth and first char)
-          # byte 0xFF start 2256 len 4, whites out first 20% of second line of 一 and リ (zeroth and first char)
-          # byte 0xFF start 2256 len 2, whites out first (2 pixels?) of second line of 一 and リ (zeroth and first char)
-          # byte 0xFF start 2257 len 1, whites out first (2 pixels?) of second line of 一 and リ (zeroth and first char)
-          # byte 0xF0 start 2257 len 8, causes dots on first 90% of second line of 一 and リ (zeroth and first char)
-          # byte 0x0F start 2257 len 8, causes dots on first 90% of second line of 一 and リ (zeroth and first char)
-          # byte 0xAA start 2257 len 8, bright grey on 16px of second line of 一 and リ (zeroth and first char)
-          # byte 0xFF start 2257 len 8, white on 16px of second line of 一 and リ (zeroth and first char)
-          # byte 0xCC start 2257 len 8, white on 16px of second line of リ (first char)
-          # byte 0x33 start 2257 len 8, white on 16px of second line of 一 (zeroth char)
-          # byte 0x03 start 2257 len 1, white on first px of second line of 一 (zeroth char)
-          # byte 0x33 start 2257 len 9, white on all of second line (18px) of 一 (zeroth char)
-          # byte 0x33 start 2257 len 10, white on all of second line (18px) of 一 (zeroth char)
-          # byte 0x33 start 2257 len 33, white on all of three lines after first (18px) of 一 (zeroth char)
-          # byte 0x33 start 2257 len 13, white on all of second line (18px) and 2px of next line of 一 (zeroth char)
-          # byte 0x33 start 2245 len 1, white on first 2px of first line of 一 (zeroth char)
 
           installPhase = ''
             find . -name '*_patched' -type f | \

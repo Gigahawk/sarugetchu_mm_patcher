@@ -184,38 +184,6 @@ def patch_file_offsets(
         )
     return file
 
-def patch_img_struct_offsets(
-    file: bytearray,
-    orig_offsets: dict[int, int],
-) -> bytearray:
-    names = [
-        b"boss_smoke"
-    ]
-    for name in entity_names:
-        found = find_strings(file, name)
-        for entry in found:
-            for offset in [0x5, 0x15]:
-                addr_offset: int = entry["end"] + offset
-                addr = int.from_bytes(
-                    file[addr_offset:addr_offset + 4],
-                    byteorder="little"
-                )
-                try:
-                    orig_offset = orig_offsets[addr]
-                except:
-                    continue
-                new_addr = addr + (addr_offset - orig_offset)
-                diff = new_addr - addr
-                print(
-                    f"Patching {entry['value']} address from "
-                    f"{hex(addr)} to {hex(new_addr)} "
-                    f"(diff {hex(diff)})"
-                )
-                file[addr_offset:addr_offset + 4] = new_addr.to_bytes(
-                    4, "little"
-                )
-    return file
-
 def gen_packinfo_hash(pack_path: str) -> bytes:
     crc = 0
     for c in pack_path:
