@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 from collections.abc import Buffer
 import string
 from typing import Any
@@ -110,61 +111,75 @@ class TrackedByteArray(bytearray):
             orig_idx = new_idx
         return orig_idx
 
+@dataclass(frozen=True)
+class ImhexPtr:
+    # Offset where this pointer is found
+    file_offset: int
+    # Address the pointer is pointing to
+    target: int
+
+class ImhexPtrFinder:
+    def __init__(self, imhex_analysis: dict):
+        self.data = imhex_analysis
+        self.ptrs: list[ImhexPtr] = []
+        self.parse()
+        self.ptrs = list(set(self.ptrs))
+
+    def parse(self, start=None):
+        if start is None:
+            start = self.data
+        if isinstance(start, dict):
+            if "__type" in start.keys():
+                if start["__type"].endswith("Ptr") and "ptr" in start.keys():
+                    self.ptrs.append(
+                        ImhexPtr(
+                            file_offset=int(start["__address"]),
+                            target=start["nullptr"]
+                        )
+                    )
+            for obj in start.values():
+                self.parse(start=obj)
+        elif isinstance(start, list):
+            for obj in start:
+                self.parse(start=obj)
+
+
+
+
 def patch_file_offsets(
     file: TrackedByteArray,
+    imhex_analysis: dict
 ) -> bytearray:
-    targets = [
-        b"menu_common/icon.bimg",
-        b"work/sound_data/midi/SGMM_02.bdm",
-        b"work/sound_data/midi/SGMM_02.hd",
-        b"work/sound_data/midi/SGMM_02.mid",
-        b"work/sound_data/sadpcm/BGM/SGMM_01_gradius.sts",
-        b"work/sound_data/sadpcm/BGM/SGMM_21.sts",
-        b"work/sound_data/sadpcm/BGM/SGMM_26.sts",
-        b"work/sound_data/sadpcm/BGM/SGMM_27.sts",
-        b"work/sound_data/sadpcm/BGM/SGMM_28.sts",
-        b"work/sound_data/sadpcm/BGM/SGMM_31.sts",
-        b"work/sound_data/sadpcm/BGM/SGMM_37.sts",
-        b"work/sound_data/sadpcm/JINGLE/Congratulations.sts",
-        b"work/sound_data/sadpcm/JINGLE/Congratulations_Victory.sts",
-        b"work/sound_data/sadpcm/JINGLE/Miss_kakeru.sts",
-        b"work/sound_data/sadpcm/JINGLE/Winner_taisenmode.sts",
-        b"work/sound_data/sadpcm/JINGLE/You_Lose.sts",
-        b"work/sound_data/se/PC_kakeru.hd",
-        b"work/sound_data/se/PC_kakeru.sed",
-        b"work/sound_data/se/ST01.hd",
-        b"work/sound_data/se/ST01.sed",
-        b"work/sound_data/se/ST02.hd",
-        b"work/sound_data/se/ST02.sed",
-        b"work/sound_data/se/ST012.hd",
-        b"work/sound_data/se/ST012.sed",
-        b"work/sound_data/se/ST022.hd",
-        b"work/sound_data/se/ST022.sed",
-        b"work/sound_data/se/ST50.hd",
-        b"work/sound_data/se/ST50.sed",
-        b"work/sound_data/se/ST53.hd",
-        b"work/sound_data/se/ST53.sed",
-        b"work/sound_data/se/vehicle.hd",
-        b"work/sound_data/se/vehicle.sed",
-        b"work/sound_data/se/mecha.hd",
-        b"work/sound_data/se/mecha.sed",
-    ]
-    for target in targets:
-        try:
-            target_start_idx = file.index(target)
-        except:
-            continue
-        offset_start_idx = target_start_idx - 8
-        offset = int.from_bytes(
-            file[offset_start_idx:offset_start_idx + 4],
+
+    ptrs = ImhexPtrFinder(imhex_analysis).ptrs
+
+    for ptr in ptrs:
+        file_offset_orig = ptr.file_offset
+        file_offset_new = file.get_new_index(file_offset_orig)
+        _file_offset_msg = (
+            f"orig: {hex(file_offset_orig)}, "
+            f"new: {hex(file_offset_new)}"
+        )
+
+        # Target address should not have changed yet, sanity check it matches
+        # the original
+        target_orig = int.from_bytes(
+            file[file_offset_new:file_offset_new + 4],
             byteorder="little"
         )
-        new_offset = file.get_new_index(offset)
+        if target_orig != ptr.target:
+            raise ValueError(
+                f"Pointer at file offset {_file_offset_msg} "
+                f"should be {hex(ptr.target)} but is actually {hex(target_orig)}"
+            )
+        new_target = file.get_new_index(target_orig)
+        if new_target == target_orig:
+            continue
         print(
-            f"Patching file offset for {target} from "
-            f"{hex(offset)} to {hex(new_offset)}"
+            f"Patching pointer at file offset {_file_offset_msg}, "
+            f"from {hex(target_orig)} to {hex(new_target)}"
         )
-        file[offset_start_idx:offset_start_idx + 4] = new_offset.to_bytes(
+        file[file_offset_new:file_offset_new + 4] = new_target.to_bytes(
             length=4, byteorder="little"
         )
     return file

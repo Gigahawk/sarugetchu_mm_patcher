@@ -40,6 +40,15 @@ DATA1_PATH = "/PDATA/DATA1.BIN;1"
 def cli():
     pass
 
+def _guess_hash(fname: str | Path):
+    fname = Path(Path(fname).stem).name
+    _, name_hash = fname.split("_")
+    return name_hash
+
+def _parse_imhex_json(imhex_json: str | Path):
+    with open(imhex_json) as f:
+        return json.load(f)["file"]
+
 def _print_headers(
         iso: Ps2Iso,
         header_len: int=32
@@ -427,6 +436,10 @@ def pack_data(index_path, data_path, entry):
     "resource_path",
     type=click.Path(),
 )
+@click.argument(
+    "imhex_json",
+    type=click.Path()
+)
 @click.option(
     "-s", "--strings-path",
     default=None,
@@ -444,7 +457,9 @@ def pack_data(index_path, data_path, entry):
     show_default=True,
     type=click.Path(),
 )
-def patch_resource(resource_path, strings_path, hash, output_path):
+def patch_resource(resource_path, strings_path, hash, output_path, imhex_json):
+    if hash is None:
+        hash = _guess_hash(resource_path)
     source_encoder = EncodingTranslator(hash)
     resource_path = Path(resource_path)
     if strings_path is None:
@@ -463,6 +478,7 @@ def patch_resource(resource_path, strings_path, hash, output_path):
         raise ValueError(f"Empty strings file {strings_path}")
     with open(resource_path, "rb") as f:
         resource_bytes = util.TrackedByteArray(f.read())
+    imhex_analysis = _parse_imhex_json(imhex_json)
 
     if util.find_strings(resource_bytes, "sv_msg.gf0"):
         # Sorta hacky, technically this should always be the default font
@@ -504,7 +520,7 @@ def patch_resource(resource_path, strings_path, hash, output_path):
                     target_encoder.wrap_string(new_bytestr, id=id),
                 )
 
-    resource_bytes = util.patch_file_offsets(resource_bytes)
+    resource_bytes = util.patch_file_offsets(resource_bytes, imhex_analysis)
     #resource_bytes = util.patch_entity_addrs(resource_bytes, orig_entity_offset_idxs)
     with open(output_path, "wb") as f:
         f.write(resource_bytes)
@@ -645,13 +661,9 @@ def dump_textures(resource_path, output_path):
 )
 def dump_strings(imhex_json, name_hash, output_path):
     imhex_json = Path(imhex_json)
-    if name_hash is None:
-        fname = Path(imhex_json.stem).name
-        _, name_hash = fname.split("_")
     if output_path is None:
         output_path = Path(os.getcwd()) / imhex_json.with_suffix(".strings.csv").name
-    with open(imhex_json) as f:
-        data = json.load(f)["file"]
+    data = _parse_imhex_json(imhex_json)
     strings = data["strings"]
     translator = EncodingTranslator(name_hash)
     with open(output_path, "w") as f:

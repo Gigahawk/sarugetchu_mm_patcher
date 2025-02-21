@@ -530,7 +530,6 @@
             echo "${resourceFilesStr}" | \
               xargs -P ${processes} -I {} bash -c '
                 name="{}"
-                hash="''${name#*_}"
                 ssmm-patcher patch-font \
                   -o "{}" \
                   "${self.packages.${system}.data-jp-extracted}/DATA1/070_00940549" \
@@ -538,8 +537,8 @@
 
                 ssmm-patcher patch-resource \
                   -s $src \
-                  --hash "$hash" \
-                  "{}"
+                  "{}" \
+                  "${self.packages.${system}.data-imhex-analysis}/analysis/{}.json"
               '
 
             #cp "${self.packages.${system}.data-jp-extracted}/DATA1/737_e5d5ceb1" 737_e5d5ceb1_patched

@@ -390,9 +390,11 @@ struct Collision {
     le u8 idk2[0x10];
 };
 
+using SoundPathStartPtr = MaybePtr<u32>;
+
 struct SoundPath {
     // Seems to point to base of sound path array?
-    le u32 base_ptr;
+    SoundPathStartPtr base_ptr;
     MaybeString path;
     le u32 idk1;
     le u32 idk2;
