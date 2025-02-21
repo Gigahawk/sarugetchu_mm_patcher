@@ -648,7 +648,7 @@ def dump_textures(resource_path, output_path):
     type=click.Path()
 )
 @click.option(
-    "-h", "--name_hash",
+    "-h", "--hash",
     default=None,
     show_default=True,
     type=str,
@@ -659,13 +659,15 @@ def dump_textures(resource_path, output_path):
     show_default=True,
     type=click.Path(),
 )
-def dump_strings(imhex_json, name_hash, output_path):
+def dump_strings(imhex_json, hash, output_path):
     imhex_json = Path(imhex_json)
     if output_path is None:
         output_path = Path(os.getcwd()) / imhex_json.with_suffix(".strings.csv").name
+    if hash is None:
+        hash = _guess_hash(imhex_json)
     data = _parse_imhex_json(imhex_json)
     strings = data["strings"]
-    translator = EncodingTranslator(name_hash)
+    translator = EncodingTranslator(hash)
     with open(output_path, "w") as f:
         for string in strings:
             addr = hex(int(string["__address"]))
@@ -675,7 +677,7 @@ def dump_strings(imhex_json, name_hash, output_path):
             actual_len = len(string_raw)
 
             f.write(
-                f"\"Found string at {addr} with id {id}; "
+                f"\"Found string at {addr} with id {str_id}; "
                 f"allocation length {alloc_len}; "
                 f"actual length {actual_len}\"\n"
             )
@@ -692,13 +694,16 @@ def dump_strings(imhex_json, name_hash, output_path):
                 f.write("\n")
 
                 line_out = ""
+                full_str = ""
                 for token in string_tokens:
                     char = translator.bytes_to_char[token]
                     if char in ["\n", "\f"]:
-                        line_out += f'"{repr(char).strip("'")}",'
-                    else:
-                        line_out += f'"{char}",'
+                        char = repr(char).strip("'")
+                    full_str += char
+                    line_out += f'"{char}",'
                 f.write(line_out)
+                f.write("\n")
+                f.write(full_str)
                 f.write("\n")
             except ValueError:
                 f.write("STRING CONTAINS INVALID TOKENS\n")

@@ -533,9 +533,11 @@ struct idk_music_FUN_0062ab70 {
 
 };
 
+using IdkParticle1Ptr = MaybePtr<u32>;
+
 struct idk_particle_FUN_0062b7c0 {
     // idk_particle?FUN_0062b7c0
-        le u32 idk1;
+        IdkParticle1Ptr idk1;
         le u16 idk2;
         le u16 idk3;
         le u64 idk4;
@@ -1040,6 +1042,8 @@ struct trapdatabase_instantiater_FUN_00630e88 {
         }
 };
 
+using idk_FUN_00620120_data_subPtr = MaybePtr<u32>;
+
 struct idk_FUN_00620120_data {
     // idk?FUN_00620120 (first loop)
         le u8 idk_ptr_exists;
@@ -1048,7 +1052,7 @@ struct idk_FUN_00620120_data {
                 trapdatabase_instantiater_FUN_00630e88 data;
 
         } else {
-            le u32 idk1;
+            idk_FUN_00620120_data_subPtr idk_ptr;
         }
 };
 

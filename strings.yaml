@@ -223,6 +223,10 @@
   english: "Shinjuku"
 "新宿 PM02:16":
   "english": "Shinjuku\n02:16PM"
+"新宿南口":
+  "english": "Shinjuku South Entrance"
+" PM02:16":
+  "english": " 02:16PM"
 "新宿駅<しんじゅくえき>でピポサル軍一個小隊<ぐんいっこしょうたい>が展開中<てんかいちゅう>との情報<じょうほう>をキャッチしました! 直<ただ>ちに現場<げんば>に急行<きゅうこう>してください!!":
   "english": "We have received intel that a platoon of Piposaru troops is currently deployed at Shinjuku Station! Please rush to the scene immediately!!"
 "ターゲットをすべて倒<たお>せ!➝\n\fTARGETマークのついたサル兵<へい>を\nすべて倒<たお>してください。":
@@ -241,6 +245,10 @@
   english: "Time Bonus"
 "クリアボーナス":
   english: "Clear Bonus"
+"ゲッチュボーナス":
+  english: "Catch bonus"
+"コインボーナス":
+  english: "Coin bonus"
 
 # Load character slot select screen
 "キャラクターファイル":
@@ -1254,12 +1262,39 @@ Gクラッシャー:
 # Chips
 "マグネチップ":
   english: "Magnesium Chip"
-"コバルチップ":
-  english: "Cobalt Chip"
 "ゲルマチップ":
   english: "Germanium Chip"
+"コバルチップ":
+  english: "Cobalt Chip"
+"カドミチップ":
+  english: "Cadmium Chip"
+"ジルコチップ":
+  english: "Zirconium Chip"
+"ノーベチップ":
+  english: "Nobelium"
+"テルルチップ":
+  english: "Tellurium Chip"
+"ニオブチップ":
+  english: "Niobium Chip"
+"ネオジチップ":
+  english: "Neodymium Chip"
+"アスタチップ":
+  english: "Astatine Chip"
 "エルビチップ":
   english: "Erbium Chip"
 "キセノチップ":
   english: "Xenon Chip"
+"ビスマチップ":
+  english: "Bisumuth Chip"
+"フェルミチップ":
+  english: "Fermium Chip"
+"プロメチップ":
+  english: "Promethium Chip"
+"ベリリチップ":
+  english: "Beryllium Chip"
+"ホルミチップ":
+  english: "Holmium Chip"
+"ルテニチップ":
+  english: "Ruthenium chip"
+
 
