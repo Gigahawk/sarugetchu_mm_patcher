@@ -2956,6 +2956,7 @@ BYTES_TO_CHAR_SHINJUKU = {
     b"\x89\x4F": "お",
     # Valid encodings seem to end here
 }
+
 BYTES_TO_CHAR_AKIHABARA = {
     **BYTES_TO_CHAR_SPECIAL,
 
@@ -3075,6 +3076,117 @@ BYTES_TO_CHAR_AKIHABARA = {
     # Valid encodings seem to end here
 }
 
+BYTES_TO_CHAR_METRO = {
+    **BYTES_TO_CHAR_SPECIAL,
+
+    b"\x88\x9F": "メ",
+    b"\x88\xA0": "ト",
+    b"\x88\xA1": "ロ",
+    b"\x88\xA2": " ",
+    b"\x88\xA3": "P",
+    b"\x88\xA4": "M",
+    b"\x88\xA5": "0",
+    b"\x88\xA6": "6",
+    b"\x88\xA7": ":",
+    b"\x88\xA8": "3",
+    b"\x88\xA9": "2",
+    b"\x88\xAA": "ク",
+    b"\x88\xAB": "を",
+    b"\x88\xAC": "発",
+    b"\x88\xAD": "見",
+    b"\x88\xAE": "し",
+    b"\x88\xAF": "ま",
+    b"\x88\xB0": "た",
+    b"\x88\xB1": "!",
+    b"\x88\xB2": "リ",
+    b"\x88\xB3": "ラ",
+    b"\x88\xB4": "イ",
+    b"\x88\xB5": "タ",
+    b"\x88\xB6": "ア",
+    b"\x88\xB7": "け",
+    b"\x88\xB8": "っ",
+    b"\x88\xB9": "て",
+    b"\x88\xBA": "い",
+    b"\x88\xBB": "も",
+    b"\x88\xBC": "ど",
+    b"\x88\xBD": "る",
+    b"\x88\xBE": "へ",
+    b"\x88\xBF": "ん",
+    b"\x88\xC0": "こ",
+    b"\x88\xC1": "う",
+    b"\x88\xC2": "ポ",
+    b"\x88\xC3": "ー",
+    b"\x88\xC4": "ズ",
+    b"\x88\xC5": "ニ",
+    b"\x88\xC6": "ュ",
+    b"\x88\xC7": "オ",
+    b"\x88\xC8": "プ",
+    b"\x88\xC9": "シ",
+    b"\x88\xCA": "ョ",
+    b"\x88\xCB": "ン",
+    b"\x88\xCC": "設",
+    b"\x88\xCD": "定",
+    b"\x88\xCE": "そ",
+    b"\x88\xCF": "さ",
+    b"\x88\xD0": "説",
+    b"\x88\xD1": "明",
+    b"\x88\xD2": "ゲ",
+    b"\x88\xD3": "ム",
+    b"\x88\xD4": "に",
+    b"\x88\xD5": "本",
+    b"\x88\xD6": "当",
+    b"\x88\xD7": "す",
+    b"\x88\xD8": "か",
+    b"\x88\xD9": "?",
+    b"\x88\xDA": "は",
+    b"\x88\xDB": "え",
+    b"\x88\xDC": "せ",
+    b"\x88\xDD": "サ",
+    b"\x88\xDE": "ウ",
+    b"\x88\xDF": "ド",
+    b"\x88\xE0": "バ",
+    b"\x88\xE1": "ブ",
+    b"\x88\xE2": "レ",
+    b"\x88\xE3": "B",
+    b"\x88\xE4": "G",
+    b"\x88\xE5": "S",
+    b"\x88\xE6": "E",
+    b"\x88\xE7": "モ",
+    b"\x88\xE8": "ノ",
+    b"\x88\xE9": "ル",
+    b"\x88\xEA": "ス",
+    b"\x88\xEB": "テ",
+    b"\x88\xEC": "ビ",
+    b"\x88\xED": "ジ",
+    b"\x88\xEE": "ッ",
+    b"\x88\xEF": "の",
+    b"\x88\xF0": "出",
+    b"\x88\xF1": "カ",
+    b"\x88\xF2": "形",
+    b"\x88\xF3": "式",
+    b"\x88\xF4": "ゅ",
+    b"\x88\xF5": "つ",
+    b"\x88\xF6": "り",
+    b"\x88\xF7": "ょ",
+    b"\x88\xF8": "く",
+    b"\x88\xF9": "き",
+    b"\x88\xFA": "選",
+    b"\x88\xFB": "択",
+    b"\x88\xFC": "だ",
+    b"\x89\x40": "。",
+    b"\x89\x41": "フ",
+    b"\x89\x42": "??", # TODO: center dot
+
+    b"\x89\x43": "1", # TODO: is this 1 or I?
+    b"\x89\x44": "N",
+    b"\x89\x45": "A",
+    b"\x89\x46": "X",
+    b"\x89\x47": "音",
+    b"\x89\x48": "量",
+    b"\x89\x49": "お",
+    # Valid encodings seem to end here
+}
+
 
 # Minimal encoding to patch into files with encodings that don't
 # contain all the characters we need
@@ -3191,10 +3303,12 @@ ENCODING_MAP = {
     "87F51E0C": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.01_boss01_gori01.gz
     "41F34892": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.02_city01_a.gz
     "E76BF53F": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.03_city02_a.gz
+    "5973AD65": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.04_metro01_a.gz
     "3C6CF60B": BYTES_TO_CHAR_DEFAULT,        # gz/menu_vs.gz
     "AA6F7A50": BYTES_TO_CHAR_TOKYO_TELEPORT, # gz/stage.01_boss01_gori01.gz
     "58401EA3": BYTES_TO_CHAR_SHINJUKU,       # gz/stage.02_city01_a.gz
     "FEB8CA50": BYTES_TO_CHAR_AKIHABARA,      # gz/stage.03_city02_a.gz
+    "AC9781D4": BYTES_TO_CHAR_METRO,          # gz/stage.04_metro01_a.gz
     "E5D5CEB1": BYTES_TO_CHAR_VS_PAUSE,       # gz/stage.50_k1.gz
     "2FF511D3": BYTES_TO_CHAR_VS_PAUSE,       # gz/stage.51_city.gz
     "1E656E38": BYTES_TO_CHAR_VS_PAUSE,       # gz/stage.52_metro.gz

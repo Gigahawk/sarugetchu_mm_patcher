@@ -144,6 +144,7 @@
         "084_87f51e0c" # gz/menu_story.01_boss01_gori01.gz
         "085_41f34892" # gz/menu_story.02_city01_a.gz
         "086_e76bf53f" # gz/menu_story.03_city02_a.gz
+        "087_5973ad65" # gz/menu_story.04_metro01_a.gz
         #"117_05f7cae8" # gz/menu_title.gz
         "118_3c6cf60b" # gz/menu_vs.gz
 
@@ -156,6 +157,7 @@
         "646_feb8ca50" # gz/stage.03_city02_a.gz
         #"647_b3534589"
         #"649_780f6c0f"
+        "650_ac9781d4" # gz/stage.04_metro01_a.gz
         #"651_e9757ff7"
         #"653_4516e70a"
         #"655_f3aac06d"

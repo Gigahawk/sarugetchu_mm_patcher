@@ -251,6 +251,17 @@
   english: "Engine destroyed! 2 engines remain!"
 "エンジン破壊! 残り1基です!":
   english: "Engine destroyed! 1 engine remains!"
+## Metro/Kawasaki
+"川崎方面<かわさきほうめん>にサル軍基地<ぐんきち>が建設中<けんせつちゅう>との情報<じょうほう>が入<はい>りました。 東京<とうきょう>、品川経由<しながわけいゆ>で川崎方面<かわさきほうめん>に向<む>かいます。 ただし、秋葉原<あきはばら>、東京間<とうきょうかん>の地上<ちじょう>ルートは、すでに多数<たすう>のサル達<たち>に占領<せんりょう>されており、危険<きけん>なので、地下<ちか>ルートを通<とお>って東京駅<とうきょうえき>を目指<めざ>してください。":
+  english: "We've received information that a monkey army base is under construction in the Kawasaki area. Head there via Tokyo and Shinagawa. However, since a large group of monkeys has occupied the aboveground route between Akihabara and Tokyo, please take the the underground route to Tokyo Station."
+"メトロ AM08:13":
+  english: "Metro\n08:13AM"
+"メトロ PM06:32":
+  "english": "Metro\n06:32PM"
+" PM06:32":
+  english: " 06:32PM"
+" AM08:13":
+  english: " 08:13AM"
 
 # Mission complete screen
 "ミッション":
