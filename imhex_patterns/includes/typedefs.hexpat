@@ -5,6 +5,13 @@ fn as_hex(u128 value) {
     return std::format("{:X}", value);
 };
 
+union MaybePtr<T> {
+    le u32 nullptr;
+    if (nullptr != 0) {
+        T *ptr: u32;
+    }
+};
+
 struct MaybeString {
     // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
     le u32 str_len [[format("as_hex")]];
@@ -12,6 +19,8 @@ struct MaybeString {
         char string[str_len + 1];
     }
 };
+
+using PixelSubDataPtr = MaybePtr<u32>;
 
 struct PixelData {
     // idk_load_pixel_data?FUN_0062ee20
@@ -22,14 +31,17 @@ struct PixelData {
         le u16 num_imgs;
         le u8 data_inline;
         if (data_inline == 0) {
-            le u32 *idk_data_ptr: u32;
+            PixelSubDataPtr idk_data_ptr;
         } else {
             le u8 idk_data[idk_img_layers*num_imgs*0x10];
         }
 };
+
+using PixelDataPtr = MaybePtr<PixelData>;
+
 struct ImgMetaEntry {
     // idk_load_img_meta_entry?FUN_0062efc8
-        le PixelData *data: u32;
+        PixelDataPtr data;
         le u16 width;
         le u16 height;
         le u32 idk1;
@@ -48,9 +60,11 @@ struct ImgMeta {
         u8 idk1;
 };
 
+using ImgMetaPtr = MaybePtr<ImgMeta>;
+
 struct ImgSubFile {
     // idk_load_img_subfile?FUN_0062f298
-        le ImgMeta *metadata: u32;
+        ImgMetaPtr metadata;
         le u16 idk1;
         le u16 idk2;
         // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
@@ -59,7 +73,7 @@ struct ImgSubFile {
 
 struct ImgSubFile2 {
     // idk_load_img_subfile2?FUN_0062f350
-        le ImgMeta *metadata: u32;
+        ImgMetaPtr metadata;
 
         le u16 idk1;
         le u16 idk2;
@@ -91,12 +105,8 @@ struct ImgSubFilePadded{
         }
 };
 
-union ImgSubFilePtr {
-    le u32 nullptr;
-    if (nullptr != 0) {
-        le ImgSubFile *ptr: u32;
-    }
-} [[inline]];
+
+using ImgSubFilePtr = MaybePtr<ImgSubFile>;
 
 struct ImgFile {
     le u32 fname_len;
@@ -203,12 +213,7 @@ struct JointClass0Subclass4 {
     le u32 idk5;
 };
 
-union JointClass0Subclass3Ptr {
-    le u32 nullptr;
-    if (nullptr != 0) {
-        le u32 *ptr: u32;
-    }
-} [[inline]];
+using JointClass0Subclass3Ptr = MaybePtr<u32>;
 
 struct JointClass0Subclass3Pair {
     le u32 idk1;
@@ -307,12 +312,7 @@ struct Joint3Data {
         Joint3SubData data[data_len];
 };
 
-union Joint3Ptr {
-    le u32 nullptr;
-    if (nullptr != 0) {
-        le u32 *ptr: u32;
-    }
-} [[inline]];
+using Joint3Ptr = MaybePtr<u32>;
 
 struct Joint3 {
     // load_joint3_thing?FUN_0062de20
