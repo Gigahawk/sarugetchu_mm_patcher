@@ -3,4 +3,5 @@
 *.extracted
 **__pycache__
 **.pyc
+.scratch
 result

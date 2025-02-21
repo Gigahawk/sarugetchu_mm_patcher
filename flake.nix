@@ -143,6 +143,7 @@
         #"083_88455768" # gz/menu_sound.gz"
         "084_87f51e0c" # gz/menu_story.01_boss01_gori01.gz
         "085_41f34892" # gz/menu_story.02_city01_a.gz
+        "086_e76bf53f" # gz/menu_story.03_city02_a.gz
         #"117_05f7cae8" # gz/menu_title.gz
         "118_3c6cf60b" # gz/menu_vs.gz
 
@@ -152,6 +153,7 @@
         "641_58401ea3" # gz/stage.02_city01_a.gz
         #"643_fd32e82a"
         #"645_b7bee92a"
+        "646_feb8ca50" # gz/stage.03_city02_a.gz
         #"647_b3534589"
         #"649_780f6c0f"
         #"651_e9757ff7"

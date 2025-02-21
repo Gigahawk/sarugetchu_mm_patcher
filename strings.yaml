@@ -42,9 +42,9 @@
   english: "Restart"
 
 # Pause Menu dialogs
-"本当にリタイアしますか？":
+"本当にリタイアしますか?":
   english: "Are you sure you want to retire?"
-"本当にリトライしますか？":
+"本当にリトライしますか?":
   english: "Are you sure you want to restart?"
 
 
@@ -231,6 +231,26 @@
   "english": "We have received intel that a platoon of Piposaru troops is currently deployed at Shinjuku Station! Please rush to the scene immediately!!"
 "ターゲットをすべて倒<たお>せ!➝\n\fTARGETマークのついたサル兵<へい>を\nすべて倒<たお>してください。":
   "english": "Defeat all targets!➝\n\fDefeat all monkey soldiers with\nTARGET marks."
+## Akihabara
+"秋葉原":
+  "english": "Akihabara"
+"秋葉原 AM10:32":
+  "english": "Akihabara\n10:32AM"
+"秋葉原 PM04:01":
+  "english": "Akihabara\n04:01PM"
+" PM04:01":
+  "english": " 04:01PM"
+#"秋葉原中央通<あきはばらちゅうおうどお>り地下<ちか>にサル軍基地<ぐんきち>を発見<はっけん>しました! そこにサル軍輸送部隊<ぐんゆそうぶたい>が向<む>かっています。トレーラーで巨大兵器<きょだいへいき>を運<はこ>び込<こ>もうとしているようです。 搬入<はんにゅう>を阻止<そし>してください!":
+"秋葉原中央通<あきはばらちゅうおうどお>り地下<ちか>にサル軍基地<ぐんきち>を発見<はっけん>しました! そこにサル軍輸送部隊<ぐんゆそうぶたい>が向<む>かっています。 トレーラーで巨大兵器<きょだいへいき>を運<はこ>び込<こ>もうとしているようです。 搬入<はんにゅう>を阻止<そし>してください!":
+  "english": "We've discovered an underground monkey army base below Akihabara Chuo Dori! A monkey army transport unit is on its way there. It looks like they're transporting large weapons in a trailer. Please stop them!"
+"輸送<ゆそう>トレーラーを撃破<げきは>せよ!➝\n\fサル軍基地内<ぐんきちない>に運<はこ>び込<こ>まれる前<まえ>に\n動力部<どうりょくぶ>を探<さが>し破壊<はかい>してください。➝\n\f多数<たすう>の小型<こがた>レーザー砲<ほう>が設置<せっち>されています。\n小型<こがた>レーザー砲<ほう>の射撃<しゃげき>には十分注意<じゅうぶんちゅうい>してください。":
+  english: "Destroy the transport trailer!➝\n\fFind and destroy the power unit\nbefore it's transported into the\nmonkey base.➝\n\fBe careful, the trailer is\nprotected by many laser cannons."
+"エンジン破壊! 残り3基です!":
+  english: "Engine destroyed! 3 engines remain!"
+"エンジン破壊! 残り2基です!":
+  english: "Engine destroyed! 2 engines remain!"
+"エンジン破壊! 残り1基です!":
+  english: "Engine destroyed! 1 engine remains!"
 
 # Mission complete screen
 "ミッション":

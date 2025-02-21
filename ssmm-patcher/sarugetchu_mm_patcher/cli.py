@@ -697,8 +697,10 @@ def dump_strings(imhex_json, hash, output_path):
                 full_str = ""
                 for token in string_tokens:
                     char = translator.bytes_to_char[token]
-                    if char in ["\n", "\f"]:
-                        char = repr(char).strip("'")
+                    if char == "\n":
+                        char = "\\n"
+                    elif char == "\f":
+                        char = "\\f"
                     full_str += char
                     line_out += f'"{char}",'
                 f.write(line_out)
