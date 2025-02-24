@@ -1,4 +1,5 @@
 import json
+from urllib.parse import unquote
 from collections import defaultdict
 import sys
 import csv
@@ -6,7 +7,7 @@ import subprocess
 import hashlib
 from pprint import pformat
 from typing import Any, Iterable
-from pathlib import Path
+from pathlib import Path, PurePath
 import gzip
 import io
 from concurrent.futures import ThreadPoolExecutor
@@ -618,6 +619,7 @@ def dump_textures(resource_path, output_path):
     texture_extensions = [
         b".gf0\x00",
         b".gf1\x00",
+        b".tm2\x00",
         # Seems to just produce garbage, probably not being parsed correctly
         b".tga\x00",
     ]
@@ -641,6 +643,46 @@ def dump_textures(resource_path, output_path):
             for img_idx in range(ex.num_imgs):
                 img = ex.get_image(img_idx)
                 img.save(_out_path / f"{img_idx:04d}.png")
+
+@cli.command()
+@click.argument(
+    "imhex_json",
+    type=click.Path()
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def dump_textures2(imhex_json, output_path):
+    imhex_json = Path(imhex_json)
+    if output_path is None:
+        output_path = Path(os.getcwd()) / imhex_json.with_suffix(".textures")
+    else:
+        output_path = Path(output_path)
+    output_path.mkdir(parents=True, exist_ok=True)
+    data = _parse_imhex_json(imhex_json)["texturefactory"]
+    file_descriptors = data["img_sub_files"]
+    for fd in file_descriptors:
+        class_id = fd["class_id"]
+        subfile = fd["img_sub_file"]
+        fname = unquote(subfile["fname"]["string"])
+        # Strip leading slashes
+        _fname = fname
+        while _fname[0] in ["/", "\\"]:
+            _fname = _fname[1:]
+        target_path = sanitize_filepath(output_path / _fname)
+        click.echo(f"Found file '{fname}' with class ID {class_id}")
+
+        metadata = subfile["metadata"]["ptr"]["*(ptr)"]
+        num_entries = metadata["num_entries"]
+        if num_entries != 2:
+            click.echo(f"WARNING: metadata contains {num_entries} pixel data entries, not parsing")
+            continue
+        # TODO: palette is in the second entry, presumably this is always encoded as RGBA or something,
+        # figure out the common value in these
+
 
 @cli.command()
 @click.argument(

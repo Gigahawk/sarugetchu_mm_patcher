@@ -12,6 +12,14 @@ union MaybePtr<T> {
     }
 };
 
+union MaybeArrayPtr<T,auto N> {
+    le u32 nullptr;
+    if (nullptr != 0) {
+        T *ptr[N]: u32;
+    }
+
+};
+
 struct MaybeString {
     // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
     le u32 str_len [[format("as_hex")]];
@@ -20,7 +28,7 @@ struct MaybeString {
     }
 };
 
-using PixelSubDataPtr = MaybePtr<u32>;
+using PixelSubDataPtr<auto N> = MaybeArrayPtr<u8,N>;
 
 struct PixelData {
     // idk_load_pixel_data?FUN_0062ee20
@@ -31,7 +39,8 @@ struct PixelData {
         le u16 num_imgs;
         le u8 data_inline;
         if (data_inline == 0) {
-            PixelSubDataPtr idk_data_ptr;
+            // TODO: How do we determine the bit depth of each entry?
+            PixelSubDataPtr<4*width*height*num_imgs> idk_data_ptr;
         } else {
             le u8 idk_data[idk_img_layers*num_imgs*0x10];
         }
