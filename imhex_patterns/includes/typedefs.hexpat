@@ -40,7 +40,7 @@ struct PixelData {
         le u8 data_inline;
         if (data_inline == 0) {
             // TODO: How do we determine the bit depth of each entry?
-            PixelSubDataPtr<4*width*height*num_imgs> idk_data_ptr;
+            PixelSubDataPtr<idk_img_layers*num_imgs*0x10> idk_data_ptr;
         } else {
             le u8 idk_data[idk_img_layers*num_imgs*0x10];
         }
