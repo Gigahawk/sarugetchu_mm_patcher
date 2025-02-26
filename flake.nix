@@ -502,7 +502,10 @@
           buildPhase = ''
             mkdir -p $out/analysis
             echo "${resourceFilesStr}" | \
-              xargs -P ${processes} -I {} bash -c '
+              # HACK: running a bunch of these in parallel seems to cause crashes
+              # (out of memory?)
+              xargs -P ${"1"} -I {} bash -c '
+                echo "Analyzing {}"
                 imhex --pl format --verbose --metadata \
                   --includes "$src/includes/" \
                   --input "${self.packages.${system}.data-jp-extracted}/DATA1/{}" \

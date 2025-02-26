@@ -661,18 +661,25 @@ def dump_textures2(imhex_json, output_path):
         output_path = Path(os.getcwd()) / imhex_json.with_suffix(".textures")
     else:
         output_path = Path(output_path)
-    output_path.mkdir(parents=True, exist_ok=True)
     data = _parse_imhex_json(imhex_json)["texturefactory"]
     file_descriptors = data["img_sub_files"]
     for fd in file_descriptors:
         class_id = fd["class_id"]
-        subfile = fd["img_sub_file"]
+        if "img_sub_file" in fd:
+            subfile = fd["img_sub_file"]
+        elif "img_sub_file2" in fd:
+            subfile = fd["img_sub_file2"]
+        else:
+            print("no subfile found")
+            import pdb;pdb.set_trace()
+            continue
         fname = unquote(subfile["fname"]["string"])
         # Strip leading slashes
         _fname = fname
         while _fname[0] in ["/", "\\"]:
             _fname = _fname[1:]
         target_path = sanitize_filepath(output_path / _fname)
+        target_path.mkdir(parents=True, exist_ok=True)
         click.echo(f"Found file '{fname}' with class ID {class_id}")
 
         metadata = subfile["metadata"]["ptr"]["*(ptr)"]
@@ -680,8 +687,17 @@ def dump_textures2(imhex_json, output_path):
         if num_entries != 2:
             click.echo(f"WARNING: metadata contains {num_entries} pixel data entries, not parsing")
             continue
-        # TODO: palette is in the second entry, presumably this is always encoded as RGBA or something,
-        # figure out the common value in these
+        img_data, plt_data = metadata["entries"]
+        img_width = img_data["width"]
+        img_height = img_data["height"]
+        img_imgs = util.px_data_to_imgs(img_data)
+        plt_img = util.px_data_to_imgs(plt_data)[0]
+
+        for idx, img in enumerate(img_imgs):
+            img = util.img_buf_to_pillow(
+                img, img_width, img_height, plt_img=plt_img
+            )
+            img.save(target_path / f"{idx:04d}.png")
 
 
 @cli.command()

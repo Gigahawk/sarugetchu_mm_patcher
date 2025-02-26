@@ -5,6 +5,7 @@ from typing import Any
 from math import ceil
 import hashlib
 from pprint import PrettyPrinter
+from bitstring import Bits
 
 from PIL import Image
 
@@ -357,6 +358,58 @@ def dump_image(
             if a > 255:
                 a = 255
             img.putpixel((x, y), (r, g, b, a))
+    return img
+
+def px_data_to_imgs(data: dict):
+    data = data["data"]["ptr"]["*(ptr)"]
+    num_imgs = data["num_imgs"]
+    width = data["width"]
+    height = data["height"]
+    pixels_per_img = width*height
+    num_pixels = num_imgs*pixels_per_img
+    if "idk_data_ptr" in data:
+        px_buf = bytes(data["idk_data_ptr"]["ptr"]["*(ptr)"])
+    else:
+        print("TODO: support in line images")
+    px_buf_bits = Bits(bytes=px_buf)
+    # TODO: sometimes this is not exactly an integer? not sure why
+    bpp = len(px_buf_bits) // num_pixels
+
+    # Random garbage at the end of the image?
+    bits_per_image = pixels_per_img*bpp + 8*8
+    imgs = []
+    for img_idx in range(num_imgs):
+        pixels = []
+        img_base = img_idx*bits_per_image
+        for px_idx in range(pixels_per_img):
+            base = img_base + px_idx*bpp
+            pixels.append(px_buf_bits[base:base+bpp])
+
+        # Need to unswizzle the pixels?
+        if bpp == 4:
+            pixels[::2], pixels[1::2] = pixels[1::2], pixels[::2]
+        imgs.append(pixels)
+    return imgs
+
+def img_buf_to_pillow(px_img, width, height, plt_img=None) -> Image:
+    if plt_img is None:
+        print("TODO: support no palette images")
+        import pdb;pdb.set_trace()
+    img = Image.new("RGBA", (width, height))
+    for idx, px in enumerate(px_img):
+        x = idx % width
+        y = idx // width
+        try:
+            plt_idx = px.uintle
+        except ValueError:
+            plt_idx = px.uint
+        r, g, b, a = plt_img[plt_idx].unpack(",".join(4*["uint:8"]))
+        # PS2 alpha channel only goes to 0x80
+        a *= 2
+        if a > 255:
+            a = 255
+        color = (r, g, b, a)
+        img.putpixel((x, y), color)
     return img
 
 
