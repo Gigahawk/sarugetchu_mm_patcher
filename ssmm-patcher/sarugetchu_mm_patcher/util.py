@@ -362,7 +362,7 @@ def dump_image(
             img.putpixel((x, y), (r, g, b, a))
     return img
 
-def unswizzle_plt(pixels: list, block_size=8):
+def unswizzle_palette(pixels: list, block_size=8):
     if (len(pixels) % block_size) != 0:
         import pdb;pdb.set_trace()
         raise ValueError(
@@ -390,23 +390,27 @@ def unswizzle_plt(pixels: list, block_size=8):
             out.append(px)
     return out
 
-def px_data_to_imgs(data: dict, unswizzle: bool=False):
+
+
+def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
+    _bpp_mode_to_bpp = {
+        0: 32,
+        3: 8,
+        4: 4,
+    }
     data = data["data"]["ptr"]["*(ptr)"]
     num_imgs = data["num_imgs"]
     width = data["width"]
     height = data["height"]
     pixels_per_img = width*height
-    num_pixels = num_imgs*pixels_per_img
     if "idk_data_ptr" in data:
         px_buf = bytes(data["idk_data_ptr"]["ptr"]["*(ptr)"])
     else:
         print("TODO: support in line images")
         import pdb;pdb.set_trace()
-    # TODO: sometimes this is not exactly an integer? not sure why
-    bpp = len(px_buf) * 8 // num_pixels
-    print(f"BPP is {bpp}")
-    print(f"idk2 is 0x{data["idk2"]:02X}, {data["idk2"]:016b}")
-    if unswizzle:
+    bpp = _bpp_mode_to_bpp[data["psm_flags"]["bpp_mode"]]
+    swizzled = data["psm_flags"]["swizzled"]
+    if swizzled:
         if bpp == 4:
             rrw = width // 2
             rrh = height // 4
@@ -433,9 +437,8 @@ def px_data_to_imgs(data: dict, unswizzle: bool=False):
         # Need to unswizzle the pixels?
         if bpp == 4:
             pixels[::2], pixels[1::2] = pixels[1::2], pixels[::2]
-        if unswizzle:
-            if bpp == 32:
-                pixels = unswizzle_plt(pixels)
+        if unswizzle_plt and bpp == 32:
+            pixels = unswizzle_palette(pixels)
 
         imgs.append(pixels)
     return imgs

@@ -29,12 +29,12 @@ struct MaybeString {
 };
 
 bitfield PsmFlags {
-    idk1: 9;
-    swizzled: 1;
-    idk2: 1;
-    idk3_always_1: 1;
-    idk4: 1;
     bpp_mode: 3;
+    idk4: 1;
+    idk3_always_1: 1;
+    idk2: 1;
+    swizzled: 1;
+    idk1: 9;
 };
 
 using PixelSubDataPtr<auto N> = MaybeArrayPtr<u8,N>;

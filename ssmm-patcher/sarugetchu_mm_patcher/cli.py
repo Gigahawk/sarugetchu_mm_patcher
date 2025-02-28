@@ -706,9 +706,9 @@ def dump_textures2(imhex_json, output_path):
         img_width = img_data["width"]
         img_height = img_data["height"]
         click.echo(f"width, height = {img_width}, {img_height}")
-        img_imgs = util.px_data_to_imgs(img_data, unswizzle=True)
+        img_imgs = util.px_data_to_imgs(img_data)
 
-        plt_img = util.px_data_to_imgs(plt_data, unswizzle=True)[0]
+        plt_img = util.px_data_to_imgs(plt_data, unswizzle_plt=True)[0]
         plt_width = plt_data["width"]
         plt_height = plt_data["height"]
         plt = util.img_buf_to_pillow(
