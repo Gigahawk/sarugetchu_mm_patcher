@@ -644,6 +644,21 @@ def dump_textures(resource_path, output_path):
                 img = ex.get_image(img_idx)
                 img.save(_out_path / f"{img_idx:04d}.png")
 
+def _empty_buffers(root: dict):
+    if isinstance(root, dict):
+        for key in root.keys():
+            obj = root[key]
+            if isinstance(obj, list):
+                if all([isinstance(i, int) for i in obj]):
+                    root[key] = "<list<int>>"
+                else:
+                    root[key] = [
+                        _empty_buffers(i) for i in obj
+                    ]
+            elif isinstance(obj, dict):
+                root[key] = _empty_buffers(obj)
+    return root
+
 @cli.command()
 @click.argument(
     "imhex_json",
@@ -690,14 +705,25 @@ def dump_textures2(imhex_json, output_path):
         img_data, plt_data = metadata["entries"]
         img_width = img_data["width"]
         img_height = img_data["height"]
-        img_imgs = util.px_data_to_imgs(img_data)
-        plt_img = util.px_data_to_imgs(plt_data)[0]
+        click.echo(f"width, height = {img_width}, {img_height}")
+        img_imgs = util.px_data_to_imgs(img_data, unswizzle=True)
+
+        plt_img = util.px_data_to_imgs(plt_data, unswizzle=True)[0]
+        plt_width = plt_data["width"]
+        plt_height = plt_data["height"]
+        plt = util.img_buf_to_pillow(
+            plt_img, plt_width, plt_height
+        )
+        plt.save(target_path / "palette.png")
 
         for idx, img in enumerate(img_imgs):
             img = util.img_buf_to_pillow(
                 img, img_width, img_height, plt_img=plt_img
             )
             img.save(target_path / f"{idx:04d}.png")
+        manifest = _empty_buffers(fd)
+        with open (target_path / "manifest.yaml", "w") as f:
+            yaml.dump(manifest, f)
 
 
 @cli.command()

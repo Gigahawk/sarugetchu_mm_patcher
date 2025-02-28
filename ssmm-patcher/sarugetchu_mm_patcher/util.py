@@ -9,6 +9,8 @@ from bitstring import Bits
 
 from PIL import Image
 
+import sarugetchu_mm_patcher.PS2Textures.PS2Textures as ps2tex
+
 class HexPrettyPrinter(PrettyPrinter):
     def format(self, obj, context, maxlevels, level):
         if isinstance(obj, int):
@@ -360,7 +362,35 @@ def dump_image(
             img.putpixel((x, y), (r, g, b, a))
     return img
 
-def px_data_to_imgs(data: dict):
+def unswizzle_plt(pixels: list, block_size=8):
+    if (len(pixels) % block_size) != 0:
+        import pdb;pdb.set_trace()
+        raise ValueError(
+            f"Cannot unswizzle with block size {block_size}, "
+            f"pixel list is of invalid length {len(pixels)}"
+        )
+    blocks = []
+    num_blocks = len(pixels) // block_size
+    idx = 0
+    for blk_idx in range(num_blocks):
+        blk = []
+        for _ in range(block_size):
+            blk.append(pixels[idx])
+            idx += 1
+        blocks.append(blk)
+    if num_blocks > 2:
+        for blk_idx in range(num_blocks):
+            if (blk_idx - 1) % 4 == 0:
+                blocks[blk_idx], blocks[blk_idx + 1] = (
+                    blocks[blk_idx + 1], blocks[blk_idx]
+                )
+    out = []
+    for blk in blocks:
+        for px in blk:
+            out.append(px)
+    return out
+
+def px_data_to_imgs(data: dict, unswizzle: bool=False):
     data = data["data"]["ptr"]["*(ptr)"]
     num_imgs = data["num_imgs"]
     width = data["width"]
@@ -371,9 +401,24 @@ def px_data_to_imgs(data: dict):
         px_buf = bytes(data["idk_data_ptr"]["ptr"]["*(ptr)"])
     else:
         print("TODO: support in line images")
-    px_buf_bits = Bits(bytes=px_buf)
+        import pdb;pdb.set_trace()
     # TODO: sometimes this is not exactly an integer? not sure why
-    bpp = len(px_buf_bits) // num_pixels
+    bpp = len(px_buf) * 8 // num_pixels
+    print(f"BPP is {bpp}")
+    print(f"idk2 is 0x{data["idk2"]:02X}, {data["idk2"]:016b}")
+    if unswizzle:
+        if bpp == 4:
+            rrw = width // 2
+            rrh = height // 4
+            gs_buf = ps2tex.writeTexPSMCT32(0, rrw // 64, 0, 0, rrw, rrh, px_buf)
+            px_buf = ps2tex.readTexPSMT4(0, width // 64, 0, 0, width, height, gs_buf)
+        if bpp == 8:
+            rrw = width // 2
+            rrh = height // 2
+            gs_buf = ps2tex.writeTexPSMCT32(0, rrw // 64, 0, 0, rrw, rrh, px_buf)
+            px_buf = ps2tex.readTexPSMT8(0, width // 64, 0, 0, width, height, gs_buf)
+
+    px_buf_bits = Bits(bytes=px_buf)
 
     # Random garbage at the end of the image?
     bits_per_image = pixels_per_img*bpp + 8*8
@@ -388,22 +433,27 @@ def px_data_to_imgs(data: dict):
         # Need to unswizzle the pixels?
         if bpp == 4:
             pixels[::2], pixels[1::2] = pixels[1::2], pixels[::2]
+        if unswizzle:
+            if bpp == 32:
+                pixels = unswizzle_plt(pixels)
+
         imgs.append(pixels)
     return imgs
 
 def img_buf_to_pillow(px_img, width, height, plt_img=None) -> Image:
-    if plt_img is None:
-        print("TODO: support no palette images")
-        import pdb;pdb.set_trace()
+    _unpack_fmt = ",".join(4*["uint:8"])
     img = Image.new("RGBA", (width, height))
     for idx, px in enumerate(px_img):
         x = idx % width
         y = idx // width
-        try:
-            plt_idx = px.uintle
-        except ValueError:
-            plt_idx = px.uint
-        r, g, b, a = plt_img[plt_idx].unpack(",".join(4*["uint:8"]))
+        if plt_img:
+            try:
+                plt_idx = px.uintle
+            except ValueError:
+                plt_idx = px.uint
+            r, g, b, a = plt_img[plt_idx].unpack(_unpack_fmt)
+        else:
+            r, g, b, a = px.unpack(_unpack_fmt)
         # PS2 alpha channel only goes to 0x80
         a *= 2
         if a > 255:
@@ -411,7 +461,6 @@ def img_buf_to_pillow(px_img, width, height, plt_img=None) -> Image:
         color = (r, g, b, a)
         img.putpixel((x, y), color)
     return img
-
 
 class ImgExtractor:
     def __init__(self, data: bytes, fname: str):

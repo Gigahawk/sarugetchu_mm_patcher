@@ -28,12 +28,21 @@ struct MaybeString {
     }
 };
 
+bitfield PsmFlags {
+    idk1: 9;
+    swizzled: 1;
+    idk2: 1;
+    idk3_always_1: 1;
+    idk4: 1;
+    bpp_mode: 3;
+};
+
 using PixelSubDataPtr<auto N> = MaybeArrayPtr<u8,N>;
 
 struct PixelData {
     // idk_load_pixel_data?FUN_0062ee20
         le u32 idk_img_layers;
-        le u16 idk2;
+        PsmFlags psm_flags;
         le u16 width;
         le u16 height;
         le u16 num_imgs;
