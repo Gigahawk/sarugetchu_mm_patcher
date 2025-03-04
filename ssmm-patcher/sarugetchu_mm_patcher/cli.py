@@ -558,7 +558,8 @@ def patch_resource(
                 tex_manifest = yaml.safe_load(f)
             bpp = tex_manifest["bpp"]
             tex_path = tex_manifest["path"]
-            cel_chunk = util.ImhexCelChunkFinder(img_data).chunks[0]
+            cel_chunk = util.ImhexChunkFinder(img_data, "CelChunk").chunks[0]
+            palette_chunk = util.ImhexChunkFinder(img_data, "PaletteChunk").chunks[0]
 
             if "COMPRESSED_IMG" in cel_chunk["type"]:
                 cel_chunk_data = bytes(cel_chunk["data"])
@@ -581,8 +582,7 @@ def patch_resource(
             )
 
             px_data = util.aseprite_to_pixel_data(cel_chunk_data, bpp)
-
-
+            plt_data = util.aseprite_to_palette_data(palette_chunk["entries"])
 
             for fd in tex_fds:
                 if "img_sub_file" in fd:
@@ -603,6 +603,14 @@ def patch_resource(
                     resource_bytes[
                         img_data_ptr:img_data_ptr + len(px_data)
                     ] = px_data
+                    palette_data_ptr = (
+                        subfile["metadata"]["ptr"]["*(ptr)"]
+                            ["entries"][1]["data"]["ptr"]["*(ptr)"]
+                            ["idk_data_ptr"]["nullptr"]
+                    )
+                    resource_bytes[
+                        palette_data_ptr:palette_data_ptr + len(plt_data)
+                    ] = plt_data
 
     if should_patch_strings:
         resource_bytes = _patch_strings(resource_bytes, hash, strings_path)

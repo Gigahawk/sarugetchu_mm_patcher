@@ -114,9 +114,10 @@ class TrackedByteArray(bytearray):
             orig_idx = new_idx
         return orig_idx
 
-class ImhexCelChunkFinder:
-    def __init__(self, imhex_analysis: dict):
+class ImhexChunkFinder:
+    def __init__(self, imhex_analysis: dict, chunk_type: str):
         self.data = imhex_analysis
+        self.chunk_type = chunk_type
         self.chunks: list[dict] = []
         self.parse()
 
@@ -125,7 +126,7 @@ class ImhexCelChunkFinder:
             start = self.data
         if isinstance(start, dict):
             if "__type" in start.keys():
-                if start["__type"] ==  "CelChunk":
+                if start["__type"] ==  self.chunk_type:
                     self.chunks.append(start)
             for obj in start.values():
                 self.parse(start=obj)
@@ -483,6 +484,7 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
         if bpp == 4:
             pixels[::2], pixels[1::2] = pixels[1::2], pixels[::2]
         if unswizzle_plt and bpp == 32:
+            import pdb;pdb.set_trace()
             pixels = unswizzle_palette(pixels)
 
         img_pxs.append(pixels)
@@ -517,6 +519,23 @@ def aseprite_to_pixel_data(data: bytes, bpp: int) -> bytes:
     for idx in data:
         out += Bits(uint=idx, length=bpp)
     return out.tobytes()
+
+def aseprite_to_palette_data(entries: list[dict], max_entries: int=256) -> bytes:
+    out = []
+    for entry in entries:
+        r = entry["red"]
+        g = entry["green"]
+        b = entry["blue"]
+        a = entry["alpha"] // 2
+        out.append(bytes([r, g, b, a]))
+    if len(out) > max_entries:
+        raise ValueError(f"Too many palette entries {len(out)} > {max_entries}")
+    remaining = max_entries - len(out)
+    out += [bytes([0]*4)]*remaining
+    # Need to reswizzle the palette data
+    out = unswizzle_palette(out)
+    out = b"".join(out)
+    return out
 
 def recenter_aseprite_cel_data(
     data: bytes, trans_idx: int, canvas_width: int, canvas_height: int,
