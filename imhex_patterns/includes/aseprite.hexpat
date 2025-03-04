@@ -91,6 +91,12 @@ enum CelChunkType : WORD {
     COMPRESSED_TILEMAP = 3,
 };
 
+union CelChunkRawPixels<auto width, auto height> {
+    // TODO: support different color types
+    PIXEL<ColorDepth::INDEXED> pixels[width*height];
+    BYTE data[width*height];
+};
+
 
 
 struct CelChunk<auto chunk_size> {
@@ -105,12 +111,11 @@ struct CelChunk<auto chunk_size> {
     if (type == CelChunkType::RAW) {
         WORD width;
         WORD height;
-        // TODO: support different color types
-        PIXEL<ColorDepth::INDEXED> pixels[width*height];
+        CelChunkRawPixels<width, height> data;
     } else if (type == CelChunkType::COMPRESSED_IMG) {
         WORD width;
         WORD height;
-        BYTE data [chunk_size - 26];
+        BYTE data[chunk_size - 26];
     }
 };
 

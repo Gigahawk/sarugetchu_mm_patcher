@@ -542,12 +542,15 @@
                 fullpath="{}"
                 relpath=''${fullpath#"$textures_path"}
                 dirrelpath=''${relpath%"texture.aseprite"}
+                dirfullpath=''${fullpath%"texture.aseprite"}
+
                 mkdir -p "$out/analysis/$dirrelpath"
                 imhex --pl format --verbose --metadata \
                   --includes "$pattern_path/includes/" \
                   --input "{}" \
                   --pattern "$pattern_path/aseprite_main.hexpat" \
                   --output "$out/analysis/$dirrelpath/texture.json"
+                cp "$dirfullpath/manifest.yaml" "$out/analysis/$dirrelpath/manifest.yaml"
               '
           '';
         };
@@ -581,6 +584,7 @@
 
                 ssmm-patcher patch-resource \
                   -s $src \
+                  -t ${self.packages.${system}.textures-imhex-analysis}/analysis/{}/ \
                   "{}" \
                   "${self.packages.${system}.data-imhex-analysis}/analysis/{}.json"
               '

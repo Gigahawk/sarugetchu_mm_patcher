@@ -5,7 +5,7 @@ from typing import Any, Pattern
 from math import ceil
 import hashlib
 from pprint import PrettyPrinter
-from bitstring import Bits
+from bitstring import Bits, BitArray
 
 from PIL import Image
 
@@ -113,6 +113,25 @@ class TrackedByteArray(bytearray):
                 )
             orig_idx = new_idx
         return orig_idx
+
+class ImhexCelChunkFinder:
+    def __init__(self, imhex_analysis: dict):
+        self.data = imhex_analysis
+        self.chunks: list[dict] = []
+        self.parse()
+
+    def parse(self, start=None):
+        if start is None:
+            start = self.data
+        if isinstance(start, dict):
+            if "__type" in start.keys():
+                if start["__type"] ==  "CelChunk":
+                    self.chunks.append(start)
+            for obj in start.values():
+                self.parse(start=obj)
+        elif isinstance(start, list):
+            for obj in start:
+                self.parse(start=obj)
 
 @dataclass(frozen=True)
 class ImhexPtr:
@@ -492,6 +511,26 @@ def img_buf_to_pillow(px_img, width, height, plt_img=None) -> Image:
         color = (r, g, b, a)
         img.putpixel((x, y), color)
     return img
+
+def aseprite_to_pixel_data(data: bytes, bpp: int) -> bytes:
+    out = BitArray()
+    for idx in data:
+        out += Bits(uint=idx, length=bpp)
+    return out.tobytes()
+
+def recenter_aseprite_cel_data(
+    data: bytes, trans_idx: int, x: int, y: int, width: int, height: int
+) -> bytes:
+    for _ in range(y):
+        data = bytes([trans_idx]*width) + data
+    new_height = height + y
+    row_width = len(data) // new_height
+    if x > 0:
+        data = b"".join([
+            bytes([trans_idx]*x) + data[i*row_width:(i + 1)*row_width]
+            for i in range(new_height)
+        ])
+    return data
 
 class ImgExtractor:
     def __init__(self, data: bytes, fname: str):

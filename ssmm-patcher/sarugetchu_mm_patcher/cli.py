@@ -3,6 +3,7 @@ import json
 from urllib.parse import unquote
 from collections import defaultdict
 import sys
+import zlib
 import csv
 import subprocess
 import hashlib
@@ -504,7 +505,7 @@ def _patch_strings(resource_bytes, hash, strings_path):
     type=click.Path(),
 )
 @click.option(
-    "-t", "--textures-path",
+    "-t", "--textures-imhex-path",
     default=None,
     show_default=True,
     type=click.Path()
@@ -521,7 +522,7 @@ def _patch_strings(resource_bytes, hash, strings_path):
     type=click.Path(),
 )
 def patch_resource(
-    resource_path, strings_path, textures_path, hash, output_path, imhex_json
+    resource_path, strings_path, textures_imhex_path, hash, output_path, imhex_json
 ):
     imhex_analysis = _parse_imhex_json(imhex_json)
     should_patch_strings = _needs_strings_patch(imhex_analysis["texturefactory"])
@@ -532,11 +533,11 @@ def patch_resource(
         strings_path = Path(os.getcwd()) / "strings.yaml"
     else:
         strings_path = Path(strings_path)
-    if textures_path:
-        textures_path = Path(textures_path)
-        if not textures_path.is_dir():
-            click.echo(f"Warning: texture path {textures_path} does not exist.")
-            textures_path = None
+    if textures_imhex_path:
+        textures_imhex_path = Path(textures_imhex_path)
+        if not textures_imhex_path.is_dir():
+            click.echo(f"Warning: texture path {textures_imhex_path} does not exist.")
+            textures_imhex_path = None
     if output_path is None:
         output_path = Path(os.getcwd()) / f"{resource_path.stem}_patched"
     else:
@@ -547,29 +548,60 @@ def patch_resource(
         resource_bytes = util.TrackedByteArray(f.read())
 
     # Note: patch textures first so imhex_json addresses are accurate
-    if textures_path:
-        for manifest_path in textures_path.glob("**/manifest.yaml"):
-            img_path = manifest_path.with_name("image.png")
-            plt_path = manifest_path.with_name("palette.png")
+    if textures_imhex_path:
+        tex_fds = imhex_analysis["texturefactory"]["img_sub_files"]
+        for manifest_path in textures_imhex_path.glob("**/manifest.yaml"):
+            img_data = _parse_imhex_json(
+                manifest_path.with_name("texture.json")
+            )
             with open(manifest_path, "r") as f:
                 tex_manifest = yaml.safe_load(f)
             bpp = tex_manifest["bpp"]
-            img = Image.open(img_path).convert("RGBA")
-            plt = Image.open(plt_path).convert("RGBA")
+            tex_path = tex_manifest["path"]
+            cel_chunk = util.ImhexCelChunkFinder(img_data).chunks[0]
 
-            #plt_list = util.palette_to_list(plt)
-            #_plt_img = Image.new("P", (1, 1))
-            #_plt_img.putpalette(plt_list, rawmode="RGBA")
+            if "COMPRESSED_IMG" in cel_chunk["type"]:
+                cel_chunk_data = bytes(cel_chunk["data"])
+                cel_chunk_data = zlib.decompress(cel_chunk_data)
+            elif "RAW" in cel_chunk["type"]:
+                cel_chunk_data = bytes(cel_chunk["data"]["data"])
 
-            img = img.quantize()
-            for y in range(img.height):
-                for x in range(img.width):
-                    px = img.getpixel((x, y))
+            # Aseprite will do shift the texture position to avoid storing
+            # blank rows and columns, add them back in
+            cel_x_pos = cel_chunk["x_pos"]
+            cel_y_pos = cel_chunk["y_pos"]
+            if cel_x_pos or cel_y_pos > 0:
+                cel_width = cel_chunk["width"]
+                cel_height = cel_chunk["height"]
+                trans_idx = img_data["header"]["transparent_color_idx"]
+                cel_chunk_data = util.recenter_aseprite_cel_data(
+                    cel_chunk_data, trans_idx, cel_x_pos, cel_y_pos,
+                    cel_width, cel_height
+                )
+
+            px_data = util.aseprite_to_pixel_data(cel_chunk_data, bpp)
+
+
+
+            for fd in tex_fds:
+                if "img_sub_file" in fd:
+                    subfile = fd["img_sub_file"]
+                elif "img_sub_file2" in fd:
+                    subfile = fd["img_sub_file2"]
+                else:
+                    print("no subfile found")
                     import pdb;pdb.set_trace()
-                    plt_idx = plt_list.index(px)
-
-
-            import pdb;pdb.set_trace()
+                    continue
+                fname = subfile["fname"]["string"]
+                if tex_path == fname:
+                    img_data_ptr = (
+                        subfile["metadata"]["ptr"]["*(ptr)"]
+                            ["entries"][0]["data"]["ptr"]["*(ptr)"]
+                            ["idk_data_ptr"]["nullptr"]
+                    )
+                    resource_bytes[
+                        img_data_ptr:img_data_ptr + len(px_data)
+                    ] = px_data
 
     if should_patch_strings:
         resource_bytes = _patch_strings(resource_bytes, hash, strings_path)
