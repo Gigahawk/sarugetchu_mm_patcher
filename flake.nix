@@ -129,9 +129,9 @@
       '';
       version = "1";
       resourceFiles = [
-        #"043_b1fc2c81" # gz/game_common.gz
-        #"044_5c272d50" # gz/game_common.story.gz
-        #"045_3cecf223" # gz/game_common.vs.gz
+        "043_b1fc2c81" # gz/game_common.gz
+        "044_5c272d50" # gz/game_common.story.gz
+        "045_3cecf223" # gz/game_common.vs.gz
         #"046_8205e9b5" # gz/game_common_sound_bd.gz
         "047_7243e526" # gz/game_result.story.gz
         "048_4abee95e" # gz/game_result.vs.gz

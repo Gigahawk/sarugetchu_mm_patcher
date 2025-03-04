@@ -1348,6 +1348,69 @@ struct idk_FUN_00621060 {
         le u8 idk5[0x10];
 };
 
+struct idk_FUN_0061ea08 {
+    // idk?FUN_0061ea08
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name;
+
+        le u32 idk1;
+        if(idk1 != 0) {
+            le u32 idk2;
+        }
+};
+
+struct idk_FUN_0061eab0 {
+    // idk?FUN_0061eab0
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name;
+
+        le u32 idk1;
+
+        // idk?FUN_0061ea08 called in a loop
+        idk_FUN_0061ea08 idk2[idk1];
+};
+
+struct idk_FUN_00628d88 {
+    // idk?FUN_00628d88
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x2
+            MaybeString name1;
+            MaybeString name2;
+
+        le u32 idk01;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name3;
+
+        le u32 idk02;
+        le u32 idk03;
+        le u32 idk04;
+        le u32 idk05;
+        le u32 idk06;
+        le u32 idk07;
+        le u32 idk08;
+        le u32 idk09;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name4;
+
+        le u32 idk10;
+        le u32 idk11;
+        le u32 idk12;
+};
+
+struct idk_FUN_006282b0 {
+    // idk?FUN_006282b0
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x37
+            MaybeString names[37];
+};
+
+struct idk_FUN_006284b0 {
+    // idk?FUN_006284b0
+        le u32 idk_len;
+        // idk?FUN_006282b0 called in a loop
+            idk_FUN_006282b0 idk_data[idk_len];
+};
+
 struct File {
 // DO_A_LOT_OF_STUFF_WITH_OFFSETS
     // copy_file_base
@@ -1446,9 +1509,8 @@ struct File {
 
     // idk?FUN_0061ebf8
         le u32 idk10_len;
-        if (idk10_len != 0) {
-            assert(false, "Check idk?FUN_0061ebf8");
-        }
+        // idk?FUN_0061eab0 called in a loop
+            idk_FUN_0061eab0 idk10_data[idk10_len];
 
     // idk?FUN_0061d9a0
         le u32 idk11_len;
@@ -1557,9 +1619,8 @@ struct File {
 
     // idk_data_inspector?FUN_00621b80
         le u32 tnum;
-        if (tnum != 0) {
-            assert(false, "Check idk_data_inspector?FUN_00621b80");
-        }
+        // idk?FUN_006284b0 called in a loop
+            idk_FUN_006284b0 tdata[tnum];
 
     // idk?FUN_00628988
         le u32 idk36;
@@ -1700,7 +1761,10 @@ struct File {
         le u32 idk67;
         le u32 idk_load_masterarray;
         if (idk_load_masterarray != 0) {
-            assert(false, "Check idk?FUN_00620968");
+            le u8 idk_masterarray1[0x138c];
+            le u8 idk_masterarray2[0x138c];
+            le u8 idk_masterarray3[0x138c];
+            le u8 idk_masterarray4[0x138c];
         }
         le u32 idk68;
         if (idk68 != 0) {
@@ -1762,10 +1826,9 @@ struct File {
         }
 
     // idk?FUN_00628f28
-        le u32 idk81;
-        if (idk81 != 0) {
-            assert(false, "Check idk?FUN_00628f28");
-        }
+        le u32 idk81_len;
+        // idk?FUN_00628d88 called in a loop
+            idk_FUN_00628d88 idk81_data[idk81_len];
 
     // idk?FUN_00620d80
         le u8 idk82_exists;

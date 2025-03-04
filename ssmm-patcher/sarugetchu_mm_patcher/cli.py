@@ -581,8 +581,6 @@ def patch_resource(
                 cel_x_pos, cel_y_pos, cel_width, cel_height
             )
 
-            px_data = util.aseprite_to_pixel_data(cel_chunk_data, bpp)
-            plt_data = util.aseprite_to_palette_data(palette_chunk["entries"])
 
             for fd in tex_fds:
                 if "img_sub_file" in fd:
@@ -595,6 +593,9 @@ def patch_resource(
                     continue
                 fname = subfile["fname"]["string"]
                 if tex_path == fname:
+                    px_data = util.aseprite_to_pixel_data(
+                        cel_chunk_data, bpp
+                    )
                     img_data_ptr = (
                         subfile["metadata"]["ptr"]["*(ptr)"]
                             ["entries"][0]["data"]["ptr"]["*(ptr)"]
@@ -603,11 +604,18 @@ def patch_resource(
                     resource_bytes[
                         img_data_ptr:img_data_ptr + len(px_data)
                     ] = px_data
-                    palette_data_ptr = (
+
+                    palette_meta = (
                         subfile["metadata"]["ptr"]["*(ptr)"]
                             ["entries"][1]["data"]["ptr"]["*(ptr)"]
-                            ["idk_data_ptr"]["nullptr"]
                     )
+                    palette_width = palette_meta["width"]
+                    palette_height = palette_meta["height"]
+                    plt_data = util.aseprite_to_palette_data(
+                        palette_chunk["entries"],
+                        max_entries=palette_width*palette_height
+                    )
+                    palette_data_ptr = palette_meta["idk_data_ptr"]["nullptr"]
                     resource_bytes[
                         palette_data_ptr:palette_data_ptr + len(plt_data)
                     ] = plt_data

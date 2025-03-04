@@ -439,9 +439,10 @@ def unswizzle_palette(pixels: list, block_size=8):
 
 def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
     _bpp_mode_to_bpp = {
-        0: 32,
-        3: 8,
-        4: 4,
+        0: 32, # RGBA
+        1: 24, # RGB
+        3: 8,  # 8 bit indexed
+        4: 4,  # 4 bit indexed
     }
     data = data["data"]["ptr"]["*(ptr)"]
     num_imgs = data["num_imgs"]
@@ -483,7 +484,7 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
         # Need to unswizzle the pixels?
         if bpp == 4:
             pixels[::2], pixels[1::2] = pixels[1::2], pixels[::2]
-        if unswizzle_plt and bpp == 32:
+        if unswizzle_plt and bpp in [32, 24]:
             pixels = unswizzle_palette(pixels)
 
         img_pxs.append(pixels)
@@ -491,8 +492,16 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
         img_bins.append(img_bin)
     return img_pxs, img_bins
 
+def unpack_pixel(px: Bits) -> tuple[int, int, int, int]:
+    byte_length = len(px) // 8
+    unpack_fmt = ",".join(byte_length*["uint:8"])
+    unpacked = px.unpack(unpack_fmt)
+    if byte_length == 3:
+        # Set alpha to max
+        unpacked.append(255)
+    return tuple(unpacked)
+
 def img_buf_to_pillow(px_img, width, height, plt_img=None) -> Image:
-    _unpack_fmt = ",".join(4*["uint:8"])
     img = Image.new("RGBA", (width, height))
     for idx, px in enumerate(px_img):
         x = idx % width
@@ -502,9 +511,9 @@ def img_buf_to_pillow(px_img, width, height, plt_img=None) -> Image:
                 plt_idx = px.uintle
             except ValueError:
                 plt_idx = px.uint
-            r, g, b, a = plt_img[plt_idx].unpack(_unpack_fmt)
+            r, g, b, a = unpack_pixel(plt_img[plt_idx])
         else:
-            r, g, b, a = px.unpack(_unpack_fmt)
+            r, g, b, a = unpack_pixel(px)
         # PS2 alpha channel only goes to 0x80
         a *= 2
         if a > 255:

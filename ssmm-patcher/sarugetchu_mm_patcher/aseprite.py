@@ -1,5 +1,6 @@
 from bitstring import Bits
 
+import sarugetchu_mm_patcher.util as util
 
 class AsepriteDumper:
     MAGIC_NUMBER = 0xA5E0
@@ -18,9 +19,8 @@ class AsepriteDumper:
         self, palette_pxs: list[Bits]
     ) -> list[tuple[int, int, int, int]]:
         colors = []
-        _unpack_fmt = ",".join(4*["uint:8"])
         for color in palette_pxs:
-            r, g, b, a = color.unpack(_unpack_fmt)
+            r, g, b, a = util.unpack_pixel(color)
             # PS2 alpha channel only goes to 0x80
             a *= 2
             if a > 255:
