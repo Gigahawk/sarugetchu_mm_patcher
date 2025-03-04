@@ -484,7 +484,6 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
         if bpp == 4:
             pixels[::2], pixels[1::2] = pixels[1::2], pixels[::2]
         if unswizzle_plt and bpp == 32:
-            import pdb;pdb.set_trace()
             pixels = unswizzle_palette(pixels)
 
         img_pxs.append(pixels)
