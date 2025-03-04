@@ -505,12 +505,49 @@
               # HACK: running a bunch of these in parallel seems to cause crashes
               # (out of memory?)
               xargs -P ${"1"} -I {} bash -c '
-                echo "Analyzing {}"
+                echo "Analyzing resource {}"
                 imhex --pl format --verbose --metadata \
                   --includes "$src/includes/" \
                   --input "${self.packages.${system}.data-jp-extracted}/DATA1/{}" \
                   --pattern "$src/main.hexpat" \
                   --output "$out/analysis/{}.json"
+              '
+          '';
+        };
+        textures-imhex-analysis = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-textures-imhex-analysis";
+          inherit version;
+          srcs = [
+            ./imhex_patterns
+            ./textures
+          ];
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            pkgs.imhex
+          ];
+
+          buildPhase = ''
+            paths=($srcs)
+            export pattern_path=''${paths[0]}
+            export textures_path=''${paths[1]}
+
+
+            find "$textures_path" -name 'texture.aseprite' -type f | \
+              # HACK: running a bunch of these in parallel seems to cause crashes
+              # (out of memory?)
+              xargs -P ${"1"} -I {} bash -c '
+                echo "Analyzing texture {}"
+                fullpath="{}"
+                relpath=''${fullpath#"$textures_path"}
+                dirrelpath=''${relpath%"texture.aseprite"}
+                mkdir -p "$out/analysis/$dirrelpath"
+                imhex --pl format --verbose --metadata \
+                  --includes "$pattern_path/includes/" \
+                  --input "{}" \
+                  --pattern "$pattern_path/aseprite_main.hexpat" \
+                  --output "$out/analysis/$dirrelpath/texture.json"
               '
           '';
         };
