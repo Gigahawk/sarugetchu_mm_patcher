@@ -519,17 +519,25 @@ def aseprite_to_pixel_data(data: bytes, bpp: int) -> bytes:
     return out.tobytes()
 
 def recenter_aseprite_cel_data(
-    data: bytes, trans_idx: int, x: int, y: int, width: int, height: int
+    data: bytes, trans_idx: int, canvas_width: int, canvas_height: int,
+    cel_x: int, cel_y: int, cel_width: int, cel_height: int
 ) -> bytes:
-    for _ in range(y):
-        data = bytes([trans_idx]*width) + data
-    new_height = height + y
-    row_width = len(data) // new_height
-    if x > 0:
-        data = b"".join([
-            bytes([trans_idx]*x) + data[i*row_width:(i + 1)*row_width]
-            for i in range(new_height)
-        ])
+    rows_before = cel_y
+    rows_after = canvas_height - (cel_y + cel_height)
+    for _ in range(rows_before):
+        data = bytes([trans_idx]*cel_width) + data
+    data += bytes([trans_idx]*cel_width*rows_after)
+    row_width = len(data) // canvas_height
+
+    cols_before = cel_x
+    cols_after = canvas_width - (cel_x + cel_width)
+
+    data = b"".join([
+        bytes([trans_idx]*cols_before)
+        + data[i*row_width:(i + 1)*row_width]
+        + bytes([trans_idx]*cols_after)
+        for i in range(canvas_height)
+    ])
     return data
 
 class ImgExtractor:

@@ -570,14 +570,15 @@ def patch_resource(
             # blank rows and columns, add them back in
             cel_x_pos = cel_chunk["x_pos"]
             cel_y_pos = cel_chunk["y_pos"]
-            if cel_x_pos or cel_y_pos > 0:
-                cel_width = cel_chunk["width"]
-                cel_height = cel_chunk["height"]
-                trans_idx = img_data["header"]["transparent_color_idx"]
-                cel_chunk_data = util.recenter_aseprite_cel_data(
-                    cel_chunk_data, trans_idx, cel_x_pos, cel_y_pos,
-                    cel_width, cel_height
-                )
+            cel_width = cel_chunk["width"]
+            cel_height = cel_chunk["height"]
+            canvas_width = img_data["header"]["px_width"]
+            canvas_height = img_data["header"]["px_height"]
+            trans_idx = img_data["header"]["transparent_color_idx"]
+            cel_chunk_data = util.recenter_aseprite_cel_data(
+                cel_chunk_data, trans_idx, canvas_width, canvas_height,
+                cel_x_pos, cel_y_pos, cel_width, cel_height
+            )
 
             px_data = util.aseprite_to_pixel_data(cel_chunk_data, bpp)
 
