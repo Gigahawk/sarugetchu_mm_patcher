@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from collections.abc import Buffer
 import string
-from typing import Any
+from typing import Any, Pattern
 from math import ceil
 import hashlib
 from pprint import PrettyPrinter
@@ -146,7 +146,24 @@ class ImhexPtrFinder:
             for obj in start:
                 self.parse(start=obj)
 
-
+def find_img_subfile(root: dict, pattern: Pattern[str]) -> dict:
+    if isinstance(root, dict):
+        if root.get("__type") == "ImgSubFile":
+            name = root["fname"]["string"]
+            #print(f"Found img subfile with name {name}")
+            if pattern.search(name):
+                return root
+    else:
+        return None
+    for val in root.values():
+        if isinstance(val, dict):
+            if out := find_img_subfile(val, pattern):
+                return out
+        elif isinstance(val, list):
+            for obj in val:
+                if out := find_img_subfile(obj, pattern):
+                    return out
+    return None
 
 
 def patch_file_offsets(
@@ -362,6 +379,14 @@ def dump_image(
             img.putpixel((x, y), (r, g, b, a))
     return img
 
+def palette_to_list(plt: Image) -> list[int]:
+    out = []
+    for y in range(plt.height):
+        for x in range(plt.width):
+            out += plt.getpixel((x, y))
+    return out
+
+
 def unswizzle_palette(pixels: list, block_size=8):
     if (len(pixels) % block_size) != 0:
         import pdb;pdb.set_trace()
@@ -426,7 +451,8 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
 
     # Random garbage at the end of the image?
     bits_per_image = pixels_per_img*bpp + 8*8
-    imgs = []
+    img_pxs = []
+    img_bins = []
     for img_idx in range(num_imgs):
         pixels = []
         img_base = img_idx*bits_per_image
@@ -440,8 +466,10 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
         if unswizzle_plt and bpp == 32:
             pixels = unswizzle_palette(pixels)
 
-        imgs.append(pixels)
-    return imgs
+        img_pxs.append(pixels)
+        img_bin = sum(pixels, start=Bits(0)).tobytes()
+        img_bins.append(img_bin)
+    return img_pxs, img_bins
 
 def img_buf_to_pillow(px_img, width, height, plt_img=None) -> Image:
     _unpack_fmt = ",".join(4*["uint:8"])

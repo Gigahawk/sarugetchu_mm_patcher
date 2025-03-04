@@ -1,3 +1,4 @@
+import re
 import json
 from urllib.parse import unquote
 from collections import defaultdict
@@ -18,6 +19,7 @@ from time import sleep
 import yaml
 from ps2isopatcher.iso import Ps2Iso, TreeFile, walk_tree
 import click
+from PIL import Image
 from pathvalidate import sanitize_filepath
 from pathvalidate import sanitize_filename
 
@@ -32,6 +34,7 @@ from sarugetchu_mm_patcher.encoding import (
     token_to_idx,
     idx_to_token
 )
+from sarugetchu_mm_patcher.aseprite import AsepriteDumper
 
 EXTRACT_PATH = Path(".extracted")
 DATA0_PATH = "/PDATA/DATA0.BIN;1"
@@ -432,54 +435,16 @@ def pack_data(index_path, data_path, entry):
                 address += util.blocks_required(size)
             index_file.write(index_list_to_bin(index_list))
 
-@cli.command()
-@click.argument(
-    "resource_path",
-    type=click.Path(),
-)
-@click.argument(
-    "imhex_json",
-    type=click.Path()
-)
-@click.option(
-    "-s", "--strings-path",
-    default=None,
-    show_default=True,
-    type=click.Path(),
-)
-@click.option(
-    "--hash",
-    default=None,
-    type=str
-)
-@click.option(
-    "-o", "--output-path",
-    default=None,
-    show_default=True,
-    type=click.Path(),
-)
-def patch_resource(resource_path, strings_path, hash, output_path, imhex_json):
-    if hash is None:
-        hash = _guess_hash(resource_path)
-    source_encoder = EncodingTranslator(hash)
-    resource_path = Path(resource_path)
-    if strings_path is None:
-        strings_path = Path(os.getcwd()) / "strings.yaml"
-    else:
-        strings_path = Path(strings_path)
-    if output_path is None:
-        output_path = Path(os.getcwd()) / f"{resource_path.stem}_patched"
-    else:
-        output_path = Path(output_path)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+def _needs_strings_patch(imhex_analysis) -> bool:
+    pattern = re.compile(r"\.gf0")
+    return bool(util.find_img_subfile(imhex_analysis, pattern))
 
+def _patch_strings(resource_bytes, hash, strings_path):
+    source_encoder = EncodingTranslator(hash)
     with open(strings_path, "r") as f:
         strings_dict = yaml.safe_load(f)
     if not strings_dict:
         raise ValueError(f"Empty strings file {strings_path}")
-    with open(resource_path, "rb") as f:
-        resource_bytes = util.TrackedByteArray(f.read())
-    imhex_analysis = _parse_imhex_json(imhex_json)
 
     if util.find_strings(resource_bytes, "sv_msg.gf0"):
         # Sorta hacky, technically this should always be the default font
@@ -520,6 +485,94 @@ def patch_resource(resource_path, strings_path, hash, output_path, imhex_json):
                     source_encoder.wrap_string(jb, id=id),
                     target_encoder.wrap_string(new_bytestr, id=id),
                 )
+    return resource_bytes
+
+
+@cli.command()
+@click.argument(
+    "resource_path",
+    type=click.Path(),
+)
+@click.argument(
+    "imhex_json",
+    type=click.Path()
+)
+@click.option(
+    "-s", "--strings-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+@click.option(
+    "-t", "--textures-path",
+    default=None,
+    show_default=True,
+    type=click.Path()
+)
+@click.option(
+    "--hash",
+    default=None,
+    type=str
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def patch_resource(
+    resource_path, strings_path, textures_path, hash, output_path, imhex_json
+):
+    imhex_analysis = _parse_imhex_json(imhex_json)
+    should_patch_strings = _needs_strings_patch(imhex_analysis["texturefactory"])
+    if hash is None:
+        hash = _guess_hash(resource_path)
+    resource_path = Path(resource_path)
+    if strings_path is None:
+        strings_path = Path(os.getcwd()) / "strings.yaml"
+    else:
+        strings_path = Path(strings_path)
+    if textures_path:
+        textures_path = Path(textures_path)
+        if not textures_path.is_dir():
+            click.echo(f"Warning: texture path {textures_path} does not exist.")
+            textures_path = None
+    if output_path is None:
+        output_path = Path(os.getcwd()) / f"{resource_path.stem}_patched"
+    else:
+        output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(resource_path, "rb") as f:
+        resource_bytes = util.TrackedByteArray(f.read())
+
+    # Note: patch textures first so imhex_json addresses are accurate
+    if textures_path:
+        for manifest_path in textures_path.glob("**/manifest.yaml"):
+            img_path = manifest_path.with_name("image.png")
+            plt_path = manifest_path.with_name("palette.png")
+            with open(manifest_path, "r") as f:
+                tex_manifest = yaml.safe_load(f)
+            bpp = tex_manifest["bpp"]
+            img = Image.open(img_path).convert("RGBA")
+            plt = Image.open(plt_path).convert("RGBA")
+
+            #plt_list = util.palette_to_list(plt)
+            #_plt_img = Image.new("P", (1, 1))
+            #_plt_img.putpalette(plt_list, rawmode="RGBA")
+
+            img = img.quantize()
+            for y in range(img.height):
+                for x in range(img.width):
+                    px = img.getpixel((x, y))
+                    import pdb;pdb.set_trace()
+                    plt_idx = plt_list.index(px)
+
+
+            import pdb;pdb.set_trace()
+
+    if should_patch_strings:
+        resource_bytes = _patch_strings(resource_bytes, hash, strings_path)
 
     resource_bytes = util.patch_file_offsets(resource_bytes, imhex_analysis)
     #resource_bytes = util.patch_entity_addrs(resource_bytes, orig_entity_offset_idxs)
@@ -706,24 +759,39 @@ def dump_textures2(imhex_json, output_path):
         img_width = img_data["width"]
         img_height = img_data["height"]
         click.echo(f"width, height = {img_width}, {img_height}")
-        img_imgs = util.px_data_to_imgs(img_data)
+        img_pxs, img_bins = util.px_data_to_imgs(img_data)
 
-        plt_img = util.px_data_to_imgs(plt_data, unswizzle_plt=True)[0]
+        plt_pxs, plt_bins = util.px_data_to_imgs(plt_data, unswizzle_plt=True)
+        plt_px, plt_bin = plt_pxs[0], plt_bins[0]
+
         plt_width = plt_data["width"]
         plt_height = plt_data["height"]
-        plt = util.img_buf_to_pillow(
-            plt_img, plt_width, plt_height
+        plt_pil = util.img_buf_to_pillow(
+            plt_px, plt_width, plt_height
         )
-        plt.save(target_path / "palette.png")
+        plt_pil.save(target_path / "palette.png")
+        with open(target_path / "palette.bin", "wb") as f:
+            f.write(plt_bin)
 
-        for idx, img in enumerate(img_imgs):
-            img = util.img_buf_to_pillow(
-                img, img_width, img_height, plt_img=plt_img
+        for idx, (img_px, img_bin) in enumerate(zip(img_pxs, img_bins)):
+            img_pil = util.img_buf_to_pillow(
+                img_px, img_width, img_height, plt_img=plt_px
             )
-            img.save(target_path / f"{idx:04d}.png")
+            img_pil.save(target_path / f"{idx:04d}.png")
+            with open(target_path / f"{idx:04d}.bin", "wb") as f:
+                f.write(img_bin)
+
+            with open(target_path / f"{idx:04d}.aseprite", "wb") as f:
+                f.write(
+                    AsepriteDumper(
+                        img_width, img_height, plt_px, img_px
+                    ).file
+                )
+
         manifest = _empty_buffers(fd)
-        with open (target_path / "manifest.yaml", "w") as f:
+        with open(target_path / "manifest.yaml", "w") as f:
             yaml.dump(manifest, f)
+
 
 
 @cli.command()
