@@ -697,54 +697,6 @@ def find_string(target, extracted_path, csv_path, print_to_null, hash, hex_):
                 )
                 click.echo(string)
                 click.echo(tb.hex(sep=" "))
-@cli.command()
-@click.argument(
-    "resource_path",
-    type=click.Path(),
-)
-@click.option(
-    "-o", "--output-path",
-    default=None,
-    show_default=True,
-    type=click.Path(),
-)
-def dump_textures(resource_path, output_path):
-    resource_path = Path(resource_path)
-    if output_path is None:
-        output_path = Path(os.getcwd()) / f"{resource_path}_textures"
-    else:
-        output_path = Path(output_path)
-    output_path.mkdir(parents=True, exist_ok=True)
-    with open(resource_path, "rb") as f:
-        resource_bytes = bytearray(f.read())
-
-    texture_extensions = [
-        b".gf0\x00",
-        b".gf1\x00",
-        b".tm2\x00",
-        # Seems to just produce garbage, probably not being parsed correctly
-        b".tga\x00",
-    ]
-    for ext in texture_extensions:
-        string_data = util.find_strings(resource_bytes, ext)
-        for sd in string_data:
-            click.echo(f"Found file entry {sd['value']}")
-            ex = util.ImgExtractor(resource_bytes, sd["value"])
-            click.echo(f"Image struct is at {hex(ex.img_struct_addr)}")
-            click.echo("img_struct:")
-            util.HexPrettyPrinter().pprint(ex.img_struct)
-            click.echo("px_data_struct:")
-            util.HexPrettyPrinter().pprint(ex.px_data_struct)
-            click.echo("plt_data_struct:")
-            util.HexPrettyPrinter().pprint(ex.plt_data_struct)
-            img_name = sd["value"].decode()
-            while img_name[0] in ["/", "\\"]:
-                img_name = img_name[1:]
-            _out_path: Path = sanitize_filepath(output_path / img_name)
-            _out_path.mkdir(parents=True, exist_ok=True)
-            for img_idx in range(ex.num_imgs):
-                img = ex.get_image(img_idx)
-                img.save(_out_path / f"{img_idx:04d}.png")
 
 def _empty_buffers(root: dict):
     if isinstance(root, dict):
@@ -772,7 +724,7 @@ def _empty_buffers(root: dict):
     show_default=True,
     type=click.Path(),
 )
-def dump_textures2(imhex_json, output_path):
+def dump_textures(imhex_json, output_path):
     imhex_json = Path(imhex_json)
     if output_path is None:
         output_path = Path(os.getcwd()) / imhex_json.with_suffix(".textures")

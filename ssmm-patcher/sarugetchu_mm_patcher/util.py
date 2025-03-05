@@ -470,8 +470,10 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
 
     px_buf_bits = Bits(bytes=px_buf)
 
+    bits_per_image = pixels_per_img*bpp
     # Random garbage at the end of the image?
-    bits_per_image = pixels_per_img*bpp + 8*8
+    if (len(px_buf_bits) // num_imgs) != bits_per_image:
+        bits_per_image += 8*8
     img_pxs = []
     img_bins = []
     for img_idx in range(num_imgs):

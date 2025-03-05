@@ -514,6 +514,28 @@
               '
           '';
         };
+        data-textures-extracted = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-data-textures-extracted";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            self.packages.${system}.ssmm-patcher
+          ];
+
+          buildPhase = ''
+            echo "${resourceFilesStr}" | \
+              xargs -P ${processes} -I {} bash -c '
+                echo "Dumping textures from {}"
+                ssmm-patcher dump-textures \
+                  -o "$out/{}" \
+                  "${self.packages.${system}.data-imhex-analysis}/analysis/{}.json"
+              '
+          '';
+
+        };
         textures-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-textures-imhex-analysis";
