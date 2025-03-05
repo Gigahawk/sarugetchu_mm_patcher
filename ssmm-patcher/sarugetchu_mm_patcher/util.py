@@ -481,7 +481,7 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
             base = img_base + px_idx*bpp
             pixels.append(px_buf_bits[base:base+bpp])
 
-        # Need to unswizzle the pixels?
+        # Swap byte endianness for 4bpp
         if bpp == 4:
             pixels[::2], pixels[1::2] = pixels[1::2], pixels[::2]
         if unswizzle_plt and bpp in [32, 24]:
@@ -524,6 +524,12 @@ def img_buf_to_pillow(px_img, width, height, plt_img=None) -> Image:
 
 def aseprite_to_pixel_data(data: bytes, bpp: int) -> bytes:
     out = BitArray()
+
+    # Swap byte endianness for 4bpp
+    if bpp == 4:
+        data = bytearray(data)
+        data[::2], data[1::2] = data[1::2], data[::2]
+
     for idx in data:
         out += Bits(uint=idx, length=bpp)
     return out.tobytes()
