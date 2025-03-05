@@ -753,41 +753,52 @@ def dump_textures(imhex_json, output_path):
 
         metadata = subfile["metadata"]["ptr"]["*(ptr)"]
         num_entries = metadata["num_entries"]
-        if num_entries != 2:
-            click.echo(f"WARNING: metadata contains {num_entries} pixel data entries, not parsing")
-            continue
-        img_data, plt_data = metadata["entries"]
-        img_width = img_data["width"]
-        img_height = img_data["height"]
-        click.echo(f"width, height = {img_width}, {img_height}")
-        img_pxs, img_bins = util.px_data_to_imgs(img_data)
+        if num_entries in [1, 2]:
+            img_data = metadata["entries"][0]
+            img_width = img_data["width"]
+            img_height = img_data["height"]
+            click.echo(f"width, height = {img_width}, {img_height}")
+            img_pxs, img_bins = util.px_data_to_imgs(img_data)
 
-        plt_pxs, plt_bins = util.px_data_to_imgs(plt_data, unswizzle_plt=True)
-        plt_px, plt_bin = plt_pxs[0], plt_bins[0]
+            if num_entries == 2:
+                click.echo("Image appears to be paletted")
+                plt_data = metadata["entries"][1]
 
-        plt_width = plt_data["width"]
-        plt_height = plt_data["height"]
-        plt_pil = util.img_buf_to_pillow(
-            plt_px, plt_width, plt_height
-        )
-        plt_pil.save(target_path / "palette.png")
-        with open(target_path / "palette.bin", "wb") as f:
-            f.write(plt_bin)
+                plt_pxs, plt_bins = util.px_data_to_imgs(plt_data, unswizzle_plt=True)
+                plt_px, plt_bin = plt_pxs[0], plt_bins[0]
 
-        for idx, (img_px, img_bin) in enumerate(zip(img_pxs, img_bins)):
-            img_pil = util.img_buf_to_pillow(
-                img_px, img_width, img_height, plt_img=plt_px
-            )
-            img_pil.save(target_path / f"{idx:04d}.png")
-            with open(target_path / f"{idx:04d}.bin", "wb") as f:
-                f.write(img_bin)
-
-            with open(target_path / f"{idx:04d}.aseprite", "wb") as f:
-                f.write(
-                    AsepriteDumper(
-                        img_width, img_height, plt_px, img_px
-                    ).file
+                plt_width = plt_data["width"]
+                plt_height = plt_data["height"]
+                plt_pil = util.img_buf_to_pillow(
+                    plt_px, plt_width, plt_height
                 )
+                plt_pil.save(target_path / "palette.png")
+                with open(target_path / "palette.bin", "wb") as f:
+                    f.write(plt_bin)
+            else:
+                click.echo("Image appears to be direct color")
+                plt_px = None
+
+            for idx, (img_px, img_bin) in enumerate(zip(img_pxs, img_bins)):
+                img_pil = util.img_buf_to_pillow(
+                    img_px, img_width, img_height, plt_img=plt_px
+                )
+                img_pil.save(target_path / f"{idx:04d}.png")
+                with open(target_path / f"{idx:04d}.bin", "wb") as f:
+                    f.write(img_bin)
+
+                if plt_px:
+                    with open(target_path / f"{idx:04d}.aseprite", "wb") as f:
+                        f.write(
+                            AsepriteDumper(
+                                img_width, img_height, plt_px, img_px
+                            ).file
+                        )
+        else:
+            click.echo(
+                f"WARNING: metadata contains {num_entries} pixel data entries, "
+                "not parsing"
+            )
 
         manifest = _empty_buffers(fd)
         with open(target_path / "manifest.yaml", "w") as f:
