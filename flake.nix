@@ -535,6 +535,10 @@
               '
           '';
 
+          installPhase = ''
+            chmod 777 -R $out
+          '';
+
         };
         textures-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {

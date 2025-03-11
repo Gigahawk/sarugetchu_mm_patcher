@@ -1,4 +1,5 @@
 import re
+import shutil
 import json
 from urllib.parse import unquote
 from collections import defaultdict
@@ -724,7 +725,19 @@ def _empty_buffers(root: dict):
     show_default=True,
     type=click.Path(),
 )
-def dump_textures(imhex_json, output_path):
+@click.option(
+    "-e", "--exclude-exts",
+    multiple=True,
+    default=[".gf0", ".gf1"],
+    type=str
+)
+@click.option(
+    "-i", "--include-exts",
+    multiple=True,
+    default=[],
+    type=str
+)
+def dump_textures(imhex_json, output_path, include_exts, exclude_exts):
     imhex_json = Path(imhex_json)
     if output_path is None:
         output_path = Path(os.getcwd()) / imhex_json.with_suffix(".textures")
@@ -748,8 +761,14 @@ def dump_textures(imhex_json, output_path):
         while _fname[0] in ["/", "\\"]:
             _fname = _fname[1:]
         target_path = sanitize_filepath(output_path / _fname)
-        target_path.mkdir(parents=True, exist_ok=True)
         click.echo(f"Found file '{fname}' with class ID {class_id}")
+
+        ext = Path(fname.strip('\x00')).suffix.lower()
+        if (ext in exclude_exts) or (include_exts and ext not in include_exts):
+            click.echo(f"Skipping file with extension '{ext}'")
+            continue
+
+        target_path.mkdir(parents=True, exist_ok=True)
 
         metadata = subfile["metadata"]["ptr"]["*(ptr)"]
         num_entries = metadata["num_entries"]
@@ -877,61 +896,58 @@ def dump_strings(imhex_json, hash, output_path):
                 f.write(f'"{string_raw}"\n')
 
 @cli.command()
-@click.argument(
-    "resource_path",
+@click.option(
+    "-i", "--imhex-json",
     type=click.Path(),
 )
 @click.option(
-    "-o", "--output-path",
+    "-t", "--textures-path",
     default=None,
     show_default=True,
     type=click.Path(),
 )
-def dump_fonts(resource_path, output_path):
-    resource_path = Path(resource_path)
-    if output_path is None:
-        output_path = Path(os.getcwd()) / f"{resource_path}_fonts"
-    else:
-        output_path = Path(output_path)
-    output_path.mkdir(parents=True, exist_ok=True)
-    with open(resource_path, "rb") as f:
-        resource_bytes = bytearray(f.read())
+@click.option(
+    "-d", "--dump-textures",
+    default=False,
+    show_default=True,
+    is_flag=True,
+    type=bool,
+)
+@click.pass_context
+def dump_fonts(ctx, dump_textures, imhex_json, textures_path):
+    font_exts = [".gf0", ".gf1"]
+    textures_path = Path(textures_path)
 
-    texture_extensions = [
-        b".gf0\x00",
-        b".gf1\x00",
-    ]
-    for ext in texture_extensions:
-        string_data = util.find_strings(resource_bytes, ext)
-        for sd in string_data:
-            click.echo(f"Found file entry {sd['value']}")
-            ex = util.ImgExtractor(resource_bytes, sd["value"])
-            click.echo(f"Image struct is at {hex(ex.img_struct_addr)}")
-            click.echo("img_struct:")
-            util.HexPrettyPrinter().pprint(ex.img_struct)
-            click.echo("px_data_struct:")
-            util.HexPrettyPrinter().pprint(ex.px_data_struct)
-            click.echo("plt_data_struct:")
-            util.HexPrettyPrinter().pprint(ex.plt_data_struct)
-            img_name = sd["value"].decode()
-            idx_ofst = int(img_name[-1])
-            while img_name[0] in ["/", "\\"]:
-                img_name = img_name[1:]
-            _out_path: Path = sanitize_filepath(output_path / img_name)
-            _out_path = _out_path.with_suffix("")
-            _out_path.mkdir(parents=True, exist_ok=True)
-            for img_idx in range(ex.num_imgs):
-                font_idx = img_idx*2 + idx_ofst
-                img = ex.get_image(img_idx)
-                try:
-                    token = idx_to_token(font_idx).hex().upper()
-                except KeyError:
-                    click.echo(f"Warning: no token precomputed for index {font_idx}")
-                    token = "????"
-                img.save(
-                    _out_path
-                    / f"{font_idx:04d}_{token}.png"
-                )
+    if dump_textures:
+        ctx.invoke(
+            dump_textures,
+            imhex_json=imhex_json,
+            output_path=textures_path,
+            include_exts=font_exts,
+            exclude_exts=[]
+        )
+
+
+    for root, _, _ in textures_path.walk():
+        if root.suffix not in font_exts:
+            continue
+        file_idx = int(str(root)[-1])
+        for img in root.glob("*.png"):
+            try:
+                img_idx = int(img.stem)
+            except ValueError:
+                continue
+            font_idx = img_idx*2 + file_idx
+            try:
+                token = idx_to_token(font_idx).hex().upper()
+            except KeyError:
+                click.echo(f"Warning: no token precomputed for index {font_idx}")
+                token = "????"
+            _out_dir = root.with_suffix(".gf")
+            _out_dir.mkdir(parents=True, exist_ok=True)
+            _out_path = _out_dir / f"{font_idx:04d}_{token}.png"
+            click.echo(f"Found texture file {img}, copying to {_out_path}")
+            shutil.copyfile(img, _out_path)
 
 
 @cli.command()
