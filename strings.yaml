@@ -269,8 +269,10 @@
   english: "Continue heading towards the base in the Kawasaki area. Leave Tokyo Station and head towards Kawasaki by ground. Also, we have received intel that a large mecha is hiding near Tokyo Station! Please be careful!!"
 "東京 PM11:58":
   english: "Tokyo\n11:58PM"
+" PM11:58":
+  english: " 11:58PM"
 "ホバリングメカを撃破<げきは>せよ!➝\n\f装甲<そうこう>を破壊<はかい>し動<うご>きを止<と>めてください。➝\n\f4基<き>の動力部<どうりょくぶ>は浮<う>くためだけの\n装置<そうち>ではないようですので十分注意<じゅうぶんちゅうい>してください。":
-  english: "Destroy the floating mech!➝\n\fDestroy its armor to disable it.➝\n\fBe careful, the 4 thrusters appear\nto be for more than just floating"
+  english: "Destroy the floating mech!➝\n\fDestroy its armor to disable it.➝\n\fBe careful,the 4 thrusters appear\nto be for more than just floating"
 
 
 

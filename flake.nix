@@ -145,6 +145,17 @@
         "085_41f34892" # gz/menu_story.02_city01_a.gz
         "086_e76bf53f" # gz/menu_story.03_city02_a.gz
         "087_5973ad65" # gz/menu_story.04_metro01_a.gz
+        "088_dd798eb5" # gz/menu_story.05_boss02_boss.gz
+        "089_44f20e4a" # gz/menu_story.06_bay01_a.gz
+        "090_567ea3b3" # gz/menu_story.07_bay02_a.gz
+        "091_6cc96933" # gz/menu_story.08_park01_a.gz
+        "092_c55668f7" # gz/menu_story.09_stadium_a.gz
+        "093_1626079d" # gz/menu_story.10_boss03_fly.gz
+        "094_45912030" # gz/menu_story.11_hangar01_a.gz
+        "095_c35e32d9" # gz/menu_story.12_hangar02_a.gz
+        "096_f2b5553f" # gz/menu_story.13_boss04_gori02.gz
+        "097_dcd7b35d" # gz/menu_story.14_elevator_a.gz
+        "098_8d3a2011" # gz/menu_story.15_kakeru_spector.gz
         "117_05f7cae8" # gz/menu_title.gz
         "118_3c6cf60b" # gz/menu_vs.gz
 

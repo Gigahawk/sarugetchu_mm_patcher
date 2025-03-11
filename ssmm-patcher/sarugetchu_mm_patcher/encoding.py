@@ -3298,6 +3298,117 @@ BYTES_TO_CHAR_TOKYO = {
     # Valid encodings seem to end here
 }
 
+BYTES_TO_CHAR_TOKYO = {
+    **BYTES_TO_CHAR_SPECIAL,
+
+    b"\x88\x9F": "東",
+    b"\x88\xA0": "京",
+    b"\x88\xA1": " ",
+    b"\x88\xA2": "P",
+    b"\x88\xA3": "M",
+    b"\x88\xA4": "1",
+    b"\x88\xA5": ":",
+    b"\x88\xA6": "5",
+    b"\x88\xA7": "8",
+    b"\x88\xA8": "リ",
+    b"\x88\xA9": "ト",
+    b"\x88\xAA": "ラ",
+    b"\x88\xAB": "イ",
+    b"\x88\xAC": "タ",
+    b"\x88\xAD": "ア",
+    b"\x88\xAE": "け",
+    b"\x88\xAF": "っ",
+    b"\x88\xB0": "て",
+    b"\x88\xB1": "い",
+    b"\x88\xB2": "も",
+    b"\x88\xB3": "ど",
+    b"\x88\xB4": "る",
+    b"\x88\xB5": "へ",
+    b"\x88\xB6": "ん",
+    b"\x88\xB7": "こ",
+    b"\x88\xB8": "う",
+    b"\x88\xB9": "ポ",
+    b"\x88\xBA": "ー",
+    b"\x88\xBB": "ズ",
+    b"\x88\xBC": "メ",
+    b"\x88\xBD": "ニ",
+    b"\x88\xBE": "ュ",
+    b"\x88\xBF": "オ",
+    b"\x88\xC0": "プ",
+    b"\x88\xC1": "シ",
+    b"\x88\xC2": "ョ",
+    b"\x88\xC3": "ン",
+    b"\x88\xC4": "設",
+    b"\x88\xC5": "定",
+    b"\x88\xC6": "そ",
+    b"\x88\xC7": "さ",
+    b"\x88\xC8": "説",
+    b"\x88\xC9": "明",
+    b"\x88\xCA": "ゲ",
+    b"\x88\xCB": "ム",
+    b"\x88\xCC": "に",
+    b"\x88\xCD": "本",
+    b"\x88\xCE": "当",
+    b"\x88\xCF": "し",
+    b"\x88\xD0": "ま",
+    b"\x88\xD1": "す",
+    b"\x88\xD2": "か",
+    b"\x88\xD3": "?",
+    b"\x88\xD4": "は",
+    b"\x88\xD5": "え",
+    b"\x88\xD6": "せ",
+    b"\x88\xD7": "サ",
+    b"\x88\xD8": "ウ",
+    b"\x88\xD9": "ド",
+    b"\x88\xDA": "バ",
+    b"\x88\xDB": "ブ",
+    b"\x88\xDC": "レ",
+    b"\x88\xDD": "B",
+    b"\x88\xDE": "G",
+    b"\x88\xDF": "S",
+    b"\x88\xE0": "E",
+    b"\x88\xE1": "モ",
+    b"\x88\xE2": "ノ",
+    b"\x88\xE3": "ル",
+    b"\x88\xE4": "ス",
+    b"\x88\xE5": "テ",
+    b"\x88\xE6": "ビ",
+    b"\x88\xE7": "ロ",
+    b"\x88\xE8": "ジ",
+    b"\x88\xE9": "ッ",
+    b"\x88\xEA": "ク",
+    b"\x88\xEB": "2",
+    b"\x88\xEC": "の",
+    b"\x88\xED": "出",
+    b"\x88\xEE": "カ",
+    b"\x88\xEF": "形",
+    b"\x88\xF0": "式",
+    b"\x88\xF1": "ゅ",
+    b"\x88\xF2": "つ",
+    b"\x88\xF3": "り",
+    b"\x88\xF4": "ょ",
+    b"\x88\xF5": "く",
+    b"\x88\xF6": "き",
+    b"\x88\xF7": "を",
+    b"\x88\xF8": "選",
+    b"\x88\xF9": "択",
+    b"\x88\xFA": "た",
+    b"\x88\xFB": "だ",
+    b"\x88\xFC": "。",
+    b"\x89\x40": "フ",
+    b"\x89\x41": "??", # TODO: center dot
+
+    b"\x89\x42": "1", # TODO: is this 1 or I?
+    b"\x89\x43": "N",
+    b"\x89\x44": "A",
+    b"\x89\x45": "X",
+    b"\x89\x46": "音",
+    b"\x89\x47": "量",
+    b"\x89\x48": "お",
+    b"\x89\x49": "お", # Repeated?
+    # Valid encodings seem to end here
+}
+
 
 
 
@@ -3418,11 +3529,35 @@ ENCODING_MAP = {
     "E76BF53F": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.03_city02_a.gz
     "5973AD65": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.04_metro01_a.gz
     "3C6CF60B": BYTES_TO_CHAR_DEFAULT,        # gz/menu_vs.gz
+    "DD798EB5": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.05_boss02_boss.gz
+    "44F20E4A": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.06_bay01_a.gz
+    "567EA3B3": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.07_bay02_a.gz
+    "6CC96933": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.08_park01_a.gz
+    "C55668F7": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.09_stadium_a.gz
+    "1626079D": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.10_boss03_fly.gz
+    "45912030": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.11_hangar01_a.gz
+    "C35E32D9": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.12_hangar02_a.gz
+    "F2B5553F": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.13_boss04_gori02.gz
+    "DCD7B35D": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.14_elevator_a.gz
+    "8D3A2011": BYTES_TO_CHAR_DEFAULT,        # gz/menu_story.15_kakeru_spector.gz
     "AA6F7A50": BYTES_TO_CHAR_TOKYO_TELEPORT, # gz/stage.01_boss01_gori01.gz
     "58401EA3": BYTES_TO_CHAR_SHINJUKU,       # gz/stage.02_city01_a.gz
     "FEB8CA50": BYTES_TO_CHAR_AKIHABARA,      # gz/stage.03_city02_a.gz
     "AC9781D4": BYTES_TO_CHAR_METRO,          # gz/stage.04_metro01_a.gz
     "B8B90462": BYTES_TO_CHAR_TOKYO,          # gz/stage.05_boss02_boss.gz
+
+    # TODO: Create real encoding maps for these
+    "CF772913": BYTES_TO_CHAR_DEFAULT,        # gz/stage.06_bay01_a.gz
+    "E103BE7C": BYTES_TO_CHAR_DEFAULT,        # gz/stage.07_bay02_a.gz
+    "83163F44": BYTES_TO_CHAR_DEFAULT,        # gz/stage.08_park01_a.gz
+    "187B3C66": BYTES_TO_CHAR_DEFAULT,        # gz/stage.09_stadium_a.gz
+    "1566B0A1": BYTES_TO_CHAR_DEFAULT,        # gz/stage.10_boss03_fly.gz
+    "44D1C934": BYTES_TO_CHAR_DEFAULT,        # gz/stage.11_hangar01_a.gz
+    "C29EDBDD": BYTES_TO_CHAR_DEFAULT,        # gz/stage.12_hangar02_a.gz
+    "1530B183": BYTES_TO_CHAR_DEFAULT,        # gz/stage.13_boss04_gori02.gz
+    "DB175D62": BYTES_TO_CHAR_DEFAULT,        # gz/stage.14_elevator_a.gz
+    "9CE158F2": BYTES_TO_CHAR_DEFAULT,        # gz/stage.15_kakeru_spector.gz
+
     "E5D5CEB1": BYTES_TO_CHAR_VS_PAUSE,       # gz/stage.50_k1.gz
     "2FF511D3": BYTES_TO_CHAR_VS_PAUSE,       # gz/stage.51_city.gz
     "1E656E38": BYTES_TO_CHAR_VS_PAUSE,       # gz/stage.52_metro.gz
