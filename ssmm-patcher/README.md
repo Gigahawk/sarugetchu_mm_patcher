@@ -156,6 +156,17 @@ There is currently a demuxer written python under `mux.py` but it is unbearably 
 
 > We're using ssmm-demux to demux and ps2str to remux
 
+## Level Sequence
+
+### Episode Kakeru
+
+1. Cutscene: `ST00K`
+2. `01_boss01_gori01`
+3. `02_city01_a`
+4. `03_city02_a`
+5. Cutscene: `ST01`
+6. `04_metro01_a`
+
 
 
 

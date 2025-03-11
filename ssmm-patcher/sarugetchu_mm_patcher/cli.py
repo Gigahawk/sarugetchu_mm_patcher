@@ -845,12 +845,18 @@ def dump_textures(imhex_json, output_path, include_exts, exclude_exts):
 def dump_strings(imhex_json, hash, output_path):
     imhex_json = Path(imhex_json)
     if output_path is None:
-        output_path = Path(os.getcwd()) / imhex_json.with_suffix(".strings.csv").name
+        output_path = Path(os.getcwd()) / imhex_json.name
+    output_path = Path(output_path).with_suffix(".strings.csv")
     if hash is None:
         hash = _guess_hash(imhex_json)
     data = _parse_imhex_json(imhex_json)
     strings = data["strings"]
-    translator = EncodingTranslator(hash)
+    try:
+        translator = EncodingTranslator(hash)
+    except KeyError:
+        click.echo(f"Warning: No encoding map defined for {hash}, falling back to default encoding")
+        translator = EncodingTranslator(encoding=BYTES_TO_CHAR_DEFAULT)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w") as f:
         for string in strings:
             addr = hex(int(string["__address"]))
