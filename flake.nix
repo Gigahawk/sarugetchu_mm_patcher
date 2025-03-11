@@ -148,7 +148,7 @@
         "117_05f7cae8" # gz/menu_title.gz
         "118_3c6cf60b" # gz/menu_vs.gz
 
-        # Stage files are needed for patching the pause menu
+        # Stage files are needed for patching the pause menu and other in game text
         "637_aa6f7a50" # gz/stage.01_boss01_gori01.gz
         #"639_a7383ea3"
         "641_58401ea3" # gz/stage.02_city01_a.gz
@@ -159,22 +159,31 @@
         #"649_780f6c0f"
         "650_ac9781d4" # gz/stage.04_metro01_a.gz
         #"651_e9757ff7"
+        "652_b8b90462" # gz/stage.05_boss02_boss.gz
         #"653_4516e70a"
         #"655_f3aac06d"
+        "656_cf772913" # gz/stage.06_bay01_a.gz
         #"657_20e3e63d"
         #"659_15659caa"
+        "660_e103be7c" # gz/stage.07_bay02_a.gz
         #"661_aaa8edb2"
         #"663_47c63baf"
+        "664_83163f44" # gz/stage.08_park01_a.gz
         #"665_8468b140"
+        "666_187b3c66" # gz/stage.09_stadium_a.gz
         #"667_25e6d796"
+        "668_1566b0a1" # gz/stage.10_boss03_fly.gz
         #"669_8e73be1d"
         #"671_d0473e6c"
+        "672_44d1c934" # gz/stage.11_hangar01_a.gz
         #"673_21262baa"
+        "674_c29edbdd" # gz/stage.12_hangar02_a.gz
         #"675_e781ab51"
+        "676_1530b183" # gz/stage.13_boss04_gori02.gz
         #"677_8ed5ded3"
         #"679_5fd46f14"
-        #"681_db175d62"
-        #"683_9ce158f2"
+        "681_db175d62" # gz/stage.14_elevator_a.gz
+        "683_9ce158f2" # gz/stage.15_kakeru_spector.gz
         #"685_ad4e55a8"
         #"687_89e08f98"
         #"689_71a9e042"
@@ -504,7 +513,7 @@
             echo "${resourceFilesStr}" | \
               # HACK: running a bunch of these in parallel seems to cause crashes
               # (out of memory?)
-              xargs -P ${"1"} -I {} bash -c '
+              xargs -P ${"8"} -I {} bash -c '
                 echo "Analyzing resource {}"
                 imhex --pl format --verbose --metadata \
                   --includes "$src/includes/" \
@@ -513,6 +522,9 @@
                   --output "$out/analysis/{}.json"
               '
           '';
+
+          dontFixup = true;
+
         };
         data-textures-extracted = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -536,8 +548,37 @@
           '';
 
           installPhase = ''
-            chmod 777 -R $out
+            chmod 755 -R $out
           '';
+
+          dontFixup = true;
+
+        };
+        data-fonts-extracted = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-data-fonts-extracted";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            self.packages.${system}.ssmm-patcher
+          ];
+
+          buildPhase = ''
+            echo "${resourceFilesStr}" | \
+              xargs -P ${processes} -I {} bash -c '
+                ssmm-patcher dump-fonts \
+                  -i "${self.packages.${system}.data-imhex-analysis}/analysis/{}.json" \
+                  -o "$out/{}"
+              '
+          '';
+
+          installPhase = ''
+            chmod 755 -R $out
+          '';
+
+          dontFixup = true;
 
         };
         data-strings-extracted = with import nixpkgs { inherit system; };

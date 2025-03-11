@@ -904,6 +904,8 @@ def dump_strings(imhex_json, hash, output_path):
 @cli.command()
 @click.option(
     "-i", "--imhex-json",
+    default=None,
+    show_default=True,
     type=click.Path(),
 )
 @click.option(
@@ -913,18 +915,26 @@ def dump_strings(imhex_json, hash, output_path):
     type=click.Path(),
 )
 @click.option(
-    "-d", "--dump-textures",
-    default=False,
+    "-o", "--output-path",
+    default=None,
     show_default=True,
-    is_flag=True,
-    type=bool,
+    type=click.Path(),
 )
 @click.pass_context
-def dump_fonts(ctx, dump_textures, imhex_json, textures_path):
+def dump_fonts(ctx, imhex_json, textures_path, output_path):
     font_exts = [".gf0", ".gf1"]
+    imhex_json = Path(imhex_json)
+    if not output_path and textures_path:
+        output_path = textures_path
+    elif not textures_path and output_path:
+        textures_path = output_path
+    else:
+        output_path = Path(os.getcwd()) / imhex_json.name
+        textures_path = output_path
+    output_path = Path(output_path)
     textures_path = Path(textures_path)
 
-    if dump_textures:
+    if imhex_json:
         ctx.invoke(
             dump_textures,
             imhex_json=imhex_json,
@@ -932,6 +942,8 @@ def dump_fonts(ctx, dump_textures, imhex_json, textures_path):
             include_exts=font_exts,
             exclude_exts=[]
         )
+    else:
+        textures_path = Path(textures_path)
 
 
     for root, _, _ in textures_path.walk():
@@ -949,7 +961,7 @@ def dump_fonts(ctx, dump_textures, imhex_json, textures_path):
             except KeyError:
                 click.echo(f"Warning: no token precomputed for index {font_idx}")
                 token = "????"
-            _out_dir = root.with_suffix(".gf")
+            _out_dir = output_path / (root.with_suffix(".gf").name)
             _out_dir.mkdir(parents=True, exist_ok=True)
             _out_path = _out_dir / f"{font_idx:04d}_{token}.png"
             click.echo(f"Found texture file {img}, copying to {_out_path}")
