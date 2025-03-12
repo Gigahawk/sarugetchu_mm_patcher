@@ -32,6 +32,7 @@ from sarugetchu_mm_patcher.index import (
 )
 from sarugetchu_mm_patcher.encoding import (
     EncodingTranslator,
+    ENCODING_MAP,
     BYTES_TO_CHAR_MINIMAL, BYTES_TO_CHAR_DEFAULT, BYTES_TO_CHAR_SPECIAL,
     token_to_idx,
     idx_to_token
@@ -846,7 +847,9 @@ def dump_strings(imhex_json, hash, output_path):
     imhex_json = Path(imhex_json)
     if output_path is None:
         output_path = Path(os.getcwd()) / imhex_json.name
-    output_path = Path(output_path).with_suffix(".strings.csv")
+    output_path = Path(output_path)
+    csv_path = output_path.with_suffix(".strings.csv")
+    yaml_path = output_path.with_suffix(".strings.yaml")
     if hash is None:
         hash = _guess_hash(imhex_json)
     data = _parse_imhex_json(imhex_json)
@@ -857,10 +860,11 @@ def dump_strings(imhex_json, hash, output_path):
         click.echo(f"Warning: No encoding map defined for {hash}, falling back to default encoding")
         translator = EncodingTranslator(encoding=BYTES_TO_CHAR_DEFAULT)
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, "w") as f:
+    manifest = defaultdict(list)
+    with open(csv_path, "w") as f:
         for string in strings:
             addr = hex(int(string["__address"]))
-            str_id = hex(string["id"])
+            str_id = string["id"].to_bytes(4, "little").hex()
             string_raw = bytes(string["string"]).strip(b'\x00')
             alloc_len = string["str_len"]
             actual_len = len(string_raw)
@@ -896,10 +900,16 @@ def dump_strings(imhex_json, hash, output_path):
                 f.write("\n")
                 f.write(full_str)
                 f.write("\n")
+
+                manifest[full_str].append(str_id)
             except ValueError:
                 f.write("STRING CONTAINS INVALID TOKENS\n")
                 f.write(f'"{string_raw.hex(" ")}"\n')
                 f.write(f'"{string_raw}"\n')
+    with open(yaml_path, "w") as f:
+        f.write(
+            yaml.dump(manifest, allow_unicode=True, default_style='"')
+        )
 
 @cli.command()
 @click.option(
@@ -1036,6 +1046,73 @@ def patch_font(font_src_path, resource_path, output_path):
         resource_bytes = target_ex.data
     with open(output_path, "wb") as f:
         f.write(resource_bytes)
+
+def _parse_font_imgs(font_path: Path) -> dict[bytes, Image]:
+    font_imgs = {}
+    for img in font_path.glob("*.png"):
+        _, token = img.stem.split("_")
+        try:
+            token = int(token, 16).to_bytes(2)
+        except ValueError:
+            click.echo(f"Not opening file with malformed token {img}")
+            continue
+
+        img_pil = Image.open(img)
+
+        # Crop image to be square
+        width = min(img_pil.width, img_pil.height)
+        img_pil = img_pil.crop((0, 0, width, width))
+        font_imgs[token] = img_pil
+    return font_imgs
+
+def _token_repr(token: bytes):
+    return f'{"".join([f"\\x{t.upper()}" for t in token.hex(sep=" ").split()])}'
+
+@cli.command()
+@click.option(
+    "-h", "--src-hash",
+    default="00940549",
+    type=str,
+)
+@click.argument(
+    "font_src_path",
+    type=click.Path(),
+)
+@click.argument(
+    "font_new_path",
+    type=click.Path(),
+)
+def match_font(src_hash, font_src_path, font_new_path):
+    font_src_map = ENCODING_MAP[src_hash.upper()]
+    font_src_path = Path(font_src_path)
+    font_new_path = Path(font_new_path)
+
+    font_src_imgs = _parse_font_imgs(font_src_path)
+    font_new_imgs = _parse_font_imgs(font_new_path)
+
+    font_new_map = {}
+    for new_token, new_img in font_new_imgs.items():
+        for src_token, src_img in font_src_imgs.items():
+            if new_img == src_img:
+                click.echo(
+                    f"New token {_token_repr(new_token)} maps "
+                    f"to source token {_token_repr(src_token)} "
+                    f"({font_src_map[src_token]})"
+                )
+                font_new_map[new_token] = font_src_map[src_token]
+                break
+        else:
+            click.echo(f"Warning: no match found for new token {new_token}")
+
+    out = f"BYTES_TO_CHAR_{font_new_path.stem.upper()}"
+    out += " = {\n    **BYTES_TO_CHAR_SPECIAL,\n\n"
+    for token, char in font_new_map.items():
+        token = _token_repr(token)
+        out += f'    b"{token}": "{char}",\n'
+    out += "}"
+    click.echo(out)
+
+
 
 
 if __name__ == "__main__":

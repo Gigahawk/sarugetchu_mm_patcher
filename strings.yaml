@@ -273,8 +273,24 @@
   english: " 11:58PM"
 "ホバリングメカを撃破<げきは>せよ!➝\n\f装甲<そうこう>を破壊<はかい>し動<うご>きを止<と>めてください。➝\n\f4基<き>の動力部<どうりょくぶ>は浮<う>くためだけの\n装置<そうち>ではないようですので十分注意<じゅうぶんちゅうい>してください。":
   english: "Destroy the floating mech!➝\n\fDestroy its armor to disable it.➝\n\fBe careful,the 4 thrusters appear\nto be for more than just floating"
-
-
+## Container Terminal
+"コンテナターミナル":
+  # Full name doesn't fit on Mission Select screen
+  #english: "Container Terminal"
+  #english: "Container Term"
+  #english: "Container Trmnl"
+  english:
+    "c259c730": "Container1Terminal"
+    "cb5bc830": "Container2Terminal"
+    "afba6472": "Container Trmnl"
+    "b8bc6572": "Container4Terminal"
+    "7890a4da": "Container Terminal"
+"新<あら>たにサル軍<ぐん>の拠点<きょてん>を発見<はっけん>しました! 他<ほか>にルートはなく、ここを突破<とっぱ>しないと目標<もくひょう>のサル軍基地<ぐんきち>に行<い>くことは出来<でき>ません。 十分注意<じゅうぶんちゅうい>しながら前進<ぜんしん>し、サル軍基地<ぐんきち>へ向<む>かってください。":
+  english: "A new monkey base has been discovered! There's no way to get to it unless you break through here. Proceed with caution."
+"コンテナターミナル AM05:08":
+  english: "Container Terminal\n05:08AM"
+" AM05:08":
+  english: " 05:08AM"
 
 # Mission complete screen
 "ミッション":
@@ -1289,10 +1305,6 @@ Gクラッシャー:
   english: "EN"
 
 # Level names?
-"コンテナターミナル":
-  # Full name doesn't fit on File Select screen
-  #english: "Container Terminal"
-  english: "Container Term"
 "ピポサル帝国編":
   english: "Piposaru Empire Ed."
 
