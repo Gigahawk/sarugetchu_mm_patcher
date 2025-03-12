@@ -166,7 +166,8 @@ There is currently a demuxer written python under `mux.py` but it is unbearably 
 4. `03_city02_a`
 5. Cutscene: `ST01`
 6. `04_metro01_a`
-
+7. `05_boss02_boss`
+8. `06_bay01_a`
 
 
 
