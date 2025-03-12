@@ -534,6 +534,7 @@
               '
           '';
 
+          dontInstall = true;
           dontFixup = true;
 
         };
@@ -605,7 +606,9 @@
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
-              xargs -P ${processes} -I {} bash -c '
+              # HACK: running a bunch of these in parallel seems to cause crashes
+              # (out of memory?)
+              xargs -P ${"8"} -I {} bash -c '
                 echo "Dumping strings from {}"
                 ssmm-patcher dump-strings \
                   -o "$out/{}" \
