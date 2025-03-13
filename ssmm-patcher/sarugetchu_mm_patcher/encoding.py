@@ -2719,7 +2719,7 @@ BYTES_TO_CHAR_VS_PAUSE = {
     b"\x88\xF4": "。",
     b"\x88\xF5": "フ",
     b"\x88\xF6": "??", # TODO: this is Center dot
-    b"\x88\xF7": "1", # TODO: is this l or I?
+    b"\x88\xF7": "I",
     b"\x88\xF8": "N",
     b"\x88\xF9": "A",
     b"\x88\xFA": "X",
@@ -2830,7 +2830,7 @@ BYTES_TO_CHAR_TOKYO_TELEPORT = {
     b"\x88\xFB": "フ",
     b"\x88\xFC": "??", # TODO: center dot
 
-    b"\x89\x40": "1", # TODO: is this 1 or I?
+    b"\x89\x40": "I",
     b"\x89\x41": "N",
     b"\x89\x42": "A",
     b"\x89\x43": "X",
@@ -2949,7 +2949,7 @@ BYTES_TO_CHAR_SHINJUKU = {
     b"\x89\x47": "フ",
     b"\x89\x48": "??", # TODO: center dot
 
-    b"\x89\x49": "1", # TODO: is this 1 or I?
+    b"\x89\x49": "I",
     b"\x89\x4A": "N",
     b"\x89\x4B": "A",
     b"\x89\x4C": "X",
@@ -3068,7 +3068,7 @@ BYTES_TO_CHAR_AKIHABARA = {
     b"\x89\x49": "フ",
     b"\x89\x4A": "??", # TODO: center dot
 
-    b"\x89\x4B": "1", # TODO: is this 1 or I?
+    b"\x89\x4B": "I",
     b"\x89\x4C": "N",
     b"\x89\x4D": "A",
     b"\x89\x4E": "X",
@@ -3179,7 +3179,7 @@ BYTES_TO_CHAR_METRO = {
     b"\x89\x41": "フ",
     b"\x89\x42": "??", # TODO: center dot
 
-    b"\x89\x43": "1", # TODO: is this 1 or I?
+    b"\x89\x43": "I",
     b"\x89\x44": "N",
     b"\x89\x45": "A",
     b"\x89\x46": "X",
@@ -3289,7 +3289,7 @@ BYTES_TO_CHAR_TOKYO = {
     b"\x89\x40": "フ",
     b"\x89\x41": "??", # TODO: center dot
 
-    b"\x89\x42": "1", # TODO: is this 1 or I?
+    b"\x89\x42": "I",
     b"\x89\x43": "N",
     b"\x89\x44": "A",
     b"\x89\x45": "X",
@@ -3400,7 +3400,7 @@ BYTES_TO_CHAR_TOKYO = {
     b"\x89\x40": "フ",
     b"\x89\x41": "??", # TODO: center dot
 
-    b"\x89\x42": "1", # TODO: is this 1 or I?
+    b"\x89\x42": "I",
     b"\x89\x43": "N",
     b"\x89\x44": "A",
     b"\x89\x45": "X",
@@ -3514,7 +3514,7 @@ BYTES_TO_CHAR_CONTAINER_TERMINAL = {
     b"\x89\x43": "。",
     b"\x89\x44": "フ",
     b"\x89\x45": "⋅",
-    b"\x89\x46": "1",
+    b"\x89\x46": "I",
     b"\x89\x47": "N",
     b"\x89\x48": "X",
     b"\x89\x49": "音",
@@ -3633,7 +3633,7 @@ BYTES_TO_CHAR_07_BAY02_A = {
     b"\x89\x4C": "。",
     b"\x89\x4D": "フ",
     b"\x89\x4E": "⋅",
-    b"\x89\x4F": "1",
+    b"\x89\x4F": "I",
     b"\x89\x50": "N",
     b"\x89\x51": "X",
     b"\x89\x52": "音",
@@ -3743,7 +3743,7 @@ BYTES_TO_CHAR_08_PARK01_A = {
     b"\x89\x42": "。",
     b"\x89\x43": "フ",
     b"\x89\x44": "⋅",
-    b"\x89\x45": "1",
+    b"\x89\x45": "I",
     b"\x89\x46": "N",
     b"\x89\x47": "A",
     b"\x89\x48": "X",
@@ -3853,7 +3853,7 @@ BYTES_TO_CHAR_09_STADIUM_A = {
     b"\x89\x41": "。",
     b"\x89\x42": "フ",
     b"\x89\x43": "⋅",
-    b"\x89\x44": "1",
+    b"\x89\x44": "I",
     b"\x89\x45": "N",
     b"\x89\x46": "A",
     b"\x89\x47": "X",
@@ -3959,7 +3959,7 @@ BYTES_TO_CHAR_10_BOSS03_FLY = {
     b"\x88\xF9": "。",
     b"\x88\xFA": "フ",
     b"\x88\xFB": "⋅",
-    b"\x88\xFC": "1",
+    b"\x88\xFC": "I",
     b"\x89\x40": "N",
     b"\x89\x41": "A",
     b"\x89\x42": "X",
@@ -4066,7 +4066,7 @@ BYTES_TO_CHAR_11_HANGAR01_A = {
     b"\x88\xFB": "。",
     b"\x88\xFC": "フ",
     b"\x89\x40": "⋅",
-    b"\x89\x41": "1",
+    b"\x89\x41": "I",
     b"\x89\x42": "N",
     b"\x89\x43": "X",
     b"\x89\x44": "音",
@@ -4177,7 +4177,7 @@ BYTES_TO_CHAR_12_HANGAR02_A = {
     b"\x89\x42": "。",
     b"\x89\x43": "フ",
     b"\x89\x44": "⋅",
-    b"\x89\x45": "1",
+    b"\x89\x45": "I",
     b"\x89\x46": "N",
     b"\x89\x47": "X",
     b"\x89\x48": "音",
@@ -4289,7 +4289,7 @@ BYTES_TO_CHAR_13_BOSS04_GORI02 = {
     b"\x89\x43": "。",
     b"\x89\x44": "フ",
     b"\x89\x45": "⋅",
-    b"\x89\x46": "1",
+    b"\x89\x46": "I",
     b"\x89\x47": "N",
     b"\x89\x48": "X",
     b"\x89\x49": "音",
@@ -4406,7 +4406,7 @@ BYTES_TO_CHAR_14_ELEVATOR_A = {
     b"\x89\x41": "。",
     b"\x89\x42": "フ",
     b"\x89\x43": "⋅",
-    b"\x89\x44": "1",
+    b"\x89\x44": "I",
     b"\x89\x45": "N",
     b"\x89\x46": "A",
     b"\x89\x47": "X",
@@ -4513,7 +4513,7 @@ BYTES_TO_CHAR_15_KAKERU_SPECTOR = {
     b"\x88\xFA": "。",
     b"\x88\xFB": "フ",
     b"\x88\xFC": "⋅",
-    b"\x89\x40": "1",
+    b"\x89\x40": "I",
     b"\x89\x41": "N",
     b"\x89\x42": "A",
     b"\x89\x43": "X",

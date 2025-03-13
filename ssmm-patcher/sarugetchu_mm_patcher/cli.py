@@ -1094,12 +1094,15 @@ def match_font(src_hash, font_src_path, font_new_path):
     for new_token, new_img in font_new_imgs.items():
         for src_token, src_img in font_src_imgs.items():
             if new_img == src_img:
+                char = font_src_map[src_token]
                 click.echo(
                     f"New token {_token_repr(new_token)} maps "
                     f"to source token {_token_repr(src_token)} "
-                    f"({font_src_map[src_token]})"
+                    f"({char})"
                 )
-                font_new_map[new_token] = font_src_map[src_token]
+                if char in ["I", "1"]:
+                    click.echo("WARNING: 'I' and '1' are not distinguishable by texture")
+                font_new_map[new_token] = char
                 break
         else:
             click.echo(f"Warning: no match found for new token {new_token}")
