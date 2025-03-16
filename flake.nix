@@ -29,7 +29,6 @@
     let
       pkgs = import nixpkgs { inherit system; };
       pkgs-clps2c = import nixpkgs-clps2c { inherit system; };
-      processes = "32";
       mm-jp-iso = (pkgs.requireFile {
         name = "mm.iso";
         url = "";
@@ -42,7 +41,7 @@
       });
       cutscenes-demuxed-buildPhase = iso-extracted: ''
         find ${iso-extracted} -name '*.PSS' -type f | \
-          xargs -P ${processes} -I {} bash -c '
+          xargs -P $NIX_BUILD_CORES -I {} bash -c '
             input="{}"
             output="''${input#${iso-extracted}/extracted/}"
             mkdir -p $(dirname "$output")
@@ -52,7 +51,7 @@
       '';
       cutscenes-mp4-buildPhase = cutscenes-demuxed: ''
         find ${cutscenes-demuxed} -name '*.m2v' -type f | \
-          xargs -P ${processes} -I {} bash -c '
+          xargs -P $NIX_BUILD_CORES -I {} bash -c '
             m2v="{}"
             base_name="''${m2v%.m2v}"
             ss2="''${base_name}.ss2"
@@ -74,7 +73,7 @@
 
         # All files in DATA1 are gzip files
         find PDATA/DATA1 -type f | \
-          xargs -P ${processes} -I {} mv "{}" "{}.gz"
+          xargs -P $NIX_BUILD_CORES -I {} mv "{}" "{}.gz"
         wait
 
         ssmm-patcher unpack-data \
@@ -86,7 +85,7 @@
         mkdir -p DATA1
         # All files in DATA1 are gzip files
         find ${data-unpacked}/DATA1 -type f | \
-          xargs -P ${processes} -I {} bash -c '
+          xargs -P $NIX_BUILD_CORES -I {} bash -c '
             input="{}"
             base_name="''${input#${data-unpacked}/DATA1/}"
             if [[ "$(dirname $base_name)" != "." ]]; then
@@ -99,7 +98,7 @@
       '';
       data-unpacked-named-installPhase = data-unpacked: ''
         find ${data-unpacked}/DATA1 -type f | \
-          xargs -P ${processes} -I {} bash -c '
+          xargs -P $NIX_BUILD_CORES -I {} bash -c '
             input="{}"
             base_name=$(basename "$input")
             hash="''${base_name#*_}"
@@ -113,7 +112,7 @@
           '
         wait
         find ${data-unpacked}/DATA3 -type f | \
-          xargs -P ${processes} -I {} bash -c '
+          xargs -P $NIX_BUILD_CORES -I {} bash -c '
             input="{}"
             base_name=$(basename "$input")
             hash="''${base_name#*_}"
@@ -298,7 +297,7 @@
 
           installPhase = ''
             find . -type f | \
-              xargs -P ${processes} -I {} install -Dm 755 "{}" "$out/extracted/{}"
+              xargs -P $NIX_BUILD_CORES -I {} install -Dm 755 "{}" "$out/extracted/{}"
             wait
           '';
 
@@ -328,7 +327,7 @@
           installPhase = ''
             find . \
               \( -name '*.m2v' -o -name '*.ss2' \) | \
-                xargs -P ${processes} -I {} install -Dm 755 "{}" "$out/demuxed/{}"
+                xargs -P $NIX_BUILD_CORES -I {} install -Dm 755 "{}" "$out/demuxed/{}"
             wait
           '';
         };
@@ -351,7 +350,7 @@
 
           installPhase = ''
             find . -name '*.mp4' | \
-              xargs -P ${processes} -I {} install -Dm 755 "{}" "$out/mp4/{}"
+              xargs -P $NIX_BUILD_CORES -I {} install -Dm 755 "{}" "$out/mp4/{}"
             wait
           '';
         };
@@ -379,7 +378,7 @@
             export FONTCONFIG_FILE=${fontconfig_file}
 
             find $src -type f -name '*.json' | \
-              xargs -P ${processes} -I {} bash -c '
+              xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 meta_file="{}"
                 subs_file="$(dirname $meta_file)/$(jq -r '.file' $meta_file)"
                 bitrate="$(jq -r '.bitrate' $meta_file)"
@@ -418,7 +417,7 @@
 
           installPhase = ''
             find . -name '*-sub.PSS' | \
-              xargs -P ${processes} \
+              xargs -P $NIX_BUILD_CORES \
                 -I {} install -Dm 755 "{}" "$out/remuxed/{}"
             wait
           '';
@@ -522,9 +521,7 @@
           buildPhase = ''
             mkdir -p $out/analysis
             echo "${resourceFilesStr}" | \
-              # HACK: running a bunch of these in parallel seems to cause crashes
-              # (out of memory?)
-              xargs -P ${"8"} -I {} bash -c '
+              xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 echo "Analyzing resource {}"
                 imhex --pl format --verbose --metadata \
                   --includes "$src/includes/" \
@@ -551,7 +548,7 @@
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
-              xargs -P ${processes} -I {} bash -c '
+              xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 echo "Dumping textures from {}"
                 ssmm-patcher dump-textures \
                   -o "$out/{}" \
@@ -579,7 +576,7 @@
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
-              xargs -P ${processes} -I {} bash -c '
+              xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 ssmm-patcher dump-fonts \
                   -i "${self.packages.${system}.data-imhex-analysis}/analysis/{}.json" \
                   -o "$out/{}"
@@ -606,9 +603,7 @@
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
-              # HACK: running a bunch of these in parallel seems to cause crashes
-              # (out of memory?)
-              xargs -P ${"8"} -I {} bash -c '
+              xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 echo "Dumping strings from {}"
                 ssmm-patcher dump-strings \
                   -o "$out/{}" \
@@ -638,9 +633,7 @@
 
 
             find "$textures_path" -name 'texture.aseprite' -type f | \
-              # HACK: running a bunch of these in parallel seems to cause crashes
-              # (out of memory?)
-              xargs -P ${"1"} -I {} bash -c '
+              xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 echo "Analyzing texture {}"
                 fullpath="{}"
                 relpath=''${fullpath#"$textures_path"}
@@ -678,7 +671,7 @@
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
-              xargs -P ${processes} -I {} bash -c '
+              xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 name="{}"
                 ssmm-patcher patch-font \
                   -o "{}" \
@@ -695,7 +688,7 @@
 
           installPhase = ''
             find . -name '*_patched' -type f | \
-              xargs -P ${processes} \
+              xargs -P $NIX_BUILD_CORES \
                 -I {} install -Dm 755 "{}" "$out/DATA1_patched/{}"
             wait
           '';
@@ -709,14 +702,14 @@
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
-              xargs -P ${processes} -I {} bash -c '
+              xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 gzip -9 -c "${self.packages.${system}.data-patched}/DATA1_patched/{}_patched" > "{}_patched.gz"
               '
           '';
 
           installPhase = ''
             find . -name '*_patched.gz' -type f | \
-              xargs -P ${processes} \
+              xargs -P $NIX_BUILD_CORES \
                 -I {} install -Dm 755 "{}" "$out/DATA1_patched/{}"
             wait
           '';
@@ -750,7 +743,7 @@
 
           installPhase = ''
             find . -name '*.BIN' -type f | \
-              xargs -P ${processes} \
+              xargs -P $NIX_BUILD_CORES \
                 -I {} install -Dm 755 "{}" "$out/PDATA/{}"
             wait
           '';
