@@ -516,12 +516,25 @@
 
           nativeBuildInputs = [
             pkgs.imhex
+            # Needed to check free memory
+            pkgs.procps
           ];
 
           buildPhase = ''
             mkdir -p $out/analysis
+            # Hack: this is a memory intensive process, and will fail if not
+            # enough free memory is allocated to each process
+            free_mem=$(free --mega | awk '/Mem:/ {print $4}')
+            max_procs=$(($free_mem / 1536))
+            if [[ "$max_procs" -gt "$NIX_BUILD_CORES" ]]; then
+              max_procs="$NIX_BUILD_CORES"
+            fi
+            if [[ "$max_procs" -lt "1" ]]; then
+              max_procs="1"
+            fi
+            echo "Generating $max_procs imhex outputs in parallel"
             echo "${resourceFilesStr}" | \
-              xargs -P $NIX_BUILD_CORES -I {} bash -c '
+              xargs -P $max_procs -I {} bash -c '
                 echo "Analyzing resource {}"
                 imhex --pl format --verbose --metadata \
                   --includes "$src/includes/" \
