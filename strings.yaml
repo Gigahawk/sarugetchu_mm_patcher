@@ -228,7 +228,7 @@
 " PM02:16":
   "english": " 02:16PM"
 "新宿駅<しんじゅくえき>でピポサル軍一個小隊<ぐんいっこしょうたい>が展開中<てんかいちゅう>との情報<じょうほう>をキャッチしました! 直<ただ>ちに現場<げんば>に急行<きゅうこう>してください!!":
-  "english": "We have received intel that a platoon of Piposaru troops is currently deployed at Shinjuku Station! Please rush to the scene immediately!!"
+  "english": "We have received intel that a platoon of Piposaru troops is currently deployed at Shinjuku Station!Please rush to the scene immediately!!"
 "ターゲットをすべて倒<たお>せ!➝\n\fTARGETマークのついたサル兵<へい>を\nすべて倒<たお>してください。":
   "english": "Defeat all targets!➝\n\fDefeat all monkey soldiers with\nTARGET marks."
 ## Akihabara
@@ -242,18 +242,18 @@
   "english": " 04:01PM"
 #"秋葉原中央通<あきはばらちゅうおうどお>り地下<ちか>にサル軍基地<ぐんきち>を発見<はっけん>しました! そこにサル軍輸送部隊<ぐんゆそうぶたい>が向<む>かっています。トレーラーで巨大兵器<きょだいへいき>を運<はこ>び込<こ>もうとしているようです。 搬入<はんにゅう>を阻止<そし>してください!":
 "秋葉原中央通<あきはばらちゅうおうどお>り地下<ちか>にサル軍基地<ぐんきち>を発見<はっけん>しました! そこにサル軍輸送部隊<ぐんゆそうぶたい>が向<む>かっています。 トレーラーで巨大兵器<きょだいへいき>を運<はこ>び込<こ>もうとしているようです。 搬入<はんにゅう>を阻止<そし>してください!":
-  "english": "We've discovered an underground monkey army base below Akihabara Chuo Dori! A monkey army transport unit is on its way there. It looks like they're transporting large weapons in a trailer. Please stop them!"
+  "english": "We've discovered an underground monkey army base below Akihabara Chuo Dori!A monkey army transport unit is on its way there.It looks like they're transporting large weapons in a trailer.Please stop them!"
 "輸送<ゆそう>トレーラーを撃破<げきは>せよ!➝\n\fサル軍基地内<ぐんきちない>に運<はこ>び込<こ>まれる前<まえ>に\n動力部<どうりょくぶ>を探<さが>し破壊<はかい>してください。➝\n\f多数<たすう>の小型<こがた>レーザー砲<ほう>が設置<せっち>されています。\n小型<こがた>レーザー砲<ほう>の射撃<しゃげき>には十分注意<じゅうぶんちゅうい>してください。":
-  english: "Destroy the transport trailer!➝\n\fFind and destroy the power unit\nbefore it's transported into the\nmonkey base.➝\n\fBe careful, the trailer is\nprotected by many laser cannons."
+  english: "Destroy the transport trailer!➝\n\fFind and destroy the power unit\nbefore it's transported into the\nmonkey base.➝\n\fBe careful,the trailer is\nprotected by many laser cannons."
 "エンジン破壊! 残り3基です!":
-  english: "Engine destroyed! 3 engines remain!"
+  english: "Engine destroyed!3 engines remain!"
 "エンジン破壊! 残り2基です!":
-  english: "Engine destroyed! 2 engines remain!"
+  english: "Engine destroyed!2 engines remain!"
 "エンジン破壊! 残り1基です!":
-  english: "Engine destroyed! 1 engine remains!"
+  english: "Engine destroyed!1 engine remains!"
 ## Metro/Kawasaki
 "川崎方面<かわさきほうめん>にサル軍基地<ぐんきち>が建設中<けんせつちゅう>との情報<じょうほう>が入<はい>りました。 東京<とうきょう>、品川経由<しながわけいゆ>で川崎方面<かわさきほうめん>に向<む>かいます。 ただし、秋葉原<あきはばら>、東京間<とうきょうかん>の地上<ちじょう>ルートは、すでに多数<たすう>のサル達<たち>に占領<せんりょう>されており、危険<きけん>なので、地下<ちか>ルートを通<とお>って東京駅<とうきょうえき>を目指<めざ>してください。":
-  english: "We've received information that a monkey army base is under construction in the Kawasaki area. Head there via Tokyo and Shinagawa. However, since a large group of monkeys has occupied the aboveground route between Akihabara and Tokyo, please take the the underground route to Tokyo Station."
+  english: "We've received information that a monkey army base is under construction in the Kawasaki area.Head there via Tokyo and Shinagawa.However,since a large group of monkeys has occupied the aboveground route between Akihabara and Tokyo,please take the the underground route to Tokyo Station."
 "メトロ AM08:13":
   english: "Metro\n08:13AM"
 "メトロ PM06:32":
@@ -266,7 +266,7 @@
 "東京":
   english: "Tokyo"
 "引<ひ>き続<つづ>き、川崎方面<かわさきほうめん>の建設中基地<けんせつちゅうきち>を目指<めざ>してください。 東京駅<とうきょうえき>から地上<ちじょう>に出<で>て、そこからは地上<ちじょう>ルートで川崎<かわさき>を目指<めざ>します。 なお、東京駅付近<とうきょうえきふきん>に大型<おおがた>メカ潜伏<せんぷく>の情報<じょうほう>が入<はい>っています! 注意<ちゅうい>してください!!":
-  english: "Continue heading towards the base in the Kawasaki area. Leave Tokyo Station and head towards Kawasaki by ground. Also, we have received intel that a large mecha is hiding near Tokyo Station! Please be careful!!"
+  english: "Continue heading towards the base in the Kawasaki area.Leave Tokyo Station and head towards Kawasaki by ground.Also,we have received intel that a large mecha is hiding near Tokyo Station!Please be careful!!"
 "東京 PM11:58":
   english: "Tokyo\n11:58PM"
 " PM11:58":
@@ -286,11 +286,36 @@
     "b8bc6572": "Container4Terminal"
     "7890a4da": "Container Terminal"
 "新<あら>たにサル軍<ぐん>の拠点<きょてん>を発見<はっけん>しました! 他<ほか>にルートはなく、ここを突破<とっぱ>しないと目標<もくひょう>のサル軍基地<ぐんきち>に行<い>くことは出来<でき>ません。 十分注意<じゅうぶんちゅうい>しながら前進<ぜんしん>し、サル軍基地<ぐんきち>へ向<む>かってください。":
-  english: "A new monkey base has been discovered! There's no way to get to it unless you break through here. Proceed with caution."
+  english: "A new monkey base has been discovered!There's no way to get to it unless you break through here.Proceed with caution."
 "コンテナターミナル AM05:08":
   english: "Container Terminal\n05:08AM"
 " AM05:08":
   english: " 05:08AM"
+## Industrial Complex
+"コンビナート":
+  english:
+    "465bc730": "Industrial1Complex"
+    "5039c830": "Industrial2Complex"
+    "33bc6472": "Industrial Cmplx"
+    "3d9a6572": "Industrial4Complex"
+    "7890a4da": "Industrial Complex"
+"建設中<けんせつちゅう>サル軍基地<ぐんきち>に到着<とうちゃく>しました。 衛星<えいせい>が高<こう>エネルギー反応<はんのう>をキャッチしています。 レーザー砲台<ほうだい>が設置<せっち>されている情報<じょうほう>に間違<まちが>いはないようです。 エネルギー供給炉<きょうきゅうろ>を遮断<しゃだん>して、基地<きち>のセキュリティシステムを停止<ていし>させ、レーザー砲発射前<ほうはっしゃまえ>に砲台<ほうだい>を破壊<はかい>してください。":
+  english: "You've arrived at the monkey base.Satellite readings show a high energy signal coming from within the base,confirming earlier intel that the monkeys are building a laser cannon.Disable the base's reactor core and security system,then destroy the laser cannon before it can fire."
+"コンビナート AM08:19":
+  english: "Industrial Complex\n08:19AM"
+" AM08:19":
+  english: " 08:19AM"
+"衛星<えいせい>レーザーの発射<はっしゃ>を阻止<そし>せよ!➝\n\f基地内<きちない>の3基<き>の発射装置<はっしゃそうち>を破壊<はかい>すれば\nレーザー砲<ほう>の発射<はっしゃ>を阻止<そし>できますが\n強力<きょうりょく>な警備<けいび>システムに守<まも>られています。➝\n\f警備<けいび>のレベルは基地外<きちがい>のエネルギー供給炉<きょうきゅうろ>と\n直結<ちょっけつ>していますので破壊<はかい>し警備<けいび>のレベルを\nダウンさせてください。":
+  english: "Stop the satellite laser from\nfiring!➝\n\fDestroy the 3 orbs in the base\nshielded by the security system\nto stop the laser.➝\n\fThe security system connects to\nthe reactor outside,destroy it to\ndisable the security system."
+"スズキを発見しました!":
+  english: "Suzuki found!" # What does this mean?
+"セキュリティ 機銃停止!":
+  english: "Security:Guns disabled!"
+"セキュリティ バリア解除!":
+  english: "Security:Barrier disabled!"
+"セキュリティ スタンポッド停止!":
+  english: "Security:Stun pods disabled!"
+
 
 # Mission complete screen
 "ミッション":
@@ -524,7 +549,7 @@
 "ステージを選<えら>んでください。":
   english: Please select a stage.
 "エディットを終了<しゅうりょう>して、キャラクターセレクトに進<すす>みます。":
-  english: "Finish editing, proceed to Character Select."
+  english: "Finish editing,proceed to Character Select."
 "セットわく選択<せんたく>に戻<もど>ります。":
   english: "Return to round selection."
 "エントリー設定<せってい>に戻<もど>ります。":
@@ -551,7 +576,7 @@
 
 # VS. Mode character select screen descriptions
 "使用<しよう>するキャラクターを選<えら>んでください。 方向<ほうこう>キーの左右<さゆう>でチームを選<えら>ぶことができます。":
-  english: "Please select the character you want to use. You can select your team by pressing left or right on the D-Pad."
+  english: "Please select the character you want to use.You can select your team by pressing left or right on the D-Pad."
 "使用<しよう>するキャラクターを選<えら>んでください。":
   english: "Please select the character you want to use."
 
@@ -597,25 +622,25 @@
 "ディメンション\nブレイク":
   english: "Dimension\nBreak"
 "目<め>の前<まえ>に巨大<きょだい>なメカボーを振<ふ>り下<お>ろし、衝撃波<しょうげきは>で攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>に有効<ゆうこう>です。":
-  english: "Swing down a giant Mecha Bo in front of you creating a shock wave. Effective against close-range enemies."
+  english: "Swing down a giant Mecha Bo in front of you creating a shock wave.Effective against close-range enemies."
 "クラッシュハリケーン":
   english: "Crash Hurricane"
 "クラッシュ\nハリケーン":
   english: "Crash\nHrcn."
 "高速<こうそく>で回転<かいてん>し、近<ちか>くの敵<てき>を上空<じょうくう>にまきあげます。 空中<くうちゅう>の敵<てき>にも有効<ゆうこう>です。    ":
-  english: "Spin at high speed and launch nearby enemies into the air. Also effective against airborne enemies."
+  english: "Spin at high speed and launch nearby enemies into the air.Also effective against airborne enemies."
 "ソニックレボリューション":
   english: "Sonic Revolution"
 "ソニックR":
   english: "Sonic\nRev."
 "巨大<きょだい>なメカボーで回転儀<かいてんぎ>りを出<だ>しながら駆<か>け抜<ぬ>けます。 地上<ちじょう>の敵<てき>に有効<ゆうこう>です。":
-  english: "Spin a giant Mecha Bo as you dash around. Effective against enemies on the ground."
+  english: "Spin a giant Mecha Bo as you dash around.Effective against enemies on the ground."
 "サンダークラック":
   english: "Thunder Crack"
 "サンダー\nクラック":
   english: "Thunder\nCrack"
 "前方一直線<ぜんぽういっちょくせん>に稲妻<いなづま>が走<はし>ります。 敵<てき>が一直線<いっちょくせん>に並<なら>んだらこの技<わざ>で一掃<いっそう>しましょう。   ":
-  english: "Shoot a lightning bolt straight ahead. Effective against enemies standing in a straight line."
+  english: "Shoot a lightning bolt straight ahead.Effective against enemies standing in a straight line."
 ## Professor
 "プラズマ制御":
   english:
@@ -1085,7 +1110,7 @@ Gクラッシャー:
   #english: "Stun Club"  # Mech Bo/Mech Club?
   english: "MechBo"
 "近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 使用<しよう>にエネルギーを消費<しょうひ>しないのが特徴<とくちょう>です。":
-  english: "A gadget for melee attacks. It does not require energy to use."
+  english: "A gadget for melee attacks.It does not require energy to use."
 "メカハンマー":
   #english: "Stun Hammer"  # Mech Hammer?
   english: "MechHammr"
@@ -1143,7 +1168,7 @@ Gクラッシャー:
 "レーザーガン":
   english: "LaserGun"
 "遠<とお>くの敵<てき>を攻撃<こうげき>できる射撃<しゃげき>メカです。 攻撃力<こうげきりょく>は弱<よわ>いですが、弾数<たまかず>が多<おお>いのが特徴<とくちょう>です。":
-  english: "A shooting gadget that can attack from a distance. Its attack power is weak but it has a large number of bullets."
+  english: "A shooting gadget that can attack from a distance.Its attack power is weak but it has a large number of bullets."
 "マシンガン":
   english: "MchnGun"
 "ショットガン":
@@ -1171,7 +1196,7 @@ Gクラッシャー:
   # R.C. Car?
   english: "RCBomb"
 "体当<たいあ>たりで爆発<ばくはつ>するリモコンメカです。 ボタンでオート走行<そうこう>ですが、右<みぎ>スティックで自由<じゆう>に操作<そうさ>することもできます。":
-  english: "A remote controlled gadget that explodes when it rams into something. Pressing its button will automatically drive it towards a nearby target, or it can be controlled directly with the right stick."
+  english: "A remote controlled gadget that explodes when it rams into something.Pressing its button will automatically drive it towards a nearby target,or it can be controlled directly with the right stick."
 "キラービー":
   english: "KillerBee"
 "サテラレーザー":
@@ -1182,7 +1207,7 @@ Gクラッシャー:
 "ダッシュブーツ":
   english: "DashBoots"
 "高速<こうそく>で移動<いどう>するためのダッシュメカです。 体当<たいあ>たりで攻撃<こうげき>することもできます。 使<つか>いすぎるとオーバーヒートしやすいので注意<ちゅうい>しましょう。":
-  english: "A gadget for moving at high speed. It can also attack by ramming into enemies. Be careful, it can overheat if used too much."
+  english: "A gadget for moving at high speed.It can also attack by ramming into enemies.Be careful,it can overheat if used too much."
 "ダッシュブースター":
   english: "DashBstr"
 "ダッシュフープ":
@@ -1206,7 +1231,7 @@ Gクラッシャー:
 "ゲットアミ":
   english: "GetNet"
 "小型<こがた>の転送<てんそう>メカです。 これでピポサルをゲッチュすることができます。 攻撃力<こうげきりょく>はゼロなので注意<ちゅうい>しましょう。":
-  english: "A small teleportation gadget. You can use it to capture apes. Be careful, it has zero attack power."
+  english: "A small teleportation gadget.You can use it to capture apes.Be careful,it has zero attack power."
 # Misc.
 ### Pipotron G
 "スペシャルモード":

@@ -3522,7 +3522,7 @@ BYTES_TO_CHAR_CONTAINER_TERMINAL = {
     b"\x89\x4B": "お",
 }
 
-BYTES_TO_CHAR_07_BAY02_A = {
+BYTES_TO_CHAR_INDUSTRIAL_COMPLEX = {
     **BYTES_TO_CHAR_SPECIAL,
     b"\x88\x9F": "コ",
     b"\x88\xA0": "ン",
@@ -3580,7 +3580,7 @@ BYTES_TO_CHAR_07_BAY02_A = {
     b"\x88\xD4": "う",
     b"\x88\xD5": "メ",
     b"\x88\xD6": "ニ",
-    b"\x88\xD7": "??",
+    b"\x88\xD7": "オ",
     b"\x88\xD8": "プ",
     b"\x88\xD9": "シ",
     b"\x88\xDA": "ョ",
@@ -3687,7 +3687,7 @@ BYTES_TO_CHAR_08_PARK01_A = {
     b"\x88\xC7": "メ",
     b"\x88\xC8": "ニ",
     b"\x88\xC9": "ュ",
-    b"\x88\xCA": "??",
+    b"\x88\xCA": "オ",
     b"\x88\xCB": "プ",
     b"\x88\xCC": "シ",
     b"\x88\xCD": "ョ",
@@ -3798,7 +3798,7 @@ BYTES_TO_CHAR_09_STADIUM_A = {
     b"\x88\xC7": "メ",
     b"\x88\xC8": "ニ",
     b"\x88\xC9": "ュ",
-    b"\x88\xCA": "??",
+    b"\x88\xCA": "オ",
     b"\x88\xCB": "プ",
     b"\x88\xCC": "シ",
     b"\x88\xCD": "ョ",
@@ -3898,7 +3898,7 @@ BYTES_TO_CHAR_10_BOSS03_FLY = {
     b"\x88\xBC": "メ",
     b"\x88\xBD": "ニ",
     b"\x88\xBE": "ュ",
-    b"\x88\xBF": "??",
+    b"\x88\xBF": "オ",
     b"\x88\xC0": "プ",
     b"\x88\xC1": "シ",
     b"\x88\xC2": "ョ",
@@ -4004,7 +4004,7 @@ BYTES_TO_CHAR_11_HANGAR01_A = {
     b"\x88\xBD": "メ",
     b"\x88\xBE": "ニ",
     b"\x88\xBF": "ュ",
-    b"\x88\xC0": "??",
+    b"\x88\xC0": "オ",
     b"\x88\xC1": "プ",
     b"\x88\xC2": "シ",
     b"\x88\xC3": "ョ",
@@ -4113,7 +4113,7 @@ BYTES_TO_CHAR_12_HANGAR02_A = {
     b"\x88\xBF": "メ",
     b"\x88\xC0": "ニ",
     b"\x88\xC1": "ュ",
-    b"\x88\xC2": "??",
+    b"\x88\xC2": "オ",
     b"\x88\xC3": "プ",
     b"\x88\xC4": "シ",
     b"\x88\xC5": "ョ",
@@ -4226,7 +4226,7 @@ BYTES_TO_CHAR_13_BOSS04_GORI02 = {
     b"\x88\xC1": "メ",
     b"\x88\xC2": "ニ",
     b"\x88\xC3": "ュ",
-    b"\x88\xC4": "??",
+    b"\x88\xC4": "オ",
     b"\x88\xC5": "プ",
     b"\x88\xC6": "シ",
     b"\x88\xC7": "ョ",
@@ -4343,7 +4343,7 @@ BYTES_TO_CHAR_14_ELEVATOR_A = {
     b"\x88\xBF": "メ",
     b"\x88\xC0": "ニ",
     b"\x88\xC1": "ュ",
-    b"\x88\xC2": "??",
+    b"\x88\xC2": "オ",
     b"\x88\xC3": "プ",
     b"\x88\xC4": "シ",
     b"\x88\xC5": "ョ",
@@ -4453,7 +4453,7 @@ BYTES_TO_CHAR_15_KAKERU_SPECTOR = {
     b"\x88\xBE": "メ",
     b"\x88\xBF": "ニ",
     b"\x88\xC0": "ュ",
-    b"\x88\xC1": "??",
+    b"\x88\xC1": "オ",
     b"\x88\xC2": "プ",
     b"\x88\xC3": "シ",
     b"\x88\xC4": "ョ",
@@ -4657,7 +4657,7 @@ ENCODING_MAP = {
     "AC9781D4": BYTES_TO_CHAR_METRO,              # gz/stage.04_metro01_a.gz
     "B8B90462": BYTES_TO_CHAR_TOKYO,              # gz/stage.05_boss02_boss.gz
     "CF772913": BYTES_TO_CHAR_CONTAINER_TERMINAL, # gz/stage.06_bay01_a.gz
-    "E103BE7C": BYTES_TO_CHAR_07_BAY02_A,         # gz/stage.07_bay02_a.gz
+    "E103BE7C": BYTES_TO_CHAR_INDUSTRIAL_COMPLEX, # gz/stage.07_bay02_a.gz
     "83163F44": BYTES_TO_CHAR_08_PARK01_A,        # gz/stage.08_park01_a.gz
     "187B3C66": BYTES_TO_CHAR_09_STADIUM_A,       # gz/stage.09_stadium_a.gz
     "1566B0A1": BYTES_TO_CHAR_10_BOSS03_FLY,      # gz/stage.10_boss03_fly.gz
