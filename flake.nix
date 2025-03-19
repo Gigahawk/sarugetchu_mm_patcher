@@ -793,6 +793,36 @@
             true
           '';
         };
+        debug-patches = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-debug-patches";
+          inherit version;
+          src = ./debug-patches;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            pkgs-clps2c.clps2c-compiler
+          ];
+
+          buildPhase = ''
+            mkdir -p build
+            for f in $src/*.clps2c; do
+              name=$(basename $f)
+              name="''${name%.clps2c}"
+              echo "Building $f to build/$name"
+              CLPS2C-Compiler -i "$f" -o "build/$name" -p
+            done
+
+            mkdir -p "$out"
+            outfile="$out/SCPS-15115_8EFDBAEB.pnach"
+            touch "$outfile"
+            for f in build/*; do
+              echo "[$(basename $f)]" >> $outfile
+              cat "$f" | sed ':a; /^\n*$/d; /^\n/s/^\n*//' >> "$outfile"
+              echo -e "\n" >> $outfile
+            done
+          '';
+        };
       };
       devShells.default = pkgs.mkShell {
         #buildInputs = [
