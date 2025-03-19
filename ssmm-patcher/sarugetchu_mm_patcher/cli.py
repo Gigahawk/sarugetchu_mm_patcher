@@ -1117,6 +1117,23 @@ def match_font(src_hash, font_src_path, font_new_path):
 
 
 
+@cli.command()
+@click.option(
+    "-h", "--hash",
+    default="00940549",
+    type=str,
+)
+@click.argument(
+    "string",
+    type=click.Path(),
+)
+def encode_string(hash, string):
+    encoder = EncodingTranslator(hash)
+    out = encoder.string_to_bytes(string)
+    click.echo(f"Encoding '{string}' with encoder hash {hash}, can be one of:")
+    for s in out:
+        click.echo(s.hex(sep=" "))
+
 
 if __name__ == "__main__":
     cli()
