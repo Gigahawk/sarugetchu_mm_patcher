@@ -1351,8 +1351,11 @@ Gクラッシャー:
   english: "Cadmium Chip"
 "ジルコチップ":
   english: "Zirconium Chip"
-"ノーベチップ":
-  english: "Nobelium"
+# Seems like someone screwed up and used the hiragana べ instead of the
+# katakana ベ
+#"ノーベチップ":
+"ノーべチップ":
+  english: "Nobelium Chip"
 "テルルチップ":
   english: "Tellurium Chip"
 "ニオブチップ":
