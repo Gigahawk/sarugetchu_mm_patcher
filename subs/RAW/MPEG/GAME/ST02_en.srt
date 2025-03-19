@@ -76,7 +76,7 @@ We now have a live report from Moscow.
 
 20
 00:01:16,148 --> 00:01:16,988
-Miguel
+Migel
 
 21
 00:01:21,588 --> 00:01:23,593
@@ -96,7 +96,7 @@ A total of 600 banana trees have been planted so far.
 
 25
 00:01:33,716 --> 00:01:35,677
-Are you okay, Miguel? Miguel?
+Are you okay, Migel? Migel?
 
 26
 00:01:40,430 --> 00:01:43,270
