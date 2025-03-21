@@ -1289,6 +1289,158 @@ Gクラッシャー:
 "ブルーの戦闘服風<せんとうふくふう>のコスチュームです。":
   english: "A blue combat uniform costume."
 
+# Saru Book screen
+"新<あたら>しいピポサル情報<じょうほう>が追加<ついか>されました。":
+  english: "New monkey intel has been added."
+"イチロウ":
+  english: "Ichiro"
+"アインス":
+  english: "Eins"
+"ザイアス":
+  english: "Zaius"
+"デュオ":
+  english: "Duo"
+"ジャーヌ":
+  english: "Janu"
+"レオサルド":
+  english: Leosardo
+"モンサルト":
+  english: "Monsart"
+"リッチー":
+  english: Ritchie
+"サルキメデス":
+  english: "Sarchimedes"
+"リンゴー":
+  english: "Ringo"
+"バーモン":
+  english: "Vermon"
+"サルンブス":
+  english: "Salumbus"
+"ポール":
+  english: "Pole"
+"ジロウ":
+  english: "Jiro"
+"ジョン":
+  english: "Jon"
+"ジョージ":
+  english: "George"
+"トリー":
+  english: "Tory"
+"アラシヤマ":
+  english: "Arashiyama"
+"リノール":
+  english: "Linole"
+"エンゲル":
+  english: "Engel"
+"エマーソン":
+  english: "Emerson"
+"フォックス":
+  english: "Fox"
+"サルケゴール":
+  english: "Salkegoll"
+"イアン":
+  english: "Ian"
+"ジョオ":
+  english: "Joe"
+"アダムスキー":
+  english: "Adamski"
+"ウキイシ":
+  english: "Ukiishi"
+"カーチス":
+  english: "Curtis"
+"モンブラン":
+  english: "Mont Blanc"
+"オクトー":
+  english: "Okto"
+"サルバトーレ":
+  english: "Salvatore"
+"サブロウ":
+  english: "Saburo"
+"ウキャロル":
+  english: "Ucarol"
+"オサルバン":
+  english: "Osalvan"
+"フェブル":
+  english: "Fable"
+"サルンティーノ":
+  english: "Sarutino"
+"デイビッド":
+  english: "David"
+"キース":
+  english: "Keith"
+"ウッシー":
+  english: "Ussy"
+"ウル":
+  english: "Ur"
+"ウンモ":
+  english: "Unmo"
+"エーテ":
+  english: "Athe"
+"ラルフ":
+  english: "Ralph"
+"シロウ":
+  english: "Shirou"
+"サルキチ":
+  english: "Sarkichi"
+"ヒックス":
+  english: "Hicks"
+"コーネリアス":
+  english: "Cornelius"
+"バルトス":
+  english: "Bartos"
+"スパンダー":
+  english: "Spander"
+"フラットウッズ":
+  english: "Flat Woods"
+"オデッセイ":
+  english: "Odyssey"
+"サルタン":
+  english: "Sarutan"
+"マッコイ":
+  english: "McCoy"
+"ジュライ":
+  english: "July"
+"コザルニクス":
+  english: "Kozalnicus"
+"フランソワ":
+  english: "Francois"
+# They use the hiragana へ instead of the katakana ヘ here for
+# some reason
+#"ヘクス":
+"へクス":
+  english: "Hex"
+"エイプリル":
+  english: "April"
+"ガーネット":
+  english: "Garnet"
+"ゴロウ":
+  english: "Goro"
+"サルトル":
+  english: "Saltle"
+"サルベスタ":
+  english: "Salvesta"
+"オリバー":
+  english: "Oliver"
+"ピサル":
+  english: "Pisar"
+"クロ":
+  english: "Kuro"
+"スズキ":
+  english: "Suzuki"
+"ピエール":
+  english: "Pierre"
+"リッキー":
+  english: "Ricky"
+"ジュン":
+  english: "Jun"
+"トロ":
+  english: "Toro"
+
+
+
+
+
+
 
 # Options screen
 "オプション設定":
