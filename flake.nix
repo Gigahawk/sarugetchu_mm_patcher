@@ -291,9 +291,7 @@
             7z x "''${srcs[0]}"
           '';
 
-          buildPhase = ''
-            true
-          '';
+          dontBuild = true;
 
           installPhase = ''
             find . -type f | \
@@ -301,9 +299,7 @@
             wait
           '';
 
-          fixupPhase = ''
-            true
-          '';
+          dontFixup = true;
         };
         iso-cn-extracted = self.packages.${system}.iso-jp-extracted.overrideAttrs (old: {
           pname = "mm-cn-iso-extracted";
@@ -330,6 +326,8 @@
                 xargs -P $NIX_BUILD_CORES -I {} install -Dm 755 "{}" "$out/demuxed/{}"
             wait
           '';
+
+          dontFixup = true;
         };
         cutscenes-cn-demuxed = self.packages.${system}.cutscenes-jp-demuxed.overrideAttrs (old: {
           pname = "mm-cn-cutscenes-demuxed";
@@ -353,6 +351,8 @@
               xargs -P $NIX_BUILD_CORES -I {} install -Dm 755 "{}" "$out/mp4/{}"
             wait
           '';
+
+          dontFixup = true;
         };
         cutscenes-cn-mp4 = self.packages.${system}.cutscenes-jp-mp4.overrideAttrs (old: {
           pname = "mm-cn-cutscenes-mp4";
@@ -421,6 +421,8 @@
                 -I {} install -Dm 755 "{}" "$out/remuxed/{}"
             wait
           '';
+
+          dontFixup = true;
         };
         cutscenes-size-diff = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -447,6 +449,8 @@
           installPhase = ''
             install -Dm 755 "report.txt" "$out/report.txt"
           '';
+
+          dontFixup = true;
         };
         data-jp-unpacked = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -467,6 +471,8 @@
             mkdir -p "$out/DATA3"
             cp -a PDATA/DATA3/* "$out/DATA3"
           '';
+
+           dontFixup = true;
         };
         data-cn-unpacked = self.packages.${system}.data-jp-unpacked.overrideAttrs (old: {
           pname = "mm-cn-data-unpacked";
@@ -483,11 +489,11 @@
             self.packages.${system}.ssmm-patcher
           ];
 
-          buildPhase = ''
-            true
-          '';
+          dontBuild = true;
 
           installPhase = data-unpacked-named-installPhase self.packages.${system}.data-jp-unpacked;
+
+          dontFixup = true;
         };
         data-cn-unpacked-named = self.packages.${system}.data-jp-unpacked-named.overrideAttrs (old: {
           pname = "mm-cn-data-unpacked-named";
@@ -506,6 +512,8 @@
             mkdir -p "$out/DATA1"
             cp -r DATA1/* "$out/DATA1"
           '';
+
+          dontFixup = true;
         };
         data-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -624,6 +632,8 @@
               '
           '';
 
+          dontFixup = true;
+
         };
         textures-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -662,6 +672,8 @@
                 cp "$dirfullpath/manifest.yaml" "$out/analysis/$dirrelpath/manifest.yaml"
               '
           '';
+
+          dontFixup = true;
         };
         data-cn-extracted = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
           pname = "mm-cn-data-extracted";
@@ -705,6 +717,8 @@
                 -I {} install -Dm 755 "{}" "$out/DATA1_patched/{}"
             wait
           '';
+
+          dontFixup = true;
         };
         data-patched-compressed = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -726,6 +740,8 @@
                 -I {} install -Dm 755 "{}" "$out/DATA1_patched/{}"
             wait
           '';
+
+          dontFixup = true;
         };
         data-repacked = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -760,6 +776,8 @@
                 -I {} install -Dm 755 "{}" "$out/PDATA/{}"
             wait
           '';
+
+          dontFixup = true;
         };
         iso-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -789,9 +807,8 @@
             eval $cmd
           '';
 
-          installPhase = ''
-            true
-          '';
+          dontInstall = true;
+          dontFixup = true;
         };
         debug-patches = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -822,6 +839,9 @@
               echo -e "\n" >> $outfile
             done
           '';
+
+          dontInstall = true;
+          dontFixup = true;
         };
       };
       devShells.default = pkgs.mkShell {
