@@ -1131,6 +1131,8 @@ Gクラッシャー:
 "デカボー":
   # Presumably short for でかい ボー?
   english: "BigBo"
+"大型<おおがた>のメカボーです。 メカボーより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。":
+  english: A large MechaBo.It can deal more damage than a regular MechaBo, but slower to swing.
 "トゲハンマー":
   english: "ThrnHammr"
 ### W Mecha Bo
@@ -1178,6 +1180,8 @@ Gクラッシャー:
   english: "A shooting gadget that can attack from a distance.Its attack power is weak but it has a large number of bullets."
 "マシンガン":
   english: "MchnGun"
+"連射性能<れんしゃせいのう>と弾数<たまかず>を高<たか>めた射撃<しゃげき>メカです。 飛距離<ひきょり>と一撃<いちげき>の威力<いりょく>が落<お>ちているので注意<ちゅうい>しましょう。":
+  english: "A shooting gadget with increased fire rate and clip size.It has reduced range and attack power compared to a Laser Gun."
 "ショットガン":
   english: "Shotgun"
 "Wレーザー":
@@ -1299,6 +1303,24 @@ Gクラッシャー:
 # Saru Book screen
 "新<あたら>しいピポサル情報<じょうほう>が追加<ついか>されました。":
   english: "New monkey intel has been added."
+## Pre capture
+"不明":
+  english: "Not discovered"
+"所在が確認できていません。":
+  english: "Location not confirmed."
+### Shinjuku
+"新宿<しんじゅく>で発見<はっけん>!!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
+  english: "Seen in Shinjuku!!\nPlease come and catch it immediately."
+### Metro?
+"地下街<ちかがい>で発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
+  # '地下街' translates to underground mall, I assume this means metro?
+  # This phrase doesn't seem to be used in any of the level text
+  english: "Seen in the Metro!\nPlease come and catch it immediately."
+### Container Terminal
+"コンテナターミナルで発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください":
+  english: "Seen at the container terminal!\nPlease come and catch it immediately."
+## Monkeys
+### Shinjuku
 "イチロウ":
   english: "Ichiro"
 "アインス":
@@ -1317,32 +1339,89 @@ Gクラッシャー:
   english: Ritchie
 "サルキメデス":
   english: "Sarchimedes"
+### Metro
 "リンゴー":
   english: "Ringo"
 "バーモン":
   english: "Vermon"
 "サルンブス":
   english: "Salumbus"
+"まちぶせ2時間":
+  # We're limited to about 18 chars max here
+  #english: "Waiting 2hrs for an ambush"
+  english: "Lying in wait"
+"地下街<ちかがい>で待<ま>ち伏<ぶ>せているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured at the metro while lying in\nwait for an ambush."
+" まったくいつまで待<ま>たせるんだよ!\n 待<ま>ち伏<ぶ>せするほうの身<み>にもなってくれよ!":
+  english: "How long am I gonna have to wait?\nTry to put yourself in my shoes!"
 "ポール":
   english: "Pole"
+"モデル志望":
+  english: "Aspiring model"
+"ショーウィンドウの中<なか>で待<ま>ち伏<ぶ>せていたが\n発見<はっけん>されゲッチュされる。":
+  english: "Captured in a shop window while\nlying in wait for an ambush."
+"ガラスが割<わ>れなかったらどうしようかと\n正直心配<しょうじきしんぱい>だったよ。":
+  english: "To be honest,I was worried about\nwhat to do if the glass didn't break."
 "ジロウ":
   english: "Jiro"
 "ジョン":
   english: "Jon"
+"まめ":
+  # I assume this is 忠実?
+  english: "Hardworking"
+"地下街<ちかがい>の時計<とけい>にしがみついているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while hanging from a clock\nin the metro."
+"時計<とけい>が止<と>まっていたのが気<き>になってさ。\nべっ、別<べつ>に降<お>りれなくて困<こま>ってたわけじゃないぜっ。":
+  english: "I was just inspecting the clock.\nIt's not like I'm stuck or anything."
 "ジョージ":
   english: "George"
 "トリー":
   english: "Tory"
+"おおもの":
+  # I assume this is 大物?
+  english: "Bigwig"
+"地下街<ちかがい>で一斉射撃<いっせいしゃげき>を指揮<しき>していたが\n撃破<げきは>されゲッチュされる。":
+  english: "Shot down and captured while\nleading a monkey platoon."
+" あれはすべて私<わたし>が指示<しじ>したことだ!\n 部下<ぶか>に責任<せきにん>はない!":
+  english: "I'm the one in charge!\nMy soldiers are not to blame!"
 "アラシヤマ":
   english: "Arashiyama"
 "リノール":
   english: "Linole"
+"さぼり":
+  english: "Playing hooky"
+"地下街<ちかがい>でさぼっているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while slacking off in\nthe metro."
+"ホント言<い>うとオレも射撃部隊<しゃげきぶたい>に\nくわわりたかったんだけどな⋅⋅⋅":
+  english: "To be honest, I wanted to be\nin the firing squad too⋅⋅⋅"
+### Container Terminal
 "エンゲル":
   english: "Engel"
+"ばくすい":
+  # I assume this is 爆睡
+  english: "Passed out"
+"コンテナの上<うえ>でばくすいしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while sleeping on top\nof a cargo container."
+" 居眠<いねむ>りしてたって!?\n あの時間<じかん>に起<お>きてるほうがおかしいと思<おも>うよ!":
+  english: "Of course I was asleep!\nIt'd be weird to be awake then!"
 "エマーソン":
   english: "Emerson"
+"おくびょう":
+  # Assuming this is 臆病
+  english: "Cowardly"
+"ダンボールに隠<かく>れているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while hiding in a\ncardboard box."
+"動<うご>かなければ発見<はっけん>されないって聞<き>いたんだけどなぁ。\n別<べつ>のゲームだったかなぁ⋅⋅⋅":
+  english: "Can't be seen if you stay still.\nMaybe it was a different game⋅⋅⋅"
 "フォックス":
   english: "Fox"
+"まぬけ":
+  # Assuming this is 間抜け
+  english: "Stupid"
+"クレーンのフックにひっかかっているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while caught on a\ncrane hook."
+"ああなった時点<じてん>で\nもうおしまいだと思<おも>っていたよ。":
+  english: "I thought it was all over at\nthat point."
 "サルケゴール":
   english: "Salkegoll"
 "イアン":
@@ -1351,6 +1430,13 @@ Gクラッシャー:
   english: "Joe"
 "アダムスキー":
   english: "Adamski"
+"へいわしゅぎ":
+  # Assuming this is 平和主義
+  english: "Pacifist"
+"灯台<とうだい>の上<うえ>で居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while sleeping on top\nof the lighthouse."
+"戦争<せんそう>なんてしちゃいけないよ。\n私<わたし>の居眠<いねむ>りにはそんなメッセージがこめられてるのさ。":
+  english: "My nap is protesting the war."
 "ウキイシ":
   english: "Ukiishi"
 "カーチス":
@@ -1443,11 +1529,90 @@ Gクラッシャー:
 "トロ":
   english: "Toro"
 
+# Extras screen
+"ピポサル軍来襲!":
+  english: "The Monkey Invasion!"
+"緊急ニュース1":
+  english: "Breaking News 1"
+"緊急ニュース2":
+  english: "Breaking News 1"
+
+# Extras screen descriptions
+"見<み>たいムービーを選<えら>んでください。":
+  english: "Please pick a movie to watch."
+
+# Gadget Lab screen
+"レシピごうせい":
+  english: "Recipe Synthesis"
+"フリーごうせい":
+  english: "Free Synthesis"
+
+# Gadget Lab screen warnings
+"合成<ごうせい>に必要<ひつよう>なチップがありません。":
+  english: "Nothing can be synthesized with\nchips currently in inventory."
+
+# Gadget Lab screen descriptions
+"レシピを選<えら>んで合成<ごうせい>します。":
+  english: "Select recipes to synthesize."
+"好<す>きなチップを選<えら>んで合成<ごうせい>します。":
+  english: "Select chips to combine."
+
+# Gadget Lab Recipe screen
+"レシピで合成":
+  english: "Recipe Synthesis"
+"ガチャメカ":
+  english: "Gadgets"
 
 
+# Gadget Lab Recipe screen descriptions
+"ガチャメカを開発<かいはつ>します。":
+  english: "Build gadgets."
+"パワーアップパーツを開発<かいはつ>します。":
+  english: "Build power up parts."
+"召喚<しょうかん>カプセルを開発<かいはつ>します。":
+  english: "Build summoning capsules."
+"コスチュームを開発<かいはつ>します。":
+  english: "Build costumes"
+"合成<ごうせい>メニューに戻<もど>ります。":
+  english: "Return to the gadget lab."
 
+# Gadget Lab Free screen
+"チップ1":
+  english: "Chip 1"
+"チップ2":
+  english: "Chip 2"
 
+# Gadget Lab Free screen descriptions
+"1枚目<まいめ>のチップを選<えら>んでください。":
+  english: "Select your first chip."
+"2枚目<まいめ>のチップを選<えら>んでください。":
+  english: "Select your second chip."
 
+# Gadget Lab Free screen dialogs
+"%と%を合成<ごうせい>します。\nよろしいですか?":
+  english: "Combining % and\n%. Is this OK?"
+
+# Move Chips screen descriptions
+"相手<あいて>にムーブするチップを選<えら>んでください。":
+  english: "Choose a chip to transfer."
+"キャラクターファイルセレクトに戻<もど>ります。":
+  english: "Return to the character file select screen."
+"ムーブ先<さき>のチップを表示中<ひょうじちゅう>です。○ボタンでムーブの最終確認<さいしゅうかくにん>をします。":
+  english: "Press ○ to confirm the transfer."
+"ムーブするチップ選択<せんたく>に戻<もど>ります。":
+  english: "Return to chip selection."
+"チップムーブ中<ちゅう>。":
+  english: "Moving chip..."
+
+# Move Chips screen warnings
+"同<おな>じキャラクターにチップムーブはできません。":
+  english: "Can't move chips to the same\ncharacter."
+
+# Move Chips screen dialogs
+"%の%を%へムーブします。\nよろしいですか?":
+  english: "Moving %'s % to %.\n Is this OK?"
+"ムーブを完了<かんりょう>しました。":
+  english: "Move complete."
 
 # Options screen
 "オプション設定":
