@@ -315,6 +315,15 @@
   english: "Security:Barrier disabled!"
 "セキュリティ スタンポッド停止!":
   english: "Security:Stun pods disabled!"
+## Yacht Harbor
+"ヨットハーバー":
+  english: "Yacht Harbor"
+"横浜上空<よこはまじょうくう>に、巨大<きょだい>な空中戦艦<くうちゅうせんかん>が、出現<しゅつげん>しました。 おそらくスペクターが乗<の>っていると思<おも>われます。 その直下<ちょっか>にあるスタジアムにもエネルギー反応<はんのう>をキャッチしました。 直<ただ>ちに現場<げんば>に向<む>かってください。":
+  english: "A giant aerial battleship has appeared above Yokohama.Specter is likely on board.An energy signal has also been detected in the stadium below the battleship. Please head to the scene immediately."
+"ヨットハーバー PM03:07":
+  english: "Yacht Harbor\n03:07PM"
+" PM03:07":
+  english: " 03:07PM"
 
 
 # Mission complete screen
@@ -536,8 +545,6 @@
   english: "Warehouse District"
 "トレーニングルーム":
   english: "Training Room"
-"ヨットハーバー":
-  english: "Yacht Harbor"
 湾岸:
   english: "Gulf Coast"
 "V.R.スペース":
