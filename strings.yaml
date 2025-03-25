@@ -306,7 +306,7 @@
 " AM08:19":
   english: " 08:19AM"
 "衛星<えいせい>レーザーの発射<はっしゃ>を阻止<そし>せよ!➝\n\f基地内<きちない>の3基<き>の発射装置<はっしゃそうち>を破壊<はかい>すれば\nレーザー砲<ほう>の発射<はっしゃ>を阻止<そし>できますが\n強力<きょうりょく>な警備<けいび>システムに守<まも>られています。➝\n\f警備<けいび>のレベルは基地外<きちがい>のエネルギー供給炉<きょうきゅうろ>と\n直結<ちょっけつ>していますので破壊<はかい>し警備<けいび>のレベルを\nダウンさせてください。":
-  english: "Stop the satellite laser from\nfiring!➝\n\fDestroy the 3 orbs in the base\nshielded by the security system\nto stop the laser.➝\n\fThe security system connects to\nthe reactor outside,destroy it to\ndisable the security system."
+  english: "Stop the satellite laser from\nfiring!➝\n\fDestroy the 3 terminals protected\nby the security system to disable\nthe laser.➝\n\fThe reactors outside power the\nsecurity system,destroy them to\ndisable the security system."
 "スズキを発見しました!":
   english: "Suzuki found!" # What does this mean?
 "セキュリティ 機銃停止!":
