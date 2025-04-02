@@ -160,15 +160,16 @@ There is currently a demuxer written python under `mux.py` but it is unbearably 
 
 ### Episode Kakeru
 
-1. Cutscene: `ST00K`
-2. `01_boss01_gori01`
-3. `02_city01_a`
-4. `03_city02_a`
-5. Cutscene: `ST01`
-6. `04_metro01_a`
-7. `05_boss02_boss`
-8. `06_bay01_a`
-
+01. Cutscene: `ST00K`
+02. `01_boss01_gori01`
+03. `02_city01_a`
+04. `03_city02_a`
+05. Cutscene: `ST01`
+06. `04_metro01_a`
+07. `05_boss02_boss`
+08. `06_bay01_a`
+09. `07_bay02_a`
+10. Cutscene: `ST02`
 
 
 ## Known issues
