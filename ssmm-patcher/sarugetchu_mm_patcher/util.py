@@ -409,7 +409,6 @@ def palette_to_list(plt: Image) -> list[int]:
 
 def unswizzle_palette(pixels: list, block_size=8):
     if (len(pixels) % block_size) != 0:
-        import pdb;pdb.set_trace()
         raise ValueError(
             f"Cannot unswizzle with block size {block_size}, "
             f"pixel list is of invalid length {len(pixels)}"
@@ -441,6 +440,7 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
     _bpp_mode_to_bpp = {
         0: 32, # RGBA
         1: 24, # RGB
+        2: 16, # Assuming 5bit RGB + 1 bit STP?
         3: 8,  # 8 bit indexed
         4: 4,  # 4 bit indexed
     }
@@ -453,7 +453,7 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
         px_buf = bytes(data["idk_data_ptr"]["ptr"]["*(ptr)"])
     else:
         print("TODO: support in line images")
-        import pdb;pdb.set_trace()
+        raise ValueError("TODO: Support inline images")
     bpp = _bpp_mode_to_bpp[data["psm_flags"]["bpp_mode"]]
     swizzled = data["psm_flags"]["swizzled"]
     if swizzled:
@@ -462,11 +462,13 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
             rrh = height // 4
             gs_buf = ps2tex.writeTexPSMCT32(0, rrw // 64, 0, 0, rrw, rrh, px_buf)
             px_buf = ps2tex.readTexPSMT4(0, width // 64, 0, 0, width, height, gs_buf)
-        if bpp == 8:
+        elif bpp == 8:
             rrw = width // 2
             rrh = height // 2
             gs_buf = ps2tex.writeTexPSMCT32(0, rrw // 64, 0, 0, rrw, rrh, px_buf)
             px_buf = ps2tex.readTexPSMT8(0, width // 64, 0, 0, width, height, gs_buf)
+        else:
+            raise ValueError(f"Need to unswizzle unsupported bpp {bpp}")
 
     px_buf_bits = Bits(bytes=px_buf)
 
@@ -496,11 +498,24 @@ def px_data_to_imgs(data: dict, unswizzle_plt: bool=False):
 
 def unpack_pixel(px: Bits) -> tuple[int, int, int, int]:
     byte_length = len(px) // 8
-    unpack_fmt = ",".join(byte_length*["uint:8"])
-    unpacked = px.unpack(unpack_fmt)
-    if byte_length == 3:
-        # Set alpha to max
-        unpacked.append(255)
+    if byte_length >= 3:
+        unpack_fmt = ",".join(byte_length*["uint:8"])
+        unpacked = px.unpack(unpack_fmt)
+        if byte_length == 3:
+            # Set alpha to max
+            unpacked.append(255)
+    elif byte_length == 2:
+        # Assuming 5bit RGB + 1 bit STP for 16bit pixel?
+        unpack_fmt = ",".join(["uint:5"]*3 + ["uint:1"])
+        unpacked = list(px.unpack(unpack_fmt))
+        for idx in range(len(unpacked)):
+            # Expand to full 8 bit color
+            unpacked[idx] = unpacked[idx] << 3
+        # HACK: if STP is set, set alpha to half
+        if unpacked[3]:
+            unpacked[3] = 128
+        else:
+            unpacked[3] = 255
     return tuple(unpacked)
 
 def img_buf_to_pillow(px_img, width, height, plt_img=None) -> Image:

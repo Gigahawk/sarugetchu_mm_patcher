@@ -753,8 +753,7 @@ def dump_textures(imhex_json, output_path, include_exts, exclude_exts):
         elif "img_sub_file2" in fd:
             subfile = fd["img_sub_file2"]
         else:
-            print("no subfile found")
-            import pdb;pdb.set_trace()
+            print(f"warning: no subfile found in {imhex_json}")
             continue
         fname = unquote(subfile["fname"]["string"])
         # Strip leading slashes
