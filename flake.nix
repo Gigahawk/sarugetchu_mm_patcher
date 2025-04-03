@@ -532,7 +532,8 @@
             mkdir -p $out/analysis
             # Hack: this is a memory intensive process, and will fail if not
             # enough free memory is allocated to each process
-            free_mem=$(free --mega | awk '/Mem:/ {print $4}')
+            free_mem=$(free --mega | awk '/Mem:/ {print $7}')
+            echo "Available memory: $free_mem"
             max_procs=$(($free_mem / 1536))
             if [[ "$max_procs" -gt "$NIX_BUILD_CORES" ]]; then
               max_procs="$NIX_BUILD_CORES"
