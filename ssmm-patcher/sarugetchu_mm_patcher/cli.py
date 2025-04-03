@@ -700,6 +700,33 @@ def find_string(target, extracted_path, csv_path, print_to_null, hash, hex_):
                 click.echo(string)
                 click.echo(tb.hex(sep=" "))
 
+@cli.command()
+@click.argument(
+    "original-hash",
+    type=str
+)
+@click.argument(
+    "patched-string",
+    type=str
+)
+@click.option(
+    "-h", "--patched-hash",
+    default=None,
+    show_default=True,
+    type=str,
+)
+def decode_patched_string(original_hash, patched_string, patched_hash):
+    if patched_hash is None:
+        patched_encoding = EncodingTranslator(encoding=BYTES_TO_CHAR_MINIMAL)
+    else:
+        patched_encoding = EncodingTranslator(hash=patched_hash)
+    original_encoding = EncodingTranslator(hash=original_hash)
+    click.echo(f"'{patched_string}' may decode to:")
+    for b in patched_encoding.string_to_bytes(patched_string):
+        click.echo(
+            original_encoding.bytes_to_string(b)
+        )
+
 def _empty_buffers(root: dict):
     if isinstance(root, dict):
         for key in root.keys():

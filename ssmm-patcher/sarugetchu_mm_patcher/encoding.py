@@ -3642,7 +3642,7 @@ BYTES_TO_CHAR_INDUSTRIAL_COMPLEX = {
     b"\x89\x55": "お",
 }
 
-BYTES_TO_CHAR_08_PARK01_A = {
+BYTES_TO_CHAR_YACHT_HARBOR = {
     **BYTES_TO_CHAR_SPECIAL,
     b"\x88\x9F": "ヨ",
     b"\x88\xA0": "ッ",
@@ -4658,7 +4658,7 @@ ENCODING_MAP = {
     "B8B90462": BYTES_TO_CHAR_TOKYO,              # gz/stage.05_boss02_boss.gz
     "CF772913": BYTES_TO_CHAR_CONTAINER_TERMINAL, # gz/stage.06_bay01_a.gz
     "E103BE7C": BYTES_TO_CHAR_INDUSTRIAL_COMPLEX, # gz/stage.07_bay02_a.gz
-    "83163F44": BYTES_TO_CHAR_08_PARK01_A,        # gz/stage.08_park01_a.gz
+    "83163F44": BYTES_TO_CHAR_YACHT_HARBOR,       # gz/stage.08_park01_a.gz
     "187B3C66": BYTES_TO_CHAR_09_STADIUM_A,       # gz/stage.09_stadium_a.gz
     "1566B0A1": BYTES_TO_CHAR_10_BOSS03_FLY,      # gz/stage.10_boss03_fly.gz
     "44D1C934": BYTES_TO_CHAR_11_HANGAR01_A,      # gz/stage.11_hangar01_a.gz
