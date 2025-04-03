@@ -346,9 +346,62 @@
   english: "Emergency!! An unknown aircraft is approaching! Prepare for combat immediately."
 "スタジアム PM11:18":
   english: "Stadium\n11:18PM"
+" PM11:18":
+  english: " 11:18PM"
 "フライングメカを撃破<げきは>せよ!➝\n\f射程<しゃてい>の長<なが>いガチャメカを使用<しよう>し撃墜<げきつい>してください。➝\n\f多種<たしゅ>にわたる重火器<じゅうかき>を持<も>っていると\n思<おも>われますので十分注意<じゅうぶんちゅうい>してください。":
   english: "Destroy the flying mecha!➝\n\fUse long-range gadgets to shoot it\ndown.➝\n\fBe careful, this mecha is likely\nheavily armed."
-
+# Teleporter Room (Transfer Room?)
+"転送ルーム":
+  #english: "Transfer Room"
+  english: "Teleporter Room"
+"転送装置<てんそうそうち>の解析<かいせき>に成功<せいこう>しました。 空中戦艦後部<くうちゅうせんかんこうぶ>の転送<てんそう>ルームへのゲートが開<ひら>いています。 直<ただ>ちに潜入<せんにゅう>し、第一<だいいち>ブリッジにいると思<おも>われる、スペクターを探<さが>してください。":
+  # Japanese specifically says 第一ブリッジ, but I can't think of why numbering the bridges would make any sense?
+  english: "Analysis of the teleporter is complete,it connects to the rear of the battleship.Please infiltrate immediately and search for Specter,who should be on the main bridge."
+"転送ルーム AM01:00":
+  english: "第一ブリッジ\n01:00AM"
+" AM01:00":
+  english: " 01:00AM"
+# Equipment Hangar
+"重機格納庫":
+  english: "Equipment Hangar"
+"ブリッジにたどりつくには、この先<さき>の格納庫<かくのうこ>を突破<とっぱ>する必要<ひつよう>があるようです。 敵機械化兵<てききかいかへい>に注意<ちゅうい>してください!":
+  english: "It looks like you'll need to break through this hangar to reach the bridge.Beware of mechanized enemy soldiers!"
+"重機格納庫 AM06:16":
+  english: "Equipment Hangar\n06:16AM"
+" AM06:16":
+  english: " 06:16AM"
+"サル兵<へい>をすべて倒<たお>せ!➝\n\fこのエリアにいるサル兵<へい>をすべて倒<たお>してください。":
+  english: "Defeat all monkey soldiers!➝\n\fDefeat all monkey soldiers in this area."
+# G-Hangar
+"G専用格納庫":
+  english: "G-Hangar"
+"スキャンの結果<けっか>、この先<さき>にブリッジに通<つう>じる昇降機<しょうこうき>があることがわかりました! ここを無事通過<ぶじつうか>しエレベーターシャフトを目指<めざ>してください!!":
+  english: "Scans show an elevator to the bridge up ahead! Head for the elevator shaft!"
+"G専用格納庫 AM10:48":
+  english: "G-Hangar\n10:48AM"
+" AM10:48":
+  english: " 10:48AM"
+"すべてのサル兵<へい>とナゾの大型機影<おおがたきえい>を倒<たお>せ!➝\n\fこのエリアにいるサル兵<へい>をすべて倒<たお>してください。➝\n\fサル兵以外<へいいがい>にナゾの大型機影<おおがたきえい>も確認<かくにん>されています。\n移動性能<いどうせいのう>が高<たか>いようですので十分注意<じゅうぶんちゅうい>してください。":
+  # '機影' apparently means 'sight of an airplane', but the boss in the level is obviously a mech?
+  #english: "Defeat all monkey soldiers and\nthe large aircraft!➝\n\fDefeat all monkey soldiers in\nthis area.➝\n\fA strange large aircraft has also\nbeen seen in the area.Be careful,\nit seems to be highly mobile."
+  english: "Defeat all monkey soldiers and\nthe large mech!➝\n\fDefeat all monkey soldiers in\nthis area.➝\n\fAn unknown large mech has also\nbeen seen in the area.Be careful,\nit seems to be highly mobile."
+# Cargo Elevator
+"搬入エレベーター":
+  english: "Cargo Elevator"
+"エレベーターを使<つか>って艦内奥<かんないおく>に進<すす>んでください。 その先<さき>にブリッジがあるはずです。 スペクターは、そこにいると思<おも>われます。":
+  english: "Take the elevator and approach the bridge.Specter is suspected to be there."
+"搬入エレベーター PM00:31":
+  # Japanese uses PM00:00 and PM12:00 interchangably
+  english: "Cargo Elevator\n12:31PM"
+" PM00:31":
+  english: " 12:31PM"
+# Bridge
+"ブリッジ":
+  english: "Bridge"
+"ブリッジに到着<とうちゃく>しました。 中<なか>にスペクターがいると思<おも>われます。 出会<であい>い頭<がしら>の反撃<はんげき>が予想<よそう>されるので、十分注意<じゅうぶんちゅうい>してブリッジ内<ない>に突入<とつにゅう>し、スペクターを確保<かくほ>してください。":
+  english: "You've reached the bridge.Specter should be inside.Be ready for an ambush as you head in to secure Specter."
+"スペクターを倒<たお>せ!➝\n\fスペクターは強力<きょうりょく>な必殺技<ひっさつわざ>を持<も>っています。➝\n\fいつ仕掛<しか>けてくるかわかりません。\n十分注意<じゅうぶんちゅうい>してください。":
+  english: "Defeat Specter!➝\n\fSpecter has a powerful special\nmove.➝\n\fBe careful,he can attack at any\ntime."
 
 # Mission complete screen
 "ミッション":
@@ -1680,6 +1733,8 @@ Gクラッシャー:
 # Level names?
 "ピポサル帝国編":
   english: "Piposaru Empire Ed."
+"空中戦艦編":
+  english: "Aerial Battleship"
 
 # Weapons?
 "ロングレンジ":
