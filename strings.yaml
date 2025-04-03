@@ -227,6 +227,8 @@
   "english": "Shinjuku South Entrance"
 " PM02:16":
   "english": " 02:16PM"
+"ピエールを発見しました!":
+  english: "Found Pierre!"
 "新宿駅<しんじゅくえき>でピポサル軍一個小隊<ぐんいっこしょうたい>が展開中<てんかいちゅう>との情報<じょうほう>をキャッチしました! 直<ただ>ちに現場<げんば>に急行<きゅうこう>してください!!":
   "english": "We have received intel that a platoon of Piposaru troops is currently deployed at Shinjuku Station!Please rush to the scene immediately!!"
 "ターゲットをすべて倒<たお>せ!➝\n\fTARGETマークのついたサル兵<へい>を\nすべて倒<たお>してください。":
@@ -308,7 +310,7 @@
 "衛星<えいせい>レーザーの発射<はっしゃ>を阻止<そし>せよ!➝\n\f基地内<きちない>の3基<き>の発射装置<はっしゃそうち>を破壊<はかい>すれば\nレーザー砲<ほう>の発射<はっしゃ>を阻止<そし>できますが\n強力<きょうりょく>な警備<けいび>システムに守<まも>られています。➝\n\f警備<けいび>のレベルは基地外<きちがい>のエネルギー供給炉<きょうきゅうろ>と\n直結<ちょっけつ>していますので破壊<はかい>し警備<けいび>のレベルを\nダウンさせてください。":
   english: "Stop the satellite laser from\nfiring!➝\n\fDestroy the 3 terminals protected\nby the security system to disable\nthe laser.➝\n\fThe reactors outside power the\nsecurity system,destroy them to\ndisable the security system."
 "スズキを発見しました!":
-  english: "Suzuki found!" # What does this mean?
+  english: "Found Suzuki!"
 "セキュリティ 機銃停止!":
   english: "Security:Guns disabled!"
 "セキュリティ バリア解除!":
@@ -324,6 +326,8 @@
   english: "Yacht Harbor\n03:07PM"
 " PM03:07":
   english: " 03:07PM"
+"クロを発見しました!":
+  english: "Found Kuro!"
 
 
 # Mission complete screen
