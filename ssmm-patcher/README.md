@@ -170,6 +170,8 @@ There is currently a demuxer written python under `mux.py` but it is unbearably 
 08. `06_bay01_a`
 09. `07_bay02_a`
 10. Cutscene: `ST02`
+11. `08_park01_a`
+12. `09_stadium_a`
 
 
 ## Known issues

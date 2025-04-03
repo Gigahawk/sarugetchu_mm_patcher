@@ -328,6 +328,26 @@
   english: " 03:07PM"
 "クロを発見しました!":
   english: "Found Kuro!"
+## Stadium
+"スタジアム":
+  english: "Stadium"
+"サル軍<ぐん>はスタジアムに新<あら>たな基地<きち>を建設中<けんせつちゅう>のようです。 エネルギー反応<はんのう>から、空中戦艦<くうちゅうせんかん>と地上<ちじょう>を結<むす>ぶ転送装置<てんそうそうち>も存在<そんざい>すると思<おも>われます。 スタジアムの基地<きち>を撃破<げきは>し、基地内<きちない>の転送装置<てんそうそうち>で、空中戦艦<くうちゅうせんかん>に潜入<せんにゅう>してください。":
+  english: "It looks like the monkies are building a new base in the stadium.Energy signals indicate there is a teleporter connecting the stadium to the battleship above.Destroy the new base and use the teleporter to infiltrate the battleship."
+"スタジアム PM07:49":
+  english: "Stadium\n07:09PM"
+" PM07:49":
+  english: " 07:49PM"
+"サル兵<へい>を100匹<ぴき>ゲッチュせよ!➝\n\fアーマーが外<はず>れたサル兵<へい>はすぐ逃<に>げてしまいます。\n逃<に>げる前<まえ>にゲッチュしてください。":
+  english: "Catch 100 monkey soliders!➝\n\fMonkey soldiers will run away when\ntheir armor breaks.Catch them\nbefore they run away."
+## Stadium (Boss fight)
+"緊急事態発生<きんきゅうじたいはっせい>!! 謎<なぞ>の飛行物体<ひこうぶったい>が高速<こうそく>で接近中<せっきんちゅう>! 直<ただ>ちに戦闘態勢<せんとうたいせい>に入<はい>ってください。":
+  # '高速で' presumably means 'rapidly', but the starting cutscene for this level clearly shows that it teleports in?
+  #english: "Emergency!! An unknown aircraft is approaching at high speed! Prepare for combat immediately."
+  english: "Emergency!! An unknown aircraft is approaching! Prepare for combat immediately."
+"スタジアム PM11:18":
+  english: "Stadium\n11:18PM"
+"フライングメカを撃破<げきは>せよ!➝\n\f射程<しゃてい>の長<なが>いガチャメカを使用<しよう>し撃墜<げきつい>してください。➝\n\f多種<たしゅ>にわたる重火器<じゅうかき>を持<も>っていると\n思<おも>われますので十分注意<じゅうぶんちゅうい>してください。":
+  english: "Destroy the flying mecha!➝\n\fUse long-range gadgets to shoot it\ndown.➝\n\fBe careful, this mecha is likely\nheavily armed."
 
 
 # Mission complete screen
