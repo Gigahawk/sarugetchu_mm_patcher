@@ -96,6 +96,8 @@
   english: "The % Memory Card is not formatted.\nDo you want to format it?"
 "フォーマット中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
   english: "Formatting!\nDo not remove the\nMemory Card in % or\npower off the console."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\nフォーマットに失敗<しっぱい>しました。":
+  english: "Formatting failed as the\nMemory Card in % was removed"
 "ミリオンモンキーズのゲームデータを作成中<さくせいちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
   english: "Creating game data!\nDo not remove the\nMemory Card in % or\npower off the console."
 "%のメモリーカード(PS2)に\nミリオンモンキーズのゲームデータを作成<さくせい>しました。":
