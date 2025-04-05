@@ -155,6 +155,22 @@
         "096_f2b5553f" # gz/menu_story.13_boss04_gori02.gz
         "097_dcd7b35d" # gz/menu_story.14_elevator_a.gz
         "098_8d3a2011" # gz/menu_story.15_kakeru_spector.gz
+        "100_5ebb5f0b" # gz/menu_story.16_kakeru_goritron.gz
+        "102_7a8e0451" # gz/menu_story.17_city01_vr.gz
+        "103_0e36c98a" # gz/menu_story.18_bay01_vr.gz
+        "104_dd45c596" # gz/menu_story.19_park01_vr.gz
+        "105_b2b250a8" # gz/menu_story.20_boss07_grid.gz
+        "106_4c084c39" # gz/menu_story.21_stadium_b.gz
+        "107_cd7a2b3c" # gz/menu_story.22_park01_b.gz
+        "108_e13aef70" # gz/menu_story.23_bay02_b.gz
+        "109_49913fd2" # gz/menu_story.24_bay01_b.gz
+        "110_a5bebda1" # gz/menu_story.25_boss08_boss.gz
+        "111_f2bc8cb1" # gz/menu_story.26_metro01_b.gz
+        "112_72c71ee8" # gz/menu_story.27_city02_b.gz
+        "113_6e0a878d" # gz/menu_story.28_city01_b.gz
+        "114_3a1b68cc" # gz/menu_story.29_boss09_boss.gz
+        "115_ac56964e" # gz/menu_story.30_daiba02_b.gz
+        "116_2f029adf" # gz/menu_story.31_boss10_boss.gz
         "117_05f7cae8" # gz/menu_title.gz
         "118_3c6cf60b" # gz/menu_vs.gz
 
@@ -195,31 +211,34 @@
         "681_db175d62" # gz/stage.14_elevator_a.gz
         "683_9ce158f2" # gz/stage.15_kakeru_spector.gz
         #"685_ad4e55a8"
-        #"687_89e08f98"
+        "687_89e08f98" # gz/stage.16_kakeru_goritron.gz
         #"689_71a9e042"
-        #"691_cdb2d8bf"
-        #"693_25839e9b"
-        #"695_306a9905"
-        #"697_8df2c654"
-        #"699_9f2c20a8"
+        "691_cdb2d8bf" # gz/stage.17_city01_vr.gz
+        "693_25839e9b" # gz/stage.18_bay01_vr.gz
+        "695_306a9905" # gz/stage.19_park01_vr.gz
+        "697_8df2c654" # gz/stage.20_boss07_grid.gz
+        "699_9f2c20a8" # gz/stage.21_stadium_b.gz
         #"701_932551d9"
-        #"703_e4c7004d"
+        "703_e4c7004d" # gz/stage.22_park01_b.gz
         #"705_5b48bba4"
-        #"707_6cc0093a"
+        "707_6cc0093a" # gz/stage.23_bay02_b.gz
         #"709_0320b216"
-        #"711_d4165a9b"
-        #"713_80fe334e"
+        "711_d4165a9b" # gz/stage.24_bay01_b.gz
+        "713_80fe334e" # gz/stage.25_boss08_boss.gz
         #"715_bcf2c6fc"
-        #"717_45e16020"
+        "717_45e16020" # gz/stage.26_metro01_b.gz
         #"719_20b329ab"
         #"721_da3e2bab"
+        "722_8914f4f8" # gz/stage.27_city02_b.gz
         #"723_b2516b88"
         #"725_d990ef67"
+        "726_85575c9e" # gz/stage.28_city01_b.gz
         #"727_3e11f98e"
+        "728_155bde78" # gz/stage.29_boss09_boss.gz
         #"729_8ef4f33d"
         #"731_a32b0671"
-        #"733_ff7a6abd"
-        #"735_0a42108c"
+        "733_ff7a6abd" # gz/stage.30_daiba02_b.gz
+        "735_0a42108c" # gz/stage.31_boss10_boss.gz
         "737_e5d5ceb1" # gz/stage.50_k1.gz
         "739_2ff511d3" # gz/stage.51_city.gz
         "741_1e656e38" # gz/stage.52_metro.gz
