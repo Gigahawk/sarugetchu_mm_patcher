@@ -360,7 +360,7 @@
   # Japanese specifically says 第一ブリッジ, but I can't think of why numbering the bridges would make any sense?
   english: "Analysis of the teleporter is complete,it connects to the rear of the battleship.Please infiltrate immediately and search for Specter,who should be on the main bridge."
 "転送ルーム AM01:00":
-  english: "第一ブリッジ\n01:00AM"
+  english: "Teleporter Room\n01:00AM"
 " AM01:00":
   english: " 01:00AM"
 # Equipment Hangar
