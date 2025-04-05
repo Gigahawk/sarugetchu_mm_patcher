@@ -172,6 +172,22 @@
 "オプション":
   english: "Options"
 
+# Story mode difficulty select screen
+"ないど設定":
+  english: "Difficulty"
+"ハード":
+  english: "Hard"
+"ベリーハード":
+  english: "Very Hard"
+
+# Story mode difficulty select screen descriptions
+"ノーマルモードで遊<あそ>びます。":
+  english: "Play with default difficulty."
+"ハードモードで遊<あそ>びます。":
+  english: "Play with hard difficulty."
+"ベリーハードモードで遊<あそ>びます。":
+  english: "Play with very hard difficulty."
+
 # Story mode episode select screen
 "エピソードカケル":
   english: "Episode Kakeru"
@@ -400,10 +416,18 @@
 # Bridge
 "ブリッジ":
   english: "Bridge"
+"ブリッジ PM03:52":
+  english: "Bridge\n03:52PM"
+" PM03:52":
+  english: " 03:52PM"
 "ブリッジに到着<とうちゃく>しました。 中<なか>にスペクターがいると思<おも>われます。 出会<であい>い頭<がしら>の反撃<はんげき>が予想<よそう>されるので、十分注意<じゅうぶんちゅうい>してブリッジ内<ない>に突入<とつにゅう>し、スペクターを確保<かくほ>してください。":
   english: "You've reached the bridge.Specter should be inside.Be ready for an ambush as you head in to secure Specter."
 "スペクターを倒<たお>せ!➝\n\fスペクターは強力<きょうりょく>な必殺技<ひっさつわざ>を持<も>っています。➝\n\fいつ仕掛<しか>けてくるかわかりません。\n十分注意<じゅうぶんちゅうい>してください。":
   english: "Defeat Specter!➝\n\fSpecter has a powerful special\nmove.➝\n\fBe careful,he can attack at any\ntime."
+# Bridge 2
+"新種<しんしゅ>のピポトロンと思<おも>われる生物<せいぶつ>が現<あらわ>れました。 敵意<てきい>をみせ、攻撃<こうげき>をしかけてくる事<こと>が予想<よそう>されます。 十分注意<じゅうぶんちゅうい>して応戦<おうせん>してください。":
+  english: "A creature thought to be a new species of Pipotron has appeared.We think it's hostile, please respond with caution."
+
 
 # Mission complete screen
 "ミッション":
