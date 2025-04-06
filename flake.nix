@@ -558,6 +558,8 @@
             pkgs.imhex
             # Needed to check free memory
             pkgs.procps
+            # Needed to retry, builds still sometimes fail even with memory limits
+            pkgs.parallel
           ];
 
           buildPhase = ''
@@ -575,7 +577,7 @@
             fi
             echo "Generating $max_procs imhex outputs in parallel"
             echo "${resourceFilesStr}" | \
-              xargs -P $max_procs -I {} bash -c '
+              parallel --retries 5 -P $max_procs -I {} '
                 echo "Analyzing resource {}"
                 imhex --pl format --verbose --metadata \
                   --includes "$src/includes/" \
