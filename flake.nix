@@ -534,6 +534,19 @@
 
           dontFixup = true;
         };
+        data-imhex-preanalysis = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-data-imhex-preanalysis";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+          installPhase = ''
+            mkdir -p "$out"
+            while IFS= read -r f; do
+              cp  "${self.packages.${system}.data-jp-extracted}/DATA1/$f" "$out/$f"
+            done <<< "${resourceFilesStr}"
+          '';
+        };
         data-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-imhex-analysis";
