@@ -995,6 +995,16 @@ struct idk_FUN_00632b98 {
         le u32 idk1;
 };
 
+struct idk_FUN_00632c50 {
+    // idk?FUN_00632c50
+        // idk?FUN_00631d00
+            idk_FUN_00631d00 data1;
+
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT x2
+            MaybeString name1;
+
+        le u8 idk1;
+};
 
 
 struct trapdatabase_instantiater_FUN_00630e88 {
@@ -1054,6 +1064,9 @@ struct trapdatabase_instantiater_FUN_00630e88 {
         } else if (class_id == 17) { // 0x11
             // idk?FUN_00632b98
                 idk_FUN_00632b98 data17;
+        } else if (class_id == 18) { // 0x12
+            // idk?FUN_00632c50
+                idk_FUN_00632c50 data18;
         } else {
             std::print(class_id);
             assert(false, "Invalid class ID");
@@ -1409,6 +1422,26 @@ struct idk_FUN_006284b0 {
         le u32 idk_len;
         // idk?FUN_006282b0 called in a loop
             idk_FUN_006282b0 idk_data[idk_len];
+};
+struct idk_FUN_00621940 {
+    // idk?FUN_00621940
+        le u16 idk_flag1;
+        le u16 idk_flag2;
+
+        if (idk_flag1 != 0) {
+            le u32 idk_flag1_data;
+            // transform_FUN_0050dd68
+        }
+        if (idk_flag2 != 0) {
+            le u32 idk_flag2_data;
+            // transform_FUN_0050dd68
+        }
+};
+
+struct idk_FUN_00620ce8 {
+    // idk?FUN_00620ce8
+        le u32 idk1;
+        le u32 idk2;
 };
 
 struct File {
@@ -1816,7 +1849,8 @@ struct File {
     // idk?FUN_00621a20
         le u8 idk79;
         if (idk79 != 0) {
-            assert(false, "Check idk?FUN_00621a20");
+            // idk?FUN_00621940
+                idk_FUN_00621940 idk79_data;
         }
 
     // idk?FUN_006243f8
@@ -1836,9 +1870,10 @@ struct File {
             // idk?FUN_00620b70
                 idk_FUN_00620b70 idk82_data;
         }
-        le u8 idk82_2;
-        if (idk82_2 != 0) {
-            assert(false, "Check idk?FUN_00620d80");
+        le u8 idk82_2_exists;
+        if (idk82_2_exists != 0) {
+            // idk?FUN_00620ce8
+                idk_FUN_00620ce8 idk82_2_data;
         }
 
     // idk?FUN_00620e60
