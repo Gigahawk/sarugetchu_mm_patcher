@@ -1134,9 +1134,11 @@ def match_font(src_hash, font_src_path, font_new_path):
             click.echo(f"Warning: no match found for new token {new_token}")
 
     out = f"BYTES_TO_CHAR_{font_new_path.stem.upper()}"
+    tokens = sorted(font_new_map.keys())
     out += " = {\n    **BYTES_TO_CHAR_SPECIAL,\n\n"
-    for token, char in font_new_map.items():
-        token = _token_repr(token)
+    for _t in tokens:
+        token = _token_repr(_t)
+        char = font_new_map[_t]
         out += f'    b"{token}": "{char}",\n'
     out += "}"
     click.echo(out)
