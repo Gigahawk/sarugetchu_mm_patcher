@@ -274,14 +274,10 @@
 ## Metro/Kawasaki
 "川崎方面<かわさきほうめん>にサル軍基地<ぐんきち>が建設中<けんせつちゅう>との情報<じょうほう>が入<はい>りました。 東京<とうきょう>、品川経由<しながわけいゆ>で川崎方面<かわさきほうめん>に向<む>かいます。 ただし、秋葉原<あきはばら>、東京間<とうきょうかん>の地上<ちじょう>ルートは、すでに多数<たすう>のサル達<たち>に占領<せんりょう>されており、危険<きけん>なので、地下<ちか>ルートを通<とお>って東京駅<とうきょうえき>を目指<めざ>してください。":
   english: "We've received information that a monkey army base is under construction in the Kawasaki area.Head there via Tokyo and Shinagawa.However,since a large group of monkeys has occupied the aboveground route between Akihabara and Tokyo,please take the the underground route to Tokyo Station."
-"メトロ AM08:13":
-  english: "Metro\n08:13AM"
 "メトロ PM06:32":
   "english": "Metro\n06:32PM"
 " PM06:32":
   english: " 06:32PM"
-" AM08:13":
-  english: " 08:13AM"
 ## Tokyo
 "東京":
   english: "Tokyo"
@@ -303,7 +299,7 @@
     "c259c730": "Container1Terminal"
     "cb5bc830": "Container2Terminal"
     "afba6472": "Container Trmnl"
-    "b8bc6572": "Container4Terminal"
+    "b8bc6572": "Container Trmnl"
     "7890a4da": "Container Terminal"
 "新<あら>たにサル軍<ぐん>の拠点<きょてん>を発見<はっけん>しました! 他<ほか>にルートはなく、ここを突破<とっぱ>しないと目標<もくひょう>のサル軍基地<ぐんきち>に行<い>くことは出来<でき>ません。 十分注意<じゅうぶんちゅうい>しながら前進<ぜんしん>し、サル軍基地<ぐんきち>へ向<む>かってください。":
   english: "A new monkey base has been discovered!There's no way to get to it unless you break through here.Proceed with caution."
@@ -317,7 +313,7 @@
     "465bc730": "Industrial1Complex"
     "5039c830": "Industrial2Complex"
     "33bc6472": "Industrial Cmplx"
-    "3d9a6572": "Industrial4Complex"
+    "3d9a6572": "Industrial Cmplx"
     "7890a4da": "Industrial Complex"
 "建設中<けんせつちゅう>サル軍基地<ぐんきち>に到着<とうちゃく>しました。 衛星<えいせい>が高<こう>エネルギー反応<はんのう>をキャッチしています。 レーザー砲台<ほうだい>が設置<せっち>されている情報<じょうほう>に間違<まちが>いはないようです。 エネルギー供給炉<きょうきゅうろ>を遮断<しゃだん>して、基地<きち>のセキュリティシステムを停止<ていし>させ、レーザー砲発射前<ほうはっしゃまえ>に砲台<ほうだい>を破壊<はかい>してください。":
   english: "You've arrived at the monkey base.Satellite readings show a high energy signal coming from within the base,confirming earlier intel that the monkeys are building a laser cannon.Disable the base's reactor core and security system,then destroy the laser cannon before it can fire."
@@ -427,6 +423,131 @@
 # Bridge 2
 "新種<しんしゅ>のピポトロンと思<おも>われる生物<せいぶつ>が現<あらわ>れました。 敵意<てきい>をみせ、攻撃<こうげき>をしかけてくる事<こと>が予想<よそう>されます。 十分注意<じゅうぶんちゅうい>して応戦<おうせん>してください。":
   english: "A creature thought to be a new species of Pipotron has appeared.We think it's hostile, please respond with caution."
+"ブリッジ PM04:36":
+  english: "Bridge\n04:36PM"
+" PM04:36":
+  english: " 4:36PM"
+"ピポトロンGを倒<たお>せ!➝\n\f新種<しんしゅ>のピポトロンで、まったくデータがありません。➝\n\f何<なに>をしてくるかわかりません。\n慎重<しんちょう>に戦<たたか>ってください。":
+  english: "Defeat Pipotron G!➝\n\fThis is a new Pipotron species,\nwe have no data on it.➝\n\fFight carefully, we don't know\nhow it will behave."
+# Virtual Space 01
+"バーチャルスペース01":
+  english: "V.R.Space 01"
+"バーチャルスペースに迷<まよ>い込<こ>みました。 罠<わな>にはまってしまった可能性<かのうせい>があります。 危険<きけん>ですので、直<ただ>ちにセキュリティ⋅ホールを見<み>つけ、脱出<だっしゅつ>ルートを探<さが>してください。":
+  english: "You are lost in V.R.Space.This may be a trap,please immediately find a security hole and escape."
+"バーチャルスペース01 --:--":
+  english: "V.R.Space 01\n--:--"
+"ウイルスチャルをすべて倒<たお>せ!➝\n\fこのエリアは完全<かんぜん>にウイルスに感染<かんせん>しています。\nウイルスチャルをすべて倒<たお>し\nこのエリアから脱出<だっしゅつ>してください。":
+  english: "Defeat Virus Charu!➝\n\fThis area is completely\ninfected.Defeat Virus Charu and\nescape."
+# Virtual Space 02
+"バーチャルスペース02":
+  english: "V.R.Space 02"
+"バーチャルスペースに迷<まよ>い込<こ>んでいます。 危険<きけん>ですので、セキュリティ⋅ホールを見<み>つけ、脱出<だっしゅつ>ルートを探<さが>してください。":
+  english: "You are lost in V.R.Space.Find a security hole and escape."
+"バーチャルスペース02 --:--":
+  english: "V.R.Space 02\n--:--"
+"すべてのセキュリティパネルを起動<きどう>せよ!➝\n\fすべてのパネルが光<ひか>ると先<さき>へ進<すす>むためのパネルが\n白<しろ>く光<ひか>るはずです。➝\n\fひとつのパネルに乗<の>れる回数<かいすう>は限<かぎ>られていて\n赤<あか>く光<ひか>るパネルに乗<の>るとパネルごと\n落下<らっか>してしまいます。➝\n\f制限時間内<せいげんじかんない>にすべてパネルを光<ひか>らせ\n脱出<だっしゅつ>してください。":
+  english: "Activate all security panels!➝\n\fWhen all panels are lit, the\nfinal panel will turn white.➝\n\fEach panel can only be stood on\na limited number of times.\nRed panels will drop you.➝\n\fLight up all panels within the\ntime limit and escape."
+# Virtual Space 03
+"バーチャルスペース03":
+  english: "V.R.Space 03"
+"バーチャルスペース03 --:--":
+  english: "V.R.Space 03\n--:--"
+# Virtual Space 04
+"バーチャルスペース04":
+  english: "V.R.Space 04"
+"バーチャルスペース04 --:--":
+  english: "V.R.Space 04\n--:--"
+"グリッドコアを倒<たお>せ!➝\n\f粒子状<りゅうしじょう>のときは、すべての攻撃<こうげき>が効<き>かないようです。\n実体<じったい>を現<あらわ>したときに攻撃<こうげき>してください。➝\n\f顔<かお>が現<あらわ>れると強力<きょうりょく>な攻撃<こうげき>をしてくると\n予想<よそう>されますので十分注意<じゅうぶんちゅうい>してください。":
+  english: "Defeat the Grid Core!➝\n\fAttacks seem ineffective when\nits in particle form.Attack\nwhen it takes physical form.➝\n\fBe careful, it is likely to\nlaunch powerful attacks when it\nreveals its face."
+# Stadium
+"空中戦艦<くうちゅうせんかん>は、東京方面<とうきょうほうめん>に墜落<ついらく>したとの情報<じょうほう>が入<はい>りました。 手<て>がかりを探<さが>すために東京方面<とうきょうほうめん>に引<ひ>き返<かえ>してください。 地上<ちじょう>には謎<なぞ>のモンスターが多数出現<たすうしゅつげん>しています。 十分注意<じゅうぶんちゅうい>してください。":
+  english: "We have intel that the aerial battleship has crashed near Tokyo.Please head towards Toyko to search for clues.Be careful, many strange mosnters have appeared in the area."
+"スタジアム AM03:20":
+  english: "Stadium\n03:20AM"
+" AM03:20":
+  english: " 03:20AM"
+"ナゾの浮遊生物<ふゆうせいぶつ>を倒<たお>せ!➝\n\f射程<しゃてい>の長<なが>いガチャメカを使用<しよう>して倒<たお>してください。➝\n\f浮遊生物<ふゆうせいぶつ>のデータはありませんので\n十分注意<じゅうぶんちゅうい>してください。":
+  english: "Defeat the strange floating\ncreatures!➝\n\fUse long range gadgets to\ndefeat them.➝\n\fBe careful,there is no data on\nthese creatures."
+# Yacht Harbor
+"東京方面<とうきょうほうめん>に墜落<ついらく>した空中戦艦<くうちゅうせんかん>の手<て>がかりが必要<ひつよう>です。 東京方面<とうきょうほうめん>に引<ひ>き返<かえ>してください。 地上<ちじょう>には未確認生物<みかくにんせいぶつ>が多数出現<たすうしゅつげん>しています。 十分注意<じゅうぶんちゅうい>してください。":
+  english: "We need more intel on the crashed aerial battleship.Please head towards Toyko.Be careful, many strange mosnters have appeared in the area."
+"ヨットハーバー AM11:11":
+  english: "Yacht Harbor\n11:11AM"
+" AM11:11":
+  english: " 11:11AM"
+"ターゲットをすべて倒<たお>せ!➝\n\fこのエリアは、まだサル軍<ぐん>に占拠<せんきょ>されているようです。\n➝\n\fTARGETマークのサル兵<へい>を倒<たお>し\nサル軍<ぐん>の指揮系統<しきけいとう>を破壊<はかい>してください。":
+  "english": "Defeat all targets!➝\n\fThis area seems to still be\noccupied by the monkey army.➝\n\fDefeat all monkey soldiers with\nTARGET marks."
+# Industrial Complex
+"コンビナート PM02:36":
+  english: "Industrial Complex\n02:36PM"
+" PM02:36":
+  english: " 02:36PM"
+"ハルカを守<まも>りきれ!➝\n\fハルカを守<まも>り、エネルギー供給炉<きょうきゅうろ>を起動<きどう>させ\n基地内<きちない>の3基<き>の端末<たんまつ>からデータを集<あつ>めてください。➝\n\fまた、端末<たんまつ>の操作<そうさ>はハルカしかできませんので\nハルカの体力<たいりょく>に注意<ちゅうい>してください。":
+  english: "Protect Haruka!➝\n\fProtect Haruka, activate the\nreactor,and collect data from\nthe 3 terminals in the base.➝\n\fOnly Haruka can operate the\nterminals,so keep track of her\nstamina."
+# Container Terminal
+"コンテナターミナル PM05:16":
+  english: "Container Terminal\n05:16PM"
+" PM05:16":
+  english: " 05:16PM"
+"戦艦<せんかん>の残骸<ざんがい>をすべて破壊<はかい>せよ!➝\n\f戦艦<せんかん>の残骸<ざんがい>を完全<かんぜん>に破壊<はかい>すれば\nナゾの生物<せいぶつ>の発生<はっせい>を止<と>めることができるはずです。":
+  english: "Destroy all remains of the\nbattleship!➝\n\fIf the battleship is completely\ndestroyed,the mysterious\ncreatures should disappear."
+# Tokyo
+"ピポトロンレッド、ブルー、イエローが乗<の>ったトレーラーが、秋葉原<あきはばら>の地下<ちか>サル軍基地<ぐんきち>に向<む>かっています。 改造<かいぞう>したレーザー砲台<ほうだい>を基地内<きちない>に運<はこ>び込<こ>もうとしていますが、敵<てき>の攻撃<こうげき>を受<う>けています。 東京駅<とうきょうえき>から地下<ちか>ルートを通<とお>って秋葉原<あきはばら>に向<む>かい、トレーラーを援護<えんご>してください。":
+  english: "The trailer carrying Pipotron Red,Blue,and Yellow is heading to the underground base in Akihabara.They are transporting a modified laser cannon into the base, but are under enemy attack.Head to Akihabara via Tokyo Station and provide support."
+"東京 PM10:51":
+  english: "Tokyo\n10:51PM"
+" PM10:51":
+  english: " 10:51PM"
+"マザーテンタクルを倒<たお>せ!➝\n\fマザーテンタクルは空中<くうちゅう>を漂<ただよ>っています。\n射程<しゃてい>の長<なが>いガチャメカを使用<しよう>してください。➝\n\fマザーテンタクルが卵<たまご>を産<う>んだら\nふ化<か>する前<まえ>に壊<こわ>してください。":
+  english: "Defeat Mother Tentacle!➝\n\fMother Tentacle floats in the\nair,use long range gadgets to\ndefeat it.➝\n\fWhen it lays an egg,destroy the\negg before it can hatch."
+# Metro
+"地下<ちか>ルートを進<すす>み、ピポトロン達<たち>のいる秋葉原<あきはばら>に向<む>かってください。":
+  english: "Proceed through the underground route to Akihabara where the Pipotrons are."
+"メトロ AM08:13":
+  english: "Metro\n08:13AM"
+" AM08:13":
+  english: " 08:13AM"
+# Akihabara
+"ピポトロンレッド、ブルー、イエローが乗<の>ったトレーラーが、秋葉原<あきはばら>の地下<ちか>サル軍基地<ぐんきち>に向<む>かっています。 改造<かいぞう>したレーザー砲台<ほうだい>を基地内<きちない>に運<はこ>び込<こ>もうとしていますが、敵<てき>の攻撃<こうげき>を受<う>けています。 トレーラーを援護<えんご>し、無事<ぶじ>、地下基地内<ちかきちない>にレーザー砲台<ほうだい>を運<はこ>び込<こ>んでください。":
+  english: "The trailer carrying Pipotron Red,Blue,and Yellow is heading to the underground base in Akihabara.They are transporting a modified laser cannon into the base, but are under enemy attack.Provide support to the trailer and safely deliver the laser cannon to the base."
+"輸送<ゆそう>トレーラーを守<まも>れ!➝\n\f地上<ちじょう>には未確認生物<みかくにんせいぶつ>が多数出現<たすうしゅつげん>しています。➝\n\fトレーラーがこのエリアを通過<つうか>するまで\n守<まも>りきってください。":
+  english: "Protect the transport trailer!➝\n\fMany strange creatures have\nappeared in this area.➝\n\fProtect the trailer until it\npasses through this area."
+# Shinjuku
+"東京湾<とうきょうわん>に、空中戦艦<くうちゅうせんかん>が墜落<ついらく>したとの情報<じょうほう>が入<はい>りました! 空中戦艦内<くうちゅうせんかんない>には、ブロブ本体<ほんたい>があるようです。 ブロブ狙滅<せんめつ>のため、危険地帯<きけんちたい>を儀回<うかい>しながら、直<ただ>ちに現場<げんば>に急行<きゅうこう>してください。":
+  english: "We have intel that the aerial battleship has crashed in Tokyo Bay!There seems to be a large blob inside the battleship.Head to the crash site and eliminate the blob."
+"新宿 PM00:26":
+  "english": "Shinjuku\n00:26PM"
+" PM00:26":
+  "english": " 00:26PM"
+# Tokyo Teleport
+"東京テレポート PM02:02":
+  english: "Tokyo Teleport\n02:02PM"
+" PM02:02":
+  english: " 02:02PM"
+"暴走<ぼうそう>マシンを撃破<げきは>せよ!➝\n\f周辺<しゅうへん>に巨大<きょだい>なエネルギー反応<はんのう>が確認<かくにん>されています。\n最後<さいご>まで十分注意<じゅうぶんちゅうい>してください。":
+  english: "Destroy the rampaging machine!➝\n\fA huge energy reaction has been\ndetected in the area.Please be\ncareful until it's destroyed."
+# Odaiba
+"お台場":
+  english: "Odaiba"
+"東京湾<とうきょうわん>に墜落<ついらく>した空中戦艦<くうちゅうせんかん>に向<む>かってください。 危険地帯<きけんちたい>を儀回<うかい>しながら、直<ただ>ちに現場<げんば>に急行<きゅうこう>してください。":
+  english: "Head to the aerial battleship crash site in Tokyo Bay."
+"お台場 PM05:32":
+  english: "Odaiba 05:32PM"
+" PM05:32":
+  english: " 05:32PM"
+# Crash Site
+"墜落地点":
+  english: "Crash Site"
+"空中戦艦<くうちゅうせんかん>の墜落現場<ついらくげんば>を発見<はっけん>しました! ブロブコアは通常<つうじょう>の攻撃<こうげき>では倒<たお>すことができません。 改造<かいぞう>レーザー砲<ほう>を使<つか>って、止<とど>めをさしてください。":
+  english: "You've found the crash site!The blob core can't be defeated with normal attacks,use the modified laser cannon to finish it off."
+"墜落地点 AM04:00":
+  english: "Crash Site\n04:00AM"
+" AM04:00":
+  english: " 04:00AM"
+"ブロブコアを撃破<げきは>せよ!➝\n\fブロブコアは弱<よわ>まるとオレンジ色<いろ>のバリアを張<は>って\n休息状態<きゅうそくじょうたい>になり体力<たいりょく>の回復<かいふく>を始<はじ>めます。➝\n\f改造<かいぞう>レーザー砲<ほう>の高出力<こうしゅつりょく>エネルギーも\n通常状態<つうじょうじょうたい>のバリアでは跳<は>ね返<かえ>されてしまいますが\n休息状態<きゅうそくじょうたい>のバリアなら突<つ>き抜<ぬ>けるはずです。➝\n\f弱点<じゃくてん>の目<め>を狙<ねら>って改造<かいぞう>レーザー砲<ほう>を撃<う>ち\nブロブコアを撃破<げきは>してください。➝\n\fなお、改造<かいぞう>レーザー砲<ほう>を使用<しよう>するには\n技<わざ>ストックゲージが3つ必要<ひつよう>ですが\n発動<はつどう>させても、すぐには撃<う>てません。➝\n\f改造<かいぞう>レーザー砲<ほう>のエネルギーがMAXになれば\nガチャメカを操作<そうさ>するボタンで\n撃<う>つことができます。":
+  english: "Defeat the blob core!➝\n\fWhen the blob core weakens,it\nputs up a barrier and rests to\nrecover its strength.➝\n\fThe cannon will be blocked by the\nmain shield,but it should be able\nto break the rest shield.➝\n\fAim at the weak spot and fire\nthe laser cannon to defeat the\nblob core.➝\n\fThe cannon consumes 3 special\nattacks,and will charge for a bit\nbefore it's ready to fire.➝\n\fOnce the cannon energy reaches\nMAX,you can fire it with the\nbutton for that gadget."
+
+
 
 
 # Mission complete screen
@@ -1758,9 +1879,11 @@ Gクラッシャー:
 
 # Level names?
 "ピポサル帝国編":
-  english: "Piposaru Empire Ed."
+  english: "Piposaru Empire"
 "空中戦艦編":
   english: "Aerial Battleship"
+"新たな危機編":
+  english: "New Crisis"
 
 # Weapons?
 "ロングレンジ":
