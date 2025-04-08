@@ -301,7 +301,7 @@
   #english: "Container Trmnl"
   english:
     "c259c730": "Container Trmnl"
-    "cb5bc830": "Container2Terminal"
+    "cb5bc830": "Container Trmnl"
     "afba6472": "Container Trmnl"
     "b8bc6572": "Container Trmnl"
     "7890a4da": "Container Terminal"
@@ -315,7 +315,7 @@
 "コンビナート":
   english:
     "465bc730": "Industrial Cmplx"
-    "5039c830": "Industrial2Complex"
+    "5039c830": "Industrial Cmplx"
     "33bc6472": "Industrial Cmplx"
     "3d9a6572": "Industrial Cmplx"
     "7890a4da": "Industrial Complex"
@@ -430,17 +430,31 @@
   english: "Bridge\n03:52PM"
 " PM03:52":
   english: " 03:52PM"
+"ブリッジ PM04:10":
+  english: "Bridge\n04:10PM"
+" PM04:10":
+  english: " 04:10PM"
 "スペクターを倒<たお>せ!➝\n\fスペクターは強力<きょうりょく>な必殺技<ひっさつわざ>を持<も>っています。➝\n\fいつ仕掛<しか>けてくるかわかりません。\n十分注意<じゅうぶんちゅうい>してください。":
   english: "Defeat Specter!➝\n\fSpecter has a powerful special\nmove.➝\n\fBe careful,he can attack at any\ntime."
+"ニセスペクターを倒<たお>せ!➝\n\fピポトロンメタの変身<へんしん>は完<かん>ぺきで\nスペクターのすべてをコピーしています。➝\n\f特<とく>に必殺技<ひっさつわざ>には注意<ちゅうい>してください。":
+  english: "Defeat Fake Specter!➝\n\fPipotron Meta has transformed\ninto a perfect copy of Specter.➝\n\fBe careful of his special move."
 ## Bridge 2
 "新種<しんしゅ>のピポトロンと思<おも>われる生物<せいぶつ>が現<あらわ>れました。 敵意<てきい>をみせ、攻撃<こうげき>をしかけてくる事<こと>が予想<よそう>されます。 十分注意<じゅうぶんちゅうい>して応戦<おうせん>してください。":
-  english: "A creature thought to be a new species of Pipotron has appeared.We think it's hostile, please respond with caution."
+  english: "A creature thou➝\n\fght to be a new species of Pipotron has appeared.We think it's hostile, please respond with caution."
+"サル軍<ぐん>とは別<べつ>の人物<じんぶつ>が現<あらわ>れました。 十分注意<じゅうぶんちゅうい>して対応<たいおう>してください。":
+  english: "Someone not from the monkey army has appeared.Please be careful when dealing with them."
 "ブリッジ PM04:36":
   english: "Bridge\n04:36PM"
 " PM04:36":
   english: " 4:36PM"
+"ブリッジ PM04:43":
+  english: "Bridge\n04:43PM"
+" PM04:43":
+  english: " 4:43PM"
 "ピポトロンGを倒<たお>せ!➝\n\f新種<しんしゅ>のピポトロンで、まったくデータがありません。➝\n\f何<なに>をしてくるかわかりません。\n慎重<しんちょう>に戦<たたか>ってください。":
   english: "Defeat Pipotron G!➝\n\fThis is a new Pipotron species,\nwe have no data on it.➝\n\fFight carefully, we don't know\nhow it will behave."
+"カケルを倒<たお>せ!➝\n\fカケルの必殺技<ひっさつわざ>は\nメカボーを使<つか>ったものが多<おお>いはずです。\n➝\n\f間合<まあ>いを詰<つ>められたら危険<きけん>です。\n慎重<しんちょう>に戦<たたか>ってください。":
+  english: "Defeat Kakeru!➝\n\fMost of Kakeru's special moves\nuse the MechaBo.➝\n\fFight carefully,it's dangerous\nto get too close."
 ## Virtual Space 01
 "バーチャルスペース01":
   english: "V.R.Space 01"
@@ -542,6 +556,9 @@
 "お台場":
   english: "Odaiba"
 "東京湾<とうきょうわん>に墜落<ついらく>した空中戦艦<くうちゅうせんかん>に向<む>かってください。 危険地帯<きけんちたい>を儀回<うかい>しながら、直<ただ>ちに現場<げんば>に急行<きゅうこう>してください。":
+  english: "Head to the aerial battleship crash site in Tokyo Bay."
+# Episode Kakeru doesn't use the kanji for 直 for some reason
+"東京湾<とうきょうわん>に墜落<ついらく>した空中戦艦<くうちゅうせんかん>に向<む>かってください。 危険地帯<きけんちたい>を儀回<うかい>しながら、ただちに現場<げんば>に急行<きゅうこう>してください。":
   english: "Head to the aerial battleship crash site in Tokyo Bay."
 "お台場 PM05:32":
   english: "Odaiba 05:32PM"
