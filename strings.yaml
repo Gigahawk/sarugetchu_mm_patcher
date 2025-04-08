@@ -1556,6 +1556,8 @@ Gクラッシャー:
 # Saru Book screen
 "新<あたら>しいピポサル情報<じょうほう>が追加<ついか>されました。":
   english: "New monkey intel has been added."
+"新<あたら>しいピポサルとポケピ情報<じょうほう>が追加<ついか>されました。":
+  english: "New monkey and Pokepi intel has been added."
 ## Pre capture
 "不明":
   english: "Not discovered"
