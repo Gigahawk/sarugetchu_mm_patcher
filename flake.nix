@@ -155,7 +155,9 @@
         "096_f2b5553f" # gz/menu_story.13_boss04_gori02.gz
         "097_dcd7b35d" # gz/menu_story.14_elevator_a.gz
         "098_8d3a2011" # gz/menu_story.15_kakeru_spector.gz
+        "099_06143ebb" # gz/menu_story.15_pipo_spector.gz
         "100_5ebb5f0b" # gz/menu_story.16_kakeru_goritron.gz
+        "101_96696a96" # gz/menu_story.16_pipo_kakeru.gz
         "102_7a8e0451" # gz/menu_story.17_city01_vr.gz
         "103_0e36c98a" # gz/menu_story.18_bay01_vr.gz
         "104_dd45c596" # gz/menu_story.19_park01_vr.gz
@@ -210,9 +212,9 @@
         #"679_5fd46f14"
         "681_db175d62" # gz/stage.14_elevator_a.gz
         "683_9ce158f2" # gz/stage.15_kakeru_spector.gz
-        #"685_ad4e55a8"
+        "685_ad4e55a8" # gz/stage.15_pipo_spector.gz
         "687_89e08f98" # gz/stage.16_kakeru_goritron.gz
-        #"689_71a9e042"
+        "689_71a9e042" # gz/stage.16_pipo_kakeru.gz
         "691_cdb2d8bf" # gz/stage.17_city01_vr.gz
         "693_25839e9b" # gz/stage.18_bay01_vr.gz
         "695_306a9905" # gz/stage.19_park01_vr.gz
