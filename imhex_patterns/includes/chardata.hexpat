@@ -54,9 +54,11 @@ struct CharFile {
     CharType char_type;
     u16 char_name[9] [[format("as_hex")]];
     u8 char_null_term;
-    u8 idk_data[0xB14];
+    u8 idk_data[0xAC4];
+    u16 unlocked_costumes;
+    u8 idk_data2[0x4E];
     u16 checksum [[format("as_hex")]];
-    u8 idk_data2[2];
+    u8 idk_data3[2];
 };
 
 struct CharData {
