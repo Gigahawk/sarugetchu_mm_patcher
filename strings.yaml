@@ -155,6 +155,12 @@
 # Character load screen dialogs
 "キャラクターファイルがありません。":
   english: "There is no character file."
+"ストーリーモードでは選択<せんたく>できません。":
+  english: "This character cannot be selected in story mode."
+"このエピソードでは選択<せんたく>できません。":
+  english: "This character cannot be selected for this episode."
+
+
 
 # Mode select screen
 "ストーリーモード":
@@ -666,6 +672,14 @@
 # Mode select screen warnings
 "タイトルに戻<もど>りますか?":
   english: "Return to the Title Screen?"
+
+# Password Entry screen dialogs
+"%\nこのパスワードでよろしいですか?":
+  english: "%\nSubmit this password?"
+"無効<むこう>なパスワードです。 もう一度入力<いちどにゅうりょく>しますか?":
+  english: "Invalid password. Try again?"
+"%が出現<しゅつげん>しました。":
+  english: "Unlocked %."
 
 # Colosseum Mode screen
 "ワールドトーナメント":
@@ -1250,6 +1264,12 @@ Gクラッシャー:
 "結果":
   english: "Results"
 
+# Character edit slot select screen
+"破損領域":
+  english: "Corrupted"
+"このキャラクターファイル%は破損<はそん>しています。\n新<あたら>しくキャラクターファイルを作<つく>り直<なお>しますか?":
+  english: "Character File % is corrupted.\nCreate a new character file?"
+
 
 # Character edit slot select screen warnings
 "キャラクターファイルをロード中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししないでください。":
@@ -1281,14 +1301,27 @@ Gクラッシャー:
 "ハルカ":
   # Apparently known as Helga in the west
   english: "Haruka"
+"ヒロキ":
+  # Known as Jake in the west
+  english: "Hiroki"
+"ダークヒロキ":
+  english: "Dark Hiroki"
 "サルチーム":
   english: "Saru Team"
 "ピポトロン":
   english: "Pipotron"
 "スペクター":
   english: "Specter"
+"ダークスペクター":
+  english: "Dark Specter"
 "ピポトロンG":
   english: "Pipotron G"
+"レジェンド":
+  english: "Legend"
+"ボルケーノ":
+  english: "Volcano"
+"ウイルスチャル":
+  english: "Virus Charu"
 
 # Default character select screen descriptions
 "作成<さくせい>するキャラクターを選<えら>んでください。":
@@ -1514,6 +1547,8 @@ Gクラッシャー:
   english: "Light Armor A"
 "ライトアーマーB":
   english: "Light Armor B"
+"ミドルアーマー":
+  english: "Middle Armor"
 "ホワイトボディ":
   english: "White Body"
 "イエローボディ":
@@ -1552,6 +1587,8 @@ Gクラッシャー:
   english: "A cool black body color."
 "ブルーの戦闘服風<せんとうふくふう>のコスチュームです。":
   english: "A blue combat uniform costume."
+"バージョンアップした戦闘服風<せんとうふくふう>のコスチュームです。":
+  english: "An upgraded combat uniform costume."
 
 # Saru Book screen
 "新<あたら>しいピポサル情報<じょうほう>が追加<ついか>されました。":
@@ -1797,8 +1834,6 @@ Gクラッシャー:
   english: "VS.Pipotron G"
 "ブリッジ切り離し":
   english: "Bridge Escape"
-"ウイルスチャル":
-  english: "Virus Charu"
 "戦艦墜落":
   english: "Battleship Crash"
 "ハルカと遭遇":
