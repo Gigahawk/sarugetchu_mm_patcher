@@ -411,12 +411,26 @@ bitfield CharFileStatus {
     idk3: 5;
 };
 
+struct Loadout {
+    u8 triangle_gadget_idx;
+    u8 circle_gadget_idx;
+    u8 cross_gadget_idx;
+    u8 square_gadget_idx;
+    u8 backpack_gadget_idx;
+};
+
 struct CharFile {
+    // Doesn't seem to do anything? Character still
+    // seems to load as normal even when all set to zero
     u8 idk_header[8];
     CharType char_type;
     TextChar char_name[9];
     u8 char_null_term;
-    u8 idk_data[0x1B];
+    u8 idk_data1;
+    Loadout story_loadout;
+    u8 idk_data2[8];
+    Loadout vs_loadout;
+    u8 idk_data3[8];
     u8 selected_costume;
     // Game limits you to 99 but manually editing in the last 2 seems to work
     // fine
@@ -424,11 +438,11 @@ struct CharFile {
     // TODO: figure out the different types
     u8 powerup_parts_inventory[99];
     ChipType chip_inventory[99];
-    u8 idk_data3;
-    SummonUnlocked summoning_capsules;
     u8 idk_data4;
+    SummonUnlocked summoning_capsules;
+    u8 idk_data5;
     u16 unlocked_costumes;
-    u8 idk_data5[0x2];
+    u8 idk_data6[0x2];
     SaruBookStatus saru_book[0x4C];
     // All bytes prior to this except the last 4 are in this checksum
     // for some reason.
@@ -437,7 +451,7 @@ struct CharFile {
     // file shows up as corrupted.
     u16 checksum [[format("as_hex")]];
     CharFileStatus status;
-    u8 idk_data6;
+    u8 idk_data7;
 };
 
 
