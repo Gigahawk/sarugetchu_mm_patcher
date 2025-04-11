@@ -5,12 +5,304 @@ fn as_hex(u16 value) {
     return std::format("{:X}", value);
 };
 
+// For some reason the checksum calculation skips the last 4 bytes
+#define CKSUM_SIZE 2860
+
+struct TextChar {
+    u16 value;
+} [[sealed, format("textchar_to_char")]];
+
+fn textchar_to_char(TextChar tc) {
+    match (tc.value) {
+        // Numerics
+        (0x9F88): return "1";
+        (0xA088): return "2";
+        (0xA188): return "3";
+        (0xA288): return "4";
+        (0xA388): return "5";
+        (0xA488): return "6";
+        (0xA588): return "7";
+        (0xA688): return "8";
+        (0xA788): return "9";
+        (0xA888): return "0";
+
+        // Capital letters
+        (0xA988): return "A";
+        (0xAA88): return "B";
+        (0xAB88): return "C";
+        (0xAC88): return "D";
+        (0xAD88): return "E";
+        (0xAE88): return "F";
+        (0xAF88): return "G";
+        (0xB088): return "H";
+        (0xB188): return "I";
+        (0xB288): return "J";
+        (0xB388): return "K";
+        (0xB488): return "L";
+        (0xB588): return "M";
+        (0xB688): return "N";
+        (0xB788): return "O";
+        (0xB888): return "P";
+        (0xB988): return "Q";
+        (0xBA88): return "R";
+        (0xBB88): return "S";
+        (0xBC88): return "T";
+        (0xBD88): return "U";
+        (0xBE88): return "V";
+        (0xBF88): return "W";
+        (0xC088): return "X";
+        (0xC188): return "Y";
+        (0xC288): return "Z";
+
+        // Lowercase letters
+        (0xC388): return "a";
+        (0xC488): return "b";
+        (0xC588): return "c";
+        (0xC688): return "d";
+        (0xC788): return "e";
+        (0xC888): return "f";
+        (0xC988): return "g";
+        (0xCA88): return "h";
+        (0xCB88): return "i";
+        (0xCC88): return "j";
+        (0xCD88): return "k";
+        (0xCE88): return "l";
+        (0xCF88): return "m";
+        (0xD088): return "n";
+        (0xD188): return "o";
+        (0xD288): return "p";
+        (0xD388): return "q";
+        (0xD488): return "r";
+        (0xD588): return "s";
+        (0xD688): return "t";
+        (0xD788): return "u";
+        (0xD888): return "v";
+        (0xD988): return "w";
+        (0xDA88): return "x";
+        (0xDB88): return "y";
+        (0xDC88): return "z";
+
+        // Kana
+        (0xDD88): return "あ";
+        (0xDE88): return "い";
+        (0xDF88): return "う";
+        (0xE088): return "え";
+        (0xE188): return "お";
+        (0xE288): return "か";
+        (0xE388): return "き";
+        (0xE488): return "く";
+        (0xE588): return "け";
+        (0xE688): return "こ";
+        (0xE788): return "さ";
+        (0xE888): return "し";
+        (0xE988): return "す";
+        (0xEA88): return "せ";
+        (0xEB88): return "そ";
+        (0xEC88): return "た";
+        (0xED88): return "ち";
+        (0xEE88): return "つ";
+        (0xEF88): return "て";
+        (0xF088): return "と";
+        (0xF188): return "な";
+        (0xF288): return "に";
+        (0xF388): return "ぬ";
+        (0xF488): return "ね";
+        (0xF588): return "の";
+        (0xF688): return "は";
+        (0xF788): return "ひ";
+        (0xF888): return "ふ";
+        (0xF988): return "へ";
+        (0xFA88): return "ほ";
+        (0xFB88): return "ま";
+        (0xFC88): return "み";
+
+        (0x4089): return "む";
+        (0x4189): return "め";
+        (0x4289): return "も";
+        (0x4389): return "や";
+        (0x4489): return "ゆ";
+        (0x4589): return "よ";
+        (0x4689): return "ら";
+        (0x4789): return "り";
+        (0x4889): return "る";
+        (0x4989): return "れ";
+        (0x4A89): return "ろ";
+        (0x4B89): return "わ";
+        (0x4C89): return "を";
+        (0x4D89): return "ん";
+        (0x4E89): return "ー";
+        (0x4F89): return "、";
+        (0x5089): return "。";
+        (0x5189): return "ぁ";
+        (0x5289): return "ぃ";
+        (0x5389): return "ぅ";
+        (0x5489): return "ぇ";
+        (0x5589): return "ぉ";
+        (0x5689): return "が";
+        (0x5789): return "ぎ";
+        (0x5889): return "ぐ";
+        (0x5989): return "げ";
+        (0x5A89): return "ご";
+        (0x5B89): return "ざ";
+        (0x5C89): return "じ";
+        (0x5D89): return "ず";
+        (0x5E89): return "ぜ";
+        (0x5F89): return "ぞ";
+        (0x6089): return "だ";
+        (0x6189): return "ぢ";
+        (0x6289): return "づ";
+        (0x6389): return "で";
+        (0x6489): return "ど";
+        (0x6589): return "っ";
+        (0x6689): return "ば";
+        (0x6789): return "び";
+        (0x6889): return "ぶ";
+        (0x6989): return "べ";
+        (0x6A89): return "ぼ";
+        (0x6B89): return "ぱ";
+        (0x6C89): return "ぴ";
+        (0x6D89): return "ぷ";
+        (0x6E89): return "ぺ";
+        (0x6F89): return "ぽ";
+        (0x7089): return "ゃ";
+        (0x7189): return "ゅ";
+        (0x7289): return "ょ";
+        (0x7389): return "ゎ";
+        //#b"\x89\x74": "　",
+        (0x7489): return " ";
+        (0x7589): return "ァ";
+        (0x7689): return "ア";
+        (0x7789): return "ィ";
+        (0x7889): return "イ";
+        (0x7989): return "ゥ";
+        (0x7A89): return "ウ";
+        (0x7B89): return "ェ";
+        (0x7C89): return "エ";
+        (0x7D89): return "ォ";
+        (0x7E89): return "オ";
+        //# Not a valid token? Prints as ル but probably just a glitch related
+        //# to forcing the game to parse an invalid token
+        //#b"\x89\x7F": "??",
+        (0x8089): return "カ";
+        (0x8189): return "ガ";
+        (0x8289): return "キ";
+        (0x8389): return "ギ";
+        (0x8489): return "ク";
+        (0x8589): return "グ";
+        (0x8689): return "ケ";
+        (0x8789): return "ゲ";
+        (0x8889): return "コ";
+        (0x8989): return "ゴ";
+        (0x8A89): return "サ";
+        (0x8B89): return "ザ";
+        (0x8C89): return "シ";
+        (0x8D89): return "ジ";
+        (0x8E89): return "ス";
+        (0x8F89): return "ズ";
+        (0x9089): return "セ";
+        (0x9189): return "ゼ";
+        (0x9289): return "ソ";
+        (0x9389): return "ゾ";
+        (0x9489): return "タ";
+        (0x9589): return "ダ";
+        (0x9689): return "チ";
+        (0x9789): return "ヂ";
+        (0x9889): return "ッ";
+        (0x9989): return "ツ";
+        (0x9A89): return "ヅ";
+        (0x9B89): return "テ";
+        (0x9C89): return "デ";
+        (0x9D89): return "ト";
+        (0x9E89): return "ド";
+        (0x9F89): return "ナ";
+        (0xA089): return "ニ";
+        (0xA189): return "ヌ";
+        (0xA289): return "ネ";
+        (0xA389): return "ノ";
+        (0xA489): return "ハ";
+        (0xA589): return "バ";
+        (0xA689): return "パ";
+        (0xA789): return "ヒ";
+        (0xA889): return "ビ";
+        (0xA989): return "ピ";
+        (0xAA89): return "フ";
+        (0xAB89): return "ブ";
+        (0xAC89): return "プ";
+        (0xAD89): return "ヘ";
+        (0xAE89): return "ベ";
+        (0xAF89): return "ペ";
+        (0xB089): return "ホ";
+        (0xB189): return "ボ";
+        (0xB289): return "ポ";
+        (0xB389): return "マ";
+        (0xB489): return "ミ";
+        (0xB589): return "ム";
+        (0xB689): return "メ";
+        (0xB789): return "モ";
+        (0xB889): return "ャ";
+        (0xB989): return "ヤ";
+        (0xBA89): return "ュ";
+        (0xBB89): return "ユ";
+        (0xBC89): return "ョ";
+        (0xBD89): return "ヨ";
+        (0xBE89): return "ラ";
+        (0xBF89): return "リ";
+        (0xC089): return "ル";
+        (0xC189): return "レ";
+        (0xC289): return "ロ";
+        (0xC389): return "ヮ";
+        (0xC489): return "ワ";
+        (0xC589): return "ヲ";
+        (0xC689): return "ン";
+        (0xC789): return "ヴ";
+        (0xC889): return "ヵ";
+        (0xC989): return "ヶ";
+
+        // Punctuation and special chars
+        // Playstation button symbols, no real match with Unicode
+        // but these should be pretty close
+        (0xCA89): return "○";
+        (0xCB89): return "Χ";
+        (0xCC89): return "□";
+        (0xCD89): return "△";
+        (0xCE89): return "!";
+        (0xCF89): return "?";
+        (0xD089): return "(";
+        (0xD189): return ")";
+        (0xD289): return "*";
+        (0xD389): return "+";
+        (0xD489): return "-";
+        (0xD589): return "&";
+        (0xD689): return "@";
+        (0xD789): return "⋅";
+        (0xD889): return ".";
+        (0xD989): return ":";
+        (0xDA89): return "^";
+        (0xDB89): return "_";
+        (0xDC89): return "ω";
+        (0xDD89): return "Д";
+        (0xDE89): return "∀";
+        (0xDF89): return "⊃";
+        (0xE089): return "♂";
+        (0xE189): return "♀";
+        (0xE289): return "♪";
+        // Not sure which of these is correct
+        //b"\x89\xE3": "~",
+        (0xE389): return "〜";
+        (0xE489): return "➝";
+
+        (0x0000): return "\\x00";
+
+        (_): return std::format("?? ({:04X})", tc.value);
+    }
+};
+
 enum CharType: u8 {
     KAKERU = 0,
     PROFESSOR = 1,
     NATSUMI = 2,
     CHARU = 3,
-    HELGA = 4,
+    HARUKA = 4,
     // Saru/Pipotron Team has multiple members, but save
     // files seem to always use the first value.
     // If you edit the save to be another value,
@@ -49,17 +341,105 @@ enum CharType: u8 {
     // Values beyond this seem to just cause crashes
 };
 
+enum ChipType: u8 {
+    MAGNESIUM = 0,
+    GERMANIUM = 1,
+    COBALT = 2,
+    CADMIUM = 3,
+    ZIRCONIUM = 4,
+    NOBELLIUM = 5,
+    TELLURIUM = 6,
+    NIOBIUM = 7,
+    NEODYMIUM = 8,
+    ASTATINE = 9,
+    ERBIUM = 10,
+    XENON = 11,
+    BISMUTH = 12,
+    FERMIUM = 13,
+    PROMETHIUM = 14,
+    BERYLLIUM = 15,
+    HOLMIUM = 16,
+    RUTHENIUM = 17,
+
+    END_MARKER = 0xFF,
+};
+
+bitfield SaruBookStatus {
+    new_unseen: 1;
+    new_seen: 1;
+    caught: 1;
+    unknown: 5;
+};
+
+bitfield SummonUnlocked {
+    monta: 1;
+    hattori_monzo: 1;
+    tutanchimp: 1;
+    monkey_pink: 1;
+    samui: 1;
+    monki_san: 1;
+    edison: 1;
+    monkey_red: 1;
+    afro: 1;
+    pumpkin: 1;
+    salus_monkey: 1;
+    miyamoto: 1;
+    wakkie: 1;
+    pierre: 1;
+    jun: 1;
+    suzuki: 1;
+    ricky: 1;
+    toro: 1;
+    unknown: 6;
+};
+
+struct Gadget {
+    TextChar gadget_name[9];
+    u8 idkdata1[2];
+    u8 item_type;
+    u8 slots[3];
+    // Prevents deletion when inventory is full
+    u8 default_item;
+};
+
+bitfield CharFileStatus {
+    idk1: 1;
+    // Always set on created files
+    file_exists: 1;
+    // This is sometimes set?
+    idk2: 1;
+    idk3: 5;
+};
+
 struct CharFile {
     u8 idk_header[8];
     CharType char_type;
-    u16 char_name[9] [[format("as_hex")]];
+    TextChar char_name[9];
     u8 char_null_term;
-    u8 idk_data[0xAC4];
+    u8 idk_data[0x1B];
+    u8 selected_costume;
+    // Game limits you to 99 but manually editing in the last 2 seems to work
+    // fine
+    Gadget gadgets[101];
+    // TODO: figure out the different types
+    u8 powerup_parts_inventory[99];
+    ChipType chip_inventory[99];
+    u8 idk_data3;
+    SummonUnlocked summoning_capsules;
+    u8 idk_data4;
     u16 unlocked_costumes;
-    u8 idk_data2[0x4E];
+    u8 idk_data5[0x2];
+    SaruBookStatus saru_book[0x4C];
+    // All bytes prior to this except the last 4 are in this checksum
+    // for some reason.
+    // If both checksum and status are zero, file is not read
+    // (shows up as free slot). If checksum is wrong or only status is zero,
+    // file shows up as corrupted.
     u16 checksum [[format("as_hex")]];
-    u8 idk_data3[2];
+    CharFileStatus status;
+    u8 idk_data6;
 };
+
 
 struct CharData {
     CharFile files[32];
