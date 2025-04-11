@@ -1864,6 +1864,12 @@ Gクラッシャー:
 # Gadget Lab screen warnings
 "合成<ごうせい>に必要<ひつよう>なチップがありません。":
   english: "Nothing can be synthesized with\nchips currently in inventory."
+"%がいっぱいです。\n%を手<て>に入<い>れるには持<も>っている\n%をどれか1つ削除<さくじょ>しなければいけません。\n%を削除<さくじょ>しますか?":
+  english: "% inventory is full.\nTo obtain % you must\ndelete something from %.\nIs this OK?"
+"チップ合成<ごうせい>で作成<さくせい>した\n%は手<て>に入<はい>りませんがよろしいですか?":
+  english: "You won't obtain %,\nis this OK?"
+"%を本当<ほんとう>に削除<さくじょ>しますか?":
+  english: "Delete %?"
 
 # Gadget Lab screen descriptions
 "レシピを選<えら>んで合成<ごうせい>します。":
