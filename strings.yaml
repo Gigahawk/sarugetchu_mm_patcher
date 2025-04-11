@@ -1533,10 +1533,25 @@ Gクラッシャー:
 ### Pipotron G
 "スペシャルモード":
   english: "SpclMode"
+# Menu items
+"パーツスロットα":
+  english: "Parts Slot α"
+"パーツスロットβ":
+  english: "Parts Slot β"
+"パーツスロットγ":
+  english: "Parts Slot γ"
+"なまえへんこう":
+  english: "Change Name"
 
 # Power Up Parts screen descriptions
 "パワーアップパーツをセットするガチャメカを選<えら>んでください。":
   english: Please select the gadget to set power up parts on.
+"パワーアップパーツをセットするパーツスロットを選<えら>んでください。":
+  english: "Select the part slot to set."
+"パワーアップパーツをセットするガチャメカ選択<せんたく>に戻<もど>ります。":
+  english: "Return to selecting a gadget to apply power up parts to."
+"パーツスロット選択<せんたく>に戻<もど>ります。":
+  english: "Return to parts slot selection."
 
 # Costumes screen
 "ノーマル":
