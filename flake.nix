@@ -906,6 +906,9 @@
           pkgs.imhex
           pkgs.rsbkb  # bgrep
           pkgs-clps2c.clps2c-compiler
+          # construct-editor dependencies
+          pkgs.gtk3
+          pkgs.pkg-config
         ];
         shellHook = ''
           export FONTCONFIG_FILE=${fontconfig_file}
