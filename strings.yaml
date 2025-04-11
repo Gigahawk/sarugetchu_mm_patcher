@@ -1595,6 +1595,11 @@ Gクラッシャー:
   english: "New monkey intel has been added."
 "新<あたら>しいピポサルとポケピ情報<じょうほう>が追加<ついか>されました。":
   english: "New monkey and Pokepi intel has been added."
+"新<あたら>しいポケピ情報<じょうほう>が追加<ついか>されました。":
+  english: "New Pokepi intel has been added."
+"ポケピ召喚<しょうかん>をゲットしました。":
+  english: "Acquired this Pokepi summon"
+
 ## Pre capture
 "不明":
   english: "Not discovered"
@@ -1884,6 +1889,15 @@ Gクラッシャー:
   english: "Build costumes"
 "合成<ごうせい>メニューに戻<もど>ります。":
   english: "Return to the gadget lab."
+"合成中<ごうせいちゅう>⋅⋅⋅":
+  english: "Synthesizing..."
+"合成<ごうせい>が終<お>わりました。":
+  english: "Synthesis complete."
+
+# Gadget Lab Recipe screen dialogs
+"合成<ごうせい>に成功<せいこう>しました。\n%を手<て>に入<い>れました。":
+  english: "Synthesis successful.\nObtained %."
+
 
 # Gadget Lab Free screen
 "チップ1":
@@ -1916,6 +1930,8 @@ Gクラッシャー:
 # Move Chips screen warnings
 "同<おな>じキャラクターにチップムーブはできません。":
   english: "Can't move chips to the same\ncharacter."
+"%はチップがいっぱいです!\n%をムーブするには持<も>っているチップを\nどれか1つ削除<さくじょ>しなくてはいけません。\nチップを削除<さくじょ>しますか?":
+  english: "%'s chip inventory is full!\nYou must delete a chip first to move the %.\nDelete a chip?"
 
 # Move Chips screen dialogs
 "%の%を%へムーブします。\nよろしいですか?":
