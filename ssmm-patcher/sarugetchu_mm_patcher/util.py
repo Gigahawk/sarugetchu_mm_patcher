@@ -1,5 +1,6 @@
 from dataclasses import dataclass
-from collections.abc import Buffer
+# Not available in python 3.10
+#from collections.abc import Buffer
 import string
 from typing import Any, Pattern
 from math import ceil
@@ -59,7 +60,7 @@ class TrackedByteArray(bytearray):
 
     def find_all(
         self,
-        sub: Buffer,
+        sub: bytes | bytearray,
         start: int=0,
         end: int | None = None
     ) -> list[int]:
@@ -76,7 +77,9 @@ class TrackedByteArray(bytearray):
                 break
         return out
 
-    def replace_in_place(self, old: Buffer, new: Buffer, count: int=-1):
+    def replace_in_place(
+        self, old: bytes | bytearray, new: bytes | bytearray, count: int=-1
+    ):
         if not old:
             raise ValueError(f"Cannot match nil substring {old}")
         idx = 0

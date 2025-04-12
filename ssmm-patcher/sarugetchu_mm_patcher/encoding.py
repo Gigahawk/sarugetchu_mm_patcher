@@ -3,6 +3,9 @@ import sarugetchu_mm_patcher.util as util
 
 # Presumably these encodings never change
 BYTES_TO_CHAR_SPECIAL = {
+    # Null term
+    b"\x00": "\x00",
+
     # Angle brackets as furigana markers
     # TODO: this should really be square brackets [ ]
     b"\x5B": "<",
@@ -6790,9 +6793,9 @@ class EncodingTranslator:
                 idx += 1
                 continue
             raise ValueError(
-                f"Got invalid byte or token. "
+                "Got invalid byte or token. "
                 f"Byte: {byte.hex()}, Token: {token.hex()} "
-                f"String: {string.hex(sep=" ")}"
+                f"String: {string.hex(sep=' ')}"
             )
         return out
 
