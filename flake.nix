@@ -733,8 +733,9 @@
 
           buildPhase = ''
             echo "${resourceFilesStr}" | \
-              xargs -P $NIX_BUILD_CORES -I {} bash -c '
+              xargs -P "$NIX_BUILD_CORES" -I {} bash -c '
                 name="{}"
+                echo "Patching $name"
                 ssmm-patcher patch-font \
                   -o "{}" \
                   "${self.packages.${system}.data-jp-extracted}/DATA1/070_00940549" \

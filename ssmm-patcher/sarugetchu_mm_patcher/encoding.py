@@ -569,7 +569,7 @@ BYTES_TO_CHAR_DEFAULT = {
     b"\x8B\x61": "岸",
     b"\x8B\x62": "岩",
     b"\x8B\x63": "眼",
-    b"\x8B\x64": "??",
+    b"\x8B\x64": "頑",
     b"\x8B\x65": "顔",
     b"\x8B\x66": "願",
     b"\x8B\x67": "企",
@@ -1653,7 +1653,7 @@ BYTES_TO_CHAR_DEFAULT = {
     b"\x90\xE7": "天",
     b"\x90\xE8": "展",
     b"\x90\xE9": "店",
-    b"\x90\xEA": "??",
+    b"\x90\xEA": "添",
     b"\x90\xEB": "点",
     b"\x90\xEC": "転",
     b"\x90\xED": "伝",
@@ -2584,12 +2584,12 @@ BYTES_TO_CHAR_DEFAULT = {
     b"\x95\xD4": "/",
     b"\x95\xD5": "'",
     b"\x95\xD6": "\"",  # Is this ever used? seems to show up inside a typo (ID df da 2e a2)
-    b"\x95\xD7": "??",  # This is a % sign but we're using it as a placeholder character, TODO find a new one I guess
+    b"\x95\xD7": "％",  # Use full width % sign to avoid conflict
     b"\x95\xD8": "儀",
-    b"\x95\xD9": "??",
-    b"\x95\xDA": "隕",
-    b"\x95\xDB": "??",
-    b"\x95\xDC": "??",
+    b"\x95\xD9": "冑",
+    b"\x95\xDA": "鎧",
+    b"\x95\xDB": "「",
+    b"\x95\xDC": "」",
     b"\x95\xDD": "掴",
     b"\x95\xDE": "閃",
     b"\x95\xDF": "填",
@@ -6628,6 +6628,12 @@ BYTES_TO_CHAR_MINIMAL = {
     b"\x88\xF8": "ァ",
     b"\x88\xF9": "'",
     b"\x88\xFA": "\"",
+    b"\x88\xFB": "α",
+    b"\x88\xFC": "β",
+    b"\x89\x40": "γ",  # Lower case gamma
+    b"\x89\x41": "/",
+    b"\x89\x42": "％",  # Use full width % sign to avoid conflict
+    b"\x89\x43": "儀",
 }
 
 ENCODING_MAP = {

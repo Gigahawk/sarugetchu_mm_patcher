@@ -364,6 +364,84 @@ enum ChipType: u8 {
     END_MARKER = 0xFF,
 };
 
+enum KakeruCostume: u8 {
+    DEFAULT = 0,
+    LIGHT_ARMOR_A = 1,
+    LIGHT_ARMOR_B = 2,
+    HEAVY_ARMOR = 3,
+    MILITARY_SET = 4,
+    DARK_FASHION = 5,
+    SECOND_FASHION = 6,
+    HISTORICAL_ARMOR = 7,
+    SAMURAI_SET = 8,
+    BUSINESSMAN_SET = 9,
+    GUNMAN_SET = 10,
+    DANCER_SET = 11,
+    EMPTY = 12,
+    TORO_COSTUME = 13,
+    SARU_KAKERU_A = 14,
+    SARU_KAKERU_B = 15,
+};
+
+enum ProfessorCostume: u8 {
+    DEFAULT = 0,
+    LIGHT_ARMOR_A = 1,
+    LIGHT_ARMOR_B = 2,
+    HEAVY_ARMOR = 3,
+    MILITARY_SET = 4,
+    DARK_FASHION = 5,
+    SECOND_FASHION = 6,
+    HISTORICAL_ARMOR = 7,
+    LORD_SET = 8,
+    SANTA_SET = 9,
+    SHERIFF_SET = 10,
+    DETECTIVE_SET = 11,
+    EMPTY = 12,
+    TORO_COSTUME = 13,
+    INVALID1 = 14,
+    INVALID2 = 15,
+};
+
+enum NatsumiCostume: u8 {
+    DEFAULT = 0,
+    LIGHT_ARMOR_A = 1,
+    LIGHT_ARMOR_B = 2,
+    HEAVY_ARMOR = 3,
+    MILITARY_SET = 4,
+    DARK_FASHION = 5,
+    SECOND_FASHION = 6,
+    HISTORICAL_ARMOR = 7,
+    NINJA_SET = 8,
+    REINDEER_SET = 9,
+    COWGIRL_SET = 10,
+    RED_JERSEY_SET = 11,
+    EMPTY = 12,
+    TORO_COSTUME = 13,
+    INVALID1 = 14,
+    INVALID2 = 15,
+};
+
+enum CharuCostume: u8 {
+    DEFAULT = 0,
+    LIGHT_ARMOR_A = 1,
+    LIGHT_ARMOR_B = 2,
+    HEAVY_ARMOR = 3,
+    MILITARY_SET = 4,
+    DARK_FASHION = 5,
+    SECOND_FASHION = 6,
+    HISTORICAL_ARMOR = 7,
+    TOWN_GIRL_SET = 8,
+    SHEEP_SET = 9,
+    DEVIL_SET = 10,
+    MAGICAL_GIRL_SET = 11,
+    EMPTY = 12,
+    TORO_COSTUME = 13,
+    INVALID1 = 14,
+    INVALID2 = 15,
+};
+
+
+
 bitfield SaruBookStatus {
     new_unseen: 1;
     new_seen: 1;
@@ -431,7 +509,13 @@ struct CharFile {
     u8 idk_data2[8];
     Loadout vs_loadout;
     u8 idk_data3[8];
-    u8 selected_costume;
+    match (char_type) {
+        (CharType::KAKERU): KakeruCostume equipped_costume;
+        (CharType::PROFESSOR): ProfessorCostume equipped_costume;
+        (CharType::NATSUMI): NatsumiCostume equipped_costume;
+        (CharType::CHARU): CharuCostume equipped_costume;
+        (_): u8 equipped_costume;
+    }
     // Game limits you to 99 but manually editing in the last 2 seems to work
     // fine
     Gadget gadgets[101];

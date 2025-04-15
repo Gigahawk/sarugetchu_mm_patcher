@@ -1554,16 +1554,187 @@ Gクラッシャー:
   english: "Return to parts slot selection."
 
 # Costumes screen
+## Normal
 "ノーマル":
   english: "Default"
+"お気<き>に入<い>りの服<ふく>です。 ":  # There's randomly a space at the end of this one
+  # Kakeru's default
+  english: "My favorite outfit."
+"いつものジャケットとジーンズです。":
+  # Natsumi's default
+  english: "My usual jacket and jeans."
+"いつもの白衣<はくい>です。":
+  # Professor's default
+  english: "My usual lab coat."
+"お気<き>に入<い>りの白<しろ>のキャミソールです。":
+  # Charu's default
+  english: "My favorite white camisole."
+"いつもの服<ふく>です。":
+  # Haruka's default
+  english: "My usual outfit."
+"いつものパンツいっちょうです。":
+  # Saru Team's default
+  english: "My usual pants."
+"いつものマントとブーツのコスチュームです。":
+  # Specter's default
+  english: "My usual cloak and boots costume."
+"ノーマルな白<しろ>いボディカラーです。":
+  # Pipotron G's default
+  english: "The normal white body color."
 "ライトアーマー":
   english: "Light Armor"
+## Light Armor A
 "ライトアーマーA":
   english: "Light Armor A"
+"ゴーグル付<つ>きのブルーの戦闘服風<せんとうふくふう>のコスチュームです。":
+  english: "A blue combat uniform costume with goggles."
+## Light Armor B
 "ライトアーマーB":
   english: "Light Armor B"
+"ブルーの戦闘服風<せんとうふくふう>のコスチュームです。":
+  english: "A blue combat uniform costume."
+## Middle Armor
 "ミドルアーマー":
   english: "Middle Armor"
+## Heavy Armor
+"ヘビーアーマー":
+  english: "Heavy Armor"
+"頑丈<がんじょう>そうなアーマー風<ふう>のコスチュームです。":
+  english: "A sturdy armor-like costume."
+## Military Set
+"ミリタリーセット":
+  english: "Military Set"
+"迷彩模様<めいさいもよう>の軍隊風<ぐんたいふう>コスチュームです。":
+  english: "A camouflaged military style costume."
+## Dark Fashion
+"ダークファッション":
+  english: "Dark Fashion"
+"ワルなふんいきを漂<ただよ>わせる黒<くろ>づくめの服<ふく>です。":
+  english: "Dressed in all black, giving off a bad boy vibe."
+"ワルなふんいきを漂<ただよ>わせる派手<はで>な衣装<いしょう>です。":
+  english: "A flashy costume giving off a bad girl vibe."
+"クールな全身<ぜんしん>ブラックのコスチュームです。":
+  english: "A cool all black costume."
+## Second Fashion
+"セカンドファッション":
+  english: "2nd Choice"
+"二番目<にばんめ>にお気<き>に入<い>りの服<ふく>です。":
+  english: "My second favorite outfit."
+"白衣<はくい>のほかに唯一持<ゆいいつも>っている外出着<がいしゅつぎ>です。":
+  english: "The only outfit I own besides my lab coat."
+"ナツミにしては珍<めずら>しい女<おんな>の子<こ>らしい衣服<いふく>です。":
+  english: "A girly outfit, rare for Natsumi."
+"おしゃれなキャメルのハーフコートです。":
+  english: "A stylish camel half coat."
+"お気<き>に入<い>りのワンピースです。":
+  english: "My favorite dress."
+## Historical Armor
+"ヒストリカルアーマー":
+  english: "Historical Armor"
+"中世<ちゅうせい>の騎土<きし>の甲冑<かっちゅう>です。":
+  english: "A medieval knight's armor."
+"中世<ちゅうせい>の騎土風<きしふう>の甲冑<かっちゅう>です。":
+  english: "A medieval knight's armor."
+"北欧<ほくおう>のバイキングの格好<かっこう>です。":
+  english: "A Nordic Viking outfit."
+"中世<ちゅうせい>の騎土風<きしふう>のコスチュームです。":
+  english: "A medieval knight costume."
+## Samurai Set
+"サムライセット":
+  english: "Samurai Set"
+"日本<にほん>の鎧武者<よろいむしゃ>の格好<かっこう>です。":
+  english: "Dressed as a Japanese warrior."
+## Tonosama (殿様, feudal lord) Set
+"トノサマセット":
+  english: "Lord Set"
+"日本<にほん>のトノサマの格好<かっこう>です。":
+  english: "Dressed as a Japanese lord."
+## Kunoichi (くノ一, 女, female ninja) Set
+"クノイチセット":
+  english: "Ninja Set"
+"女忍者<おんなにんじゃ>、クノイチの格好<かっこう>です。":
+  english: "Dressed as a ninja."
+## Machimusume (町娘, town girl) Set
+"マチムスメセット":
+  english: "Town Girl Set"
+"おてんばマチムスメ風<ふう>のコスチュームです。":
+  english: "A tomboyish costume."
+## Santa Set
+"サンタセット":
+  english: "Santa Set"
+"サンタクロースの衣装<いしょう>です。":
+  english: "A Santa Claus costume."
+## Tonakai (馴鹿, reindeer) Set
+"トナカイセット":
+  english: "Reindeer Set"
+"サンタに付<つ>き添<そ>うトナカイの着<き>ぐるみです。":
+  english: "A reindeer costume to go with Santa."
+## Hitsuji (羊, sheep) Set
+"ヒツジセット":
+  english: "Sheep Set"
+"ウール100％のひつじさんのコスチュームです。":
+  english: "This sheep costume is made of 100％ wool."
+## Businessman Set
+"ビジネスマンセット":
+  english: "Business Set"
+"スーツとネクタイは男<おとこ>の戦闘服<せんとうふく>です。":
+  english: "A suit and tie is a man's battle attire."
+## Gunman Set
+"ガンマンセット":
+  english: "Cowboy Set"
+"西部劇風<せいぶげきふう>の衣装<いしょう>です。":
+  english: "A western style costume."
+## Western Sheriff Set
+"ウェスタンシェリフセット":
+  english: "Sheriff Set"
+"西部劇風<せいぶげきふう>の保安官<ほあんかん>の衣装<いしょう>です。":
+  english: "A western style sheriff costume."
+## Cowgirl Set
+"カウガールセット":
+  english: "Cowgirl Set"
+## Koakuma (小悪魔, little devil) Set
+"コアクマセット":
+  # The other definition is apparently (young) seductress/temptress, which
+  # seems inappropriate for a childrens game?
+  english: "Devil Set"
+"キュートな小悪魔風<こあくまふう>のコスチューム。翼<つばさ>はダミーです。":
+  english: "A cute little devil costume. The wings are fake."
+## Dancer Set
+"ダンサーセット":
+  english: "Disco Set"
+"巨大<きょだい>なアフロは一流<いちりゅう>ダンサーの証<あかし>です。":
+  english: "A huge afro is the mark of a top dancer."
+## Metantei (名探偵, detective) Set
+"メイタンテイセット":
+  english: "Detective Set"
+"どこかで見<み>たような名探偵<めいたんてい>の衣装<いしょう>です。":
+  english: "A detective costume I feel like I've seen before."
+## Red Jersey Set
+"アカジャージセット":
+  english: "Red Jersey Set"
+"真<ま>っ赤<か>なジャージとメガネは知性<ちせい>の証<あかし>です。":
+  english: "The bright red jersey and glasses are a sign of intelligence."
+## Majokko (魔女っ子, magical girl) Set
+"マジョッコセット":
+  english: "Magical Girl Set"
+"ピンクの魔法少女風<まほうしょうじょふう>のコスチュームです。":
+  english: "A pink magical girl costume."
+## Empty (pretty sure this is meant to be unused?)
+"空き":
+  english: "Empty"
+## Toro Costume
+"トロコスチューム":
+  english: "Toro"
+"「ニャ」を思<おも>わず語尾<ごび>に付<つ>けたくなる不思議<ふしぎ>なコスチュームです。":
+  english: 'A strange costume that makes you want to add "nya" to the end of your sentences.'
+## Saru Kakeru A
+"サルカケルA":
+  english: "Monkey Kakeru A"
+"これを着<き>ればピポサルになれる!? きっとサル達<たち>も仲間<なかま>と思<おも>うはず⋅⋅⋅":
+  english: "Wear this and become a monkey! I'm sure the monkeys will see you as a friend."
+## Saru Kakeru B
+"サルカケルB":
+  english: "Monkey Kakeru B"
 "ホワイトボディ":
   english: "White Body"
 "イエローボディ":
@@ -1574,34 +1745,12 @@ Gクラッシャー:
   english: "Black Body"
 
 # Costumes screen descriptions
-"お気<き>に入<い>りの服<ふく>です。 ":  # There's randomly a space at the end of this one
-  # Kakeru's default
-  english: "My favorite outfit."
-"いつものジャケットとジーンズです。":
-  # Natsumi's default
-  english: "My usual jacket and jeans."
-"いつもの白衣<はくい>です。":
-  # Professor's default
-  english: "My usual white coat."
-"お気<き>に入<い>りの白<しろ>のキャミソールです。":
-  # Charu's default
-  english: "My favorite white camisole."
-"いつものパンツいっちょうです。":
-  # Saru Team's default
-  english: "My usual pants."
-"いつものマントとブーツのコスチュームです。":
-  english: "My usual cloak and boots costume."
-"ノーマルな白<しろ>いボディカラーです。":
-  # Pipotron G's default
-  english: "The normal white body color."
 "ファンキーな黄色<きいろ>いボディカラーです。":
   english: "A funky yellow body color."
 "燃<も>えるような赤<あか>のボディカラーです。":
   english: "A hot red body color."
 "クールな黒<くろ>いボディカラーです。":
   english: "A cool black body color."
-"ブルーの戦闘服風<せんとうふくふう>のコスチュームです。":
-  english: "A blue combat uniform costume."
 "バージョンアップした戦闘服風<せんとうふくふう>のコスチュームです。":
   english: "An upgraded combat uniform costume."
 
