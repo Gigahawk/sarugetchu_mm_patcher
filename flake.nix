@@ -3,8 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    # Pin to 1.8.5
-    nixpkgs-poetry.url = "github:nixos/nixpkgs?ref=093b0011a26c639de5586a6eb64fb95e7858e733";
     flake-utils.url = "github:numtide/flake-utils";
     poetry2nix.url = "github:nix-community/poetry2nix";
     ps2str.url = "github:Gigahawk/ps2str-nix";
@@ -18,7 +16,6 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-poetry,
     flake-utils,
     poetry2nix,
     ps2str,
@@ -31,7 +28,6 @@
     flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
-      pkgs-poetry = import nixpkgs-poetry { inherit system; };
       pkgs-clps2c = import nixpkgs-clps2c { inherit system; };
       mm-jp-iso = (pkgs.requireFile {
         name = "mm.iso";
@@ -286,7 +282,6 @@
       packages = {
         ssmm-patcher = mkPoetryApplication {
           projectDir = ./ssmm-patcher;
-          python = pkgs.python310;
           overrides = defaultPoetryOverrides.extend
             (self: super: {
               ps2isopatcher = super.ps2isopatcher.overridePythonAttrs
@@ -294,52 +289,6 @@
                 old: {
                   buildInputs = (old.buildInputs or [ ]) ++ [
                     super.poetry
-                  ];
-                }
-              );
-              click = super.click.overridePythonAttrs
-              (
-                old: {
-                  buildInputs = (old.buildInputs or [ ]) ++ [
-                    super.flit-core
-                  ];
-                }
-              );
-              typing-extensions = super.typing-extensions.overridePythonAttrs
-              (
-                old: {
-                  # HACK: flit-core throws an error when parsing the license for some reason
-                  postPatch = ''
-                    substituteInPlace pyproject.toml --replace "license =" "#license ="
-                  '';
-                }
-              );
-              construct-typing = super.construct-typing.overridePythonAttrs
-              (
-                old: {
-                  buildInputs = (old.buildInputs or [ ]) ++ [
-                    super.setuptools
-                  ];
-                }
-              );
-              construct-editor = super.construct-editor.overridePythonAttrs
-              (
-                old: {
-                  buildInputs = (old.buildInputs or [ ]) ++ [
-                    super.setuptools
-                  ];
-                }
-              );
-              wxpython = super.wxpython.overridePythonAttrs
-              (
-                old: {
-                  buildInputs = (old.buildInputs or [ ]) ++ [
-                    super.setuptools
-                    super.attrdict
-                  ];
-                  nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [
-                    # This is needed for some reason
-                    super.sip
                   ];
                 }
               );
@@ -949,8 +898,7 @@
           ssmm-mux.packages.${system}.default
           ps2str.packages.${system}.default
           #bgrep.packages.${system}.default
-          pkgs.python310
-          pkgs-poetry.poetry
+          pkgs.poetry
           pkgs.ffmpeg
           pkgs.openai-whisper
           pkgs.dos2unix
@@ -958,19 +906,9 @@
           pkgs.imhex
           pkgs.rsbkb  # bgrep
           pkgs-clps2c.clps2c-compiler
-
-          # For wxpython
-          pkgs.pkg-config
-          pkgs.gtk3
         ];
         shellHook = ''
-          # HACK: for ffmpeg
           export FONTCONFIG_FILE=${fontconfig_file}
-
-          # HACK: for wxPython, really need to figure out how to get this into
-          # the main package or something
-          export GSETTINGS_SCHEMA_DIR=${pkgs.glib.getSchemaPath pkgs.gtk3}
-
         '';
       };
     });
