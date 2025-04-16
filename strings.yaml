@@ -1578,16 +1578,89 @@ Gクラッシャー:
 "いつものマントとブーツのコスチュームです。":
   # Specter's default
   english: "My usual cloak and boots costume."
-"ノーマルな白<しろ>いボディカラーです。":
-  # Pipotron G's default
-  english: "The normal white body color."
+## Light Armor
 "ライトアーマー":
   english: "Light Armor"
+## Black Fur
+"ブラックファー":
+  english: "Black Fur"
+"いつものファー。":
+  english: "My usual fur."
+## Blue Jacket
+"ブルージャケット":
+  english: "Blue Jacket"
+"いつも着<き>ているお気<お>に入<い>りのジャケット。":
+  english: "My favorite jacket."
+## Dark Hair
+"ダークヘアー":
+  english: "Dark Hair"
+"全身<ぜんしん>が黒<くろ>く、いかにも悪<わる>そうなふんいきです。":
+  english: "His entire body is black, giving him an evil aura."
+## Dark Style
+"ダークスタイル":
+  english: "Dark Style"
+## White Body
+"ホワイトボディ":
+  english: "White Body"
+"ノーマルな白<しろ>いボディカラーです。":
+  english: "My usual white fur."
+## Black Robe
+"ブラックローブ":
+  english: "Black Robe"
+"いつもの黒<くろ>いローブです。":
+  english: "My usual black robe."
+## Red Armor
+"レッドアーマー":
+  english: "Red Armor"
+"炎<ほのお>をイメージした自作<じさく>のアーマーです。":
+  english: "Homemade armor inspired by flames."
+## Green Style
+"グリーンスタイル":
+  english: "Green Style"
+"ウイルスに感染<かんせん>し変異<へんい>したチャル。":
+  english: "Charu has been infected with a virus and mutated."
 ## Light Armor A
 "ライトアーマーA":
   english: "Light Armor A"
 "ゴーグル付<つ>きのブルーの戦闘服風<せんとうふくふう>のコスチュームです。":
   english: "A blue combat uniform costume with goggles."
+## Purple Fur
+"パープルファー":
+  english: "Purple Fur"
+"ファーをむらさきに染<そ>めてみた。 脱色<だっしょく>は怖<こわ>かったのでカラーペイントしているだけなので洗<あら>えば落<お>ちる。":
+  english: "I dyed my fur purple.I was afraid of bleaching it, so I just painted it on, so it will come off if you wash it."
+## Red Jacket
+"レッドジャケット":
+  english: "Red Jacket"
+"真<ま>っ赤<か>なジャケット。 ついでに頭<あたま>も赤<あか>く決<き>めてみました。":
+  english: "A bright red jacket.I also decided dye my hair red."
+## Gold Hair
+"ゴールドヘアー":
+  english: "Gold Hair"
+"どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>が金色<きんいろ>です。":
+  english: "It's unclear how he got here,but his hair is golden."
+## Purple Style
+"パープルスタイル":
+  english: "Purple Style"
+"全身<ぜんしん>がむらさきに変色<へんしょく>したダークスペクター。":
+  english: "A purple Dark Specter."
+"むらさきイモの焼<や>きイモを食<た>べているときに襲<おそ>われウイルス感染<かんせん>するときに焼<や>きイモの影響<えいきょう>をうけ変異<へんい>したチャル。":
+  english: "While eating roasted sweet potatoes,Charu was attacked and infected with a virus, causing her to mutate to look like a sweet potato."
+## Yellow Body
+"イエローボディ":
+  english: "Yellow Body"
+"ファンキーな黄色<きいろ>いボディカラーです。":
+  english: "A funky yellow body color."
+## Yellow Robe
+"イエローローブ":
+  english: "Yellow Robe"
+"砂漠仕様<さばくしよう>の黄色<きいろ>いローブです。":
+  english: "A yellow desert robe."
+## Green Armor
+"グリーンアーマー":
+  english: "Green Armor"
+"森<もり>をイメージした自作<じさく>のアーマーです。":
+  english: "Homemade armor inspired by the forest."
 ## Light Armor B
 "ライトアーマーB":
   english: "Light Armor B"
@@ -1596,11 +1669,89 @@ Gクラッシャー:
 ## Middle Armor
 "ミドルアーマー":
   english: "Middle Armor"
+"バージョンアップした戦闘服風<せんとうふくふう>のコスチュームです。":
+  english: "An upgraded combat uniform costume."
+## Blue Fur
+"ブルーファー":
+  english: "Blue Fur"
+"ファーを青<あお>に染<そ>めてみた。 脱色<だっしょく>は怖<こわ>かったのでカラーペイントしているだけなので洗<あら>えば落<お>ちる。":
+  english: "I dyed my fur blue.I was afraid of bleaching it, so I just painted it on, so it will come off if you wash it."
+## Yellow Jacket
+"イエロージャケット":
+  english: "Yellow Jacket"
+"落<お>ち着<つ>いた色<いろ>のジャケット。 大人<おとな>びた感<かん>じが漂<ただよ>っている?":
+  english: "A jacket in a muted color.Does it give off a mature vibe?"
+## Green Hair
+"グリーンヘアー":
+  english: "Green Hair"
+"どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>がみどりです。":
+  english: "It's unclear how he got here,but his hair is green."
+## Blue Style
+"ブルースタイル":
+  english: "Blue Style"
+"全身<ぜんしん>が青<あお>く変色<へんしょく>したダークスペクター。":
+  english: "A blue Dark Specter."
+"マリンスポーツで楽<たの>しんでいるときに襲<おそ>われウイルスに感染<かんせん>するときに海<うみ>の色<いろ>に影響<えいきょう>をうけ変異<へんい>したチャル。":
+  english: "While enjoying marine sports,Charu was attacked and infected with a virus, causing her to mutate to look like the ocean."
+## Red Body
+"レッドボディ":
+  english: "Red Body"
+"燃<も>えるような赤<あか>のボディカラーです。":
+  english: "A hot red body color."
+## Blue Robe
+"ブルーローブ":
+  english: "Blue Robe"
+"都市迷彩<としめいさい>のブルーのローブです。":
+  english: "A blue robe with urban camouflage."
+## Blue Armor
+"ブルーアーマー":
+  english: "Blue Armor"
+"海<うみ>をイメージした自作<じさく>のアーマーです。":
+  english: "Homemade armor inspired by the sea."
 ## Heavy Armor
 "ヘビーアーマー":
   english: "Heavy Armor"
 "頑丈<がんじょう>そうなアーマー風<ふう>のコスチュームです。":
   english: "A sturdy armor-like costume."
+"頑丈<がんじょう>そうな黒<くろ>いアーマー風<ふう>のコスチュームです。":
+  english: "A sturdy black armor-like costume."
+## White Fur
+"ホワイトファー":
+  english: "White Fur"
+"ファーを白<しろ>に染<そ>めてみた。 脱色<だっしょく>は怖<こわ>かったのでカラーペイントしているだけなので洗<あら>えば落<お>ちる。":
+  english: "I dyed my fur white.I was afraid of bleaching it, so I just painted it on, so it will come off if you wash it."
+## White Jacket
+"ホワイトジャケット":
+  english: "White Jacket"
+"金髪<きんぱつ>に似合<にあ>う白<しろ>いジャケット。 ちょっとはじけすぎかも⋅⋅⋅":
+  english: "The white jacket suits my blond hair perfectly. Maybe it's a bit too flashy⋅⋅⋅"
+## Purple Hair
+"パープルヘアー":
+  english: "Purple Hair"
+"どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>がむらさきです。":
+  english: "It's unclear how he got here,but his hair is purple."
+## White Style
+"ホワイトスタイル":
+  english: "White Style"
+"全身<ぜんしん>が白<しろ>く変色<へんしょく>したダークスペクター。":
+  english: "A white Dark Specter."
+"うさぎ(白)にエサをあげているときに襲<おそ>われウイルスに感染<かんせん>するときにウサギ(白)の影響<えいきょう>をうけ変異<へんい>したチャル。":
+  english: "While feeding a rabbit,Charu was attacked and infected with a virus, causing her to mutate to look like a white rabbit."
+## Black Body
+"ブラックボディ":
+  english: "Black Body"
+"クールな黒<くろ>いボディカラーです。":
+  english: "A cool black body color."
+## White Robe
+"ホワイトローブ":
+  english: "White Robe"
+"雪山仕様<ゆきやましよう>の純白<じゅんぱく>のローブです。":
+  english: "A white robe for blending in on snowy mountains."
+## White Armor
+"ホワイトアーマー":
+  english: "White Armor"
+"空<そら>をイメージした自作<じさく>のアーマーです。":
+  english: "Homemade armor inspired by the sky."
 ## Military Set
 "ミリタリーセット":
   english: "Military Set"
@@ -1628,6 +1779,10 @@ Gクラッシャー:
   english: "A stylish camel half coat."
 "お気<き>に入<い>りのワンピースです。":
   english: "My favorite dress."
+"ぴちぴちのバナナTシャツです。":
+  english: "A spunky banana T-shirt."
+"リゾート風<ふう>のコスチュームです。":
+  english: "A resort outfit."
 ## Historical Armor
 "ヒストリカルアーマー":
   english: "Historical Armor"
@@ -1639,6 +1794,8 @@ Gクラッシャー:
   english: "A Nordic Viking outfit."
 "中世<ちゅうせい>の騎土風<きしふう>のコスチュームです。":
   english: "A medieval knight costume."
+"古代<こだい>の戦土風<せんしふう>のコスチュームです。":
+  english: "An ancient war costume."
 ## Samurai Set
 "サムライセット":
   english: "Samurai Set"
@@ -1659,6 +1816,16 @@ Gクラッシャー:
   english: "Town Girl Set"
 "おてんばマチムスメ風<ふう>のコスチュームです。":
   english: "A tomboyish costume."
+## Kariudo (狩人, hunter) Set
+"カリウドセット":
+  english: "Hunter Set"
+"山<やま>の狩人<かりゅうど>の格好<かっこう>です。クマやキツネではなくサルを狩<か>ります。":
+  english: "Dressed as a mountain hunter. She hunts monkeys, not bears or foxes."
+## Shinobi Set
+"シノビセット":
+  english: "Shinobi Set"
+"ニンジャ風<ふう>のコスチュームです。":
+  english: "A ninja style costume."
 ## Santa Set
 "サンタセット":
   english: "Santa Set"
@@ -1674,6 +1841,24 @@ Gクラッシャー:
   english: "Sheep Set"
 "ウール100％のひつじさんのコスチュームです。":
   english: "This sheep costume is made of 100％ wool."
+## Ponpoko (onomatopoeia for Raccoon Dog) DX Set
+"ポンポコDXセット":
+  # What does the DX mean?
+  english: "Raccoon Set"
+"タヌキの着<き>ぐるみです。":
+  english: "A raccoon costume."
+## Amazon Set
+"アマゾンセット":
+  english: "Amazon Set"
+"半漁人<はんぎょじん>をイメージしたコスチュームです。":
+  english: "A costume inspired by mermen."
+## Tiger Set
+"タイガーセット":
+  english: "Tiger Set"
+"トラジマのアニマル風<ふう>コスチュームです。":
+  # トラジマ seems to just be a somewhat common name for cat based
+  # characters? Not really sure what this is a reference to.
+  english: A tiger style costume.
 ## Businessman Set
 "ビジネスマンセット":
   english: "Business Set"
@@ -1699,6 +1884,18 @@ Gクラッシャー:
   english: "Devil Set"
 "キュートな小悪魔風<こあくまふう>のコスチューム。翼<つばさ>はダミーです。":
   english: "A cute little devil costume. The wings are fake."
+## Police Set
+"ポリスセット":
+  english: "Police Set"
+"警察官<けいさつかん>の格好<かっこう>です。逮捕<たいほ>します!":
+  english: "Dressed as a police officer.You're under arrest!"
+"保安官風<ほあんかんふう>のコスチュームです。":
+  english: "A sheriff style costume."
+## Agent Set
+"エージェントセット":
+  english: "Agent Set"
+"ブラックのスリムなスーツのコスチュームです。":
+  english: "A slim black suit."
 ## Dancer Set
 "ダンサーセット":
   english: "Disco Set"
@@ -1719,6 +1916,21 @@ Gクラッシャー:
   english: "Magical Girl Set"
 "ピンクの魔法少女風<まほうしょうじょふう>のコスチュームです。":
   english: "A pink magical girl costume."
+## Angel Set? Looks more like a Roman outfit
+"エンジェルセット":
+  english: "Angel Set"
+"天使服<てんしふく>です。バーニアの代<か>わりに天使<てんし>の羽根<はね>で飛<と>べるようになります。":
+  english: "An angel costume. Instead of a jetpack, you fly with wings."
+## Heavy Metal Set
+"ヘビメタセット":
+  english: "Heavy Metal Set"
+"トゲトゲだらけのハードなコスチュームです。":
+  english: "A hard costume full of spikes."
+## Carmen Set
+"カルメンセット":
+  english: "Carmen Set"
+"エキゾチックな伊達男<だておとこ>のためのコスチュームです。":
+  english: "An exotic costume for a fashionable man."
 ## Empty (pretty sure this is meant to be unused?)
 "空き":
   english: "Empty"
@@ -1732,27 +1944,32 @@ Gクラッシャー:
   english: "Monkey Kakeru A"
 "これを着<き>ればピポサルになれる!? きっとサル達<たち>も仲間<なかま>と思<おも>うはず⋅⋅⋅":
   english: "Wear this and become a monkey! I'm sure the monkeys will see you as a friend."
+## Koro Dragon Set
+"コロドラゴンセット":
+  # コロコロ (korokoro) is apparently an onomatopoeia of a small round object
+  # rolling?
+  # What does any of this have to do with the actual outfit?
+  english: "Koro Dragon Set"
+"ランドセルとタテブエのセットです。":
+  # Apparently  ランドセル (randoseru) is an elementary school backpack, from
+  # Dutch "ransel".
+  # The only hit I get for ランドセル (tatebue) is 縦笛 which means recorder
+  # (the musical instrument), but the costume definitely doesn't show them
+  # carrying anything like that?
+  english: "A schoolchild's outfit."
 ## Saru Kakeru B
 "サルカケルB":
   english: "Monkey Kakeru B"
-"ホワイトボディ":
-  english: "White Body"
-"イエローボディ":
-  english: "Yellow Body"
-"レッドボディ":
-  english: "Red Body"
-"ブラックボディ":
-  english: "Black Body"
+## Kintaro Set
+"きんたろセット":
+  # Probably 金太郎 (Golden Boy, from Japanese folklore)
+  english: "Kintaro Set"
+"これならクマに勝<か>てるかも!?":
+  # According to legend apparently Kintaro was a really strong kid who wrestled
+  # bears
+  # https://en.wikipedia.org/wiki/Kintar%C5%8D
+  english: "Maybe this will help me beat the bear?"
 
-# Costumes screen descriptions
-"ファンキーな黄色<きいろ>いボディカラーです。":
-  english: "A funky yellow body color."
-"燃<も>えるような赤<あか>のボディカラーです。":
-  english: "A hot red body color."
-"クールな黒<くろ>いボディカラーです。":
-  english: "A cool black body color."
-"バージョンアップした戦闘服風<せんとうふくふう>のコスチュームです。":
-  english: "An upgraded combat uniform costume."
 
 # Saru Book screen
 "新<あたら>しいピポサル情報<じょうほう>が追加<ついか>されました。":

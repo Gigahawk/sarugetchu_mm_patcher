@@ -440,6 +440,214 @@ enum CharuCostume: u8 {
     INVALID2 = 15,
 };
 
+enum HarukaCostume: u8 {
+    DEFAULT = 0,
+    LIGHT_ARMOR_A = 1,
+    LIGHT_ARMOR_B = 2,
+    HEAVY_ARMOR = 3,
+    MILITARY_SET = 4,
+    DARK_FASHION = 5,
+    SECOND_FASHION = 6,
+    HISTORICAL_ARMOR = 7,
+    HUNTER_SET = 8,
+    RACCOON_SET = 9,
+    POLICE_SET = 10,
+    ANGEL_SET = 11,
+    EMPTY = 12,
+    TORO_COSTUME = 13,
+    INVALID1 = 14,
+    INVALID2 = 15,
+};
+
+enum SaruTeamCostume: u8 {
+    DEFAULT = 0,
+    LIGHT_ARMOR = 1,
+    MIDDLE_ARMOR = 2,
+    HEAVY_ARMOR = 3,
+    MILITARY_SET = 4,
+    DARK_FASHION = 5,
+    SECOND_FASHION = 6,
+    HISTORICAL_ARMOR = 7,
+    SHINOBI_SET = 8,
+    AMAZON_SET = 9,
+    POLICE_SET = 10,
+    HEAVY_METAL_SET = 11,
+    EMPTY = 12,
+    TORO_COSTUME = 13,
+    KORO_DRAGON_SET = 14,
+    KINTARO_SET = 15,
+};
+
+enum PipotronTeamCostume: u8 {
+    BLACK_FUR = 0,
+    PURPLE_FUR = 1,
+    BLUE_FUR = 2,
+    WHITE_FUR = 3,
+    EMPTY1 = 4,
+    EMPTY2 = 5,
+    EMPTY3 = 6,
+    EMPTY4 = 7,
+    EMPTY5 = 8,
+    EMPTY6 = 9,
+    EMPTY7 = 10,
+    EMPTY8 = 11,
+    EMPTY9 = 12,
+    TORO_COSTUME = 13,
+    INVALID1 = 14,
+    INVALID2 = 15,
+};
+
+enum HirokiCostume: u8 {
+    BLUE_JACKET = 0,
+    RED_JACKET = 1,
+    YELLOW_JACKET = 2,
+    WHITE_JACKET = 3,
+    EMPTY1 = 4,
+    EMPTY2 = 5,
+    EMPTY3 = 6,
+    EMPTY4 = 7,
+    EMPTY5 = 8,
+    EMPTY6 = 9,
+    EMPTY7 = 10,
+    EMPTY8 = 11,
+    EMPTY9 = 12,
+    TORO_COSTUME = 13,
+    INVALID1 = 14,
+    INVALID2 = 15,
+};
+
+enum SpecterCostume: u8 {
+    DEFAULT = 0,
+    LIGHT_ARMOR = 1,
+    MIDDLE_ARMOR = 2,
+    HEAVY_ARMOR = 3,
+    MILITARY_SET = 4,
+    DARK_FASHION = 5,
+    SECOND_FASHION = 6,
+    HISTORICAL_ARMOR = 7,
+    SHINOBI_SET = 8,
+    TIGER_SET = 9,
+    AGENT_SET = 10,
+    CARMEN_SET = 11,
+    EMPTY = 12,
+    TORO_COSTUME = 13,
+    INVALID1 = 14,
+    INVALID2 = 15,
+};
+
+enum DarkHirokiCostume: u8 {
+    DARK_HAIR = 0,
+    GOLD_HAIR = 1,
+    GREEN_HAIR = 2,
+    PURPLE_HAIR = 3,
+    INVALID1 = 4,
+    INVALID2 = 5,
+    INVALID3 = 6,
+    INVALID4 = 7,
+    INVALID5 = 8,
+    INVALID6 = 9,
+    INVALID7 = 10,
+    INVALID8 = 11,
+    INVALID9 = 12,
+    INVALID10 = 13,
+    INVALID11 = 14,
+    INVALID12 = 15,
+};
+
+enum DarkSpecterCostume: u8 {
+    DARK_STYLE = 0,
+    PURPLE_STYLE = 1,
+    BLUE_STYLE = 2,
+    WHITE_STYLE = 3,
+    INVALID1 = 4,
+    INVALID2 = 5,
+    INVALID3 = 6,
+    INVALID4 = 7,
+    INVALID5 = 8,
+    INVALID6 = 9,
+    INVALID7 = 10,
+    INVALID8 = 11,
+    INVALID9 = 12,
+    INVALID10 = 13,
+    INVALID11 = 14,
+    INVALID12 = 15,
+};
+
+enum PipotronGCostume: u8 {
+    WHITE_BODY = 0,
+    YELLOW_BODY = 1,
+    RED_BODY = 2,
+    BLACK_BODY = 3,
+    INVALID1 = 4,
+    INVALID2 = 5,
+    INVALID3 = 6,
+    INVALID4 = 7,
+    INVALID5 = 8,
+    INVALID6 = 9,
+    INVALID7 = 10,
+    INVALID8 = 11,
+    INVALID9 = 12,
+    INVALID10 = 13,
+    INVALID11 = 14,
+    INVALID12 = 15,
+};
+
+enum LegendCostume: u8 {
+    BLACK_ROBE = 0,
+    YELLOW_ROBE = 1,
+    BLUE_ROBE = 2,
+    WHITE_ROBE = 3,
+    INVALID1 = 4,
+    INVALID2 = 5,
+    INVALID3 = 6,
+    INVALID4 = 7,
+    INVALID5 = 8,
+    INVALID6 = 9,
+    INVALID7 = 10,
+    INVALID8 = 11,
+    INVALID9 = 12,
+    INVALID10 = 13,
+    INVALID11 = 14,
+    INVALID12 = 15,
+};
+
+enum VolcanoCostume: u8 {
+    RED_ARMOR = 0,
+    GREEN_ARMOR = 1,
+    BLUE_ARMOR = 2,
+    WHITE_ARMOR = 3,
+    INVALID1 = 4,
+    INVALID2 = 5,
+    INVALID3 = 6,
+    INVALID4 = 7,
+    INVALID5 = 8,
+    INVALID6 = 9,
+    INVALID7 = 10,
+    INVALID8 = 11,
+    INVALID9 = 12,
+    INVALID10 = 13,
+    INVALID11 = 14,
+    INVALID12 = 15,
+};
+
+enum VirusCharuCostume: u8 {
+    GREEN_STYLE = 0,
+    PURPLE_STYLE = 1,
+    BLUE_STYLE = 2,
+    WHITE_STYLE = 3,
+    INVALID1 = 4,
+    INVALID2 = 5,
+    INVALID3 = 6,
+    INVALID4 = 7,
+    INVALID5 = 8,
+    INVALID6 = 9,
+    INVALID7 = 10,
+    INVALID8 = 11,
+    INVALID9 = 12,
+    INVALID10 = 13,
+    INVALID11 = 14,
+    INVALID12 = 15,
+};
 
 
 bitfield SaruBookStatus {
@@ -514,6 +722,23 @@ struct CharFile {
         (CharType::PROFESSOR): ProfessorCostume equipped_costume;
         (CharType::NATSUMI): NatsumiCostume equipped_costume;
         (CharType::CHARU): CharuCostume equipped_costume;
+        (CharType::HARUKA): HarukaCostume equipped_costume;
+        (CharType::SARU_TEAM_KI): SaruTeamCostume equipped_costume;
+        (CharType::SARU_TEAM_AKAI): SaruTeamCostume equipped_costume;
+        (CharType::SARU_TEAM_AOI): SaruTeamCostume equipped_costume;
+        (CharType::SARU_TEAM_KURO): SaruTeamCostume equipped_costume;
+        (CharType::SARU_TEAM_MIDORI): SaruTeamCostume equipped_costume;
+        (CharType::SARU_TEAM_MIZU): SaruTeamCostume equipped_costume;
+        (CharType::PIPOTRON_TEAM_RED): PipotronTeamCostume equipped_costume;
+        (CharType::PIPOTRON_TEAM_BLUE): PipotronTeamCostume equipped_costume;
+        (CharType::PIPOTRON_TEAM_YELLOW): PipotronTeamCostume equipped_costume;
+        (CharType::HIROKI): HirokiCostume equipped_costume;
+        (CharType::SPECTER): SpecterCostume equipped_costume;
+        (CharType::DARK_HIROKI): DarkHirokiCostume equipped_costume;
+        (CharType::DARK_SPECTER): DarkSpecterCostume equipped_costume;
+        (CharType::PIPOTRON_G): PipotronGCostume equipped_costume;
+        (CharType::LEGEND): LegendCostume equipped_costume;
+        (CharType::VIRUS_CHARU): VirusCharuCostume equipped_costume;
         (_): u8 equipped_costume;
     }
     // Game limits you to 99 but manually editing in the last 2 seems to work
