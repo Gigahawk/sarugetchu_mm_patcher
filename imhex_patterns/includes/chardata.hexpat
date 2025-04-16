@@ -383,6 +383,17 @@ enum KakeruCostume: u8 {
     SARU_KAKERU_B = 15,
 };
 
+enum KakeruGadget: u8 {
+    GET_NET = 0,
+    MECHA_BO = 1,
+    LASER_GUN = 5,
+    VERNIER = 8,
+    DASH_BOOTS = 9,
+    REMOTE_BOMB = 15
+
+
+};
+
 enum ProfessorCostume: u8 {
     DEFAULT = 0,
     LIGHT_ARMOR_A = 1,

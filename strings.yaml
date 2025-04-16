@@ -1425,6 +1425,8 @@ Gクラッシャー:
 "Wメカボー":
   # What does the W stand for?
   english: "WMechBo"
+"片手用<かたてよう>のメカボー。 2本<ほん>で1セットです。 攻撃力<こうげきりょく>は少<すこ>し弱<よわ>いですが、コンボボーナスを狙<ねら>うならこれが一番<いちばん>です。":
+  english: "A pair of one-handed MechaBo.It has weaker attack power,but is great for combo bonuses."
 "ノコハンマー":
   english: "SawHammr"
 "Wロッド":
@@ -1435,12 +1437,13 @@ Gクラッシャー:
   english: "WDrill"
 ### Kiko Bo
 "キコーボー":
-  # What does this mean?
-  # Looking up kiko on jisho the closest thing is https://jisho.org/word/%E6%A9%9F%E6%A7%8B 
-  # ChatGPT suggests it could also be https://jisho.org/word/%E6%A9%9F%E6%A2%B0
-  # Both of these apparently mean machine of some sort, but we can't use Mecha Bo
-  # again so I'm just going to leave it as Kiko Bo
+  # Likely 気功, refers to a breathing practice kinda like tai chi?
+  # https://en.wikipedia.org/wiki/Qigong
+  # Apparently it also just sorta means energy
+  # I have no idea what a good translation is for this so KikoBo will have to do
   english: "KikoBo"
+"気功<きこう>を発射<はっしゃ>することができる不思議<ふしぎ>なメカボーです。 気功<きこう>の発射<はっしゃ>にはエネルギーが必要<ひつよう>なので注意<ちゅうい>しましょう。":
+  english: "A mysterious MechaBo that can shoot lasers.Note that shooting lasers requires energy."
 "マジョステッキ":
   english: "MagicWand"
 "Wハンマー":
@@ -1470,18 +1473,26 @@ Gクラッシャー:
   english: "A shooting gadget with increased fire rate and clip size.It has reduced range and attack power compared to a Laser Gun."
 "ショットガン":
   english: "Shotgun"
+"攻撃範囲<こうげきはんい>を広<ひろ>めた射撃<しゃげき>メカです。 近<ちか>くで当<あ>てると大<おお>きなダメージをあたえることができますが、弾数<たまかず>と飛距離<ひきょり>が落<お>ちているので注意<ちゅうい>が必要<ひつよう>です。":
+  english: "A shooting gadget with wider spread.It can deal high damage from close range,but be careful as the clip size and effective range are reduced."
 "Wレーザー":
   english: "WLaser"
 ## Launcher type
 ### Launchers
 "Bランチャー":
-  # Beam Launcher?
+  # Blast Launcher?
   english: "B.Lnchr"
+"攻撃力重視<こうげきりょくじゅうし>の射撃<しゃげき>メカです。 直撃<ちょくげき>しなくても爆風<ばくふう>がダメージをあたえてくれます。 ただし弾切<たまぎれ>しやすいので注意<ちゅうい>しましょう。":
+  english: "A shooting gadget with high attack.Causes blast damage on impact.Note that ammo is limited."
 "Hランチャー":
   # Homing Launcher?
   english: "H.Lnchr"
+"誘導性能<ゆうどうせいのう>を持<も>った射撃<しゃげき>メカです。 空<そら>を飛<と>ぶ敵<てき>には効果大<こうかだい>です。 Bランチャーとくらべて攻撃力<こうげきりょく>が少<すこ>し弱<よわ>くなっているので注意<ちゅうい>しましょう。":
+  english: "A shooting gadget with homing ability.Very effective against flying enemies.Note that attack power is slightly weaker than the B Launcher."
 "メガランチャー":
   english: "MegaLnchr"
+"巨大<きょだい>な爆風<ばくふう>をまきおこすとんでもない射撃<しゃげき>メカです。 威力<いりょく>は強<つよ>いですが弾数<たまかず>は少<すく>ないです。 むだうちに注意<ちゅうい>しましょう。":
+  english: "A powerful shooting gadget.Causes massive blast damage on impact.Note that ammo is very limited."
 "ギガランチャー":
   english: "GigaLnchr"
 ### Pipotron G
@@ -1496,6 +1507,8 @@ Gクラッシャー:
   english: "A remote controlled gadget that explodes when it rams into something.Pressing its button will automatically drive it towards a nearby target,or it can be controlled directly with the right stick."
 "キラービー":
   english: "KillerBee"
+"空中<くうちゅう>を飛<と>ぶリモコンメカです。 壁<かべ>の向<む>こうの敵<てき>を狙<ねら>うときなどにはたいへん便利<べんり>です。":
+  english: "A remote controlled gadget that flies through the air.It's useful for targeting enemies behind walls."
 "サテラレーザー":
   # Satellite Laser?
   english: "StltLaser"
@@ -1512,11 +1525,15 @@ Gクラッシャー:
 ### Attack Boots
 "アタックブーツ":
   english: "AtkBoots"
+"攻撃力<こうげきりょく>を高<たか>めたダッシュメカです。 スピード面<めん>でじゃっかん性能<せいのう>が劣<おと>ります。":
+  english: "A dash gadget with increased attack.It is has slightly slower movement speed."
 "アタックブースター":
   english: "AtkBstr"
 ### Warp Boots
 "ワープブーツ":
   english: "WarpBoots"
+"瞬間移動<しゅんかんいどう>することができるすごいダッシュメカです。 何回<なんかい>かワープするとしばらく使<つか>えなくなるので注意<ちゅうい>しましょう。":
+  english: "An amazing dash gadget that can teleport.Note that warping consumes a lot of energy."
 "ワープブースター":
   english: "WarpBstr"
 "ワープフープ":
@@ -1529,6 +1546,28 @@ Gクラッシャー:
   english: "GetNet"
 "小型<こがた>の転送<てんそう>メカです。 これでピポサルをゲッチュすることができます。 攻撃力<こうげきりょく>はゼロなので注意<ちゅうい>しましょう。":
   english: "A small teleportation gadget.You can use it to capture apes.Be careful,it has zero attack power."
+## Backpack Type
+"バックパック":
+  english: "Backpack"
+"アイテムをストックできる特殊<とくしゅ>なメカです。 ストックしたアイテムは好<す>きなときに使<つか>うことができます。":
+  english: "A special gadget for storing items.Stored items can be used whenever you like."
+## Vehicle Type
+"ライトタンク":
+  english: "LightTank"
+"スピード重視<じゅうし>の小型<こがた>タンクです。 誘導<ゆうどう>ミサイルとガトリング砲<ほう>を装備<そうび>しています。 爆発<ばくはつ>すると使<つか>えなくなるので注意<ちゅうい>しましょう。":
+  english: "A small,fast tank.It is equipped with guided missles and a gatling gun.Note that once destroyed it can no longer be used."
+"ミドルタンク":
+  english: "MedTank"
+"中型<ちゅうがた>のタンクです。 誘導<ゆうどう>ミサイルとガトリング砲<ほう>を装備<そうび>しています。 爆発<ばくはつ>すると使<つか>えなくなるので注意<ちゅうい>しましょう。":
+  english: "A medium sized tank.It is equipped with guided missles and a gatling gun.Note that once destroyed it can no longer be used."
+"ライトメック":
+  english: "LightMech"
+"小回<こまわ>り重視<じゅうし>のロボットです。 回転<かいてん>パンチと誘導<ゆうどう>ミサイルを装備<そうび>しています。 爆発<ばくはつ>すると使<つか>えなくなるので注意<ちゅうい>しましょう。":
+  english: "A small maneuverable mech.It is equipped with a spinning punch and guided missiles.Note that once destroyed it can no longer be used."
+"ミドルメック":
+  english: "MedMech"
+"中型<ちゅうがた>のロボットです。 火炎放射<かえんほうしゃ>とガトリング砲<ほう>を装備<そうび>しています。 爆発<ばくはつ>すると使<つか>えなくなるので注意<ちゅうい>しましょう。":
+  english: "A medium sized mech.It is equipped with a flamethrower and a gatling gun.Note that once destroyed it can no longer be used."
 # Misc.
 ### Pipotron G
 "スペシャルモード":
@@ -2280,6 +2319,8 @@ Gクラッシャー:
   english: "Synthesizing..."
 "合成<ごうせい>が終<お>わりました。":
   english: "Synthesis complete."
+"レシピ一覧<いちらん>に戻<もど>ります。":
+  english: "Return to the recipe list."
 
 # Gadget Lab Recipe screen dialogs
 "合成<ごうせい>に成功<せいこう>しました。\n%を手<て>に入<い>れました。":
