@@ -1039,55 +1039,81 @@
 ### See https://apeescape.fandom.com/wiki/Special_Attacks#Monkey_Summons
 "モンタ":
   english: "Monta"
+"攻撃魔法<こうげきまほう>の達人<たつじん>。 隕石<いんせき>の雨<あめ>を降<ふ>らせてあなたを援護<えんご>します。       ":
+  english: "A master of offensive magic.He will rain down meteors to support you."
 "ハットリモンゾウ":
   english: "Hattori Monzo"
 "ハットリ\nモンゾウ":
   english: "Hattori\nMonzo"
+"手裏剣<しゅりけん>の達人<たつじん>。 巨大<きょだい>な旋風手裏剣<せんぷうしゅりけん>をなげて援護<えんご>してくれます。       ":
+  english: "A shuriken master.He throws a whirlwind of shuriken to support you."
 "ツタンカーモン":
   english: "Tutanchimp"
+"サバクノクニの王<おう>さま。 強力<きょうりょく>な呪<のろ>いで援護<えんご>してくれます。        ":
+  english: "The desert king.He will support you with powerful curses."
 "ウッキーピンク":
   english:
     "09e64222": "Monkey\nPink"
     #"154e5c62": "Monkey2Pink"
     #"987ee082": "Monkey3Pink"
     "447f6a93": "Monkey Pink"
+"ウッキーファイブの歌姫<うたひめ>。 何<なに>が出<で>るかは運<うん>しだいです。          ":
+  english: "The songstress of Monkey Five.What you get is up to fate."
 "サモイ":
   #english: "Samoi"
   # Wiki uses this name
   english: "Samui"
+"その打球<だきゅう>は見<み>えないくらい速<はや>い! 自慢<じまん>のバットで援護<えんご>します。       ":
+  english: "The ball is so fast you can't even see it!He supports you with his prized bat."
 "モンチさん":
   english:
     "cbe64222": "Monki-\nSan"
     #"60cdf844": "Monki2San"
     #"5a7fe082": "Monki3San"
     "2f7059db": "Monki-San"
+"笑顔<えがお>が素敵<すてき>な宇宙飛行土<うちゅうひこうし>。 ロケット噴射<ふんしゃ>で敵<てき>を一掃<いっそう>します。       ":
+  english: "A spacefaring robot with a lovely smile.It uses rocket propulsion to wipe out enemies."
 "エジモン":
   # TODO: check if this is right,
   # he apparently holds up a lightbulb
-  english: "Edison"
+  english: "Edimon"
+"ゴリアック研究所<けんきゅうじょ>の所長<しょちょう>。 ゴリアックアームで援護<えんご>してくれます。       ":
+  english: "Director of the Goliac Lab.Provides support with a Goliac Arm."
 "ウッキーレッド":
   english:
     "8de74222": "Monkey\nRed"
     #"e4cef844": "Monkey2Red"
     #"1c80e082": "Monkey3Red"
     "b37159db": "Monkey Red"
+"ウッキーファイブのリーダー。 画面<がめん>を飛<と>びかって周囲<しゅうい>の全員<ぜんいん>にダメージを与<あた>えます。     ":
+  english: "The leader of Monkey Five.He flies across the screen and deals damage to everyone around him."
 "アフロ":
   english: "Afro"
+"カジノシティのヒーロー。 嵐<あらし>を呼<よ>ぶダンスにみんなを巻<ま>き込<こ>みます。       ":
+  english: "The hero of Casino City.He gets everyone involved in a storm-bringing dance."
 "パンプキン":
   english: "Pumpkin"
+"ハロウィンのヒーロー。 お菓子爆弾<かしばくだん>であなたを援護<えんご>します。       ":
+  english: "The hero of Halloween.He supports you with candy bombs."
 "サルースウッキー":
   # TODO: what is this?
   english: "Salus Monkey"
 "サルース\nウッキー":
   english: "Salus\nMonkey"
+"クンフーの達人<たつじん>にしてスター。 ヌンチャク衝撃波<しょうげきは>で敵<てき>を攻撃<こうげき>します。     ":
+  english: "A kung fu master and star.He attacks enemies with nunchuck shock waves."
 "ミヤモン⋅ムサシ":
   # TODO: Check if this is right, apparently he
   # lunges at an enemy with swords
   english: "Miyamoto"
 "ミヤモン⋅\nムサシ":
   english: "Miyamoto"
+"剣豪<けんごう>と言<い>われる伝説<でんせつ>のピポサル。 二刀流<にとうりゅう>アタックで援護<えんご>します。     ":
+  english: "A legendary swordsman.He supports you with dual sword attacks."
 "ワッキー":
   english: "Wakkie"
+"ゴリアック開発<かいはつ>プロジェクトリーダー。 ゴリアックヘッドで援護<えんご>します。     ":
+  english: "The Goliac Development Project Leader.Provides support with a Goliac Head."
 ## Saru Team
 "サルバズーカ":
   english:
