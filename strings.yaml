@@ -1635,10 +1635,61 @@ Gクラッシャー:
   english: Please select the gadget to set power up parts on.
 "パワーアップパーツをセットするパーツスロットを選<えら>んでください。":
   english: "Select the part slot to set."
+"ガチャメカの名前<なまえ>を変更<へんこう>します。":
+  english: "Change the gadget's name."
 "パワーアップパーツをセットするガチャメカ選択<せんたく>に戻<もど>ります。":
   english: "Return to selecting a gadget to apply power up parts to."
 "パーツスロット選択<せんたく>に戻<もど>ります。":
   english: "Return to parts slot selection."
+
+# Power Up Parts
+"ファイア":
+  english: "Fire"
+"火炎<かえん>の追加<ついか>ダメージを与<あた>えるパーツです。 複数<ふくすう>セットすることで、炎<ほのお>のレベルを上<あ>げることができますが、同時<どうじ>にガチャメカのエネルギーの消費<しょうひ>が増加<ぞうか>するので注意<ちゅうい>しましょう。 また、アイスパーツ、リフレクパーツを同時<どうじ>にセットすることはできません。":
+  english: "This part adds flame damage.The damage can be increased by equipping more Fire parts,but the gadget will consume more energy.You cannot set Ice or Reflect parts when this part is equipped."
+"アイス":
+  english: "Ice"
+"攻撃<こうげき>したキャラクターを一定時間氷<いっていじかんこおり>づけにするパーツです。 複数<ふくすう>セットすることで、アイス効果<こうか>の持続時間<じぞくじかん>をのばすことができますが、同時<どうじ>に与<あた>えるダメージが減<へ>ってしまうので注意<ちゅうい>しましょう。 また、ファイアパーツ、リフレクパーツを同時<どうじ>にセットすることはできません。":
+  english: "This part freezes the target for some time.The duration can be increased by equipping more Ice parts,but the gadget will consume more energy.You cannot set Fire or Reflect parts when this part is equipped."
+"チャージ":
+  english: "Charge"
+"エネルギーの回復<かいふく>をスピードアップするパーツです。 複数<ふくすう>セットすることで、さらに回復<かいふく>のスピードを上<あ>げることができます。":
+  english: "This part speeds up energy recovery.The recovery speed can be increased by equipping more Charge parts."
+"リフレク":
+  english: "Reflect"
+"敵<てき>の弾<たま>をはねかえす、シールド発生装置<はっせいそうち>です。 3つまでセットでき、エネルギーの消費<しょうひ>が減<へ>りますが、同時<どうじ>にエネルギーの回復<かいふく>が遅<おそ>くなってしまうので注意<ちゅうい>しましょう。 また、ファイアパーツ、アイスパーツを同時<どうじ>にセットすることはできません。":
+  english: "This part generates a shield that deflects projectiles.Energy consumption can be reduced by equipping more Reflect parts,but recovery time will also be reduced.You cannot set Fire or Ice parts when this part is equipped."
+"パワーA":
+  english: "Power A"
+"攻撃力<こうげきりょく>をアップするパーツです。 3つまでセットできますが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。":
+  english: This part increases attack power.You can equip up to 3,but each part will also increase energy consumption.
+"パワーB":
+  english: "Power B"
+"攻撃力<こうげきりょく>をアップするパーツです。 3つまでセットできますが、同時<どうじ>にエネルギーの回復<かいふく>が遅<おそ>くなるので注意<ちゅうい>しましょう。":
+  english: This part increases attack power.You can equip up to 3,but each part will also slow down energy recovery.
+"リミッター":
+  english: "Limiter"
+"エネルギーの消費<しょうひ>をおさえるパーツです。  複数<ふくすう>セットすることで、さらにエネルギー消費<しょうひ>をおさえることができます。":
+  english: "This part reduces energy consumption.Consumption can be reduced further by equipping more Limiter parts."
+"ロングレンジ":
+  english: "Long Range"
+"飛距離<ひきょり>を伸<の>ばすパーツです。 3つまでセットできますが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。":
+  english: "This part increases projectile range.You can equip up to 3,but each part will also increase energy consumption."
+"ラピッド":
+  english: "Rapid Fire"
+"弾<たま>の同時発射数<どうじはっしゃすう>を増<ふ>やすパーツです。 最大<さいだい>3レベルまでパワーアップ可能<かのう>ですが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。":
+  english: "This part increases the number of bullets fired simultaneously.You can equip up to 3,but each part will also increase energy consumption."
+"レーダー":
+  english: "Radar"
+"弾<たま>の追尾性能<ついびせいのう>をアップするパーツです。 3つまでセットできますが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。":
+  english: "This part improves enemy tracking of projectiles.You can equip up to 3, but each part will also increase energy consumption."
+"ブラスト":
+  english: "Blast"
+"爆風<ばくふう>の範囲<はんい>が大<おお>きくなるパーツです。 3段階<だんかい>までパワーアップできますが、同時<どうじ>にエネルギーの消費<しょうひ>が増<ふ>えるので注意<ちゅうい>しましょう。":
+  english: "This part increases blast radius.The blast radius can be increased by equipping more parts,but the gadget will consume more energy."
+
+
+
 
 # Costumes screen
 ## Normal
@@ -2461,13 +2512,6 @@ Gクラッシャー:
   english: "Aerial Battleship"
 "新たな危機編":
   english: "New Crisis"
-
-# Weapons?
-"ロングレンジ":
-  english: "Long Range"
-#"バーニア":
-#  # ???
-#  english: "Vernier scale"
 
 # Chips
 "マグネチップ":

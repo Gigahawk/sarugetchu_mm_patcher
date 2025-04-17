@@ -926,6 +926,9 @@ def dump_strings(imhex_json, hash, output_path):
                 f.write("\n")
                 f.write(full_str)
                 f.write("\n")
+                # Write string without furigana
+                f.write(re.sub(r"<.*?>", "", full_str))
+                f.write("\n")
 
                 manifest[full_str].append(str_id)
             except ValueError:
