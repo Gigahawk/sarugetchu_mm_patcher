@@ -12,6 +12,22 @@ struct TextChar {
     u16 value;
 } [[sealed, format("textchar_to_char")]];
 
+fn int_to_textchar(u8 value) {
+    match (value) {
+        (1): return 0x9F88;
+        (2): return 0xA088;
+        (3): return 0xA188;
+        (4): return 0xA288;
+        (5): return 0xA388;
+        (6): return 0xA488;
+        (7): return 0xA588;
+        (8): return 0xA688;
+        (9): return 0xA788;
+        (0): return 0xA888;
+        (_): return 0xA888;
+    }
+};
+
 fn textchar_to_char(TextChar tc) {
     match (tc.value) {
         // Numerics
@@ -386,13 +402,45 @@ enum KakeruCostume: u8 {
 enum KakeruGadget: u8 {
     GET_NET = 0,
     MECHA_BO = 1,
+    BIG_BO = 2,
+    W_MECHA_BO = 3,
+    KIKO_BO = 4,
     LASER_GUN = 5,
+    MACHINE_GUN = 6,  // Yellow Gun
+    SHOTGUN = 7,  // Red Gun
     VERNIER = 8,
     DASH_BOOTS = 9,
-    REMOTE_BOMB = 15
-
-
+    ATTACK_BOOTS = 10,  // Yellow Boots
+    WARP_BOOTS = 11,  // Red Boots
+    B_LAUNCHER = 12,
+    H_LAUNCHER = 13,
+    MEGA_LAUNCHER = 14,
+    REMOTE_BOMB = 15,
+    KILLER_BEE = 16,
+    SATELLITE_LASER = 17,
+    BACKPACK = 18,
+    LIGHT_TANK = 19,
+    MEDIUM_TANK = 20,
+    // Blue "SP" icon, seems to be an invalid mount, character model
+    // doesn't show and the preview image is just the current screen rendered
+    // picture in picture style
+    UNKNOWN1 = 21,
+    LIGHT_MECH = 22,
+    MEDIUM_MECH = 23,
+    // Seems to be another invalid mount, has the light mech icon but is
+    // otherwise identical to UNKNOWN1
+    UNKNOWN2 = 24,
+    // These ones all have the GET_NET icon, character model shows but not
+    // carrying anything. Preview image is current screen.
+    UNKNOWN3 = 25,
+    UNKNOWN4 = 26,
+    UNKNOWN5 = 27,
+    UNKNOWN6 = 28,
+    // Same as above, but has the LASER_GUN icon
+    UNKNOWN6 = 29,
+    // Values beyond here crash the game if you select them in character edit
 };
+
 
 enum ProfessorCostume: u8 {
     DEFAULT = 0,
@@ -413,6 +461,51 @@ enum ProfessorCostume: u8 {
     INVALID2 = 15,
 };
 
+enum ProfessorGadget: u8 {
+    GET_NET = 0,
+    MECHA_HAMMER = 1,
+    THORN_HAMMER = 2,
+    SAW_HAMMER = 3,
+    LASER_GUN = 4,
+    MACHINE_GUN = 5,  // Yellow Gun
+    SHOTGUN = 6,  // Red Gun
+    VERNIER = 7,
+    DASH_BOOSTER = 8,
+    ATTACK_BOOSTER = 9,  // Yellow Boots
+    WARP_BOOSTER = 10,  // Red Boots
+    B_LAUNCHER = 11,
+    H_LAUNCHER = 12,
+    MEGA_LAUNCHER = 13,
+    GIGA_LAUNCHER = 14,
+    REMOTE_BOMB = 15,
+    KILLER_BEE = 16,
+    SATELLITE_LASER = 17,
+    BACKPACK = 18,
+    LIGHT_TANK = 19,
+    MEDIUM_TANK = 20,
+    // Blue "SP" icon, seems to be an invalid mount, character model
+    // doesn't show and the preview image is just the current screen rendered
+    // picture in picture style
+    UNKNOWN1 = 21,
+    LIGHT_MECH = 22,
+    MEDIUM_MECH = 23,
+    // Seems to be another invalid mount, has the light mech icon but is
+    // otherwise identical to UNKNOWN1
+    UNKNOWN2 = 24,
+    // This one has the REMOTE_BOMB logo, character model is rendered but small
+    UNKNOWN3 = 25,
+    // These ones all have the GET_NET icon, character model shows but not
+    // carrying anything. Preview image is current screen.
+    UNKNOWN4 = 26,
+    UNKNOWN5 = 27,
+    UNKNOWN6 = 28,
+    // Same as above, but has the LASER_GUN icon
+    UNKNOWN6 = 29,
+    // Values beyond here crash the game if you select them in character edit
+};
+
+
+
 enum NatsumiCostume: u8 {
     DEFAULT = 0,
     LIGHT_ARMOR_A = 1,
@@ -432,6 +525,43 @@ enum NatsumiCostume: u8 {
     INVALID2 = 15,
 };
 
+enum NatsumiGadget: u8 {
+    GET_NET = 0,
+    MECHA_ROD = 1,
+    W_ROD = 2,
+    LASER_GUN = 3,
+    MACHINE_GUN = 4,  // Yellow Gun
+    SHOTGUN = 5,  // Red Gun
+    W_LASER = 6,
+    VERNIER = 7,
+    DASH_BOOTS = 8,
+    ATTACK_BOOTS = 9,  // Yellow Boots
+    WARP_BOOTS = 10,  // Red Boots
+    B_LAUNCHER = 11,
+    H_LAUNCHER = 12,
+    MEGA_LAUNCHER = 13,
+    GIGA_LAUNCHER = 14,
+    REMOTE_BOMB = 15,
+    KILLER_BEE = 16,
+    SATELLITE_LASER = 17,
+    BACKPACK = 18,
+    LIGHT_TANK = 19,
+    MEDIUM_TANK = 20,
+    // Blue "SP" icon, seems to be an invalid mount, character model
+    // doesn't show and the preview image is just the current screen rendered
+    // picture in picture style
+    UNKNOWN1 = 21,
+    LIGHT_MECH = 22,
+    MEDIUM_MECH = 23,
+    UNKNOWN2 = 24,
+    UNKNOWN3 = 25,
+    UNKNOWN4 = 26,
+    UNKNOWN5 = 27,
+    UNKNOWN6 = 28,
+    UNKNOWN6 = 29,
+};
+
+
 enum CharuCostume: u8 {
     DEFAULT = 0,
     LIGHT_ARMOR_A = 1,
@@ -449,6 +579,41 @@ enum CharuCostume: u8 {
     TORO_COSTUME = 13,
     INVALID1 = 14,
     INVALID2 = 15,
+};
+
+enum CharuGadget: u8 {
+    GET_NET = 0,
+    MAGIC_WAND = 1,
+    MECHA_BO = 2,
+    ARM_SHOT = 3,
+    LASER_GUN = 4,
+    MACHINE_GUN = 5,  // Yellow Gun
+    SHOTGUN = 6,  // Red Gun
+    VERNIER = 7,
+    DASH_BOOTS = 8,
+    ATTACK_BOOTS = 9,  // Yellow Boots
+    WARP_BOOTS = 10,  // Red Boots
+    B_LAUNCHER = 11,
+    H_LAUNCHER = 12,
+    MEGA_LAUNCHER = 13,
+    REMOTE_BOMB = 14,
+    KILLER_BEE = 15,
+    SATELLITE_LASER = 16,
+    BACKPACK = 17,
+    LIGHT_TANK = 18,
+    MEDIUM_TANK = 19,
+    // Blue "SP" icon, seems to be an invalid mount, character model
+    // doesn't show and the preview image is just the current screen rendered
+    // picture in picture style
+    UNKNOWN1 = 20,
+    LIGHT_MECH = 21,
+    MEDIUM_MECH = 22,
+    UNKNOWN2 = 23,
+    UNKNOWN3 = 24,
+    UNKNOWN4 = 25,
+    UNKNOWN5 = 26,
+    UNKNOWN6 = 27,
+    UNKNOWN6 = 28,
 };
 
 enum HarukaCostume: u8 {
@@ -470,6 +635,30 @@ enum HarukaCostume: u8 {
     INVALID2 = 15,
 };
 
+// Can't create or edit gadgets on this character,
+// research based on story mode
+enum HarukaGadget: u8 {
+    GET_NET = 0,
+    MECHA_BO = 1,
+    LASER_GUN = 2,
+    MACHINE_GUN = 3,  // Yellow Gun
+    // SHOTGUN = 4,  // not supported on this character?
+    // Best guess, idx 4 also doesn't show up so not sure which one it is
+    VERNIER = 5,
+    DASH_BOOTS = 6,
+    ATTACK_BOOTS = 7,  // Yellow Boots
+    HOMING_ARROW = 8,
+    REMOTE_BOMB = 9,
+    KILLER_BEE = 10,
+    SATELLITE_LASER = 11,
+    LIGHT_TANK = 12,
+    MEDIUM_TANK = 13,
+    //UNKNOWN1 = 14,
+    LIGHT_MECH = 15,
+    MEDIUM_MECH = 16,
+};
+
+
 enum SaruTeamCostume: u8 {
     DEFAULT = 0,
     LIGHT_ARMOR = 1,
@@ -487,6 +676,42 @@ enum SaruTeamCostume: u8 {
     TORO_COSTUME = 13,
     KORO_DRAGON_SET = 14,
     KINTARO_SET = 15,
+};
+
+enum SaruTeamGadget: u8 {
+    GET_NET = 0,
+    MECHA_BO = 1,
+    BIG_BO = 2,
+    W_HAMMER = 3,
+    W_DRILL = 4,
+    LASER_GUN = 5,
+    MACHINE_GUN = 6,  // Yellow Gun
+    SHOTGUN = 7,  // Red Gun
+    VERNIER = 8,
+    DASH_BOOTS = 9,
+    ATTACK_BOOTS = 10,  // Yellow Boots
+    WARP_BOOTS = 11,  // Red Boots
+    B_LAUNCHER = 12,
+    H_LAUNCHER = 13,
+    MEGA_LAUNCHER = 14,
+    REMOTE_BOMB = 15,
+    KILLER_BEE = 16,
+    SATELLITE_LASER = 17,
+    BACKPACK = 18,
+    LIGHT_TANK = 19,
+    MEDIUM_TANK = 20,
+    // Blue "SP" icon, seems to be an invalid mount, character model
+    // doesn't show and the preview image is just the current screen rendered
+    // picture in picture style
+    UNKNOWN1 = 21,
+    LIGHT_MECH = 22,
+    MEDIUM_MECH = 23,
+    UNKNOWN2 = 24,
+    UNKNOWN3 = 25,
+    UNKNOWN4 = 26,
+    UNKNOWN5 = 27,
+    UNKNOWN6 = 28,
+    UNKNOWN6 = 29,
 };
 
 enum PipotronTeamCostume: u8 {
@@ -507,6 +732,25 @@ enum PipotronTeamCostume: u8 {
     INVALID1 = 14,
     INVALID2 = 15,
 };
+
+// Can't create or edit gadgets on this character,
+// research based on story mode
+enum PipotronTeamGadget: u8 {
+    GET_NET = 0,
+    TRON_CHAIN = 1,
+    LASER_GUN = 2,
+    SHOTGUN = 3,  // Yellow Gun
+    VERNIER = 4,
+    DASH_HOOP = 5,
+    WARP_HOOP = 6,  // Red Boots
+    REMOTE_BOMB = 7,
+    LIGHT_TANK = 9,
+    MEDIUM_TANK = 10,
+    //UNKNOWN1 = 11,
+    LIGHT_MECH = 12,
+    MEDIUM_MECH = 13,
+};
+
 
 enum HirokiCostume: u8 {
     BLUE_JACKET = 0,
