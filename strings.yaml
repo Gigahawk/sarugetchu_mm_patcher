@@ -2188,6 +2188,9 @@ Gクラッシャー:
 ### Monkey Base?
 "サル軍基地<ぐんきち>にて発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
   english: "Seen at the monkey base!\nPlease come and catch it immediately."
+### Battleship teleporter room
+"空中戦艦内転送<くうちゅうせんかんないてんそう>ルームにて発見<はっけん>!\n至急回収願<しきゅうかいしゅうねが>います!":
+  english: "Seen at the battleship teleporter\nroom!Please come and catch it immediately"
 ## Monkeys
 ### Shinjuku
 "イチロウ":
@@ -2612,7 +2615,7 @@ Gクラッシャー:
 # Passwords
 # Using Chinese version codes where available
 # https://gamefaqs.gamespot.com/ps2/932343-ape-escape-million-monkeys/cheats
-# Otherwise using best effort translations of the japanese
+# Otherwise using best effort translations of the original Japanese
 "ショダイチャンプ":
   # Probably 初代 チャンプ
   # Unlocks Haruka
@@ -2647,7 +2650,7 @@ Gクラッシャー:
   english: "MOREMORE"
 "ルケカルサ":
   # Unlocks Monkey costume for Kakeru
-  # This is サル カケル backwards
+  # This is サル カケル (Saru Kakeru) backwards
   english: "RUKEKARUS" # Can't fit last 'E' in this code
 "セットコロドラゴン":
   # Unlocks Koro Dragon Set
@@ -2666,6 +2669,7 @@ Gクラッシャー:
   english: "PLAYHARD"
 "サイキョウハダレダ":
   # Receive a "Network Password" upon clearing any stage
+  # What's a network password?
   # Probably 最強 は 誰 だ
   english: "STRONGEST"
 
@@ -2711,6 +2715,40 @@ Gクラッシャー:
   english: "Remove"
 "このステージにはゲットアミが必要<ひつよう>です。":
   english: "A GetNet is required for this stage."
+"SPガチャメカがかいじょ\nされます!":
+  english: "The SP Gadget\nwill be destroyed!"
+"SPガチャメカセレクト":
+  english: "SP Gadget Select"
+"モードクリアデータを進行<しんこう>ファイルに\nセーブできませんが、本当<ほんとう>にキャンセルしますか?":
+  english: "Mode clear data cannot be saved.\nDo you really want to cancel?"
+"VS.カケル":
+  english: "VS.Kakeru"
+"ポケピ":
+  english: "Pokepi"
+"アタックするステージを選<えら>んでください。":
+  # Where is this used? What does it mean to attack a stage?
+  english: "Select the stage to attack."
+
+## Ceremonies?
+## Where are these used?
+"ハイパー満月儀":
+  # This probably needs to be shortened
+  english: "Hyper Full Moon Ceremony"
+"爆裂儀":
+  english: "Explosion Ceremony"
+
+# Probably gadget text
+"攻撃力重視<こうげきりょくじゅうし>のタンクです。":
+  english: "An offensive-focused tank."
+
+## Probably in level text
+"エネルギー供給炉l号機起動!":
+  english: "Reactor 1 online!"
+"エネルギー供給炉2号機起動!":
+  english: "Reactor 2 online!"
+"エネルギー供給炉3号機起動!":
+  english: "Reactor 3 online!"
+
 ## Probably monkey text
 "バーモンにあったら\n遅<おく>れるなら電話<でんわ>しろよって伝<つた>えてください。":
   english: "If you see Vermon,tell him to\ncall me if he's late."
@@ -2720,3 +2758,12 @@ Gクラッシャー:
   english: "Clumsy"
 "山<やま>がそこにあるから\nのぼるのみャ!":
   english: "Mountains are meant\nto be climbed!"
+"ホント言<い>うと高<たか>いところは苦手<にがて>なんだ⋅⋅⋅。":
+  english: "To be honest, I'm terrible\nwith heights."
+"ヨットハーバーにて釣<つ>り糸<いと>をたれているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured at the yacht harbor\nwhile fishing."
+"そらみみ":
+  # Probably 空耳?
+  # Is this monkey description text?
+  english: "Deaf"
+  #english: "Mishearing"
