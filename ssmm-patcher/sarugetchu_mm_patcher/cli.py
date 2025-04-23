@@ -850,7 +850,75 @@ def dump_textures(imhex_json, output_path, include_exts, exclude_exts):
         with open(target_path / "manifest.yaml", "w") as f:
             yaml.dump(manifest, f)
 
+@cli.command()
+@click.argument(
+    "input_yaml",
+    type=click.Path()
+)
+@click.argument(
+    "output_list",
+    type=click.Path()
+)
+def collect_strings(input_yaml, output_list):
+    try:
+        with open(output_list, "r") as f:
+            strings = f.read().splitlines()
+    except FileNotFoundError:
+        strings = []
+    with open(input_yaml, "r") as f:
+        inputs = yaml.unsafe_load(f)
+    strings += inputs.keys()
+    strings = list(set(strings))
+    with open(output_list, "w") as f:
+        f.write("\n".join(strings))
 
+@cli.command()
+@click.argument(
+    "strings_yaml",
+    type=click.Path()
+)
+@click.argument(
+    "all_strings_txt",
+    type=click.Path()
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    type=click.Path()
+)
+def analyze_translation_progress(
+    strings_yaml, all_strings_txt, output_path
+):
+    if output_path is None:
+        output_path = Path(os.getcwd())
+    else:
+        output_path = Path(output_path)
+    output_path.mkdir(parents=True, exist_ok=True)
+    missing_strings_path = output_path / "untranslated_strings.txt"
+    analysis_path = output_path / "analysis.txt"
+    with open(strings_yaml, "r") as f:
+        translation_strings = yaml.safe_load(f)
+    with open(all_strings_txt, "r") as f:
+        all_strings = list(set(f.read().splitlines()))
+    missing_strings = all_strings.copy()
+    for string in translation_strings.keys():
+        # HACK: ensure special chars are properly parsed
+        string = string.replace("\n", r"\n")
+        string = string.replace("\x0c", r"\f")
+        try:
+            missing_strings.remove(string)
+        except ValueError:
+            click.echo(f"Warning: string `{repr(string)}` found in translation table but not in string list")
+    with open(missing_strings_path, "w") as f:
+        f.write("\n".join(missing_strings))
+    with open(analysis_path, "w") as f:
+        f.write(f"Total strings: {len(all_strings)}\n")
+        f.write(f"Translated strings: {len(translation_strings.keys())}\n")
+        f.write(f"Untranslated strings: {len(missing_strings)}\n")
+        f.write(
+            "Translation percentage: "
+            f"{len(translation_strings)/len(all_strings)*100}%\n"
+        )
 
 @cli.command()
 @click.argument(

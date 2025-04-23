@@ -672,6 +672,54 @@
           dontFixup = true;
 
         };
+        data-strings-unique = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-data-strings-unique";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            self.packages.${system}.ssmm-patcher
+          ];
+
+          buildPhase = ''
+            mkdir -p "$out"
+            echo "${resourceFilesStr}" | \
+              # Don't run this multithreaded
+              xargs -P "1" -I {} bash -c '
+                echo "Finding unique strings from {}"
+                ssmm-patcher collect-strings \
+                  "${self.packages.${system}.data-strings-extracted}/{}.strings.yaml" \
+                  "$out/unique_strings.txt"
+              '
+          '';
+
+          dontFixup = true;
+
+        };
+        data-translation-analysis = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-data-translation-analysis";
+          inherit version;
+          src = ./strings.yaml;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            self.packages.${system}.ssmm-patcher
+          ];
+
+          buildPhase = ''
+            mkdir -p "$out"
+            ssmm-patcher analyze-translation-progress \
+              -o "$out" \
+              "$src" \
+              "${self.packages.${system}.data-strings-unique}/unique_strings.txt" \
+          '';
+
+          dontFixup = true;
+
+        };
         textures-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-textures-imhex-analysis";
