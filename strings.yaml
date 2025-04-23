@@ -2577,6 +2577,10 @@ Gクラッシャー:
   "english": "Finish input."
 "英数":
   english: "EN"
+"漢字<かんじ>の読<よ>みを選<えら>んでください。":
+  english: "Select a kanji reading."
+"漢字<かんじ>の読<よ>み選択<せんたく>に戻<もど>ります。":
+  english: "Return to kanji reading selection."
 
 # Chapter names
 "ピポサル帝国編":
