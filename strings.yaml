@@ -96,6 +96,8 @@
   english: "The % Memory Card is not formatted.\nDo you want to format it?"
 "メモリーカード(PS2)の空<あ>き容量<ようりょう>が不足<ふそく>しています。\nミリオンモンキーズのゲームデータを作成<さくせい>するには\n%KB以上<いじょう>の空<あ>き容量<ようりょう>が必要<ひつよう>です。\nこのままゲームを開始<かいし>しますか?":
   english: "There is not enough space(%KB) on\nthe Memory Card to create save data.\nStart game without saving?"
+"%のメモリーカード(PS2)の\n空<あ>き容量<ようりょう>が不足<ふそく>しています。\nミリオンモンキーズのゲームデータを作成<さくせい>するには\n%KB以上の空<あ>き容量<ようりょう>が必要<ひつよう>です。":
+  english: "There is not enough space on\nMemory Card %.You need at least\n%KB of free space to create\nsave data."
 "フォーマット中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
   english: "Formatting!\nDo not remove the\nMemory Card in % or\npower off the console."
 "%のメモリーカード(PS2)が抜<ぬ>かれたため\nフォーマットに失敗<しっぱい>しました。":
@@ -268,6 +270,8 @@
   "english": "Akihabara"
 "秋葉原 AM10:32":
   "english": "Akihabara\n10:32AM"
+" AM10:32":
+  english: " 10:32AM"
 "秋葉原 PM04:01":
   "english": "Akihabara\n04:01PM"
 " PM04:01":
@@ -454,6 +458,9 @@
 "ブリッジ PM04:36":
   english: "Bridge\n04:36PM"
 " PM04:36":
+  english: " 4:36PM"
+" PMO4:36":
+  # TODO: encoding issue
   english: " 4:36PM"
 "ブリッジ PM04:43":
   english: "Bridge\n04:43PM"
@@ -1659,6 +1666,11 @@ Gクラッシャー:
 ## Vernier Type
 "バーニア":
   english: "Jetpack"
+"バーニヤ":
+  # Is this just a different spelling?
+  english: "Jetpack"
+"バーニヤモード":
+  english: "JetPkMode"
 "高<たか>くジャンプするためのメカ。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。":
   english: "A gadget for jumping high.It does not consume energy and can be used repeatedly without recharging."
 # Misc.
@@ -2126,6 +2138,9 @@ Gクラッシャー:
 "トロコスチューム":
   english: "Toro"
 "「ニャ」を思<おも>わず語尾<ごび>に付<つ>けたくなる不思議<ふしぎ>なコスチュームです。":
+  english: 'A strange costume that makes you want to add "nya" to the end of your sentences.'
+"βニャγを思<おも>わず語尾<ごび>に付<つ>けたくなる不思議<ふしぎ>なコスチュームです。":
+  # TODO: Probably incorrect encoding?
   english: 'A strange costume that makes you want to add "nya" to the end of your sentences.'
 ## Saru Kakeru A
 "サルカケルA":
@@ -2675,22 +2690,8 @@ Gクラッシャー:
 
 
 # Unknown
-"獲得<かくとく>したチップのうち、手<て>に入<い>れていないチップは\n持<も>っているチップを削除<さくじょ>しないと手<て>に入<はい>りません。\nこのままキャラクターデータをセーブしますか?":
-  # Probably if you have a character with full chip inventory after a mission?
-  english: "Chip inventory is full.\nNew chips cannot be acquired.\nSave character data anyways?"
-"%の\nメモリーカード(PS2)には\nミリオンモンキーズの\nゲームデータがありません。":
-  english: "There is no Million Monkeys data\non Memory Card %"
-
-"あの上<うえ>には何<なに>があったんだろうなぁ⋅⋅⋅\n気<き>になってしょうがないよ。":
-  english: "I wonder what was up there⋅⋅⋅\nI can't help but wonder."
 "マッチセレクトに戻<もど>ります。":
   english: "Return to Match Select."
-"前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の儀<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
-  english: "Countless dark rituals appear in front of you,attacking nearby enemies."
-"次<つぎ>にステージをクリアするまで進行<しんこう>ファイルは\nセーブできませんが、本当<ほんとう>にキャンセルしますか?":
-  english: "You cannot save again until the next stage.\nContinue without saving?"
-"敵<てき>を麻冑<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
-  english: "Unleashes a dark cry that paralyzes enemies.Does not do damage."
 "ブロブコアを倒<たお>すには改造<かいぞう>レーザー砲<ほう>が必要<ひつよう>です。":
   english: "You'll need a modified laser cannon to defeat the blob core."
 "チップ削除":
@@ -2700,17 +2701,11 @@ Gクラッシャー:
 "セットするガチャメカを選<えら>んでください。":
   # Please select a gadget to apply?
   english: "Please select a gadget."
-"%に前回<ぜんかい>ロードしたメモリーカード(PS2)が差<さ>さって\nいません。前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
-  english: "The Memory Card in %\nhas been removed. Please\nreinsert the same Memory Card."
 "獲得<かくとく>チップ":
   english: "Chip Inventory"
-"%のメモリーカード(PS2)の\nフォーマットが完了<かんりょう>しました。":
-  english: "Formatting Memory Card %\ncomplete."
 "スイマー":
   # where is this used?
   english: "Swimmer"
-"%のメモリーカード(PS2)が抜<ぬ>かれたため\nキャラクターファイルのロードに失敗<しっぱい>しました。":
-  english: "Character file load failed.\nMemory Card % was removed."
 "はずす":
   english: "Remove"
 "このステージにはゲットアミが必要<ひつよう>です。":
@@ -2719,15 +2714,97 @@ Gクラッシャー:
   english: "The SP Gadget\nwill be destroyed!"
 "SPガチャメカセレクト":
   english: "SP Gadget Select"
-"モードクリアデータを進行<しんこう>ファイルに\nセーブできませんが、本当<ほんとう>にキャンセルしますか?":
-  english: "Mode clear data cannot be saved.\nDo you really want to cancel?"
 "VS.カケル":
   english: "VS.Kakeru"
+"VS.ニセスペクター":
+  english: "VS.Fake Specter"
 "ポケピ":
   english: "Pokepi"
 "アタックするステージを選<えら>んでください。":
   # Where is this used? What does it mean to attack a stage?
   english: "Select the stage to attack."
+"新宿駅付近<しんじゅくふきい>で確認<かくにん>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "It's near Shinjuku Station!\nPlease assist immediately!"
+"地下街<ちかがい>ではしゃぐ姿<すがた>が目撃<もくげき>されています!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted in the Metro!\nPlease rescue them ASAP!"
+"空中戦艦内搬入<くうちゅうせんかんないはんにゅう>エレベーターにて発見<はっけん>!\n至急回収願<しきゅうかいしゅうねが>います!":
+  english: "Found in the battleship elevator!\nPlease recover immediately!"
+"ムーブを諦<あきら>めてキャラクターファイルセレクトに戻<もど>ります。":
+  english: "Cancel move and return to character file selection."
+"コンボ":
+  english: "Combo"
+"ネットワークパスワード":
+  # What is this?
+  english: "Network Password"
+"ネットワーク パスワード":
+  english: "Network Password"
+"進行<しんこう>ファイルはセーブできませんが\n本当<ほんとう>にキャンセルしますか?":
+  english: "Your progress cannot be saved.\nDo you really want to cancel?"
+"フェイズ途中集計結果<とちゅうしゅうけいけっか>":
+  english: "Mid-phase Results"
+"ラウンド結果<けっか>":
+  english: "Round Results"
+"ボートキング":
+  # What is this?
+  english: "Boat King"
+"スロット1-A":
+  english: "Slot 1-A"
+"スロット1-B":
+  english: "Slot 1-B"
+"スロット1-C":
+  english: "Slot 1-C"
+"スロット1-D":
+  english: "Slot 1-D"
+"ホノラル":
+  # No idea what this is
+  # TODO: pretty similar to モノラル, is this an encoding bug?
+  # Seems to be specific to 641_58401ea3, likely encoding issue
+  english: "Mono"
+"交代<こうたい>するチームメイトを選<えら>んでください。":
+  english: "Choose a teammate to substitute."
+"%のキャラクターファイルの\nロードに失敗<しっぱい>しました。":
+  english: "Failed to load\ncharacter file %."
+"このガチャメカにはセットできません。":
+  english: "Cannot be set on this gadget."
+"体験版<たいけんばん>では選択<せんたく>できません。":
+  # There's a trial?
+  english: "This option is not available in the trial version."
+"ゴリアックアームを起動<きどう>し、パンチと衝撃波<しょうげきは>で攻撃<こうげき>します。 パンチ直撃<ちょくげき>を狙<ねら>いましょう。":
+  english: "Activate the Goliac Arm to attack with punches and shockwaves."
+"セーブをキャンセルしてもキャラクターエディットで\nキャラクターファイルのセーブは可能<かのう>です。\nここでのセーブをキャンセルしますか?":
+  english: "You will still be able to save\nyour character in Character Edit.\nDo you want to cancel saving here?"
+
+## Memory card text
+"次<つぎ>にステージをクリアするまで進行<しんこう>ファイルは\nセーブできませんが、本当<ほんとう>にキャンセルしますか?":
+  english: "You cannot save again until the next stage.\nContinue without saving?"
+"獲得<かくとく>したチップのうち、手<て>に入<い>れていないチップは\n持<も>っているチップを削除<さくじょ>しないと手<て>に入<はい>りません。\nこのままキャラクターデータをセーブしますか?":
+  # Probably if you have a character with full chip inventory after a mission?
+  english: "Chip inventory is full.\nNew chips cannot be acquired.\nSave character data anyways?"
+"モードクリアデータを進行<しんこう>ファイルに\nセーブできませんが、本当<ほんとう>にキャンセルしますか?":
+  english: "Mode clear data cannot be saved.\nDo you really want to cancel?"
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\nキャラクターファイルのロードに失敗<しっぱい>しました。":
+  english: "Character file load failed.\nMemory Card % was removed."
+"%のメモリーカード(PS2)の\nフォーマットが完了<かんりょう>しました。":
+  english: "Formatting Memory Card %\ncomplete."
+"%の\nメモリーカード(PS2)には\nミリオンモンキーズの\nゲームデータがありません。":
+  english: "There is no Million Monkeys data\non Memory Card %"
+"%にぜんかいロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
+  english: "The Memory Card in %\nhas been removed.Cannot save\ncharacter.Please reinsert the\nsame Memory Card.If you cancel,\nyour chips will be lost."
+"%にメモリーカード(PS2)が\n差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
+  english: "No Memory Card in %.\nCannot save character.\nPlease reinsert the Memory Card.\nIf you cancel,your chips will\nbe lost."
+"スロット%のメモリーカード(PS2)は\nフォーマットされていません。":
+  english: "The Memory Card in slot % is not formatted."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\nキャラクターファイルの削除<さくじょ>に失敗<しっぱい>しました。":
+  english: "Failed to delete character because\nMemory Card % was removed."
+"この進行<しんこう>ファイル%は破損<はそん>しています。\n新<あたら>しく進行<しんこう>ファイルを作<つく>り直<なお>しますか?":
+  english: "The progress file is corrupted.\nCreate a new progress file?"
+"%に前回<ぜんかい>ロードしたメモリーカード(PS2)が差<さ>さって\nいません。前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "The Memory Card in %\nhas been removed. Please\nreinsert the same Memory Card."
+
+## Probably Costume text
+"日本<にほん>のα武者<よろいむしゃ>の格好<かっこう>です。":
+  # TODO: is this an encoding bug?
+  english: "Dressed as a Japanese alpha warrior."
 
 ## Ceremonies?
 ## Where are these used?
@@ -2737,7 +2814,23 @@ Gクラッシャー:
 "爆裂儀":
   english: "Explosion Ceremony"
 
-# Probably gadget text
+## Probably special move text
+"上空<じょうくう>に戦艦<せんかん>をよびよせ、爆撃<ばくげき>で援護<えんご>してもらう技<わざ>です。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
+  english: "Calls in a battleship airstrike,attacking enemies in a wide area."
+"敵<てき>を麻冑<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
+  english: "Unleashes a dark cry that paralyzes enemies.Does not do damage."
+"前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の儀<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
+  english: "Countless dark rituals appear in front of you,attacking nearby enemies."
+"敵一体<てきいったい>に体当<たいあ>たりした後<あと>、分身<ぶんしん>して攻撃<こうげき>する技<わざ>です。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  english: "Split into two and attack simultaneously.Lock on before activating to hit the enemy more reliably."
+"サルの大群<たいぐん>を呼<よ>び寄<よ>せ、全<すべ>てをなぎ倒<たお>すすごい技<わざ>です。 地上<ちじょう>の敵<てき>に対<たい>して有効<ゆうこう>です。":
+  english: "Summon a horde of monkeys that knocks everything down.Effective against ground enemies"
+"巨大<きょだい>なプラズマ球<きゅう>を発生<はっせい>させます。 プラズマ球<きゅう>は操作<そうさ>して敵<てき>にぶつけることができます。":
+  english: "Summons a giant plasma ball that can be controlled and thrown at enemies."
+
+## Probably gadget text
+"ヘビーメック":
+  english: "Heavy Mech"
 "攻撃力重視<こうげきりょくじゅうし>のタンクです。":
   english: "An offensive-focused tank."
 
@@ -2748,22 +2841,83 @@ Gクラッシャー:
   english: "Reactor 2 online!"
 "エネルギー供給炉3号機起動!":
   english: "Reactor 3 online!"
+"改造<かいぞう>レーザー砲<ほう>が使用可能<しようかのう>になりました。\n必殺技<ひっさつわざ>セレクトで装備<そうび>できます。":
+  english: "Modified laser cannons can now\nbe selected as a special move."
 
 ## Probably monkey text
-"バーモンにあったら\n遅<おく>れるなら電話<でんわ>しろよって伝<つた>えてください。":
-  english: "If you see Vermon,tell him to\ncall me if he's late."
+### Capture text
 "ヨットハーバーにてくつろいでいるところを\n発見<はっけん>されゲッチュされる。":
   english: "Captured at the yacht harbor\nwhile relaxing."
-"へたくそ":
-  english: "Clumsy"
+"ヨットハーバーにて釣<つ>り糸<いと>をたれているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured at the yacht harbor\nwhile fishing."
+"ヨットハーバーにてジャグリング中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured at the yacht harbor\nwhile juggling."
+"ヨットハーバーにてねっしょう中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while sleeping in the yacht harbor."
+"ヨットハーバーでデイビッドを\n起<お>こそうとしているところを発見<はっけん>されゲッチュされる。":
+  english: "Captured at the yacht harbor\nwhile trying to wake David up."
+"ヨットハーバーにて木<き>に登<のぼ>っているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured at the yacht harbor\nwhile climbing a tree."
+"地下街<ちかがい>で居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while dozing off\nin the Metro."
+"地下街<ちかがい>でエレベータを待<ま>っているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while waiting for an\nelevator at the Metro."
+"クレーンにひっかかっているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while caught on a crane."
+"エントツにのぼろうとしているところを\n発見<はっけん>されゲッチュされる。":
+  # エントツ is probably 煙突
+  english: "Captured while trying to climb a chimney."
+
+### Monkey quotes
+"バーモンにあったら\n遅<おく>れるなら電話<でんわ>しろよって伝<つた>えてください。":
+  english: "If you see Vermon,tell him to\ncall me if he's late."
 "山<やま>がそこにあるから\nのぼるのみャ!":
   english: "Mountains are meant\nto be climbed!"
 "ホント言<い>うと高<たか>いところは苦手<にがて>なんだ⋅⋅⋅。":
   english: "To be honest, I'm terrible\nwith heights."
-"ヨットハーバーにて釣<つ>り糸<いと>をたれているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured at the yacht harbor\nwhile fishing."
+"あっ、ピポヘルのライトが見<み>えてたのか〜\nざんねん⋅⋅⋅":
+  english: "Ah,the Pipo helmet light was\nvisible⋅⋅⋅ What a shame⋅⋅⋅"
+"エントツの上<うえ>から声<こえ>がしたんだ。\nそれをたしかめに行<い>こうとしたんだよ。":
+  english: "I heard a voice from the chimney.\nI went to check it out."
+"あの上<うえ>には何<なに>があったんだろうなぁ⋅⋅⋅\n気<き>になってしょうがないよ。":
+  english: "I wonder what was up there⋅⋅⋅\nI can't help but wonder."
+" オレはお前<まえ>に負<ま>けたんじゃないぞ!\n あったかい日差<ひざ>しに負<ま>けたんだ!":
+  english: "I didn't lose to you!\nI lost to the warm sun!"
+"ダレだ!あんなところで待<ま>ち伏<ぶ>せしようって言<い>ったのは!\nオレじゃないぞ!":
+  english: "Who said we should ambush them\nthere?! It wasn't me!"
+"⋅⋅⋅何<なに>も聞<き>かないでくれよ。\nどうしてああなったのかわからないんだ。":
+  english: "Don't ask me anything.\nI don't know why it happened."
+"何<なに>も海<うみ>で練習<れんしゅう>しなくてもいいと思<おも>うんだよね⋅⋅⋅":
+  english: "I don't think you need to\npractice in the ocean⋅⋅⋅"
+" オレはなにもしてないだろ!\n 画面<がめん>をよく見<み>てくれよ!":
+  english: "I didn't do anything!\nLook at the screen!"
+" じきに仲間<なかま>が助<たす>けにくるぞ!\n きっと来<く>る! たぶん来<く>る!":
+  english: "Our friends will save us!\nThey will⋅⋅⋅probably!"
+"いやー。\n今回<こんかい>はボートがないからさびしくなっちゃうねー。":
+  english: "Oh no.It's going to be lonely\nthis time without a boat."
+" あと少<すこ>しで新記録<しんきろく>だったんだよ!\n あと少<すこ>しでウキイシに勝<か>てたんだっ!":
+  english: "I almost set a new record!\nI was so close to beating Ukiishi!"
+
+# Monkey descriptions
+"へたくそ":
+  english: "Clumsy"
 "そらみみ":
   # Probably 空耳?
   # Is this monkey description text?
   english: "Deaf"
   #english: "Mishearing"
+"ぼうけんか":
+  # Probably 冒険家?
+  english: "Adventurer"
+"ねぶそく":
+  # Probably 寝不足
+  english: "Sleepy"
+"こわがり":
+  # Probably 恐がり
+  english: "Coward"
+"つよい":
+  # Probably 強い
+  english: "Strong"
+"よわい":
+  english: "Weak"
+
