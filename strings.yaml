@@ -94,6 +94,8 @@
   english: "There is no save data in Memory Card %.\nDo you want to create it?"
 "%のメモリーカード(PS2)は\nフォーマットされていません。フォーマットしますか?":
   english: "The % Memory Card is not formatted.\nDo you want to format it?"
+"メモリーカード(PS2)の空<あ>き容量<ようりょう>が不足<ふそく>しています。\nミリオンモンキーズのゲームデータを作成<さくせい>するには\n%KB以上<いじょう>の空<あ>き容量<ようりょう>が必要<ひつよう>です。\nこのままゲームを開始<かいし>しますか?":
+  english: "There is not enough space(%KB) on\nthe Memory Card to create save data.\nStart game without saving?"
 "フォーマット中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
   english: "Formatting!\nDo not remove the\nMemory Card in % or\npower off the console."
 "%のメモリーカード(PS2)が抜<ぬ>かれたため\nフォーマットに失敗<しっぱい>しました。":
@@ -498,6 +500,9 @@
   english: "Stadium\n03:20AM"
 " AM03:20":
   english: " 03:20AM"
+" AMO3:2O":
+  # TODO: Probably incorrect encoding?
+  english: " 03:20AM"
 "ナゾの浮遊生物<ふゆうせいぶつ>を倒<たお>せ!➝\n\f射程<しゃてい>の長<なが>いガチャメカを使用<しよう>して倒<たお>してください。➝\n\f浮遊生物<ふゆうせいぶつ>のデータはありませんので\n十分注意<じゅうぶんちゅうい>してください。":
   english: "Defeat the strange floating\ncreatures!➝\n\fUse long range gadgets to\ndefeat them.➝\n\fBe careful,there is no data on\nthese creatures."
 ## Yacht Harbor
@@ -599,9 +604,11 @@
 "クリアボーナス":
   english: "Clear Bonus"
 "ゲッチュボーナス":
-  english: "Catch bonus"
+  english: "Catch Bonus"
 "コインボーナス":
-  english: "Coin bonus"
+  english: "Coin Bonus"
+"パズルボーナス":
+  english: "Puzzle Bonus"
 
 # Load character slot select screen
 "キャラクターファイル":
@@ -714,6 +721,15 @@
   english: "World Semifinals"
 "ワールド決勝ステージ":
   english: "World Finals"
+"デビルズ一次予選ステージ":
+  english: "Devil's Pre-qualifiers"
+"デビルズ二次予選ステージ":
+  english: "Devil's Qualifiers"
+デビルズ準決勝ステージ:
+  english: "Devil's Semifinals"
+"デビルズ決勝ステージ":
+  english: "Devil's Finals"
+
 "ステージセレクト":
   english: "Stage Select"
 
@@ -1040,6 +1056,9 @@
 "モンタ":
   english: "Monta"
 "攻撃魔法<こうげきまほう>の達人<たつじん>。 隕石<いんせき>の雨<あめ>を降<ふ>らせてあなたを援護<えんご>します。       ":
+  english: "A master of offensive magic.He will rain down meteors to support you."
+"攻撃魔法<こうげきまほう>の達人<たつじん>。 鎧石<いんせき>の雨<あめ>を降<ふ>らせてあなたを援護<えんご>します。       ":
+  # Idk why this one is also here
   english: "A master of offensive magic.He will rain down meteors to support you."
 "ハットリモンゾウ":
   english: "Hattori Monzo"
@@ -1950,6 +1969,8 @@ Gクラッシャー:
 ## Historical Armor
 "ヒストリカルアーマー":
   english: "Historical Armor"
+"中世<ちゅうせい>の騎土<きし>の甲狙<かっちゅう>です。":
+  english: "A medieval knight's armor."
 "中世<ちゅうせい>の騎土<きし>の甲冑<かっちゅう>です。":
   english: "A medieval knight's armor."
 "中世<ちゅうせい>の騎土風<きしふう>の甲冑<かっちゅう>です。":
@@ -2004,6 +2025,9 @@ Gクラッシャー:
 "ヒツジセット":
   english: "Sheep Set"
 "ウール100％のひつじさんのコスチュームです。":
+  english: "This sheep costume is made of 100％ wool."
+"ウール100骸のひつじさんのコスチュームです。":
+  # TODO: Probably incorrect encoding?
   english: "This sheep costume is made of 100％ wool."
 ## Ponpoko (onomatopoeia for Raccoon Dog) DX Set
 "ポンポコDXセット":
@@ -2161,6 +2185,9 @@ Gクラッシャー:
 ### Container Terminal
 "コンテナターミナルで発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください":
   english: "Seen at the container terminal!\nPlease come and catch it immediately."
+### Monkey Base?
+"サル軍基地<ぐんきち>にて発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
+  english: "Seen at the monkey base!\nPlease come and catch it immediately."
 ## Monkeys
 ### Shinjuku
 "イチロウ":
@@ -2463,6 +2490,8 @@ Gクラッシャー:
   english: "Select your first chip."
 "2枚目<まいめ>のチップを選<えら>んでください。":
   english: "Select your second chip."
+"1枚目<まいめ>のチップ選択<せんたく>に戻<もど>ります。":
+  english: "Return to 1st chip selection."
 
 # Gadget Lab Free screen dialogs
 "%と%を合成<ごうせい>します。\nよろしいですか?":
@@ -2531,7 +2560,7 @@ Gクラッシャー:
 "英数":
   english: "EN"
 
-# Level names?
+# Chapter names
 "ピポサル帝国編":
   english: "Piposaru Empire"
 "空中戦艦編":
@@ -2580,4 +2609,114 @@ Gクラッシャー:
 "ルテニチップ":
   english: "Ruthenium chip"
 
+# Passwords
+# Using Chinese version codes where available
+# https://gamefaqs.gamespot.com/ps2/932343-ape-escape-million-monkeys/cheats
+# Otherwise using best effort translations of the japanese
+"ショダイチャンプ":
+  # Probably 初代 チャンプ
+  # Unlocks Haruka
+  english: "1STCHAMP"
+"ハグレサンセンシ":
+  # Probably 逸れ 三 戦士
+  # Unlocks Pipotron Team
+  english: "THREEMEN"
+"エイエンノライバル":
+  # Probably 永遠 の ライバル
+  # Unlocks Hiroki
+  english: "MYRIVAL"
+"アンコクノセンシ":
+  # Probably 暗黒 の 戦士
+  # Unlocks Dark Hiroki
+  english: "GOODRIVAL"
+"キュウキョクマジン":
+  # Probably (旧墟/究極) 魔人
+  # Unlocks Dark Specter
+  english: "DARKRIVAL"
+"デンセツノタツジン":
+  # Probably 伝説 の 達人
+  # Unlocks Legend
+  english: "NOWMASTER"
+"ウワサノアカイサル":
+  # Unlocks Volcano
+  # Probably 噂 の 赤い サル
+  english: "REDMONKEY"
+"ナンニンイルノカナ":
+  # Unlocks Virus Charu
+  # 何人いるのかな
+  english: "MOREMORE"
+"ルケカルサ":
+  # Unlocks Monkey costume for Kakeru
+  # This is サル カケル backwards
+  english: "RUKEKARUS" # Can't fit last 'E' in this code
+"セットコロドラゴン":
+  # Unlocks Koro Dragon Set
+  english: "SETDRAGON"
+"クマトオスモウ":
+  # Unlocks Kintaro set for Monkey Team
+  # Probably クマ と 相撲
+  english: "BEARSUMO"
+"サルトオドロウ":
+  # Unlocks I Feel Love cutscene
+  # Probably サル と 踊ろう
+  english: "SARUDANCE"
+"ハードニイコウゼ":
+  # Unlocks hard and very hard for story mode
+  # Probably ハード に 行こうぜ
+  english: "PLAYHARD"
+"サイキョウハダレダ":
+  # Receive a "Network Password" upon clearing any stage
+  # Probably 最強 は 誰 だ
+  english: "STRONGEST"
 
+
+# Unknown
+"獲得<かくとく>したチップのうち、手<て>に入<い>れていないチップは\n持<も>っているチップを削除<さくじょ>しないと手<て>に入<はい>りません。\nこのままキャラクターデータをセーブしますか?":
+  # Probably if you have a character with full chip inventory after a mission?
+  english: "Chip inventory is full.\nNew chips cannot be acquired.\nSave character data anyways?"
+"%の\nメモリーカード(PS2)には\nミリオンモンキーズの\nゲームデータがありません。":
+  english: "There is no Million Monkeys data\non Memory Card %"
+
+"あの上<うえ>には何<なに>があったんだろうなぁ⋅⋅⋅\n気<き>になってしょうがないよ。":
+  english: "I wonder what was up there⋅⋅⋅\nI can't help but wonder."
+"マッチセレクトに戻<もど>ります。":
+  english: "Return to Match Select."
+"前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の儀<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
+  english: "Countless dark rituals appear in front of you,attacking nearby enemies."
+"次<つぎ>にステージをクリアするまで進行<しんこう>ファイルは\nセーブできませんが、本当<ほんとう>にキャンセルしますか?":
+  english: "You cannot save again until the next stage.\nContinue without saving?"
+"敵<てき>を麻冑<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
+  english: "Unleashes a dark cry that paralyzes enemies.Does not do damage."
+"ブロブコアを倒<たお>すには改造<かいぞう>レーザー砲<ほう>が必要<ひつよう>です。":
+  english: "You'll need a modified laser cannon to defeat the blob core."
+"チップ削除":
+  english: "Chip Deletion"
+"あ!":
+  english: "Ah!"
+"セットするガチャメカを選<えら>んでください。":
+  # Please select a gadget to apply?
+  english: "Please select a gadget."
+"%に前回<ぜんかい>ロードしたメモリーカード(PS2)が差<さ>さって\nいません。前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "The Memory Card in %\nhas been removed. Please\nreinsert the same Memory Card."
+"獲得<かくとく>チップ":
+  english: "Chip Inventory"
+"%のメモリーカード(PS2)の\nフォーマットが完了<かんりょう>しました。":
+  english: "Formatting Memory Card %\ncomplete."
+"スイマー":
+  # where is this used?
+  english: "Swimmer"
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\nキャラクターファイルのロードに失敗<しっぱい>しました。":
+  english: "Character file load failed.\nMemory Card % was removed."
+"はずす":
+  english: "Remove"
+"このステージにはゲットアミが必要<ひつよう>です。":
+  english: "A GetNet is required for this stage."
+## Probably monkey text
+"バーモンにあったら\n遅<おく>れるなら電話<でんわ>しろよって伝<つた>えてください。":
+  english: "If you see Vermon,tell him to\ncall me if he's late."
+"ヨットハーバーにてくつろいでいるところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured at the yacht harbor\nwhile relaxing."
+"へたくそ":
+  english: "Clumsy"
+"山<やま>がそこにあるから\nのぼるのみャ!":
+  english: "Mountains are meant\nto be climbed!"
