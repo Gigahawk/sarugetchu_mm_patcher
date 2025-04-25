@@ -1,5 +1,3 @@
-
-
 # Common
 "もどる":
   english: "Return"
@@ -2694,6 +2692,8 @@ Gクラッシャー:
 
 
 # Unknown
+"%の%を削除<さくじょ>して\n%の%をムーブします。 よろしいですか?":
+  english: "Deleting % from % and\nmoving % from %? Proceed?"
 "マッチセレクトに戻<もど>ります。":
   english: "Return to Match Select."
 "ブロブコアを倒<たお>すには改造<かいぞう>レーザー砲<ほう>が必要<ひつよう>です。":
@@ -2777,6 +2777,14 @@ Gクラッシャー:
   english: "Activate the Goliac Arm to attack with punches and shockwaves."
 "セーブをキャンセルしてもキャラクターエディットで\nキャラクターファイルのセーブは可能<かのう>です。\nここでのセーブをキャンセルしますか?":
   english: "You will still be able to save\nyour character in Character Edit.\nDo you want to cancel saving here?"
+"削除<さくじょ>するチップを選<えら>んでください。":
+  english: "Select a chip to delete."
+"ムーブに失敗<しっぱい>しました。":
+  english: "Move failed."
+"サウンドの出力形式<しゅつりょくけいしき>を選択<せんたく>してください。":
+  english: "Select sound output format."
+"音量<おんりょう>のバランスを選択<せんたく>してください。":
+  english: "Select volume balance."
 
 ## Memory card text
 "次<つぎ>にステージをクリアするまで進行<しんこう>ファイルは\nセーブできませんが、本当<ほんとう>にキャンセルしますか?":
@@ -2794,6 +2802,8 @@ Gクラッシャー:
   english: "There is no Million Monkeys data\non Memory Card %"
 "%にぜんかいロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
   english: "The Memory Card in %\nhas been removed.Cannot save\ncharacter.Please reinsert the\nsame Memory Card.If you cancel,\nyour chips will be lost."
+"%のメモリーカード(PS2)がぬかれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップを受<う>け取<と>ることができません。":
+  english: "The Memory Card in %\nhas been removed.Cannot save\ncharacter.Please reinsert the\nsame Memory Card.If you cancel,\nyour chips will be lost."
 "%にメモリーカード(PS2)が\n差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
   english: "No Memory Card in %.\nCannot save character.\nPlease reinsert the Memory Card.\nIf you cancel,your chips will\nbe lost."
 "スロット%のメモリーカード(PS2)は\nフォーマットされていません。":
@@ -2804,6 +2814,41 @@ Gクラッシャー:
   english: "The progress file is corrupted.\nCreate a new progress file?"
 "%に前回<ぜんかい>ロードしたメモリーカード(PS2)が差<さ>さって\nいません。前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
   english: "The Memory Card in %\nhas been removed. Please\nreinsert the same Memory Card."
+"%のメモリーカード(PS2)の\nフォーマットに失敗<しっぱい>しました。":
+  english: "Failed to format the\nMemory Card in %."
+"%のメモリーカード(PS2)には\nミリオンモンキーズのゲームデータがありません。":
+  english: "The Memory Card in %\ndoes not contain game data."
+"%のミリオンモンキーズの\nゲームデータは破損<はそん>しています。\n本体<ほんたい>のブラウザ画面<がめん>で破損<はそん>データを削除<さくじょ>して\nゲームデータを作<つく>り直<なお>してください。":
+  english: "Million Monkeys data on % is\ncorrupted.Delete it from the\nMemory Card browser menu and\nrecreate it."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\n進行<しんこう>ファイルのセーブに失敗<しっぱい>しました。":
+  english: "Save failed because Memory\nCard % was removed."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\n進行<しんこう>ファイルのロードに失敗<しっぱい>しました。":
+  english: "Load failed because Memory\nCard % was removed."
+"%のメモリーカード(PS2)にある\nキャラクターファイル%の削除<さくじょ>に失敗<しっぱい>しました。":
+  english: "Error on Memory Card %:\nFailed to delete character file %."
+"%のメモリーカード(PS2)にある\n進行<しんこう>ファイル%の削除<さくじょ>に失敗<しっぱい>しました。":
+  english: "Error on Memory Card%:\nFailed to delete progress file %."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\nミリオンモンキーズのゲームデータ作成<さくせい>に失敗<しっぱい>しました。":
+  english: "Failed to create game data\nbecause Memory Card % was removed."
+"%のメモリーカード(PS2)には\nミリオンモンキーズのゲームデータがありません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "No game data on Memory Card %.\nReinsert the previously loaded\nMemory Card."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\n進行<しんこう>ファイルのセーブに失敗<しっぱい>しました。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "Memory Card % was removed.\nFailed to save progress file.\nInsert the previously loaded\nMemory Card."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\n進行<しんこう>ファイルの削除<さくじょ>に失敗<しっぱい>しました。":
+  english: "Memory Card % was removed.\nFailed to delete progress file."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\n進行<しんこう>ファイルのセーブに失敗<しっぱい>しました。":
+  english: "Memory Card % was removed.\nFailed to save progress file."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "Memory Card % was removed.\nFailed to save character file.\nInsert the previously loaded\nMemory Card."
+"%のメモリーカード(PS2)が抜<ぬ>かれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。":
+  english: "Memory Card % was removed.\nSave failed."
+"%に前回<ぜんかい>ロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "Memory Card % was removed.\nFailed to save character file.\nInsert the previously loaded\nMemory Card."
+"%にぜんかいロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップを受<う>け取<と>ることができません。":
+  english: "Memory Card % was removed.\nFailed to save character file.\nInsert the previously loaded\nMemory Card.If you cancel,\nyour chips will be lost."
+"%の\nメモリーカード(PS2)が\n抜<ぬ>かれたため\nロードに失敗<しっぱい>しました。":
+  # Hopefully this doesn't come up very often, why does it need three newlines?
+  english: "Memory Card % was removed.\nLoad failed."
 
 ## Probably Costume text
 "日本<にほん>のα武者<よろいむしゃ>の格好<かっこう>です。":
@@ -2831,6 +2876,24 @@ Gクラッシャー:
   english: "Summon a horde of monkeys that knocks everything down.Effective against ground enemies"
 "巨大<きょだい>なプラズマ球<きゅう>を発生<はっせい>させます。 プラズマ球<きゅう>は操作<そうさ>して敵<てき>にぶつけることができます。":
   english: "Summons a giant plasma ball that can be controlled and thrown at enemies."
+"前方<ぜんぽう>に巨大<きょだい>な矢<や>を放<はな>つ技<わざ>です。 効果範囲<こうかはんい>が小<ちい>さいかわりに高<たか>い攻撃力<こうげきりょく>を持<も>ちます。":
+  english: "Shoots a giant arrow forward. It has a small range but high attack power."
+"巨大<きょだい>な爆風<ばくふう>にまわりの敵<てき>をまきこみます。 ただし、自分<じぶん>もダメージを負<お>うので注意<ちゅうい>してください。":
+  english: "Engulfs nearby enemies in a massive explosion.High attack, but you will also take damage."
+"世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し％<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
+  english: "A frog aiming to be the world's best fighter.It attacks nearby enemies with a spinning kick shockwave."
+"一定時間<いっていじかん>、すべての能力<のうりょく>がパワーアップします。 パワーアップしたハンマーの攻撃力<こうげきりょく>は絶大<ぜつだい>です。":
+  english: "All abilities boosted briefly.Hammer's attack power is significantly increased."
+"一定時間<いっていじかん>、敵<てき>の動<うご>きがスローになる技<わざ>です。 連続<れんぞく>ヒットがねらいやすくなります。":
+  english: "Slows enemies briefly,making it easier to land combos."
+"一定時間<いっていじかん>バリアを張<は>って防御<ぼうぎょ>する技<わざ>です。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。":
+  english: "Creates a temporary barrier.Other special moves cannot be used while the barrier is active."
+"ジャンプして上空<じょうくう>から地面<じめん>に向<む>かって爆弾<ばくだん>をばらまきます。 地上<ちじょう>の敵<てき>にのみ有効<ゆうこう>です。":
+  english: "Jump and drop bombs from above.Effective only on ground enemies."
+"近<ちか>くの敵一体<てきいったい>を掴<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  english: "Grab a nearby enemy,throw it,and unleash a barrage of shots.Lock on before activating to hit the enemy more reliably."
+"一定時間<いっていじかん>、二丁拳銃<にちょうけんじゅう>の弾<たま>が強化弾<きょうかだん>になります。 発動中<はつどうちゅう>は他<ほか>の必殺技<ひっさつわざ>を使<つか>うことができなくなるので注意<ちゅうい>してください。":
+  english: "Dual pistols fire enhanced bullets briefly.Other special moves cannot be used during this time."
 
 ## Probably gadget text
 "ヘビーメック":
@@ -2871,6 +2934,38 @@ Gクラッシャー:
 "エントツにのぼろうとしているところを\n発見<はっけん>されゲッチュされる。":
   # エントツ is probably 煙突
   english: "Captured while trying to climb a chimney."
+"新宿<しんじゅく>で待<ま>ち合<あ>わせ中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while waiting for\nsomeone at Shinjuku."
+"地下街<ちかがい>で増援部隊<ぞうえんぶたい>を呼<よ>び寄<よ>せたがゲッチュされた。":
+  english: "Captured while calling for\nreinforcements in the Metro."
+"エレベーターにてメンテナンス中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while doing elevator\nmaintenance."
+"バナナボートを必死<ひっし>にこいでいるところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while paddling\na banana boat desperately."
+"コンテナターミナルで釣<つ>りをしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while fishing\nat the container terminal."
+"ショーウィンドウで待<ま>ち伏<ぶ>せているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while lying in wait in\na shop window."
+"ジュンを発見しました!":
+  english: "Jun has been found!"
+"港<みなと>の煙突<えんとつ>の上<うえ>で\nセキこんでいたところを発見<はっけん>。":
+  english: "Found coughing on top of a\nchimney at the harbor."
+"新宿<しんじゅく>で居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while napping in\nShinjuku."
+"巨大<きょだい>なレーザー砲台<ほうだい>に\n感動<かんどう>しているところを発見<はっけん>。":
+  english: "Captured while admiring a giant\nlaser cannon."
+"ヨットハーバーにて日光浴<にっこうよく>の最中<さいちゅう>に\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while sunbathing at\nthe yacht harbor."
+"地下街<ちかがい>で自動販売機<じどうはんばいき>にいたずらしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while tampering with a\nvending machine in the Metro."
+"サル軍基地<ぐんきち>で待<ま>ち伏<ぶ>せているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while lying in wait at\nthe monkey base."
+"ヨットハーバーにて危険<きけん>な芸<げい>をしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Captured while performing\nstunts at the yacht harbor."
+"高<たか>い所<ところ>で修行中<しゅぎょうちゅう>との情報<じょほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted training at a high place!\nPlease rescue immediately!"
+"サル軍基地<ぐんきち>にいたとの情報<じょうほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted at the monkey base!\nPlease rescue immediately!"
 
 ### Monkey quotes
 "バーモンにあったら\n遅<おく>れるなら電話<でんわ>しろよって伝<つた>えてください。":
@@ -2901,6 +2996,19 @@ Gクラッシャー:
   english: "Oh no.It's going to be lonely\nthis time without a boat."
 " あと少<すこ>しで新記録<しんきろく>だったんだよ!\n あと少<すこ>しでウキイシに勝<か>てたんだっ!":
   english: "I almost set a new record!\nI was so close to beating Ukiishi!"
+"ジャンプしてるとなんだかハイになっちゃってさ。\n何<なに>してたんだか思<おも>い出<だ>せないよ。":
+  # ハイ apparently means intoxicated, which seems weird for a childrens game
+  english: "Jumping makes me feel high.\nI can't remember what I was doing."
+"ホントいうと足<あし>がすくんで出<で>て行<い>けなかったんだ⋅⋅⋅\n誰<だれ>にもいわないでくれよ⋅⋅⋅":
+  english: "Honestly,my legs froze.\nDon't tell anyone..."
+"まーこんがり焼<や>けたし。\nよしとしようかな。":
+  english: "Well, it's nicely roasted.\nI guess it's fine."
+"都会<とかい>にはエクセレントな服<ふく>が\nいっぱいね♪":
+  english: "The city is full of\nexcellent clothes♪"
+"広<ひろ>い海<うみ>を見<み>ていると⋅⋅⋅\nこまかいことはどうでもよくなってくるよ。":
+  english: "Looking at the vast ocean...\nI stop worrying about the little things."
+"危険<きけん>なところを見<み>るとチャレンジしたくなるのさ。\nオレをとめてもムダだぜ。":
+  english: "Danger excites me!\nYou can't stop me."
 
 # Monkey descriptions
 "へたくそ":
@@ -2925,3 +3033,113 @@ Gクラッシャー:
 "よわい":
   english: "Weak"
 
+"上級者<じょうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
+  english: "Join a tournament for pros."
+"自由<じゆう>の女神<めがみ>も\nソフトクリームが大好<だいす>きニャ♪":
+  english: "The Statue of Liberty\nloves ice cream, nya!"
+"修行<しゅぎょう>の道<みち>に\n終<お>わりはないんダス。":
+  english: "The path of training\nnever ends, dasu."
+" ヤツは生<い>きている! 本当<ほんとう>だ!\n 信<しん>じてくれ!":
+  english: "He's alive! It's true!\nPlease believe me!"
+"周辺<しゅうへん>の敵<てき>を吸<す>い込<こ>む巨大<きょだい>な竜巻<たつまき>を発生<はっせい>させます。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
+  english: "Summons a massive tornado\nto suck in nearby foes.\nHits a wide area."
+"釣<つ>れなくてもいい。\n海<うみ>が見<み>れればオレはそれで満足<まんぞく>さ。":
+  english: "I don't care if I catch nothing.\nJust seeing the sea is enough."
+"ヨットハーバーの広場<ひろば>で踊<おど>っているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught dancing\nin the yacht harbor plaza."
+"んんー。 ボクの設計<せっけい>はカンペキだ!\nこれで昇進<しょうしん>まちがいなしだ!!":
+  english: "Hmm. My design is flawless!\nThis guarantees my promotion!!"
+"新宿<しんじゅく>でさぼっているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught slacking off\nin Shinjuku."
+"サウンドの出カ形式<しゅつりょくけいしき>を選択<せんたく>してください。":
+  english: "Choose sound output format."
+"キャラクターファイルにセーブできませんが、\n本当<ほんとうに>にキャンセルしますか?":
+  english: "Cannot save character file. Really cancel?"
+"新宿<しんじゅく>で車<くるま>の上<うえ>で暴<あば>れているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught rampaging on a car in Shinjuku."
+"ヨットハーバーにて日光浴<にっこうよく>をしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught sunbathing at the yacht harbor."
+"公衆電話<こうしゅうでんわ>で話<はな>し中<ちゅう>のところを発見<はっけん>されゲッチュされる。":
+  english: "Caught talking at a public phone."
+"%にメモリーカード(PS2)が\n差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップを受<う>け取<と>ることができません。":
+  english: "No Memory Card(PS2) in %. Cannot save character file. Insert the last loaded Memory Card(PS2). Canceling will lose the chip."
+"近<ちか>くの敵一体<てきいったい>を/<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  english: "Grab and throw 1 enemy, then unleash a barrage. Lock-on recommended for accuracy."
+"一定時間<いっていじかん>レーザーをはねかえすシールドを発生<はっせい>させるパーツです。 複数<ふくすう>セットすることでシールドの持続時間<じぞくじかん>をのばすことができます。":
+  english: "Generates a shield that reflects lasers for a time. Stack to extend duration."
+"停泊中<ていはくちゅう>の船<ふね>で遊<あそ>んでいるところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught playing on a docked ship."
+"新宿<しんじゅく>で電話<でんわ>をかけているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught making a call in Shinjuku."
+"ヨットハーバーにてめいそう中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught meditating at the yacht harbor."
+"ヨットハーバーにて眠<ねむ>りかけているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught dozing off at the yacht harbor."
+"地下街<ちかがい>で隠<かく>れているところを発見<はっけん>されゲッチュされる。":
+  english: "Caught hiding in the underground mall."
+"地下街<ちかがい>にて待<ま>ち伏<ぶ>せ中<ちゅう>に\n発見<はっけん>されゲッチュされる。":
+  english: "Caught ambushing in the underground mall."
+"ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。        ":
+  english: "Blast monkeys with a cannon. Hits 1 enemy repeatedly."
+"ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。       ":
+  english: "Blast monkeys with a cannon. Hits 1 enemy repeatedly."
+"我<わ>が心<こころ>すでに空<くう>なり。 空<くう>なるが故<ゆえ>、無<む>じゃ。\nわかるかな?":
+  english: "My heart is empty. Empty means nothing.\nDo you understand?"
+"アイドルとして紅白出場<こうはくしゅつじょう>をねらうウサギ。 歌<うた>の力<ちから>であなたの体力<たいりょく>を回復<かいふく>します。":
+  english: "A rabbit aiming for stardom. Its song restores your health."
+"海辺<うみべ>にてシンクロの練習中<れんしゅうちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught practicing synchronized swimming\nat the beach."
+"世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し蹴<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
+  english: "A frog aiming to be the best fighter. Its spinning kick creates shockwaves to attack nearby enemies."
+"新宿<しんじゅく>でガンをうちまくっているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught shooting wildly in Shinjuku."
+"ノーベル賞<しょう>をめざす理論派<りろんは>ロボ。 箱<はこ>いっぱいの爆弾<ばくだん>で援護<えんご>してくれます。     ":
+  english: "A robot aiming for a Nobel Prize. It supports you with a box full of bombs."
+"ゴリアックヘッドを起動<きどう>し、レーザーで攻撃<こうげき>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>できますが、空中<くうちゅう>の敵<てき>はねらえません。":
+  english: "Activates the Goliac Head to attack with lasers. Hits a wide area but can't target airborne enemies."
+"お台場<だいば>で目撃<もくげき>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Sighted in Odaiba!\nPlease rescue immediately!"
+"%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "Memory Card(PS2) not inserted in %.\nCannot save character file.\nPlease insert the last loaded Memory Card(PS2)."
+"%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
+  english: "Failed to create Million Monkeys game data on %."
+"%を入手<にゅうしゅ>しました。":
+  english: "Acquired %."
+"%の進行<しんこう>ファイルの\nロードに失敗<しっぱい>しました。":
+  english: "Failed to load progress file on %."
+"このステージには乗<の>り物<もの>は持<も>ち込<こ>めません。":
+  english: "Vehicles cannot be brought into this stage."
+"メモリーカード(PS2)が\n%に\n差<さ>し込<こ>まれていません。":
+  english: "Memory Card(PS2) not inserted in %."
+"%に前回<ぜんかい>ロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "Last loaded Memory Card(PS2) not inserted in %.\nCannot save progress file.\nPlease insert the last loaded Memory Card(PS2)."
+"%のメモリーカード(PS2)がぬかれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
+  english: "Memory Card(PS2) removed from %.\nFailed to save character file.\nCannot save character file.\nPlease insert the last loaded Memory Card(PS2).\nCanceling will result in lost chips."
+" ボクのせいじゃないんです!\n ガンがボクをあやつってたんです!":
+  english: "It's not my fault!\nThe gun was controlling me!"
+" なんだあのマニュアルは! さっぱりわからないぞ!\n いったいだれが書<か>いたんだ!!":
+  english: "What's with that manual?!\nI can't understand it at all!\nWho wrote it?!"
+" ちいさなアタリがきてたんだよ!\n どうして待<ま>ってくれないんだ!":
+  english: "I was just getting a bite!\nWhy didn't you wait?!"
+"このまま戻<もど>ると優勝<ゆうしょう>していないトーナメントは\nリセットされますがよろしいですか?":
+  english: "If you go back now,\ntournaments you haven't won\nwill be reset. Proceed?"
+"メモリーカード(PS2)のアクセスに\n失敗<しっぱい>しました。":
+  english: "Failed to access Memory Card(PS2)."
+"スロット%の\nメモリーカード(PS2)が\n抜<ぬ>かれました。":
+  english: "Memory Card(PS2) in Slot % removed."
+"スロット%のメモリーカード(PS2)のアクセスに失敗<しっぱい>しました!":
+  english: "Failed to access Memory Card(PS2) in Slot %!"
+"削除<さくじょ>するチップを選<えら>んで、結果<けっか>をセーブします。":
+  english: "Select chip to delete and save results."
+"チップがいっぱいです!\n%を手<て>に入<い>れるには持<も>っているチップを\nどれか1つ削除<さくじょ>しなくてはいけません。\nチップを削除<さくじょ>しますか?":
+  english: "Chip storage full!\nDelete one to get %?"
+"セットする必殺技<ひっさつわざ>を選<えら>んでください。":
+  english: "Select a special move to equip."
+"バイブレーションのオン⋅オフを選択<せんたく>してください。":
+  english: "Turn vibration on or off."
+"なんいど設定<せってい>":
+  english: "Difficulty settings."
+#"サウンドの出カ????<しゅつりょくけいしを>??????<せんたく>してください。":
+#  english: "Select sound output device."
+#"バイブレーションのオン??オフ??????<せんたく>してください。":
+#  english: "Select vibration on or off."
