@@ -3004,7 +3004,9 @@ Gクラッシャー:
 "まーこんがり焼<や>けたし。\nよしとしようかな。":
   english: "Well, it's nicely roasted.\nI guess it's fine."
 "都会<とかい>にはエクセレントな服<ふく>が\nいっぱいね♪":
-  english: "The city is full of\nexcellent clothes♪"
+  # TODO: figure out why this doesn't work
+  #english: "The city is full of\nexcellent clothes♪"
+  english: "The city is full of\nexcellent clothes."
 "広<ひろ>い海<うみ>を見<み>ていると⋅⋅⋅\nこまかいことはどうでもよくなってくるよ。":
   english: "Looking at the vast ocean...\nI stop worrying about the little things."
 "危険<きけん>なところを見<み>るとチャレンジしたくなるのさ。\nオレをとめてもムダだぜ。":
@@ -3139,7 +3141,3 @@ Gクラッシャー:
   english: "Turn vibration on or off."
 "なんいど設定<せってい>":
   english: "Difficulty settings."
-#"サウンドの出カ????<しゅつりょくけいしを>??????<せんたく>してください。":
-#  english: "Select sound output device."
-#"バイブレーションのオン??オフ??????<せんたく>してください。":
-#  english: "Select vibration on or off."
