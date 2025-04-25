@@ -456,10 +456,7 @@
 "ブリッジ PM04:36":
   english: "Bridge\n04:36PM"
 " PM04:36":
-  english: " 4:36PM"
-" PMO4:36":
-  # TODO: encoding issue
-  english: " 4:36PM"
+  english: " 04:36PM"
 "ブリッジ PM04:43":
   english: "Bridge\n04:43PM"
 " PM04:43":
@@ -504,9 +501,6 @@
 "スタジアム AM03:20":
   english: "Stadium\n03:20AM"
 " AM03:20":
-  english: " 03:20AM"
-" AMO3:2O":
-  # TODO: Probably incorrect encoding?
   english: " 03:20AM"
 "ナゾの浮遊生物<ふゆうせいぶつ>を倒<たお>せ!➝\n\f射程<しゃてい>の長<なが>いガチャメカを使用<しよう>して倒<たお>してください。➝\n\f浮遊生物<ふゆうせいぶつ>のデータはありませんので\n十分注意<じゅうぶんちゅうい>してください。":
   english: "Defeat the strange floating\ncreatures!➝\n\fUse long range gadgets to\ndefeat them.➝\n\fBe careful,there is no data on\nthese creatures."
