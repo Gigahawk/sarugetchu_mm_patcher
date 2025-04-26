@@ -592,22 +592,34 @@
 # Mission complete screen
 "ミッション":
   english: "Mission"
+  password: true
 "評価ポイント":
   english: "Bonus"
+  password: true
+"評価<ひょうか>ポイント":
+  english: "Bonus"
+  password: true
+
 "獲得チップ":
   english: "Chips"
+  password: true
 "HPボーナス":
   english: "HP Bonus"
+  password: true
 "タイムボーナス":
   english: "Time Bonus"
+  password: true
 "クリアボーナス":
   english: "Clear Bonus"
 "ゲッチュボーナス":
   english: "Catch Bonus"
+  password: true
 "コインボーナス":
   english: "Coin Bonus"
+  password: true
 "パズルボーナス":
   english: "Puzzle Bonus"
+  password: true
 
 # Load character slot select screen
 "キャラクターファイル":
@@ -1305,12 +1317,16 @@ Gクラッシャー:
 # VS. Mode result screen
 "ラウンド最終結果":
   english: "Final Results"
+  password: true
 "コンボボーナスポイント":
   english: "Combo Bonuses"
+  password: true
 "ラウンド":
   english: "Round"
+  password: true
 "結果":
   english: "Results"
+  password: true
 
 # Character edit slot select screen
 "破損領域":
@@ -1631,6 +1647,7 @@ Gクラッシャー:
 # Get Net type
 "ゲットアミ":
   english: "GetNet"
+  password: true
 "小型<こがた>の転送<てんそう>メカです。 これでピポサルをゲッチュすることができます。 攻撃力<こうげきりょく>はゼロなので注意<ちゅうい>しましょう。":
   english: "A small teleportation gadget.You can use it to capture apes.Be careful,it has zero attack power."
 ## Backpack Type
@@ -2701,6 +2718,7 @@ Gクラッシャー:
   english: "Please select a gadget."
 "獲得<かくとく>チップ":
   english: "Chip Inventory"
+  password: true
 "スイマー":
   # where is this used?
   english: "Swimmer"
@@ -2736,12 +2754,15 @@ Gクラッシャー:
   english: "Network Password"
 "ネットワーク パスワード":
   english: "Network Password"
+  password: true
 "進行<しんこう>ファイルはセーブできませんが\n本当<ほんとう>にキャンセルしますか?":
   english: "Your progress cannot be saved.\nDo you really want to cancel?"
 "フェイズ途中集計結果<とちゅうしゅうけいけっか>":
   english: "Mid-phase Results"
+  password: true
 "ラウンド結果<けっか>":
   english: "Round Results"
+  password: true
 "ボートキング":
   # What is this?
   english: "Boat King"
@@ -2856,6 +2877,8 @@ Gクラッシャー:
   english: "Hyper Full Moon Ceremony"
 "爆裂儀":
   english: "Explosion Ceremony"
+"氷結火炎儀":
+  english: "Ice Flame Ceremony"
 
 ## Probably special move text
 "上空<じょうくう>に戦艦<せんかん>をよびよせ、爆撃<ばくげき>で援護<えんご>してもらう技<わざ>です。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
@@ -2968,7 +2991,7 @@ Gクラッシャー:
   english: "Mountains are meant\nto be climbed!"
 "ホント言<い>うと高<たか>いところは苦手<にがて>なんだ⋅⋅⋅。":
   english: "To be honest, I'm terrible\nwith heights."
-"あっ、ピポヘルのライトが見<み>えてたのか〜\nざんねん⋅⋅⋅":
+"あっ、ピポヘルのライトが見<み>えてたのか~\nざんねん⋅⋅⋅":
   english: "Ah,the Pipo helmet light was\nvisible⋅⋅⋅ What a shame⋅⋅⋅"
 "エントツの上<うえ>から声<こえ>がしたんだ。\nそれをたしかめに行<い>こうとしたんだよ。":
   english: "I heard a voice from the chimney.\nI went to check it out."
@@ -3006,7 +3029,7 @@ Gクラッシャー:
 "危険<きけん>なところを見<み>るとチャレンジしたくなるのさ。\nオレをとめてもムダだぜ。":
   english: "Danger excites me!\nYou can't stop me."
 
-# Monkey descriptions
+## Monkey descriptions
 "へたくそ":
   english: "Clumsy"
 "そらみみ":
@@ -3029,8 +3052,7 @@ Gクラッシャー:
 "よわい":
   english: "Weak"
 
-"上級者<じょうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
-  english: "Join a tournament for pros."
+# Honestly idc this is mostly AI slop hopefully it's not too bad
 "自由<じゆう>の女神<めがみ>も\nソフトクリームが大好<だいす>きニャ♪":
   english: "The Statue of Liberty\nloves ice cream, nya!"
 "修行<しゅぎょう>の道<みち>に\n終<お>わりはないんダス。":
@@ -3038,7 +3060,7 @@ Gクラッシャー:
 " ヤツは生<い>きている! 本当<ほんとう>だ!\n 信<しん>じてくれ!":
   english: "He's alive! It's true!\nPlease believe me!"
 "周辺<しゅうへん>の敵<てき>を吸<す>い込<こ>む巨大<きょだい>な竜巻<たつまき>を発生<はっせい>させます。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
-  english: "Summons a massive tornado\nto suck in nearby foes.\nHits a wide area."
+  english: "Summons a massive tornado to suck in nearby foes.Hits a wide area."
 "釣<つ>れなくてもいい。\n海<うみ>が見<み>れればオレはそれで満足<まんぞく>さ。":
   english: "I don't care if I catch nothing.\nJust seeing the sea is enough."
 "ヨットハーバーの広場<ひろば>で踊<おど>っているところを\n発見<はっけん>されゲッチュされる。":
@@ -3050,45 +3072,45 @@ Gクラッシャー:
 "サウンドの出カ形式<しゅつりょくけいしき>を選択<せんたく>してください。":
   english: "Choose sound output format."
 "キャラクターファイルにセーブできませんが、\n本当<ほんとうに>にキャンセルしますか?":
-  english: "Cannot save character file. Really cancel?"
+  english: "Cannot save character file.\nReally cancel?"
 "新宿<しんじゅく>で車<くるま>の上<うえ>で暴<あば>れているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught rampaging on a car in Shinjuku."
+  english: "Caught rampaging on\na car in Shinjuku."
 "ヨットハーバーにて日光浴<にっこうよく>をしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught sunbathing at the yacht harbor."
+  english: "Caught sunbathing\nat the yacht harbor."
 "公衆電話<こうしゅうでんわ>で話<はな>し中<ちゅう>のところを発見<はっけん>されゲッチュされる。":
-  english: "Caught talking at a public phone."
+  english: "Caught talking\nat a public phone."
 "%にメモリーカード(PS2)が\n差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップを受<う>け取<と>ることができません。":
-  english: "No Memory Card(PS2) in %. Cannot save character file. Insert the last loaded Memory Card(PS2). Canceling will lose the chip."
+  english: "No Memory Card in %.\nCannot save character file.\nInsert the last loaded Memory Card.\nIf you cancel,the chip will be lost."
 "近<ちか>くの敵一体<てきいったい>を/<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
   english: "Grab and throw 1 enemy, then unleash a barrage. Lock-on recommended for accuracy."
 "一定時間<いっていじかん>レーザーをはねかえすシールドを発生<はっせい>させるパーツです。 複数<ふくすう>セットすることでシールドの持続時間<じぞくじかん>をのばすことができます。":
   english: "Generates a shield that reflects lasers for a time. Stack to extend duration."
 "停泊中<ていはくちゅう>の船<ふね>で遊<あそ>んでいるところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught playing on a docked ship."
+  english: "Caught playing on\na docked ship."
 "新宿<しんじゅく>で電話<でんわ>をかけているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught making a call in Shinjuku."
+  english: "Caught making a\ncall in Shinjuku."
 "ヨットハーバーにてめいそう中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught meditating at the yacht harbor."
+  english: "Caught meditating\nat the yacht harbor."
 "ヨットハーバーにて眠<ねむ>りかけているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught dozing off at the yacht harbor."
+  english: "Caught dozing off\nat the yacht harbor."
 "地下街<ちかがい>で隠<かく>れているところを発見<はっけん>されゲッチュされる。":
-  english: "Caught hiding in the underground mall."
+  english: "Caught hiding in\nthe underground mall."
 "地下街<ちかがい>にて待<ま>ち伏<ぶ>せ中<ちゅう>に\n発見<はっけん>されゲッチュされる。":
-  english: "Caught ambushing in the underground mall."
+  english: "Caught ambushing\nin the underground mall."
 "ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。        ":
   english: "Blast monkeys with a cannon. Hits 1 enemy repeatedly."
 "ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。       ":
   english: "Blast monkeys with a cannon. Hits 1 enemy repeatedly."
 "我<わ>が心<こころ>すでに空<くう>なり。 空<くう>なるが故<ゆえ>、無<む>じゃ。\nわかるかな?":
-  english: "My heart is empty. Empty means nothing.\nDo you understand?"
+  english: "My heart is empty.Empty means\nnothing.Do you understand?"
 "アイドルとして紅白出場<こうはくしゅつじょう>をねらうウサギ。 歌<うた>の力<ちから>であなたの体力<たいりょく>を回復<かいふく>します。":
   english: "A rabbit aiming for stardom. Its song restores your health."
 "海辺<うみべ>にてシンクロの練習中<れんしゅうちゅう>のところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught practicing synchronized swimming\nat the beach."
+  english: "Caught practicing synchronized\nswimming at the beach."
 "世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し蹴<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
   english: "A frog aiming to be the best fighter. Its spinning kick creates shockwaves to attack nearby enemies."
 "新宿<しんじゅく>でガンをうちまくっているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught shooting wildly in Shinjuku."
+  english: "Caught shooting wildly\nin Shinjuku."
 "ノーベル賞<しょう>をめざす理論派<りろんは>ロボ。 箱<はこ>いっぱいの爆弾<ばくだん>で援護<えんご>してくれます。     ":
   english: "A robot aiming for a Nobel Prize. It supports you with a box full of bombs."
 "ゴリアックヘッドを起動<きどう>し、レーザーで攻撃<こうげき>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>できますが、空中<くうちゅう>の敵<てき>はねらえません。":
@@ -3096,21 +3118,21 @@ Gクラッシャー:
 "お台場<だいば>で目撃<もくげき>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
   english: "Sighted in Odaiba!\nPlease rescue immediately!"
 "%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
-  english: "Memory Card(PS2) not inserted in %.\nCannot save character file.\nPlease insert the last loaded Memory Card(PS2)."
+  english: "Memory Card not inserted in %.\nCannot save character file.\nPlease insert the last loaded Memory Card(PS2)."
 "%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
-  english: "Failed to create Million Monkeys game data on %."
+  english: "Failed to create Million Monkeys\ngame data on %."
 "%を入手<にゅうしゅ>しました。":
   english: "Acquired %."
 "%の進行<しんこう>ファイルの\nロードに失敗<しっぱい>しました。":
-  english: "Failed to load progress file on %."
+  english: "Failed to load progress\nfile on %."
 "このステージには乗<の>り物<もの>は持<も>ち込<こ>めません。":
   english: "Vehicles cannot be brought into this stage."
 "メモリーカード(PS2)が\n%に\n差<さ>し込<こ>まれていません。":
-  english: "Memory Card(PS2) not inserted in %."
+  english: "\nMemory Card not inserted in %.\n"
 "%に前回<ぜんかい>ロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
-  english: "Last loaded Memory Card(PS2) not inserted in %.\nCannot save progress file.\nPlease insert the last loaded Memory Card(PS2)."
+  english: "Memory Card not inserted in %.\nCannot save progress file.\nPlease insert the last loaded Memory Card."
 "%のメモリーカード(PS2)がぬかれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
-  english: "Memory Card(PS2) removed from %.\nFailed to save character file.\nCannot save character file.\nPlease insert the last loaded Memory Card(PS2).\nCanceling will result in lost chips."
+  english: "Memory Card removed from %.\nFailed to save character file.\nCannot save character file.\nPlease insert the last loaded Memory Card.\nCanceling will result in lost chips."
 " ボクのせいじゃないんです!\n ガンがボクをあやつってたんです!":
   english: "It's not my fault!\nThe gun was controlling me!"
 " なんだあのマニュアルは! さっぱりわからないぞ!\n いったいだれが書<か>いたんだ!!":
@@ -3118,9 +3140,9 @@ Gクラッシャー:
 " ちいさなアタリがきてたんだよ!\n どうして待<ま>ってくれないんだ!":
   english: "I was just getting a bite!\nWhy didn't you wait?!"
 "このまま戻<もど>ると優勝<ゆうしょう>していないトーナメントは\nリセットされますがよろしいですか?":
-  english: "If you go back now,\ntournaments you haven't won\nwill be reset. Proceed?"
+  english: "If you go back,tournaments in\nprogress will be reset. Proceed?"
 "メモリーカード(PS2)のアクセスに\n失敗<しっぱい>しました。":
-  english: "Failed to access Memory Card(PS2)."
+  english: "Failed to access Memory Card."
 "スロット%の\nメモリーカード(PS2)が\n抜<ぬ>かれました。":
   english: "Memory Card(PS2) in Slot % removed."
 "スロット%のメモリーカード(PS2)のアクセスに失敗<しっぱい>しました!":
@@ -3128,7 +3150,7 @@ Gクラッシャー:
 "削除<さくじょ>するチップを選<えら>んで、結果<けっか>をセーブします。":
   english: "Select chip to delete and save results."
 "チップがいっぱいです!\n%を手<て>に入<い>れるには持<も>っているチップを\nどれか1つ削除<さくじょ>しなくてはいけません。\nチップを削除<さくじょ>しますか?":
-  english: "Chip storage full!\nDelete one to get %?"
+  english: "\nChip storage full!\nDelete an existing chip to get %?\n"
 "セットする必殺技<ひっさつわざ>を選<えら>んでください。":
   english: "Select a special move to equip."
 "バイブレーションのオン⋅オフを選択<せんたく>してください。":
@@ -3138,35 +3160,34 @@ Gクラッシャー:
 "オプション設定<せってい>":
   english: "Options settings."
 "パリで一人暮<ひとりぐ>らしを夢見<ゆめみ>る乙女<おとめ>(?)なイヌ。 占<うらな>いの結果<けっか>がいいと幸<しあわ>せをわけてくれます。":
-  english: "A dog dreaming of living alone in Paris(?). Shares happiness when fortunes are good."
+  english: "A girly(?) dog dreaming of living alone in Paris. Shares happiness when fortunes are good."
 "リッキーを発見しました!":
   english: "Ricky found!"
 "めいそう中<ちゅう>に発見<はっけん>され\n逃<に>げ出<だ>したところをゲッチュされる。":
   english: "Found meditating,\ncaptured while escaping."
 "ラウンド最終集計結果<さいしゅうしゅうけいけっか>":
   english: "Final round results."
+  password: true
 "トロを発見しました!":
   english: "Toro found!"
 "コンクリートジャングルは\n広<ひろ>すぎみャ⋅⋅⋅":
   english: "The concrete jungle\nis too vast..."
-"命名明盟迷銘鳴滅免綿面":
-  english: "Naming, clarity, alliance, confusion, inscription, sound, extinction, exemption, cotton, surface."
 "レジェンド一次予選ステージ":
   english: "Legend 1st prelim stage."
 "ベンチにてくつろいでいるところを\n発見<はっけん>されゲッチュされる。":
   english: "Found relaxing on a bench,\ncaptured."
 "強力<きょうりょく>な'光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
-  english: "Fires a powerful flash bullet\nthat downs nearby enemies.\nNo attack power."
+  english: "Fires a powerful flashbang that stuns nearby enemies.No attack power."
 "サル軍基地<ぐんきち>の近<ちか>くで確認<かくにん>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Spotted near the Monkey Army Base!\nRequesting immediate rescue!"
+  english: "Spotted near the Monkey Base!\nRequesting immediate rescue!"
 "高級<こうきゅう>ホテルの一室<いっしつ>で\nエレガントに過<す>ごしているところを発見<はっけん>。":
   english: "Found in a luxury hotel room,\nspending time elegantly."
 "敵<てき>を麻痺<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
-  english: "Unleashes a dark scream\nthat paralyzes enemies.\nNo attack power."
+  english: "Unleashes a dark scream that paralyzes enemies.No attack power."
 "%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
-  english: "Memory Card(PS2) not inserted in %.\nCannot save progress file.\nInsert the previously loaded Memory Card(PS2)."
+  english: "Memory Card not inserted in %.\nCannot save progress file.\nInsert the previously loaded Memory Card."
 "あそこからがイイトコロだったのに⋅⋅⋅。\nせっかちさんだなぁ。":
-  english: "It was just getting good...\nYou're so impatient."
+  english: "It was just getting good⋅⋅⋅\nYou're so impatient."
 "トロコスチュームをゲットしました。":
   english: "You got the Toro costume!"
 "データA抽出完了!":
@@ -3182,18 +3203,18 @@ Gクラッシャー:
 "強力<きょうりょく>な閃光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
   english: "Fires a powerful flashbang, knocking down nearby enemies. No attack power."
 " オレの待<ま>ち伏<ぶ>せに気<き>がつくとは!\n さてはレーダーだなっ!! ひきょうだぞっ!":
-  english: "You noticed my ambush!\nMust be radar!Cheater!"
+  english: "You noticed my ambush!\nMust be wallhacks!Cheater!"
 "僕<ぼく>らは休暇中<きゅうかちゅう>だったんだ。\nさぼってたわけじゃないぞ。":
   english: "We were on vacation.\nWe weren't slacking."
 "スタジアムでの目撃情報<もくげきじょうほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
   english: "Sighted at the stadium!\nUrgent rescue needed!"
 "エンジン爆発! 残り1基です!":
-  english: "Engine explosion!1 left!"
+  english: "Engine destroyed!1 left!"
 "ネコのしっぽは\nエサじゃないみャ!":
   english: "A cat's tail\nisn't food nya!"
 "あと2秒<びょう>! いやあと1秒<びょう>はやく気<き>がつけば\nゲッチュされることはなかったのに⋅⋅⋅":
   english: "2 more seconds!No,1 second sooner\nand I wouldn't be caught..."
-"最近<さいきん>、夜<よる>おそいんだよ〜。\nゆっくり寝<ね>させてくれよ〜。":
+"最近<さいきん>、夜<よる>おそいんだよ~。\nゆっくり寝<ね>させてくれよ~。":
   english: "Lately,I'm up late.\nLet me sleep in peace."
 "どうでもいいけどギターだけは返<かえ>してくれよ。\nアレがないと困<こま>るんだよ!":
   english: "Whatever,but give my guitar back.\nI can't manage without it!"
@@ -3204,14 +3225,14 @@ Gクラッシャー:
 "ヨットハーバーで発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
   english: "Found at the yacht harbor!\nProceed to recover immediately!"
 "自由<じゆう>の女神<めがみ>を見<み>て\n大<おお>よろこびで踊<おど>っているところを発見<はっけん>。":
-  english: "Spotted dancing\nin joy at the Statue of Liberty."
+  english: "Spotted dancing in joy\nat the Statue of Liberty."
 "敵<てき>1体<たい>にバナナをぶつけ、無数<むすう>のピポサルに攻撃<こうげき>させます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
   english: "Throw a banana at 1 enemy and unleash countless Pipo Monkeys to attack. Lock-on recommended for accuracy."
 "新宿<しんじゅく>での目撃情報<もくげきじょうほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
   english: "Sighting reported in Shinjuku!\nRequesting immediate rescue!"
 "波<なみ>にゆられながら\n魚<さかな>とたわむれているところを発見<はっけん>。":
   english: "Found playing with fish\nwhile drifting on the waves."
-"見晴<みは>らしはいいけど\nケムリでまっ黒<くろ>みャ〜。":
+"見晴<みは>らしはいいけど\nケムリでまっ黒<くろ>みャ~。":
   english: "Great view,but\nall smoky and black,meow~."
 "なんてことをしてくれたんだ!\nあと少<すこ>しで悟<さと>りがひらけたかもしれないじゃないか!":
   english: "What have you done?!\nI was so close to enlightenment!"
@@ -3236,21 +3257,22 @@ Gクラッシャー:
 " 邪魔<じゃま>してもムダだ!\n この夏<なつ>の大会<たいかい>はボクらが優勝<ゆうしょう>だ!":
   english: "You can't stop us!\nWe'll win this summer's tournament!"
 "一定時間<いっていじかん>バリアを張<は>って、無敵状態<むてきじょうたい>になります。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。":
-  english: "For a while, you'll be invincible with a barrier.\nBut no other special moves can be used."
+  english: "For a while, you'll be invincible with a barrier.But no other special moves can be used."
 " 警備<けいび>の交代時間<こうたいじかん>なのに\n デイビッドが起<お>きてくれないんだよ!!":
   english: "It's shift change time,\nbut David won't wake up!!"
-"巨大<きょだい>メカは\n科学者<かがくしゃ>のユメなのだ〜♪":
+"巨大<きょだい>メカは\n科学者<かがくしゃ>のユメなのだ~♪":
   english: "Giant mechs are\na scientist's dream~♪"
 "高<たか>く羽<は>ばたくことのできるアクマのような外見<がいけん>の翼<つばさ>。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。":
-  english: "Wings with a devilish look that let you soar high.\nUse them freely without energy cost."
-"次<つぎ>はもっと大<おお>きな会場<かいじょう>で\nコンサートっすよ〜♪":
+  english: "Wings with a devilish look that let you soar high.Use them freely without energy cost."
+"次<つぎ>はもっと大<おお>きな会場<かいじょう>で\nコンサートっすよ~♪":
   english: "Next time,\nit's a bigger concert venue~♪"
 "ラウンドを始<はじ>めます。":
-  english: "Starting the round."
+  english: "Round Start."
 "ラウンド途中集計結果<とちゅうしゅうけいけっか>":
   english: "Round interim results"
+  password: true
 "アーバンリゾートを\n楽<たの>しむみャ♪":
-  english: "Enjoying the urban resort~♪"
+  english: "Enjoying the\nurban resort~♪"
 "だんじき6日目":
   english: "Fasting, day 6"
 "ひとだのみ":
@@ -3267,8 +3289,6 @@ Gクラッシャー:
   english: "Dramatic"
 "マスター":
   english: "Master"
-"かな":
-  english: "Maybe"
 "まちぶせキング":
   english: "Ambush King"
 "まちぼうけ":
@@ -3287,8 +3307,6 @@ Gクラッシャー:
   english: "Angel Set"
 "でちゃダメ":
   english: "Don't Go Out"
-"謎":
-  english: "Mystery"
 "イライラ":
   english: "Frustrated"
 "通信兵":
@@ -3299,10 +3317,9 @@ Gクラッシャー:
   english: "Slacker King"
 "ミッション結果<けっか>":
   english: "Mission Results"
+  password: true
 "竜巻儀":
   english: "Tornado Ritual"
-"夜野厄役約??訳躍疫也弥哉椰靖":
-  english: "Night's Role"
 "たっ、たのむから居眠<いねむ>りしてゲッチュされたなんて\nみんなに言<い>わないでよ。":
   english: "P-please, don't tell anyone\nI got caught napping."
 "ボクのターンを見<み>てくれたか!?\n流<なが>れるようだったろう?":
@@ -3311,14 +3328,15 @@ Gクラッシャー:
   english: "Why!? How did they see through my act!?\nHow could this happen!!"
 "チェーンボーナス":
   english: "Chain Bonus"
+  password: true
 "エアコンがこわれて修理<しゅうり>してたのさ。\n怖<こわ>くてふるえてたんじゃないよ!":
-  english: "The air conditioner broke, so I was fixing it.\nI wasn't shaking because I was scared!"
-"ボクは船<ふね>が盗<ぬす>まれないように見張<みは>っててあげたんですよー。\n感謝<かんしゃ>してほしいなぁ〜。":
-  english: "I was keeping watch so the ship wouldn't get stolen.\nYou should thank me~."
+  english: "I was fixing the broken AC,\nnot shaking because I was scared!"
+"ボクは船<ふね>が盗<ぬす>まれないように見張<みは>っててあげたんですよー。\n感謝<かんしゃ>してほしいなぁ~。":
+  english: "I was making sure the ship didn't\nget jacked.You should thank me~."
 "エンジン爆発! 残り3基です!":
-  english: "Engine explosion! 3 left!"
+  english: "Engine destroyed! 3 left!"
 "エンジン爆発! 残り2基です!":
-  english: "Engine explosion! 2 left!"
+  english: "Engine destroyed! 2 left!"
 "鉄骨<てっこつ>にしがみついているところを\n発見<はっけん>されゲッチュされる。":
   english: "Found clinging to a steel beam\nand captured."
 "はしゃぎ疲<つか>れて\nうたた寝<ね>しているところを発見<はっけん>。":
@@ -3326,7 +3344,7 @@ Gクラッシャー:
 "浮<う>き輪<わ>をかかえた姿<すがた>が目撃<もくげき>されています!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
   english: "Spotted with a float!\nPlease rescue immediately!"
 "ヨットハーバー付近<ふきん>の建物内<たてものない>で目撃<もくげき>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Spotted inside a building\nnear the yacht harbor! Please rescue immediately!"
+  english: "Spotted in a building near the\nyacht harbor! Rescue immediately!"
 "キャラクター名":
   english: "Character Name"
 "トリガーハッピー":
@@ -3340,11 +3358,11 @@ Gクラッシャー:
 "新宿<しんじゅく>でほふく前進中<ぜんしんちゅう>に発見<はっけん>されゲッチュされる。":
   english: "Caught crawling\nin Shinjuku."
 "アーモンチェアに乗<の>って誘導<ゆうどう>ビームで攻撃<こうげき>します。 ビームを当<あ>てるには敵<てき>に近<ちか>づく必要<ひつよう>があります。":
-  english: "Rides an armchair\nand attacks with a homing beam.\nGet close to hit enemies."
+  english: "Rides an armchair and attacks with a homing beam.Get close to hit enemies."
 " 偵察<ていさつ>してたんだ!\n ボクはさぼってたんじゃない!!":
   english: "I was scouting!\nI wasn't slacking off!"
 "バナナ型<がた>のロケットに乗<の>って体当<たいあ>たりする技<わざ>です。 ロケット発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。":
-  english: "A banana-shaped rocket\nattack. No brakes while active,\nso be careful!"
+  english: "A banana-shaped rocket attack.No brakes while active,so be careful!"
 " ジョーには負<ま>けられない!\n ヤツにだけは負<ま>けられないんだ。":
   english: "I can't lose to Joe!\nNot to him!"
 " ワイは実家<じっか>に電話<でんわ>してただけや!\n 親<おや>と話<はなし>して何<なに>が悪<わる>いんじゃー!":
@@ -3352,63 +3370,63 @@ Gクラッシャー:
 "あっ、あそこはスゴイ高<たか>いんだぞ!\nダレだって怖<こわ>くなるさ!":
   english: "Whoa, that's really high!\nAnyone would be scared!"
 " こっ、このオレ様<さま>の究極<きゅうきょく>のさぼりテクニックが\n 敗<やぶ>れるとは! さてはただものじゃないなっ!":
-  english: "My ultimate slacking\nskill failed?! You're no ordinary foe!"
+  english: "My ultimate slacking skill\nfailed?! You're no ordinary foe!"
 " いたずらしてたんじゃない!\n 調子<ちょうし>が悪<わる>いようだから直<なお>そうとしただけだ!":
   english: "I wasn't messing around!\nI was just fixing it!"
 "人間<にんげん>になることを夢<ゆめ>みる無邪気<むじゃき>なネコ。 クロたちといっしょに画面中<がめんじゅう>を走<はし>り回<まわ>ります。":
-  english: "A naive cat dreaming\nof becoming human.\nRuns around the screen\nwith Kuro and friends."
+  english: "A naive cat dreaming of becoming human.Runs around the screen with Kuro and friends."
 "マイマイクを持<も>って地下街<ちかがい>に向<む>かったそうです!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Took a mic and headed\nto the underground mall!\nPlease rescue immediately!"
+  english: "Headed to the Metro with a mic!\nPlease rescue immediately!"
 "駅<えき>ビルでフリークライミングに\n挑戦<ちょうせん>しているところを発見<はっけん>。":
-  english: "Found attempting\nfree climbing at the\nstation building."
+  english: "Found free climbing at the\nstation building."
 "前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の牙<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
-  english: "Countless dark fangs\nrise ahead. Attacks\nwide-range enemies."
+  english: "Countless dark fangs rise ahead.Attacks wide-range enemies."
 "ジャンプし、空中<くうちゅう>から真下<ました>に矢<や>を放<はな>ち、衝撃波<しょうげきは>で攻撃<こうげき>します。 地上<ちじょう>の敵<てき>に有効<ゆうこう>です。":
-  english: "Jump and shoot arrows\nstraight down, creating\nshockwaves. Effective\nagainst ground enemies."
+  english: "Jump and shoot arrows straight down, creating shockwaves.Effective against ground enemies."
 "近距離<きんきょり>の敵<てき>に対<たい>し、技<わざ>ストックゲージを3本消費<ぼんしょうひ>して、衛星反射<えいせいはんしゃ>レーザー砲<ほう>を発射<はっしゃ>します。 必殺技<ひっさつわざ>を入力<にゅうりょく>してからレーザー砲発射<ほうはっしゃ>までには時間<じかん>がかかりますので注意<ちゅうい>してください。":
-  english: "Consumes 3 stock gauges\nto fire a satellite\nreflect laser cannon.\nTakes time to activate."
+  english: "Consumes 3 stock gauges to fire a satellite laser cannon.Takes time to activate."
 "回転<かいてん>しながらアームショットを乱射<らんしゃ>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>することができます。":
-  english: "Spins while firing\narm shots wildly.\nEffective on wide-range enemies."
+  english: "Spins while firing arm shots wildly.Effective on wide-range enemies."
 "8本<ほん>の追尾<ついび>する光<ひかり>の矢<や>を放<はな>ちます。 空中<くうちゅう>の敵<てき>もねらえる便利<べんり>な必殺技<ひっさつわざ>です。":
-  english: "Fires 8 homing light\narrows. Handy for\nhitting airborne foes."
+  english: "Fires 8 homing light arrows. Handy for hitting airborne foes."
 "高速<こうそく>で回転<かいてん>しながら光<ひかり>の矢<や>を乱射<らんしゃ>します。 広範囲<こうはんい>の敵<てき>に有効<ゆうこう>ですが、空中<くうちゅう>の敵<てき>はねらえません。":
-  english: "Rapidly spins and\nfires light arrows.\nEffective on wide-range\nfoes, but not airborne ones."
+  english: "Rapidly spins and fires light arrows.Effective on wide-rangefoes, but not airborne ones."
 "蹴<け>り上<あ>げた相手<あいて>に一斉射撃<いっせいしゃげき>をおみまいします。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
-  english: "Kicks foes up and\nunleashes a barrage.\nLock-on for accuracy."
+  english: "Kicks foes up and unleashes a barrage.Lock-on for accuracy."
 "大<おお>きな翼<つばさ>の形<かたち>をしたバーニアです。 これを装備<そうび>して羽<は>ばたく様<さま>はまるで天使<てんし>のように美<うつく>しく見<み>えることでしょう。":
-  english: "Large wing-shaped\nvernier. Flapping\nresembles a beautiful angel."
+  english: "Large wing-shaped jetpack.Flapping resembles a beautiful angel."
 "チップを諦<あきら>めてステージセレクトに戻<もど>ります。":
-  english: "Abandon chip and\nreturn to stage select."
+  english: "Abandon chip and return to stage select."
 "野球場<やきゅうじょう>には魔物<まもの>が\n住<す>んでるのみャ♪":
-  english: "Monsters live\nin the baseball field!"
-"カラオケボックスで\nひとり??唱<ねっしょう>しているところを発見<はっけん>。":
-  english: "Found singing\nalone in a karaoke box."
+  english: "Monsters live in the baseball field!"
 "レフトポールによじ登<のぼ>って\n球場見物<きゅうじょうけんぶつ>していたところを発見<はっけん>。":
-  english: "Caught climbing\nthe left pole to\nwatch the stadium."
+  english: "Caught climbing the left pole\nto watch the stadium."
 "サバクノクニの王<おう>さま。 強力<きょうりょく>な「<のろ>いで援護<えんご>してくれます。        ":
-  english: "King of the Desert Nation.\nProvides strong 'curse' support."
+  english: "King of the Desert Nation.Provides strong 'curse' support."
 "エントツで遊<あそ>んでいるところを発見<はっけん>されゲッチュされる。":
   english: "Caught playing\nin the chimney."
 "あのエントツの中<なか>に何<なに>があるかって?\nそいつは言<い>えないな⋅⋅⋅":
-  english: "What's inside\nthat chimney?\nI can't say..."
+  english: "What's inside that chimney?\nI can't say..."
 " 海<うみ>はみんなのものだろ!\n どうしてボクがゲッチュされないといけないんだ!?":
-  english: "The sea belongs\nto everyone!\nWhy should I be caught?!"
+  english: "The sea belongs to everyone!\nWhy should I be caught?!"
 "めずらしいサカナが\nつれたみャ!":
   english: "I caught a rare\nfish, meow!"
 '二丁拳銃<にちょうけんじゅう>にエネルギーを充"<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。':
-  english: "Charges energy into dual pistols\nand spins to attack.\nEffective only on close-range foes."
+  english: "Charges energy into dual pistols and spins to attack.Effective only on close-range foes."
 "コンテナターミナルで目撃<もくげき>されています!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Spotted at the container terminal!\nPlease rescue immediately!"
+  english: "Seen at the container terminal!\nPlease rescue immediately!"
 " ひどいじゃないか!\n のんびり海<うみ>を見<み>てただけなのにっ!":
-  english: "That's so mean!\nI was just relaxing\nand watching the sea!"
+  english: "That's so mean! I was just\nrelaxing and watching the sea!"
 " ボクは何<なに>も言<い>わない!\n 何<なに>をされても絶対<ぜったい>に言<い>わないぞ!":
-  english: "I won't say anything!\nNo matter what you do,\nI won't talk!"
+  english: "I won't say anything! No matter\nwhat you do,I won't talk!"
 " オレの待<ま>ち伏<ぶ>せに気<き>がつくとは!\n さすがだ!!":
   english: "You noticed my ambush!\nImpressive!!"
 " 何<なに>がおかしい! ボクはサルだ!\n サルは木<き>に登<のぼ>るものなんだ!":
-  english: "What's so funny?!\nI'm a monkey!\nMonkeys climb trees!"
+  english: "What's so funny?! I'm a monkey!\nMonkeys climb trees!"
 "中級者<ちゅうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
-  english: "Join the intermediate\ntournament!"
+  english: "Start an intermediate tournament."
+"上級者<じょうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
+  english: "Start a hard tournament."
 "アーモンチェアに乗<の>って体当<たいあ>たりする技<わざ>です。 発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。":
   english: "Ride the Armchair and ram enemies! Be careful,brakes won't work!"
 "％<け>り上<あ>げた相手<あいて>に一斉射撃<いっせいしゃげき>をおみまいします。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
@@ -3418,8 +3436,6 @@ Gクラッシャー:
   english: "This character can't combine chips\nand cannot be moved."
 "すでにロードされた\nキャラクターは使用<しよう>できません。":
   english: "Loaded characters\ncan't be used."
-"バイブレーションのオン??オフを選択<せんたく>してください。":
-  english: "Choose vibration ON or OFF."
 "データB抽出完了!":
   english: "Data B extraction complete!"
 "改造レーザー砲":
@@ -3446,8 +3462,6 @@ Gクラッシャー:
   english: "Synthesis failed."
 "バリア":
   english: "Barrier"
-"評価<ひょうか>ポイント":
-  english: "Evaluation Points"
 "レジェンド二次予選ステージ":
   english: "Legend 2nd Qualifier Stage"
 "レジェンド準決勝ステージ":
@@ -3456,8 +3470,10 @@ Gクラッシャー:
   english: "Legend Final Stage"
 "エクストララウンド結果":
   english: "Extra Round Results"
+  password: true
 "フェイズ最終集計結果<さいしゅうしゅうけいけっか>":
   english: "Phase Final Tally Results"
+  password: true
 "ジャンパー":
   english: "Jumper"
 "ガチャメカ名":
@@ -3482,3 +3498,47 @@ Gクラッシャー:
   english: "Lightning Ritual"
 "作成中<さくせいちゅう>":
   english: "Creating..."
+"セットOK":
+  english: "Set OK"
+"空移":
+  # Air dash?
+  english: "Air Move"
+"ウィルスチャル":
+  english: "Virus Charu"
+"かくにん":
+  english: "Confirm"
+"すすむ":
+  english: "Proceed"
+"撃破ボーナス":
+  english: "Defeat Bonus"
+  password: true
+"閃光音響弾":
+  english: "Flashbang"
+"回ミス":
+  # Probably goes after a number?
+  english: "Misses"
+"ふつう":
+  english: "Normal"
+"げきつよ":
+  english: "Super Strong"
+"ぎじゅつしゃ":
+  # Probalbly 技術者, maybe engineer?
+  english: "Technician"
+"ああああ":
+  english: "AAAA"
+"じつはさぼり":
+  english: "Actually Slacking"
+"からふぁいる":
+  # Why is this in hiragana????
+  # Probably 空ファイル
+  english: "Empty File"
+"はそんふぁいる":
+  # Why is this in hiragana????
+  # Probably 破損ファイル
+  english: "Corrupted File"
+"属性<ぞくせい>の違<ちが>うパーツはセットできません。":
+  english: "Parts with different attributes cannot be set."
+"を編集中":
+  english: "is being edited"
+"カラオケボックスで\nひとり熱唱<ねっしょう>しているところを発見<はっけん>。":
+  english: "Found singing alone\nin a karaoke box."

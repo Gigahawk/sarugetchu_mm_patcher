@@ -34,6 +34,7 @@ from sarugetchu_mm_patcher.encoding import (
     EncodingTranslator,
     ENCODING_MAP,
     BYTES_TO_CHAR_MINIMAL, BYTES_TO_CHAR_DEFAULT, BYTES_TO_CHAR_SPECIAL,
+    BYTES_TO_CHAR_PASSWORD, PASSWORD_STR_IDS,
     token_to_idx,
     idx_to_token
 )
@@ -488,6 +489,31 @@ def _patch_strings(resource_bytes, hash, strings_path):
                     source_encoder.wrap_string(jb, id=id),
                     target_encoder.wrap_string(new_bytestr, id=id),
                 )
+        if info.get("password", False):
+            pw_encoder = EncodingTranslator(encoding=BYTES_TO_CHAR_PASSWORD)
+            jap_bytestrs = pw_encoder.string_to_bytes(jap_str)
+            if isinstance(english, str):
+                id = None
+                try:
+                    bs = pw_encoder.string_to_bytes(english)[0]
+                except IndexError as e:
+                    click.echo(
+                        f"Error: could not encode password string {repr(english)}"
+                    )
+                    raise e
+                replacements = {id: bs}
+            elif isinstance(english, dict):
+                replacements = {}
+                for id, s in english.items():
+                    replacements[bytes.fromhex(id)] = pw_encoder.string_to_bytes(s)[0]
+            else:
+                raise ValueError(f"invalid translation structure {english}")
+            for jb in jap_bytestrs:
+                for id, new_bytestr in replacements.items():
+                    resource_bytes.replace_in_place(
+                        source_encoder.wrap_string(jb, id=id),
+                        target_encoder.wrap_string(new_bytestr, id=id),
+                    )
     return resource_bytes
 
 
@@ -560,6 +586,8 @@ def patch_resource(
                 tex_manifest = yaml.safe_load(f)
             bpp = tex_manifest["bpp"]
             tex_path = tex_manifest["path"]
+            tex_idx = tex_manifest.get("index", 0)
+            patch_palette = tex_manifest.get("patch_palette", True)
             cel_chunk = util.ImhexChunkFinder(img_data, "CelChunk").chunks[0]
             palette_chunk = util.ImhexChunkFinder(img_data, "PaletteChunk").chunks[0]
 
@@ -598,29 +626,33 @@ def patch_resource(
                     px_data = util.aseprite_to_pixel_data(
                         cel_chunk_data, bpp
                     )
-                    img_data_ptr = (
+                    img_data_meta = (
                         subfile["metadata"]["ptr"]["*(ptr)"]
                             ["entries"][0]["data"]["ptr"]["*(ptr)"]
-                            ["idk_data_ptr"]["nullptr"]
                     )
+                    img_bpp = img_data_meta["idk_img_layers"] * 0x10
+                    img_data_ptr = img_data_meta["idk_data_ptr"]["nullptr"]
+                    img_data_offset = img_bpp*tex_idx
+                    img_data_start = img_data_ptr + img_data_offset
                     resource_bytes[
-                        img_data_ptr:img_data_ptr + len(px_data)
+                        img_data_start:img_data_start + len(px_data)
                     ] = px_data
 
-                    palette_meta = (
-                        subfile["metadata"]["ptr"]["*(ptr)"]
-                            ["entries"][1]["data"]["ptr"]["*(ptr)"]
-                    )
-                    palette_width = palette_meta["width"]
-                    palette_height = palette_meta["height"]
-                    plt_data = util.aseprite_to_palette_data(
-                        palette_chunk["entries"],
-                        max_entries=palette_width*palette_height
-                    )
-                    palette_data_ptr = palette_meta["idk_data_ptr"]["nullptr"]
-                    resource_bytes[
-                        palette_data_ptr:palette_data_ptr + len(plt_data)
-                    ] = plt_data
+                    if patch_palette:
+                        palette_meta = (
+                            subfile["metadata"]["ptr"]["*(ptr)"]
+                                ["entries"][1]["data"]["ptr"]["*(ptr)"]
+                        )
+                        palette_width = palette_meta["width"]
+                        palette_height = palette_meta["height"]
+                        plt_data = util.aseprite_to_palette_data(
+                            palette_chunk["entries"],
+                            max_entries=palette_width*palette_height
+                        )
+                        palette_data_ptr = palette_meta["idk_data_ptr"]["nullptr"]
+                        resource_bytes[
+                            palette_data_ptr:palette_data_ptr + len(plt_data)
+                        ] = plt_data
 
     if should_patch_strings:
         resource_bytes = _patch_strings(resource_bytes, hash, strings_path)
@@ -882,12 +914,17 @@ def collect_strings(input_yaml, output_list):
     type=click.Path()
 )
 @click.option(
+    "-i", "--ignore-strings-txt",
+    default=None,
+    type=click.Path()
+)
+@click.option(
     "-o", "--output-path",
     default=None,
     type=click.Path()
 )
 def analyze_translation_progress(
-    strings_yaml, all_strings_txt, output_path
+    strings_yaml, all_strings_txt, ignore_strings_txt, output_path
 ):
     if output_path is None:
         output_path = Path(os.getcwd())
@@ -900,6 +937,11 @@ def analyze_translation_progress(
         translation_strings = yaml.safe_load(f)
     with open(all_strings_txt, "r") as f:
         all_strings = list(set(f.read().splitlines()))
+    if ignore_strings_txt:
+        with open(ignore_strings_txt, "r") as f:
+            ignore_strings = list(set(f.read().splitlines()))
+    else:
+        ignore_strings = []
     missing_strings = all_strings.copy()
     for string in translation_strings.keys():
         # HACK: ensure special chars are properly parsed
@@ -909,15 +951,23 @@ def analyze_translation_progress(
             missing_strings.remove(string)
         except ValueError:
             click.echo(f"Warning: string `{repr(string)}` found in translation table but not in string list")
+    ignore_strings_count = 0
+    for string in ignore_strings:
+        try:
+            missing_strings.remove(string)
+            ignore_strings_count += 1
+        except ValueError:
+            click.echo(f"Warning: string `{repr(string)}` found in ignored strings list but not in string list")
     with open(missing_strings_path, "w") as f:
         f.write("\n".join(missing_strings))
     with open(analysis_path, "w") as f:
         f.write(f"Total strings: {len(all_strings)}\n")
         f.write(f"Translated strings: {len(translation_strings.keys())}\n")
+        f.write(f"Ignored strings: {ignore_strings_count}\n")
         f.write(f"Untranslated strings: {len(missing_strings)}\n")
         f.write(
             "Translation percentage: "
-            f"{len(translation_strings)/len(all_strings)*100}%\n"
+            f"{len(translation_strings)/(len(all_strings) - ignore_strings_count)*100}%\n"
         )
 
 @cli.command()
@@ -953,15 +1003,19 @@ def dump_strings(imhex_json, hash, output_path):
     except KeyError:
         click.echo(f"Warning: No encoding map defined for {hash}, falling back to default encoding")
         translator = EncodingTranslator(encoding=BYTES_TO_CHAR_DEFAULT)
+    # HACK: generate password specific translator for known string IDs
+    pw_translator = EncodingTranslator(encoding=BYTES_TO_CHAR_PASSWORD)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     manifest = defaultdict(list)
     with open(csv_path, "w") as f:
         for string in strings:
+            _translator = translator
             addr = hex(int(string["__address"]))
             str_id = string["id"].to_bytes(4, "little").hex()
             string_raw = bytes(string["string"]).strip(b'\x00')
             alloc_len = string["str_len"]
             actual_len = len(string_raw)
+
 
             f.write(
                 f"\"Found string at {addr} with id {str_id}; "
@@ -970,9 +1024,12 @@ def dump_strings(imhex_json, hash, output_path):
             )
             if alloc_len > actual_len:
                 f.write("ALLOC BIGGER THAN STRING LEN\n")
+            if str_id in PASSWORD_STR_IDS:
+                f.write("String is a password string\n")
+                _translator = pw_translator
 
             try:
-                string_tokens = translator.tokenize_string(string_raw)
+                string_tokens = _translator.tokenize_string(string_raw)
 
                 line_out = ""
                 for token in string_tokens:
@@ -983,7 +1040,7 @@ def dump_strings(imhex_json, hash, output_path):
                 line_out = ""
                 full_str = ""
                 for token in string_tokens:
-                    char = translator.bytes_to_char[token]
+                    char = _translator.bytes_to_char[token]
                     if char == "\n":
                         char = "\\n"
                     elif char == "\f":
@@ -998,7 +1055,10 @@ def dump_strings(imhex_json, hash, output_path):
                 f.write(re.sub(r"<.*?>", "", full_str))
                 f.write("\n")
 
-                manifest[full_str].append(str_id)
+                if str_id in PASSWORD_STR_IDS:
+                    manifest[full_str].append(f"{str_id};(password)")
+                else:
+                    manifest[full_str].append(str_id)
             except ValueError:
                 f.write("STRING CONTAINS INVALID TOKENS\n")
                 f.write(f'"{string_raw.hex(" ")}"\n')

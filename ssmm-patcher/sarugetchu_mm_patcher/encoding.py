@@ -313,8 +313,7 @@ BYTES_TO_CHAR_DEFAULT = {
     b"\x89\xE1": "♀",
     b"\x89\xE2": "♪",
     # Not sure which of these is correct
-    #b"\x89\xE3": "~",
-    b"\x89\xE3": "〜",
+    b"\x89\xE3": "~",
     b"\x89\xE4": "➝",
 
     # Kanji
@@ -1470,7 +1469,7 @@ BYTES_TO_CHAR_DEFAULT = {
     b"\x8F\xEE": "足",
     b"\x8F\xEF": "速",
     b"\x8F\xF0": "俗",
-    b"\x8F\xF1": "??",
+    b"\x8F\xF1": "属",
     b"\x8F\xF2": "族",
     b"\x8F\xF3": "続",
     b"\x8F\xF4": "??",
@@ -1753,7 +1752,7 @@ BYTES_TO_CHAR_DEFAULT = {
     b"\x91\x8D": "忍",
     b"\x91\x8E": "認",
     b"\x91\x8F": "寧",
-    b"\x91\x90": "??",
+    b"\x91\x90": "熱",
     b"\x91\x91": "年",
     b"\x91\x92": "??",
     b"\x91\x93": "燃",
@@ -2628,7 +2627,37 @@ BYTES_TO_CHAR_DEFAULT = {
 # Characters appear to end here
 }
 
-# Where is this used?
+# Some strings are encoded with password.gf
+PASSWORD_STR_IDS = [
+    "d254c9df",
+    "3355c9df",
+    "9455c9df",
+    "f555c9df",
+    "5656c9df",
+    "b756c9df",
+    "1857c9df",
+    "7957c9df",
+
+    "a837ce8c",
+    "0938ce8c",
+    "6a38ce8c",
+    "cb38ce8c",
+
+    "0496f38d",
+    "6596f38d",
+    "c696f38d",
+    "2797f38d",
+    "8897f38d",
+    "e997f38d",
+    "4a98f38d",
+    "ab98f38d",
+
+    "7a0349d5",
+    "db0349d5",
+    "3c0449d5",
+    "9d0449d5",
+    "fe0449d5",
+]
 BYTES_TO_CHAR_PASSWORD = {
     **BYTES_TO_CHAR_SPECIAL,
 
@@ -2642,30 +2671,30 @@ BYTES_TO_CHAR_PASSWORD = {
     b"\x88\xA6": "イ",
     b"\x88\xA7": "ン",
     b"\x88\xA8": "ト",
-    b"\x88\xA9": "??",
-    b"\x88\xAA": "??",
+    b"\x88\xA9": "獲",
+    b"\x88\xAA": "得",
     b"\x88\xAB": "く",
-    b"\x88\xAC": "ヒ",
+    b"\x88\xAC": "と",
     b"\x88\xAD": "チ",
     b"\x88\xAE": "ッ",
     b"\x88\xAF": "プ",
     b"\x88\xB0": "ラ",
     b"\x88\xB1": "ウ",
     b"\x88\xB2": "ド",
-    b"\x88\xB3": "??",
-    b"\x88\xB4": "??",
+    b"\x88\xB3": "結",
+    b"\x88\xB4": "果",
     b"\x88\xB5": "け",
     b"\x88\xB6": "っ",
-    b"\x88\xB7": "??",
+    b"\x88\xB7": "途",
     b"\x88\xB8": "中",
-    b"\x88\xB9": "??",
-    b"\x88\xBA": "??",
+    b"\x88\xB9": "集",
+    b"\x88\xBA": "計",
     b"\x88\xBB": "ち",
     b"\x88\xBC": "ゅ",
     b"\x88\xBD": "し",  # TODO: doublecheck this, the font is kinda ass
     b"\x88\xBE": "い",
-    b"\x88\xBF": "??",
-    b"\x88\xC0": "??",
+    b"\x88\xBF": "最",
+    b"\x88\xC0": "終",
     b"\x88\xC1": "さ",
     b"\x88\xC2": "ミ",
     b"\x88\xC3": "シ",
@@ -2682,12 +2711,12 @@ BYTES_TO_CHAR_PASSWORD = {
     b"\x88\xCE": "コ",
     b"\x88\xCF": "H",
     b"\x88\xD0": "P",
-    b"\x88\xD1": "バ",
+    b"\x88\xD1": "パ",
     b"\x88\xD2": "ル",
     b"\x88\xD3": "タ",
     b"\x88\xD4": "ム",
-    b"\x88\xD5": "??",
-    b"\x88\xD6": "??",
+    b"\x88\xD5": "撃",
+    b"\x88\xD6": "破",
     b"\x88\xD7": "1",
     b"\x88\xD8": "2",
     b"\x88\xD9": "3",
@@ -2757,6 +2786,9 @@ BYTES_TO_CHAR_PASSWORD = {
     b"\x89\x5C": "エ",
     b"\x89\x5D": "エ", # Duplicated?
     # Valid encodings seem to end here
+
+    # HACK: patch in custom characters to support all strings
+    b"\x89\x5E": ".",
 }
 
 BYTES_TO_CHAR_TOKYO_TELEPORT = {
@@ -2855,7 +2887,7 @@ BYTES_TO_CHAR_TOKYO_TELEPORT = {
     b"\x88\xF9": "だ",
     b"\x88\xFA": "。",
     b"\x88\xFB": "フ",
-    b"\x88\xFC": "??", # TODO: center dot
+    b"\x88\xFC": "⋅",
 
     b"\x89\x40": "I",
     b"\x89\x41": "N",
@@ -2974,7 +3006,7 @@ BYTES_TO_CHAR_SHINJUKU = {
     b"\x89\x45": "だ",
     b"\x89\x46": "。", # For some reason this is duplicated
     b"\x89\x47": "フ",
-    b"\x89\x48": "??", # TODO: center dot
+    b"\x89\x48": "⋅",
 
     b"\x89\x49": "I",
     b"\x89\x4A": "N",
@@ -3093,7 +3125,7 @@ BYTES_TO_CHAR_AKIHABARA = {
     b"\x89\x47": "だ",
     b"\x89\x48": "。",
     b"\x89\x49": "フ",
-    b"\x89\x4A": "??", # TODO: center dot
+    b"\x89\x4A": "⋅",
 
     b"\x89\x4B": "I",
     b"\x89\x4C": "N",
@@ -3204,7 +3236,7 @@ BYTES_TO_CHAR_METRO = {
     b"\x88\xFC": "だ",
     b"\x89\x40": "。",
     b"\x89\x41": "フ",
-    b"\x89\x42": "??", # TODO: center dot
+    b"\x89\x42": "⋅",
 
     b"\x89\x43": "I",
     b"\x89\x44": "N",
@@ -3314,7 +3346,7 @@ BYTES_TO_CHAR_TOKYO = {
     b"\x88\xFB": "だ",
     b"\x88\xFC": "。",
     b"\x89\x40": "フ",
-    b"\x89\x41": "??", # TODO: center dot
+    b"\x89\x41": "⋅",
 
     b"\x89\x42": "I",
     b"\x89\x43": "N",
@@ -3425,7 +3457,7 @@ BYTES_TO_CHAR_TOKYO = {
     b"\x88\xFB": "だ",
     b"\x88\xFC": "。",
     b"\x89\x40": "フ",
-    b"\x89\x41": "??", # TODO: center dot
+    b"\x89\x41": "⋅",
 
     b"\x89\x42": "I",
     b"\x89\x43": "N",
@@ -5316,7 +5348,7 @@ BYTES_TO_CHAR_21_STADIUM_B = {
     b"\x88\xA4": " ",
     b"\x88\xA5": "A",
     b"\x88\xA6": "M",
-    b"\x88\xA7": "O",
+    b"\x88\xA7": "0",
     b"\x88\xA8": "3",
     b"\x88\xA9": ":",
     b"\x88\xAA": "2",
@@ -5674,13 +5706,13 @@ BYTES_TO_CHAR_24_BAY01_B = {
     b"\x88\xA4": "ー",
     b"\x88\xA5": "ミ",
     b"\x88\xA6": "ル",
-    b"\x88\xA7": "??",
+    b"\x88\xA7": " ",
     b"\x88\xA8": "P",
     b"\x88\xA9": "M",
     b"\x88\xAA": "0",
     b"\x88\xAB": "5",
     b"\x88\xAC": ":",
-    b"\x88\xAD": "l",
+    b"\x88\xAD": "1",
     b"\x88\xAE": "6",
     b"\x88\xAF": "リ",
     b"\x88\xB0": "ッ",
@@ -7782,7 +7814,7 @@ BYTES_TO_CHAR_MINIMAL = {
     b"\x88\xF2": "^",
     b"\x88\xF3": "_",
     b"\x88\xF4": "ω",
-    b"\x88\xF5": "〜",
+    b"\x88\xF5": "~",
     b"\x88\xF6": "➝",
     b"\x88\xF7": " ",
     b"\x88\xF8": "ァ",
@@ -7794,6 +7826,8 @@ BYTES_TO_CHAR_MINIMAL = {
     b"\x89\x41": "/",
     b"\x89\x42": "％",  # Use full width % sign to avoid conflict
     b"\x89\x43": "儀",
+    b"\x89\xE1": "♀",
+    b"\x89\xE2": "♪",
 }
 
 ENCODING_MAP = {
