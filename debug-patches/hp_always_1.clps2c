@@ -1,0 +1,5 @@
+// Patch the get hp function (for all entities)
+ASM_START 003f3798
+    jr $ra
+    addiu $v0,$zero,0x1
+ASM_END

@@ -1,0 +1,5 @@
+// Seems quite flaky?  Sometimes works if you unload and restart the level.
+// Doesn't seem to work on levels with cutscenes.
+Set CharBase 0x00704558
+
+WritePointer8 CharBase,0x8,0x10,0x4CC 0x60
