@@ -253,6 +253,18 @@
         "755_f25230cc" # gz/stage.60_k1.gz
         "757_4dbdde02" # gz/stage.60_k1death.gz
         #"759_b0ffcadb" # gz/system.gz
+        "762_e1cdd8b9" # gz/victory.col.chall.gz
+        "763_f1453e5f" # gz/victory.col.goritron.gz
+        "764_3ed3e300" # gz/victory.col.hakase.gz
+        "765_65322781" # gz/victory.col.haruka.gz
+        "766_b7a86c3b" # gz/victory.col.hiroki.gz
+        "767_143ca181" # gz/victory.col.kakeru.gz
+        "768_94380757" # gz/victory.col.legend.gz
+        "769_b67e6c4c" # gz/victory.col.natsumi.gz
+        "770_03a9e5e7" # gz/victory.col.pipo6.gz
+        "771_604eda0f" # gz/victory.col.pipotron.gz
+        "772_fde9fcbf" # gz/victory.col.spector.gz
+        "773_af89ea93" # gz/victory.col.volcano.gz
         "774_54110b1e" # gz/victory.vs.chall.gz
         "775_38ff898c" # gz/victory.vs.goritron.gz
         "776_dd92277c" # gz/victory.vs.hakase.gz

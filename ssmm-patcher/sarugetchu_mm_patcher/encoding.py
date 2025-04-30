@@ -7918,6 +7918,19 @@ ENCODING_MAP = {
     "F25230CC": BYTES_TO_CHAR_60_K1,              # gz/stage.60_k1.gz
     "4DBDDE02": BYTES_TO_CHAR_61_K1DEATH,         # gz/stage.61_k1death.gz
 
+    "E1CDD8B9": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.chall.gz"
+    "F1453E5F": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.goritron.gz"
+    "3ED3E300": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.hakase.gz"
+    "65322781": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.haruka.gz"
+    "B7A86C3B": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.hiroki.gz"
+    "143CA181": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.kakeru.gz"
+    "94380757": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.legend.gz"
+    "B67E6C4C": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.natsumi.gz"
+    "03A9E5E7": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.pipo6.gz"
+    "604EDA0F": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.pipotron.gz"
+    "FDE9FCBF": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.spector.gz"
+    "AF89EA93": BYTES_TO_CHAR_DEFAULT,            # gz/victory.col.volcano.gz"
+
     "54110B1E": BYTES_TO_CHAR_DEFAULT,            # gz/victory.vs.chall.gz
     "38FF898C": BYTES_TO_CHAR_DEFAULT,            # gz/victory.vs.goritron.gz
     "DD92277C": BYTES_TO_CHAR_DEFAULT,            # gz/victory.vs.hakase.gz
@@ -8019,6 +8032,19 @@ ENCODING_LIMITS = {
     "1988AE91": 96,    # gz/stage.58_UFO2.gz
     "F25230CC": 96,    # gz/stage.60_k1.gz
     "4DBDDE02": 96,    # gz/stage.61_k1death.gz
+
+    "E1CDD8B9": None,  # gz/victory.col.chall.gz"
+    "F1453E5F": None,  # gz/victory.col.goritron.gz"
+    "3ED3E300": None,  # gz/victory.col.hakase.gz"
+    "65322781": None,  # gz/victory.col.haruka.gz"
+    "B7A86C3B": None,  # gz/victory.col.hiroki.gz"
+    "143CA181": None,  # gz/victory.col.kakeru.gz"
+    "94380757": None,  # gz/victory.col.legend.gz"
+    "B67E6C4C": None,  # gz/victory.col.natsumi.gz"
+    "03A9E5E7": None,  # gz/victory.col.pipo6.gz"
+    "604EDA0F": None,  # gz/victory.col.pipotron.gz"
+    "FDE9FCBF": None,  # gz/victory.col.spector.gz"
+    "AF89EA93": None,  # gz/victory.col.volcano.gz"
 
     "54110B1E": None,  # gz/victory.vs.chall.gz
     "38FF898C": None,  # gz/victory.vs.goritron.gz
