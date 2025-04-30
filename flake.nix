@@ -714,7 +714,10 @@
         stdenv.mkDerivation rec {
           pname = "mm-data-translation-analysis";
           inherit version;
-          src = ./strings.yaml;
+          srcs = [
+            ./strings.yaml
+            ./ignored_strings.txt
+          ];
           dontUnpack = true;
 
           nativeBuildInputs = [
@@ -723,9 +726,13 @@
 
           buildPhase = ''
             mkdir -p "$out"
+            paths=($srcs)
+            strings=''${paths[0]}
+            ignored_strings=''${paths[1]}
             ssmm-patcher analyze-translation-progress \
               -o "$out" \
-              "$src" \
+              -i "$ignored_strings" \
+              "$strings" \
               "${self.packages.${system}.data-strings-unique}/unique_strings.txt" \
           '';
 
