@@ -28,17 +28,31 @@ struct ProgressOptions {
     u8 bgm_vol;
 };
 
+struct ProgressMission {
+    u8 idk1;
+    u8 completed_levels;
+    bool all_completed;
+    // Seems to be set by default, cleared when a level is completed but
+    // doesn't seem to do anything either way
+    bool new;
+};
+
 struct ProgressFile {
     u8 idk_data1[8];
     ProgressDateTime date_time;
     ProgressOptions options;
-    u8 idk_data2[1];
-    u8 episode_kakeru_progress_idx;
-    u8 idk_data3[3];
-    u8 episode_specter_progress_idx;
-    u8 idk_data4[24];
+    // Setting the story mode `all_completed` flags to true adds a crown to its
+    // respsective section of the save file
+    ProgressMission episode_kakeru_progress;
+    ProgressMission episode_specter_progress;
+    // Setting all tournament `all_completed` flags to true adds a crown to the
+    // colosseum section of the save file
+    ProgressMission world_tournament_progress;
+    ProgressMission legend_tournament_progress;
+    ProgressMission devils_tournament_progress;
+    u8 idk_data7[10];
     u16 checksum [[format("as_hex")]];
-    u8 idk_data5[6];
+    u8 idk_data8[6];
 };
 
 struct Progress {
