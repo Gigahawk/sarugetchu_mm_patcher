@@ -32,7 +32,7 @@ from sarugetchu_mm_patcher.index import (
 )
 from sarugetchu_mm_patcher.encoding import (
     EncodingTranslator,
-    ENCODING_MAP,
+    ENCODING_MAP, ENCODING_LIMITS,
     BYTES_TO_CHAR_MINIMAL, BYTES_TO_CHAR_DEFAULT, BYTES_TO_CHAR_SPECIAL,
     BYTES_TO_CHAR_PASSWORD, PASSWORD_STR_IDS,
     token_to_idx,
@@ -49,7 +49,7 @@ def cli():
     pass
 
 def _guess_hash(fname: str | Path):
-    fname = Path(Path(fname).stem).name
+    fname = Path(Path(fname).stem).name.upper()
     _, name_hash = fname.split("_")
     return name_hash
 
@@ -468,52 +468,52 @@ def _patch_strings(resource_bytes, hash, strings_path):
 
         if isinstance(english, str):
             id = None
-            try:
-                bs = target_encoder.string_to_bytes(english)[0]
-            except IndexError as e:
-                click.echo(
-                    f"Error: could not encode {repr(english)}"
-                )
-                raise e
-            replacements = {id: bs}
+            replacements = {id: english}
         elif isinstance(english, dict):
             replacements = {}
             for id, s in english.items():
-                replacements[bytes.fromhex(id)] = target_encoder.string_to_bytes(s)[0]
+                replacements[bytes.fromhex(id)] = s
         else:
             raise ValueError(f"invalid translation structure {english}")
 
         for jb in jap_bytestrs:
-            for id, new_bytestr in replacements.items():
-                resource_bytes.replace_in_place(
-                    source_encoder.wrap_string(jb, id=id),
-                    target_encoder.wrap_string(new_bytestr, id=id),
-                )
+            for id, eng_str in replacements.items():
+                source_bs_wrapped = source_encoder.wrap_string(jb, id=id)
+                if source_bs_wrapped in resource_bytes:
+                    try:
+                        new_bs = target_encoder.string_to_bytes(eng_str)[0]
+                    except IndexError as e:
+                        click.echo(f"Error: could not encode {repr(eng_str)}")
+                        raise e
+                    new_bs_wrapped = target_encoder.wrap_string(new_bs, id=id)
+                    resource_bytes.replace_in_place(
+                        source_bs_wrapped, new_bs_wrapped
+                    )
         if info.get("password", False):
             pw_encoder = EncodingTranslator(encoding=BYTES_TO_CHAR_PASSWORD)
             jap_bytestrs = pw_encoder.string_to_bytes(jap_str)
             if isinstance(english, str):
                 id = None
-                try:
-                    bs = pw_encoder.string_to_bytes(english)[0]
-                except IndexError as e:
-                    click.echo(
-                        f"Error: could not encode password string {repr(english)}"
-                    )
-                    raise e
-                replacements = {id: bs}
+                replacements = {id: english}
             elif isinstance(english, dict):
                 replacements = {}
                 for id, s in english.items():
-                    replacements[bytes.fromhex(id)] = pw_encoder.string_to_bytes(s)[0]
+                    replacements[bytes.fromhex(id)] = s
             else:
                 raise ValueError(f"invalid translation structure {english}")
             for jb in jap_bytestrs:
-                for id, new_bytestr in replacements.items():
-                    resource_bytes.replace_in_place(
-                        source_encoder.wrap_string(jb, id=id),
-                        target_encoder.wrap_string(new_bytestr, id=id),
-                    )
+                for id, eng_str in replacements.items():
+                    source_bs_wrapped = pw_encoder.wrap_string(jb, id=id)
+                    if source_bs_wrapped in resource_bytes:
+                        try:
+                            new_bs = pw_encoder.string_to_bytes(eng_str)[0]
+                        except IndexError as e:
+                            click.echo(f"Error: could not encode password {repr(eng_str)}")
+                            raise e
+                        new_bs_wrapped = pw_encoder.wrap_string(new_bs, id=id)
+                        resource_bytes.replace_in_place(
+                            source_bs_wrapped, new_bs_wrapped
+                        )
     return resource_bytes
 
 
@@ -1145,14 +1145,27 @@ def dump_fonts(ctx, imhex_json, textures_path, output_path):
     type=click.Path(),
 )
 @click.option(
+    "-h", "--hash",
+    default=None,
+    type=str,
+)
+@click.option(
     "-o", "--output-path",
     default=None,
     show_default=True,
     type=click.Path(),
 )
-def patch_font(font_src_path, resource_path, output_path):
+def patch_font(font_src_path, resource_path, output_path, hash):
     font_src_path = Path(font_src_path)
     resource_path = Path(resource_path)
+
+    if hash is None:
+        hash = _guess_hash(resource_path)
+    encoding_limit = ENCODING_LIMITS.get(hash, None)
+    if encoding_limit is None:
+        encoding_limit = float("inf")
+    else:
+        click.echo(f"Warning: Encoding limit for {hash} is {encoding_limit}")
 
     if output_path is None:
         output_path = Path(os.getcwd()) / f"{resource_path.stem}_patched"
@@ -1185,6 +1198,11 @@ def patch_font(font_src_path, resource_path, output_path):
                 continue
             target_token_idx = token_to_idx(token)
             if target_token_idx % 2:
+                continue
+            if target_token_idx >= encoding_limit:
+                click.echo(
+                    f"Warning: Skipping token index {target_token_idx} {token} ({char})"
+                )
                 continue
             target_token_idx = token_to_idx(token)//2
             _token_idx_orig = token_to_idx(token)

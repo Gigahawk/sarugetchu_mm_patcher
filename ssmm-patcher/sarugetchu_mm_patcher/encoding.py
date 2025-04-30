@@ -7932,6 +7932,109 @@ ENCODING_MAP = {
     "AA3BB564": BYTES_TO_CHAR_DEFAULT,            # gz/victory.vs.volcano.gz
 }
 
+ENCODING_LIMITS = {
+    "7243E526": None,  # gz/game_result.story.gz"
+    "4ABEE95E": None,  # gz/game_result.vs.gz
+
+    "00940549": None,  # gz/menu_common.gz
+
+    "87F51E0C": None,  # gz/menu_story.01_boss01_gori01.gz
+    "41F34892": None,  # gz/menu_story.02_city01_a.gz
+    "E76BF53F": None,  # gz/menu_story.03_city02_a.gz
+    "5973AD65": None,  # gz/menu_story.04_metro01_a.gz
+    "DD798EB5": None,  # gz/menu_story.05_boss02_boss.gz
+    "44F20E4A": None,  # gz/menu_story.06_bay01_a.gz
+    "567EA3B3": None,  # gz/menu_story.07_bay02_a.gz
+    "6CC96933": None,  # gz/menu_story.08_park01_a.gz
+    "C55668F7": None,  # gz/menu_story.09_stadium_a.gz
+    "1626079D": None,  # gz/menu_story.10_boss03_fly.gz
+    "45912030": None,  # gz/menu_story.11_hangar01_a.gz
+    "C35E32D9": None,  # gz/menu_story.12_hangar02_a.gz
+    "F2B5553F": None,  # gz/menu_story.13_boss04_gori02.gz
+    "DCD7B35D": None,  # gz/menu_story.14_elevator_a.gz
+    "8D3A2011": None,  # gz/menu_story.15_kakeru_spector.gz
+    "06143EBB": None,  # gz/menu_story.15_pipo_spector.gz
+    "5EBB5F0B": None,  # gz/menu_story.16_kakeru_goritron.gz
+    "96696A96": None,  # gz/menu_story.16_pipo_kakeru.gz
+    "7A8E0451": None,  # gz/menu_story.17_city01_vr.gz
+    "0E36C98A": None,  # gz/menu_story.18_bay01_vr.gz
+    "DD45C596": None,  # gz/menu_story.19_park01_vr.gz
+    "B2B250A8": None,  # gz/menu_story.20_boss07_grid.gz
+    "4C084C39": None,  # gz/menu_story.21_stadium_b.gz
+    "CD7A2B3C": None,  # gz/menu_story.22_park01_b.gz
+    "E13AEF70": None,  # gz/menu_story.23_bay02_b.gz
+    "49913FD2": None,  # gz/menu_story.24_bay01_b.gz
+    "A5BEBDA1": None,  # gz/menu_story.25_boss08_boss.gz
+    "F2BC8CB1": None,  # gz/menu_story.26_metro01_b.gz
+    "72C71EE8": None,  # gz/menu_story.27_city02_b.gz
+    "6E0A878D": None,  # gz/menu_story.28_city01_b.gz
+    "3A1B68CC": None,  # gz/menu_story.29_boss09_boss.gz
+    "AC56964E": None,  # gz/menu_story.30_daiba02_b.gz
+    "2F029ADF": None,  # gz/menu_story.31_boss10_boss.gz
+
+    "3C6CF60B": None,  # gz/menu_vs.gz
+
+    "AA6F7A50": 96,    # gz/stage.01_boss01_gori01.gz
+    "58401EA3": 96,    # gz/stage.02_city01_a.gz
+    "FEB8CA50": 96,    # gz/stage.03_city02_a.gz
+    "AC9781D4": 96,    # gz/stage.04_metro01_a.gz
+    "B8B90462": 96,    # gz/stage.05_boss02_boss.gz
+    "CF772913": 96,    # gz/stage.06_bay01_a.gz
+    "E103BE7C": 96,    # gz/stage.07_bay02_a.gz
+    "83163F44": 96,    # gz/stage.08_park01_a.gz
+    "187B3C66": 96,    # gz/stage.09_stadium_a.gz
+    "1566B0A1": 96,    # gz/stage.10_boss03_fly.gz
+    "44D1C934": 96,    # gz/stage.11_hangar01_a.gz
+    "C29EDBDD": 96,    # gz/stage.12_hangar02_a.gz
+    "1530B183": 96,    # gz/stage.13_boss04_gori02.gz
+    "DB175D62": 96,    # gz/stage.14_elevator_a.gz
+    "9CE158F2": 96,    # gz/stage.15_kakeru_spector.gz
+    "AD4E55A8": 96,    # gz/stage.15_pipo_spector.gz
+    "89E08F98": 96,    # gz/stage.16_kakeru_goritron.gz
+    "71A9E042": 96,    # gz/stage.16_pipo_kakeru.gz
+    "CDB2D8BF": 96,    # gz/stage.17_city01_vr.gz
+    "25839E9B": 96,    # gz/stage.18_bay01_vr.gz
+    "306A9905": 96,    # gz/stage.19_park01_vr.gz
+    "8DF2C654": 96,    # gz/stage.20_boss07_grid.gz
+    "9F2C20A8": 96,    # gz/stage.21_stadium_b.gz
+    "E4C7004D": 96,    # gz/stage.22_park01_b.gz
+    "6CC0093A": 96,    # gz/stage.23_bay02_b.gz
+    "D4165A9B": 96,    # gz/stage.24_bay01_b.gz
+    "80FE334E": 96,    # gz/stage.25_boss08_boss.gz
+    "45E16020": 96,    # gz/stage.26_metro01_b.gz
+    "8914F4F8": 96,    # gz/stage.27_city02_b.gz
+    "85575C9E": 96,    # gz/stage.28_city01_b.gz
+    "155BDE78": 96,    # gz/stage.29_boss09_boss.gz
+    "FF7A6ABD": 96,    # gz/stage.30_daiba02_b.gz
+    "0A42108C": 96,    # gz/stage.31_boss10_boss.gz
+
+    "E5D5CEB1": 96,    # gz/stage.50_k1.gz
+    "2FF511D3": 96,    # gz/stage.51_city.gz
+    "1E656E38": 96,    # gz/stage.52_metro.gz
+    "9CE16BE2": 96,    # gz/stage.53_bay.gz
+    "2B6AEDC3": 96,    # gz/stage.54_UFO.gz
+    "48D02DB6": 96,    # gz/stage.55_park.gz
+    "4CDE5405": 96,    # gz/stage.56_daiba.gz
+    "EA0603BA": 96,    # gz/stage.57_k1death.gz
+    "1988AE91": 96,    # gz/stage.58_UFO2.gz
+    "F25230CC": 96,    # gz/stage.60_k1.gz
+    "4DBDDE02": 96,    # gz/stage.61_k1death.gz
+
+    "54110B1E": None,  # gz/victory.vs.chall.gz
+    "38FF898C": None,  # gz/victory.vs.goritron.gz
+    "DD92277C": None,  # gz/victory.vs.hakase.gz
+    "04F26AFC": None,  # gz/victory.vs.haruka.gz
+    "5668B0B6": None,  # gz/victory.vs.hiroki.gz
+    "B3FBE4FC": None,  # gz/victory.vs.kakeru.gz
+    "33F84AD2": None,  # gz/victory.vs.legend.gz
+    "B130371D": None,  # gz/victory.vs.natsumi.gz
+    "76EC174C": None,  # gz/victory.vs.pipo6.gz
+    "A707263D": None,  # gz/victory.vs.pipotron.gz
+    "F89BC790": None,  # gz/victory.vs.spector.gz
+    "AA3BB564": None,  # gz/victory.vs.volcano.gz
+
+}
+
 class EncodingTranslator:
     def __init__(self, hash: str|None=None, encoding: dict[bytes,str]|None=None):
         if isinstance(hash, str):
