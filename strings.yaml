@@ -45,21 +45,6 @@
 "本当にリトライしますか?":
   english: "Are you sure you want to restart?"
 
-
-
-
-
-
-#"そうびへんこう":
-#  english: "WWWWWWW"
-#"ゴールドヘアー":
-#  english: "WWWWWWW"
-#"パープルヘアー":
-#  english: "WWWWWWW"
-#"ブルースタイル":
-#  english: "WWWWWWW"
-
-
 # Start screen
 "ゲームスタート":
   english: "Start Game"
@@ -109,16 +94,6 @@
 # File select screen
 "ファイル":
   english: "File"
-#"ファイル%":
-#  english: "File %"
-#"ファイル1":
-#  english: "File 1"
-#"ファイル2":
-#  english: "File 2"
-#"ファイル3":
-#  english: "File 3"
-#"ファイル4":
-#  english: "File 4"
 "空き領域":
   english: "Free Slot"
 
