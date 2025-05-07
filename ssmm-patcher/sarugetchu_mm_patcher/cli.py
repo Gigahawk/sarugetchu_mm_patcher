@@ -1311,6 +1311,58 @@ def encode_string(hash, string):
     for s in out:
         click.echo(s.hex(sep=" "))
 
+@cli.command()
+@click.argument(
+    "name",
+    type=str,
+)
+@click.option(
+    "-l", "--low",
+    default=1.0,
+    type=float,
+)
+@click.option(
+    "-h", "--high",
+    default=10.0,
+    type=float,
+)
+def tune_cutscene_bitrate(name, low, high):
+    def calc_mid():
+        return low + (high - low) / 2
+    mid  = calc_mid()
+    click.echo(f"Tuning cutscene bitrate for {name}")
+    json_path = f"subs/RAW/MPEG/GAME/{name}.json"
+    while True:
+        click.echo(
+            f"Searching between {low} and {high}M, currently trying {mid}M"
+        )
+        click.echo("Setting bitrate in JSON")
+        with open(json_path, "r") as f:
+            data = json.load(f)
+        data["bitrate"] = f"{mid}M"
+        with open(json_path, "w") as f:
+            json.dump(data, f, indent=4)
+        click.echo("Running new build")
+        cmd = [
+            "nom", "build", ".#cutscenes-size-diff"
+        ]
+        subprocess.run(cmd)
+        click.echo("Parsing size report")
+        with open("result/report.txt", "r") as f:
+            report = f.readlines()
+        for line in report:
+            if name in line:
+                diff = int(line.split("diff: ")[1])
+                click.echo(f"Diff: {diff}")
+                if diff > 0:
+                    low = mid
+                    mid = calc_mid()
+                elif diff < 0:
+                    high = mid
+                    mid = calc_mid()
+                else:
+                    click.echo(f"Found optimal bitrate {mid}M")
+                    return
 
 if __name__ == "__main__":
     cli()
