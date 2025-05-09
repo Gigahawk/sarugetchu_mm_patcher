@@ -1,0 +1,34 @@
+name: Build VM Patcher Image
+on:
+  - pull_request
+  - push
+
+jobs:
+  build-vm:
+    name: Test on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install qemu-utils
+        run: |
+          sudo apt-get update
+          sudo apt-get install qemu-utils
+
+      - uses: actions/checkout@v4
+    
+      - name: Download Windows deps
+        run: |
+          cd win
+          ./download_deps.sh
+
+      - name: Build patcher image
+        run: |
+          cd win
+          ./build_vm.sh
+
+      - name: Archive objects
+        # Skip archive if running on act
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ssmm_build_vm
+          path: win

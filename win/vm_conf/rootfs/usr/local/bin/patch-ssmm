@@ -1,0 +1,63 @@
+#!/bin/sh
+
+SDK_NAME="PlayStation-202-20July-202005-20SDK-20-28version-203.0.3-29.iso"
+SDK_PATH="/nix/store/prfvi026py9xp06mxwakb81jq27jkab3-$SDK_NAME"
+PS2STR_PATH=/nix/store/21nwxlwd9j865v57mis2z0s44nnpaian-ps2str-1.05
+
+MM_NAME="mm.iso"
+MM_PATH="/nix/store/sr7fi7yl3rnyd51lmmrwbi5mxyqbxbbq-$MM_NAME"
+
+echo "Checking if ps2str is in nix store"
+if test -e $PS2STR_PATH; then
+    echo "Found ps2str in nix store"
+else
+    echo "ps2str is not in nix store, checking if SDK is in nix store"
+    if test -e $SDK_PATH; then
+        echo "SDK is already in the nix store"
+    else
+        echo "SDK is not in nix store, importing SDK into the nix store"
+        # qemu script will always mount this to /dev/vdc (index 2)
+        nix-prefetch-url --type sha256 --name "$SDK_NAME" file:///dev/vdc
+    fi
+fi
+
+echo "Checking if MM ISO is in the nix store"
+if test -e $MM_PATH; then
+    echo "Found source MM ISO in nix store"
+else
+    echo "Source MM ISO is not in nix store, importing into nix store"
+    # qemu script will always mount this to /dev/vdb (index 1)
+    nix-prefetch-url --type sha256 --name "$MM_NAME" file:///dev/vdb
+fi
+
+echo "Moving to patcher path"
+cd /root/sarugetchu_mm_patcher
+
+echo "Cleaning old build"
+rm -f result
+
+i=1
+while [ "$i" -le 100 ]
+do
+    echo "Cleaning homeless shelter"
+    rm -rf /homeless-shelter
+
+
+    echo "Building patched iso iteration $i"
+    nom build .#iso-patched
+
+    if [ -e result/iso/mm_patched.iso ]; then
+        echo "Build completed"
+        break
+    else
+        echo "Build failed due to homeless shelter, retrying build"
+    fi
+    i=$((i + 1))
+done
+
+echo "Copying iso back to host"
+# qemu script will always mount the output to vdd
+dd if=result/iso/mm_patched.iso of=/dev/vdd bs=32M status=progress
+
+echo "Build completed, shutting down VM"
+poweroff
