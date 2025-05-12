@@ -1,0 +1,8 @@
+*
+!.gitignore
+!vm_conf
+!vm_conf/**
+!build_vm.sh
+!download_deps.sh
+!*.bat
+!README.md
