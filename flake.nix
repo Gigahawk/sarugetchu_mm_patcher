@@ -11,6 +11,8 @@
     bgrep.url = "github:Gigahawk/bgrep-nix";
     # Waiting for merge of https://github.com/NixOS/nixpkgs/pull/339716
     nixpkgs-clps2c.url = "github:Gigahawk/nixpkgs?ref=clps2c-compiler";
+    # Waiting for merge of TODO
+    nixpkgs-ps2patchelf.url = "github:Gigahawk/nixpkgs?ref=ps2patchelf";
   };
 
   outputs = {
@@ -23,12 +25,14 @@
     ps2isopatcher,
     bgrep,
     nixpkgs-clps2c,
+    nixpkgs-ps2patchelf,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
       pkgs-clps2c = import nixpkgs-clps2c { inherit system; };
+      pkgs-ps2patchelf = import nixpkgs-ps2patchelf { inherit system; };
       mm-jp-iso = (pkgs.requireFile {
         name = "mm.iso";
         url = "";
@@ -125,6 +129,26 @@
             fi
           '
         wait
+      '';
+      elfName = "SCPS_151.15";
+      pnachName = "SCPS-15115_8EFDBAEB";
+      patches-buildPhase = files: ''
+        mkdir -p "$out"
+        outfile="$out/${pnachName}.pnach"
+        touch "$outfile"
+        for f in ${self.packages.${system}.debug-patches-pnaches}/*; do
+          name=$(basename "$f")
+          if [[ ${files} != "*" ]]; then
+            if [[ "${files}" != *"$name"* ]]; then
+              echo "Skipping $name"
+              continue
+            fi
+          fi
+          echo "[$name]" >> $outfile
+          # Remove leading newline
+          cat "$f" | sed ':a; /^\n*$/d; /^\n/s/^\n*//' >> "$outfile"
+          echo -e "\n" >> $outfile
+        done
       '';
       version = "1";
       resourceFiles = [
@@ -884,6 +908,78 @@
 
           dontFixup = true;
         };
+        debug-patches-pnaches = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-debug-patches-pnaches";
+          inherit version;
+          src = ./debug-patches;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            pkgs-clps2c.clps2c-compiler
+          ];
+
+          buildPhase = ''
+            mkdir -p "$out"
+            for f in $src/*.clps2c; do
+              name=$(basename $f)
+              name="''${name%.clps2c}"
+              echo "Building $f to $out/$name"
+              CLPS2C-Compiler -i "$f" -o "$out/$name" -p
+            done
+          '';
+
+          dontInstall = true;
+          dontFixup = true;
+        };
+        debug-patches = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-debug-patches";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+
+          buildPhase = patches-buildPhase "*";
+
+          dontInstall = true;
+          dontFixup = true;
+        };
+        prod-patches = self.packages.${system}.debug-patches.overrideAttrs (old:
+        let
+          prodPatchNames = [
+            "font_scale"
+            "enable_log_print"
+          ];
+          prodPatchNamesStr = builtins.concatStringsSep "," prodPatchNames;
+        in
+        {
+          pname = "mm-prod-patches";
+          buildPhase = patches-buildPhase prodPatchNamesStr;
+        });
+        elf-patched = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-elf-patched";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            pkgs-ps2patchelf.ps2patchelf
+          ];
+
+          buildPhase = ''
+            mkdir -p "$out"
+            cp "${self.packages.${system}.iso-jp-extracted}/extracted/${elfName}" .
+            chmod 777 "${elfName}"
+            PS2PatchElf \
+              ${elfName} \
+              "${self.packages.${system}.prod-patches}/${pnachName}.pnach" \
+              "$out/${elfName}_patched"
+          '';
+
+          dontInstall = true;
+          dontFixup = true;
+        };
         iso-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-iso-patched";
@@ -899,6 +995,7 @@
             cmd="ps2isopatcher patch"
             cmd+=" -r \"/PDATA/DATA0.BIN;1\" \"${self.packages.${system}.data-repacked}/PDATA/DATA0.BIN\""
             cmd+=" -r \"/PDATA/DATA1.BIN;1\" \"${self.packages.${system}.data-repacked}/PDATA/DATA1.BIN\""
+            cmd+=" -r \"/${elfName};1\" \"${self.packages.${system}.elf-patched}/${elfName}_patched\""
             pushd "${self.packages.${system}.cutscenes-remuxed}/remuxed"
             for m in $(find . -type f); do
               abspath=$(readlink -f "$m")
@@ -910,39 +1007,6 @@
             mkdir -p "$out/iso"
             cmd+=" -o \"$out/iso/mm_patched.iso\" \"$src\""
             eval $cmd
-          '';
-
-          dontInstall = true;
-          dontFixup = true;
-        };
-        debug-patches = with import nixpkgs { inherit system; };
-        stdenv.mkDerivation rec {
-          pname = "mm-debug-patches";
-          inherit version;
-          src = ./debug-patches;
-          dontUnpack = true;
-
-          nativeBuildInputs = [
-            pkgs-clps2c.clps2c-compiler
-          ];
-
-          buildPhase = ''
-            mkdir -p build
-            for f in $src/*.clps2c; do
-              name=$(basename $f)
-              name="''${name%.clps2c}"
-              echo "Building $f to build/$name"
-              CLPS2C-Compiler -i "$f" -o "build/$name" -p
-            done
-
-            mkdir -p "$out"
-            outfile="$out/SCPS-15115_8EFDBAEB.pnach"
-            touch "$outfile"
-            for f in build/*; do
-              echo "[$(basename $f)]" >> $outfile
-              cat "$f" | sed ':a; /^\n*$/d; /^\n/s/^\n*//' >> "$outfile"
-              echo -e "\n" >> $outfile
-            done
           '';
 
           dontInstall = true;
