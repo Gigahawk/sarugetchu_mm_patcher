@@ -1331,16 +1331,22 @@ def tune_cutscene_bitrate(name, low, high):
         return low + (high - low) / 2
     mid  = calc_mid()
     click.echo(f"Tuning cutscene bitrate for {name}")
-    json_path = f"subs/RAW/MPEG/GAME/{name}.json"
+    subs_path = Path("subs/RAW/MPEG/GAME")
+    target_json_path = subs_path / f"{name}.json"
+    for path in subs_path.glob("*.json"):
+        if path.name == f"{name}.json":
+            continue
+        click.echo(f"Disabling transcoding of {path.name} for speed")
+        path.rename(path.with_suffix(".bak"))
     while True:
         click.echo(
             f"Searching between {low} and {high}M, currently trying {mid}M"
         )
         click.echo("Setting bitrate in JSON")
-        with open(json_path, "r") as f:
+        with open(target_json_path, "r") as f:
             data = json.load(f)
         data["bitrate"] = f"{mid}M"
-        with open(json_path, "w") as f:
+        with open(target_json_path, "w") as f:
             json.dump(data, f, indent=4)
         click.echo("Running new build")
         cmd = [
@@ -1350,6 +1356,7 @@ def tune_cutscene_bitrate(name, low, high):
         click.echo("Parsing size report")
         with open("result/report.txt", "r") as f:
             report = f.readlines()
+        optimal = False
         for line in report:
             if name in line:
                 diff = int(line.split("diff: ")[1])
@@ -1362,7 +1369,13 @@ def tune_cutscene_bitrate(name, low, high):
                     mid = calc_mid()
                 else:
                     click.echo(f"Found optimal bitrate {mid}M")
-                    return
+                    optimal = True
+                    break
+        if optimal:
+            break
+    for path in subs_path.glob("*.bak"):
+        click.echo(f"Reenabling transcoding of {path.name}")
+        path.rename(path.with_suffix(".json"))
 
 if __name__ == "__main__":
     cli()
