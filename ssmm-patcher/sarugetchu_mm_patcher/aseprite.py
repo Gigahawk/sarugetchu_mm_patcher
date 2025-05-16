@@ -6,6 +6,8 @@ class AsepriteDumper:
     MAGIC_NUMBER = 0xA5E0
     FRAME_MAGIC_NUMBER = 0xF1FA
 
+    PALETTE_CHUNK_ID = 0x2019
+
     def __init__(
         self, width: int, height: int,
         palette_pxs: list[Bits], img_pxs: list[Bits]
@@ -189,12 +191,11 @@ class AsepriteDumper:
 
     @property
     def palette_chunk(self) -> bytes:
-        _chunk_id = 0x2019
         out = b""
 
         # Chunk size, calculate this at the end
         out += (0).to_bytes(4, "little")
-        out += (_chunk_id).to_bytes(2, "little")
+        out += (self.PALETTE_CHUNK_ID).to_bytes(2, "little")
 
         # Palette size
         out += (self.num_colors).to_bytes(4, "little")

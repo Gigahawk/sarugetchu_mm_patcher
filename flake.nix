@@ -585,6 +585,32 @@
             done <<< "${resourceFilesStr}"
           '';
         };
+        font-prepatched = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-font-patched";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            self.packages.${system}.default
+          ];
+
+          buildPhase = ''
+            mkdir "$out"
+            sv_font_src=070_00940549
+            # HACK: need to pre patch sv_msg.gf before we copy it into all our files
+            echo "Prepatching $sv_font_src font"
+            ssmm-patcher patch-resource \
+                -t ${self.packages.${system}.textures-imhex-analysis}/analysis/all/ \
+                -o "$out/sv_font_src" \
+                "${self.packages.${system}.data-jp-extracted}/DATA1/$sv_font_src" \
+                "${self.packages.${system}.data-imhex-analysis}/analysis/$sv_font_src.json"
+            '';
+
+          dontInstall = true;
+          dontFixup = true;
+        };
         data-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-imhex-analysis";
@@ -623,6 +649,31 @@
                   --pattern "$src/main.hexpat" \
                   --output "$out/analysis/{}.json"
               '
+          '';
+
+          dontInstall = true;
+          dontFixup = true;
+
+        };
+        font-prepatched-imhex-analysis = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-font-prepatched-imhex-analysis";
+          inherit version;
+          src = ./imhex_patterns;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            pkgs.imhex
+          ];
+
+          buildPhase = ''
+            mkdir -p "$out"
+            echo "Generating imhex analysis for prepatched font resource"
+            imhex --pl format --verbose --metadata \
+              --includes "$src/includes/" \
+              --input "${self.packages.${system}.font-prepatched}/sv_font_src" \
+              --pattern "$src/main.hexpat" \
+              --output "$out/sv_font_src.json"
           '';
 
           dontInstall = true;
@@ -822,6 +873,7 @@
             self.packages.${system}.default
           ];
 
+
           buildPhase = ''
             echo "${resourceFilesStr}" | \
               xargs -P "$NIX_BUILD_CORES" -I {} bash -c '
@@ -829,7 +881,7 @@
                 echo "Patching $name"
                 ssmm-patcher patch-font \
                   -o "{}" \
-                  "${self.packages.${system}.data-jp-extracted}/DATA1/070_00940549" \
+                  "${self.packages.${system}.font-prepatched}/sv_font_src" \
                   "${self.packages.${system}.data-jp-extracted}/DATA1/{}"
 
                 ssmm-patcher patch-resource \

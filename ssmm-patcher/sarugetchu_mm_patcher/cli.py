@@ -516,6 +516,74 @@ def _patch_strings(resource_bytes, hash, strings_path):
                         )
     return resource_bytes
 
+@cli.command()
+@click.argument(
+    "aseprite_path",
+    type=click.Path()
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def flip_font_palettes(aseprite_path, output_path):
+    aseprite_path = Path(aseprite_path)
+    # Use doubled alphas, patcher will halve them when importing
+    font_colors = [
+        b"\x00\x00\x00\x00\x00\x00",
+        b"\x00\x00\xAF\xAF\xAF\x80",
+        b"\x00\x00\xCF\xCF\xCF\xC0",
+        b"\x00\x00\xFF\xFF\xFF\xFF",
+    ]
+    with open(aseprite_path, "rb") as f:
+        aseprite_bytes = f.read()
+    aseprite_bytes = bytearray(aseprite_bytes)
+    if output_path is None:
+        output_path = aseprite_path.parent
+
+    ptr = 0
+    # Skip header
+    ptr += 128
+    # Skip to num_chunks in frames header
+    ptr += 12
+
+    num_chunks = int.from_bytes(aseprite_bytes[ptr:ptr+4], "little")
+    ptr += 4
+
+    for cur_chunk in range(0, num_chunks):
+        click.echo(f"Checking for palette chunk in chunk {cur_chunk}")
+        chunk_size = int.from_bytes(aseprite_bytes[ptr:ptr+4], "little")
+        ptr += 4
+        chunk_type = int.from_bytes(aseprite_bytes[ptr:ptr+2], "little")
+        ptr += 2
+        if chunk_type != AsepriteDumper.PALETTE_CHUNK_ID:
+            ptr += chunk_size - 6
+            continue
+        click.echo(f"Found palette chunk")
+        palette_size = int.from_bytes(aseprite_bytes[ptr:ptr+4], "little")
+        ptr += 4
+        if palette_size != 16:
+            click.echo(f"Error: palette size is {palette_size}, is this a font?")
+            exit(1)
+
+        # Skip over other stuff in palette header
+        ptr += 16
+
+        for palette_idx in range(2):
+            output_fpath = (output_path / aseprite_path.name).with_suffix(
+                f".{palette_idx}.aseprite"
+            )
+            click.echo(f"Writing palette {palette_idx} as {output_fpath}")
+            if palette_idx == 0:
+                palette_data = b"".join([font_colors[i % 4] for i in range(16)])
+            else:
+                palette_data = b"".join([font_colors[i // 4] for i in range(16)])
+            aseprite_bytes[ptr:ptr+len(palette_data)] = palette_data
+            with open(output_fpath, "wb") as f:
+                f.write(aseprite_bytes)
+        return
+
 
 @cli.command()
 @click.argument(
@@ -557,10 +625,10 @@ def patch_resource(
     if hash is None:
         hash = _guess_hash(resource_path)
     resource_path = Path(resource_path)
-    if strings_path is None:
-        strings_path = Path(os.getcwd()) / "strings.yaml"
-    else:
+    if strings_path is not None:
         strings_path = Path(strings_path)
+    else:
+        should_patch_strings = False
     if textures_imhex_path:
         textures_imhex_path = Path(textures_imhex_path)
         if not textures_imhex_path.is_dir():
@@ -579,6 +647,7 @@ def patch_resource(
     if textures_imhex_path:
         tex_fds = imhex_analysis["texturefactory"]["img_sub_files"]
         for manifest_path in textures_imhex_path.glob("**/manifest.yaml"):
+            click.echo(f"Processing {manifest_path}")
             img_data = _parse_imhex_json(
                 manifest_path.with_name("texture.json")
             )
@@ -623,6 +692,7 @@ def patch_resource(
                     continue
                 fname = subfile["fname"]["string"]
                 if tex_path == fname:
+                    click.echo(f"Found subfile matching {repr(tex_path)}")
                     px_data = util.aseprite_to_pixel_data(
                         cel_chunk_data, bpp
                     )
@@ -653,6 +723,9 @@ def patch_resource(
                         resource_bytes[
                             palette_data_ptr:palette_data_ptr + len(plt_data)
                         ] = plt_data
+                    break
+            else:
+                click.echo(f"Warning: no subfile found matching {repr(tex_path)}")
 
     if should_patch_strings:
         resource_bytes = _patch_strings(resource_bytes, hash, strings_path)
@@ -1182,18 +1255,20 @@ def patch_font(font_src_path, resource_path, output_path, hash):
     source_ex = util.ImgExtractor(font_src_bytes, "sv_msg.gf0")
     string_data = util.find_strings(resource_bytes, ".gf0")
     blacklist = [
-        # Don't patch the base font
-        b"sv_msg.gf0",
         # This file appears to have smaller 16x16 images, not sure what it's
         # used for
         b"sv_msg_2.gf0"
     ]
     for sd in string_data:
+        target_encoding = BYTES_TO_CHAR_MINIMAL
         if sd["value"] in blacklist:
             continue
+        if sd["value"] == b"sv_msg.gf0":
+            target_encoding = BYTES_TO_CHAR_DEFAULT
+
         click.echo(f"Patching {resource_path} / {sd['value']}")
         target_ex = util.ImgExtractor(resource_bytes, sd["value"])
-        for token, char in BYTES_TO_CHAR_MINIMAL.items():
+        for token, char in target_encoding.items():
             if token in BYTES_TO_CHAR_SPECIAL:
                 continue
             target_token_idx = token_to_idx(token)
