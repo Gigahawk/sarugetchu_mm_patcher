@@ -12,3 +12,4 @@
     - ST05K_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - ST05S_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - ST06_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
+    - LAST_en: [Gigahawk](https://github.com/Gigahawk)
