@@ -3,6 +3,7 @@
 - Most JP subtitles generated with [Whisper](https://github.com/openai/whisper), with some manually transcribed by[Gigahawk](https://github.com/Gigahawk)
 - CN subtitles manually copied from CN release by [Gigahawk](https://github.com/Gigahawk)
 - EN subtitles:
+    - These have been more or less timecoded to match the CN subtitles, for better or worse
     - ST00K_en: [Gigahawk](https://github.com/Gigahawk)
     - ST00S_en: [Gigahawk](https://github.com/Gigahawk)
     - ST01_en: [Gigahawk](https://github.com/Gigahawk)
@@ -12,4 +13,5 @@
     - ST05K_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - ST05S_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - ST06_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
+    - ST07S_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - LAST_en: [Gigahawk](https://github.com/Gigahawk)
