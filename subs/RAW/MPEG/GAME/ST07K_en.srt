@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:03,527
+Huh? This is weird. Where are we?
+
+2
+00:00:04,983 --> 00:00:08,042
+Weren't we inside the battleship?
+
+3
+00:00:08,515 --> 00:00:11,505
+Mm, this is a Virtual Space
+
+4
+00:00:11,515 --> 00:00:14,518
+We might’ve walked into a trap.
+
+5
+00:00:14,858 --> 00:00:15,708
+Ehh!?
+
+6
+00:00:15,996 --> 00:00:19,516
+We need to find a way out fast. If we don’t, we’re in serious trouble.
+
+7
+00:00:19,527 --> 00:00:22,499
+This place is completely under his control.
+
+8
+00:00:36,515 --> 00:00:38,608
+Huh!? It's Charu!
+
+9
+00:00:40,014 --> 00:00:43,544
+Professor, they're network security programs.
+
+10
+00:00:43,549 --> 00:00:45,879
+They've been infected by a virus.
+
+11
+00:00:45,889 --> 00:00:50,020
+Charu, when was the last time you connected to the network?
+
+12
+00:00:50,094 --> 00:00:51,154
+I'm fine.
+
+13
+00:00:52,355 --> 00:00:56,940
+Maybe... I’m the only one not infected by the virus.
+
+14
+00:01:33,934 --> 00:01:37,370
+I can multiply as much as I want...
+
+15
+00:01:38,111 --> 00:01:40,104
+each one of them is the real me
+
