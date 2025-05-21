@@ -1,14 +1,14 @@
 1
 00:00:04,985 --> 00:00:07,720
-な、なんだか!脱出したのか!
+W-what!? They've escaped?
 
 2
 00:00:08,020 --> 00:00:09,039
-おのれ!
+You...!
 
 3
 00:00:10,551 --> 00:00:13,540
-くっ、この役立たずめ!
+You're useless!
 
 4
 00:00:24,064 --> 00:00:26,570
@@ -16,7 +16,7 @@
 
 5
 00:00:38,784 --> 00:00:42,108
-1艦、この戦艦から脱出するんじゃ
+This is bad! We need to get out of here!
 
 6
 00:00:44,618 --> 00:00:46,560
@@ -24,31 +24,31 @@
 
 7
 00:00:46,860 --> 00:00:50,951
-クソ、せっかくの計画が台無しだ
+Damn it... My plan has been ruined!
 
 8
 00:00:52,894 --> 00:00:54,625
-この船は爆破する
+This ship is going to explode.
 
 9
 00:00:54,628 --> 00:00:57,095
-少々時間稼ぎが必要だ
+I need to buy some time.
 
 10
 00:00:57,565 --> 00:00:59,123
-これをばらまいてやる
+I’ll spread this—
 
 11
 00:01:00,401 --> 00:01:02,065
-どうした
+Hm? What's wrong?
 
 12
 00:01:05,070 --> 00:01:05,866
-貴様
+You!
 
 13
 00:01:06,965 --> 00:01:07,576
-何をする
+What do you think you’re doing!?
 
 14
 00:01:12,115 --> 00:01:15,106
@@ -183,42 +183,66 @@ Details are not yet known
 At the scene, we have Ms. Sato Nonaka
 
 47
+00:04:02,513 --> 00:04:04,918
+The battleship seems to have crashed into the sea up ahead.
+
+48
+00:04:05,152 --> 00:04:06,350
+We have someone who witnessed the crash
+
+49
+00:04:06,360 --> 00:04:07,921
+What was the situation like?
+
+50
+00:04:08,260 --> 00:04:10,257
+Rather than attacking,
+
+51
+00:04:10,924 --> 00:04:14,260
+it looks like it self-destructed and crashed.
+
+52
+00:04:15,095 --> 00:04:16,069
+That’s how it seemed to me.
+
+53
 00:04:18,075 --> 00:04:21,552
 This footage of the battleship was taken by an eye witness
 
-48
+54
 00:04:22,109 --> 00:04:24,840
 As the ship explodes and crashes into the sea,
 
-49
+55
 00:04:24,904 --> 00:04:28,687
 a green, mist-like smoke can be seen coming from it
 
-50
+56
 00:04:31,024 --> 00:04:36,432
 Since the battleship fell, there has been a completely new lifeform vandalizing the cities
 
-51
+57
 00:04:37,156 --> 00:04:39,834
 These creatures have never been seen on the Earth before,
 
-52
+58
 00:04:39,986 --> 00:04:43,349
 and very little is known about these creatures at present
 
-53
+59
 00:04:44,478 --> 00:04:46,672
 We warn you not to go out,
 
-54
+60
 00:04:47,077 --> 00:04:49,923
 and to exercise extreme caution
 
-55
+61
 00:04:51,553 --> 00:04:53,137
 I am Fraya DeVapes,
 
-56
+62
 00:04:53,254 --> 00:04:55,428
 that was the latest news
 
