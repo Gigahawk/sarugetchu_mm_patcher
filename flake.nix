@@ -340,7 +340,6 @@
       fontconfig_file = pkgs.makeFontsConf {
         fontDirectories = [
           pkgs.freefont_ttf
-          pkgs.rounded-mgenplus
         ];
       };
     in {
