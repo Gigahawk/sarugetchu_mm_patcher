@@ -236,6 +236,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-sangyo": {
+      "locked": {
+        "lastModified": 1748040938,
+        "narHash": "sha256-++FJ33QaHhowhAx6Yx/kfK78RfIwZ6uUEnHvFzB/fiw=",
+        "owner": "Gigahawk",
+        "repo": "nixpkgs",
+        "rev": "9c937da1db9cdb9b9e397cd039678e695b7e6732",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Gigahawk",
+        "ref": "sangyo_ttf",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1722813957,
@@ -408,6 +424,7 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-clps2c": "nixpkgs-clps2c",
         "nixpkgs-ps2patchelf": "nixpkgs-ps2patchelf",
+        "nixpkgs-sangyo": "nixpkgs-sangyo",
         "poetry2nix": "poetry2nix",
         "ps2isopatcher": "ps2isopatcher",
         "ps2str": "ps2str",

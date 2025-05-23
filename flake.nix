@@ -11,8 +11,10 @@
     bgrep.url = "github:Gigahawk/bgrep-nix";
     # Waiting for merge of https://github.com/NixOS/nixpkgs/pull/339716
     nixpkgs-clps2c.url = "github:Gigahawk/nixpkgs?ref=clps2c-compiler";
-    # Waiting for merge of TODO
+    # Waiting for merge of https://github.com/NixOS/nixpkgs/pull/406377
     nixpkgs-ps2patchelf.url = "github:Gigahawk/nixpkgs?ref=ps2patchelf";
+    # Waiting for merge of https://github.com/NixOS/nixpkgs/pull/410329
+    nixpkgs-sangyo.url = "github:Gigahawk/nixpkgs?ref=sangyo_ttf";
   };
 
   outputs = {
@@ -26,6 +28,7 @@
     bgrep,
     nixpkgs-clps2c,
     nixpkgs-ps2patchelf,
+    nixpkgs-sangyo,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (system:
@@ -33,6 +36,7 @@
       pkgs = import nixpkgs { inherit system; };
       pkgs-clps2c = import nixpkgs-clps2c { inherit system; };
       pkgs-ps2patchelf = import nixpkgs-ps2patchelf { inherit system; };
+      pkgs-sangyo = import nixpkgs-sangyo { inherit system; };
       mm-jp-iso = (pkgs.requireFile {
         name = "mm.iso";
         url = "";
@@ -64,15 +68,18 @@
             if [[ -e "$meta_file" ]]; then
               subs_file="$(dirname $meta_file)/$(jq -r '.file' $meta_file)"
               style="$(jq -r ".style // \"\"" $meta_file)"
-              if [[ -z "$style" ]]; then
+              if [[ -z "$style" && "$subs_file" == *.srt ]]; then
                 style="FontName=FreeSans,FontSize=16,MarginV=8"
               fi
-              subtitle_filter="-vf subtitles=$subs_file:force_style="
+              subtitle_filter="-vf subtitles=$subs_file"
+              if [[ -n "$style" ]]; then
+                subtitle_filter+=":force_style="
+                # Hack to get single quotes in this string without breaking parsing
+                subtitle_filter+=$(echo 27 | xxd -p -r)
+                subtitle_filter+="$style"
+                subtitle_filter+=$(echo 27 | xxd -p -r)
+              fi
               echo "$subtitle_filter"
-              # Hack to get single quotes in this string without breaking parsing
-              subtitle_filter+=$(echo 27 | xxd -p -r)
-              subtitle_filter+="$style"
-              subtitle_filter+=$(echo 27 | xxd -p -r)
             else
               subtitle_filter=""
             fi
@@ -91,6 +98,7 @@
               )
             else
               ffmpeg_args+=(-c:v copy)
+              exit 0
             fi
             ffmpeg_args+=("$output")
 
@@ -340,6 +348,7 @@
       fontconfig_file = pkgs.makeFontsConf {
         fontDirectories = [
           pkgs.freefont_ttf
+          pkgs-sangyo.sangyo_ttf
         ];
       };
     in {
@@ -472,19 +481,22 @@
                 subs_file="$(dirname $meta_file)/$(jq -r '.file' $meta_file)"
                 bitrate="$(jq -r '.bitrate' $meta_file)"
                 style="$(jq -r ".style // \"\"" $meta_file)"
-                if [[ -z "$style" ]]; then
+                if [[ -z "$style" && "$subs_file" == *.srt ]]; then
                   style="FontName=FreeSans,FontSize=16,MarginV=8"
                 fi
                 base_name=$(echo ''${meta_file%.json} | sed "s#$src/##")
                 m2v="${self.packages.${system}.cutscenes-jp-demuxed}/demuxed/$base_name.m2v"
                 ss2="${self.packages.${system}.cutscenes-jp-demuxed}/demuxed/$base_name.ss2"
                 mux="''${base_name}.mux"
-                subtitle_filter="subtitles=$subs_file:force_style="
+                subtitle_filter="subtitles=$subs_file"
+                if [[ -n "$style" ]]; then
+                  subtitle_filter+=":force_style="
+                  # Hack to get single quotes in this string without breaking parsing
+                  subtitle_filter+=$(echo 27 | xxd -p -r)
+                  subtitle_filter+="$style"
+                  subtitle_filter+=$(echo 27 | xxd -p -r)
+                fi
                 echo "$subtitle_filter"
-                # Hack to get single quotes in this string without breaking parsing
-                subtitle_filter+=$(echo 27 | xxd -p -r)
-                subtitle_filter+="$style"
-                subtitle_filter+=$(echo 27 | xxd -p -r)
                 m2v_subbed="''${base_name}-sub.m2v"
                 pss_subbed="''${base_name}-sub.PSS"
                 mkdir -p $(dirname "$base_name")
