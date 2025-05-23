@@ -1,4 +1,5 @@
 {
-    "file": "ST11K_en.srt",
+    "file": "ST11K_en.ass",
+    "style": "FontName=FreeSans,FontSize=26.703125,MarginV=13.975,BorderStyle=1,Outline=1.7,Shadow=0",
     "bitrate": "4.01904296875M"
 }
