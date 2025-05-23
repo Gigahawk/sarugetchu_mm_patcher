@@ -83,66 +83,54 @@ Nonaka-san?
 Nonaka-san?
 
 22
-00:01:04,200 --> 00:01:05,840
-はい
+00:01:05,572 --> 00:01:08,572
+Yes, we're currently flying over the battleship crash site
 
 23
-00:01:05,840 --> 00:01:08,400
-戦艦の墜落現場上空に来ています
+00:01:08,582 --> 00:01:11,585
+It's about 5km from the coast
 
 24
-00:01:08,400 --> 00:01:11,960
-海岸から5キロぐらいの地点でしょうか
+00:01:11,979 --> 00:01:16,079
+The battleship didn't sink, it's currently floating on the ocean surface
 
 25
-00:01:11,960 --> 00:01:16,040
-戦艦は海に沈むことなく海面に漂っていまして
+00:01:16,089 --> 00:01:18,579
+You can see broken parts scattered around
 
 26
-00:01:16,040 --> 00:01:18,600
-所々に壊れた跡が見られます
+00:01:19,061 --> 00:01:23,981
+It looks like a green gas or liquid is leaking from it
 
 27
-00:01:18,600 --> 00:01:23,680
-そこから緑色の液体か気体のようなものが漏れ出していまして
+00:01:23,991 --> 00:01:26,083
+That green substance might be
 
 28
-00:01:23,680 --> 00:01:26,060
-どうやらあの緑の物体が
+00:01:26,093 --> 00:01:29,086
+the cause of the mysterious creature outbreak
 
 29
-00:01:26,060 --> 00:01:27,680
-謎の生物発生の現況であると考えています
+00:01:29,095 --> 00:01:32,756
+It's too dangerous to get any closer,
 
 30
-00:01:27,740 --> 00:01:29,360
-ではないかと思われます
+00:01:32,767 --> 00:01:35,936
+but it looks like a giant creature is moving around inside
 
 31
-00:01:29,360 --> 00:01:32,980
-危険ですのでこれ以上戦艦に近づくことはできないんですが
-
-32
-00:01:32,980 --> 00:01:36,200
-まるで巨大な生物がごめん出ています
-
-33
-00:01:36,200 --> 00:01:38,367
-海戦に問題が生じているようです
-
-34
 00:01:41,238 --> 00:01:44,091
 Well it seems we're having some technical difficulties
 
-35
+32
 00:01:44,531 --> 00:01:47,118
 We will get back to you later with more news
 
-36
+33
 00:01:48,091 --> 00:01:50,019
 I am Fraya DeVapes,
 
-37
+34
 00:01:50,215 --> 00:01:52,504
 that was the latest news
 
