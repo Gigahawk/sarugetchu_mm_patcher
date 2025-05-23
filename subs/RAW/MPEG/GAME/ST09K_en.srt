@@ -147,114 +147,126 @@ aside from the Anti-Monkeys World Defense
 Here is a report on one of the groups
 
 38
-00:03:13,824 --> 00:03:17,685
-These villagers are training to capture monkeys using homemade nets
+00:03:13,824 --> 00:03:16,234
+These villagers are training to capture monkeys
 
 39
+00:03:16,258 --> 00:03:17,685
+using homemade nets
+
+40
 00:03:19,344 --> 00:03:23,471
 We're not worried about the monkeys,
 
-40
+41
 00:03:23,725 --> 00:03:27,858
 we need to teach them a lesson
 
-41
+42
 00:03:29,527 --> 00:03:32,918
 Meanwhile, these men are making a monkey trap
 
-42
+43
 00:03:33,571 --> 00:03:35,313
 This is my invention.
 
-43
+44
 00:03:35,337 --> 00:03:37,461
 It is a trap for catching monkeys.
 
-44
+45
 00:03:37,485 --> 00:03:40,106
 After placing the banana here...
 
-45
+46
 00:03:45,840 --> 00:03:47,324
 We wish the best for them
 
-46
+47
 00:03:48,375 --> 00:03:49,947
 Next, on the news
 
-47
+48
 00:03:50,434 --> 00:03:54,134
 One of the huge battleships in Japan has crashed into the sea
 
-48
+49
 00:03:54,746 --> 00:03:56,454
 Details are not yet known
 
-49
-00:03:57,175 --> 00:03:59,940
-At the scene, we have Ms. Sato Nonaka
-
 50
+00:03:57,175 --> 00:03:59,940
+At the scene, we have Mis ato Nonaka
+
+51
 00:04:02,513 --> 00:04:04,918
 The battleship seems to have crashed into the sea up ahead.
 
-51
+52
 00:04:05,152 --> 00:04:06,350
 We have someone who witnessed the crash
 
-52
+53
 00:04:06,360 --> 00:04:07,921
 What was the situation like?
 
-53
+54
 00:04:08,260 --> 00:04:10,257
 Rather than attacking,
 
-54
+55
 00:04:10,924 --> 00:04:14,260
 it looks like it self-destructed and crashed.
 
-55
+56
 00:04:15,095 --> 00:04:16,069
 That’s how it seemed to me.
 
-56
+57
 00:04:18,075 --> 00:04:21,552
 This footage of the battleship was taken by an eye witness
 
-57
+58
 00:04:22,109 --> 00:04:24,840
 As the ship explodes and crashes into the sea,
 
-58
+59
 00:04:24,904 --> 00:04:28,687
 a green, mist-like smoke can be seen coming from it
 
-59
-00:04:31,024 --> 00:04:36,432
-Since the battleship fell, there has been a completely new lifeform vandalizing the cities
-
 60
+00:04:31,024 --> 00:04:32,278
+Since the battleship fell,
+
+61
+00:04:32,302 --> 00:04:34,962
+there has been a completely new lifeform
+
+62
+00:04:34,987 --> 00:04:36,432
+vandalizing the cities
+
+63
 00:04:37,156 --> 00:04:39,834
 These creatures have never been seen on the Earth before,
 
-61
+64
 00:04:39,986 --> 00:04:43,349
 and very little is known about these creatures at present
 
-62
+65
 00:04:44,478 --> 00:04:46,672
 We warn you not to go out,
 
-63
+66
 00:04:47,077 --> 00:04:49,923
 and to exercise extreme caution
 
-64
+67
 00:04:51,553 --> 00:04:53,137
 I am Fraya DeVapes,
 
-65
+68
 00:04:53,254 --> 00:04:55,428
 that was the latest news
 
