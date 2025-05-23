@@ -31,234 +31,250 @@ we have as yet to discover how
 and by whom the base has been destroyed.
 
 9
-00:00:34,234 --> 00:00:37,571
-The Anti-Monkeys World Defence has not a reached a conclusion
+00:00:34,234 --> 00:00:35,964
+The Anti-Monkeys World Defence
 
 10
-00:00:37,595 --> 00:00:39,406
-either as to what has happened there,
+00:00:35,988 --> 00:00:37,874
+has not a reached a conclusion either
 
 11
-00:00:39,430 --> 00:00:42,109
-and is currently investigating the situation.
+00:00:37,899 --> 00:00:39,358
+as to what has happened there,
 
 12
-00:00:52,753 --> 00:00:55,644
-In other news, the monkeys are continuing to build
+00:00:39,527 --> 00:00:42,109
+and is currently investigating the situation.
 
 13
-00:00:55,668 --> 00:00:57,725
-banana fields for their food supply.
+00:00:52,739 --> 00:00:55,519
+In other news, the monkeys are continuing to build
 
 14
+00:00:55,544 --> 00:00:57,515
+banana fields for their food supply.
+
+15
 00:00:58,103 --> 00:01:02,028
 As you can see, more and more areas are being transformed
 
-15
+16
 00:01:02,052 --> 00:01:03,405
 into banana fields.
 
-16
+17
 00:01:03,916 --> 00:01:07,670
 In this way, the monkeys are preparing for a future increase
 
-17
+18
 00:01:07,694 --> 00:01:08,630
 increase in their numbers.
 
-18
+19
 00:01:09,910 --> 00:01:12,748
 There seems to be nothing we can do about it.
 
-19
+20
 00:01:13,928 --> 00:01:15,821
 We now have a live report from Moscow.
 
-20
+21
 00:01:16,148 --> 00:01:16,988
 Migel
 
-21
-00:01:21,588 --> 00:01:23,593
+22
+00:01:20,510 --> 00:01:22,037
 This is Red Square in Moscow.
 
-22
-00:01:24,018 --> 00:01:26,597
+23
+00:01:22,134 --> 00:01:24,052
 Behind me there are monkeys planting
 
-23
-00:01:26,597 --> 00:01:29,096
+24
+00:01:24,096 --> 00:01:25,953
 bananas all over the square
 
-24
-00:01:29,096 --> 00:01:31,603
+25
+00:01:26,126 --> 00:01:28,014
 A total of 600 banana trees have been planted so far.
 
-25
-00:01:33,716 --> 00:01:35,677
-Are you okay, Migel? Migel?
-
 26
+00:01:33,694 --> 00:01:35,600
+Are you okay-Migel? Migel?
+
+27
 00:01:40,430 --> 00:01:43,270
 We move on now to a live report on from the front line
 
-27
+28
 00:01:43,294 --> 00:01:46,211
 protected by the Anti-Monkeys World Defense.
 
-28
+29
 00:01:49,119 --> 00:01:50,123
 Uh, right now we are on
 
-29
+30
 00:01:50,124 --> 00:01:52,123
 the battlefield at the Port of Yokohama.
 
-30
+31
 00:01:52,124 --> 00:01:54,038
 This area has been contested by the monkeys,
 
-31
+32
 00:01:54,039 --> 00:01:56,126
 and a fierce gunfight has broken out.
 
-32
-00:01:56,627 --> 00:01:58,792
+33
+00:01:56,602 --> 00:01:58,767
 Captain, captain, how is the battle going?
 
-33
-00:01:58,792 --> 00:02:00,467
-Well, even though they're just monkeys, they've been hard to deal with
-
 34
+00:01:58,792 --> 00:01:59,654
+Well, even though they're just monkeys,
+
+35
+00:01:59,679 --> 00:02:00,467
+they've been hard to deal with
+
+36
 00:02:00,468 --> 00:02:02,132
 We've been constantly pushing only to retreat later.
 
-35
+37
 00:02:03,055 --> 00:02:04,638
 Hurry! Take cover!
 
-36
+38
 00:02:06,797 --> 00:02:08,141
 It's dangerous! Get down! Get Down!
 
-37
+39
 00:02:11,645 --> 00:02:13,145
 Is this...a banana?
 
-38
+40
 00:02:13,170 --> 00:02:16,150
 Idiot! Throw it away! Throw it away now!
 
-39
+41
 00:02:16,150 --> 00:02:17,311
 That's a banana grenade!
 
-40
+42
 00:02:19,147 --> 00:02:22,156
 …they're just monkeys, but so hard to deal with…
 
-41
+43
 00:02:22,156 --> 00:02:24,993
 Captain! Are you okay?! Stay with me!
 
-42
+44
 00:02:25,017 --> 00:02:26,259
 Are you okay captain?!
 
-43
+45
 00:02:26,990 --> 00:02:28,981
 Nonaka-san? Nonaka-san?
 
-44
+46
 00:02:31,533 --> 00:02:34,857
 It appears to be a critical situation at the battlefront.
 
-45
+47
 00:02:37,039 --> 00:02:38,009
 This just in.
 
-46
+48
 00:02:40,577 --> 00:02:43,548
 The Anti-Monkeys World Defense has commented
 
-47
+49
 00:02:44,024 --> 00:02:47,958
 that they are engaged in a severe contact situation with the
 
-48
+50
 00:02:47,982 --> 00:02:52,599
 monkey's battleships over the cities of Los Angeles, Berlin,
 
-49
+51
 00:02:52,623 --> 00:02:53,865
 and Paris.
 
-50
+52
 00:02:55,310 --> 00:02:58,097
 The image you're seeing right now is from Los Angeles.
 
-51
+53
 00:02:59,057 --> 00:03:01,057
 A local who witnessed the battle says that
 
-52
-00:03:01,081 --> 00:03:05,243
-the attack by the humans seemed to have no effect on the monkeys.
-
-53
-00:03:07,057 --> 00:03:11,108
-From what I see, there's no way with all the banana, banana, banana.
-
 54
+00:03:01,081 --> 00:03:02,585
+the attack by the humans
+
+55
+00:03:02,609 --> 00:03:05,243
+seemed to have no effect on the monkeys.
+
+56
+00:03:07,092 --> 00:03:08,113
+From what I see,
+
+57
+00:03:08,137 --> 00:03:11,113
+there's no way with all the banana, banana, banana.
+
+58
 00:03:11,988 --> 00:03:14,601
 Definitely, the monkeys will win the battle.
 
-55
+59
 00:03:16,055 --> 00:03:17,414
 Back to Japan.
 
-56
+60
 00:03:18,468 --> 00:03:21,654
 Around the same time that the base at the industrial complex
 
-57
+61
 00:03:21,678 --> 00:03:25,096
 was destroyed, a huge new battleship appeared
 
-58
+62
 00:03:25,121 --> 00:03:26,707
 above the nearby stadium.
 
-59
+63
 00:03:27,694 --> 00:03:30,981
 This battleship is believed to be the one of which the monkeys'
 
-60
+64
 00:03:31,005 --> 00:03:33,981
 leader Specter was when he first arrived.
 
-61
+65
 00:03:34,981 --> 00:03:39,248
 Some specialists say that the battleship is providing resources
 
-62
+66
 00:03:39,272 --> 00:03:42,533
 to the monkeys in order to construct another base.
 
-63
+67
 00:03:44,533 --> 00:03:47,706
 As this battleship has not been seen since the initial attack,
 
-64
+68
 00:03:47,730 --> 00:03:51,798
 it's reappearance is causing tension to mount in Japan.
 
-65
+69
 00:03:53,172 --> 00:03:54,846
 I am Fraya DeVapes,
 
-66
+70
 00:03:54,873 --> 00:03:57,005
 that was the latest news.
 

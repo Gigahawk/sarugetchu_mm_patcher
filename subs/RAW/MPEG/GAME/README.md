@@ -8,6 +8,7 @@
     - ST00S_en: [Gigahawk](https://github.com/Gigahawk)
     - ST01_en: [Gigahawk](https://github.com/Gigahawk)
     - ST02_en: [Gigahawk](https://github.com/Gigahawk)
+        - I'm pretty sure there's an extra line spoken by Migel right before she is overrun by monkeys, but I don't speak Russian so hopefully it's not that interesting
     - ST04K_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - ST04S_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - ST05K_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
