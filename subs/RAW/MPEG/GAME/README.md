@@ -17,4 +17,5 @@
     - ST07S_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - ST09K_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - ST09S_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
+    - ST10K_en: Original translation by [Hien](https://www.fiverr.com/hiens_), edited by [Gigahawk](https://github.com/Gigahawk)
     - LAST_en: [Gigahawk](https://github.com/Gigahawk)
