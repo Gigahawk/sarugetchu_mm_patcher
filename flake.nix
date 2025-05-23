@@ -54,18 +54,47 @@
         wait
       '';
       cutscenes-mp4-buildPhase = cutscenes-demuxed: ''
+        export FONTCONFIG_FILE=${fontconfig_file}
+
         find ${cutscenes-demuxed} -name '*.m2v' -type f | \
           xargs -P $NIX_BUILD_CORES -I {} bash -c '
             m2v="{}"
             base_name="''${m2v%.m2v}"
+            meta_file="$src/''${base_name#${cutscenes-demuxed}/demuxed/}.json"
+            if [[ -e "$meta_file" ]]; then
+              subs_file="$(dirname $meta_file)/$(jq -r '.file' $meta_file)"
+              style="$(jq -r ".style // \"\"" $meta_file)"
+              if [[ -z "$style" ]]; then
+                style="FontName=FreeSans,FontSize=16,MarginV=8"
+              fi
+              subtitle_filter="-vf subtitles=$subs_file:force_style="
+              echo "$subtitle_filter"
+              # Hack to get single quotes in this string without breaking parsing
+              subtitle_filter+=$(echo 27 | xxd -p -r)
+              subtitle_filter+="$style"
+              subtitle_filter+=$(echo 27 | xxd -p -r)
+            else
+              subtitle_filter=""
+            fi
             ss2="''${base_name}.ss2"
             output="''${base_name#${cutscenes-demuxed}/demuxed/}.mp4"
             mkdir -p $(dirname "$output")
-            ffmpeg \
-              -i "$m2v" \
-              -i "$ss2" \
-              -c:v copy -c:a aac \
-              "$output"
+            ffmpeg_args=(
+              -i "$m2v"
+              -i "$ss2"
+              -c:a aac
+            )
+            if [[ -n "$subtitle_filter" ]]; then
+              ffmpeg_args+=(
+                -c:v libx265 -crf 18
+                $subtitle_filter
+              )
+            else
+              ffmpeg_args+=(-c:v copy)
+            fi
+            ffmpeg_args+=("$output")
+
+            ffmpeg "''${ffmpeg_args[@]}"
         '
         wait
       '';
@@ -394,11 +423,15 @@
         stdenv.mkDerivation rec {
           pname = "mm-jp-cutscenes-mp4";
           inherit version;
-          src = null;
+          src = ./subs;
           dontUnpack = true;
 
           nativeBuildInputs = [
+              pkgs.jq
               pkgs.ffmpeg
+
+              # For xxd single quote hack
+              pkgs.unixtools.xxd
           ];
 
           buildPhase = cutscenes-mp4-buildPhase self.packages.${system}.cutscenes-jp-demuxed;
@@ -439,6 +472,10 @@
                 meta_file="{}"
                 subs_file="$(dirname $meta_file)/$(jq -r '.file' $meta_file)"
                 bitrate="$(jq -r '.bitrate' $meta_file)"
+                style="$(jq -r ".style // \"\"" $meta_file)"
+                if [[ -z "$style" ]]; then
+                  style="FontName=FreeSans,FontSize=16,MarginV=8"
+                fi
                 base_name=$(echo ''${meta_file%.json} | sed "s#$src/##")
                 m2v="${self.packages.${system}.cutscenes-jp-demuxed}/demuxed/$base_name.m2v"
                 ss2="${self.packages.${system}.cutscenes-jp-demuxed}/demuxed/$base_name.ss2"
@@ -447,7 +484,7 @@
                 echo "$subtitle_filter"
                 # Hack to get single quotes in this string without breaking parsing
                 subtitle_filter+=$(echo 27 | xxd -p -r)
-                subtitle_filter+="FontName=FreeSans,FontSize=20,MarginV=25"
+                subtitle_filter+="$style"
                 subtitle_filter+=$(echo 27 | xxd -p -r)
                 m2v_subbed="''${base_name}-sub.m2v"
                 pss_subbed="''${base_name}-sub.PSS"
