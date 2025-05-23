@@ -1387,9 +1387,10 @@ def encode_string(hash, string):
         click.echo(s.hex(sep=" "))
 
 @cli.command()
-@click.argument(
-    "name",
-    type=str,
+@click.option(
+    "-m", "--meta-path",
+    default=Path("subs"),
+    type=click.Path(),
 )
 @click.option(
     "-l", "--low",
@@ -1401,28 +1402,12 @@ def encode_string(hash, string):
     default=10.0,
     type=float,
 )
-def tune_cutscene_bitrate(name, low, high):
-    def calc_mid():
-        return low + (high - low) / 2
-    mid  = calc_mid()
-    click.echo(f"Tuning cutscene bitrate for {name}")
-    subs_path = Path("subs/RAW/MPEG/GAME")
-    target_json_path = subs_path / f"{name}.json"
-    for path in subs_path.glob("*.json"):
-        if path.name == f"{name}.json":
-            continue
-        click.echo(f"Disabling transcoding of {path.name} for speed")
-        path.rename(path.with_suffix(".bak"))
-    while True:
-        click.echo(
-            f"Searching between {low} and {high}M, currently trying {mid}M"
-        )
-        click.echo("Setting bitrate in JSON")
-        with open(target_json_path, "r") as f:
-            data = json.load(f)
-        data["bitrate"] = f"{mid}M"
-        with open(target_json_path, "w") as f:
-            json.dump(data, f, indent=4)
+def tune_cutscene_bitrate(meta_path, low, high):
+    tol = 0.0001
+    analysis_re = re.compile(r"([A-Za-z0-9\.\/]+)\: orig is \d+, patched is \d+, diff: ([-\d]+)")
+    def calc_mid(_low, _high):
+        return _low + (_high - _low) / 2
+    def get_size_report() -> dict[Path, int]:
         click.echo("Running new build")
         cmd = [
             "nom", "build", ".#cutscenes-size-diff"
@@ -1431,26 +1416,73 @@ def tune_cutscene_bitrate(name, low, high):
         click.echo("Parsing size report")
         with open("result/report.txt", "r") as f:
             report = f.readlines()
-        optimal = False
+        diffs = {}
         for line in report:
-            if name in line:
-                diff = int(line.split("diff: ")[1])
-                click.echo(f"Diff: {diff}")
+            try:
+                pss_path, diff = analysis_re.match(line).groups()
+            except AttributeError:
+                click.echo("Couldn't parse line")
+                click.echo(repr(line))
+                continue
+            pss_path = Path(pss_path)
+            diff = int(diff)
+            diffs[pss_path] = diff
+        return diffs
+    def pss_to_json_path(pss_path: Path) -> Path:
+        return meta_path / str(pss_path.with_suffix(".json")).lstrip("/")
+    def update_meta(pss_path: Path, bitrate=None) -> float:
+        json_path = pss_to_json_path(pss_path)
+        with open(json_path, "r") as f:
+            data = json.load(f)
+        last_bitrate = float(data["bitrate"][:-1])
+        if bitrate:
+            data["bitrate"] = f"{bitrate}M"
+            with open(json_path, "w") as f:
+                json.dump(data, f, indent=4)
+        return last_bitrate
+    try:
+        size_report = get_size_report()
+
+        search_range = {
+            k: (low, update_meta(k), high) for k in size_report.keys()
+        }
+        while len(search_range) and any(v is not None for v in search_range.values()):
+            for path, diff in size_report.items():
+                if search_range[path] is None:
+                    continue
+                _low, _mid, _high = search_range[path]
+                json_path = pss_to_json_path(path)
+                if diff == 0:
+                    click.echo(f"Found optimal bitrate {_mid} for {path}")
+                    search_range[path] = None
+                    click.echo(f"Disabling encoding of {json_path}")
+                    json_path.rename(json_path.with_suffix(".bak"))
+                    continue
+                elif abs(_mid - high) < tol or abs(_mid - low) < tol:
+                    click.echo(f"Warning: bitrate for {path} is set to {_mid} but there is still a diff of {diff}") 
+                    click.echo(f"Disabling encoding of {json_path}")
+                    search_range[path] = None
+                    json_path.rename(json_path.with_suffix(".bak"))
+                    continue
+
+
                 if diff > 0:
-                    low = mid
-                    mid = calc_mid()
-                elif diff < 0:
-                    high = mid
-                    mid = calc_mid()
+                    _low = _mid
+                    _mid = calc_mid(_low, _high)
                 else:
-                    click.echo(f"Found optimal bitrate {mid}M")
-                    optimal = True
-                    break
-        if optimal:
-            break
-    for path in subs_path.glob("*.bak"):
-        click.echo(f"Reenabling transcoding of {path.name}")
-        path.rename(path.with_suffix(".json"))
+                    _high = _mid
+                    _mid = calc_mid(_low, _high)
+                search_range[path] = (_low, _mid, _high)
+                click.echo(f"Tuning cutscene bitrate for {path} (current diff is {diff})")
+                click.echo(f"Searching between {_low} and {_high}M, currently trying {_mid}M")
+                update_meta(path, bitrate=_mid)
+            size_report = get_size_report()
+    finally:
+        click.echo("Restoring disabled json files")
+        for path in meta_path.glob("**/*.bak"):
+            click.echo(f"Reenabling transcoding of {path.name}")
+            path.rename(path.with_suffix(".json"))
+
 
 if __name__ == "__main__":
     cli()
