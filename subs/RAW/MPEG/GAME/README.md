@@ -1,10 +1,13 @@
 # Credits
 
-- Most JP subtitles generated with [Whisper](https://github.com/openai/whisper), with some manually transcribed by[Gigahawk](https://github.com/Gigahawk)
+- Most JP subtitles generated with [Whisper](https://github.com/openai/whisper), with some manually transcribed by [Gigahawk](https://github.com/Gigahawk)
 - CN subtitles manually copied from CN release by [Gigahawk](https://github.com/Gigahawk)
 - EN subtitles:
     - Colosseum mode
         - CO00_en: [Gigahawk](https://github.com/Gigahawk)
+        - CO01_en: [Gigahawk](https://github.com/Gigahawk)
+        - CO02_en: [Gigahawk](https://github.com/Gigahawk)
+        - CO03_en: [Gigahawk](https://github.com/Gigahawk)
     - Story mode
         - These have been more or less timecoded to match the CN subtitles, for better or worse
         - ST00K_en: [Gigahawk](https://github.com/Gigahawk)

@@ -1,0 +1,18 @@
+[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: 
+ScriptType: v4.00+
+PlayDepth: 0
+ScaledBorderAndShadow: Yes
+PlayResX: 640
+PlayResY: 480
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: CharDesc,Sangyo,30,&H0008D0D0,&H0000FFFF,&H00000000,&H7F000000,-1,-1,0,0,100,100,0,0,4,3,0,1,73,10,118,1
+Style: CharName,Sangyo,70,&H00000000,&H0000FFFF,&H00E2E2E2,&H7F000000,-1,-1,0,0,200,100,1,0,4,3,0,1,130,10,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:06.34,0:00:11.06,CharDesc,,0,0,0,,Legendary Master Monkey
+Dialogue: 0,0:00:07.75,0:00:11.09,CharName,,0,0,0,,Legend ‎
