@@ -1,0 +1,41 @@
+[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: 
+ScriptType: v4.00+
+PlayDepth: 0
+ScaledBorderAndShadow: Yes
+PlayResX: 640
+PlayResY: 480
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,33.3,&H00FFFFFF,&H0000FFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,1,2,10,10,10,1
+Style: TopLeft,FreeSans,17,&H00FFFFFF,&H0000FFFF,&H00000000,&H7F000000,-1,-1,0,0,100,100,0,0,4,2,1,7,35,10,20,1
+Style: CharDesc,Sangyo,30,&H0000E9FF,&H0000FFFF,&H00000000,&H7F000000,-1,-1,0,0,100,100,0,0,4,3,0,1,90,10,110,1
+Style: CharName,Sangyo,58,&H00000000,&H0000FFFF,&H002AF416,&H7F000000,-1,-1,0,0,142,100,1,0,4,3,0,1,230,10,45,1
+Style: CharDescNatsumi,Sangyo,30,&H0000E9FF,&H0000FFFF,&H00000000,&H7F000000,-1,-1,0,0,140,100,0,0,4,3,0,1,90,10,110,1
+Style: CharNameProfessor,Sangyo,58,&H00000000,&H0000FFFF,&H002AF416,&H7F000000,-1,-1,0,0,105,100,0,0,4,3,0,1,230,10,45,1
+Style: CharDescCharu,Sangyo,30,&H0000E9FF,&H0000FFFF,&H00000000,&H7F000000,-1,-1,0,0,125,100,0,0,4,3,0,1,90,10,110,1
+Style: CharNameCharu,Sangyo,58,&H00000000,&H0000FFFF,&H002AF416,&H7F000000,-1,-1,0,0,170,100,0,0,4,3,0,1,230,10,45,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:02.60,0:02:04.22,TopLeft,,0,0,0,,At last! Today, a champion will be\Ncrowned! The tournament heats up\Nas the players clash!
+Dialogue: 0,0:01:07.20,0:01:12.10,CharDesc,,0,0,0,,Scorching Fireball Boy
+Dialogue: 0,0:01:08.23,0:01:12.09,CharName,,0,0,0,,Kakeru
+Dialogue: 0,0:01:12.57,0:01:17.24,CharDescNatsumi,,0,0,0,,Dangerous Twin Tails
+Dialogue: 0,0:01:13.58,0:01:17.22,CharName,,0,0,0,,Natsumi
+Dialogue: 0,0:01:17.56,0:01:21.57,CharDescNatsumi,,0,0,0,,Fearsome R&D
+Dialogue: 0,0:01:18.62,0:01:21.55,CharNameProfessor,,0,0,0,,Professor
+Dialogue: 0,0:01:21.92,0:01:26.60,CharDesc,,0,0,0,,Hi-Tech Olympia’s Original Champion
+Dialogue: 0,0:01:22.91,0:01:26.59,CharName,,0,0,0,,Haruka
+Dialogue: 0,0:01:27.86,0:01:32.22,CharDescCharu,,0,0,0,,Weaponised Digital Girl
+Dialogue: 0,0:01:28.89,0:01:32.19,CharNameCharu,,0,0,0,,Charu
+Dialogue: 0,0:01:32.68,0:01:37.32,CharDescCharu,,0,0,0,,Supreme Ape Ruler
+Dialogue: 0,0:01:33.93,0:01:37.30,CharNameCharu,,0,0,0,,Specter ‎ ‎
+Dialogue: 0,0:01:38.04,0:01:43.02,CharDescCharu,,0,0,0,,A Devil in Underpants
+Dialogue: 0,0:01:39.23,0:01:43.00,CharName,,0,0,0,,Piposaru ‎
+Dialogue: 0,0:01:43.91,0:01:48.59,CharDesc,,0,0,0,,Rogue Apes from the Dark Side
+Dialogue: 0,0:01:45.17,0:01:48.57,CharNameCharu,,0,0,0,,Pipotron‎ ‎
+Dialogue: 0,0:01:49.44,0:01:54.30,CharDescNatsumi,,0,0,0,,Hyper Beast   ‎  ‎
+Dialogue: 0,0:01:50.90,0:01:54.29,CharNameCharu,,0,0,0,,{\pos(204,436)}Pipotron G

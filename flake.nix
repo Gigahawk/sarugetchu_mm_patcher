@@ -348,6 +348,7 @@
       fontconfig_file = pkgs.makeFontsConf {
         fontDirectories = [
           pkgs.freefont_ttf
+          pkgs.comic-relief
           pkgs-sangyo.sangyo_ttf
         ];
       };

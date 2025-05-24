@@ -5,6 +5,8 @@
 - EN subtitles:
     - Intro videos
         - AD00_en: [Gigahawk](https://github.com/Gigahawk)
+        - AD01_en: [Gigahawk](https://github.com/Gigahawk)
+        - AD02_en: [Gigahawk](https://github.com/Gigahawk)
     - Colosseum mode
         - CO00_en: [Gigahawk](https://github.com/Gigahawk)
         - CO01_en: [Gigahawk](https://github.com/Gigahawk)

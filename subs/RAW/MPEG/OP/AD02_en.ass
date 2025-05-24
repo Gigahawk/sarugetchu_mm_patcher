@@ -1,0 +1,37 @@
+﻿[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: 
+ScriptType: v4.00+
+PlayDepth: 0
+ScaledBorderAndShadow: Yes
+PlayResX: 640
+PlayResY: 480
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,FreeSans,26.7,&H00FFFFFF,&H0000FFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.7,0.0,2,10,10,14,1
+Style: Toro,Comic Relief,40,&H00212542,&H0000FFFF,&H00000000,&H00C1F7FF,-1,0,0,0,100,100,0,0,4,0.0,0.0,7,85,10,45,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:08.96,0:00:14.05,Default,,0,0,0,,Mhm, I see...Is that so? That's bad news
+Dialogue: 0,0:00:14.05,0:00:17.03,Default,,0,0,0,,Got it, I'll see what I can do
+Dialogue: 0,0:00:18.56,0:00:20.55,Default,,0,0,0,,Professor, what happened?
+Dialogue: 0,0:00:20.96,0:00:26.06,Default,,0,0,0,,Ah, Kakeru, right now monkeys are rampaging all over,
+Dialogue: 0,0:00:26.08,0:00:29.09,Default,,0,0,0,,it seems like they're trying to take over the world
+Dialogue: 0,0:00:29.98,0:00:32.97,Default,,0,0,0,,Yea, I saw on the news that some towns have
+Dialogue: 0,0:00:32.98,0:00:35.05,Default,,0,0,0,,already been completely taken over by the monkeys
+Dialogue: 0,0:00:35.21,0:00:37.67,Default,,0,0,0,,We're fighting back against the monkeys,
+Dialogue: 0,0:00:37.68,0:00:40.17,Default,,0,0,0,,but Piposarus aren't like regular monkeys,
+Dialogue: 0,0:00:40.18,0:00:42.72,Default,,0,0,0,,we're the only ones who can catch them
+Dialogue: 0,0:00:42.96,0:00:45.79,Default,,0,0,0,,Yea, they might look dumb, but they're
+Dialogue: 0,0:00:45.82,0:00:47.86,Default,,0,0,0,,quick and unexpectedly sharp too
+Dialogue: 0,0:00:48.76,0:00:52.56,Default,,0,0,0,,I agree. Also, I just got a call for help,
+Dialogue: 0,0:00:52.80,0:00:56.06,Default,,0,0,0,,Please head into town and rescue your
+Dialogue: 0,0:00:56.07,0:01:01.41,Default,,0,0,0,,friends trapped by the attacking monkeys
+Dialogue: 0,0:01:02.17,0:01:05.40,Default,,0,0,0,,That's bad, we should hurry and go save them!
+Dialogue: 0,0:01:06.25,0:01:07.51,Default,,0,0,0,,Who are we rescuing?
+Dialogue: 0,0:01:08.28,0:01:11.07,Default,,0,0,0,,Ah, well actually it's...
+Dialogue: 0,0:01:11.08,0:01:14.09,Default,,0,0,0,,Toro and friends from {\i1}Doko Demo Issyo{\i0}
+Dialogue: 0,0:01:15.16,0:01:16.08,Default,,0,0,0,,
+Dialogue: 0,0:01:31.83,0:01:37.16,Toro,,0,0,0,,City life’s pretty\Nrough, nya~!
