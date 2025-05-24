@@ -476,7 +476,7 @@
           buildPhase = ''
             export FONTCONFIG_FILE=${fontconfig_file}
 
-            find $src -type f -name '*.json' | \
+            find "$src" \( -type f -o -xtype f \) -name '*.json' | \
               xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 meta_file="{}"
                 subs_file="$(dirname $meta_file)/$(jq -r '.file' $meta_file)"
