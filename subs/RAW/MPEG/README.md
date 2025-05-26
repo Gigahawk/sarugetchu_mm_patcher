@@ -1,3 +1,9 @@
+# Fonts used
+
+- [FreeSans](https://www.gnu.org/software/freefont/)
+- [Sangyo](https://ggbot.itch.io/sangyo-font)
+- [Comic Relief](https://fontlibrary.org/en/font/comic-relief)
+
 # Credits
 
 - Most JP subtitles generated with [Whisper](https://github.com/openai/whisper), with some manually transcribed by [Gigahawk](https://github.com/Gigahawk)
