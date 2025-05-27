@@ -1468,6 +1468,74 @@ struct idk_FUN_0062a650 {
         le u32 idk9;
 };
 
+struct idk_FUN_006268c0 {
+    // idk?FUN_006268c0
+        le u32 idk1_len;
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT called in a loop
+            MaybeString idk1_strings[idk1_len];
+};
+
+struct idk_FUN_00623630 {
+    // idk?FUN_00623630
+        le u8 idk1;
+        // idk?FUN_006268c0
+            idk_FUN_006268c0 idk2;
+};
+
+struct idk_FUN_006236a0 {
+    // idk?FUN_006236a0
+        le u8 idk1;
+        le u32 idk2_len;
+        // idk?FUN_00623630 called in a loop
+            idk_FUN_00623630 idk2_data[idk2_len];
+
+        // idk?FUN_005d4170
+            idk_FUN_005d4170 idk3;
+};
+
+struct idk_FUN_006238c0 {
+    // idk?FUN_006238c0
+        le u32 idk1_len;
+        // idk?FUN_006236a0 called in a loop
+            idk_FUN_006236a0 idk1_data[idk1_len];
+};
+
+struct idk_FUN_00623b30 {
+    // idk?FUN_00623b30
+        le u32 idk1_len;
+        // idk?FUN_006238c0 called in a loop
+            idk_FUN_006238c0 idk1_data[idk1_len];
+
+
+};
+
+struct idk_FUN_00623d48 {
+    // idk?FUN_00623d48
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+        le u32 idk1_len;
+        // idk?FUN_00623b30 called in a loop
+            idk_FUN_00623b30 idk1_data[idk1_len];
+};
+
+
+struct idk_FUN_006241b8 {
+    // idk?FUN_006241b8
+        le u8 idk1;
+        le u8 idk2;
+        le u16 idk3;
+};
+
+struct idk_FUN_00624248 {
+    // idk?FUN_00624248
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+        le u32 idk1_len;
+        // idk?FUN_006241b8 called in a loop
+            idk_FUN_006241b8 idk1_data[idk1_len];
+        idk_FUN_006268c0 idk2;
+};
+
 struct File {
 // DO_A_LOT_OF_STUFF_WITH_OFFSETS
     // copy_file_base
@@ -1803,9 +1871,7 @@ struct File {
             idk_FUN_00621f10 idk64_data[idk64_len];
 
         // idk?FUN_006268c0
-            le u32 idk65_len;
-            // PRIOR_TO_LOADING_SOMETHING_IMPORTANT called in a loop
-                MaybeString idk65_strings[idk65_len];
+            idk_FUN_006268c0 idk65;
 
     // idk?FUN_00625318
         le u32 idk66;
@@ -1836,10 +1902,9 @@ struct File {
         }
 
     // idk?FUN_00623f68
-        le u32 idk71;
-        if (idk71 != 0) {
-            assert(false, "Check idk?FUN_00623f68");
-        }
+        le u32 idk71_len;
+        // idk?FUN_00623d48 called in a loop
+            idk_FUN_00623d48 idk71_data[idk71_len];
 
     // idk?FUN_00623598
         // idk?FUN_006225b8
@@ -1877,10 +1942,9 @@ struct File {
         }
 
     // idk?FUN_006243f8
-        le u32 idk80;
-        if (idk80 != 0) {
-            assert(false, "Check idk?FUN_006243f8");
-        }
+        le u32 idk80_len;
+        // idk?FUN_00624248 called in a loop
+            idk_FUN_00624248 idk80_data[idk80_len];
 
     // idk?FUN_00628f28
         le u32 idk81_len;
