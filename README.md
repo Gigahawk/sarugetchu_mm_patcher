@@ -47,6 +47,10 @@ Open an issue if there is a specific texture you want to edit and can't figure o
 
 I'm not a lawyer, but I want to minimize the risk of distributing IP that I do not have the rights to.
 
+# Known issues
+
+- Pokepi speech bubbles in the Saru Book use a font that doesn't have a `'` character
+
 # Appendix
 
 ## Design Issues

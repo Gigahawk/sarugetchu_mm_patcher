@@ -2159,6 +2159,7 @@ Gクラッシャー:
 
 
 # Saru Book screen
+# Max chars per row: 36 (37 if last char is period)
 "新<あたら>しいピポサル情報<じょうほう>が追加<ついか>されました。":
   english: "New monkey intel has been added."
 "新<あたら>しいピポサルとポケピ情報<じょうほう>が追加<ついか>されました。":
@@ -2175,46 +2176,167 @@ Gクラッシャー:
   english: "Location not confirmed."
 ### Shinjuku
 "新宿<しんじゅく>で発見<はっけん>!!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
-  english: "Seen in Shinjuku!!\nPlease come and catch it immediately."
+  english: "Seen in Shinjuku!!\nPlease recover immediately."
 ### Metro?
 "地下街<ちかがい>で発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
   # '地下街' translates to underground mall, I assume this means metro?
   # This phrase doesn't seem to be used in any of the level text
-  english: "Seen in the Metro!\nPlease come and catch it immediately."
+  english: "Seen in the Metro!\nPlease recover immediately."
 ### Container Terminal
 "コンテナターミナルで発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください":
-  english: "Seen at the container terminal!\nPlease come and catch it immediately."
+  english: "Seen at the container terminal!\nPlease recover immediately."
 ### Monkey Base?
 "サル軍基地<ぐんきち>にて発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
-  english: "Seen at the monkey base!\nPlease come and catch it immediately."
+  english: "Seen at the monkey base!\nPlease recover immediately."
+### Yacht Harbor
+"ヨットハーバーで発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
+  english: "Seen at the yacht harbor!\nPlease recover immediately."
 ### Battleship teleporter room
 "空中戦艦内転送<くうちゅうせんかんないてんそう>ルームにて発見<はっけん>!\n至急回収願<しきゅうかいしゅうねが>います!":
-  english: "Seen at the battleship teleporter\nroom!Please come and catch it immediately"
+  english: "Seen at the battleship teleporter\nroom! Please recover immediately."
+### Battleship elevator
+"空中戦艦内搬入<くうちゅうせんかんないはんにゅう>エレベーターにて発見<はっけん>!\n至急回収願<しきゅうかいしゅうねが>います!":
+  english: "Seen at the battleship elevator!\nPlease recover immediately."
+### Idk final battle or something?
+"サル軍残存兵<ぐんざんぞんへい>の中<なか>で確認<かくにん>!\n至急回収願<しきゅうかいしゅうねが>います!":
+  english: "Seen amongst remaining monkey troops!\nPlease recover immediately."
+### Kuro Metro
+"地下街<ちかがい>ではしゃぐ姿<すがた>が目撃<もくげき>されています!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted frolicking at the Metro!\nPlease rescue immediately!"
+### Kuro Container Terminal
+"コンテナターミナルで目撃<もくげき>されています!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted at the container terminal!\nPlease rescue immediately!"
+### Kuro Yacht Harbor
+"浮<う>き輪<わ>をかかえた姿<すがた>が目撃<もくげき>されています!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Seen holding a life preserver!\nPlease rescue immediately!"
+### Kuro Stadium
+"スタジアムでの目撃情報<もくげきじょうほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted at the stadium!\nPlease rescue immediately!"
+### Kuro Near Monkey Base (Crash Site?)
+"サル軍基地<ぐんきち>の近<ちか>くで確認<かくにん>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted near the Monkey Base!\nPlease rescue immediately!"
+### Kuro Shinjuku
+"新宿<しんじゅく>での目撃情報<もくげきじょうほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted in Shinjuku!\nPlease rescue immediately!"
+### Kuro Yacht Harbor again?
+"ヨットハーバー付近<ふきん>の建物内<たてものない>で目撃<もくげき>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted near the yacht harbor!\nPlease rescue immediately!"
+### Suzuki Monkey Base
+"サル軍基地<ぐんきち>にいたとの情報<じょうほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted at the monkey base!\nPlease rescue immediately!"
+### Pierre Shinjuku
+"新宿駅付近<しんじゅくふきい>で確認<かくにん>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted near Shinjuku Station!\nPlease rescue immediately!"
+### Ricky ???
+"高<たか>い所<ところ>で修行中<しゅぎょうちゅう>との情報<じょほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted training at a high place!\nPlease rescue immediately!"
+### Jun Metro
+"マイマイクを持<も>って地下街<ちかがい>に向<む>かったそうです!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Headed to the Metro with a mic!\nPlease rescue immediately!"
+### Toro Odaiba
+"お台場<だいば>で目撃<もくげき>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
+  english: "Spotted in Odaiba!\nPlease rescue immediately!"
 ## Monkeys
 ### Shinjuku
 "イチロウ":
   english: "Ichiro"
+"さぼり":
+  english: "Playing hooky"
+"新宿<しんじゅく>でさぼっているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught slacking off in Shinjuku."
+" 偵察<ていさつ>してたんだ!\n ボクはさぼってたんじゃない!!":
+  english: "I was scouting!\nI wasn't slacking off!"
+
 "アインス":
   english: "Eins"
+"おちょうしもの":
+  english: "Show-off"
+"新宿<しんじゅく>で自家用車<じかようしゃ>にこだわっていたところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught in Shinjuku obsessing over a\nprivate car."
+" オレはなにもしてないだろ!\n 画面<がめん>をよく見<み>てくれよ!":
+  english: "I didn't do anything!\nLook at the screen!"
+
 "ザイアス":
   english: "Zaius"
+"なまいき":
+  english: "Sassy"
+"新宿<しんじゅく>で車<くるま>の上<うえ>で暴<あば>れているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught rampaging on a car in\nShinjuku."
+"あーたしかにボクですね。\n車<くるま>の上<うえ>ではねるのはよくないですね。":
+  english: "Ah,yeah,that's me.\nJumping on cars isn't good."
+
 "デュオ":
   english: "Duo"
+"トリガーハッピー":
+  english: "Trigger Happy"
+"新宿<しんじゅく>でガンをうちまくっているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught shooting wildly in Shinjuku."
+" ボクのせいじゃないんです!\n ガンがボクをあやつってたんです!":
+  english: "It's not my fault!\nThe gun was controlling me!"
+
 "ジャーヌ":
   english: "Janu"
+"ねぶそく":
+  # Probably 寝不足
+  english: "Sleepy"
+"新宿<しんじゅく>で居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while napping in Shinjuku."
+"たっ、たのむから居眠<いねむ>りしてゲッチュされたなんて\nみんなに言<い>わないでよ。":
+  english: "P-please,don't tell anyone I got\ncaught napping."
+
 "レオサルド":
   english: Leosardo
+"ホームシック":
+  english: "Homesick"
+"新宿<しんじゅく>で電話<でんわ>をかけているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught making a call in Shinjuku."
+" ワイは実家<じっか>に電話<でんわ>してただけや!\n 親<おや>と話<はなし>して何<なに>が悪<わる>いんじゃー!":
+  english: "I was calling home! What's wrong\nwith talking to my parents?!"
+
 "モンサルト":
   english: "Monsart"
+"まちぼうけ":
+  english: "Left Waiting"
+"新宿<しんじゅく>で待<ま>ち合<あ>わせ中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while waiting for someone at\nShinjuku."
+"バーモンにあったら\n遅<おく>れるなら電話<でんわ>しろよって伝<つた>えてください。":
+  english: "If you see Vermon,tell him to call\nme if he's late."
+
 "リッチー":
   english: Ritchie
+"やせがまん":
+  english: "False Bravado"
+"新宿<しんじゅく>でほふく前進中<ぜんしんちゅう>に発見<はっけん>されゲッチュされる。":
+  english: "Caught crawling in Shinjuku."
+"ホント言<い>うと高<たか>いところは苦手<にがて>なんだ⋅⋅⋅。":
+  english: "To be honest,I'm terrible with\nheights."
+
 "サルキメデス":
   english: "Sarchimedes"
+"だんじき6日目":
+  english: "Fasting,day 6"
+"めいそう中<ちゅう>に発見<はっけん>され\n逃<に>げ出<だ>したところをゲッチュされる。":
+  english: "Found meditating,caught while\nescaping."
+"なんてことをしてくれたんだ!\nあと少<すこ>しで悟<さと>りがひらけたかもしれないじゃないか!":
+  english: "What have you done?!\nI was so close to enlightenment!"
 ### Metro
 "リンゴー":
   english: "Ringo"
+"地下街<ちかがい>で居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while dozing off in the Metro."
+"すみっこで寝<ね>てればばれないと思<おも>ったんだけどなぁ⋅⋅⋅":
+  english: "I thought sleeping in the corner\nwould keep me hidden..."
+
 "バーモン":
   english: "Vermon"
+"ぼうけんか":
+  # Probably 冒険家?
+  english: "Adventurer"
+"地下街<ちかがい>でエレベータを待<ま>っているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while waiting for an\nelevator at the Metro."
+"あの上<うえ>には何<なに>があったんだろうなぁ⋅⋅⋅\n気<き>になってしょうがないよ。":
+  english: "I wonder what was up there...\nI can't help but wonder."
+
 "サルンブス":
   english: "Salumbus"
 "まちぶせ2時間":
@@ -2222,49 +2344,73 @@ Gクラッシャー:
   #english: "Waiting 2hrs for an ambush"
   english: "Lying in wait"
 "地下街<ちかがい>で待<ま>ち伏<ぶ>せているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured at the metro while lying in\nwait for an ambush."
+  english: "Caught at the metro while lying in\nwait for an ambush."
 " まったくいつまで待<ま>たせるんだよ!\n 待<ま>ち伏<ぶ>せするほうの身<み>にもなってくれよ!":
   english: "How long am I gonna have to wait?\nTry to put yourself in my shoes!"
+
 "ポール":
   english: "Pole"
 "モデル志望":
   english: "Aspiring model"
 "ショーウィンドウの中<なか>で待<ま>ち伏<ぶ>せていたが\n発見<はっけん>されゲッチュされる。":
-  english: "Captured in a shop window while\nlying in wait for an ambush."
+  english: "Caught in a shop window while lying\nin wait for an ambush."
 "ガラスが割<わ>れなかったらどうしようかと\n正直心配<しょうじきしんぱい>だったよ。":
   english: "To be honest,I was worried about\nwhat to do if the glass didn't break."
+
 "ジロウ":
   english: "Jiro"
+"通信兵":
+  english: "Radio Operator"
+"地下街<ちかがい>で増援部隊<ぞうえんぶたい>を呼<よ>び寄<よ>せたがゲッチュされた。":
+  english: "Caught while calling for\nreinforcements in the Metro."
+"あと2秒<びょう>! いやあと1秒<びょう>はやく気<き>がつけば\nゲッチュされることはなかったのに⋅⋅⋅":
+  english: "2 more seconds! No,1 second sooner\nand I wouldn't be caught..."
+
+
 "ジョン":
   english: "Jon"
 "まめ":
   # I assume this is 忠実?
   english: "Hardworking"
 "地下街<ちかがい>の時計<とけい>にしがみついているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while hanging from a clock\nin the metro."
+  english: "Caught while hanging from a clock in\nthe metro."
 "時計<とけい>が止<と>まっていたのが気<き>になってさ。\nべっ、別<べつ>に降<お>りれなくて困<こま>ってたわけじゃないぜっ。":
   english: "I was just inspecting the clock.\nIt's not like I'm stuck or anything."
+
 "ジョージ":
   english: "George"
+"演技派":
+  english: "Dramatic"
+"地下街<ちかがい>で隠<かく>れているところを発見<はっけん>されゲッチュされる。":
+  english: "Caught hiding in the underground\nmall."
+"なぜだー!なぜオレのシニマネがみやぶられたんだー。\nこんなことがあっていいのかー!!":
+  english: "Why!? How did they see through my\nact!? How could this happen!!"
+
 "トリー":
   english: "Tory"
 "おおもの":
   # I assume this is 大物?
   english: "Bigwig"
 "地下街<ちかがい>で一斉射撃<いっせいしゃげき>を指揮<しき>していたが\n撃破<げきは>されゲッチュされる。":
-  english: "Shot down and captured while\nleading a monkey platoon."
+  english: "Shot down and caught while leading a\nmonkey platoon."
 " あれはすべて私<わたし>が指示<しじ>したことだ!\n 部下<ぶか>に責任<せきにん>はない!":
   english: "I'm the one in charge!\nMy soldiers are not to blame!"
+
 "アラシヤマ":
   english: "Arashiyama"
+"おせっかい":
+  english: "Busybody"
+"地下街<ちかがい>で自動販売機<じどうはんばいき>にいたずらしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while tampering with a\nvending machine in the Metro."
+" いたずらしてたんじゃない!\n 調子<ちょうし>が悪<わる>いようだから直<なお>そうとしただけだ!":
+  english: "I wasn't messing around!\nI was just fixing it!"
+
 "リノール":
   english: "Linole"
-"さぼり":
-  english: "Playing hooky"
 "地下街<ちかがい>でさぼっているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while slacking off in\nthe metro."
+  english: "Caught while slacking off in the\nmetro."
 "ホント言<い>うとオレも射撃部隊<しゃげきぶたい>に\nくわわりたかったんだけどな⋅⋅⋅":
-  english: "To be honest, I wanted to be\nin the firing squad too⋅⋅⋅"
+  english: "To be honest,I wanted to be in the\nfiring squad too..."
 ### Container Terminal
 "エンゲル":
   english: "Engel"
@@ -2272,123 +2418,386 @@ Gクラッシャー:
   # I assume this is 爆睡
   english: "Passed out"
 "コンテナの上<うえ>でばくすいしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while sleeping on top\nof a cargo container."
+  english: "Caught while sleeping on top of a\ncargo container."
 " 居眠<いねむ>りしてたって!?\n あの時間<じかん>に起<お>きてるほうがおかしいと思<おも>うよ!":
   english: "Of course I was asleep!\nIt'd be weird to be awake then!"
+
 "エマーソン":
   english: "Emerson"
 "おくびょう":
   # Assuming this is 臆病
   english: "Cowardly"
 "ダンボールに隠<かく>れているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while hiding in a\ncardboard box."
+  english: "Caught while hiding in a cardboard\nbox."
 "動<うご>かなければ発見<はっけん>されないって聞<き>いたんだけどなぁ。\n別<べつ>のゲームだったかなぁ⋅⋅⋅":
   english: "Can't be seen if you stay still.\nMaybe it was a different game⋅⋅⋅"
+
 "フォックス":
   english: "Fox"
 "まぬけ":
   # Assuming this is 間抜け
   english: "Stupid"
 "クレーンのフックにひっかかっているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while caught on a\ncrane hook."
+  english: "Caught while caught on a crane hook."
 "ああなった時点<じてん>で\nもうおしまいだと思<おも>っていたよ。":
-  english: "I thought it was all over at\nthat point."
+  english: "I thought it was all over at that\npoint."
+
 "サルケゴール":
   english: "Salkegoll"
+"つりばか":
+  english: "Fishing Nut"
+"コンテナターミナルで釣<つ>りをしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while fishing at the\ncontainer terminal."
+" ちいさなアタリがきてたんだよ!\n どうして待<ま>ってくれないんだ!":
+  english: "I was just getting a bite!\nWhy didn't you wait?!"
+
 "イアン":
   english: "Ian"
+"浮<う>き輪<わ>であそんでいるところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while playing with a\nfloatation ring."
+" 海<うみ>はみんなのものだろ!\n どうしてボクがゲッチュされないといけないんだ!?":
+  english: "The sea belongs to everyone!\nWhy should I be caught?!"
+
 "ジョー":
   english: "Joe"
+"チャレンジャー":
+  english: "Challenger"
+"コンテナターミナルの橋<はし>で発見<はっけん>されゲッチュされる。":
+  english: "Caught on the container terminal\nbridge."
+"危険<きけん>なところを見<み>るとチャレンジしたくなるのさ。\nオレをとめてもムダだぜ。":
+  english: "Danger excites me!\nYou can't stop me."
+
 "アダムスキー":
   english: "Adamski"
 "へいわしゅぎ":
   # Assuming this is 平和主義
   english: "Pacifist"
 "灯台<とうだい>の上<うえ>で居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while sleeping on top\nof the lighthouse."
+  english: "Caught while sleeping on top of the\nlighthouse."
 "戦争<せんそう>なんてしちゃいけないよ。\n私<わたし>の居眠<いねむ>りにはそんなメッセージがこめられてるのさ。":
   english: "My nap is protesting the war."
+
 "ウキイシ":
   english: "Ukiishi"
+"街灯<がいとう>の上<うえ>で危険<きけん>な芸<げい>をしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught performing dangerous stunts\non a streetlight."
+" ジョーには負<ま>けられない!\n ヤツにだけは負<ま>けられないんだ。":
+  english: "I can't lose to Joe!\nNot to him!"
+
 "カーチス":
   english: "Curtis"
+"ジャンパー":
+  english: "Jumper"
+"エントツで遊<あそ>んでいるところを発見<はっけん>されゲッチュされる。":
+  english: "Caught playing in the chimney."
+"あのエントツの中<なか>に何<なに>があるかって?\nそいつは言<い>えないな⋅⋅⋅":
+  english: "What's inside that chimney?\nI can't say..."
+
 "モンブラン":
   english: "Mont Blanc"
+" ボクは何<なに>も言<い>わない!\n 何<なに>をされても絶対<ぜったい>に言<い>わないぞ!":
+  english: "I won't say anything!\nNo matter what you do,I won't talk!"
+
 "オクトー":
   english: "Okto"
+"ジャンプしてるとなんだかハイになっちゃってさ。\n何<なに>してたんだか思<おも>い出<だ>せないよ。":
+  # ハイ apparently means intoxicated, which seems weird for a childrens game
+  english: "Jumping makes me feel high.\nI can't remember what I was doing."
+
 "サルバトーレ":
   english: "Salvatore"
+"ボートキング":
+  english: "Boat King"
+"バナナボートを必死<ひっし>にこいでいるところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while paddling a banana boat\ndesperately."
+"いやー。\n今回<こんかい>はボートがないからさびしくなっちゃうねー。":
+  english: "Oh no.It's going to be lonely this\ntime without a boat."
+
 "サブロウ":
   english: "Saburo"
+"じつはさぼり":
+  english: "Actually Slacking"
+"サル軍基地<ぐんきち>で待<ま>ち伏<ぶ>せているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while lying in wait at the\nmonkey base."
+" オレの待<ま>ち伏<ぶ>せに気<き>がつくとは!\n さすがだ!!":
+  english: "You noticed my ambush!\nImpressive!!"
+
 "ウキャロル":
   english: "Ucarol"
+"こわがり":
+  # Probably 恐がり
+  english: "Coward"
+"ホントいうと足<あし>がすくんで出<で>て行<い>けなかったんだ⋅⋅⋅\n誰<だれ>にもいわないでくれよ⋅⋅⋅":
+  english: "Honestly,my legs froze.\nDon't tell anyone..."
+
 "オサルバン":
   english: "Osalvan"
+"ひとだのみ":
+  english: "Counting on others"
+"公衆電話<こうしゅうでんわ>で話<はな>し中<ちゅう>のところを発見<はっけん>されゲッチュされる。":
+  english: "Caught while talking in a phone\nbooth."
+" じきに仲間<なかま>が助<たす>けにくるぞ!\n きっと来<く>る! たぶん来<く>る!":
+  english: "Our friends will save us!\nThey will...probably!"
+
 "フェブル":
   english: "Fable"
+"そらみみ":
+  # Probably 空耳?
+  # Is this monkey description text?
+  english: "Deaf"
+  #english: "Mishearing"
+"エントツにのぼろうとしているところを\n発見<はっけん>されゲッチュされる。":
+  # エントツ is probably 煙突
+  english: "Caught while trying to climb a\nchimney."
+"エントツの上<うえ>から声<こえ>がしたんだ。\nそれをたしかめに行<い>こうとしたんだよ。":
+  english: "I heard a voice from the chimney.\nI went to check it out."
+
 "サルンティーノ":
   english: "Sarutino"
+"イライラ":
+  english: "Frustrated"
+"ヨットハーバーでデイビッドを\n起<お>こそうとしているところを発見<はっけん>されゲッチュされる。":
+  english: "Caught at the yacht harbor while\ntrying to wake David up."
+" 警備<けいび>の交代時間<こうたいじかん>なのに\n デイビッドが起<お>きてくれないんだよ!!":
+  english: "It's shift change time,but David\nwon't wake up!!"
+
 "デイビッド":
   english: "David"
+"ヨットハーバーで居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught napping at the yacht harbor."
+"最近<さいきん>、夜<よる>おそいんだよ~。\nゆっくり寝<ね>させてくれよ~。":
+  english: "I've been up late lately.\nLet me sleep in peace."
+
 "キース":
   english: "Keith"
+"停泊中<ていはくちゅう>の船<ふね>で遊<あそ>んでいるところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught playing on a docked ship."
+"ボクは船<ふね>が盗<ぬす>まれないように見張<みは>っててあげたんですよー。\n感謝<かんしゃ>してほしいなぁ~。":
+  english: "I was making sure the ship didn't\nget jacked.You should thank me~."
+
 "ウッシー":
   english: "Ussy"
+"ヨットハーバーにて眠<ねむ>りかけているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught dozing off at the yacht\nharbor."
+" オレはお前<まえ>に負<ま>けたんじゃないぞ!\n あったかい日差<ひざ>しに負<ま>けたんだ!":
+  english: "I didn't lose to you!\nI lost to the warm sun!"
+
 "ウル":
   english: "Ur"
+"プリマ志望":
+  english: "Prima Aspirant"
+"ヨットハーバーの広場<ひろば>で踊<おど>っているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught dancing in the yacht harbor\nplaza."
+"ボクのターンを見<み>てくれたか!?\n流<なが>れるようだったろう?":
+  english: "Did you see my spin!?\nIt was smooth, wasn't it?"
+
 "ウンモ":
   english: "Unmo"
+"ベンチにてくつろいでいるところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while relaxing on a bench."
+"広<ひろ>い海<うみ>を見<み>ていると⋅⋅⋅\nこまかいことはどうでもよくなってくるよ。":
+  english: "Looking at the vast ocean... I stop\nworrying about the little things."
+
 "エーテ":
   english: "Athe"
+"へたくそ":
+  english: "Clumsy"
+"ヨットハーバーにて木<き>に登<のぼ>っているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught at the yacht harbor while\nclimbing a tree."
+" 何<なに>がおかしい! ボクはサルだ!\n サルは木<き>に登<のぼ>るものなんだ!":
+  english: "What's so funny?! I'm a monkey!\nMonkeys climb trees!"
+
 "ラルフ":
   english: "Ralph"
+"ヨットハーバーにて釣<つ>り糸<いと>をたれているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught at the yacht harbor while\nfishing."
+"釣<つ>れなくてもいい。\n海<うみ>が見<み>れればオレはそれで満足<まんぞく>さ。":
+  english: "I don't care if I catch nothing.\nJust seeing the sea is enough."
+
 "シロウ":
   english: "Shirou"
+"ヨットハーバーにて危険<きけん>な芸<げい>をしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while performing stunts at\nthe yacht harbor."
+" あと少<すこ>しで新記録<しんきろく>だったんだよ!\n あと少<すこ>しでウキイシに勝<か>てたんだっ!":
+  english: "I almost set a new record!\nI was so close to beating Ukiishi!"
+
 "サルキチ":
   english: "Sarkichi"
+"おおらか":
+  english: "Easygoing"
+"ヨットハーバーにて日光浴<にっこうよく>をしているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while sunbathing at the yacht\nharbor."
+"まーこんがり焼<や>けたし。\nよしとしようかな。":
+  english: "Well,I'm nicely roasted.\nI guess it's fine."
+
+
 "ヒックス":
   english: "Hicks"
+"マスター":
+  english: "Master"
+"ヨットハーバーにてめいそう中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught meditating at the yacht\nharbor."
+"我<わ>が心<こころ>すでに空<くう>なり。 空<くう>なるが故<ゆえ>、無<む>じゃ。\nわかるかな?":
+  english: "My heart is empty.Empty means\nnothing.Do you understand?"
+
 "コーネリアス":
   english: "Cornelius"
+"きゅうか中":
+  english: "On Vacation"
+"ヨットハーバーにてくつろいでいるところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught at the yacht harbor while\nrelaxing."
+"僕<ぼく>らは休暇中<きゅうかちゅう>だったんだ。\nさぼってたわけじゃないぞ。":
+  english: "We were on vacation.\nWe weren't slacking."
+
 "バルトス":
   english: "Bartos"
+" ひどいじゃないか!\n のんびり海<うみ>を見<み>てただけなのにっ!":
+  english: "That's so mean! I was just\nrelaxing and watching the sea!"
+
 "スパンダー":
   english: "Spander"
+"ギタリスト":
+  english: "Guitarist"
+"ヨットハーバーにてねっしょう中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  # ねっしょう is probably 熱唱
+  english: "Caught in the yacht harbor while\nsinging enthusiastically."
+"どうでもいいけどギターだけは返<かえ>してくれよ。\nアレがないと困<こま>るんだよ!":
+  english: "Whatever,but give my guitar back.\nI can't manage without it!"
+
 "フラットウッズ":
   english: "Flat Woods"
+"ジャグラー":
+  english: "Juggler"
+"ヨットハーバーにてジャグリング中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught at the yacht harbor while\njuggling."
+"あそこからがイイトコロだったのに⋅⋅⋅。\nせっかちさんだなぁ。":
+  english: "It was just getting good...\nYou're so impatient."
+
 "オデッセイ":
   english: "Odyssey"
+"おくびょうもの":
+  english: "Coward"
+"水族館<すいぞくかん>の壁<かべ>にへばりついてふるえている状態<じょうたい>を\n発見<はっけん>されゲッチュされる。":
+  english: "Caught clinging to the aquarium wall,\ntrembling."
+"あっ、あそこはスゴイ高<たか>いんだぞ!\nダレだって怖<こわ>くなるさ!":
+  english: "Whoa,that's really high!\nAnyone would be scared!"
+
 "サルタン":
   english: "Sarutan"
+"つなぎがピチピチすぎてさ。\nやっぱりパンツ1枚<まい>がきもちいいね。":
+  english: "This suit's too tight.\nI like to wear only underpants."
+
 "マッコイ":
   english: "McCoy"
+"スイマー":
+  english: "Swimmer"
+"海辺<うみべ>にてシンクロの練習中<れんしゅうちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught practicing synchronized\nswimming at the beach."
+" 邪魔<じゃま>してもムダだ!\n この夏<なつ>の大会<たいかい>はボクらが優勝<ゆうしょう>だ!":
+  english: "You can't stop us!\nWe'll win this summer's tournament!"
+
 "ジュライ":
   english: "July"
+"何<なに>も海<うみ>で練習<れんしゅう>しなくてもいいと思<おも>うんだよね⋅⋅⋅":
+  english: "I don't think you need to practice\nin the ocean..."
+
 "コザルニクス":
   english: "Kozalnicus"
+"まじめ":
+  english: "Sober"
+"サメの口<くち>にはさまっているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while stuck in a shark's\nmouth."
+" ヤツは生<い>きている! 本当<ほんとう>だ!\n 信<しん>じてくれ!":
+  english: "He's alive! It's true!\nPlease believe me!"
+
 "フランソワ":
   english: "Francois"
+"まちぶせ隊":
+  english: "Ambush squad"
+"アツくてアツくて⋅⋅⋅。\n意識<いしき>がもうろうとしてました。":
+  english: "So hot,so hot...\nI was losing consciousness."
+
 # They use the hiragana へ instead of the katakana ヘ here for
 # some reason
 #"ヘクス":
 "へクス":
   english: "Hex"
+"ダレだ!あんなところで待<ま>ち伏<ぶ>せしようって言<い>ったのは!\nオレじゃないぞ!":
+  english: "Who said we should ambush them\nthere?! It wasn't me!"
+
 "エイプリル":
   english: "April"
+"ぎじゅつしゃ":
+  # Probalbly 技術者, maybe engineer?
+  english: "Technician"
+"転送<てんそう>ルームにてメンテナンス中<ちゅう>に\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while doing maintenance in\nthe transfer room."
+" なんだあのマニュアルは! さっぱりわからないぞ!\n いったいだれが書<か>いたんだ!!":
+  english: "What's with this manual?! I can't\nunderstand it at all! Who wrote it?!"
+
 "ガーネット":
   english: "Garnet"
+"あっ、ピポヘルのライトが見<み>えてたのか~\nざんねん⋅⋅⋅":
+  english: "Ah,the Pipo helmet light was\nvisible... What a shame..."
+
 "ゴロウ":
   english: "Goro"
+"エレベーターにてメンテナンス中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while doing elevator\nmaintenance."
+"んんー。 ボクの設計<せっけい>はカンペキだ!\nこれで昇進<しょうしん>まちがいなしだ!!":
+  english: "Hmm. My design is flawless!\nThis guarantees my promotion!!"
+
 "サルトル":
   english: "Saltle"
+"クレーンにひっかかっているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while stuck on a crane."
+"⋅⋅⋅何<なに>も聞<き>かないでくれよ。\nどうしてああなったのかわからないんだ。":
+  english: "Don't ask me anything.\nI don't know why it happened."
+
 "サルベスタ":
   english: "Salvesta"
+"鉄骨<てっこつ>にしがみついているところを\n発見<はっけん>されゲッチュされる。":
+  english: "Found clinging to a steel beam\nand caught."
+"エアコンがこわれて修理<しゅうり>してたのさ。\n怖<こわ>くてふるえてたんじゃないよ!":
+  english: "I was fixing the broken AC,\nnot shaking because I was scared!"
+
 "オリバー":
   english: "Oliver"
+"さぼりキング":
+  english: "Slacker King"
+"ヨットハーバーにて日光浴<にっこうよく>の最中<さいちゅう>に\n発見<はっけん>されゲッチュされる。":
+  english: "Caught while sunbathing at the yacht\nharbor."
+" こっ、このオレ様<さま>の究極<きゅうきょく>のさぼりテクニックが\n 敗<やぶ>れるとは! さてはただものじゃないなっ!":
+  english: "My ultimate slacking skill\nfailed?! You're no ordinary foe!"
+
 "ピサル":
   english: "Pisar"
+"まちぶせキング":
+  english: "Ambush King"
+"地下街<ちかがい>にて待<ま>ち伏<ぶ>せ中<ちゅう>に\n発見<はっけん>されゲッチュされる。":
+  english: "Caught lying in wait in the\nunderground mall."
+" オレの待<ま>ち伏<ぶ>せに気<き>がつくとは!\n さてはレーダーだなっ!! ひきょうだぞっ!":
+  english: "You noticed my ambush!\nMust be wallhacks! Cheater!"
+
 "クロ":
   english: "Kuro"
+"ポケピ":
+  english: "Pokepi"
+"はしゃぎ疲<つか>れて\nうたた寝<ね>しているところを発見<はっけん>。":
+  english: "Found napping after playing too hard."
+"コンクリートジャングルは\n広<ひろ>すぎみャ⋅⋅⋅":
+  english: "The concrete jungle is too vast..."
+"船<ふね>の甲板<かんぱん>で\n釣<つ>りをしていたところを発見<はっけん>。":
+  english: "Found fishing on a ship's deck."
+"めずらしいサカナが\nつれたみャ!":
+  english: "I caught a rare fish, meow!"
+"波<なみ>にゆられながら\n魚<さかな>とたわむれているところを発見<はっけん>。":
+  english: "Found playing with fish while\ndrifting on the waves."
+"ネコのしっぽは\nエサじゃないみャ!":
+  # TODO: Pokepi speech font is different and doesn't seem to have an apostrophe?
+  # Doesn't appear to be a .gf font? or maybe from an unpatched file
+  english: "A cat's tail isn't food nya!"
+
 "スズキ":
   english: "Suzuki"
 "ピエール":
@@ -2694,9 +3103,6 @@ Gクラッシャー:
 "獲得<かくとく>チップ":
   english: "Chip Inventory"
   password: true
-"スイマー":
-  # where is this used?
-  english: "Swimmer"
 "はずす":
   english: "Remove"
 "このステージにはゲットアミが必要<ひつよう>です。":
@@ -2709,17 +3115,9 @@ Gクラッシャー:
   english: "VS.Kakeru"
 "VS.ニセスペクター":
   english: "VS.Fake Specter"
-"ポケピ":
-  english: "Pokepi"
 "アタックするステージを選<えら>んでください。":
   # Where is this used? What does it mean to attack a stage?
   english: "Select the stage to attack."
-"新宿駅付近<しんじゅくふきい>で確認<かくにん>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "It's near Shinjuku Station!\nPlease assist immediately!"
-"地下街<ちかがい>ではしゃぐ姿<すがた>が目撃<もくげき>されています!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Spotted in the Metro!\nPlease rescue them ASAP!"
-"空中戦艦内搬入<くうちゅうせんかんないはんにゅう>エレベーターにて発見<はっけん>!\n至急回収願<しきゅうかいしゅうねが>います!":
-  english: "Found in the battleship elevator!\nPlease recover immediately!"
 "ムーブを諦<あきら>めてキャラクターファイルセレクトに戻<もど>ります。":
   english: "Cancel move and return to character file selection."
 "コンボ":
@@ -2738,9 +3136,6 @@ Gクラッシャー:
 "ラウンド結果<けっか>":
   english: "Round Results"
   password: true
-"ボートキング":
-  # What is this?
-  english: "Boat King"
 "スロット1-A":
   english: "Slot 1-A"
 "スロット1-B":
@@ -2905,122 +3300,24 @@ Gクラッシャー:
 
 ## Probably monkey text
 ### Capture text
-"ヨットハーバーにてくつろいでいるところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured at the yacht harbor\nwhile relaxing."
-"ヨットハーバーにて釣<つ>り糸<いと>をたれているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured at the yacht harbor\nwhile fishing."
-"ヨットハーバーにてジャグリング中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured at the yacht harbor\nwhile juggling."
-"ヨットハーバーにてねっしょう中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while sleeping in the yacht harbor."
-"ヨットハーバーでデイビッドを\n起<お>こそうとしているところを発見<はっけん>されゲッチュされる。":
-  english: "Captured at the yacht harbor\nwhile trying to wake David up."
-"ヨットハーバーにて木<き>に登<のぼ>っているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured at the yacht harbor\nwhile climbing a tree."
-"地下街<ちかがい>で居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while dozing off\nin the Metro."
-"地下街<ちかがい>でエレベータを待<ま>っているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while waiting for an\nelevator at the Metro."
-"クレーンにひっかかっているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while caught on a crane."
-"エントツにのぼろうとしているところを\n発見<はっけん>されゲッチュされる。":
-  # エントツ is probably 煙突
-  english: "Captured while trying to climb a chimney."
-"新宿<しんじゅく>で待<ま>ち合<あ>わせ中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while waiting for\nsomeone at Shinjuku."
-"地下街<ちかがい>で増援部隊<ぞうえんぶたい>を呼<よ>び寄<よ>せたがゲッチュされた。":
-  english: "Captured while calling for\nreinforcements in the Metro."
-"エレベーターにてメンテナンス中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while doing elevator\nmaintenance."
-"バナナボートを必死<ひっし>にこいでいるところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while paddling\na banana boat desperately."
-"コンテナターミナルで釣<つ>りをしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while fishing\nat the container terminal."
 "ショーウィンドウで待<ま>ち伏<ぶ>せているところを\n発見<はっけん>されゲッチュされる。":
   english: "Captured while lying in wait in\na shop window."
 "ジュンを発見しました!":
   english: "Jun has been found!"
 "港<みなと>の煙突<えんとつ>の上<うえ>で\nセキこんでいたところを発見<はっけん>。":
   english: "Found coughing on top of a\nchimney at the harbor."
-"新宿<しんじゅく>で居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while napping in\nShinjuku."
 "巨大<きょだい>なレーザー砲台<ほうだい>に\n感動<かんどう>しているところを発見<はっけん>。":
   english: "Captured while admiring a giant\nlaser cannon."
-"ヨットハーバーにて日光浴<にっこうよく>の最中<さいちゅう>に\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while sunbathing at\nthe yacht harbor."
-"地下街<ちかがい>で自動販売機<じどうはんばいき>にいたずらしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while tampering with a\nvending machine in the Metro."
-"サル軍基地<ぐんきち>で待<ま>ち伏<ぶ>せているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while lying in wait at\nthe monkey base."
-"ヨットハーバーにて危険<きけん>な芸<げい>をしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Captured while performing\nstunts at the yacht harbor."
-"高<たか>い所<ところ>で修行中<しゅぎょうちゅう>との情報<じょほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Spotted training at a high place!\nPlease rescue immediately!"
-"サル軍基地<ぐんきち>にいたとの情報<じょうほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Spotted at the monkey base!\nPlease rescue immediately!"
 
 ### Monkey quotes
-"バーモンにあったら\n遅<おく>れるなら電話<でんわ>しろよって伝<つた>えてください。":
-  english: "If you see Vermon,tell him to\ncall me if he's late."
 "山<やま>がそこにあるから\nのぼるのみャ!":
   english: "Mountains are meant\nto be climbed!"
-"ホント言<い>うと高<たか>いところは苦手<にがて>なんだ⋅⋅⋅。":
-  english: "To be honest, I'm terrible\nwith heights."
-"あっ、ピポヘルのライトが見<み>えてたのか~\nざんねん⋅⋅⋅":
-  english: "Ah,the Pipo helmet light was\nvisible⋅⋅⋅ What a shame⋅⋅⋅"
-"エントツの上<うえ>から声<こえ>がしたんだ。\nそれをたしかめに行<い>こうとしたんだよ。":
-  english: "I heard a voice from the chimney.\nI went to check it out."
-"あの上<うえ>には何<なに>があったんだろうなぁ⋅⋅⋅\n気<き>になってしょうがないよ。":
-  english: "I wonder what was up there⋅⋅⋅\nI can't help but wonder."
-" オレはお前<まえ>に負<ま>けたんじゃないぞ!\n あったかい日差<ひざ>しに負<ま>けたんだ!":
-  english: "I didn't lose to you!\nI lost to the warm sun!"
-"ダレだ!あんなところで待<ま>ち伏<ぶ>せしようって言<い>ったのは!\nオレじゃないぞ!":
-  english: "Who said we should ambush them\nthere?! It wasn't me!"
-"⋅⋅⋅何<なに>も聞<き>かないでくれよ。\nどうしてああなったのかわからないんだ。":
-  english: "Don't ask me anything.\nI don't know why it happened."
-"何<なに>も海<うみ>で練習<れんしゅう>しなくてもいいと思<おも>うんだよね⋅⋅⋅":
-  english: "I don't think you need to\npractice in the ocean⋅⋅⋅"
-" オレはなにもしてないだろ!\n 画面<がめん>をよく見<み>てくれよ!":
-  english: "I didn't do anything!\nLook at the screen!"
-" じきに仲間<なかま>が助<たす>けにくるぞ!\n きっと来<く>る! たぶん来<く>る!":
-  english: "Our friends will save us!\nThey will⋅⋅⋅probably!"
-"いやー。\n今回<こんかい>はボートがないからさびしくなっちゃうねー。":
-  english: "Oh no.It's going to be lonely\nthis time without a boat."
-" あと少<すこ>しで新記録<しんきろく>だったんだよ!\n あと少<すこ>しでウキイシに勝<か>てたんだっ!":
-  english: "I almost set a new record!\nI was so close to beating Ukiishi!"
-"ジャンプしてるとなんだかハイになっちゃってさ。\n何<なに>してたんだか思<おも>い出<だ>せないよ。":
-  # ハイ apparently means intoxicated, which seems weird for a childrens game
-  english: "Jumping makes me feel high.\nI can't remember what I was doing."
-"ホントいうと足<あし>がすくんで出<で>て行<い>けなかったんだ⋅⋅⋅\n誰<だれ>にもいわないでくれよ⋅⋅⋅":
-  english: "Honestly,my legs froze.\nDon't tell anyone..."
-"まーこんがり焼<や>けたし。\nよしとしようかな。":
-  english: "Well, it's nicely roasted.\nI guess it's fine."
 "都会<とかい>にはエクセレントな服<ふく>が\nいっぱいね♪":
   # TODO: figure out why this doesn't work
   #english: "The city is full of\nexcellent clothes♪"
   english: "The city is full of\nexcellent clothes."
-"広<ひろ>い海<うみ>を見<み>ていると⋅⋅⋅\nこまかいことはどうでもよくなってくるよ。":
-  english: "Looking at the vast ocean...\nI stop worrying about the little things."
-"危険<きけん>なところを見<み>るとチャレンジしたくなるのさ。\nオレをとめてもムダだぜ。":
-  english: "Danger excites me!\nYou can't stop me."
 
 ## Monkey descriptions
-"へたくそ":
-  english: "Clumsy"
-"そらみみ":
-  # Probably 空耳?
-  # Is this monkey description text?
-  english: "Deaf"
-  #english: "Mishearing"
-"ぼうけんか":
-  # Probably 冒険家?
-  english: "Adventurer"
-"ねぶそく":
-  # Probably 寝不足
-  english: "Sleepy"
-"こわがり":
-  # Probably 恐がり
-  english: "Coward"
 "つよい":
   # Probably 強い
   english: "Strong"
@@ -3032,66 +3329,30 @@ Gクラッシャー:
   english: "The Statue of Liberty\nloves ice cream, nya!"
 "修行<しゅぎょう>の道<みち>に\n終<お>わりはないんダス。":
   english: "The path of training\nnever ends, dasu."
-" ヤツは生<い>きている! 本当<ほんとう>だ!\n 信<しん>じてくれ!":
-  english: "He's alive! It's true!\nPlease believe me!"
 "周辺<しゅうへん>の敵<てき>を吸<す>い込<こ>む巨大<きょだい>な竜巻<たつまき>を発生<はっせい>させます。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
   english: "Summons a massive tornado to suck in nearby foes.Hits a wide area."
-"釣<つ>れなくてもいい。\n海<うみ>が見<み>れればオレはそれで満足<まんぞく>さ。":
-  english: "I don't care if I catch nothing.\nJust seeing the sea is enough."
-"ヨットハーバーの広場<ひろば>で踊<おど>っているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught dancing\nin the yacht harbor plaza."
-"んんー。 ボクの設計<せっけい>はカンペキだ!\nこれで昇進<しょうしん>まちがいなしだ!!":
-  english: "Hmm. My design is flawless!\nThis guarantees my promotion!!"
-"新宿<しんじゅく>でさぼっているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught slacking off\nin Shinjuku."
 "サウンドの出カ形式<しゅつりょくけいしき>を選択<せんたく>してください。":
   english: "Choose sound output format."
 "キャラクターファイルにセーブできませんが、\n本当<ほんとうに>にキャンセルしますか?":
   english: "Cannot save character file.\nReally cancel?"
-"新宿<しんじゅく>で車<くるま>の上<うえ>で暴<あば>れているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught rampaging on\na car in Shinjuku."
-"ヨットハーバーにて日光浴<にっこうよく>をしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught sunbathing\nat the yacht harbor."
-"公衆電話<こうしゅうでんわ>で話<はな>し中<ちゅう>のところを発見<はっけん>されゲッチュされる。":
-  english: "Caught talking\nat a public phone."
 "%にメモリーカード(PS2)が\n差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップを受<う>け取<と>ることができません。":
   english: "No Memory Card in %.\nCannot save character file.\nInsert the last loaded Memory Card.\nIf you cancel,the chip will be lost."
 "近<ちか>くの敵一体<てきいったい>を/<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
   english: "Grab and throw 1 enemy, then unleash a barrage. Lock-on recommended for accuracy."
 "一定時間<いっていじかん>レーザーをはねかえすシールドを発生<はっせい>させるパーツです。 複数<ふくすう>セットすることでシールドの持続時間<じぞくじかん>をのばすことができます。":
   english: "Generates a shield that reflects lasers for a time. Stack to extend duration."
-"停泊中<ていはくちゅう>の船<ふね>で遊<あそ>んでいるところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught playing on\na docked ship."
-"新宿<しんじゅく>で電話<でんわ>をかけているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught making a\ncall in Shinjuku."
-"ヨットハーバーにてめいそう中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught meditating\nat the yacht harbor."
-"ヨットハーバーにて眠<ねむ>りかけているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught dozing off\nat the yacht harbor."
-"地下街<ちかがい>で隠<かく>れているところを発見<はっけん>されゲッチュされる。":
-  english: "Caught hiding in\nthe underground mall."
-"地下街<ちかがい>にて待<ま>ち伏<ぶ>せ中<ちゅう>に\n発見<はっけん>されゲッチュされる。":
-  english: "Caught ambushing\nin the underground mall."
 "ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。        ":
   english: "Blast monkeys with a cannon. Hits 1 enemy repeatedly."
 "ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。       ":
   english: "Blast monkeys with a cannon. Hits 1 enemy repeatedly."
-"我<わ>が心<こころ>すでに空<くう>なり。 空<くう>なるが故<ゆえ>、無<む>じゃ。\nわかるかな?":
-  english: "My heart is empty.Empty means\nnothing.Do you understand?"
 "アイドルとして紅白出場<こうはくしゅつじょう>をねらうウサギ。 歌<うた>の力<ちから>であなたの体力<たいりょく>を回復<かいふく>します。":
   english: "A rabbit aiming for stardom. Its song restores your health."
-"海辺<うみべ>にてシンクロの練習中<れんしゅうちゅう>のところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught practicing synchronized\nswimming at the beach."
 "世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し蹴<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
   english: "A frog aiming to be the best fighter. Its spinning kick creates shockwaves to attack nearby enemies."
-"新宿<しんじゅく>でガンをうちまくっているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught shooting wildly\nin Shinjuku."
 "ノーベル賞<しょう>をめざす理論派<りろんは>ロボ。 箱<はこ>いっぱいの爆弾<ばくだん>で援護<えんご>してくれます。     ":
   english: "A robot aiming for a Nobel Prize. It supports you with a box full of bombs."
 "ゴリアックヘッドを起動<きどう>し、レーザーで攻撃<こうげき>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>できますが、空中<くうちゅう>の敵<てき>はねらえません。":
   english: "Activates the Goliac Head to attack with lasers. Hits a wide area but can't target airborne enemies."
-"お台場<だいば>で目撃<もくげき>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Sighted in Odaiba!\nPlease rescue immediately!"
 "%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
   english: "Memory Card not inserted in %.\nCannot save character file.\nPlease insert the last loaded Memory Card(PS2)."
 "%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
@@ -3108,12 +3369,6 @@ Gクラッシャー:
   english: "Memory Card not inserted in %.\nCannot save progress file.\nPlease insert the last loaded Memory Card."
 "%のメモリーカード(PS2)がぬかれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
   english: "Memory Card removed from %.\nFailed to save character file.\nCannot save character file.\nPlease insert the last loaded Memory Card.\nCanceling will result in lost chips."
-" ボクのせいじゃないんです!\n ガンがボクをあやつってたんです!":
-  english: "It's not my fault!\nThe gun was controlling me!"
-" なんだあのマニュアルは! さっぱりわからないぞ!\n いったいだれが書<か>いたんだ!!":
-  english: "What's with that manual?!\nI can't understand it at all!\nWho wrote it?!"
-" ちいさなアタリがきてたんだよ!\n どうして待<ま>ってくれないんだ!":
-  english: "I was just getting a bite!\nWhy didn't you wait?!"
 "このまま戻<もど>ると優勝<ゆうしょう>していないトーナメントは\nリセットされますがよろしいですか?":
   english: "If you go back,tournaments in\nprogress will be reset. Proceed?"
 "メモリーカード(PS2)のアクセスに\n失敗<しっぱい>しました。":
@@ -3138,31 +3393,21 @@ Gクラッシャー:
   english: "A girly(?) dog dreaming of living alone in Paris. Shares happiness when fortunes are good."
 "リッキーを発見しました!":
   english: "Ricky found!"
-"めいそう中<ちゅう>に発見<はっけん>され\n逃<に>げ出<だ>したところをゲッチュされる。":
-  english: "Found meditating,\ncaptured while escaping."
 "ラウンド最終集計結果<さいしゅうしゅうけいけっか>":
   english: "Final round results."
   password: true
 "トロを発見しました!":
   english: "Toro found!"
-"コンクリートジャングルは\n広<ひろ>すぎみャ⋅⋅⋅":
-  english: "The concrete jungle\nis too vast..."
 "レジェンド一次予選ステージ":
   english: "Legend 1st prelim stage."
-"ベンチにてくつろいでいるところを\n発見<はっけん>されゲッチュされる。":
-  english: "Found relaxing on a bench,\ncaptured."
 "強力<きょうりょく>な'光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
   english: "Fires a powerful flashbang that stuns nearby enemies.No attack power."
-"サル軍基地<ぐんきち>の近<ちか>くで確認<かくにん>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Spotted near the Monkey Base!\nRequesting immediate rescue!"
 "高級<こうきゅう>ホテルの一室<いっしつ>で\nエレガントに過<す>ごしているところを発見<はっけん>。":
   english: "Found in a luxury hotel room,\nspending time elegantly."
 "敵<てき>を麻痺<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
   english: "Unleashes a dark scream that paralyzes enemies.No attack power."
 "%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
   english: "Memory Card not inserted in %.\nCannot save progress file.\nInsert the previously loaded Memory Card."
-"あそこからがイイトコロだったのに⋅⋅⋅。\nせっかちさんだなぁ。":
-  english: "It was just getting good⋅⋅⋅\nYou're so impatient."
 "トロコスチュームをゲットしました。":
   english: "You got the Toro costume!"
 "データA抽出完了!":
@@ -3177,64 +3422,18 @@ Gクラッシャー:
   english: "Fires a large dark orb forward. Small range but high destructive power."
 "強力<きょうりょく>な閃光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
   english: "Fires a powerful flashbang, knocking down nearby enemies. No attack power."
-" オレの待<ま>ち伏<ぶ>せに気<き>がつくとは!\n さてはレーダーだなっ!! ひきょうだぞっ!":
-  english: "You noticed my ambush!\nMust be wallhacks!Cheater!"
-"僕<ぼく>らは休暇中<きゅうかちゅう>だったんだ。\nさぼってたわけじゃないぞ。":
-  english: "We were on vacation.\nWe weren't slacking."
-"スタジアムでの目撃情報<もくげきじょうほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Sighted at the stadium!\nUrgent rescue needed!"
 "エンジン爆発! 残り1基です!":
   english: "Engine destroyed!1 left!"
-"ネコのしっぽは\nエサじゃないみャ!":
-  english: "A cat's tail\nisn't food nya!"
-"あと2秒<びょう>! いやあと1秒<びょう>はやく気<き>がつけば\nゲッチュされることはなかったのに⋅⋅⋅":
-  english: "2 more seconds!No,1 second sooner\nand I wouldn't be caught..."
-"最近<さいきん>、夜<よる>おそいんだよ~。\nゆっくり寝<ね>させてくれよ~。":
-  english: "Lately,I'm up late.\nLet me sleep in peace."
-"どうでもいいけどギターだけは返<かえ>してくれよ。\nアレがないと困<こま>るんだよ!":
-  english: "Whatever,but give my guitar back.\nI can't manage without it!"
-"アツくてアツくて⋅⋅⋅。\n意識<いしき>がもうろうとしてました。":
-  english: "So hot,so hot...\nI was losing consciousness."
-"あーたしかにボクですね。\n車<くるま>の上<うえ>ではねるのはよくないですね。":
-  english: "Ah,yeah,that's me.\nJumping on cars isn't good."
-"ヨットハーバーで発見<はっけん>!\n至急回収<しきゅうかいしゅう>に向<む>かってください。":
-  english: "Found at the yacht harbor!\nProceed to recover immediately!"
 "自由<じゆう>の女神<めがみ>を見<み>て\n大<おお>よろこびで踊<おど>っているところを発見<はっけん>。":
   english: "Spotted dancing in joy\nat the Statue of Liberty."
 "敵<てき>1体<たい>にバナナをぶつけ、無数<むすう>のピポサルに攻撃<こうげき>させます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
   english: "Throw a banana at 1 enemy and unleash countless Pipo Monkeys to attack. Lock-on recommended for accuracy."
-"新宿<しんじゅく>での目撃情報<もくげきじょうほう>が寄<よ>せられました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Sighting reported in Shinjuku!\nRequesting immediate rescue!"
-"波<なみ>にゆられながら\n魚<さかな>とたわむれているところを発見<はっけん>。":
-  english: "Found playing with fish\nwhile drifting on the waves."
 "見晴<みは>らしはいいけど\nケムリでまっ黒<くろ>みャ~。":
   english: "Great view,but\nall smoky and black,meow~."
-"なんてことをしてくれたんだ!\nあと少<すこ>しで悟<さと>りがひらけたかもしれないじゃないか!":
-  english: "What have you done?!\nI was so close to enlightenment!"
-"新宿<しんじゅく>で自家用車<じかようしゃ>にこだわっていたところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught in Shinjuku\nobsessing over a private car."
-"浮<う>き輪<わ>であそんでいるところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught playing\nwith a floatation ring."
-"サル軍残存兵<ぐんざんぞんへい>の中<なか>で確認<かくにん>!\n至急回収願<しきゅうかいしゅうねが>います!":
-  english: "Remaining monkey troops\nconfirmed! Immediate retrieval requested!"
-"船<ふね>の甲板<かんぱん>で\n釣<つ>りをしていたところを発見<はっけん>。":
-  english: "Found fishing\non the ship's deck."
-"ヨットハーバーで居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught napping\nat the yacht harbor."
-"街灯<がいとう>の上<うえ>で危険<きけん>な芸<げい>をしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught performing\ndangerous stunts on a streetlight."
 "灯台<とうだい>の上<うえ>で\n修行<しゅぎょう>しているところを発見<はっけん>。":
   english: "Found training\natop the lighthouse."
-"水族館<すいぞくかん>の壁<かべ>にへばりついてふるえている状態<じょうたい>を\n発見<はっけん>されゲッチュされる。":
-  english: "Caught clinging to\nthe aquarium wall, trembling."
-"転送<てんそう>ルームにてメンテナンス中<ちゅう>に\n発見<はっけん>されゲッチュされる。":
-  english: "Caught during maintenance\nin the transfer room."
-" 邪魔<じゃま>してもムダだ!\n この夏<なつ>の大会<たいかい>はボクらが優勝<ゆうしょう>だ!":
-  english: "You can't stop us!\nWe'll win this summer's tournament!"
 "一定時間<いっていじかん>バリアを張<は>って、無敵状態<むてきじょうたい>になります。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。":
   english: "For a while, you'll be invincible with a barrier.But no other special moves can be used."
-" 警備<けいび>の交代時間<こうたいじかん>なのに\n デイビッドが起<お>きてくれないんだよ!!":
-  english: "It's shift change time,\nbut David won't wake up!!"
 "巨大<きょだい>メカは\n科学者<かがくしゃ>のユメなのだ~♪":
   english: "Giant mechs are\na scientist's dream~♪"
 "高<たか>く羽<は>ばたくことのできるアクマのような外見<がいけん>の翼<つばさ>。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。":
@@ -3248,110 +3447,34 @@ Gクラッシャー:
   password: true
 "アーバンリゾートを\n楽<たの>しむみャ♪":
   english: "Enjoying the\nurban resort~♪"
-"だんじき6日目":
-  english: "Fasting, day 6"
-"ひとだのみ":
-  english: "Counting on others"
-"まちぶせ隊":
-  english: "Ambush squad"
-"すみっこで寝<ね>てればばれないと思<おも>ったんだけどなぁ⋅⋅⋅":
-  english: "I thought sleeping in the corner would keep me hidden..."
-"おくびょうもの":
-  english: "Coward"
-"まじめ":
-  english: "Serious"
-"演技派":
-  english: "Dramatic"
-"マスター":
-  english: "Master"
-"まちぶせキング":
-  english: "Ambush King"
-"まちぼうけ":
-  english: "Left Waiting"
-"おちょうしもの":
-  english: "Show-off"
-"なまいき":
-  english: "Sassy"
-"おおらか":
-  english: "Easygoing"
 "謎の男再び":
   english: "Mysterious Man Returns"
-"チャレンジャー":
-  english: "Challenger"
 "エンゼルセット":
   english: "Angel Set"
 "でちゃダメ":
   english: "Don't Go Out"
-"イライラ":
-  english: "Frustrated"
-"通信兵":
-  english: "Radio Operator"
-"きゅうか中":
-  english: "On Vacation"
-"さぼりキング":
-  english: "Slacker King"
 "ミッション結果<けっか>":
   english: "Mission Results"
   password: true
 "竜巻儀":
   english: "Tornado Ritual"
-"たっ、たのむから居眠<いねむ>りしてゲッチュされたなんて\nみんなに言<い>わないでよ。":
-  english: "P-please, don't tell anyone\nI got caught napping."
-"ボクのターンを見<み>てくれたか!?\n流<なが>れるようだったろう?":
-  english: "Did you see my turn!?\nIt was smooth, wasn't it?"
-"なぜだー!なぜオレのシニマネがみやぶられたんだー。\nこんなことがあっていいのかー!!":
-  english: "Why!? How did they see through my act!?\nHow could this happen!!"
 "チェーンボーナス":
   english: "Chain Bonus"
   password: true
-"エアコンがこわれて修理<しゅうり>してたのさ。\n怖<こわ>くてふるえてたんじゃないよ!":
-  english: "I was fixing the broken AC,\nnot shaking because I was scared!"
-"ボクは船<ふね>が盗<ぬす>まれないように見張<みは>っててあげたんですよー。\n感謝<かんしゃ>してほしいなぁ~。":
-  english: "I was making sure the ship didn't\nget jacked.You should thank me~."
 "エンジン爆発! 残り3基です!":
   english: "Engine destroyed! 3 left!"
 "エンジン爆発! 残り2基です!":
   english: "Engine destroyed! 2 left!"
-"鉄骨<てっこつ>にしがみついているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Found clinging to a steel beam\nand captured."
-"はしゃぎ疲<つか>れて\nうたた寝<ね>しているところを発見<はっけん>。":
-  english: "Found napping\nafter playing too hard."
-"浮<う>き輪<わ>をかかえた姿<すがた>が目撃<もくげき>されています!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Spotted with a float!\nPlease rescue immediately!"
-"ヨットハーバー付近<ふきん>の建物内<たてものない>で目撃<もくげき>されました!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Spotted in a building near the\nyacht harbor! Rescue immediately!"
 "キャラクター名":
   english: "Character Name"
-"トリガーハッピー":
-  english: "Trigger Happy"
 "洋服店<ようふくてん>で\nショッピング中<ちゅう>のところを発見<はっけん>。":
   english: "Found shopping\nat the clothing store."
-"サメの口<くち>にはさまっているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught while stuck\nin a shark's mouth."
-"コンテナターミナルの橋<はし>で発見<はっけん>されゲッチュされる。":
-  english: "Caught on the\ncontainer terminal bridge."
-"新宿<しんじゅく>でほふく前進中<ぜんしんちゅう>に発見<はっけん>されゲッチュされる。":
-  english: "Caught crawling\nin Shinjuku."
 "アーモンチェアに乗<の>って誘導<ゆうどう>ビームで攻撃<こうげき>します。 ビームを当<あ>てるには敵<てき>に近<ちか>づく必要<ひつよう>があります。":
   english: "Rides an armchair and attacks with a homing beam.Get close to hit enemies."
-" 偵察<ていさつ>してたんだ!\n ボクはさぼってたんじゃない!!":
-  english: "I was scouting!\nI wasn't slacking off!"
 "バナナ型<がた>のロケットに乗<の>って体当<たいあ>たりする技<わざ>です。 ロケット発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。":
   english: "A banana-shaped rocket attack.No brakes while active,so be careful!"
-" ジョーには負<ま>けられない!\n ヤツにだけは負<ま>けられないんだ。":
-  english: "I can't lose to Joe!\nNot to him!"
-" ワイは実家<じっか>に電話<でんわ>してただけや!\n 親<おや>と話<はなし>して何<なに>が悪<わる>いんじゃー!":
-  english: "I was just calling home!\nWhat's wrong with talking\nto my parents?!"
-"あっ、あそこはスゴイ高<たか>いんだぞ!\nダレだって怖<こわ>くなるさ!":
-  english: "Whoa, that's really high!\nAnyone would be scared!"
-" こっ、このオレ様<さま>の究極<きゅうきょく>のさぼりテクニックが\n 敗<やぶ>れるとは! さてはただものじゃないなっ!":
-  english: "My ultimate slacking skill\nfailed?! You're no ordinary foe!"
-" いたずらしてたんじゃない!\n 調子<ちょうし>が悪<わる>いようだから直<なお>そうとしただけだ!":
-  english: "I wasn't messing around!\nI was just fixing it!"
 "人間<にんげん>になることを夢<ゆめ>みる無邪気<むじゃき>なネコ。 クロたちといっしょに画面中<がめんじゅう>を走<はし>り回<まわ>ります。":
   english: "A naive cat dreaming of becoming human.Runs around the screen with Kuro and friends."
-"マイマイクを持<も>って地下街<ちかがい>に向<む>かったそうです!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Headed to the Metro with a mic!\nPlease rescue immediately!"
 "駅<えき>ビルでフリークライミングに\n挑戦<ちょうせん>しているところを発見<はっけん>。":
   english: "Found free climbing at the\nstation building."
 "前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の牙<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
@@ -3378,26 +3501,8 @@ Gクラッシャー:
   english: "Caught climbing the left pole\nto watch the stadium."
 "サバクノクニの王<おう>さま。 強力<きょうりょく>な「<のろ>いで援護<えんご>してくれます。        ":
   english: "King of the Desert Nation.Provides strong 'curse' support."
-"エントツで遊<あそ>んでいるところを発見<はっけん>されゲッチュされる。":
-  english: "Caught playing\nin the chimney."
-"あのエントツの中<なか>に何<なに>があるかって?\nそいつは言<い>えないな⋅⋅⋅":
-  english: "What's inside that chimney?\nI can't say..."
-" 海<うみ>はみんなのものだろ!\n どうしてボクがゲッチュされないといけないんだ!?":
-  english: "The sea belongs to everyone!\nWhy should I be caught?!"
-"めずらしいサカナが\nつれたみャ!":
-  english: "I caught a rare\nfish, meow!"
 '二丁拳銃<にちょうけんじゅう>にエネルギーを充"<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。':
   english: "Charges energy into dual pistols and spins to attack.Effective only on close-range foes."
-"コンテナターミナルで目撃<もくげき>されています!\n大至急<だいしきゅう>、救助<きゅうじょ>をお願<ねが>いします!":
-  english: "Seen at the container terminal!\nPlease rescue immediately!"
-" ひどいじゃないか!\n のんびり海<うみ>を見<み>てただけなのにっ!":
-  english: "That's so mean! I was just\nrelaxing and watching the sea!"
-" ボクは何<なに>も言<い>わない!\n 何<なに>をされても絶対<ぜったい>に言<い>わないぞ!":
-  english: "I won't say anything! No matter\nwhat you do,I won't talk!"
-" オレの待<ま>ち伏<ぶ>せに気<き>がつくとは!\n さすがだ!!":
-  english: "You noticed my ambush!\nImpressive!!"
-" 何<なに>がおかしい! ボクはサルだ!\n サルは木<き>に登<のぼ>るものなんだ!":
-  english: "What's so funny?! I'm a monkey!\nMonkeys climb trees!"
 "中級者<ちゅうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
   english: "Start an intermediate tournament."
 "上級者<じょうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
@@ -3415,20 +3520,10 @@ Gクラッシャー:
   english: "Data B extraction complete!"
 "改造レーザー砲":
   english: "Modified Laser Cannon"
-"つなぎがピチピチすぎてさ。\nやっぱりパンツ1枚<まい>がきもちいいね。":
-  english: "This suit's too tight.\nOne pair of pants feels better."
 "他のボタンでとりけし":
   english: "Cancel with another button."
-"プリマ志望":
-  english: "Prima Aspirant"
 "そうさ説明":
   english: "Control Instructions"
-"つりばか":
-  english: "Fishing Fool"
-"おせっかい":
-  english: "Busybody"
-"やせがまん":
-  english: "False Bravado"
 "ヘルプ文章<ぶんしょう>":
   english: "Help Text"
 "のデータを復元中<ふくげんちゅう>。":
@@ -3449,8 +3544,6 @@ Gクラッシャー:
 "フェイズ最終集計結果<さいしゅうしゅうけいけっか>":
   english: "Phase Final Tally Results"
   password: true
-"ジャンパー":
-  english: "Jumper"
 "ガチャメカ名":
   english: "Gadget Name"
 "サルカケル":
@@ -3461,14 +3554,8 @@ Gクラッシャー:
   english: "Sonic Ritual"
 "トロンウィング":
   english: "Tron Wing"
-"ジャグラー":
-  english: "Juggler"
 "ヘビータンク":
   english: "Heavy Tank"
-"ギタリスト":
-  english: "Guitarist"
-"ホームシック":
-  english: "Homesick"
 "雷光儀":
   english: "Lightning Ritual"
 "作成中<さくせいちゅう>":
@@ -3496,13 +3583,8 @@ Gクラッシャー:
   english: "Normal"
 "げきつよ":
   english: "Super Strong"
-"ぎじゅつしゃ":
-  # Probalbly 技術者, maybe engineer?
-  english: "Technician"
 "ああああ":
   english: "AAAA"
-"じつはさぼり":
-  english: "Actually Slacking"
 "からふぁいる":
   # Why is this in hiragana????
   # Probably 空ファイル
