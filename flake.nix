@@ -672,6 +672,41 @@
           dontInstall = true;
           dontFixup = true;
         };
+        fonts-prepatched = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-fonts-prepatched";
+          inherit version;
+          src = null;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            self.packages.${system}.default
+          ];
+
+          buildPhase = ''
+            mkdir "$out"
+            main_font_src=047_7243e526
+            pokepi_font_src=074_3943e3cc
+            echo "Dumping sv_msg and password fonts"
+            ssmm-patcher dump-textures \
+                "${self.packages.${system}.data-imhex-analysis}/analysis/$main_font_src.json" \
+                -o "$out/" \
+                -n sv_msg.gf0 \
+                -n password.gf0 \
+                -f aseprite \
+                -e None
+            echo "Dumping pokepi font"
+            ssmm-patcher dump-textures \
+                "${self.packages.${system}.data-imhex-analysis}/analysis/$pokepi_font_src.json" \
+                -o "$out/" \
+                -n pokepi.gf0 \
+                -f aseprite \
+                -e None
+            '';
+
+          dontInstall = true;
+          dontFixup = true;
+        };
         data-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-imhex-analysis";

@@ -870,7 +870,23 @@ def _empty_buffers(root: dict):
     default=[],
     type=str
 )
-def dump_textures(imhex_json, output_path, include_exts, exclude_exts):
+@click.option(
+    "-n", "--include-names",
+    multiple=True,
+    default=[],
+    type=str
+)
+@click.option(
+    "-f", "--fmt",
+    multiple=True,
+    default=["png", "aseprite"],
+    type=str
+)
+def dump_textures(
+    imhex_json, output_path, include_exts, exclude_exts, include_names, fmt
+):
+    fmt = [f.lower() for f in fmt]
+    click.echo(f"Dumping textures as {fmt}")
     imhex_json = Path(imhex_json)
     if output_path is None:
         output_path = Path(os.getcwd()) / imhex_json.with_suffix(".textures")
@@ -899,6 +915,9 @@ def dump_textures(imhex_json, output_path, include_exts, exclude_exts):
         if (ext in exclude_exts) or (include_exts and ext not in include_exts):
             click.echo(f"Skipping file with extension '{ext}'")
             continue
+        if (include_names and (fname.strip('\x00') not in include_names)):
+            click.echo(f"Skipping file {repr(fname)} not in {include_names}")
+            continue
 
         target_path.mkdir(parents=True, exist_ok=True)
 
@@ -920,25 +939,29 @@ def dump_textures(imhex_json, output_path, include_exts, exclude_exts):
 
                 plt_width = plt_data["width"]
                 plt_height = plt_data["height"]
-                plt_pil = util.img_buf_to_pillow(
-                    plt_px, plt_width, plt_height
-                )
-                plt_pil.save(target_path / "palette.png")
-                with open(target_path / "palette.bin", "wb") as f:
-                    f.write(plt_bin)
+                if "png" in fmt:
+                    plt_pil = util.img_buf_to_pillow(
+                        plt_px, plt_width, plt_height
+                    )
+                    plt_pil.save(target_path / "palette.png")
+                if "bin" in fmt:
+                    with open(target_path / "palette.bin", "wb") as f:
+                        f.write(plt_bin)
             else:
                 click.echo("Image appears to be direct color")
                 plt_px = None
 
             for idx, (img_px, img_bin) in enumerate(zip(img_pxs, img_bins)):
-                img_pil = util.img_buf_to_pillow(
-                    img_px, img_width, img_height, plt_img=plt_px
-                )
-                img_pil.save(target_path / f"{idx:04d}.png")
-                with open(target_path / f"{idx:04d}.bin", "wb") as f:
-                    f.write(img_bin)
+                if "png" in fmt:
+                    img_pil = util.img_buf_to_pillow(
+                        img_px, img_width, img_height, plt_img=plt_px
+                    )
+                    img_pil.save(target_path / f"{idx:04d}.png")
+                if "bin" in fmt:
+                    with open(target_path / f"{idx:04d}.bin", "wb") as f:
+                        f.write(img_bin)
 
-                if plt_px:
+                if plt_px and "aseprite" in fmt:
                     with open(target_path / f"{idx:04d}.aseprite", "wb") as f:
                         f.write(
                             AsepriteDumper(
