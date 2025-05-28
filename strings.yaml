@@ -2323,7 +2323,7 @@ Gクラッシャー:
 "リンゴー":
   english: "Ringo"
 "地下街<ちかがい>で居眠<いねむ>りしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught while dozing off in the Metro."
+  english: "Caught while dozing off in the\nMetro."
 "すみっこで寝<ね>てればばれないと思<おも>ったんだけどなぁ⋅⋅⋅":
   english: "I thought sleeping in the corner\nwould keep me hidden..."
 
@@ -2392,7 +2392,7 @@ Gクラッシャー:
   # I assume this is 大物?
   english: "Bigwig"
 "地下街<ちかがい>で一斉射撃<いっせいしゃげき>を指揮<しき>していたが\n撃破<げきは>されゲッチュされる。":
-  english: "Shot down and caught while leading a\nmonkey platoon."
+  english: "Shot down and caught while leading\na monkey platoon."
 " あれはすべて私<わたし>が指示<しじ>したことだ!\n 部下<ぶか>に責任<せきにん>はない!":
   english: "I'm the one in charge!\nMy soldiers are not to blame!"
 
@@ -2626,7 +2626,7 @@ Gクラッシャー:
 "おおらか":
   english: "Easygoing"
 "ヨットハーバーにて日光浴<にっこうよく>をしているところを\n発見<はっけん>されゲッチュされる。":
-  english: "Caught while sunbathing at the yacht\nharbor."
+  english: "Caught while sunbathing at the\nyacht harbor."
 "まーこんがり焼<や>けたし。\nよしとしようかな。":
   english: "Well,I'm nicely roasted.\nI guess it's fine."
 
@@ -2678,7 +2678,7 @@ Gクラッシャー:
 "おくびょうもの":
   english: "Coward"
 "水族館<すいぞくかん>の壁<かべ>にへばりついてふるえている状態<じょうたい>を\n発見<はっけん>されゲッチュされる。":
-  english: "Caught clinging to the aquarium wall,\ntrembling."
+  english: "Caught clinging to the aquarium\nwall,trembling."
 "あっ、あそこはスゴイ高<たか>いんだぞ!\nダレだって怖<こわ>くなるさ!":
   english: "Whoa,that's really high!\nAnyone would be scared!"
 
@@ -2733,7 +2733,7 @@ Gクラッシャー:
 "転送<てんそう>ルームにてメンテナンス中<ちゅう>に\n発見<はっけん>されゲッチュされる。":
   english: "Caught while doing maintenance in\nthe transfer room."
 " なんだあのマニュアルは! さっぱりわからないぞ!\n いったいだれが書<か>いたんだ!!":
-  english: "What's with this manual?! I can't\nunderstand it at all! Who wrote it?!"
+  english: "This manual sucks! I don't get it\nat all! Who wrote this?!"
 
 "ガーネット":
   english: "Garnet"
@@ -2766,7 +2766,7 @@ Gクラッシャー:
 "さぼりキング":
   english: "Slacker King"
 "ヨットハーバーにて日光浴<にっこうよく>の最中<さいちゅう>に\n発見<はっけん>されゲッチュされる。":
-  english: "Caught while sunbathing at the yacht\nharbor."
+  english: "Caught while sunbathing at the\nyacht harbor."
 " こっ、このオレ様<さま>の究極<きゅうきょく>のさぼりテクニックが\n 敗<やぶ>れるとは! さてはただものじゃないなっ!":
   english: "My ultimate slacking skill\nfailed?! You're no ordinary foe!"
 
@@ -2784,7 +2784,7 @@ Gクラッシャー:
 "ポケピ":
   english: "Pokepi"
 "はしゃぎ疲<つか>れて\nうたた寝<ね>しているところを発見<はっけん>。":
-  english: "Found napping after playing too hard."
+  english: "Found napping after playing too\nhard."
 "コンクリートジャングルは\n広<ひろ>すぎみャ⋅⋅⋅":
   english: "The concrete jungle is too vast..."
 "船<ふね>の甲板<かんぱん>で\n釣<つ>りをしていたところを発見<はっけん>。":
@@ -2794,20 +2794,58 @@ Gクラッシャー:
 "波<なみ>にゆられながら\n魚<さかな>とたわむれているところを発見<はっけん>。":
   english: "Found playing with fish while\ndrifting on the waves."
 "ネコのしっぽは\nエサじゃないみャ!":
-  # TODO: Pokepi speech font is different and doesn't seem to have an apostrophe?
-  # Doesn't appear to be a .gf font? or maybe from an unpatched file
   english: "A cat's tail isn't food nya!"
+"レフトポールによじ登<のぼ>って\n球場見物<きゅうじょうけんぶつ>していたところを発見<はっけん>。":
+  english: "Found climbing a light pole to see\nthe stadium."
+"野球場<やきゅうじょう>には魔物<まもの>が\n住<す>んでるのみャ♪":
+  english: "Monsters live in the baseball\nfield!"
+"港<みなと>の煙突<えんとつ>の上<うえ>で\nセキこんでいたところを発見<はっけん>。":
+  english: "Found coughing on top of a chimney\nat the harbor."
+"見晴<みは>らしはいいけど\nケムリでまっ黒<くろ>みャ~。":
+  english: "Great view, but it's all smoky and\nblack up here, meow~"
+"駅<えき>ビルでフリークライミングに\n挑戦<ちょうせん>しているところを発見<はっけん>。":
+  english: "Found free climbing at the station\nbuilding."
+"山<やま>がそこにあるから\nのぼるのみャ!":
+  english: "Mountains are meant to be climbed!"
+"高級<こうきゅう>ホテルの一室<いっしつ>で\nエレガントに過<す>ごしているところを発見<はっけん>。":
+  english: "Found living the high life in a\nfancy hotel room."
+"アーバンリゾートを\n楽<たの>しむみャ♪":
+  english: "Lovin' this resort, meow~♪"
 
 "スズキ":
   english: "Suzuki"
+"巨大<きょだい>なレーザー砲台<ほうだい>に\n感動<かんどう>しているところを発見<はっけん>。":
+  english: "Caught while admiring a giant laser\ncannon."
+"巨大<きょだい>メカは\n科学者<かがくしゃ>のユメなのだ~♪":
+  english: "Giant mechs are a scientist's\ndream~♪"
+
 "ピエール":
   english: "Pierre"
+"洋服店<ようふくてん>で\nショッピング中<ちゅう>のところを発見<はっけん>。":
+  english: "Found shopping at the clothing\nstore."
+"都会<とかい>にはエクセレントな服<ふく>が\nいっぱいね♪":
+  english: "The city is full of excellent\nclothes♪"
+
 "リッキー":
   english: "Ricky"
+"灯台<とうだい>の上<うえ>で\n修行<しゅぎょう>しているところを発見<はっけん>。":
+  english: "Found training atop a lighthouse."
+"修行<しゅぎょう>の道<みち>に\n終<お>わりはないんダス。":
+  english: "The road to mastery has no end,\ndasu."
+
 "ジュン":
   english: "Jun"
+"カラオケボックスで\nひとり熱唱<ねっしょう>しているところを発見<はっけん>。":
+  english: "Found singing alone in a karaoke\nbox."
+"次<つぎ>はもっと大<おお>きな会場<かいじょう>で\nコンサートっすよ~♪":
+  english: "Next time, I'll have a concert in an\neven bigger venue~♪"
+
 "トロ":
   english: "Toro"
+"自由<じゆう>の女神<めがみ>を見<み>て\n大<おお>よろこびで踊<おど>っているところを発見<はっけん>。":
+  english: "Found dancing in joy at the Statue\nof Liberty."
+"自由<じゆう>の女神<めがみ>も\nソフトクリームが大好<だいす>きニャ♪":
+  english: "The Statue of Liberty loves ice\ncream, nya!"
 
 # Extras screen
 "ピポサル軍来襲!":
@@ -3304,18 +3342,7 @@ Gクラッシャー:
   english: "Captured while lying in wait in\na shop window."
 "ジュンを発見しました!":
   english: "Jun has been found!"
-"港<みなと>の煙突<えんとつ>の上<うえ>で\nセキこんでいたところを発見<はっけん>。":
-  english: "Found coughing on top of a\nchimney at the harbor."
-"巨大<きょだい>なレーザー砲台<ほうだい>に\n感動<かんどう>しているところを発見<はっけん>。":
-  english: "Captured while admiring a giant\nlaser cannon."
 
-### Monkey quotes
-"山<やま>がそこにあるから\nのぼるのみャ!":
-  english: "Mountains are meant\nto be climbed!"
-"都会<とかい>にはエクセレントな服<ふく>が\nいっぱいね♪":
-  # TODO: figure out why this doesn't work
-  #english: "The city is full of\nexcellent clothes♪"
-  english: "The city is full of\nexcellent clothes."
 
 ## Monkey descriptions
 "つよい":
@@ -3325,10 +3352,6 @@ Gクラッシャー:
   english: "Weak"
 
 # Honestly idc this is mostly AI slop hopefully it's not too bad
-"自由<じゆう>の女神<めがみ>も\nソフトクリームが大好<だいす>きニャ♪":
-  english: "The Statue of Liberty\nloves ice cream, nya!"
-"修行<しゅぎょう>の道<みち>に\n終<お>わりはないんダス。":
-  english: "The path of training\nnever ends, dasu."
 "周辺<しゅうへん>の敵<てき>を吸<す>い込<こ>む巨大<きょだい>な竜巻<たつまき>を発生<はっせい>させます。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
   english: "Summons a massive tornado to suck in nearby foes.Hits a wide area."
 "サウンドの出カ形式<しゅつりょくけいしき>を選択<せんたく>してください。":
@@ -3402,8 +3425,6 @@ Gクラッシャー:
   english: "Legend 1st prelim stage."
 "強力<きょうりょく>な'光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
   english: "Fires a powerful flashbang that stuns nearby enemies.No attack power."
-"高級<こうきゅう>ホテルの一室<いっしつ>で\nエレガントに過<す>ごしているところを発見<はっけん>。":
-  english: "Found in a luxury hotel room,\nspending time elegantly."
 "敵<てき>を麻痺<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
   english: "Unleashes a dark scream that paralyzes enemies.No attack power."
 "%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
@@ -3424,29 +3445,17 @@ Gクラッシャー:
   english: "Fires a powerful flashbang, knocking down nearby enemies. No attack power."
 "エンジン爆発! 残り1基です!":
   english: "Engine destroyed!1 left!"
-"自由<じゆう>の女神<めがみ>を見<み>て\n大<おお>よろこびで踊<おど>っているところを発見<はっけん>。":
-  english: "Spotted dancing in joy\nat the Statue of Liberty."
 "敵<てき>1体<たい>にバナナをぶつけ、無数<むすう>のピポサルに攻撃<こうげき>させます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
   english: "Throw a banana at 1 enemy and unleash countless Pipo Monkeys to attack. Lock-on recommended for accuracy."
-"見晴<みは>らしはいいけど\nケムリでまっ黒<くろ>みャ~。":
-  english: "Great view,but\nall smoky and black,meow~."
-"灯台<とうだい>の上<うえ>で\n修行<しゅぎょう>しているところを発見<はっけん>。":
-  english: "Found training\natop the lighthouse."
 "一定時間<いっていじかん>バリアを張<は>って、無敵状態<むてきじょうたい>になります。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。":
   english: "For a while, you'll be invincible with a barrier.But no other special moves can be used."
-"巨大<きょだい>メカは\n科学者<かがくしゃ>のユメなのだ~♪":
-  english: "Giant mechs are\na scientist's dream~♪"
 "高<たか>く羽<は>ばたくことのできるアクマのような外見<がいけん>の翼<つばさ>。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。":
   english: "Wings with a devilish look that let you soar high.Use them freely without energy cost."
-"次<つぎ>はもっと大<おお>きな会場<かいじょう>で\nコンサートっすよ~♪":
-  english: "Next time,\nit's a bigger concert venue~♪"
 "ラウンドを始<はじ>めます。":
   english: "Round Start."
 "ラウンド途中集計結果<とちゅうしゅうけいけっか>":
   english: "Round interim results"
   password: true
-"アーバンリゾートを\n楽<たの>しむみャ♪":
-  english: "Enjoying the\nurban resort~♪"
 "謎の男再び":
   english: "Mysterious Man Returns"
 "エンゼルセット":
@@ -3467,16 +3476,12 @@ Gクラッシャー:
   english: "Engine destroyed! 2 left!"
 "キャラクター名":
   english: "Character Name"
-"洋服店<ようふくてん>で\nショッピング中<ちゅう>のところを発見<はっけん>。":
-  english: "Found shopping\nat the clothing store."
 "アーモンチェアに乗<の>って誘導<ゆうどう>ビームで攻撃<こうげき>します。 ビームを当<あ>てるには敵<てき>に近<ちか>づく必要<ひつよう>があります。":
   english: "Rides an armchair and attacks with a homing beam.Get close to hit enemies."
 "バナナ型<がた>のロケットに乗<の>って体当<たいあ>たりする技<わざ>です。 ロケット発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。":
   english: "A banana-shaped rocket attack.No brakes while active,so be careful!"
 "人間<にんげん>になることを夢<ゆめ>みる無邪気<むじゃき>なネコ。 クロたちといっしょに画面中<がめんじゅう>を走<はし>り回<まわ>ります。":
   english: "A naive cat dreaming of becoming human.Runs around the screen with Kuro and friends."
-"駅<えき>ビルでフリークライミングに\n挑戦<ちょうせん>しているところを発見<はっけん>。":
-  english: "Found free climbing at the\nstation building."
 "前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の牙<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
   english: "Countless dark fangs rise ahead.Attacks wide-range enemies."
 "ジャンプし、空中<くうちゅう>から真下<ました>に矢<や>を放<はな>ち、衝撃波<しょうげきは>で攻撃<こうげき>します。 地上<ちじょう>の敵<てき>に有効<ゆうこう>です。":
@@ -3495,10 +3500,6 @@ Gクラッシャー:
   english: "Large wing-shaped jetpack.Flapping resembles a beautiful angel."
 "チップを諦<あきら>めてステージセレクトに戻<もど>ります。":
   english: "Abandon chip and return to stage select."
-"野球場<やきゅうじょう>には魔物<まもの>が\n住<す>んでるのみャ♪":
-  english: "Monsters live in the baseball field!"
-"レフトポールによじ登<のぼ>って\n球場見物<きゅうじょうけんぶつ>していたところを発見<はっけん>。":
-  english: "Caught climbing the left pole\nto watch the stadium."
 "サバクノクニの王<おう>さま。 強力<きょうりょく>な「<のろ>いで援護<えんご>してくれます。        ":
   english: "King of the Desert Nation.Provides strong 'curse' support."
 '二丁拳銃<にちょうけんじゅう>にエネルギーを充"<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。':
@@ -3597,5 +3598,3 @@ Gクラッシャー:
   english: "Parts with different attributes cannot be set."
 "を編集中":
   english: "is being edited"
-"カラオケボックスで\nひとり熱唱<ねっしょう>しているところを発見<はっけん>。":
-  english: "Found singing alone\nin a karaoke box."
