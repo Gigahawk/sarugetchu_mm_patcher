@@ -7835,6 +7835,11 @@ ENCODING_MAP = {
     "4ABEE95E": BYTES_TO_CHAR_DEFAULT,            # gz/game_result.vs.gz
 
     "00940549": BYTES_TO_CHAR_DEFAULT,            # gz/menu_common.gz
+    # Pokepi fonts, technically the encoding is
+    # slightly different but everything that
+    # matters is the same
+    "36C5DE03": BYTES_TO_CHAR_DEFAULT,            # ??
+    "3943E3CC": BYTES_TO_CHAR_DEFAULT,            # gz/menu_edit_sarubook_in_pipo6.gz
 
     "87F51E0C": BYTES_TO_CHAR_DEFAULT,            # gz/menu_story.01_boss01_gori01.gz
     "41F34892": BYTES_TO_CHAR_DEFAULT,            # gz/menu_story.02_city01_a.gz
@@ -7950,6 +7955,8 @@ ENCODING_LIMITS = {
     "4ABEE95E": None,  # gz/game_result.vs.gz
 
     "00940549": None,  # gz/menu_common.gz
+    "36C5DE03": None,  # ??
+    "3943E3CC": None,  # gz/menu_edit_sarubook_in_pipo6.gz
 
     "87F51E0C": None,  # gz/menu_story.01_boss01_gori01.gz
     "41F34892": None,  # gz/menu_story.02_city01_a.gz

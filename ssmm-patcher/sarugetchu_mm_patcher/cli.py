@@ -1257,7 +1257,11 @@ def patch_font(font_src_path, resource_path, output_path, hash):
     blacklist = [
         # This file appears to have smaller 16x16 images, not sure what it's
         # used for
-        b"sv_msg_2.gf0"
+        b"sv_msg_2.gf0",
+        # Related to passwords?
+        b"password.gf0",
+        # Pokepi speech
+        b"pokepi.gf0",
     ]
     for sd in string_data:
         target_encoding = BYTES_TO_CHAR_MINIMAL
@@ -1280,12 +1284,12 @@ def patch_font(font_src_path, resource_path, output_path, hash):
                 )
                 continue
             target_token_idx = token_to_idx(token)//2
-            _token_idx_orig = token_to_idx(token)
-            print(f"Patching target token {token} with texture idx {target_token_idx}, raw idx {_token_idx_orig}")
+            #_token_idx_orig = token_to_idx(token)
+            #print(f"Patching target token {token} with texture idx {target_token_idx}, raw idx {_token_idx_orig}")
             source_token = translator.char_to_bytes[char][0]
             source_token_idx = token_to_idx(source_token)//2
-            _src_token_idx_orig = token_to_idx(source_token)
-            print(f"Pulling data from source token {source_token} with texture idx {source_token_idx}, raw idx {_src_token_idx_orig}")
+            #_src_token_idx_orig = token_to_idx(source_token)
+            #print(f"Pulling data from source token {source_token} with texture idx {source_token_idx}, raw idx {_src_token_idx_orig}")
             pxl_data = source_ex.get_pixel_bytes(source_token_idx)
             #_source_img = source_ex.get_image(source_token_idx)
             #_source_img.save(
