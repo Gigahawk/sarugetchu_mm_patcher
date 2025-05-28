@@ -31,7 +31,8 @@ It is incredibly inefficient and resource intensive compared to directly running
 
 ## Usage
 
-1. Download the patcher package from TODO and extract it somewhere
+1. Download the all files for the latest patcher package from https://github.com/Gigahawk/sarugetchu_mm_patcher/releases and extract it somewhere
+    - GitHub limits release artifacts to about 2Gb in size, so the package is split into a multifile zip
 2. Move/copy `mm.iso` and `sdk.iso` into the same folder as `patch.bat`
 3. Double click `check_integrity.bat` to check the MD5s of your files match
 4. Double click `patch.bat` to start the patcher VM. Once the VM shuts down the patched version will be called `mm_patched.iso`.

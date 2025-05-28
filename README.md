@@ -2,6 +2,10 @@
 
 This repo contains code to patch the Japanese release of Sarugetchu Million Monkeys for English readers.
 
+## Status
+
+This translation is functionally 100% complete, but has not been thoroughly tested.
+
 ## Usage
 
 Ensure the iso you have is:
@@ -24,6 +28,11 @@ See [here](win/README.md)
 
 # Contributing
 
+## Testing
+
+If you find issues (game crashes, untranslated text, garbage text, etc.) please open an issue with screenshots/steps to reproduce.
+> Note: do not submit savestates, they are not compatible between different versions of the patch. Please submit PCSX2 compatible memory cards if the issue requires some progress to recreate.
+
 ## Cutscenes
 
 See [subs](subs), these are just standard `.ass` and `.srt` files that can be edited in any standard editor
@@ -32,7 +41,6 @@ See [subs](subs), these are just standard `.ass` and `.srt` files that can be ed
 
 Basically every string in the game should have a valid translation in [strings.yaml](strings.yaml).
 I've tried to make sure that all of the ones you will most likely see during gameplay are good, but a lot of the lines at the bottom are AI generated with very little oversight.
-If you happen to run into one please open an issue with steps on how to make it show up (note, do not use savestates, they are not compatible between different versions of the patch)
 
 ## Textures
 
@@ -46,10 +54,6 @@ Open an issue if there is a specific texture you want to edit and can't figure o
 ## Why not just provide a `.ups` patch file?
 
 I'm not a lawyer, but I want to minimize the risk of distributing IP that I do not have the rights to.
-
-# Known issues
-
-- Pokepi speech bubbles in the Saru Book use a font that doesn't have a `'` character
 
 # Appendix
 
