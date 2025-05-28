@@ -707,6 +707,33 @@
           dontInstall = true;
           dontFixup = true;
         };
+        fonts-patched = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-fonts-patched";
+          inherit version;
+          src = ./font-overlay;
+          dontUnpack = true;
+
+          nativeBuildInputs = [
+            self.packages.${system}.default
+          ];
+
+          buildPhase = ''
+            mkdir "$out"
+            echo "Copying base fonts"
+            cp -r --no-preserve=mode,ownership ${self.packages.${system}.fonts-prepatched}/* "$out"
+
+            find "$src" -type f -name '*.aseprite' -print0 | while IFS= read -r -d "" file; do
+              nostore=''${file#$src/}
+              target=$(echo "$nostore" | sed -E 's#([0-9]{4})[^/]*\.aseprite$#\1.aseprite#')
+              echo "Replacing: $target with $nostore"
+              cp $file $out/$target
+            done
+            '';
+
+          dontInstall = true;
+          dontFixup = true;
+        };
         data-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-imhex-analysis";
