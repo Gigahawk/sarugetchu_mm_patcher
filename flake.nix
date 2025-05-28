@@ -195,24 +195,24 @@
         #"046_8205e9b5" # gz/game_common_sound_bd.gz
         "047_7243e526" # gz/game_result.story.gz
         "048_4abee95e" # gz/game_result.vs.gz
-        "066_c9448ba5" # gz/menu1.gz
-        "067_a60a8ca5" # gz/menu2.gz
-        "068_245dc640" # gz/menu_character_01.gz
-        "069_0123c740" # gz/menu_character_02.gz
-        "070_00940549" # gz/menu_common.gz
-        "071_d2aeb433" # gz/menu_edit1.gz
-        "072_af74b533" # gz/menu_edit2.gz
+        #"066_c9448ba5" # gz/menu1.gz
+        #"067_a60a8ca5" # gz/menu2.gz
+        #"068_245dc640" # gz/menu_character_01.gz
+        #"069_0123c740" # gz/menu_character_02.gz
+        #"070_00940549" # gz/menu_common.gz
+        #"071_d2aeb433" # gz/menu_edit1.gz
+        #"072_af74b533" # gz/menu_edit2.gz
         "073_36c5de03" # ??
         "074_3943e3cc" # gz/menu_edit_sarubook_in_pipo6.gz
-        "075_0569c31e" # gz/menu_edit_sound.gz
-        "076_3cdca805" # ??
-        "077_3b4fb376" # gz/menu_edit_sprite.ga_kakeru.gz
-        "078_594309b8" # gz/menu_edit_sprite.ga_natsumi.gz
-        "079_e3710b47" # ??
-        "080_d7d0bd8c" # ??
-        "081_d1e4d526" # gz/menu_edit_sprite.gf_spector.gz
-        "082_6fd16046" # gz/menu_edit_summon.gz
-        "083_88455768" # gz/menu_sound.gz
+        #"075_0569c31e" # gz/menu_edit_sound.gz
+        #"076_3cdca805" # ??
+        #"077_3b4fb376" # gz/menu_edit_sprite.ga_kakeru.gz
+        #"078_594309b8" # gz/menu_edit_sprite.ga_natsumi.gz
+        #"079_e3710b47" # ??
+        #"080_d7d0bd8c" # ??
+        #"081_d1e4d526" # gz/menu_edit_sprite.gf_spector.gz
+        #"082_6fd16046" # gz/menu_edit_summon.gz
+        #"083_88455768" # gz/menu_sound.gz
         "084_87f51e0c" # gz/menu_story.01_boss01_gori01.gz
         "085_41f34892" # gz/menu_story.02_city01_a.gz
         "086_e76bf53f" # gz/menu_story.03_city02_a.gz
