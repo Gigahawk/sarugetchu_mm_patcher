@@ -663,7 +663,7 @@
             # HACK: need to pre patch sv_msg.gf before we copy it into all our files
             echo "Prepatching $sv_font_src font"
             ssmm-patcher patch-resource \
-                -t ${self.packages.${system}.textures-imhex-analysis}/analysis/all/ \
+                -t ${self.packages.${system}.textures-imhex-analysis}/analysis/ \
                 -o "$out/sv_font_src" \
                 "${self.packages.${system}.data-jp-extracted}/DATA1/$sv_font_src" \
                 "${self.packages.${system}.data-imhex-analysis}/analysis/$sv_font_src.json"
@@ -947,7 +947,7 @@
 
                 ssmm-patcher patch-resource \
                   -s $src \
-                  -t ${self.packages.${system}.textures-imhex-analysis}/analysis/{}/ \
+                  -t ${self.packages.${system}.textures-imhex-analysis}/analysis/ \
                   "{}" \
                   "${self.packages.${system}.data-imhex-analysis}/analysis/{}.json"
               '
