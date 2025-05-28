@@ -723,12 +723,18 @@
             echo "Copying base fonts"
             cp -r --no-preserve=mode,ownership ${self.packages.${system}.fonts-prepatched}/* "$out"
 
+            echo "Patching base fonts"
             find "$src" -type f -name '*.aseprite' -print0 | while IFS= read -r -d "" file; do
               nostore=''${file#$src/}
               target=$(echo "$nostore" | sed -E 's#([0-9]{4})[^/]*\.aseprite$#\1.aseprite#')
               echo "Replacing: $target with $nostore"
               cp $file $out/$target
             done
+
+            echo "Building minimal font"
+            ssmm-patcher build-minimal-font \
+              $out/sv_msg.gf0 \
+              -o $out/sv_minimal.gf0
             '';
 
           dontInstall = true;

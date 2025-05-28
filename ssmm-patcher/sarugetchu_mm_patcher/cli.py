@@ -1230,6 +1230,46 @@ def dump_fonts(ctx, imhex_json, textures_path, output_path):
             click.echo(f"Found texture file {img}, copying to {_out_path}")
             shutil.copyfile(img, _out_path)
 
+@cli.command()
+@click.argument(
+    "sv_msg_path",
+    type=click.Path(),
+)
+@click.option(
+    "-o", "--output",
+    default=None,
+    type=click.Path(),
+)
+def build_minimal_font(sv_msg_path, output):
+    sv_msg_path = Path(sv_msg_path)
+    if output is None:
+        output = Path.cwd() / "sv_minimal.gf0"
+    output = Path(output)
+    output.mkdir(parents=True, exist_ok=True)
+    translator = EncodingTranslator(encoding=BYTES_TO_CHAR_DEFAULT)
+    for token, char in BYTES_TO_CHAR_MINIMAL.items():
+        if token in BYTES_TO_CHAR_SPECIAL:
+            continue
+        target_token_idx = token_to_idx(token)
+        if target_token_idx % 2:
+            continue
+        target_token_idx = token_to_idx(token)//2
+        _token_idx_orig = token_to_idx(token)
+        click.echo(
+            f"Patching target token {token} with texture idx "
+            f"{target_token_idx}, raw idx {_token_idx_orig}"
+        )
+        source_token = translator.char_to_bytes[char][0]
+        source_token_idx = token_to_idx(source_token)//2
+        _src_token_idx_orig = token_to_idx(source_token)
+        click.echo(
+            f"Pulling data from source token {source_token} with texture idx "
+            f"{source_token_idx}, raw idx {_src_token_idx_orig}"
+        )
+        src_path = sv_msg_path / f"{source_token_idx:04d}.aseprite"
+        target_path = output / f"{target_token_idx:04d}.aseprite"
+        click.echo(f"Copying {src_path} to {target_path}")
+        shutil.copyfile(src_path, target_path)
 
 @cli.command()
 @click.argument(
