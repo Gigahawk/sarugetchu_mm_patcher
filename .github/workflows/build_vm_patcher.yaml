@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-vm:
-    name: Test on Ubuntu
+    name: Build VM
     runs-on: ubuntu-latest
     steps:
       - name: Install qemu-utils
@@ -14,7 +14,7 @@ jobs:
           sudo apt-get install qemu-utils
 
       - uses: actions/checkout@v4
-    
+
       - name: Download Windows deps
         run: |
           cd win
@@ -24,6 +24,21 @@ jobs:
         run: |
           cd win
           ./build_vm.sh
+
+      # This is needed because the release action
+      # Doesn't do it on it's own
+      - name: Zip up release package
+        if: github.ref_type == 'tag'
+        # GitHub limits the size of release artifacts
+        run: zip -r -s 2000M ssmm_build_vm.zip win/
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
+        with:
+          generate_release_notes: true
+          prerelease: true
+          files: ssmm_build_vm.z*
 
       - name: Archive objects
         # Skip archive if running on act
