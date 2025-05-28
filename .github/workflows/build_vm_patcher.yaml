@@ -30,7 +30,7 @@ jobs:
       - name: Zip up release package
         if: github.ref_type == 'tag'
         # GitHub limits the size of release artifacts
-        run: zip -r -s 2000M ssmm_build_vm.zip win/
+        run: zip -r -s 2G ssmm_build_vm${{ github.ref_name }}.zip win/
 
       - name: Release
         uses: softprops/action-gh-release@v2
@@ -38,7 +38,7 @@ jobs:
         with:
           generate_release_notes: true
           prerelease: true
-          files: ssmm_build_vm.z*
+          files: ssmm_build_vm${{ github.ref_name }}.z*
 
       - name: Archive objects
         # Skip archive if running on act
