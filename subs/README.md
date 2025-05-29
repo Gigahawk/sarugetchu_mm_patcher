@@ -4,7 +4,9 @@
 - [Sangyo](https://ggbot.itch.io/sangyo-font)
 - [Comic Relief](https://fontlibrary.org/en/font/comic-relief)
 
-# Credits
+# Credits/Licensing
+
+All subtitles are licensed under CC-BY-SA 4.0.
 
 - Most JP subtitles generated with [Whisper](https://github.com/openai/whisper), with some manually transcribed by [Gigahawk](https://github.com/Gigahawk)
 - CN subtitles manually copied from CN release by [Gigahawk](https://github.com/Gigahawk)

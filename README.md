@@ -48,6 +48,19 @@ Some minimal translation of existing textures has been done.
 Textures must be in the `.aseprite` format, you can run `nix build .#data-textures-extracted` to dump all textures from the game, or `.#data-fonts-extracted` for the font textures.
 Open an issue if there is a specific texture you want to edit and can't figure out how to extract it.
 
+# Licensing
+
+> Disclaimer: This project is an unofficial fan translation patcher.
+> This project contains only original code and translation data.
+> It is not affiliated with or endorsed by Sony or the original developers.
+> No copyrighted game data is included or distributed.
+> Users must provide their own legally obtained copy of the game.
+
+- All original code in this repository is licensed under GPL 3.0 (see LICENSE).
+    - [PS2Textures](https://github.com/leeao/PS2Textures) was written by [leeao](https://github.com/leeao)
+- The translation file is licensed under CC-BY-SA 4.0 (see LICENSE_strings)
+- Custom texture and subtitle files are licensed under CC-BY-SA 4.0 (see `textures/LICENSE_textures` and `subs/LICENSE_subs` respectively)
+
 
 # FAQ
 
