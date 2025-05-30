@@ -9,8 +9,8 @@ This translation is functionally 100% complete, but has not been thoroughly test
 ## Usage
 
 Ensure the iso you have is:
-    - named `mm.iso`
-    - matches the md5 `946d0aeb90772efd9105b0f785b2c7ec`
+- named `mm.iso`
+- matches the md5 `946d0aeb90772efd9105b0f785b2c7ec`
 
 ### Windows
 
