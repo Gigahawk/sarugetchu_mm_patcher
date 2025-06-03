@@ -1,3 +1,11 @@
 *.ps2 filter=lfs diff=lfs merge=lfs -text
 *.hexproj filter=lfs diff=lfs merge=lfs -text
 *.aseprite filter=lfs diff=lfs merge=lfs -text
+*_pcsx2_superblock filter=lfs diff=lfs merge=lfs -text
+*_pcsx2_index filter=lfs diff=lfs merge=lfs -text
+*_pcsx2_meta_directory filter=lfs diff=lfs merge=lfs -text
+*BISCPS-15115-SGMM's filter=lfs diff=lfs merge=lfs -text
+*chardata filter=lfs diff=lfs merge=lfs -text
+*icon.sys filter=lfs diff=lfs merge=lfs -text
+*progress filter=lfs diff=lfs merge=lfs -text
+*static.ico filter=lfs diff=lfs merge=lfs -text
