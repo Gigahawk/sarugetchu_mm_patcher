@@ -960,5 +960,13 @@
           export FONTCONFIG_FILE=${fontconfig_file}
         '';
       };
+      devShells.win = pkgs.mkShell {
+        packages = [
+          pkgs.wget
+          pkgs.apk-tools
+          pkgs.qemu-utils
+          pkgs.kmod
+        ];
+      };
     });
 }
