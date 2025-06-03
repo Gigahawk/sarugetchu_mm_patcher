@@ -1,3 +1,4 @@
+import re
 from dataclasses import dataclass
 from collections.abc import Buffer
 import string
@@ -115,7 +116,7 @@ class TrackedByteArray(bytearray):
         return orig_idx
 
 class ImhexChunkFinder:
-    def __init__(self, imhex_analysis: dict, chunk_type: str):
+    def __init__(self, imhex_analysis: dict, chunk_type: str | re.Pattern):
         self.data = imhex_analysis
         self.chunk_type = chunk_type
         self.chunks: list[dict] = []
@@ -126,7 +127,15 @@ class ImhexChunkFinder:
             start = self.data
         if isinstance(start, dict):
             if "__type" in start.keys():
-                if start["__type"] ==  self.chunk_type:
+                if (
+                    isinstance(self.chunk_type, str)
+                    and start["__type"] == self.chunk_type
+                ):
+                    self.chunks.append(start)
+                elif (
+                    isinstance(self.chunk_type, re.Pattern)
+                    and self.chunk_type.match(start["__type"])
+                ):
                     self.chunks.append(start)
             for obj in start.values():
                 self.parse(start=obj)

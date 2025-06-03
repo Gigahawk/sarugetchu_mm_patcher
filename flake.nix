@@ -2,41 +2,41 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
-    poetry2nix.url = "github:nix-community/poetry2nix";
-    ps2str.url = "github:Gigahawk/ps2str-nix";
-    ssmm-mux.url = "github:Gigahawk/ssmm-mux";
-    ps2isopatcher.url = "github:Gigahawk/ps2isopatcher";
-    bgrep.url = "github:Gigahawk/bgrep-nix";
-    # Waiting for merge of https://github.com/NixOS/nixpkgs/pull/339716
-    nixpkgs-clps2c.url = "github:Gigahawk/nixpkgs?ref=clps2c-compiler";
-    # Waiting for merge of https://github.com/NixOS/nixpkgs/pull/406377
-    nixpkgs-ps2patchelf.url = "github:Gigahawk/nixpkgs?ref=ps2patchelf";
     # Waiting for merge of https://github.com/NixOS/nixpkgs/pull/410329
-    nixpkgs-sangyo.url = "github:Gigahawk/nixpkgs?ref=sangyo_ttf";
+    #nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:Gigahawk/nixpkgs?ref=ssmm-patcher";
+    flake-utils.url = "github:numtide/flake-utils";
+    ssmm-patcher = {
+      url = "path:./ssmm-patcher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ps2str = {
+      url = "github:Gigahawk/ps2str-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ssmm-mux = {
+      url = "github:Gigahawk/ssmm-mux";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ps2isopatcher = {
+      url = "github:Gigahawk/ps2isopatcher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     flake-utils,
-    poetry2nix,
+    ssmm-patcher,
     ps2str,
     ssmm-mux,
     ps2isopatcher,
-    bgrep,
-    nixpkgs-clps2c,
-    nixpkgs-ps2patchelf,
-    nixpkgs-sangyo,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
-      pkgs-clps2c = import nixpkgs-clps2c { inherit system; };
-      pkgs-ps2patchelf = import nixpkgs-ps2patchelf { inherit system; };
-      pkgs-sangyo = import nixpkgs-sangyo { inherit system; };
       mm-jp-iso = (pkgs.requireFile {
         name = "mm.iso";
         url = "";
@@ -352,37 +352,16 @@
         "785_aa3bb564" # gz/victory.vs.volcano.gz
       ];
       resourceFilesStr = builtins.concatStringsSep "\n" resourceFiles;
-      inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; })
-        mkPoetryEnv mkPoetryApplication defaultPoetryOverrides;
-      #poetryEnv = mkPoetryEnv {
-      #  projectDir = ./.;
-      #};
       fontconfig_file = pkgs.makeFontsConf {
         fontDirectories = [
           pkgs.freefont_ttf
           pkgs.comic-relief
-          pkgs-sangyo.sangyo_ttf
+          pkgs.sangyo_ttf
         ];
       };
     in {
       packages = {
-        ssmm-patcher = mkPoetryApplication {
-          projectDir = ./ssmm-patcher;
-          overrides = defaultPoetryOverrides.extend
-            (self: super: {
-              ps2isopatcher = super.ps2isopatcher.overridePythonAttrs
-              (
-                old: {
-                  buildInputs = (old.buildInputs or [ ]) ++ [
-                    super.poetry
-                  ];
-                }
-              );
-            });
-          # Dependency check is broken for git dependencies on current nixpkgs
-          dontCheckRuntimeDeps = true;
-        };
-        default = self.packages.${system}.ssmm-patcher;
+        default = self.packages.${system}.iso-patched;
         iso-jp-extracted = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-jp-iso-extracted";
@@ -578,7 +557,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.ssmm-patcher
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
           buildPhase = data-unpacked-buildPhase self.packages.${system}.iso-jp-extracted;
@@ -604,7 +583,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.ssmm-patcher
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
           dontBuild = true;
@@ -654,7 +633,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.default
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
           buildPhase = ''
@@ -749,7 +728,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.ssmm-patcher
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
           buildPhase = ''
@@ -777,7 +756,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.ssmm-patcher
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
           buildPhase = ''
@@ -804,7 +783,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.ssmm-patcher
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
           buildPhase = ''
@@ -828,7 +807,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.ssmm-patcher
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
           buildPhase = ''
@@ -857,7 +836,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.ssmm-patcher
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
           buildPhase = ''
@@ -931,7 +910,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.default
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
 
@@ -993,7 +972,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            self.packages.${system}.default
+            ssmm-patcher.packages.${system}.ssmm-patcher
           ];
 
           buildPhase = ''
@@ -1029,7 +1008,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            pkgs-clps2c.clps2c-compiler
+            pkgs.clps2c-compiler
           ];
 
           buildPhase = ''
@@ -1077,7 +1056,7 @@
           dontUnpack = true;
 
           nativeBuildInputs = [
-            pkgs-ps2patchelf.ps2patchelf
+            pkgs.ps2patchelf
           ];
 
           buildPhase = ''
@@ -1127,30 +1106,17 @@
         };
       };
       devShells.default = pkgs.mkShell {
-        #buildInputs = [
-        #  poetryEnv
-        #];
         packages = [
-          self.packages.${system}.default
-        ];
-      };
-      devShells.poetry = pkgs.mkShell {
-        buildInputs = [
-          # Required to make poetry shell work properly
-          pkgs.bashInteractive
-        ];
-        packages = [
+          ssmm-patcher.packages.${system}.default
           ssmm-mux.packages.${system}.default
           ps2str.packages.${system}.default
-          #bgrep.packages.${system}.default
-          pkgs.poetry
           pkgs.ffmpeg
           pkgs.openai-whisper
           pkgs.dos2unix
           pkgs.vlc
           pkgs.imhex
           pkgs.rsbkb  # bgrep
-          pkgs-clps2c.clps2c-compiler
+          pkgs.clps2c-compiler
         ];
         shellHook = ''
           export FONTCONFIG_FILE=${fontconfig_file}

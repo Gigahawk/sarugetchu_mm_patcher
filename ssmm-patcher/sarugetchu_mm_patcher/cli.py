@@ -454,6 +454,8 @@ def patch_resource(
     with open(resource_path, "rb") as f:
         resource_bytes = util.TrackedByteArray(f.read())
 
+    cel_chunk_re = re.compile(r"^CelChunk(?:<\d+>)?$")
+
     # Note: patch textures first so imhex_json addresses are accurate
     if textures_imhex_path:
         tex_fds = imhex_analysis["texturefactory"]["img_sub_files"]
@@ -468,7 +470,7 @@ def patch_resource(
             tex_path = tex_manifest["path"]
             tex_idx = tex_manifest.get("index", 0)
             patch_palette = tex_manifest.get("patch_palette", True)
-            cel_chunk = util.ImhexChunkFinder(img_data, "CelChunk").chunks[0]
+            cel_chunk = util.ImhexChunkFinder(img_data, cel_chunk_re).chunks[0]
             palette_chunk = util.ImhexChunkFinder(img_data, "PaletteChunk").chunks[0]
 
             if "COMPRESSED_IMG" in cel_chunk["type"]:

@@ -1,21 +1,16 @@
-[tool.poetry]
-name = "sarugetchu-mm-patcher"
+[project]
+name = "ssmm-patcher"
 version = "0.1.0"
-description = ""
-authors = ["Jasper Chan <jasperchan515@gmail.com>"]
+description = "Patch tools for Sarugetchu Million Monkeys"
 readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bitstring>=4.3.1",
+    "click>=8.2.1",
+    "pathvalidate>=3.2.3",
+    "pillow>=11.2.1",
+    "pyyaml>=6.0.2",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-click = "^8.1.7"
-pyyaml = "^6.0.2"
-bitstring = "^4.2.3"
-pillow = "^10.4.0"
-pathvalidate = "^3.2.1"
-
-[tool.poetry.scripts]
+[project.scripts]
 ssmm-patcher = "sarugetchu_mm_patcher.cli:cli"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
