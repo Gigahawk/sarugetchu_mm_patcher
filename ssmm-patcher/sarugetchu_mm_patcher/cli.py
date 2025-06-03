@@ -7,26 +7,18 @@ import sys
 import zlib
 import csv
 import subprocess
-import hashlib
 from pprint import pformat
-from typing import Any, Iterable
-from pathlib import Path, PurePath
-import gzip
-import io
-from concurrent.futures import ThreadPoolExecutor
-from multiprocessing.pool import ThreadPool, AsyncResult
+from typing import Any
+from pathlib import Path
+from multiprocessing.pool import ThreadPool
 import os
-from time import sleep
 
 import yaml
-from ps2isopatcher.iso import Ps2Iso, TreeFile, walk_tree
 import click
 from PIL import Image
 from pathvalidate import sanitize_filepath
-from pathvalidate import sanitize_filename
 
 import sarugetchu_mm_patcher.util as util
-import sarugetchu_mm_patcher.mux as mux
 from sarugetchu_mm_patcher.index import (
     IndexEntry, get_index_list, index_list_to_bin
 )
@@ -40,10 +32,6 @@ from sarugetchu_mm_patcher.encoding import (
 )
 from sarugetchu_mm_patcher.aseprite import AsepriteDumper
 
-EXTRACT_PATH = Path(".extracted")
-DATA0_PATH = "/PDATA/DATA0.BIN;1"
-DATA1_PATH = "/PDATA/DATA1.BIN;1"
-
 @click.group()
 def cli():
     pass
@@ -56,131 +44,6 @@ def _guess_hash(fname: str | Path):
 def _parse_imhex_json(imhex_json: str | Path):
     with open(imhex_json) as f:
         return json.load(f)["file"]
-
-def _print_headers(
-        iso: Ps2Iso,
-        header_len: int=32
-):
-    paths = [DATA0_PATH, DATA1_PATH]
-    def _extract(path) -> bytes:
-        click.echo(f"Opening {path}")
-        f: TreeFile = iso.get_object(path)
-        data = f.data
-        click.echo(f"Done extracting {path}")
-        return data
-    with ThreadPool(processes=2) as p:
-        index, archives = p.map(_extract, paths)
-    index_list = get_index_list(index)
-
-    for entry in index_list:
-        start = entry.address*iso.block_size
-        archive = archives[
-            start:start + entry.size
-        ]
-        with io.BytesIO(archive) as bio:
-            with gzip.GzipFile(fileobj=bio, mode="rb") as gzip_file:
-                extracted = gzip_file.read()
-        click.echo(
-            f"{entry.name_str}: {extracted[0:header_len].hex(sep=' ').upper()}"
-        )
-
-def _write_mux_file(path: Path, m2v_path: Path, ss2_path: Path):
-    template = f"""
-pss
-
-	stream video:0
-		input "{m2v_path.resolve()}"
-	end
-
-	stream pcm:0
-		input "{ss2_path.resolve()}"
-	end
-end
-"""
-    with open(path, "w") as f:
-        f.write(template)
-
-def patch_cutscenes(
-    iso: Ps2Iso,
-    subs: dict[str, dict[str, str]],
-) -> list[tuple[str, bytes]]:
-    changes = []
-    for path, info in subs.items():
-        pss_file = (Path("/") / path).with_suffix(".PSS;1")
-        m2v_file = (EXTRACT_PATH / path).with_suffix(".m2v")
-        ss2_file = (EXTRACT_PATH / path).with_suffix(".ss2")
-        subbed_file = (EXTRACT_PATH / path).with_suffix(".sub.m2v")
-        mux_file = (EXTRACT_PATH / path).with_suffix(".mux")
-        srt_file = Path("subs") / info["srt"]
-        remuxed_file = (EXTRACT_PATH / path).with_suffix(".sub.PSS")
-        bitrate = info.get("bitrate", "2M")
-        pf: TreeFile = iso.get_object(str(pss_file))
-        _export_video(pf)
-        cmd = [
-            "ffmpeg", "-y",
-            "-i", str(m2v_file),
-            "-vf", f"subtitles={srt_file}",
-            "-b:v", bitrate,
-            str(subbed_file)
-        ]
-        click.echo(f"Encoding subs into {path} with cmd {cmd}")
-        subprocess.run(cmd)
-
-        _write_mux_file(mux_file, subbed_file, ss2_file)
-        cmd = [
-            "ps2str", "mux", str(mux_file), str(remuxed_file)
-        ]
-        click.echo(f"Encoding done for {path}, remuxing with cmd {cmd}")
-        subprocess.run(cmd)
-        click.echo(f"Remuxing done for {path}, reading file back")
-        with open(remuxed_file, "rb") as f:
-            changes.append((str(pss_file), f.read()))
-    return changes
-
-def open_mutable(input: str | os.PathLike) -> AsyncResult:
-    def _thread():
-        return Ps2Iso(input, mutable=True)
-    pool = ThreadPool(processes=1)
-    async_result = pool.apply_async(_thread)
-    return async_result
-
-def open_iso(
-        input: str | os.PathLike, mutable=False
-) -> tuple[Ps2Iso, AsyncResult | None]:
-    click.echo(f"Opening {input}")
-    iso = Ps2Iso(input)
-    if mutable:
-        iso_async_result = open_mutable(input)
-    else:
-        iso_async_result = None
-    return iso, iso_async_result
-
-input_opt = click.option(
-    "-i", "--input",
-    default="Sarugetchu - Million Monkeys (Japan).iso",
-    show_default=True,
-    type=click.Path(),
-)
-
-@cli.command()
-@click.option(
-    "-i", "--input",
-    default="Sarugetchu - Million Monkeys (Japan).iso",
-    show_default=True,
-    type=click.Path(),
-)
-@click.option(
-    "-n", "--num-bytes",
-    default=32,
-    type=int,
-)
-def print_headers(
-    input: str | os.PathLike,
-    num_bytes: int
-):
-    click.echo(f"Opening {input}")
-    iso = Ps2Iso(input)
-    _print_headers(iso, header_len=num_bytes)
 
 @cli.command()
 @click.argument(
@@ -299,58 +162,6 @@ def print_strings(strings):
     with open(strings, "r") as f:
         strings_dict = yaml.safe_load(f)
     click.echo(pformat(strings_dict))
-
-def _export_video(file: TreeFile, recombine=False):
-    click.echo(f"Exporting {file.path}")
-    file.export(
-        EXTRACT_PATH, preserve_path=True
-    )
-    src_path = EXTRACT_PATH / file.path_no_ver[1:]
-    video_path = src_path.with_suffix(".m2v")
-    audio_path = src_path.with_suffix(".ss2")
-    combined_path = src_path.with_suffix(".mp4")
-    click.echo(f"Done exporting {file.path}")
-    # For some reason ps2str breaks on some of the files, use ssmm-demux instead
-    #cmd = [
-    #    "ps2str", "demux",
-    #    "-d", str(EXTRACT_PATH / file.parent.path[1:]),
-    #    str(EXTRACT_PATH / file.path_no_ver[1:]),
-    #]
-    cmd = [
-        "ssmm-demux",
-        str(src_path),
-    ]
-    click.echo(f"Demuxing video {src_path} with command: {cmd}")
-    subprocess.run(cmd)
-    click.echo(f"Done demuxing video {src_path}")
-
-    if recombine:
-        cmd = [
-            "ffmpeg",
-            "-i", str(video_path),
-            "-i", str(audio_path),
-            "-c:v", "copy",
-            "-c:a", "aac",
-            str(combined_path),
-        ]
-        click.echo(f"Combining {src_path} video streams to mp4 with command: {cmd}")
-        subprocess.run(cmd)
-        click.echo(f"Done combining {src_path} video streams")
-
-
-@cli.command()
-@input_opt
-def dump_video(input):
-    iso, _ = open_iso(input)
-    with ThreadPoolExecutor(max_workers=64) as tpe:
-        for _, _, files in walk_tree(iso.tree):
-            for file in files:
-                path = file.path.split(";")[0].upper()
-                if path.endswith(".PSS"):
-                    tpe.submit(_export_video, file, {"recombine": True})
-
-    # HACK: console seems to get messed up by the concurrency
-    subprocess.run(["stty", "sane"])
 
 @cli.command()
 @click.argument(
