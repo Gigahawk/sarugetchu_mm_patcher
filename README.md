@@ -22,8 +22,11 @@ See [here](win/README.md)
 
 1. Install [nix](https://nixos.org/download/) and [enable flakes](https://nixos.wiki/wiki/flakes#Other_Distros.2C_without_Home-Manager)
 2. Put the source `.iso` into the nix store with `nix-store --add-fixed sha256 mm.iso`
-3. Build the patched `.iso` with `nix build .#iso-patched`
+3. Clone this repo
+    - Ensure Git LFS is enabled
+4. Build the patched `.iso` with `nix build .#iso-patched`
     - The patched file will be in the nix store at `result/iso/mm_patched.iso`, copy it into your local filesystem for use with an emulator, burn to disk, etc.
+    - If using a recent version of nix you should be able to directly build the repo without cloning with `nix build --refresh 'git+https://github.com/Gigahawk/sarugetchu_mm_patcher.git?lfs=1#iso-patched'`
     - This will take absolutely forever, see [Design Issues](#getting-started)
 
 # Contributing
