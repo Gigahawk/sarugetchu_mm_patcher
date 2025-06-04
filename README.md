@@ -28,6 +28,11 @@ See [here](win/README.md)
 
 # Contributing
 
+## Documentation
+
+Preliminary work on translating the official guide book is happening in `doc`
+> If you have a scanned copy of the guide book/would be willing to help translate it please get in touch
+
 ## Testing
 
 If you find issues (game crashes, untranslated text, garbage text, etc.) please open an issue with screenshots/steps to reproduce.
