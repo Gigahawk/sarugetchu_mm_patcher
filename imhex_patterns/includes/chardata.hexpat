@@ -1315,6 +1315,7 @@ struct Gadget<auto char_type> {
         (CharType::PIPOTRON_TEAM_RED): PipotronTeamGadget item_type;
         (CharType::PIPOTRON_TEAM_BLUE): PipotronTeamGadget item_type;
         (CharType::PIPOTRON_TEAM_YELLOW): PipotronTeamGadget item_type;
+        // TODO: fill these out
         (CharType::HIROKI): u8 item_type;
         (CharType::SPECTER): u8 item_type;
         (CharType::DARK_HIROKI): u8 item_type;
