@@ -1196,6 +1196,85 @@ bitfield SaruBookStatus {
     unknown: 5;
 };
 
+struct SaruBookStatuses {
+    SaruBookStatus ichiro;
+    SaruBookStatus eins;
+    SaruBookStatus zaius;
+    SaruBookStatus duo;
+    SaruBookStatus janu;
+    SaruBookStatus leosardo;
+    SaruBookStatus monsart;
+    SaruBookStatus ritchie;
+    SaruBookStatus sarchimedes;
+    SaruBookStatus ringo;
+    SaruBookStatus vermon;
+    SaruBookStatus salumbus;
+    SaruBookStatus pole;
+    SaruBookStatus jiro;
+    SaruBookStatus jon;
+    SaruBookStatus george;
+    SaruBookStatus tory;
+    SaruBookStatus arashiyama;
+    SaruBookStatus linole;
+    SaruBookStatus engel;
+    SaruBookStatus emerson;
+    SaruBookStatus fox;
+    SaruBookStatus salkegoll;
+    SaruBookStatus ian;
+    SaruBookStatus joe;
+    SaruBookStatus adamski;
+    SaruBookStatus ukiishi;
+    SaruBookStatus curtis;
+    SaruBookStatus mont_blanc;
+    SaruBookStatus okto;
+    SaruBookStatus salvatore;
+    SaruBookStatus saburo;
+    SaruBookStatus ucarol;
+    SaruBookStatus osalvan;
+    SaruBookStatus fable;
+    SaruBookStatus sarutino;
+    SaruBookStatus david;
+    SaruBookStatus keith;
+    SaruBookStatus ussy;
+    SaruBookStatus ur;
+    SaruBookStatus unmo;
+    SaruBookStatus athe;
+    SaruBookStatus ralph;
+    SaruBookStatus shirou;
+    SaruBookStatus sarkichi;
+    SaruBookStatus hicks;
+    SaruBookStatus cornelius;
+    SaruBookStatus bartos;
+    SaruBookStatus spander;
+    SaruBookStatus flat_woods;
+    SaruBookStatus odyssey;
+    SaruBookStatus sarutan;
+    SaruBookStatus mccoy;
+    SaruBookStatus july;
+    SaruBookStatus kozalnicus;
+    SaruBookStatus francois;
+    SaruBookStatus hex;
+    SaruBookStatus april;
+    SaruBookStatus garnet;
+    SaruBookStatus goro;
+    SaruBookStatus saltle;
+    SaruBookStatus salvesta;
+    SaruBookStatus oliver;
+    SaruBookStatus pisar;
+    SaruBookStatus kuro1;
+    SaruBookStatus kuro2;
+    SaruBookStatus kuro3;
+    SaruBookStatus kuro4;
+    SaruBookStatus kuro5;
+    SaruBookStatus kuro6;
+    SaruBookStatus kuro7;
+    SaruBookStatus suzuki;
+    SaruBookStatus pierre;
+    SaruBookStatus ricky;
+    SaruBookStatus jun;
+    SaruBookStatus toro;
+};
+
 bitfield SummonUnlocked {
     monta: 1;
     hattori_monzo: 1;
@@ -1349,7 +1428,7 @@ struct CharFile {
     u8 idk_data5;
     UnlockedCostumes<char_type> unlocked_costumes;
     u8 idk_data6[0x2];
-    SaruBookStatus saru_book[0x4C];
+    SaruBookStatuses saru_book;
     // All bytes prior to this except the last 4 are in this checksum
     // for some reason.
     // If both checksum and status are zero, file is not read
