@@ -133,9 +133,9 @@
 "キャラクターファイルがありません。":
   english: "There is no character file."
 "ストーリーモードでは選択<せんたく>できません。":
-  english: "This character cannot be selected in story mode."
+  english: "This character cannot be selected\nin story mode."
 "このエピソードでは選択<せんたく>できません。":
-  english: "This character cannot be selected for this episode."
+  english: "This character cannot be selected\nfor this episode."
 
 
 
@@ -900,15 +900,31 @@
 "目<め>の前<まえ>に巨大<きょだい>なメカボーを振<ふ>り下<お>ろし、衝撃波<しょうげきは>で攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>に有効<ゆうこう>です。":
   english: "Swing down a giant Mecha Bo in front of you creating a shock wave.Effective against close-range enemies."
 "クラッシュハリケーン":
-  english: "Crash Hurricane"
+  english:
+    "ca21027f": "Crash Hurricane"
+    "b19d637f": "Crash Hurricane"
+    "dbff12a2": "Crash Hurricane"
+    "c27b74a2": "Crash Hurricane"
 "クラッシュ\nハリケーン":
-  english: "Crash\nHrcn."
+  english:
+    "2b22027f": "Crash\nHurricane"
+    "129e637f": "Crash\nHurricane"
+    "3c0013a2": "Crash\nHrcn."
+    "237c74a2": "Crash\nHrcn."
 "高速<こうそく>で回転<かいてん>し、近<ちか>くの敵<てき>を上空<じょうくう>にまきあげます。 空中<くうちゅう>の敵<てき>にも有効<ゆうこう>です。    ":
   english: "Spin at high speed and launch nearby enemies into the air.Also effective against airborne enemies."
 "ソニックレボリューション":
-  english: "Sonic Revolution"
+  english:
+    "ed22027f": "Sonic Revolution"
+    "d49e637f": "Sonic Revolution"
+    "fe0013a2": "Sonic Revolution"
+    "e57c74a2": "Sonic Revolution"
 "ソニックR":
-  english: "Sonic\nRev."
+  english:
+    "4e23027f": "Sonic\nRevolution"
+    "359f637f": "Sonic\nRevolution"
+    "5f0113a2": "Sonic\nRev."
+    "467d74a2": "Sonic\nRev."
 "巨大<きょだい>なメカボーで回転儀<かいてんぎ>りを出<だ>しながら駆<か>け抜<ぬ>けます。 地上<ちじょう>の敵<てき>に有効<ゆうこう>です。":
   english: "Spin a giant Mecha Bo as you dash around.Effective against enemies on the ground."
 "サンダークラック":
@@ -920,34 +936,34 @@
 ## Professor
 "プラズマ制御":
   english:
-    "c80d107f": "1Plasma Control"
-    "290e107f": "2Plasma Control"
+    "c80d107f": "Plasma Control"
+    "290e107f": "Plasma Control"
     "d9eb20a2": "Plasma Control"
     "3aec20a2": "Plasma\nControl"
 "電磁バリア":
   english:
-    "eb0e107f": "EM1Barrier"
-    "4c0f107f": "EM2Barrier"
+    "eb0e107f": "EM Barrier"
+    "4c0f107f": "EM Barrier"
     "fcec20a2": "EM Barrier"
     "5ded20a2": "EM\nBarrier"
 "大爆発":
   # Big Explosion
   english:
-    "0e10107f": "1Explosion"
-    "6f10107f": "2Explosion"
+    "0e10107f": "Explosion"
+    "6f10107f": "Explosion"
     "1fee20a2": "Explosion"
-    "80ee20a2": "Explsn"
+    "80ee20a2": "Explsn."
 "リミッター解除":
   english:
-    "b94c1525": "1Limit Break"
+    "b94c1525": "Limit Break"
     "2a71796e": "Limit\nBreak"
-    "3111107f": "3Limit Break"
+    "3111107f": "Limit Break"
     "42ef20a2": "Limit Break"
 "集中砲火":
   english:
     # Concentrated Fire
-    "7b4d1525": "1Fire Blast"
-    "dc4d1525": "2Fire Blast"
+    "7b4d1525": "Fire Blast"
+    "dc4d1525": "Fire Blast"
     "ec71796e": "Fire Blast"
     "4d72796e": "Fire\nBlast"
 ## Natsumi
@@ -959,13 +975,13 @@
     "fad82ea2": "Flash Bang"
     "5bd92ea2": "Flash\nBang"
 "閃光音響弾":
-  english:
-    "e9fa1d7f": "Flash1ang"
-    "4afb1d7f": "Flash2ang"
+  english: "Flash Bang"
 "フラッシュリング":
   english: "Flash Ring"
 "フラッシュ\nリング":
-  english: "Flash\nRing"
+  english:
+    "6dfc1d7f": "Flash Ring"
+    "7eda2ea2": "Flash\nRing"
 "強化弾セットアップ":
   # Enhanced Ammo Setup
   english: "Enhanced Ammo"
@@ -973,9 +989,9 @@
   english: "Enhanced\nAmmo"
 "対地衝撃弾":
   english:
-    "3a265c2a": "Gnd.1mpact Bullet"
+    "3a265c2a": "Gnd.Impact\nBullet"
     "ab4ac073": "Gnd.Impct.\nBullet"
-    "52fe1d7f": "Gnd.3mpact Bullet"
+    "52fe1d7f": "Gnd.Impact Bullet"
     "63dc2ea2": "Gnd.Impact Bullet"
 "Wレーザーフルバースト":
   # W Laser Full Burst
@@ -1009,8 +1025,8 @@
   english: "Illusion\nForce"
 "ミラーフォース":
   english:
-    "c302a32f": "Mirror1Force"
-    "2403a32f": "Mirror2Force"
+    "c302a32f": "Mirror Force"
+    "2403a32f": "Mirror Force"
     "34270779": "Mirror Force"
     "95270779": "Mirror\nForce"
 ## Haruka
@@ -1024,15 +1040,15 @@
   english: "Ripple\nStorm"
 "スピンショット":
   english:
-    "71d7397f": "Spin1Shot"
-    "d2d7397f": "Spin2Shot"
+    "71d7397f": "Spin Shot"
+    "d2d7397f": "Spin Shot"
     "82b54aa2": "Spin Shot"
     "e3b54aa2": "Spin\nShot"
 "ホーミングアロー":
   english:
     "44710822": "H.Arrow"  # Gadget
-    "94d8397f": "H2mingArrow"
-    "a5b64aa2": "HomingArrow"  # Special move
+    "94d8397f": "Homing Arrow"
+    "a5b64aa2": "Homing Arrow"  # Special move
     "3393f7fe": "H4mingArrow"
 "ホーミング\nアロー":
   english: "Homing\nArrow"
@@ -1121,57 +1137,69 @@
 ## Saru Team
 "サルバズーカ":
   english:
-    "4cc2477f": "Saru1Bazooka"
-    "adc2477f": "Saru2Bazooka"
-    "af89717f": "Saru3Bazooka"
-    "108a717f": "Saru4Bazooka"
+    "4cc2477f": "Saru Bazooka"
+    "adc2477f": "Saru Bazooka"
+    "af89717f": "Saru Bazooka"
+    "108a717f": "Saru Bazooka"
     "49e75684": "Saru5Bazooka"
     "aae75684": "Saru6Bazooka"
     "5da058a2": "Saru Bazooka"
     "bea058a2": "Saru\nBazooka"
     "c06782a2": "Saru Bazooka"
     "216882a2": "Saru\nBazooka"
-    "5ac567a7": "Saru9Bazooka"
-    "bbc567a7": "Saru0Bazooka"
+    "5ac567a7": "Saru Bazooka"
+    "bbc567a7": "Saru\nBazooka"
 "バナナロケット":
   english:
-    "6fc3477f": "Banana1Rocket"
-    "d0c3477f": "Banana2Rocket"
+    "6fc3477f": "Banana Rocket"
+    "d0c3477f": "Banana Rocket"
     "6ce85684": "Banana3Rocket"
     "cde85684": "Banana4Rocket"
-    "80a158a2": "Banana5Rocket"
+    "80a158a2": "Banana Rocket"
     "e1a158a2": "Banana\nRocket"
-    "7dc667a7": "Banana6Rocket"
-    "dec667a7": "Banana7Rocket"
+    "7dc667a7": "Banana Rocket"
+    "dec667a7": "Banana\nRocket"
 "ピポサルウェーブ":
-  english: "Piposaru Wave"
+  english:
+    "92c4477f": "Piposaru Wave"
+    "f58b717f": "Piposaru Wave"
+    "8fe95684": "Piposaru3Wave"
+    "a3a258a2": "Piposaru Wave"
+    "066a82a2": "Piposaru Wave"
+    "a0c767a7": "Piposaru Wave"
 "ピポサル\nウェーブ":
-  english: "Saru\nWave"
+  english:
+    "f3c4477f": "Piposaru Wave"
+    "568c717f": "Piposaru Wave"
+    "f0e95684": "Saru3\nWave"
+    "04a358a2": "Piposaru\nWave"
+    "676a82a2": "Piposaru\nWave"
+    "01c867a7": "Piposaru\nWave"
 "サル乱舞":
   english:
     "9ab6ed24": "Saru1Dance"
-    "bdb2303a": "Saru2Dance"
-    "403f054a": "Saru3Dance"
-    "0bdb516e": "Saru4Dance"
-    "b5c5477f": "Saru5Dance"
-    "188d717f": "Saru6Dance"
+    "bdb2303a": "Saru Dance"
+    "403f054a": "Saru Dance"
+    "0bdb516e": "Saru\nDance"
+    "b5c5477f": "Saru Dance"
+    "188d717f": "Saru Dance"
     "2ed79483": "Saru\nDance"
     "b2ea5684": "Saru7Dance"
     "b1636993": "Saru\nDance"
-    "c6a358a2": "Saru8Dance"
-    "296b82a2": "Saru9Dance"
-    "c3c867a7": "Saru0Dance"
+    "c6a358a2": "Saru Dance"
+    "296b82a2": "Saru Dance"
+    "c3c867a7": "Saru Dance"
 "ゴリアックアイ":
   # What is Goliac?
   english:
     "5cb7ed24": "Goliac1Eye"
     "bdb7ed24": "Goliac2Eye"
-    "7fb3303a": "Goliac3Eye"
-    "e0b3303a": "Goliac4Eye"
-    "0240054a": "Goliac5Eye"
-    "6340054a": "Goliac6Eye"
-    "cddb516e": "Goliac7Eye"
-    "2edc516e": "Goliac8Eye"
+    "7fb3303a": "Goliac Eye"
+    "e0b3303a": "Goliac Eye"
+    "0240054a": "Goliac Eye"
+    "6340054a": "Goliac Eye"
+    "cddb516e": "Goliac Eye"
+    "2edc516e": "Goliac\nEye"
     "f0d79483": "Goliac Eye"
     "51d89483": "Goliac\nEye"
     "73646993": "Goliac Eye"
@@ -1180,12 +1208,12 @@
   english:
     "7fb8ed24": "Battleship1Canon"
     "e0b8ed24": "Battleship2Canon"
-    "a2b4303a": "Battleship3Canon"
-    "03b5303a": "Battleship4Canon"
-    "2541054a": "Battleship5Canon"
-    "8641054a": "Battleship6Canon"
-    "f0dc516e": "Battleship7Canon"
-    "51dd516e": "Battleship8Canon"
+    "a2b4303a": "Battleship Canon"
+    "03b5303a": "Battleship\nCanon"
+    "2541054a": "Battleship Canon"
+    "8641054a": "Battleship\nCanon"
+    "f0dc516e": "Battleship Canon"
+    "51dd516e": "B.ship\nCanon"
     "13d99483": "Battleship Canon"
     "74d99483": "B.ship\nCanon"
     "96656993": "Battleship Canon"
@@ -1195,35 +1223,45 @@
 "ゴリアックハンド":
   english: "Goliac Hand"
 "ゴリアック\nハンド":
-  english: "Goliac\nHand"
+  english:
+    "1ddced24": "Goliac Hand"
+    "40d8303a": "Goliac Hand"
+    "c364054a": "Goliac Hand"
+    "8e00526e": "Goliac\nHand"
+    "b1fc9483": "Goliac\nHand"
+    "34896993": "Goliac\nHand"
 ## Pipotron
 "トロンガッシュ":
   english:
-    "6daf557f": "Tron1Gash"
-    "ceaf557f": "Tron2Gash"
+    "6daf557f": "Tron Gash"
+    "ceaf557f": "Tron Gash"
     "7e8d66a2": "Tron Gash"
     "df8d66a2": "Tron\nGash"
 "トロンキャノン":
   english:
-    "90b0557f": "Tron1Cannon"
-    "f1b0557f": "Tron2Cannon"
+    "90b0557f": "Tron Cannon"
+    "f1b0557f": "Tron Cannon"
     "a18e66a2": "Tron Cannon"
     "028f66a2": "Tron\nCannon"
 "ダークネスストリーム":
-  english: "Dark Stream"
+  english:
+    "b3b1557f": "Dark Stream"
+    "c48f66a2": "Dark Stream"
 "ダークネス\nストリーム":
-  english: "Dark\nStream"
+  english:
+    "14b2557f": "Dark Stream"
+    "259066a2": "Dark\nStream"
 "暗黒の叫び":
   english:
-    "3e8c773f": "Dark1Scream"
-    "d6b2557f": "Dark2Scream"
+    "3e8c773f": "Dark Scream"
+    "d6b2557f": "Dark Scream"
     "afb0db88": "Dark\nScream"
     "e79066a2": "Dark Scream"
 ## Specter
 "ロケットチェア":
   english:
-    "d28a717f": "Rocket1Chair"
-    "338b717f": "Rocket2Chair"
+    "d28a717f": "Rocket Chair"
+    "338b717f": "Rocket Chair"
     "e36882a2": "Rocket Chair"
     "446982a2": "Rocket\nChair"
 "フライングチェア":
@@ -1233,19 +1271,23 @@
 "アーモンチェア":
   # TODO: What does this mean?
   english:
-    "8565054a": "Amon1Chair"
-    "e665054a": "Amon2Chair"
+    "8565054a": "Amon Chair"
+    "e665054a": "Amon Chair"
     "f6896993": "Amon Chair"
     "578a6993": "Amon\nChair"
 ## Pipotron G
 "スティングボール":
   english: "Sting Ball"
 "スティング\nボール":
-  english: "Sting\nBall"
+  english:
+    "31777f7f": "Sting2\nBall"
+    "425590a2": "Sting\nBall"
 "ハウンドブラスト":
   english: "Hound Blast"
 "ハウンド\nブラスト":
-  english: "Hound\nBlast"
+  english:
+    "54787f7f": "Hound2\nBlast"
+    "655690a2": "Hound\nBlast"
 "アースクエイク":
   english:
     "16797f7f": "Earth1uake"
@@ -1258,8 +1300,45 @@ Gクラッシャー:
     "397a7f7f": "G2Crasher"
     "323db098": "G-\nCrasher"
     "4a5890a2": "G-Crasher"
-
-
+# Legend
+"爆裂儀":
+  english:
+    "28fa4884": "Explosion2Ritual"
+    "89fa4884": "Explosion3Ritual"
+    "39d859a7": "Explosion Ritual"
+    "9ad859a7": "Explsn.\nRitual"
+"竜巻儀":
+  english:
+    "4bfb4884": "Tornado2Ritual"
+    "acfb4884": "Tornado3Ritual"
+    "5cd959a7": "Tornado Ritual"
+    "bdd959a7": "Tornado\nRitual"
+"音速儀":
+  english:
+    "6efc4884": "Sonic2Ritual"
+    "cffc4884": "Sonic3Ritual"
+    "7fda59a7": "Sonic Ritual"
+    "e0da59a7": "Sonic\nRitual"
+"雷光儀":
+  english:
+    "19dda61f": "Lightning2Ritual"
+    "8a010b69": "Lghtng.\nRitual"
+    "91fd4884": "Lightning4Ritual"
+    "a2db59a7": "Lightning Ritual"
+"氷結火炎儀":
+  english:
+    "dbdda61f": "Ice Flame2Ritual"
+    "3cdea61f": "Ice Flame3Ritual"
+    "4c020b69": "Ice Flame Ritual"
+    "ad020b69": "Ice Flame\nRitual"
+"ハイパー満月儀":
+  english:
+    "fedea61f": "Hyper Moon Ritual"
+    "6f030b69": "Hyper Moon Ritual"
+"ハイパー\n満月儀":
+  english:
+    "5fdfa61f": "Hyper2\nMoon Ritual"
+    "d0030b69": "Hyp.Moon\nRitual"
 
 # VS. Mode team member select screen
 ## Saru Team
@@ -3277,16 +3356,6 @@ Gクラッシャー:
   # TODO: is this an encoding bug?
   english: "Dressed as a Japanese alpha warrior."
 
-## Ceremonies?
-## Where are these used?
-"ハイパー満月儀":
-  # This probably needs to be shortened
-  english: "Hyper Full Moon Ceremony"
-"爆裂儀":
-  english: "Explosion Ceremony"
-"氷結火炎儀":
-  english: "Ice Flame Ceremony"
-
 ## Probably special move text
 "上空<じょうくう>に戦艦<せんかん>をよびよせ、爆撃<ばくげき>で援護<えんご>してもらう技<わざ>です。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
   english: "Calls in a battleship airstrike,attacking enemies in a wide area."
@@ -3464,8 +3533,6 @@ Gクラッシャー:
 "ミッション結果<けっか>":
   english: "Mission Results"
   password: true
-"竜巻儀":
-  english: "Tornado Ritual"
 "チェーンボーナス":
   english: "Chain Bonus"
   password: true
@@ -3548,16 +3615,10 @@ Gクラッシャー:
   english: "Gadget Name"
 "サルカケル":
   english: "Monkey Swing"
-"ハイパー\n満月儀":
-  english: "Hyper\nFull Moon Ritual"
-"音速儀":
-  english: "Sonic Ritual"
 "トロンウィング":
   english: "Tron Wing"
 "ヘビータンク":
   english: "Heavy Tank"
-"雷光儀":
-  english: "Lightning Ritual"
 "作成中<さくせいちゅう>":
   english: "Creating..."
 "セットOK":
@@ -3574,8 +3635,6 @@ Gクラッシャー:
 "撃破ボーナス":
   english: "Defeat Bonus"
   password: true
-"閃光音響弾":
-  english: "Flashbang"
 "回ミス":
   # Probably goes after a number?
   english: "Misses"
