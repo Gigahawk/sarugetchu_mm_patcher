@@ -1,4 +1,4 @@
-name: Build VM Patcher Image
+name: Build Release Outputs
 on:
   - pull_request
   - push
@@ -47,3 +47,41 @@ jobs:
         with:
           name: ssmm_build_vm
           path: win
+
+  build-pnach:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+
+      - name: Install Nix
+        uses: nixbuild/nix-quick-install-action@v26
+
+      - name: Restore and cache Nix store
+        uses: nix-community/cache-nix-action@v6
+        with:
+          primary-key: cache-${{ runner.os }}-nix-store-${{ hashFiles('**/*.nix') }}
+          restore-prefixes-first-match: cache-${{ runner.os }}-nix-store-
+
+      - name: Build pnaches
+        run: |
+          nix build .#debug-patches --no-update-lock-file
+          cp result/SCPS-15115_8EFDBAEB.pnach .
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
+        with:
+          generate_release_notes: true
+          prerelease: true
+          files: SCPS-15115_8EFDBAEB.pnach
+
+      - name: Archive objects
+        # Skip archive if running on act
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.NAME }}
+          path: SCPS-15115_8EFDBAEB.pnach
