@@ -920,34 +920,34 @@
 ## Professor
 "プラズマ制御":
   english:
-    #"c80d107f": "1Plasma Control"
-    #"290e107f": "2Plasma Control"
+    "c80d107f": "1Plasma Control"
+    "290e107f": "2Plasma Control"
     "d9eb20a2": "Plasma Control"
     "3aec20a2": "Plasma\nControl"
 "電磁バリア":
   english:
-    #"eb0e107f": "EM1Barrier"
-    #"4c0f107f": "EM2Barrier"
+    "eb0e107f": "EM1Barrier"
+    "4c0f107f": "EM2Barrier"
     "fcec20a2": "EM Barrier"
     "5ded20a2": "EM\nBarrier"
 "大爆発":
   # Big Explosion
   english:
-    #"0e10107f": "1Explosion"
-    #"6f10107f": "2Explosion"
+    "0e10107f": "1Explosion"
+    "6f10107f": "2Explosion"
     "1fee20a2": "Explosion"
     "80ee20a2": "Explsn"
 "リミッター解除":
   english:
-    #"b94c1525": "1Limit Break"
+    "b94c1525": "1Limit Break"
     "2a71796e": "Limit\nBreak"
-    #"3111107f": "3Limit Break"
+    "3111107f": "3Limit Break"
     "42ef20a2": "Limit Break"
 "集中砲火":
   english:
     # Concentrated Fire
-    #"7b4d1525": "1Fire Blast"
-    #"dc4d1525": "2Fire Blast"
+    "7b4d1525": "1Fire Blast"
+    "dc4d1525": "2Fire Blast"
     "ec71796e": "Fire Blast"
     "4d72796e": "Fire\nBlast"
 ## Natsumi
@@ -958,11 +958,10 @@
   english:
     "fad82ea2": "Flash Bang"
     "5bd92ea2": "Flash\nBang"
-#"閃光音響弾":
-#  english: "Flasqbang"
-#  #english:
-#  #  "e9fa1d7f": "Flash1ang"
-#  #  "4afb1d7f": "Flash2ang"
+"閃光音響弾":
+  english:
+    "e9fa1d7f": "Flash1ang"
+    "4afb1d7f": "Flash2ang"
 "フラッシュリング":
   english: "Flash Ring"
 "フラッシュ\nリング":
@@ -974,9 +973,9 @@
   english: "Enhanced\nAmmo"
 "対地衝撃弾":
   english:
-    #"3a265c2a": "Gnd.1mpact Bullet"
+    "3a265c2a": "Gnd.1mpact Bullet"
     "ab4ac073": "Gnd.Impct.\nBullet"
-    #"52fe1d7f": "Gnd.3mpact Bullet"
+    "52fe1d7f": "Gnd.3mpact Bullet"
     "63dc2ea2": "Gnd.Impact Bullet"
 "Wレーザーフルバースト":
   # W Laser Full Burst
@@ -1010,8 +1009,8 @@
   english: "Illusion\nForce"
 "ミラーフォース":
   english:
-    #"c302a32f": "Mirror1Force"
-    #"2403a32f": "Mirror2Force"
+    "c302a32f": "Mirror1Force"
+    "2403a32f": "Mirror2Force"
     "34270779": "Mirror Force"
     "95270779": "Mirror\nForce"
 ## Haruka
@@ -1025,8 +1024,8 @@
   english: "Ripple\nStorm"
 "スピンショット":
   english:
-    #"71d7397f": "Spin1Shot"
-    #"d2d7397f": "Spin2Shot"
+    "71d7397f": "Spin1Shot"
+    "d2d7397f": "Spin2Shot"
     "82b54aa2": "Spin Shot"
     "e3b54aa2": "Spin\nShot"
 "ホーミングアロー":
@@ -1059,8 +1058,8 @@
 "ウッキーピンク":
   english:
     "09e64222": "Monkey\nPink"
-    #"154e5c62": "Monkey2Pink"
-    #"987ee082": "Monkey3Pink"
+    "154e5c62": "Monkey2Pink"
+    "987ee082": "Monkey3Pink"
     "447f6a93": "Monkey Pink"
 "ウッキーファイブの歌姫<うたひめ>。 何<なに>が出<で>るかは運<うん>しだいです。          ":
   english: "The songstress of Monkey Five.What you get is up to fate."
@@ -1073,8 +1072,8 @@
 "モンチさん":
   english:
     "cbe64222": "Monki-\nSan"
-    #"60cdf844": "Monki2San"
-    #"5a7fe082": "Monki3San"
+    "60cdf844": "Monki2San"
+    "5a7fe082": "Monki3San"
     "2f7059db": "Monki-San"
 "笑顔<えがお>が素敵<すてき>な宇宙飛行土<うちゅうひこうし>。 ロケット噴射<ふんしゃ>で敵<てき>を一掃<いっそう>します。       ":
   english: "A spacefaring robot with a lovely smile.It uses rocket propulsion to wipe out enemies."
@@ -1087,8 +1086,8 @@
 "ウッキーレッド":
   english:
     "8de74222": "Monkey\nRed"
-    #"e4cef844": "Monkey2Red"
-    #"1c80e082": "Monkey3Red"
+    "e4cef844": "Monkey2Red"
+    "1c80e082": "Monkey3Red"
     "b37159db": "Monkey Red"
 "ウッキーファイブのリーダー。 画面<がめん>を飛<と>びかって周囲<しゅうい>の全員<ぜんいん>にダメージを与<あた>えます。     ":
   english: "The leader of Monkey Five.He flies across the screen and deals damage to everyone around him."
@@ -1136,57 +1135,57 @@
     "bbc567a7": "Saru0Bazooka"
 "バナナロケット":
   english:
-    #"6fc3477f": "Banana Rocket"
-    #"d0c3477f": "Banana Rocket"
-    #"6ce85684": "Banana Rocket"
-    #"cde85684": "Banana Rocket"
-    "80a158a2": "Banana Rocket"
+    "6fc3477f": "Banana1Rocket"
+    "d0c3477f": "Banana2Rocket"
+    "6ce85684": "Banana3Rocket"
+    "cde85684": "Banana4Rocket"
+    "80a158a2": "Banana5Rocket"
     "e1a158a2": "Banana\nRocket"
-    #"7dc667a7": "Banana Rocket"
-    #"dec667a7": "Banana Rocket"
+    "7dc667a7": "Banana6Rocket"
+    "dec667a7": "Banana7Rocket"
 "ピポサルウェーブ":
   english: "Piposaru Wave"
 "ピポサル\nウェーブ":
   english: "Saru\nWave"
 "サル乱舞":
   english:
-    #"9ab6ed24": "Saru Dance"
-    #"bdb2303a": "Saru Dance"
-    #"403f054a": "Saru Dance"
-    #"0bdb516e": "Saru Dance"
-    #"b5c5477f": "Saru Dance"
-    #"188d717f": "Saru Dance"
+    "9ab6ed24": "Saru1Dance"
+    "bdb2303a": "Saru2Dance"
+    "403f054a": "Saru3Dance"
+    "0bdb516e": "Saru4Dance"
+    "b5c5477f": "Saru5Dance"
+    "188d717f": "Saru6Dance"
     "2ed79483": "Saru\nDance"
-    #"b2ea5684": "Saru1Dance"
+    "b2ea5684": "Saru7Dance"
     "b1636993": "Saru\nDance"
-    "c6a358a2": "Saru Dance"
-    "296b82a2": "Saru Dance"
-    #"c3c867a7": "Saru4Dance"
+    "c6a358a2": "Saru8Dance"
+    "296b82a2": "Saru9Dance"
+    "c3c867a7": "Saru0Dance"
 "ゴリアックアイ":
   # What is Goliac?
   english:
-    #"5cb7ed24": "Goliac1Eye"
-    #"bdb7ed24": "Goliac2Eye"
-    #"7fb3303a": "Goliac3Eye"
-    #"e0b3303a": "Goliac4Eye"
-    #"0240054a": "Goliac5Eye"
-    #"6340054a": "Goliac6Eye"
-    #"cddb516e": "Goliac7Eye"
-    #"2edc516e": "Goliac8Eye"
+    "5cb7ed24": "Goliac1Eye"
+    "bdb7ed24": "Goliac2Eye"
+    "7fb3303a": "Goliac3Eye"
+    "e0b3303a": "Goliac4Eye"
+    "0240054a": "Goliac5Eye"
+    "6340054a": "Goliac6Eye"
+    "cddb516e": "Goliac7Eye"
+    "2edc516e": "Goliac8Eye"
     "f0d79483": "Goliac Eye"
     "51d89483": "Goliac\nEye"
     "73646993": "Goliac Eye"
     "d4646993": "Goliac\nEye"
 "戦艦射撃":
   english:
-    #"7fb8ed24": "Battleship1Canon"
-    #"e0b8ed24": "Battleship2Canon"
-    #"a2b4303a": "Battleship3Canon"
-    #"03b5303a": "Battleship4Canon"
-    #"2541054a": "Battleship5Canon"
-    #"8641054a": "Battleship6Canon"
-    #"f0dc516e": "Battleship7Canon"
-    #"51dd516e": "Battleship8Canon"
+    "7fb8ed24": "Battleship1Canon"
+    "e0b8ed24": "Battleship2Canon"
+    "a2b4303a": "Battleship3Canon"
+    "03b5303a": "Battleship4Canon"
+    "2541054a": "Battleship5Canon"
+    "8641054a": "Battleship6Canon"
+    "f0dc516e": "Battleship7Canon"
+    "51dd516e": "Battleship8Canon"
     "13d99483": "Battleship Canon"
     "74d99483": "B.ship\nCanon"
     "96656993": "Battleship Canon"
@@ -1200,14 +1199,14 @@
 ## Pipotron
 "トロンガッシュ":
   english:
-    #"6daf557f": "Tron1Gash"
-    #"ceaf557f": "Tron2Gash"
+    "6daf557f": "Tron1Gash"
+    "ceaf557f": "Tron2Gash"
     "7e8d66a2": "Tron Gash"
     "df8d66a2": "Tron\nGash"
 "トロンキャノン":
   english:
-    #"90b0557f": "Tron1Cannon"
-    #"f1b0557f": "Tron2Cannon"
+    "90b0557f": "Tron1Cannon"
+    "f1b0557f": "Tron2Cannon"
     "a18e66a2": "Tron Cannon"
     "028f66a2": "Tron\nCannon"
 "ダークネスストリーム":
@@ -1216,15 +1215,15 @@
   english: "Dark\nStream"
 "暗黒の叫び":
   english:
-    #"3e8c773f": "Dark1Scream"
-    #"d6b2557f": "Dark2Scream"
+    "3e8c773f": "Dark1Scream"
+    "d6b2557f": "Dark2Scream"
     "afb0db88": "Dark\nScream"
     "e79066a2": "Dark Scream"
 ## Specter
 "ロケットチェア":
   english:
-    #"d28a717f": "Rocket1Chair"
-    #"338b717f": "Rocket2Chair"
+    "d28a717f": "Rocket1Chair"
+    "338b717f": "Rocket2Chair"
     "e36882a2": "Rocket Chair"
     "446982a2": "Rocket\nChair"
 "フライングチェア":
@@ -1234,8 +1233,8 @@
 "アーモンチェア":
   # TODO: What does this mean?
   english:
-    #"8565054a": "Amon1Chair"
-    #"e665054a": "Amon2Chair"
+    "8565054a": "Amon1Chair"
+    "e665054a": "Amon2Chair"
     "f6896993": "Amon Chair"
     "578a6993": "Amon\nChair"
 ## Pipotron G
@@ -1249,14 +1248,14 @@
   english: "Hound\nBlast"
 "アースクエイク":
   english:
-    #"16797f7f": "Earth1uake"
-    #"77797f7f": "Earth2uake"
+    "16797f7f": "Earth1uake"
+    "77797f7f": "Earth2uake"
     "275790a2": "Earthquake"
     "885790a2": "Earth-\nquake"
 Gクラッシャー:
   english:
-    #"c1184c4f": "G1Crasher"
-    #"397a7f7f": "G2Crasher"
+    "c1184c4f": "G1Crasher"
+    "397a7f7f": "G2Crasher"
     "323db098": "G-\nCrasher"
     "4a5890a2": "G-Crasher"
 
