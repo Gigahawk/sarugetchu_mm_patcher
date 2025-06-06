@@ -29,6 +29,10 @@ See [here](win/README.md)
     - If using a recent version of nix you should be able to directly build the repo without cloning with `nix build --refresh 'git+https://github.com/Gigahawk/sarugetchu_mm_patcher.git?lfs=1#iso-patched'`
     - This will take absolutely forever, see [Design Issues](#getting-started)
 
+### Emulation Settings
+
+While this project aims to make the game playable at the PS2's native resolution, it's recommended to emulate the game at a higher resolution to get cleaner text rendering.
+
 # Contributing
 
 ## Documentation
