@@ -3,3 +3,4 @@
 !includes
 !**/*.hexpat
 !**/*.hexproj
+!README.md

@@ -934,10 +934,37 @@ bitfield SummonUnlocked {
     unknown: 6;
 };
 
-struct Gadget {
+struct Gadget<auto char_type> {
     TextChar gadget_name[9];
     u8 idkdata1[2];
-    u8 item_type;
+    match(char_type) {
+        (CharType::KAKERU): KakeruGadget item_type;
+        (CharType::PROFESSOR): ProfessorGadget item_type;
+        (CharType::NATSUMI): NatsumiGadget item_type;
+        (CharType::CHARU): CharuGadget item_type;
+        (CharType::HARUKA): HarukaGadget item_type;
+        (CharType::SARU_TEAM_KI): SaruTeamGadget item_type;
+        (CharType::SARU_TEAM_AKAI): SaruTeamGadget item_type;
+        (CharType::SARU_TEAM_AOI): SaruTeamGadget item_type;
+        (CharType::SARU_TEAM_KURO): SaruTeamGadget item_type;
+        (CharType::SARU_TEAM_MIDORI): SaruTeamGadget item_type;
+        (CharType::SARU_TEAM_MIZU): SaruTeamGadget item_type;
+        (CharType::PIPOTRON_TEAM_RED): PipotronTeamGadget item_type;
+        (CharType::PIPOTRON_TEAM_BLUE): PipotronTeamGadget item_type;
+        (CharType::PIPOTRON_TEAM_YELLOW): PipotronTeamGadget item_type;
+        (CharType::HIROKI): u8 item_type;
+        (CharType::SPECTER): u8 item_type;
+        (CharType::DARK_HIROKI): u8 item_type;
+        (CharType::DARK_SPECTER): u8 item_type;
+        (CharType::PIPOTRON_G): u8 item_type;
+        (CharType::LEGEND): u8 item_type;
+        (CharType::VOLCANO): u8 item_type;
+        (CharType::VIRUS_CHARU): u8 item_type;
+        (CharType::INVALID1): u8 item_type;
+        (CharType::INVALID2): u8 item_type;
+        (CharType::NO_CHAR): u8 item_type;
+        (_): u8 item_type;
+    }
     u8 slots[3];
     // Prevents deletion when inventory is full
     u8 default_item;
@@ -998,7 +1025,7 @@ struct CharFile {
     }
     // Game limits you to 99 but manually editing in the last 2 seems to work
     // fine
-    Gadget gadgets[101];
+    Gadget<char_type> gadgets[101];
     // TODO: figure out the different types
     u8 powerup_parts_inventory[99];
     ChipType chip_inventory[99];

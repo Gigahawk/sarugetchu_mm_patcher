@@ -33,8 +33,12 @@ See [here](win/README.md)
 
 ## Documentation
 
-Preliminary work on translating the official guide book is happening in `doc`
+Preliminary work on translating the official guide book is happening in [doc](doc)
 > If you have a scanned copy of the guide book/would be willing to help translate it please get in touch
+
+## Struct Documentation
+
+ImHex pattern files defining game structs are in [imhex_patterns](imhex_patterns)
 
 ## Testing
 
