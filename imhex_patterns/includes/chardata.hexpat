@@ -399,6 +399,25 @@ enum KakeruCostume: u8 {
     SARU_KAKERU_B = 15,
 };
 
+bitfield KakeruCostumeUnlocked {
+    default: 1;
+    light_armor_a: 1;
+    light_armor_b: 1;
+    heavy_armor: 1;
+    military_set: 1;
+    dark_fashion: 1;
+    second_fashion: 1;
+    historical_armor: 1;
+    samurai_set: 1;
+    businessman_set: 1;
+    gunman_set: 1;
+    dancer_set: 1;
+    empty: 1;
+    toro_costume: 1;
+    saru_kakeru_a: 1;
+    saru_kakeru_b: 1;
+};
+
 enum KakeruGadget: u8 {
     GET_NET = 0,
     MECHA_BO = 1,
@@ -459,6 +478,25 @@ enum ProfessorCostume: u8 {
     TORO_COSTUME = 13,
     INVALID1 = 14,
     INVALID2 = 15,
+};
+
+bitfield ProfessorCostumeUnlocked {
+    default: 1;
+    light_armor_a: 1;
+    light_armor_b: 1;
+    heavy_armor: 1;
+    military_set: 1;
+    dark_fashion: 1;
+    second_fashion: 1;
+    historical_armor: 1;
+    lord_set: 1;
+    santa_set: 1;
+    sheriff_set: 1;
+    detective_set: 1;
+    empty: 1;
+    toro_costume: 1;
+    invalid1: 1;
+    invalid2: 1;
 };
 
 enum ProfessorGadget: u8 {
@@ -525,6 +563,25 @@ enum NatsumiCostume: u8 {
     INVALID2 = 15,
 };
 
+bitfield NatsumiCostumeUnlocked {
+    default: 1;
+    light_armor_a: 1;
+    light_armor_b: 1;
+    heavy_armor: 1;
+    military_set: 1;
+    dark_fashion: 1;
+    second_fashion: 1;
+    historical_armor: 1;
+    ninja_set: 1;
+    reindeer_set: 1;
+    cowgirl_set: 1;
+    red_jersey_set: 1;
+    empty: 1;
+    toro_costume: 1;
+    invalid1: 1;
+    invalid2: 1;
+};
+
 enum NatsumiGadget: u8 {
     GET_NET = 0,
     MECHA_ROD = 1,
@@ -581,6 +638,25 @@ enum CharuCostume: u8 {
     INVALID2 = 15,
 };
 
+bitfield CharuCostumeUnlocked {
+    default: 1;
+    light_armor_a: 1;
+    light_armor_b: 1;
+    heavy_armor: 1;
+    military_set: 1;
+    dark_fashion: 1;
+    second_fashion: 1;
+    historical_armor: 1;
+    town_girl_set: 1;
+    sheep_set: 1;
+    devil_set: 1;
+    magical_girl_set: 1;
+    empty: 1;
+    toro_costume: 1;
+    invalid1: 1;
+    invalid2: 1;
+};
+
 enum CharuGadget: u8 {
     GET_NET = 0,
     MAGIC_WAND = 1,
@@ -635,6 +711,25 @@ enum HarukaCostume: u8 {
     INVALID2 = 15,
 };
 
+bitfield HarukaCostumeUnlocked {
+    default: 1;
+    light_armor_a: 1;
+    light_armor_b: 1;
+    heavy_armor: 1;
+    military_set: 1;
+    dark_fashion: 1;
+    second_fashion: 1;
+    historical_armor: 1;
+    hunter_set: 1;
+    raccoon_set: 1;
+    police_set: 1;
+    angel_set: 1;
+    empty: 1;
+    toro_costume: 1;
+    invalid1: 1;
+    invalid2: 1;
+};
+
 // Can't create or edit gadgets on this character,
 // research based on story mode
 enum HarukaGadget: u8 {
@@ -676,6 +771,25 @@ enum SaruTeamCostume: u8 {
     TORO_COSTUME = 13,
     KORO_DRAGON_SET = 14,
     KINTARO_SET = 15,
+};
+
+bitfield SaruTeamCostumeUnlocked {
+    default: 1;
+    light_armor: 1;
+    middle_armor: 1;
+    heavy_armor: 1;
+    military_set: 1;
+    dark_fashion: 1;
+    second_fashion: 1;
+    historical_armor: 1;
+    shinobi_set: 1;
+    amazon_set: 1;
+    police_set: 1;
+    heavy_metal_set: 1;
+    empty: 1;
+    toro_costume: 1;
+    koro_dragon_set: 1;
+    kintaro_set: 1;
 };
 
 enum SaruTeamGadget: u8 {
@@ -733,6 +847,25 @@ enum PipotronTeamCostume: u8 {
     INVALID2 = 15,
 };
 
+bitfield PipotronTeamCostumeUnlocked {
+    black_fur: 1;
+    purple_fur: 1;
+    blue_fur: 1;
+    white_fur: 1;
+    empty1: 1;
+    empty2: 1;
+    empty3: 1;
+    empty4: 1;
+    empty5: 1;
+    empty6: 1;
+    empty7: 1;
+    empty8: 1;
+    empty9: 1;
+    toro_costume: 1;
+    invalid1: 1;
+    invalid2: 1;
+};
+
 // Can't create or edit gadgets on this character,
 // research based on story mode
 enum PipotronTeamGadget: u8 {
@@ -771,6 +904,25 @@ enum HirokiCostume: u8 {
     INVALID2 = 15,
 };
 
+bitfield HirokiCostumeUnlocked {
+    blue_jacket: 1;
+    red_jacket: 1;
+    yellow_jacket: 1;
+    white_jacket: 1;
+    empty1: 1;
+    empty2: 1;
+    empty3: 1;
+    empty4: 1;
+    empty5: 1;
+    empty6: 1;
+    empty7: 1;
+    empty8: 1;
+    empty9: 1;
+    toro_costume: 1;
+    invalid1: 1;
+    invalid2: 1;
+};
+
 enum SpecterCostume: u8 {
     DEFAULT = 0,
     LIGHT_ARMOR = 1,
@@ -788,6 +940,25 @@ enum SpecterCostume: u8 {
     TORO_COSTUME = 13,
     INVALID1 = 14,
     INVALID2 = 15,
+};
+
+bitfield SpecterCostumeUnlocked {
+    default: 1;
+    light_armor: 1;
+    middle_armor: 1;
+    heavy_armor: 1;
+    military_set: 1;
+    dark_fashion: 1;
+    second_fashion: 1;
+    historical_armor: 1;
+    shinobi_set: 1;
+    tiger_set: 1;
+    agent_set: 1;
+    carmen_set: 1;
+    empty: 1;
+    toro_costume: 1;
+    invalid1: 1;
+    invalid2: 1;
 };
 
 enum DarkHirokiCostume: u8 {
@@ -809,6 +980,25 @@ enum DarkHirokiCostume: u8 {
     INVALID12 = 15,
 };
 
+bitfield DarkHirokiCostumeUnlocked {
+    dark_hair: 1;
+    gold_hair: 1;
+    green_hair: 1;
+    purple_hair: 1;
+    invalid1: 1;
+    invalid2: 1;
+    invalid3: 1;
+    invalid4: 1;
+    invalid5: 1;
+    invalid6: 1;
+    invalid7: 1;
+    invalid8: 1;
+    invalid9: 1;
+    invalid10: 1;
+    invalid11: 1;
+    invalid12: 1;
+};
+
 enum DarkSpecterCostume: u8 {
     DARK_STYLE = 0,
     PURPLE_STYLE = 1,
@@ -826,6 +1016,25 @@ enum DarkSpecterCostume: u8 {
     INVALID10 = 13,
     INVALID11 = 14,
     INVALID12 = 15,
+};
+
+bitfield DarkSpecterCostumeUnlocked {
+    dark_style: 1;
+    purple_style: 1;
+    blue_style: 1;
+    white_style: 1;
+    invalid1: 1;
+    invalid2: 1;
+    invalid3: 1;
+    invalid4: 1;
+    invalid5: 1;
+    invalid6: 1;
+    invalid7: 1;
+    invalid8: 1;
+    invalid9: 1;
+    invalid10: 1;
+    invalid11: 1;
+    invalid12: 1;
 };
 
 enum PipotronGCostume: u8 {
@@ -847,6 +1056,25 @@ enum PipotronGCostume: u8 {
     INVALID12 = 15,
 };
 
+bitfield PipotronGCostumeUnlocked {
+    white_body: 1;
+    yellow_body: 1;
+    red_body: 1;
+    black_body: 1;
+    invalid1: 1;
+    invalid2: 1;
+    invalid3: 1;
+    invalid4: 1;
+    invalid5: 1;
+    invalid6: 1;
+    invalid7: 1;
+    invalid8: 1;
+    invalid9: 1;
+    invalid10: 1;
+    invalid11: 1;
+    invalid12: 1;
+};
+
 enum LegendCostume: u8 {
     BLACK_ROBE = 0,
     YELLOW_ROBE = 1,
@@ -864,6 +1092,25 @@ enum LegendCostume: u8 {
     INVALID10 = 13,
     INVALID11 = 14,
     INVALID12 = 15,
+};
+
+bitfield LegendCostumeUnlocked {
+    black_robe: 1;
+    yellow_robe: 1;
+    blue_robe: 1;
+    white_robe: 1;
+    invalid1: 1;
+    invalid2: 1;
+    invalid3: 1;
+    invalid4: 1;
+    invalid5: 1;
+    invalid6: 1;
+    invalid7: 1;
+    invalid8: 1;
+    invalid9: 1;
+    invalid10: 1;
+    invalid11: 1;
+    invalid12: 1;
 };
 
 enum VolcanoCostume: u8 {
@@ -885,6 +1132,25 @@ enum VolcanoCostume: u8 {
     INVALID12 = 15,
 };
 
+bitfield VolcanoCostumeUnlocked {
+    red_armor: 1;
+    green_armor: 1;
+    blue_armor: 1;
+    white_armor: 1;
+    invalid1: 1;
+    invalid2: 1;
+    invalid3: 1;
+    invalid4: 1;
+    invalid5: 1;
+    invalid6: 1;
+    invalid7: 1;
+    invalid8: 1;
+    invalid9: 1;
+    invalid10: 1;
+    invalid11: 1;
+    invalid12: 1;
+};
+
 enum VirusCharuCostume: u8 {
     GREEN_STYLE = 0,
     PURPLE_STYLE = 1,
@@ -904,6 +1170,24 @@ enum VirusCharuCostume: u8 {
     INVALID12 = 15,
 };
 
+bitfield VirusCharuCostumeUnlocked {
+    green_style: 1;
+    purple_style: 1;
+    blue_style: 1;
+    white_style: 1;
+    invalid1: 1;
+    invalid2: 1;
+    invalid3: 1;
+    invalid4: 1;
+    invalid5: 1;
+    invalid6: 1;
+    invalid7: 1;
+    invalid8: 1;
+    invalid9: 1;
+    invalid10: 1;
+    invalid11: 1;
+    invalid12: 1;
+};
 
 bitfield SaruBookStatus {
     new_unseen: 1;
@@ -987,6 +1271,60 @@ struct Loadout {
     u8 backpack_gadget_idx;
 };
 
+struct EquippedCostume<auto char_type> {
+    match (char_type) {
+        (CharType::KAKERU): KakeruCostume costume_type;
+        (CharType::PROFESSOR): ProfessorCostume costume_type;
+        (CharType::NATSUMI): NatsumiCostume costume_type;
+        (CharType::CHARU): CharuCostume costume_type;
+        (CharType::HARUKA): HarukaCostume costume_type;
+        (CharType::SARU_TEAM_KI): SaruTeamCostume costume_type;
+        (CharType::SARU_TEAM_AKAI): SaruTeamCostume costume_type;
+        (CharType::SARU_TEAM_AOI): SaruTeamCostume costume_type;
+        (CharType::SARU_TEAM_KURO): SaruTeamCostume costume_type;
+        (CharType::SARU_TEAM_MIDORI): SaruTeamCostume costume_type;
+        (CharType::SARU_TEAM_MIZU): SaruTeamCostume costume_type;
+        (CharType::PIPOTRON_TEAM_RED): PipotronTeamCostume costume_type;
+        (CharType::PIPOTRON_TEAM_BLUE): PipotronTeamCostume costume_type;
+        (CharType::PIPOTRON_TEAM_YELLOW): PipotronTeamCostume costume_type;
+        (CharType::HIROKI): HirokiCostume costume_type;
+        (CharType::SPECTER): SpecterCostume costume_type;
+        (CharType::DARK_HIROKI): DarkHirokiCostume costume_type;
+        (CharType::DARK_SPECTER): DarkSpecterCostume costume_type;
+        (CharType::PIPOTRON_G): PipotronGCostume costume_type;
+        (CharType::LEGEND): LegendCostume costume_type;
+        (CharType::VIRUS_CHARU): VirusCharuCostume costume_type;
+        (_): u8 costume_type;
+    }
+};
+
+struct UnlockedCostumes<auto char_type> {
+    match (char_type) {
+        (CharType::KAKERU): KakeruCostumeUnlocked costumes;
+        (CharType::PROFESSOR): ProfessorCostumeUnlocked costumes;
+        (CharType::NATSUMI): NatsumiCostumeUnlocked costumes;
+        (CharType::CHARU): CharuCostumeUnlocked costumes;
+        (CharType::HARUKA): HarukaCostumeUnlocked costumes;
+        (CharType::SARU_TEAM_KI): SaruTeamCostumeUnlocked costumes;
+        (CharType::SARU_TEAM_AKAI): SaruTeamCostumeUnlocked costumes;
+        (CharType::SARU_TEAM_AOI): SaruTeamCostumeUnlocked costumes;
+        (CharType::SARU_TEAM_KURO): SaruTeamCostumeUnlocked costumes;
+        (CharType::SARU_TEAM_MIDORI): SaruTeamCostumeUnlocked costumes;
+        (CharType::SARU_TEAM_MIZU): SaruTeamCostumeUnlocked costumes;
+        (CharType::PIPOTRON_TEAM_RED): PipotronTeamCostumeUnlocked costumes;
+        (CharType::PIPOTRON_TEAM_BLUE): PipotronTeamCostumeUnlocked costumes;
+        (CharType::PIPOTRON_TEAM_YELLOW): PipotronTeamCostumeUnlocked costumes;
+        (CharType::HIROKI): HirokiCostumeUnlocked costumes;
+        (CharType::SPECTER): SpecterCostumeUnlocked costumes;
+        (CharType::DARK_HIROKI): DarkHirokiCostumeUnlocked costumes;
+        (CharType::DARK_SPECTER): DarkSpecterCostumeUnlocked costumes;
+        (CharType::PIPOTRON_G): PipotronGCostumeUnlocked costumes;
+        (CharType::LEGEND): LegendCostumeUnlocked costumes;
+        (CharType::VIRUS_CHARU): VirusCharuCostumeUnlocked costumes;
+        (_): u16 costumes;
+    }
+};
+
 struct CharFile {
     // Doesn't seem to do anything? Character still
     // seems to load as normal even when all set to zero
@@ -999,30 +1337,7 @@ struct CharFile {
     u8 idk_data2[8];
     Loadout vs_loadout;
     u8 idk_data3[8];
-    match (char_type) {
-        (CharType::KAKERU): KakeruCostume equipped_costume;
-        (CharType::PROFESSOR): ProfessorCostume equipped_costume;
-        (CharType::NATSUMI): NatsumiCostume equipped_costume;
-        (CharType::CHARU): CharuCostume equipped_costume;
-        (CharType::HARUKA): HarukaCostume equipped_costume;
-        (CharType::SARU_TEAM_KI): SaruTeamCostume equipped_costume;
-        (CharType::SARU_TEAM_AKAI): SaruTeamCostume equipped_costume;
-        (CharType::SARU_TEAM_AOI): SaruTeamCostume equipped_costume;
-        (CharType::SARU_TEAM_KURO): SaruTeamCostume equipped_costume;
-        (CharType::SARU_TEAM_MIDORI): SaruTeamCostume equipped_costume;
-        (CharType::SARU_TEAM_MIZU): SaruTeamCostume equipped_costume;
-        (CharType::PIPOTRON_TEAM_RED): PipotronTeamCostume equipped_costume;
-        (CharType::PIPOTRON_TEAM_BLUE): PipotronTeamCostume equipped_costume;
-        (CharType::PIPOTRON_TEAM_YELLOW): PipotronTeamCostume equipped_costume;
-        (CharType::HIROKI): HirokiCostume equipped_costume;
-        (CharType::SPECTER): SpecterCostume equipped_costume;
-        (CharType::DARK_HIROKI): DarkHirokiCostume equipped_costume;
-        (CharType::DARK_SPECTER): DarkSpecterCostume equipped_costume;
-        (CharType::PIPOTRON_G): PipotronGCostume equipped_costume;
-        (CharType::LEGEND): LegendCostume equipped_costume;
-        (CharType::VIRUS_CHARU): VirusCharuCostume equipped_costume;
-        (_): u8 equipped_costume;
-    }
+    EquippedCostume<char_type> equipped_costume;
     // Game limits you to 99 but manually editing in the last 2 seems to work
     // fine
     Gadget<char_type> gadgets[101];
@@ -1032,7 +1347,7 @@ struct CharFile {
     u8 idk_data4;
     SummonUnlocked summoning_capsules;
     u8 idk_data5;
-    u16 unlocked_costumes;
+    UnlockedCostumes<char_type> unlocked_costumes;
     u8 idk_data6[0x2];
     SaruBookStatus saru_book[0x4C];
     // All bytes prior to this except the last 4 are in this checksum
