@@ -96,6 +96,32 @@ In hindsight I made a lot of bad design decisions throughout the development pro
 
 Some old notes taken during development
 
+### Damage
+
+When damage is applied, `do_damage?FUN_00154a60` gets called
+
+- a0 seems to be a pointer to the target being damaged?
+- a1 is not constant? seems to be a pointer to the object causing the damage
+
+HP is read at 00154ca4, then if it's zero `idk_trigger_death?FUN_00161b90` is called.
+Stubbing this function out results in regular entities being unable to die.
+Mounts and bosses still appear to die.
+There is another function that doesn't seem to be called `idk_trigger_death?FUN_003f3758` forcing this to be called seems to cause HP to drop to zero for the target.
+
+
+### HP Info
+
+- `FUN_003f3798` returns the current HP for the passed in character (entity?)
+    - The first arg is a pointer, if you subtract 0xB0 from this pointer you get the player ID i think?
+    - it can be called by:
+        - `idk_hp_bar_thing?FUN_00291a90`
+        - `idk_not_check_death?FUN_003babc0`
+        - `idk_some_hp_thing?FUN_001662c0`
+        - `idk_some_hp_thing?FUN_0039d478`
+        - `idk_bot_shell_hp_thing?FUN_0039db58`
+        - `idk_maybe_check_death?FUN_00394700`
+        - `idk_bot_parent_hp_thing?FUN_003979a8`
+        - `idk_bot_parent_hp_thing?FUN_003990b0`
 
 ### Differences between Japanese and Chinese version
 

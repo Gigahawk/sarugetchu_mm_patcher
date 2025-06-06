@@ -1,5 +1,28 @@
-// Seems quite flaky?  Sometimes works if you unload and restart the level.
-// Doesn't seem to work on levels with cutscenes.
-Set CharBase 0x00704558
+// Overwrite some illegal damage check thing
+ASM_START 0x00154a8c
+    // Load the target player ID to t7
+    // Set this 1 for player 2 etc.
+    addiu $t7,$zero,0
 
-WritePointer8 CharBase,0x8,0x10,0x4CC 0x60
+    // Load the player ID to t5
+    lw $t5,0x0($a0)
+    lw $t5,0x410($t5)
+
+    // If the player ID is equal to the target ID,
+    // branch over the return
+    bne $t5,$t7,NotTarget
+    // Set t7 to 0 by default (not target ID)
+    addiu $t7,$zero,0
+    // Set t7 to 1 for match
+    addiu $t7,$zero,1
+
+    // Pad remaining instructions out until our branch
+    NotTarget: nop
+    nop
+    nop
+
+    // This branch is part of the base binary.
+    // If this check fails (don't take the branch), execution
+    // continues into the illegal damage status warning and then returns
+    // beq $t7,$zero,$LAB_00154b1c
+ASM_END
