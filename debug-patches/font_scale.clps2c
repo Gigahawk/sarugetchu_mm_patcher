@@ -51,41 +51,94 @@ ASM_START 0x001cdfb4
     sb $t7,0x26($t4)
 ASM_END
 
+// Patch key instruction loading function (mission failed?)
+ASM_START 0x001a95ec
+    // Original FPU code
+    //lui $t7,0x70
+    //addiu $t7,$t7,0x5ec0
+    //lwc1 $f0,0x0($t7)
+    //swc1 $f0,0xc($v0)
+    //swc1 $f0,0x8($v0)
+
+    // Set vertical scale to 0.6875
+    lui $t7,0x3f30
+    sw $t7,0xc($v0)
+    // Set horizontal scale to 0.59375
+    lui $t7,0x3f18
+    sw $t7,0x8($v0)
+    nop
+
+    // Some random stuff that happens after
+    sw $s3,0x10($v0)
+    daddu $a0,$s4,$zero
+    sb $s3,0x26($v0)
+    addiu $a1,$zero,0x1
+    daddu $a2,$zero,$zero
+ASM_END
 
 // Patch key instruction loading function (never runs?)
-//ASM_START 0x001e1b74
-//    // Some random stuff that happens in this range
-//    lw $t5,0x4($s1)
-//    lw $a1,0x64($s0)
-//    lui $t7,0x76
-//    addiu $t7,$t7,0x29f0
-//    subu $t5,$t5,$a1
-//
-//    // Original FPU code
-//    //lui $t6,0x70
-//    //addiu $t6,$t6,0x6680
-//    //lwc1 $f0,0x0($t6)
-//    //swc1 $f0,0xc($v0)
-//    //swc1 $f0,0x8($v0)
-//
-//    // Set vertical scale to 0.6875
-//    lui $t6,0x3f30
-//    sw $t6,0xc($v0)
-//    // Set horizontal scale to 0.59375
-//    lui $t6,0x3f18
-//    sw $t6,0x8($v0)
-//    nop
-//
-//    // Some random stuff that happens after
-//    lw $t6,0x8($t7)
-//    addiu $t4,$t7,0xc
-//    sra $a2,$t5,$0x2
-//    addiu $t6,$t6,0x1
-//    sw $t6,0x8($t7)
-//    sltu $t7,$t3,$a2
-//    beq $t7,$zero,0x80
-//    sw $t4,0x30($sp)
-//ASM_END
+ASM_START 0x001cdb18
+    // Some random stuff that happens in this range
+    lw $t4,0x54($s5)
+    li $t6,0xe0
+    li $t5,0x12e
+
+
+    // Original FPU code
+    //lui $t7,0x70
+    //addiu $t7,$t7,0x6510
+    //lwc1 $f0,0x0($t7)
+    //swc1 $f0,0xc($t4)
+    //swc1 $f0,0x08($t4)
+
+    // Set vertical scale to 0.6875
+    lui $t7,0x3f30
+    sw $t7,0xc($t4)
+    // Set horizontal scale to 0.59375
+    lui $t7,0x3f18
+    sw $t7,0x8($t4)
+    nop
+
+    // Some random stuff that happens after
+    li $t7,0x1
+    sb $t7,0x26($t4)
+ASM_END
+
+
+// Patch key instruction loading function (also never runs?)
+ASM_START 0x001e1b74
+    // Some random stuff that happens in this range
+    lw $t5,0x4($s1)
+    lw $a1,0x64($s0)
+    lui $t7,0x76
+    addiu $t7,$t7,0x29f0
+    subu $t5,$t5,$a1
+
+    // Original FPU code
+    //lui $t6,0x70
+    //addiu $t6,$t6,0x6680
+    //lwc1 $f0,0x0($t6)
+    //swc1 $f0,0xc($v0)
+    //swc1 $f0,0x8($v0)
+
+    // Set vertical scale to 0.6875
+    lui $t6,0x3f30
+    sw $t6,0xc($v0)
+    // Set horizontal scale to 0.59375
+    lui $t6,0x3f18
+    sw $t6,0x8($v0)
+    nop
+
+    // Some random stuff that happens after
+    lw $t6,0x8($t7)
+    addiu $t4,$t7,0xc
+    sra $a2,$t5,$0x2
+    addiu $t6,$t6,0x1
+    sw $t6,0x8($t7)
+    sltu $t7,$t3,$a2
+    beq $t7,$zero,0x80
+    sw $t4,0x30($sp)
+ASM_END
 
 
 
