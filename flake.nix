@@ -173,7 +173,8 @@
         wait
       '';
       elfName = "SCPS_151.15";
-      pnachName = "SCPS-15115_8EFDBAEB";
+      elfNamePnach = builtins.replaceStrings ["." "_"] ["" "-"] elfName;
+      pnachName = "${elfNamePnach}_8EFDBAEB";
       patches-buildPhase = files: ''
         runHook preBuild
 
@@ -892,7 +893,7 @@
 
           postBuild = ''
             new_crc=$(pcsx2-crctool ${self.packages.${system}.elf-patched}/${elfName}_patched)
-            new_name="${elfName}_$new_crc.pnach"
+            new_name="${elfNamePnach}_$new_crc.pnach"
             echo "Patched CRC is $new_crc, copying pnach to $new_name"
             cp "$out/${pnachName}.pnach" "$out/$new_name"
           '';
