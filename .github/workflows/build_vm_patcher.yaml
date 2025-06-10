@@ -33,7 +33,9 @@ jobs:
         run: zip -r -s 2000M ssmm_build_vm_${{ github.ref_name }}.zip win/
 
       - name: Release
-        uses: softprops/action-gh-release@v2
+        # TODO: unpin version when this is resolved
+        # https://github.com/softprops/action-gh-release/issues/627
+        uses: softprops/action-gh-release@v2.2.2
         if: github.ref_type == 'tag'
         with:
           generate_release_notes: true
@@ -72,7 +74,9 @@ jobs:
           cp SCPS-15115_8EFDBAEB.pnach SCPS-15115_AABE2016.pnach
 
       - name: Release
-        uses: softprops/action-gh-release@v2
+        # TODO: unpin version when this is resolved
+        # https://github.com/softprops/action-gh-release/issues/627
+        uses: softprops/action-gh-release@v2.2.2
         if: github.ref_type == 'tag'
         with:
           generate_release_notes: true
