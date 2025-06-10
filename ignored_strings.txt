@@ -1,7 +1,6 @@
 # Some strings don't need to be translated, put them here to ignore from analysis
  
     
- --:--
 "
 '
 /
