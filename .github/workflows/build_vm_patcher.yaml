@@ -69,7 +69,7 @@ jobs:
           # HACK: We cannot know the patched CRC without access to the original elf/ISO.
           # Instead, just hardcode the new filename. This will have to be updated
           # if the production patches ever change
-          cp SCPS-15115_8EFDBAEB.pnach SCPS_151.15_AABE2016.pnach
+          cp SCPS-15115_8EFDBAEB.pnach SCPS_15115_AABE2016.pnach
 
       - name: Release
         uses: softprops/action-gh-release@v2
