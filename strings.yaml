@@ -561,7 +561,7 @@
 " AM04:00":
   english: " 04:00AM"
 "ブロブコアを撃破<げきは>せよ!➝\n\fブロブコアは弱<よわ>まるとオレンジ色<いろ>のバリアを張<は>って\n休息状態<きゅうそくじょうたい>になり体力<たいりょく>の回復<かいふく>を始<はじ>めます。➝\n\f改造<かいぞう>レーザー砲<ほう>の高出力<こうしゅつりょく>エネルギーも\n通常状態<つうじょうじょうたい>のバリアでは跳<は>ね返<かえ>されてしまいますが\n休息状態<きゅうそくじょうたい>のバリアなら突<つ>き抜<ぬ>けるはずです。➝\n\f弱点<じゃくてん>の目<め>を狙<ねら>って改造<かいぞう>レーザー砲<ほう>を撃<う>ち\nブロブコアを撃破<げきは>してください。➝\n\fなお、改造<かいぞう>レーザー砲<ほう>を使用<しよう>するには\n技<わざ>ストックゲージが3つ必要<ひつよう>ですが\n発動<はつどう>させても、すぐには撃<う>てません。➝\n\f改造<かいぞう>レーザー砲<ほう>のエネルギーがMAXになれば\nガチャメカを操作<そうさ>するボタンで\n撃<う>つことができます。":
-  english: "Defeat the blob core!➝\n\fWhen the blob core weakens,it\nputs up a barrier and rests to\nrecover its strength.➝\n\fThe cannon will be blocked by the\nmain shield,but it should be able\nto break the rest shield.➝\n\fAim at the weak spot and fire\nthe laser cannon to defeat the\nblob core.➝\n\fThe cannon consumes 3 special\nattacks,and will charge for a bit\nbefore it's ready to fire.➝\n\fOnce the cannon energy reaches\nMAX,you can fire it with the\nbutton for that gadget."
+  english: "Defeat the blob core!➝\n\fWhen the blob core weakens,it\nputs up a barrier and rests to\nrecover its strength.➝\n\fThe cannon will be blocked by the\nmain shield,but it should be able\nto break the rest shield.➝\n\fAim at the weak spot and fire\nthe laser cannon to defeat the\nblob core.➝\n\fThe cannon consumes 3 special\nattacks,and will charge for a bit\nbefore it's ready to fire.➝\n\fOnce the cannon energy reaches\nMAX,you can fire it with any\ngadget button."
 "ブロブコアを倒<たお>すには改造<かいぞう>レーザー砲<ほう>が必要<ひつよう>です。":
   english: "You'll need a modified laser cannon\nto defeat the blob core."
 
