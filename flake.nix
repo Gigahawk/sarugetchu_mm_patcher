@@ -22,6 +22,10 @@
       url = "github:Gigahawk/ps2isopatcher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    pcsx2-crctool = {
+      url = "github:Gigahawk/pcsx2-crctool";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -32,6 +36,7 @@
     ps2str,
     ssmm-mux,
     ps2isopatcher,
+    pcsx2-crctool,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (system:
@@ -170,6 +175,8 @@
       elfName = "SCPS_151.15";
       pnachName = "SCPS-15115_8EFDBAEB";
       patches-buildPhase = files: ''
+        runHook preBuild
+
         mkdir -p "$out"
         outfile="$out/${pnachName}.pnach"
         touch "$outfile"
@@ -186,6 +193,8 @@
           cat "$f" | sed ':a; /^\n*$/d; /^\n/s/^\n*//' >> "$outfile"
           echo -e "\n" >> $outfile
         done
+
+        runHook postBuild
       '';
       version = "1";
       resourceFiles = import ./resource-files.nix;
@@ -869,7 +878,18 @@
           src = null;
           dontUnpack = true;
 
+          nativeBuildInputs = [
+            pcsx2-crctool.packages.${system}.default
+          ];
+
           buildPhase = patches-buildPhase "*";
+
+          postBuild = ''
+            new_crc=$(pcsx2-crctool ${self.packages.${system}.elf-patched}/${elfName}_patched)
+            new_name="${elfName}_$new_crc.pnach"
+            echo "Patched CRC is $new_crc, copying pnach to $new_name"
+            cp "$out/${pnachName}.pnach" "$out/$new_name"
+          '';
 
           dontInstall = true;
           dontFixup = true;
@@ -885,6 +905,7 @@
         {
           pname = "mm-prod-patches";
           buildPhase = patches-buildPhase prodPatchNamesStr;
+          postBuild = null;
         });
         elf-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {

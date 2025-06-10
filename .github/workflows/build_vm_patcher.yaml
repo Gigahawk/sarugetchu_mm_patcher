@@ -65,7 +65,7 @@ jobs:
       - name: Build pnaches
         run: |
           nix build .#debug-patches
-          cp result/SCPS-15115_8EFDBAEB.pnach .
+          cp result/SCPS-15115_*.pnach .
 
       - name: Release
         uses: softprops/action-gh-release@v2
@@ -73,12 +73,12 @@ jobs:
         with:
           generate_release_notes: true
           prerelease: true
-          files: SCPS-15115_8EFDBAEB.pnach
+          files: SCPS-15115_*.pnach
 
       - name: Archive objects
         # Skip archive if running on act
         if: ${{ !env.ACT }}
         uses: actions/upload-artifact@v4
         with:
-          name: SCPS-15115_8EFDBAEB.pnach
-          path: SCPS-15115_8EFDBAEB.pnach
+          name: SCPS-15115_pnaches
+          path: SCPS-15115_*.pnach
