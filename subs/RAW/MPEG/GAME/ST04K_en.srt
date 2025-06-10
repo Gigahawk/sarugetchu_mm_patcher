@@ -7,102 +7,110 @@ You made it this far too? Quite impressive
 Quit it already, Specter! Aren't we all in trouble?
 
 3
-00:00:10,260 --> 00:00:16,563
-Jeez, have you not figured out what's going on yet?
+00:00:10,154 --> 00:00:11,041
+Jeez...
 
 4
-00:00:17,323 --> 00:00:19,060
-You're all so slow...
+00:00:11,751 --> 00:00:16,553
+Have you not figured out what's going on yet?
 
 5
-00:00:19,061 --> 00:00:25,068
-Haven't you noticed the monkeys are acting a little differently this time?
+00:00:17,323 --> 00:00:20,057
+You're all so slow...
 
 6
+00:00:20,067 --> 00:00:25,068
+Haven't you noticed the monkeys are acting a little differently this time?
+
+7
 00:00:25,160 --> 00:00:27,201
 Huh? What do you mean?
 
-7
+8
 00:00:28,042 --> 00:00:30,571
 Now that you mention it, it does feel different from before...
 
-8
-00:00:31,338 --> 00:00:36,110
-True, until now everything's seemed like the usual monkey behavior.
-
 9
+00:00:31,338 --> 00:00:33,567
+True, until now everything's seemed
+
+10
+00:00:33,577 --> 00:00:36,113
+like the usual monkey behavior.
+
+11
 00:00:36,737 --> 00:00:38,238
 
 
-10
+12
 00:00:38,264 --> 00:00:39,781
 What are you talking about!
 
-11
+13
 00:00:39,816 --> 00:00:41,601
 I always have a sense of humor!
 
-12
+14
 00:00:42,790 --> 00:00:46,683
 Right, I never forget about humor, even in battle.
 
-13
-00:00:47,391 --> 00:00:51,763
+15
+00:00:47,381 --> 00:00:51,763
 A good sense of humor is essential for world domination.
 
-14
+16
 00:00:51,792 --> 00:00:55,632
 Wow, that's deep, I'm kind of impressed.
 
-15
-00:00:55,793 --> 00:00:57,827
+17
+00:00:55,791 --> 00:00:57,827
 Eh? What does he mean?
 
-16
+18
 00:00:58,037 --> 00:01:00,230
 Jeez, what are you talking about?
 
-17
+19
 00:01:01,038 --> 00:01:03,774
 That's right, enough of this nonsense!
 
-18
+20
 00:01:04,802 --> 00:01:07,798
 You guys came to defeat me, right?
 
-19
+21
 00:01:08,402 --> 00:01:10,083
 Then lets get started.
 
-20
-00:01:10,324 --> 00:01:15,586
+22
+00:01:11,115 --> 00:01:13,070
 The guy I crushed before
 
-21
+23
 00:01:13,102 --> 00:01:15,420
 you got here was too weak.
 
-22
+24
 00:01:15,617 --> 00:01:19,099
 It wasn't even a warm up,
 
-23
+25
 00:01:19,119 --> 00:01:22,786
 but I think you guys can entertain me a little, right?
 
-24
+26
 00:01:22,823 --> 00:01:23,883
 What!?
 
-25
+27
 00:01:24,425 --> 00:01:28,118
 Don’t tell me… You’re not talking about Haruka-chan, right?
 
-26
+28
 00:01:28,964 --> 00:01:31,060
 
 
-27
+29
 00:01:31,085 --> 00:01:32,125
 Let's go!
 
