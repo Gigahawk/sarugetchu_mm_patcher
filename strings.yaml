@@ -378,7 +378,7 @@
 " AM06:16":
   english: " 06:16AM"
 "サル兵<へい>をすべて倒<たお>せ!➝\n\fこのエリアにいるサル兵<へい>をすべて倒<たお>してください。":
-  english: "Defeat all monkey soldiers!➝\n\fDefeat all monkey soldiers in this area."
+  english: "Defeat all monkey soldiers!➝\n\fDefeat all monkey soldiers in this\narea."
 ## G-Hangar
 "G専用格納庫":
   english: "G-Hangar"
