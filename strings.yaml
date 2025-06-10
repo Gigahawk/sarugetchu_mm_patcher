@@ -894,6 +894,45 @@
   english: "Start Round"
 
 # VS. Mode Special Move select screen
+"改造レーザー砲":
+  english:
+    "fa73ce1f": "Modified Laser Cannon"
+    "5b74ce1f": "Modified\nLaser Cannon"
+    # What do the rest of these do?
+    "9e4e1525": "Modified4Laser Cannon"
+    "ff4e1525": "Modified5Laser Cannon"
+    "1f285c2a": "Modified6Laser Cannon"
+    "80285c2a": "Modified7Laser Cannon"
+    "dd24a32f": "Modified8Laser Cannon"
+    "3e25a32f": "Modified9Laser Cannon"
+    "fed9e934": "Modified0Laser Cannon"
+    "5fdae934": "ModifiedALaser Cannon"
+    "02d9303a": "ModifiedBLaser Cannon"
+    "63d9303a": "ModifiedCLaser Cannon"
+    "008d773f": "ModifiedDLaser Cannon"
+    "618d773f": "ModifiedELaser Cannon"
+    "8166be44": "ModifiedFLaser Cannon"
+    "e266be44": "ModifiedGLaser Cannon"
+    "a866054a": "ModifiedHLaser Cannon"
+    "0967054a": "ModifiedILaser Cannon"
+    "6b983269": "ModifiedJLaser Cannon"
+    "cc983269": "ModifiedKLaser Cannon"
+    "0f73796e": "ModifiedLLaser Cannon"
+    "7073796e": "ModifiedMLaser Cannon"
+    "904cc073": "ModifiedNLaser Cannon"
+    "f14cc073": "ModifiedOLaser Cannon"
+    "4e490779": "ModifiedPLaser Cannon"
+    "af490779": "ModifiedQLaser Cannon"
+    "6ffe4d7e": "ModifiedRLaser Cannon"
+    "d0fe4d7e": "ModifiedSLaser Cannon"
+    "73fd9483": "ModifiedTLaser Cannon"
+    "d4fd9483": "ModifiedULaser Cannon"
+    "71b1db88": "ModifiedVLaser Cannon"
+    "d2b1db88": "ModifiedWLaser Cannon"
+    "f28a228e": "ModifiedXLaser Cannon"
+    "538b228e": "ModifiedYLaser Cannon"
+    "198b6993": "ModifiedZLaser Cannon"
+    "7a8b6993": "ModifiedaLaser Cannon"
 ## Kakeru
 "ディメンションブレイク":
   english: "Dimension Break"
@@ -3587,8 +3626,6 @@ Gクラッシャー:
   english: "Loaded characters\ncan't be used."
 "データB抽出完了!":
   english: "Data B extraction complete!"
-"改造レーザー砲":
-  english: "Modified Laser Cannon"
 "他のボタンでとりけし":
   english: "Cancel with another button."
 "そうさ説明":
