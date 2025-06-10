@@ -884,16 +884,20 @@
 
           buildPhase = patches-buildPhase "*";
 
+          dontInstall = true;
+          dontFixup = true;
+        };
+        debug-patches-post-patched = self.packages.${system}.debug-patches.overrideAttrs (old: {
+          pname = "mm-debug-patches-post-patched";
+
           postBuild = ''
             new_crc=$(pcsx2-crctool ${self.packages.${system}.elf-patched}/${elfName}_patched)
             new_name="${elfName}_$new_crc.pnach"
             echo "Patched CRC is $new_crc, copying pnach to $new_name"
             cp "$out/${pnachName}.pnach" "$out/$new_name"
           '';
+        });
 
-          dontInstall = true;
-          dontFixup = true;
-        };
         prod-patches = self.packages.${system}.debug-patches.overrideAttrs (old:
         let
           prodPatchNames = [
@@ -905,7 +909,6 @@
         {
           pname = "mm-prod-patches";
           buildPhase = patches-buildPhase prodPatchNamesStr;
-          postBuild = null;
         });
         elf-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {

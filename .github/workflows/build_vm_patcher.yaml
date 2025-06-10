@@ -65,7 +65,11 @@ jobs:
       - name: Build pnaches
         run: |
           nix build .#debug-patches
-          cp result/SCPS-15115_*.pnach .
+          cp result/SCPS-15115_8EFDBAEB.pnach .
+          # HACK: We cannot know the patched CRC without access to the original elf/ISO.
+          # Instead, just hardcode the new filename. This will have to be updated
+          # if the production patches ever change
+          cp SCPS-15115_8EFDBAEB.pnach SCPS_151.15_AABE2016.pnach
 
       - name: Release
         uses: softprops/action-gh-release@v2
