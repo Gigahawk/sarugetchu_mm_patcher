@@ -200,7 +200,8 @@
       # https://discourse.nixos.org/t/how-to-create-a-timestamp-in-a-nix-expression/30329/2
       lastModifiedStr = builtins.readFile "${pkgs.runCommand "timestamp" { when = self.lastModified; } "echo -n `date -d @$when +%Y-%m-%d_%H-%M-%S` > $out"}";
       # https://discourse.nixos.org/t/flakes-accessing-selfs-revision/11237/8
-      version = "${toString (self.ref or self.shortRev or self.dirtyShortRev or "unknown")}_${lastModifiedStr}";
+      revStr = "${toString (self.ref or self.shortRev or self.dirtyShortRev or "unknown")}_${lastModifiedStr}";
+      version = "1";
       resourceFiles = import ./resource-files.nix;
       resourceFilesStr = builtins.concatStringsSep "\n" resourceFiles;
       fontconfig_file = pkgs.makeFontsConf {
