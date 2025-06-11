@@ -218,11 +218,16 @@
   english: "Tokyo Teleport"
 "現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。":
   english: "Intercept the mech that showed up."
+# ゴリアック (goriaku) is a nonsense word with no real definition.
+# The only other prominent usage of this term is the 炎神兵ゴリアック (Flame Trooper Goliac)
+# from the duel masters game: https://duelmasters.fandom.com/wiki/Flame_Trooper_Goliac
+# The english Ape Escape games translate this term as "Goliath"
+# https://apeescape.fandom.com/wiki/Goliath
 "アーマードゴリアックを撃退<げきたい>せよ!➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
-  english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
+  english: "Defeat the\nArmored Goliath!➝\n\fTarget the Armored Goliath\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
 "アーマードゴリアックを撃退<げきたい>せよ!\x1F➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
   # Episode Kakeru randomly has this extra \x1F character in here for some reason
-  english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
+  english: "Defeat the\nArmored Goliath!➝\n\fTarget the Armored Goliath\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
 ## Shinjuku
 "新宿":
   english: "Shinjuku"
@@ -251,7 +256,7 @@
   "english": " 04:01PM"
 #"秋葉原中央通<あきはばらちゅうおうどお>り地下<ちか>にサル軍基地<ぐんきち>を発見<はっけん>しました! そこにサル軍輸送部隊<ぐんゆそうぶたい>が向<む>かっています。トレーラーで巨大兵器<きょだいへいき>を運<はこ>び込<こ>もうとしているようです。 搬入<はんにゅう>を阻止<そし>してください!":
 "秋葉原中央通<あきはばらちゅうおうどお>り地下<ちか>にサル軍基地<ぐんきち>を発見<はっけん>しました! そこにサル軍輸送部隊<ぐんゆそうぶたい>が向<む>かっています。 トレーラーで巨大兵器<きょだいへいき>を運<はこ>び込<こ>もうとしているようです。 搬入<はんにゅう>を阻止<そし>してください!":
-  "english": "We've discovered an underground monkey army base below Akihabara Chuo Dori!A monkey army transport unit is on its way there.It looks like they're transporting large weapons in a trailer.Please stop them!"
+  "english": "We've discovered an underground monkey army base below Akihabara Chuo-dori!A monkey army transport unit is on its way there.It looks like they're transporting large weapons in a trailer.Please stop them!"
 "輸送<ゆそう>トレーラーを撃破<げきは>せよ!➝\n\fサル軍基地内<ぐんきちない>に運<はこ>び込<こ>まれる前<まえ>に\n動力部<どうりょくぶ>を探<さが>し破壊<はかい>してください。➝\n\f多数<たすう>の小型<こがた>レーザー砲<ほう>が設置<せっち>されています。\n小型<こがた>レーザー砲<ほう>の射撃<しゃげき>には十分注意<じゅうぶんちゅうい>してください。":
   english: "Destroy the transport trailer!➝\n\fFind and destroy the power unit\nbefore it's transported into the\nmonkey base.➝\n\fBe careful,the trailer is\nprotected by many laser cannons."
 "エンジン破壊! 残り3基です!":
@@ -271,7 +276,7 @@
 "東京":
   english: "Tokyo"
 "引<ひ>き続<つづ>き、川崎方面<かわさきほうめん>の建設中基地<けんせつちゅうきち>を目指<めざ>してください。 東京駅<とうきょうえき>から地上<ちじょう>に出<で>て、そこからは地上<ちじょう>ルートで川崎<かわさき>を目指<めざ>します。 なお、東京駅付近<とうきょうえきふきん>に大型<おおがた>メカ潜伏<せんぷく>の情報<じょうほう>が入<はい>っています! 注意<ちゅうい>してください!!":
-  english: "Continue heading towards the base in the Kawasaki area.Leave Tokyo Station and head towards Kawasaki by ground.Also,we have received intel that a large mecha is hiding near Tokyo Station!Please be careful!!"
+  english: "Continue heading towards the base in the Kawasaki area.Leave Tokyo Station and head towards Kawasaki by ground.Also,we have received intel that a large mech is hiding near Tokyo Station!Please be careful!!"
 "東京 PM11:58":
   english: "Tokyo\n11:58PM"
 " PM11:58":
@@ -343,7 +348,7 @@
 " PM07:49":
   english: " 07:49PM"
 "サル兵<へい>を100匹<ぴき>ゲッチュせよ!➝\n\fアーマーが外<はず>れたサル兵<へい>はすぐ逃<に>げてしまいます。\n逃<に>げる前<まえ>にゲッチュしてください。":
-  english: "Catch 100 monkey soliders!➝\n\fMonkey soldiers will run away when\ntheir armor breaks.Catch them\nbefore they run away."
+  english: "Catch 100 monkey soldiers!➝\n\fMonkey soldiers will run away when\ntheir armor breaks.Catch them\nbefore they run away."
 ## Stadium (Boss fight)
 "緊急事態発生<きんきゅうじたいはっせい>!! 謎<なぞ>の飛行物体<ひこうぶったい>が高速<こうそく>で接近中<せっきんちゅう>! 直<ただ>ちに戦闘態勢<せんとうたいせい>に入<はい>ってください。":
   # '高速で' presumably means 'rapidly', but the starting cutscene for this level clearly shows that it teleports in?
@@ -354,7 +359,7 @@
 " PM11:18":
   english: " 11:18PM"
 "フライングメカを撃破<げきは>せよ!➝\n\f射程<しゃてい>の長<なが>いガチャメカを使用<しよう>し撃墜<げきつい>してください。➝\n\f多種<たしゅ>にわたる重火器<じゅうかき>を持<も>っていると\n思<おも>われますので十分注意<じゅうぶんちゅうい>してください。":
-  english: "Destroy the flying mecha!➝\n\fUse long-range gadgets to shoot it\ndown.➝\n\fBe careful, this mecha is likely\nheavily armed."
+  english: "Destroy the flying mech!➝\n\fUse long-range gadgets to shoot it\ndown.➝\n\fBe careful, this mech is likely\nheavily armed."
 ## Teleporter Room (Transfer Room?)
 "転送ルーム":
   #english: "Transfer Room"
@@ -439,7 +444,7 @@
 "ピポトロンGを倒<たお>せ!➝\n\f新種<しんしゅ>のピポトロンで、まったくデータがありません。➝\n\f何<なに>をしてくるかわかりません。\n慎重<しんちょう>に戦<たたか>ってください。":
   english: "Defeat Pipotron G!➝\n\fThis is a new Pipotron species,\nwe have no data on it.➝\n\fFight carefully, we don't know\nhow it will behave."
 "カケルを倒<たお>せ!➝\n\fカケルの必殺技<ひっさつわざ>は\nメカボーを使<つか>ったものが多<おお>いはずです。\n➝\n\f間合<まあ>いを詰<つ>められたら危険<きけん>です。\n慎重<しんちょう>に戦<たたか>ってください。":
-  english: "Defeat Kakeru!➝\n\fMost of Kakeru's special moves\nuse the MechaBo.➝\n\fFight carefully,it's dangerous\nto get too close."
+  english: "Defeat Kakeru!➝\n\fMost of Kakeru's special moves\nuse the Mecha Bo.➝\n\fFight carefully,it's dangerous\nto get too close."
 ## Virtual Space 01
 "バーチャルスペース01":
   english: "V.R.Space 01"
@@ -474,7 +479,7 @@
   english: "Defeat the Grid Core!➝\n\fAttacks seem ineffective when\nits in particle form.Attack\nwhen it takes physical form.➝\n\fBe careful, it is likely to\nlaunch powerful attacks when it\nreveals its face."
 ## Stadium
 "空中戦艦<くうちゅうせんかん>は、東京方面<とうきょうほうめん>に墜落<ついらく>したとの情報<じょうほう>が入<はい>りました。 手<て>がかりを探<さが>すために東京方面<とうきょうほうめん>に引<ひ>き返<かえ>してください。 地上<ちじょう>には謎<なぞ>のモンスターが多数出現<たすうしゅつげん>しています。 十分注意<じゅうぶんちゅうい>してください。":
-  english: "We have intel that the aerial battleship has crashed near Tokyo.Please head towards Toyko to search for clues.Be careful, many strange monsters have appeared in the area."
+  english: "We have intel that the aerial battleship has crashed near Tokyo.Please head towards Tokyo to search for clues.Be careful, many strange monsters have appeared in the area."
 "スタジアム AM03:20":
   english: "Stadium\n03:20AM"
 " AM03:20":
@@ -483,7 +488,7 @@
   english: "Defeat the strange floating\ncreatures!➝\n\fUse long range gadgets to\ndefeat them.➝\n\fBe careful,there is no data on\nthese creatures."
 ## Yacht Harbor
 "東京方面<とうきょうほうめん>に墜落<ついらく>した空中戦艦<くうちゅうせんかん>の手<て>がかりが必要<ひつよう>です。 東京方面<とうきょうほうめん>に引<ひ>き返<かえ>してください。 地上<ちじょう>には未確認生物<みかくにんせいぶつ>が多数出現<たすうしゅつげん>しています。 十分注意<じゅうぶんちゅうい>してください。":
-  english: "We need more intel on the crashed aerial battleship.Please head towards Toyko.Be careful, many strange monsters have appeared in the area."
+  english: "We need more intel on the crashed aerial battleship.Please head towards Tokyo.Be careful, many strange monsters have appeared in the area."
 "ヨットハーバー AM11:11":
   english: "Yacht Harbor\n11:11AM"
 " AM11:11":
@@ -555,15 +560,15 @@
 "墜落地点":
   english: "Crash Site"
 "空中戦艦<くうちゅうせんかん>の墜落現場<ついらくげんば>を発見<はっけん>しました! ブロブコアは通常<つうじょう>の攻撃<こうげき>では倒<たお>すことができません。 改造<かいぞう>レーザー砲<ほう>を使<つか>って、止<とど>めをさしてください。":
-  english: "You've found the crash site! The blob core can't be defeated with normal attacks,use the modified laser cannon to finish it off."
+  english: "You've found the crash site! The Blob Core can't be defeated with normal attacks,use the modified laser cannon to finish it off."
 "墜落地点 AM04:00":
   english: "Crash Site\n04:00AM"
 " AM04:00":
   english: " 04:00AM"
 "ブロブコアを撃破<げきは>せよ!➝\n\fブロブコアは弱<よわ>まるとオレンジ色<いろ>のバリアを張<は>って\n休息状態<きゅうそくじょうたい>になり体力<たいりょく>の回復<かいふく>を始<はじ>めます。➝\n\f改造<かいぞう>レーザー砲<ほう>の高出力<こうしゅつりょく>エネルギーも\n通常状態<つうじょうじょうたい>のバリアでは跳<は>ね返<かえ>されてしまいますが\n休息状態<きゅうそくじょうたい>のバリアなら突<つ>き抜<ぬ>けるはずです。➝\n\f弱点<じゃくてん>の目<め>を狙<ねら>って改造<かいぞう>レーザー砲<ほう>を撃<う>ち\nブロブコアを撃破<げきは>してください。➝\n\fなお、改造<かいぞう>レーザー砲<ほう>を使用<しよう>するには\n技<わざ>ストックゲージが3つ必要<ひつよう>ですが\n発動<はつどう>させても、すぐには撃<う>てません。➝\n\f改造<かいぞう>レーザー砲<ほう>のエネルギーがMAXになれば\nガチャメカを操作<そうさ>するボタンで\n撃<う>つことができます。":
-  english: "Defeat the blob core!➝\n\fWhen the blob core weakens,it\nputs up a barrier and rests to\nrecover its strength.➝\n\fThe cannon will be blocked by the\nmain shield,but it should be able\nto break the rest shield.➝\n\fAim at the weak spot and fire\nthe laser cannon to defeat the\nblob core.➝\n\fThe cannon consumes 3 special\nattacks,and will charge for a bit\nbefore it's ready to fire.➝\n\fOnce the cannon energy reaches\nMAX,you can fire it with any\ngadget button."
+  english: "Defeat the Blob Core!➝\n\fWhen the Blob Core weakens,it\nputs up a barrier and rests to\nrecover its strength.➝\n\fThe cannon will be blocked by the\nmain shield,but it should be able\nto break the rest shield.➝\n\fAim at the weak spot and fire\nthe laser cannon to defeat the\nBlob Core.➝\n\fThe cannon consumes 3 special\nattacks,and will charge for a bit\nbefore it's ready to fire.➝\n\fOnce the cannon energy reaches\nMAX,you can fire it with any\ngadget button."
 "ブロブコアを倒<たお>すには改造<かいぞう>レーザー砲<ほう>が必要<ひつよう>です。":
-  english: "You'll need a modified laser cannon\nto defeat the blob core."
+  english: "You'll need a modified laser cannon\nto defeat the Blob Core."
 
 # Mission complete screen
 "ミッション":
@@ -681,7 +686,7 @@
 "レジェンドトーナメント":
   english: "Legend Tournament"
 "デビルズトーナメント":
-  english: "Devils Tournament"
+  english: "Devil's Tournament"
 
 # Colosseum Mode screen descriptions
 "初級者<しょきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
@@ -1102,9 +1107,10 @@
   # Idk why this one is also here
   english: "A master of offensive magic.He will rain down meteors to support you."
 "ハットリモンゾウ":
-  english: "Hattori Monzo"
+  # Pumped and Primed drops the "Hattori"
+  english: "Monzo"
 "ハットリ\nモンゾウ":
-  english: "Hattori\nMonzo"
+  english: "Monzo"
 "手裏剣<しゅりけん>の達人<たつじん>。 巨大<きょだい>な旋風手裏剣<せんぷうしゅりけん>をなげて援護<えんご>してくれます。       ":
   english: "A shuriken master.He throws a whirlwind of shuriken to support you."
 "ツタンカーモン":
@@ -1124,7 +1130,7 @@
   # Wiki uses this name
   english: "Samui"
 "その打球<だきゅう>は見<み>えないくらい速<はや>い! 自慢<じまん>のバットで援護<えんご>します。       ":
-  english: "The ball is so fast you can't even see it!He supports you with his prized bat."
+  english: "The ball is so fast you can't even see it! He supports you with his prized bat."
 "モンチさん":
   english:
     "cbe64222": "Monki-\nSan"
@@ -1132,13 +1138,11 @@
     "5a7fe082": "Monki3San"
     "2f7059db": "Monki-San"
 "笑顔<えがお>が素敵<すてき>な宇宙飛行土<うちゅうひこうし>。 ロケット噴射<ふんしゃ>で敵<てき>を一掃<いっそう>します。       ":
-  english: "A spacefaring robot with a lovely smile.It uses rocket propulsion to wipe out enemies."
+  english: "An astronaut with a lovely smile.He uses rocket propulsion to wipe out enemies."
 "エジモン":
-  # TODO: check if this is right,
-  # he apparently holds up a lightbulb
-  english: "Edimon"
+  english: "Edison"
 "ゴリアック研究所<けんきゅうじょ>の所長<しょちょう>。 ゴリアックアームで援護<えんご>してくれます。       ":
-  english: "Director of the Goliac Lab.Provides support with a Goliac Arm."
+  english: "Chief of the Goliath Lab.Provides support with a Goliath Arm."
 "ウッキーレッド":
   english:
     "8de74222": "Monkey\nRed"
@@ -1148,7 +1152,8 @@
 "ウッキーファイブのリーダー。 画面<がめん>を飛<と>びかって周囲<しゅうい>の全員<ぜんいん>にダメージを与<あた>えます。     ":
   english: "The leader of Monkey Five.He flies across the screen and deals damage to everyone around him."
 "アフロ":
-  english: "Afro"
+  # Renamed to Leo in Pumped and Primed
+  english: "Leo"
 "カジノシティのヒーロー。 嵐<あらし>を呼<よ>ぶダンスにみんなを巻<ま>き込<こ>みます。       ":
   english: "The hero of Casino City.He gets everyone involved in a storm-bringing dance."
 "パンプキン":
@@ -1156,10 +1161,10 @@
 "ハロウィンのヒーロー。 お菓子爆弾<かしばくだん>であなたを援護<えんご>します。       ":
   english: "The hero of Halloween.He supports you with candy bombs."
 "サルースウッキー":
-  # TODO: what is this?
-  english: "Salus Monkey"
+  # I guess Saru-ce Wakkee sound's kinda like Bruce Lee
+  english: "Bruce Monkee"
 "サルース\nウッキー":
-  english: "Salus\nMonkey"
+  english: "Bruce\nMonkee"
 "クンフーの達人<たつじん>にしてスター。 ヌンチャク衝撃波<しょうげきは>で敵<てき>を攻撃<こうげき>します。     ":
   english: "A kung fu master and star.He attacks enemies with nunchuck shock waves."
 "ミヤモン⋅ムサシ":
@@ -1173,7 +1178,7 @@
 "ワッキー":
   english: "Wakkie"
 "ゴリアック開発<かいはつ>プロジェクトリーダー。 ゴリアックヘッドで援護<えんご>します。     ":
-  english: "The Goliac Development Project Leader.Provides support with a Goliac Head."
+  english: "The Goliath Development Project Leader.Provides support with a Goliath Head."
 ## Saru Team
 "サルバズーカ":
   english:
@@ -1230,20 +1235,19 @@
     "296b82a2": "Saru Dance"
     "c3c867a7": "Saru Dance"
 "ゴリアックアイ":
-  # What is Goliac?
   english:
-    "5cb7ed24": "Goliac1Eye"
-    "bdb7ed24": "Goliac2Eye"
-    "7fb3303a": "Goliac Eye"
-    "e0b3303a": "Goliac Eye"
-    "0240054a": "Goliac Eye"
-    "6340054a": "Goliac Eye"
-    "cddb516e": "Goliac Eye"
-    "2edc516e": "Goliac\nEye"
-    "f0d79483": "Goliac Eye"
-    "51d89483": "Goliac\nEye"
-    "73646993": "Goliac Eye"
-    "d4646993": "Goliac\nEye"
+    "5cb7ed24": "Goliath1Eye"
+    "bdb7ed24": "Goliath2Eye"
+    "7fb3303a": "Goliath Eye"
+    "e0b3303a": "Goliath Eye"
+    "0240054a": "Goliath Eye"
+    "6340054a": "Goliath Eye"
+    "cddb516e": "Goliath Eye"
+    "2edc516e": "Goliath\nEye"
+    "f0d79483": "Goliath Eye"
+    "51d89483": "Goliath\nEye"
+    "73646993": "Goliath Eye"
+    "d4646993": "Goliath\nEye"
 "戦艦射撃":
   english:
     "7fb8ed24": "Battleship1Canon"
@@ -1261,15 +1265,15 @@
 "サルUFO":
   english: "Saru UFO"
 "ゴリアックハンド":
-  english: "Goliac Hand"
+  english: "Goliath Hand"
 "ゴリアック\nハンド":
   english:
-    "1ddced24": "Goliac Hand"
-    "40d8303a": "Goliac Hand"
-    "c364054a": "Goliac Hand"
-    "8e00526e": "Goliac\nHand"
-    "b1fc9483": "Goliac\nHand"
-    "34896993": "Goliac\nHand"
+    "1ddced24": "Goliath Hand"
+    "40d8303a": "Goliath Hand"
+    "c364054a": "Goliath Hand"
+    "8e00526e": "Goliath\nHand"
+    "b1fc9483": "Goliath\nHand"
+    "34896993": "Goliath\nHand"
 ## Pipotron
 "トロンガッシュ":
   english:
@@ -1562,7 +1566,7 @@ Gクラッシャー:
 "近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 使用<しよう>にエネルギーを消費<しょうひ>しないのが特徴<とくちょう>です。":
   english: "A gadget for melee attacks.It does not require energy to use."
 "近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 カケルたちのメカボーと違<ちが>い、突<つ>き攻撃<こうげき>で弾<たま>を撃<う>つことができます。":
-  english: "A gadget for melee attacks.Unlike other MechaBos it can shoot bullets when thrusting."
+  english: "A gadget for melee attacks.Unlike other Mecha Bos it can shoot bullets when thrusting."
 "メカハンマー":
   #english: "Stun Hammer"  # Mech Hammer?
   english: "MechHammr"
@@ -1575,7 +1579,7 @@ Gクラッシャー:
 "メカロッド":
   english: "MechRod"
 "近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 他<ほか>のキャラのメカボーよりも多段<ただん>ヒットしやすくなっています。":
-  english: "A gadget for melee attacks.It can land multiple hits more easily than other character's MechaBos"
+  english: "A gadget for melee attacks.It can land multiple hits more easily than other character's Mecha Bos"
 "アームショット":
   english: "ArmShot"
 "チャルの腕<うで>にとりつけられた攻撃用<こうげきよう>メカです。 敵<てき>を追尾<ついび>する弾を撃<う>ったり、回転攻撃<かいてんこうげき>で近<ちか>くの敵<てき>をなぎ払<はら>ったりと万能<ばんのう>ですが、攻撃力<こうげきりょく>の低<ひく>さが難点<なんてん>。":
@@ -1585,29 +1589,29 @@ Gクラッシャー:
   # Presumably short for でかい ボー?
   english: "BigBo"
 "大型<おおがた>のメカボーです。 メカボーより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。":
-  english: A large MechaBo.It can deal more damage than a regular MechaBo,but is slower to swing.
+  english: A large Mecha Bo.It can deal more damage than a regular Mecha Bo,but is slower to swing.
 "トゲハンマー":
   english: "ThrnHammr"
 "大型<おおがた>のトゲつき鉄球<てっきゅう>です。 メカハンマーより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。":
-  english: "A spiked wrecking ball.It can deal more damage than a regular MechaHammer,but is slower to swing."
+  english: "A spiked wrecking ball.It can deal more damage than a regular Mecha Hammer,but is slower to swing."
 ### W Mecha Bo
 "Wメカボー":
-  # What does the W stand for?
-  english: "WMechBo"
+  # W presumably stands for 'double' (ダブル)
+  english: "DblMechBo"
 "片手用<かたてよう>のメカボー。 2本<ほん>で1セットです。 攻撃力<こうげきりょく>は少<すこ>し弱<よわ>いですが、コンボボーナスを狙<ねら>うならこれが一番<いちばん>です。":
-  english: "A pair of one-handed MechaBo.It has weaker attack power,but is great for combo bonuses."
+  english: "A pair of one-handed Mecha Bo.It has weaker attack power,but is great for combo bonuses."
 "ノコハンマー":
   english: "SawHammr"
 "大型<おおがた>の回転<かいてん>ノコギリです。 攻撃力<こうげきりょく>は少<すこ>し弱<よわ>いですが、コンボボーナスを狙<ねら>うならこれが一番<いちばん>です。":
   english: "A circular saw blade.It has weaker attack power,but is great for combo bonuses."
 "Wロッド":
-  english: "WRod"
+  english: "DblRod"
 "両端<りょうたん>に刃<やいば>のついた大型<おおがた>のメカロッドです。 メカロッドより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。":
-  english: "A large MechaRod with blades on the ends.It can deal more damage than a regular MechaRod,but is slower to swing."
+  english: "A large Mecha Rod with blades on both ends.It can deal more damage than a regular Mecha Rod,but is slower to swing."
 "トンファ":
   english: "Tonfa"
 "Wドリル":
-  english: "WDrill"
+  english: "DrilHands"
 "ドリル型<がた>グローブ。 ふたつで1セットです。 飛<と>び道具<どうぐ>はありませんが、多段<ただん>ヒットするのでコンボボーナス狙<ねら>いにはうってつけです。":
   english: "A pair of drill shaped gloves.They don't shoot projectiles,but each swing hits multiple times,making them greaat for combo bonuses."
 ### Kiko Bo
@@ -1616,23 +1620,24 @@ Gクラッシャー:
   # https://en.wikipedia.org/wiki/Qigong
   # Apparently it also just sorta means energy
   # I have no idea what a good translation is for this so KikoBo will have to do
-  english: "KikoBo"
+  #english: "KikoBo"
+  # Given its function I think this is fine
+  english: "LaserBo"
 "気功<きこう>を発射<はっしゃ>することができる不思議<ふしぎ>なメカボーです。 気功<きこう>の発射<はっしゃ>にはエネルギーが必要<ひつよう>なので注意<ちゅうい>しましょう。":
-  english: "A mysterious MechaBo that can shoot lasers.Note that shooting lasers requires energy."
+  english: "A mysterious Mecha Bo that can shoot lasers.Note that shooting lasers requires energy."
 "マジョステッキ":
   english: "MagicWand"
 "魔法少女<まほうしょうじょ>が持<も>っていそうな形<かたち>のメカボーです。 突<つ>き攻撃<こうげき>のハートマーク弾<だん>はゆっくりじわじわと進<すす>む攻撃<こうげき>になっています。":
-  english: "A MechaBo that looks like something a magical girl would have.When thrusting it shoots a heart shaped bullet that moves slowly."
+  english: "A Mecha Bo that looks like something a magical girl would have.When thrusting it shoots a heart shaped bullet that moves slowly."
 "Wハンマー":
-  # Why is this here and not part of W Mecha Bo?
-  english: "WHammer"
+  english: "ThrnHands"
 "トゲつきグローブ。 ふたつで1セットです。 突<つ>き攻撃<こうげき>でグローブをロケット弾<だん>のように前方<ぜんぽう>にうち出<だ>すことができます。":
   english: "A pair of spiked gloves.A thrust attack causes them to launch foward like a rocket."
 ### Reflect Bo
 "リフレクボー":
   english: "ReflectBo"
 "飛<と>び道具<どうぐ>をはね返<かえ>すことのできるメカボーです。 タイミングよく回転儀<かいてんぎ>りで敵<てき>の弾<たま>をそのままうち返<かえ>せますが、ゲージが無<な>い時<とき>はただのメカボーになってしまうので注意<ちゅうい>しましょう。":
-  english: "A MechaBo that can deflect projectiles with an orbiting energy orb.If it runs out of energy it turns into a standard MechaBo."
+  english: "A Mecha Bo that can deflect projectiles with an orbiting energy orb.If it runs out of energy it turns into a standard Mecha Bo."
 "火炎刀":
   english: "FlameSwrd"
 "解説":
@@ -1644,7 +1649,6 @@ Gクラッシャー:
   # 気功, refers to a breathing practice kinda like tai chi?
   # https://en.wikipedia.org/wiki/Qigong
   # Apparently it also just sorta means energy
-  # I have no idea what a good translation is for this so KikoBo will have to do
   english: "SpirtSwrd"
 ### Pipotron G
 "パンチモード":
@@ -1663,7 +1667,7 @@ Gクラッシャー:
 "攻撃範囲<こうげきはんい>を広<ひろ>めた射撃<しゃげき>メカです。 近<ちか>くで当<あ>てると大<おお>きなダメージをあたえることができますが、弾数<たまかず>と飛距離<ひきょり>が落<お>ちているので注意<ちゅうい>が必要<ひつよう>です。":
   english: "A shooting gadget with wider spread.It can deal high damage from close range,but be careful as the clip size and effective range are reduced."
 "Wレーザー":
-  english: "WLaser"
+  english: "DblLaser"
 "ふたつで1セットの射撃<しゃげき>メカです。 素早<すばや>い連射<れんしゃ>が可能<かのう>。 しかしそのぶん弾切<たまぎ>れが早<はや>いので注意<ちゅうい>しましょう。":
   english: "A pair of shooting gadgets.They can fire rapidly,but also run out of ammo quickly."
 ## Launcher type
@@ -1705,7 +1709,7 @@ Gクラッシャー:
   english: "A remote controlled gadget that flies through the air.It's useful for targeting enemies behind walls."
 "サテラレーザー":
   # Satellite Laser?
-  english: "StltLaser"
+  english: "SatLaser"
 "衛星<えいせい>からの射撃<しゃげき>を誘導<ゆうどう>するリモコンメカです。 ボタンでオート走行<そうこう>ですが、右<みぎ>スティックで自由<じゆう>に操作<そうさ>することもできます。":
   english: "A gadget that controls an orbital laser cannon.It can operate autonomously when the button is pressed,but can also be directly controlled with the right stick."
 ## Boot type
@@ -2230,7 +2234,13 @@ Gクラッシャー:
   english: "A hard costume full of spikes."
 ## Carmen Set
 "カルメンセット":
-  english: "Carmen Set"
+  # Costume appears to be based on outfits worn by flamenco dancers
+  # https://en.wikipedia.org/wiki/Flamenco
+  # "Carmen" is possibly a reference to https://en.wikipedia.org/wiki/Carmen_Amaya
+  # Seems somewhat strange to have this costume named after a female figure for
+  # a male costume though
+  #english: "Carmen Set"
+  english: "Flamenco Set"
 "エキゾチックな伊達男<だておとこ>のためのコスチュームです。":
   english: "An exotic costume for a fashionable man."
 ## Empty (pretty sure this is meant to be unused?)
@@ -2249,12 +2259,10 @@ Gクラッシャー:
   english: "Monkey Kakeru A"
 "これを着<き>ればピポサルになれる!? きっとサル達<たち>も仲間<なかま>と思<おも>うはず⋅⋅⋅":
   english: "Wear this and become a monkey! I'm sure the monkeys will see you as a friend."
-## Koro Dragon Set
+## Coro Dragon Set
 "コロドラゴンセット":
-  # コロコロ (korokoro) is apparently an onomatopoeia of a small round object
-  # rolling?
-  # What does any of this have to do with the actual outfit?
-  english: "Koro Dragon Set"
+  # https://blastfishing.fandom.com/wiki/Coro_Dragon
+  english: "Coro Dragon Set"
 "ランドセルとタテブエのセットです。":
   # Apparently  ランドセル (randoseru) is an elementary school backpack, from
   # Dutch "ransel".
@@ -3313,7 +3321,7 @@ Gクラッシャー:
   # There's a trial?
   english: "This option is not available in the trial version."
 "ゴリアックアームを起動<きどう>し、パンチと衝撃波<しょうげきは>で攻撃<こうげき>します。 パンチ直撃<ちょくげき>を狙<ねら>いましょう。":
-  english: "Activate the Goliac Arm to attack with punches and shockwaves."
+  english: "Activate the Goliath Arm to attack with punches and shockwaves."
 "セーブをキャンセルしてもキャラクターエディットで\nキャラクターファイルのセーブは可能<かのう>です。\nここでのセーブをキャンセルしますか?":
   english: "You will still be able to save\nyour character in Character Edit.\nDo you want to cancel saving here?"
 "削除<さくじょ>するチップを選<えら>んでください。":
@@ -3412,7 +3420,7 @@ Gクラッシャー:
 "巨大<きょだい>な爆風<ばくふう>にまわりの敵<てき>をまきこみます。 ただし、自分<じぶん>もダメージを負<お>うので注意<ちゅうい>してください。":
   english: "Engulfs nearby enemies in a massive explosion.High attack, but you will also take damage."
 "世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し％<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
-  english: "A frog aiming to be the world's best fighter.It attacks nearby enemies with a spinning kick shockwave."
+  english: "A frog aiming to be the world's best fighter.He attacks nearby enemies with a spinning kick shockwave."
 "一定時間<いっていじかん>、すべての能力<のうりょく>がパワーアップします。 パワーアップしたハンマーの攻撃力<こうげきりょく>は絶大<ぜつだい>です。":
   english: "All abilities boosted briefly.Hammer's attack power is significantly increased."
 "一定時間<いっていじかん>、敵<てき>の動<うご>きがスローになる技<わざ>です。 連続<れんぞく>ヒットがねらいやすくなります。":
@@ -3440,7 +3448,7 @@ Gクラッシャー:
 "エネルギー供給炉3号機起動!":
   english: "Reactor 3 online!"
 "改造<かいぞう>レーザー砲<ほう>が使用可能<しようかのう>になりました。\n必殺技<ひっさつわざ>セレクトで装備<そうび>できます。":
-  english: "Modified laser cannons can now\nbe selected as a special move."
+  english: "Modified Laser Cannon can now\nbe selected as a special move."
 
 ## Probably monkey text
 ### Capture text
@@ -3475,13 +3483,13 @@ Gクラッシャー:
 "ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。       ":
   english: "Blast monkeys with a cannon. Hits 1 enemy repeatedly."
 "アイドルとして紅白出場<こうはくしゅつじょう>をねらうウサギ。 歌<うた>の力<ちから>であなたの体力<たいりょく>を回復<かいふく>します。":
-  english: "A rabbit aiming for stardom. Its song restores your health."
+  english: "A rabbit aiming for stardom.Her song restores your health."
 "世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し蹴<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
-  english: "A frog aiming to be the best fighter. Its spinning kick creates shockwaves to attack nearby enemies."
+  english: "A frog aiming to be the best fighter.His spinning kick creates shockwaves to attack nearby enemies."
 "ノーベル賞<しょう>をめざす理論派<りろんは>ロボ。 箱<はこ>いっぱいの爆弾<ばくだん>で援護<えんご>してくれます。     ":
-  english: "A robot aiming for a Nobel Prize. It supports you with a box full of bombs."
+  english: "A robot aiming for a Nobel Prize.He supports you with a box full of bombs."
 "ゴリアックヘッドを起動<きどう>し、レーザーで攻撃<こうげき>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>できますが、空中<くうちゅう>の敵<てき>はねらえません。":
-  english: "Activates the Goliac Head to attack with lasers. Hits a wide area but can't target airborne enemies."
+  english: "Activates the Goliath Head to attack with lasers. Hits a wide area but can't target airborne enemies."
 "%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
   english: "Memory Card not inserted in %.\nCannot save character file.\nPlease insert the last loaded Memory Card(PS2)."
 "%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
@@ -3519,7 +3527,7 @@ Gクラッシャー:
 "オプション設定<せってい>":
   english: "Options settings."
 "パリで一人暮<ひとりぐ>らしを夢見<ゆめみ>る乙女<おとめ>(?)なイヌ。 占<うらな>いの結果<けっか>がいいと幸<しあわ>せをわけてくれます。":
-  english: "A girly(?) dog dreaming of living alone in Paris. Shares happiness when fortunes are good."
+  english: "A girlish(?) dog dreaming of living alone in Paris. Shares happiness when fortunes are good."
 "リッキーを発見しました!":
   english: "Ricky found!"
 "ラウンド最終集計結果<さいしゅうしゅうけいけっか>":
