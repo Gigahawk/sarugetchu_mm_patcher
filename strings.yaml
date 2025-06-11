@@ -444,7 +444,7 @@
 "ピポトロンGを倒<たお>せ!➝\n\f新種<しんしゅ>のピポトロンで、まったくデータがありません。➝\n\f何<なに>をしてくるかわかりません。\n慎重<しんちょう>に戦<たたか>ってください。":
   english: "Defeat Pipotron G!➝\n\fThis is a new Pipotron species,\nwe have no data on it.➝\n\fFight carefully, we don't know\nhow it will behave."
 "カケルを倒<たお>せ!➝\n\fカケルの必殺技<ひっさつわざ>は\nメカボーを使<つか>ったものが多<おお>いはずです。\n➝\n\f間合<まあ>いを詰<つ>められたら危険<きけん>です。\n慎重<しんちょう>に戦<たたか>ってください。":
-  english: "Defeat Kakeru!➝\n\fMost of Kakeru's special moves\nuse the MechaBo.➝\n\fFight carefully,it's dangerous\nto get too close."
+  english: "Defeat Kakeru!➝\n\fMost of Kakeru's special moves\nuse the Mecha Bo.➝\n\fFight carefully,it's dangerous\nto get too close."
 ## Virtual Space 01
 "バーチャルスペース01":
   english: "V.R.Space 01"
@@ -1566,7 +1566,7 @@ Gクラッシャー:
 "近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 使用<しよう>にエネルギーを消費<しょうひ>しないのが特徴<とくちょう>です。":
   english: "A gadget for melee attacks.It does not require energy to use."
 "近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 カケルたちのメカボーと違<ちが>い、突<つ>き攻撃<こうげき>で弾<たま>を撃<う>つことができます。":
-  english: "A gadget for melee attacks.Unlike other MechaBos it can shoot bullets when thrusting."
+  english: "A gadget for melee attacks.Unlike other Mecha Bos it can shoot bullets when thrusting."
 "メカハンマー":
   #english: "Stun Hammer"  # Mech Hammer?
   english: "MechHammr"
@@ -1579,7 +1579,7 @@ Gクラッシャー:
 "メカロッド":
   english: "MechRod"
 "近<ちか>くの敵<てき>を攻撃<こうげき>するための打撃<だげき>メカです。 他<ほか>のキャラのメカボーよりも多段<ただん>ヒットしやすくなっています。":
-  english: "A gadget for melee attacks.It can land multiple hits more easily than other character's MechaBos"
+  english: "A gadget for melee attacks.It can land multiple hits more easily than other character's Mecha Bos"
 "アームショット":
   english: "ArmShot"
 "チャルの腕<うで>にとりつけられた攻撃用<こうげきよう>メカです。 敵<てき>を追尾<ついび>する弾を撃<う>ったり、回転攻撃<かいてんこうげき>で近<ちか>くの敵<てき>をなぎ払<はら>ったりと万能<ばんのう>ですが、攻撃力<こうげきりょく>の低<ひく>さが難点<なんてん>。":
@@ -1589,29 +1589,29 @@ Gクラッシャー:
   # Presumably short for でかい ボー?
   english: "BigBo"
 "大型<おおがた>のメカボーです。 メカボーより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。":
-  english: A large MechaBo.It can deal more damage than a regular MechaBo,but is slower to swing.
+  english: A large Mecha Bo.It can deal more damage than a regular Mecha Bo,but is slower to swing.
 "トゲハンマー":
   english: "ThrnHammr"
 "大型<おおがた>のトゲつき鉄球<てっきゅう>です。 メカハンマーより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。":
-  english: "A spiked wrecking ball.It can deal more damage than a regular MechaHammer,but is slower to swing."
+  english: "A spiked wrecking ball.It can deal more damage than a regular Mecha Hammer,but is slower to swing."
 ### W Mecha Bo
 "Wメカボー":
-  # What does the W stand for?
-  english: "WMechBo"
+  # W presumably stands for 'double' (ダブル)
+  english: "DblMechBo"
 "片手用<かたてよう>のメカボー。 2本<ほん>で1セットです。 攻撃力<こうげきりょく>は少<すこ>し弱<よわ>いですが、コンボボーナスを狙<ねら>うならこれが一番<いちばん>です。":
-  english: "A pair of one-handed MechaBo.It has weaker attack power,but is great for combo bonuses."
+  english: "A pair of one-handed Mecha Bo.It has weaker attack power,but is great for combo bonuses."
 "ノコハンマー":
   english: "SawHammr"
 "大型<おおがた>の回転<かいてん>ノコギリです。 攻撃力<こうげきりょく>は少<すこ>し弱<よわ>いですが、コンボボーナスを狙<ねら>うならこれが一番<いちばん>です。":
   english: "A circular saw blade.It has weaker attack power,but is great for combo bonuses."
 "Wロッド":
-  english: "WRod"
+  english: "DblRod"
 "両端<りょうたん>に刃<やいば>のついた大型<おおがた>のメカロッドです。 メカロッドより大<おお>きなダメージをあたえることができますが、攻撃<こうげき>にスキができやすいので注意<ちゅうい>しましょう。":
-  english: "A large MechaRod with blades on the ends.It can deal more damage than a regular MechaRod,but is slower to swing."
+  english: "A large Mecha Rod with blades on both ends.It can deal more damage than a regular Mecha Rod,but is slower to swing."
 "トンファ":
   english: "Tonfa"
 "Wドリル":
-  english: "WDrill"
+  english: "DrilHands"
 "ドリル型<がた>グローブ。 ふたつで1セットです。 飛<と>び道具<どうぐ>はありませんが、多段<ただん>ヒットするのでコンボボーナス狙<ねら>いにはうってつけです。":
   english: "A pair of drill shaped gloves.They don't shoot projectiles,but each swing hits multiple times,making them greaat for combo bonuses."
 ### Kiko Bo
@@ -1620,23 +1620,24 @@ Gクラッシャー:
   # https://en.wikipedia.org/wiki/Qigong
   # Apparently it also just sorta means energy
   # I have no idea what a good translation is for this so KikoBo will have to do
-  english: "KikoBo"
+  #english: "KikoBo"
+  # Given its function I think this is fine
+  english: "LaserBo"
 "気功<きこう>を発射<はっしゃ>することができる不思議<ふしぎ>なメカボーです。 気功<きこう>の発射<はっしゃ>にはエネルギーが必要<ひつよう>なので注意<ちゅうい>しましょう。":
-  english: "A mysterious MechaBo that can shoot lasers.Note that shooting lasers requires energy."
+  english: "A mysterious Mecha Bo that can shoot lasers.Note that shooting lasers requires energy."
 "マジョステッキ":
   english: "MagicWand"
 "魔法少女<まほうしょうじょ>が持<も>っていそうな形<かたち>のメカボーです。 突<つ>き攻撃<こうげき>のハートマーク弾<だん>はゆっくりじわじわと進<すす>む攻撃<こうげき>になっています。":
-  english: "A MechaBo that looks like something a magical girl would have.When thrusting it shoots a heart shaped bullet that moves slowly."
+  english: "A Mecha Bo that looks like something a magical girl would have.When thrusting it shoots a heart shaped bullet that moves slowly."
 "Wハンマー":
-  # Why is this here and not part of W Mecha Bo?
-  english: "WHammer"
+  english: "ThrnHands"
 "トゲつきグローブ。 ふたつで1セットです。 突<つ>き攻撃<こうげき>でグローブをロケット弾<だん>のように前方<ぜんぽう>にうち出<だ>すことができます。":
   english: "A pair of spiked gloves.A thrust attack causes them to launch foward like a rocket."
 ### Reflect Bo
 "リフレクボー":
   english: "ReflectBo"
 "飛<と>び道具<どうぐ>をはね返<かえ>すことのできるメカボーです。 タイミングよく回転儀<かいてんぎ>りで敵<てき>の弾<たま>をそのままうち返<かえ>せますが、ゲージが無<な>い時<とき>はただのメカボーになってしまうので注意<ちゅうい>しましょう。":
-  english: "A MechaBo that can deflect projectiles with an orbiting energy orb.If it runs out of energy it turns into a standard MechaBo."
+  english: "A Mecha Bo that can deflect projectiles with an orbiting energy orb.If it runs out of energy it turns into a standard Mecha Bo."
 "火炎刀":
   english: "FlameSwrd"
 "解説":
@@ -1648,7 +1649,6 @@ Gクラッシャー:
   # 気功, refers to a breathing practice kinda like tai chi?
   # https://en.wikipedia.org/wiki/Qigong
   # Apparently it also just sorta means energy
-  # I have no idea what a good translation is for this so KikoBo will have to do
   english: "SpirtSwrd"
 ### Pipotron G
 "パンチモード":
@@ -1667,7 +1667,7 @@ Gクラッシャー:
 "攻撃範囲<こうげきはんい>を広<ひろ>めた射撃<しゃげき>メカです。 近<ちか>くで当<あ>てると大<おお>きなダメージをあたえることができますが、弾数<たまかず>と飛距離<ひきょり>が落<お>ちているので注意<ちゅうい>が必要<ひつよう>です。":
   english: "A shooting gadget with wider spread.It can deal high damage from close range,but be careful as the clip size and effective range are reduced."
 "Wレーザー":
-  english: "WLaser"
+  english: "DblLaser"
 "ふたつで1セットの射撃<しゃげき>メカです。 素早<すばや>い連射<れんしゃ>が可能<かのう>。 しかしそのぶん弾切<たまぎ>れが早<はや>いので注意<ちゅうい>しましょう。":
   english: "A pair of shooting gadgets.They can fire rapidly,but also run out of ammo quickly."
 ## Launcher type
@@ -1709,7 +1709,7 @@ Gクラッシャー:
   english: "A remote controlled gadget that flies through the air.It's useful for targeting enemies behind walls."
 "サテラレーザー":
   # Satellite Laser?
-  english: "StltLaser"
+  english: "SatLaser"
 "衛星<えいせい>からの射撃<しゃげき>を誘導<ゆうどう>するリモコンメカです。 ボタンでオート走行<そうこう>ですが、右<みぎ>スティックで自由<じゆう>に操作<そうさ>することもできます。":
   english: "A gadget that controls an orbital laser cannon.It can operate autonomously when the button is pressed,but can also be directly controlled with the right stick."
 ## Boot type
