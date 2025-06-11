@@ -1107,9 +1107,10 @@
   # Idk why this one is also here
   english: "A master of offensive magic.He will rain down meteors to support you."
 "ハットリモンゾウ":
-  english: "Hattori Monzo"
+  # Pumped and Primed drops the "Hattori"
+  english: "Monzo"
 "ハットリ\nモンゾウ":
-  english: "Hattori\nMonzo"
+  english: "Monzo"
 "手裏剣<しゅりけん>の達人<たつじん>。 巨大<きょだい>な旋風手裏剣<せんぷうしゅりけん>をなげて援護<えんご>してくれます。       ":
   english: "A shuriken master.He throws a whirlwind of shuriken to support you."
 "ツタンカーモン":
@@ -1129,7 +1130,7 @@
   # Wiki uses this name
   english: "Samui"
 "その打球<だきゅう>は見<み>えないくらい速<はや>い! 自慢<じまん>のバットで援護<えんご>します。       ":
-  english: "The ball is so fast you can't even see it!He supports you with his prized bat."
+  english: "The ball is so fast you can't even see it! He supports you with his prized bat."
 "モンチさん":
   english:
     "cbe64222": "Monki-\nSan"
@@ -1137,13 +1138,11 @@
     "5a7fe082": "Monki3San"
     "2f7059db": "Monki-San"
 "笑顔<えがお>が素敵<すてき>な宇宙飛行土<うちゅうひこうし>。 ロケット噴射<ふんしゃ>で敵<てき>を一掃<いっそう>します。       ":
-  english: "A spacefaring robot with a lovely smile.It uses rocket propulsion to wipe out enemies."
+  english: "An astronaut with a lovely smile.He uses rocket propulsion to wipe out enemies."
 "エジモン":
-  # TODO: check if this is right,
-  # he apparently holds up a lightbulb
-  english: "Edimon"
+  english: "Edison"
 "ゴリアック研究所<けんきゅうじょ>の所長<しょちょう>。 ゴリアックアームで援護<えんご>してくれます。       ":
-  english: "Director of the Goliath Lab.Provides support with a Goliath Arm."
+  english: "Chief of the Goliath Lab.Provides support with a Goliath Arm."
 "ウッキーレッド":
   english:
     "8de74222": "Monkey\nRed"
@@ -1153,7 +1152,8 @@
 "ウッキーファイブのリーダー。 画面<がめん>を飛<と>びかって周囲<しゅうい>の全員<ぜんいん>にダメージを与<あた>えます。     ":
   english: "The leader of Monkey Five.He flies across the screen and deals damage to everyone around him."
 "アフロ":
-  english: "Afro"
+  # Renamed to Leo in Pumped and Primed
+  english: "Leo"
 "カジノシティのヒーロー。 嵐<あらし>を呼<よ>ぶダンスにみんなを巻<ま>き込<こ>みます。       ":
   english: "The hero of Casino City.He gets everyone involved in a storm-bringing dance."
 "パンプキン":
@@ -1161,10 +1161,10 @@
 "ハロウィンのヒーロー。 お菓子爆弾<かしばくだん>であなたを援護<えんご>します。       ":
   english: "The hero of Halloween.He supports you with candy bombs."
 "サルースウッキー":
-  # TODO: what is this?
-  english: "Salus Monkey"
+  # I guess Saru-ce Wakkee sound's kinda like Bruce Lee
+  english: "Bruce Monkee"
 "サルース\nウッキー":
-  english: "Salus\nMonkey"
+  english: "Bruce\nMonkee"
 "クンフーの達人<たつじん>にしてスター。 ヌンチャク衝撃波<しょうげきは>で敵<てき>を攻撃<こうげき>します。     ":
   english: "A kung fu master and star.He attacks enemies with nunchuck shock waves."
 "ミヤモン⋅ムサシ":
