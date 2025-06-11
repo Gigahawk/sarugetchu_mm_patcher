@@ -2234,7 +2234,13 @@ Gクラッシャー:
   english: "A hard costume full of spikes."
 ## Carmen Set
 "カルメンセット":
-  english: "Carmen Set"
+  # Costume appears to be based on outfits worn by flamenco dancers
+  # https://en.wikipedia.org/wiki/Flamenco
+  # "Carmen" is possibly a reference to https://en.wikipedia.org/wiki/Carmen_Amaya
+  # Seems somewhat strange to have this costume named after a female figure for
+  # a male costume though
+  #english: "Carmen Set"
+  english: "Flamenco Set"
 "エキゾチックな伊達男<だておとこ>のためのコスチュームです。":
   english: "An exotic costume for a fashionable man."
 ## Empty (pretty sure this is meant to be unused?)
