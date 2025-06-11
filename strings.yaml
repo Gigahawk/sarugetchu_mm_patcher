@@ -218,11 +218,16 @@
   english: "Tokyo Teleport"
 "現<あらわ>れた大型二足歩行<おおがたにそくほこう>メカを迎撃<げいげき>してください。":
   english: "Intercept the mech that showed up."
+# ゴリアック (goriaku) is a nonsense word with no real definition.
+# The only other prominent usage of this term is the 炎神兵ゴリアック (Flame Trooper Goliac)
+# from the duel masters game: https://duelmasters.fandom.com/wiki/Flame_Trooper_Goliac
+# The english Ape Escape games translate this term as "Goliath"
+# https://apeescape.fandom.com/wiki/Goliath
 "アーマードゴリアックを撃退<げきたい>せよ!➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
-  english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
+  english: "Defeat the\nArmored Goliath!➝\n\fTarget the Armored Goliath\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
 "アーマードゴリアックを撃退<げきたい>せよ!\x1F➝\n\fL2ボタンでアーマードゴリアックをロックオンし\n装甲<そうこう>を破壊<はかい>して動<うご>きを止<と>めてください。➝\n\f広範囲<こうはんい>の攻撃<こうげき>が予想<よそう>されますので\nダッシュメカを使用<しよう>しアーマードゴリアックの\n攻撃<こうげき>を回避<かいひ>してください。":
   # Episode Kakeru randomly has this extra \x1F character in here for some reason
-  english: "Defeat the\nArmored Goliac!➝\n\fTarget the Armored Goliac\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
+  english: "Defeat the\nArmored Goliath!➝\n\fTarget the Armored Goliath\nwith L2 and destroy its\narmor.➝\n\fIt will attack over a\nwide area.Use Dash Gear\nto avoid them."
 ## Shinjuku
 "新宿":
   english: "Shinjuku"
@@ -1138,7 +1143,7 @@
   # he apparently holds up a lightbulb
   english: "Edimon"
 "ゴリアック研究所<けんきゅうじょ>の所長<しょちょう>。 ゴリアックアームで援護<えんご>してくれます。       ":
-  english: "Director of the Goliac Lab.Provides support with a Goliac Arm."
+  english: "Director of the Goliath Lab.Provides support with a Goliath Arm."
 "ウッキーレッド":
   english:
     "8de74222": "Monkey\nRed"
@@ -1173,7 +1178,7 @@
 "ワッキー":
   english: "Wakkie"
 "ゴリアック開発<かいはつ>プロジェクトリーダー。 ゴリアックヘッドで援護<えんご>します。     ":
-  english: "The Goliac Development Project Leader.Provides support with a Goliac Head."
+  english: "The Goliath Development Project Leader.Provides support with a Goliath Head."
 ## Saru Team
 "サルバズーカ":
   english:
@@ -1230,20 +1235,19 @@
     "296b82a2": "Saru Dance"
     "c3c867a7": "Saru Dance"
 "ゴリアックアイ":
-  # What is Goliac?
   english:
-    "5cb7ed24": "Goliac1Eye"
-    "bdb7ed24": "Goliac2Eye"
-    "7fb3303a": "Goliac Eye"
-    "e0b3303a": "Goliac Eye"
-    "0240054a": "Goliac Eye"
-    "6340054a": "Goliac Eye"
-    "cddb516e": "Goliac Eye"
-    "2edc516e": "Goliac\nEye"
-    "f0d79483": "Goliac Eye"
-    "51d89483": "Goliac\nEye"
-    "73646993": "Goliac Eye"
-    "d4646993": "Goliac\nEye"
+    "5cb7ed24": "Goliath1Eye"
+    "bdb7ed24": "Goliath2Eye"
+    "7fb3303a": "Goliath Eye"
+    "e0b3303a": "Goliath Eye"
+    "0240054a": "Goliath Eye"
+    "6340054a": "Goliath Eye"
+    "cddb516e": "Goliath Eye"
+    "2edc516e": "Goliath\nEye"
+    "f0d79483": "Goliath Eye"
+    "51d89483": "Goliath\nEye"
+    "73646993": "Goliath Eye"
+    "d4646993": "Goliath\nEye"
 "戦艦射撃":
   english:
     "7fb8ed24": "Battleship1Canon"
@@ -1261,15 +1265,15 @@
 "サルUFO":
   english: "Saru UFO"
 "ゴリアックハンド":
-  english: "Goliac Hand"
+  english: "Goliath Hand"
 "ゴリアック\nハンド":
   english:
-    "1ddced24": "Goliac Hand"
-    "40d8303a": "Goliac Hand"
-    "c364054a": "Goliac Hand"
-    "8e00526e": "Goliac\nHand"
-    "b1fc9483": "Goliac\nHand"
-    "34896993": "Goliac\nHand"
+    "1ddced24": "Goliath Hand"
+    "40d8303a": "Goliath Hand"
+    "c364054a": "Goliath Hand"
+    "8e00526e": "Goliath\nHand"
+    "b1fc9483": "Goliath\nHand"
+    "34896993": "Goliath\nHand"
 ## Pipotron
 "トロンガッシュ":
   english:
@@ -3313,7 +3317,7 @@ Gクラッシャー:
   # There's a trial?
   english: "This option is not available in the trial version."
 "ゴリアックアームを起動<きどう>し、パンチと衝撃波<しょうげきは>で攻撃<こうげき>します。 パンチ直撃<ちょくげき>を狙<ねら>いましょう。":
-  english: "Activate the Goliac Arm to attack with punches and shockwaves."
+  english: "Activate the Goliath Arm to attack with punches and shockwaves."
 "セーブをキャンセルしてもキャラクターエディットで\nキャラクターファイルのセーブは可能<かのう>です。\nここでのセーブをキャンセルしますか?":
   english: "You will still be able to save\nyour character in Character Edit.\nDo you want to cancel saving here?"
 "削除<さくじょ>するチップを選<えら>んでください。":
@@ -3481,7 +3485,7 @@ Gクラッシャー:
 "ノーベル賞<しょう>をめざす理論派<りろんは>ロボ。 箱<はこ>いっぱいの爆弾<ばくだん>で援護<えんご>してくれます。     ":
   english: "A robot aiming for a Nobel Prize. It supports you with a box full of bombs."
 "ゴリアックヘッドを起動<きどう>し、レーザーで攻撃<こうげき>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>できますが、空中<くうちゅう>の敵<てき>はねらえません。":
-  english: "Activates the Goliac Head to attack with lasers. Hits a wide area but can't target airborne enemies."
+  english: "Activates the Goliath Head to attack with lasers. Hits a wide area but can't target airborne enemies."
 "%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
   english: "Memory Card not inserted in %.\nCannot save character file.\nPlease insert the last loaded Memory Card(PS2)."
 "%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
