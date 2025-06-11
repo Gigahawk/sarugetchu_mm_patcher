@@ -3416,7 +3416,7 @@ Gクラッシャー:
 "巨大<きょだい>な爆風<ばくふう>にまわりの敵<てき>をまきこみます。 ただし、自分<じぶん>もダメージを負<お>うので注意<ちゅうい>してください。":
   english: "Engulfs nearby enemies in a massive explosion.High attack, but you will also take damage."
 "世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し％<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
-  english: "A frog aiming to be the world's best fighter.It attacks nearby enemies with a spinning kick shockwave."
+  english: "A frog aiming to be the world's best fighter.He attacks nearby enemies with a spinning kick shockwave."
 "一定時間<いっていじかん>、すべての能力<のうりょく>がパワーアップします。 パワーアップしたハンマーの攻撃力<こうげきりょく>は絶大<ぜつだい>です。":
   english: "All abilities boosted briefly.Hammer's attack power is significantly increased."
 "一定時間<いっていじかん>、敵<てき>の動<うご>きがスローになる技<わざ>です。 連続<れんぞく>ヒットがねらいやすくなります。":
@@ -3444,7 +3444,7 @@ Gクラッシャー:
 "エネルギー供給炉3号機起動!":
   english: "Reactor 3 online!"
 "改造<かいぞう>レーザー砲<ほう>が使用可能<しようかのう>になりました。\n必殺技<ひっさつわざ>セレクトで装備<そうび>できます。":
-  english: "Modified laser cannons can now\nbe selected as a special move."
+  english: "Modified Laser Cannon can now\nbe selected as a special move."
 
 ## Probably monkey text
 ### Capture text
@@ -3479,11 +3479,11 @@ Gクラッシャー:
 "ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。       ":
   english: "Blast monkeys with a cannon. Hits 1 enemy repeatedly."
 "アイドルとして紅白出場<こうはくしゅつじょう>をねらうウサギ。 歌<うた>の力<ちから>であなたの体力<たいりょく>を回復<かいふく>します。":
-  english: "A rabbit aiming for stardom. Its song restores your health."
+  english: "A rabbit aiming for stardom.Her song restores your health."
 "世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し蹴<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
-  english: "A frog aiming to be the best fighter. Its spinning kick creates shockwaves to attack nearby enemies."
+  english: "A frog aiming to be the best fighter.His spinning kick creates shockwaves to attack nearby enemies."
 "ノーベル賞<しょう>をめざす理論派<りろんは>ロボ。 箱<はこ>いっぱいの爆弾<ばくだん>で援護<えんご>してくれます。     ":
-  english: "A robot aiming for a Nobel Prize. It supports you with a box full of bombs."
+  english: "A robot aiming for a Nobel Prize.He supports you with a box full of bombs."
 "ゴリアックヘッドを起動<きどう>し、レーザーで攻撃<こうげき>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>できますが、空中<くうちゅう>の敵<てき>はねらえません。":
   english: "Activates the Goliath Head to attack with lasers. Hits a wide area but can't target airborne enemies."
 "%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
@@ -3523,7 +3523,7 @@ Gクラッシャー:
 "オプション設定<せってい>":
   english: "Options settings."
 "パリで一人暮<ひとりぐ>らしを夢見<ゆめみ>る乙女<おとめ>(?)なイヌ。 占<うらな>いの結果<けっか>がいいと幸<しあわ>せをわけてくれます。":
-  english: "A girly(?) dog dreaming of living alone in Paris. Shares happiness when fortunes are good."
+  english: "A girlish(?) dog dreaming of living alone in Paris. Shares happiness when fortunes are good."
 "リッキーを発見しました!":
   english: "Ricky found!"
 "ラウンド最終集計結果<さいしゅうしゅうけいけっか>":
