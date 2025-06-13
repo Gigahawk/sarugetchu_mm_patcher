@@ -679,6 +679,8 @@
   english: "Invalid password. Try again?"
 "%が出現<しゅつげん>しました。":
   english: "Unlocked %."
+"%を入手<にゅうしゅ>しました。":
+  english: "Acquired %."
 
 # Colosseum Mode screen
 "ワールドトーナメント":
@@ -3228,6 +3230,8 @@ Gクラッシャー:
   # Unlocks Monkey costume for Kakeru
   # This is サル カケル (Saru Kakeru) backwards
   english: "RUKEKARUS" # Can't fit last 'E' in this code
+"サルカケル":
+  english: "Monkey Kakeru"
 "セットコロドラゴン":
   # Unlocks Koro Dragon Set
   english: "SETDRAGON"
@@ -3248,6 +3252,8 @@ Gクラッシャー:
   # What's a network password?
   # Probably 最強 は 誰 だ
   english: "STRONGEST"
+"ネットワークパスワード":
+  english: "Network Password"
 
 
 # Unknown
@@ -3284,9 +3290,6 @@ Gクラッシャー:
   english: "Cancel move and return to character file selection."
 "コンボ":
   english: "Combo"
-"ネットワークパスワード":
-  # What is this?
-  english: "Network Password"
 "ネットワーク パスワード":
   english: "Network Password"
   password: true
@@ -3494,8 +3497,6 @@ Gクラッシャー:
   english: "Memory Card not inserted in %.\nCannot save character file.\nPlease insert the last loaded Memory Card(PS2)."
 "%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
   english: "Failed to create Million Monkeys\ngame data on %."
-"%を入手<にゅうしゅ>しました。":
-  english: "Acquired %."
 "%の進行<しんこう>ファイルの\nロードに失敗<しっぱい>しました。":
   english: "Failed to load progress\nfile on %."
 "このステージには乗<の>り物<もの>は持<も>ち込<こ>めません。":
@@ -3657,8 +3658,6 @@ Gクラッシャー:
   password: true
 "ガチャメカ名":
   english: "Gadget Name"
-"サルカケル":
-  english: "Monkey Swing"
 "トロンウィング":
   english: "Tron Wing"
 "ヘビータンク":
