@@ -800,11 +800,6 @@ def img_to_aseprite(img_path, output_path):
     #palette_rgb_bytes: bytes = img.palette.tobytes()
     palette_len = len(palette_rgb_bytes) // 3
     palette_a_bytes: bytes = img.info["transparency"]
-    bpp = math.log2(palette_len)
-    if bpp != int(bpp):
-        click.echo(f"Error: got non-integer bpp {bpp}")
-        return
-    bpp = int(bpp)
     palette = []
     for idx in range(0, palette_len):
         color = palette_rgb_bytes[idx*3:idx*3+3]

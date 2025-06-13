@@ -3,11 +3,12 @@
 
 IMG_WIDTH=128
 IMG_HEIGHT=16
-IMG_BPP=4
+IMG_BPP=8
 IMG_COLORS=$((2**IMG_BPP))
 
-# ストーリーモード
-STRING="STORY MODE"
+# コロシアムモード
+# Can't fit mode here
+STRING="COLOSSEUM"
 
 echo "Generating header image for '$STRING'"
 
