@@ -1,3 +1,4 @@
+import math
 import re
 import shutil
 import json
@@ -17,6 +18,7 @@ import yaml
 import click
 from PIL import Image
 from pathvalidate import sanitize_filepath
+from bitstring import Bits
 
 import sarugetchu_mm_patcher.util as util
 from sarugetchu_mm_patcher.index import (
@@ -767,6 +769,67 @@ def dump_textures(imhex_json, output_path, include_exts, exclude_exts):
         manifest = _empty_buffers(fd)
         with open(target_path / "manifest.yaml", "w") as f:
             yaml.dump(manifest, f)
+
+@cli.command()
+@click.argument(
+    "img_path",
+    type=click.Path()
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def img_to_aseprite(img_path, output_path):
+    img_path = Path(img_path)
+    if output_path is None:
+        output_path = img_path.with_suffix(".aseprite")
+    img = Image.open(img_path)
+    if img.mode != "P":
+        # TODO: support non paletted image?
+        click.echo(f"Error: {img_path} is not a paletted image")
+        return
+    if img.palette.mode != "RGB":
+        click.echo(f"Error: {img_path} palette is not in RGB mode")
+        return
+    # For some reason palette defaults to RGB with transparency stored
+    # separately, we have to reassemble it
+    palette_rgb_bytes: bytes = img.palette.getdata()[1]
+    # Why doesn't this work?
+    #palette_rgb_bytes: bytes = img.palette.tobytes()
+    palette_len = len(palette_rgb_bytes) // 3
+    palette_a_bytes: bytes = img.info["transparency"]
+    bpp = math.log2(palette_len)
+    if bpp != int(bpp):
+        click.echo(f"Error: got non-integer bpp {bpp}")
+        return
+    bpp = int(bpp)
+    palette = []
+    for idx in range(0, palette_len):
+        color = palette_rgb_bytes[idx*3:idx*3+3]
+        # Seems like colors are sorted with transparent ones first.
+        # Non transparent colors don't get any entry in the transparency list
+        if idx < len(palette_a_bytes):
+            color += palette_a_bytes[idx].to_bytes(1)
+        else:
+            color += b"\xff"
+        palette.append(Bits(color))
+
+    pixel_idxs = []
+    for y in range(img.height):
+        for x in range(img.width):
+            # It shouldn't matter how many bpp we use here because aseprite
+            # just takes a 1 byte uint always, and the patcher will convert
+            # back to the correct bpp when injecting
+            pixel_idxs.append(Bits(img.getpixel((x, y)).to_bytes(1)))
+
+    with open(output_path, "wb") as f:
+        f.write(
+            AsepriteDumper(
+                img.width, img.height, palette, pixel_idxs, double_alpha=False
+            ).file
+        )
 
 @cli.command()
 @click.argument(

@@ -214,6 +214,7 @@
           pkgs.freefont_ttf
           pkgs.comic-relief
           pkgs.sangyo_ttf
+          pkgs.zerocool_ttf
         ];
       };
     in {
@@ -745,14 +746,44 @@
           dontFixup = true;
 
         };
+        textures-generated = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-textures-generated";
+          inherit version;
+          src = ./textures;
+          dontUnpack = true;
+          nativeBuildInputs = [
+            pkgs.imagemagick
+            pkgs.pngquant
+            ssmm-patcher.packages.${system}.ssmm-patcher
+          ];
+
+          buildPhase = ''
+            export FONTCONFIG_FILE=${fontconfig_file}
+            mkdir -p "$out"
+
+            cp -r $src/* $out
+            # Why do we need this?
+            chmod -R 755 $out
+
+            find "$out" -type f -name 'build.sh' | \
+              xargs -P $NIX_BUILD_CORES -I {} bash -c '
+                script_path="{}"
+                script_dir=$(dirname "$script_path")
+                cd "$script_dir"
+                bash ./build.sh
+              '
+            wait
+            #exit 1
+          '';
+
+          dontInstall = true;
+        };
         textures-imhex-analysis = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-textures-imhex-analysis";
           inherit version;
-          srcs = [
-            ./imhex_patterns
-            ./textures
-          ];
+          src = ./imhex_patterns;
           dontUnpack = true;
 
           nativeBuildInputs = [
@@ -760,9 +791,8 @@
           ];
 
           buildPhase = ''
-            paths=($srcs)
-            export pattern_path=''${paths[0]}
-            export textures_path=''${paths[1]}
+            export pattern_path=$src
+            export textures_path=${self.packages.${system}.textures-generated}
 
 
             find "$textures_path" -name 'texture.aseprite' -type f | \
@@ -782,6 +812,8 @@
                 cp "$dirfullpath/manifest.yaml" "$out/analysis/$dirrelpath/manifest.yaml"
               '
           '';
+
+          dontInstall = true;
 
           dontFixup = true;
         };
@@ -1015,6 +1047,8 @@
           pkgs.imhex
           pkgs.rsbkb  # bgrep
           pkgs.clps2c-compiler
+          pkgs.imagemagick
+          pkgs.pngquant
         ];
         shellHook = ''
           export FONTCONFIG_FILE=${fontconfig_file}

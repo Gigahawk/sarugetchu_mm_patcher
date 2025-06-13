@@ -10,21 +10,26 @@ class AsepriteDumper:
 
     def __init__(
         self, width: int, height: int,
-        palette_pxs: list[Bits], img_pxs: list[Bits]
+        palette_pxs: list[Bits], img_pxs: list[Bits],
+        double_alpha: bool=True
     ):
         self.width = width
         self.height = height
-        self.colors = self.unpack_palette_colors(palette_pxs)
+        self.colors = self.unpack_palette_colors(
+            palette_pxs, double_alpha=double_alpha
+        )
         self.pixels = self.unpack_img_idxs(img_pxs)
 
     def unpack_palette_colors(
-        self, palette_pxs: list[Bits]
+        self, palette_pxs: list[Bits],
+        double_alpha: bool
     ) -> list[tuple[int, int, int, int]]:
         colors = []
         for color in palette_pxs:
             r, g, b, a = util.unpack_pixel(color)
-            # PS2 alpha channel only goes to 0x80
-            a *= 2
+            if double_alpha:
+                # PS2 alpha channel only goes to 0x80
+                a *= 2
             if a > 255:
                 a = 255
             colors.append((r, g, b, a))
