@@ -23,6 +23,7 @@ echo "Generating header image for '$STRING'"
 #echo "Cleaning old files"
 #rm -rf *.png *.aseprite
 
+echo "Generating text mask"
 magick \
     -size "${IMG_WIDTH}x${IMG_HEIGHT}" \
     xc:transparent \
@@ -32,18 +33,20 @@ magick \
     -annotate +0+0 "$STRING" \
     out_no_border_mask.png
 
+echo "Generating gradient"
 magick \
     -size "${IMG_WIDTH}x${GRADIENTHEIGHT}" \
     "gradient:$GRADIENTCOLORS" \
     gradient.png
 
+echo "Compositing gradient onto mask"
 magick out_no_border_mask.png \
     gradient.png \
     -gravity center \
     -compose Atop -composite \
     out_no_border.png
 
-
+echo "Compositing outline onto text"
 magick out_no_border.png \
     \( +clone -alpha extract \
         -morphology edge "disk:$STROKEWIDTH" \

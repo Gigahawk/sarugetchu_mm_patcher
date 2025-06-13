@@ -10,7 +10,10 @@ IMG_COLORS=$((2**IMG_BPP))
 STRING="CHARACTER EDIT"
 FONT="Zero-Cool"
 FONTSIZE=36
-STROKEWIDTH=1.7
+STROKEWIDTH=2
+# The texture isn't properly centered even in the original,
+# move it down by 1 pixel (all we can do) to compensate
+YOFFSET=1
 
 echo "Generating header image for '$STRING'"
 
@@ -22,12 +25,11 @@ magick \
     -background none \
     -font "$FONT" -pointsize "$FONTSIZE" \
     -fill white \
-    -stroke black -strokewidth "$STROKEWIDTH" \
     label:"$STRING" out_unscaled.png
 
 TEXT_WIDTH=$(identify -format "%w" out_unscaled.png)
 if [ "$TEXT_WIDTH" -gt "$IMG_WIDTH" ]; then
-    SCALE_FACTOR=$(awk "BEGIN {print $IMG_WIDTH/$TEXT_WIDTH}")
+    SCALE_FACTOR=$(awk "BEGIN {print $IMG_WIDTH/($TEXT_WIDTH + 2 * $STROKEWIDTH)}")
     NEW_WIDTH=$(awk "BEGIN {print int($TEXT_WIDTH * $SCALE_FACTOR)}")
     echo "Unscaled image is $TEXT_WIDTH wide, needs to be sclaed by $SCALE_FACTOR to $NEW_WIDTH"
     magick out_unscaled.png -resize ${NEW_WIDTH}x! out_scaled.png
@@ -35,13 +37,22 @@ else
     cp out_unscaled.png out_scaled.png
 fi
 
-echo "Building raw image"
+echo "Compositing scaled image onto correct size image"
 magick \
     -size "${IMG_WIDTH}x${IMG_HEIGHT}" \
     xc:transparent \
     out_scaled.png \
-    -gravity west \
-    -geometry +0+0 -composite \
+    -gravity center \
+    -geometry "+0+${YOFFSET}" -composite\
+    out_no_border.png
+
+echo "Compositing outline onto text"
+magick out_no_border.png \
+    \( +clone -alpha extract \
+        -morphology edgeout "square:$STROKEWIDTH" \
+        -background "black" \
+        -alpha shape \) \
+    -compose over -composite \
     out_raw.png
 
 echo "Quantizing image"

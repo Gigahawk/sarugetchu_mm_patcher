@@ -10,7 +10,7 @@ IMG_COLORS=$((2**IMG_BPP))
 STRING="CHARACTER SELECT"
 FONT="Zero-Cool"
 FONTSIZE=36
-STROKEWIDTH=1.7
+STROKEWIDTH=1.2
 
 echo "Generating header image for '$STRING'"
 
@@ -22,7 +22,6 @@ magick \
     -background none \
     -font "$FONT" -pointsize "$FONTSIZE" \
     -fill white \
-    -stroke black -strokewidth "$STROKEWIDTH" \
     label:"$STRING" out_unscaled.png
 
 TEXT_WIDTH=$(identify -format "%w" out_unscaled.png)
@@ -35,13 +34,13 @@ else
     cp out_unscaled.png out_scaled.png
 fi
 
-echo "Building raw image"
-magick \
-    -size "${IMG_WIDTH}x${IMG_HEIGHT}" \
-    xc:transparent \
-    out_scaled.png \
-    -gravity west \
-    -geometry +0+0 -composite \
+echo "Compositing outline onto text"
+magick out_scaled.png \
+    \( +clone -alpha extract \
+        -morphology edge "disk:$STROKEWIDTH" \
+        -background "black" \
+        -alpha shape \) \
+    -compose over -composite \
     out_raw.png
 
 echo "Quantizing image"
