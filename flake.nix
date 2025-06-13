@@ -52,6 +52,11 @@
         url = "";
         sha256 = "1gm322c4sfzy7k5w9zwrwzlx8wad9cqpjla9ldxx8w8iycz19hys";
       });
+      mm-trial-iso = (pkgs.requireFile {
+        name = "mm_trial.iso";
+        url = "";
+        sha256 = "0iabxh2kqgxm8pwn689wi26xziirzgjf1zdmb59bn89jji8nkaqb";
+      });
       cutscenes-demuxed-buildPhase = iso-extracted: ''
         find ${iso-extracted} -name '*.PSS' -type f | \
           xargs -P $NIX_BUILD_CORES -I {} bash -c '
@@ -245,6 +250,12 @@
             mm-cn-iso
           ];
         });
+        iso-trial-extracted = self.packages.${system}.iso-jp-extracted.overrideAttrs (old: {
+          pname = "mm-trial-iso-extracted";
+          srcs = [
+            mm-trial-iso
+          ];
+        });
         cutscenes-jp-demuxed = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-jp-cutscenes-demuxed";
@@ -270,6 +281,10 @@
         cutscenes-cn-demuxed = self.packages.${system}.cutscenes-jp-demuxed.overrideAttrs (old: {
           pname = "mm-cn-cutscenes-demuxed";
           buildPhase = cutscenes-demuxed-buildPhase self.packages.${system}.iso-cn-extracted;
+        });
+        cutscenes-trial-demuxed = self.packages.${system}.cutscenes-jp-demuxed.overrideAttrs (old: {
+          pname = "mm-trial-cutscenes-demuxed";
+          buildPhase = cutscenes-demuxed-buildPhase self.packages.${system}.iso-trial-extracted;
         });
         cutscenes-jp-mp4 = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -299,6 +314,10 @@
         cutscenes-cn-mp4 = self.packages.${system}.cutscenes-jp-mp4.overrideAttrs (old: {
           pname = "mm-cn-cutscenes-mp4";
           buildPhase = cutscenes-mp4-buildPhase self.packages.${system}.cutscenes-cn-demuxed;
+        });
+        cutscenes-trial-mp4 = self.packages.${system}.cutscenes-jp-mp4.overrideAttrs (old: {
+          pname = "mm-trial-cutscenes-mp4";
+          buildPhase = cutscenes-mp4-buildPhase self.packages.${system}.cutscenes-trial-demuxed;
         });
         cutscenes-remuxed = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -427,6 +446,10 @@
           pname = "mm-cn-data-unpacked";
           buildPhase = data-unpacked-buildPhase self.packages.${system}.iso-cn-extracted;
         });
+        data-trial-unpacked = self.packages.${system}.data-jp-unpacked.overrideAttrs (old: {
+          pname = "mm-trial-data-unpacked";
+          buildPhase = data-unpacked-buildPhase self.packages.${system}.iso-trial-extracted;
+        });
         data-jp-unpacked-named = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-jp-data-unpacked-named";
@@ -447,6 +470,10 @@
         data-cn-unpacked-named = self.packages.${system}.data-jp-unpacked-named.overrideAttrs (old: {
           pname = "mm-cn-data-unpacked-named";
           installPhase = data-unpacked-named-installPhase self.packages.${system}.data-cn-unpacked;
+        });
+        data-trial-unpacked-named = self.packages.${system}.data-jp-unpacked-named.overrideAttrs (old: {
+          pname = "mm-trial-data-unpacked-named";
+          installPhase = data-unpacked-named-installPhase self.packages.${system}.data-trial-unpacked;
         });
         data-jp-extracted = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -651,6 +678,18 @@
           dontFixup = true;
 
         };
+        data-cn-extracted = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
+          pname = "mm-cn-data-extracted";
+          buildPhase = data-extracted-buildPhase self.packages.${system}.data-cn-unpacked;
+        });
+        data-trial-extracted = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
+          pname = "mm-trial-data-extracted";
+          buildPhase = data-extracted-buildPhase self.packages.${system}.data-trial-unpacked;
+        });
+        data-jp-extracted-named = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
+          pname = "mm-jp-data-extracted-named";
+          buildPhase = data-extracted-buildPhase self.packages.${system}.data-jp-unpacked-named;
+        });
         data-strings-unique = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-strings-unique";
@@ -746,14 +785,6 @@
 
           dontFixup = true;
         };
-        data-cn-extracted = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
-          pname = "mm-cn-data-extracted";
-          buildPhase = data-extracted-buildPhase self.packages.${system}.data-cn-unpacked;
-        });
-        data-jp-extracted-named = self.packages.${system}.data-jp-extracted.overrideAttrs (old: {
-          pname = "mm-jp-data-extracted-named";
-          buildPhase = data-extracted-buildPhase self.packages.${system}.data-jp-unpacked-named;
-        });
         data-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-patched";
