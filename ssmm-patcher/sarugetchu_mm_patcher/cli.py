@@ -457,6 +457,7 @@ def patch_resource(
         resource_bytes = util.TrackedByteArray(f.read())
 
     cel_chunk_re = re.compile(r"^CelChunk(?:<\d+>)?$")
+    palette_chunk_re = re.compile(r"(?:Old)?PaletteChunk")
 
     # Note: patch textures first so imhex_json addresses are accurate
     if textures_imhex_path:
@@ -473,7 +474,7 @@ def patch_resource(
             tex_idx = tex_manifest.get("index", 0)
             patch_palette = tex_manifest.get("patch_palette", True)
             cel_chunk = util.ImhexChunkFinder(img_data, cel_chunk_re).chunks[0]
-            palette_chunk = util.ImhexChunkFinder(img_data, "PaletteChunk").chunks[0]
+            palette_chunk = util.ImhexChunkFinder(img_data, palette_chunk_re).chunks[0]
 
             if "COMPRESSED_IMG" in cel_chunk["type"]:
                 cel_chunk_data = bytes(cel_chunk["data"])
@@ -531,7 +532,7 @@ def patch_resource(
                         palette_width = palette_meta["width"]
                         palette_height = palette_meta["height"]
                         plt_data = util.aseprite_to_palette_data(
-                            palette_chunk["entries"],
+                            palette_chunk,
                             max_entries=palette_width*palette_height
                         )
                         palette_data_ptr = palette_meta["idk_data_ptr"]["nullptr"]
