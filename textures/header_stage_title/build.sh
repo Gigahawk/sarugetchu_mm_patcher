@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# チップムーブ
+# ラウンドタイトル
 ../build_header.sh \
-    -s "MOVE CHIPS" \
-    -b 4 \
+    -s "ROUND TITLE" \
     --outline mainmenu

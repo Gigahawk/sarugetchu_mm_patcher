@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# チップムーブ
+# ステージタイトル
 ../build_header.sh \
-    -s "MOVE CHIPS" \
-    -b 4 \
+    -s "STAGE TITLE" \
     --outline mainmenu

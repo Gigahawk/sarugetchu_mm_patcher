@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# チップムーブ
+# キャラクターセレクト
 ../build_header.sh \
-    -s "MOVE CHIPS" \
-    -b 4 \
+    -s "CHARACTER SELECT" \
     --outline mainmenu
