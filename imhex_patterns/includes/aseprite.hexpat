@@ -31,6 +31,12 @@ struct PixelRGBA {
     BYTE a;
 };
 
+struct PixelRGB {
+    BYTE r;
+    BYTE g;
+    BYTE b;
+};
+
 struct PixelIndexed {
     BYTE idx;
 };
@@ -150,6 +156,18 @@ struct PaletteEntry {
     if (flags.has_name) {
         STRING color_name;
     }
+
+};
+
+struct OldPalettePacket {
+    BYTE num_skip_entries;
+    BYTE num_colors;
+    PixelRGB colors[num_colors];
+};
+
+struct OldPaletteChunk {
+    WORD num_packets;
+    OldPalettePacket packets[num_packets];
 };
 
 struct PaletteChunk {
@@ -168,6 +186,8 @@ struct AsepriteFrameChunk {
         (ChunkType::CEL): CelChunk<chunk_size> data;
         (ChunkType::COLOR_PROFILE): ColorProfileChunk data;
         (ChunkType::PALETTE): PaletteChunk data;
+        (ChunkType::OLD_PALETTE1): OldPaletteChunk data;
+        (ChunkType::OLD_PALETTE2): OldPaletteChunk data;
         //(_): error();
     }
 

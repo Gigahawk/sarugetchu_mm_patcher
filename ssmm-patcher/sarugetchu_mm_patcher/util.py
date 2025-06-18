@@ -560,7 +560,20 @@ def aseprite_to_pixel_data(data: bytes, bpp: int) -> bytes:
         out += Bits(uint=idx, length=bpp)
     return out.tobytes()
 
-def aseprite_to_palette_data(entries: list[dict], max_entries: int=256) -> bytes:
+def aseprite_to_palette_data(palette_chunk: dict, max_entries: int=256) -> bytes:
+    if palette_chunk["__type"] == "PaletteChunk":
+        entries = palette_chunk["entries"]
+    elif palette_chunk["__type"] == "OldPaletteChunk":
+        entries = []
+        packets = palette_chunk["packets"]
+        for p in packets:
+            colors = p["colors"]
+            for c in colors:
+                c["red"] = c["r"]
+                c["green"] = c["g"]
+                c["blue"] = c["b"]
+                c["alpha"] = 255
+                entries.append(c)
     out = []
     for entry in entries:
         r = entry["red"]

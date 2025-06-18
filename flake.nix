@@ -760,18 +760,22 @@
 
           buildPhase = ''
             export FONTCONFIG_FILE=${fontconfig_file}
+            # Suppress Fontconfig error: No writable cache directories
+            export XDG_CACHE_HOME="$(mktemp -d)"
             mkdir -p "$out"
 
             cp -r $src/* $out
             # Why do we need this?
             chmod -R 755 $out
 
+            patchShebangs $out
+
             find "$out" -type f -name 'build.sh' | \
               xargs -P $NIX_BUILD_CORES -I {} bash -c '
                 script_path="{}"
                 script_dir=$(dirname "$script_path")
                 cd "$script_dir"
-                bash ./build.sh
+                ./build.sh
               '
             wait
             #exit 1
@@ -791,6 +795,10 @@
           ];
 
           buildPhase = ''
+            # Suppress Fontconfig error: Cannot load default config file: No such file: (null)
+            export FONTCONFIG_FILE=${fontconfig_file}
+            # Suppress Fontconfig error: No writable cache directories
+            export XDG_CACHE_HOME="$(mktemp -d)"
             export pattern_path=$src
             export textures_path=${self.packages.${system}.textures-generated}
 

@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# チップムーブ
+# マッチエディット
 ../build_header.sh \
-    -s "MOVE CHIPS" \
-    -b 4 \
+    -s "MATCH EDIT" \
     --outline mainmenu
