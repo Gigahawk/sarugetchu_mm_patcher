@@ -10,11 +10,13 @@ FONT="Zero-Cool"
 FONTSIZE=35
 FONTCOLOR="white"
 CLEAN=true
+CUT_BOTTOM=true
 TOTAL_OUTLINE_WIDTH=0
 GRAVITY=west
 XOFFSET=""
 MARGIN=1
 YOFFSET=0
+SCALE_FACTOR=""
 
 OUTLINE_ARGS=()
 
@@ -102,9 +104,22 @@ while [[ $# -gt 0 ]]; do
             OUTLINE_ARGS+=("\( +clone -alpha extract -morphology $method $kernel:$width -background $color -alpha shape \)")
             TOTAL_OUTLINE_WIDTH=$((TOTAL_OUTLINE_WIDTH + width))
             ;;
+        --scale-factor)
+            SCALE_FACTOR="$2"
+            shift
+            shift
+            ;;
         --no-clean)
             CLEAN=false
             shift
+            ;;
+        --no-cut-bottom)
+            CUT_BOTTOM=false
+            shift
+            ;;
+        *)
+            echo "Unknown option $1"
+            exit 1
             ;;
     esac
 done
@@ -146,14 +161,20 @@ magick \
     label:"$STRING" out_unscaled.png
 
 TEXT_WIDTH=$(identify -format "%w" out_unscaled.png)
-if [ "$TEXT_WIDTH" -gt "$IMG_WIDTH" ]; then
-    SCALE_FACTOR=$(awk "BEGIN {print ($IMG_WIDTH - 2 * $MARGIN)/($TEXT_WIDTH + 2 * $TOTAL_OUTLINE_WIDTH)}")
-    NEW_WIDTH=$(awk "BEGIN {print int($TEXT_WIDTH * $SCALE_FACTOR)}")
-    echo "Unscaled image is $TEXT_WIDTH wide, needs to be scaled by $SCALE_FACTOR to $NEW_WIDTH"
-    magick out_unscaled.png -resize ${NEW_WIDTH}x! out_scaled.png
+if [[ -z "$SCALE_FACTOR" ]]; then
+    if [[ "$TEXT_WIDTH" -gt "$IMG_WIDTH" ]]; then
+        SCALE_FACTOR=$(awk "BEGIN {print ($IMG_WIDTH - 2 * $MARGIN)/($TEXT_WIDTH + 2 * $TOTAL_OUTLINE_WIDTH)}")
+        NEW_WIDTH=$(awk "BEGIN {print int($TEXT_WIDTH * $SCALE_FACTOR)}")
+        echo "Unscaled image is $TEXT_WIDTH wide, needs to be scaled by $SCALE_FACTOR to $NEW_WIDTH"
+        magick out_unscaled.png -resize ${NEW_WIDTH}x! out_scaled.png
+    else
+        echo "Unscaled image fits in texture"
+        cp out_unscaled.png out_scaled.png
+    fi
 else
-    echo "Unscaled image fits in texture"
-    cp out_unscaled.png out_scaled.png
+    echo "Scaling image to provided scale factor $SCALE_FACTOR"
+    NEW_WIDTH=$(awk "BEGIN {print int($TEXT_WIDTH * $SCALE_FACTOR)}")
+    magick out_unscaled.png -resize ${NEW_WIDTH}x! out_scaled.png
 fi
 
 echo "Compositing scaled image onto correct size image"
@@ -165,20 +186,25 @@ magick \
     -geometry "${XOFFSET}${YOFFSET}" -composite \
     out_no_border.png
 
-# https://stackoverflow.com/a/64823099
-# For some reason this doesn't work properly if it's included in the previous 
-# magick call
-echo "Cropping out bottom to allow room for border to wrap dangling tails"
-magick out_no_border.png \
-    \( \
-        +clone \
-        -alpha extract \
-        -fill black \
-        -draw "rectangle 0,$((IMG_HEIGHT - TOTAL_OUTLINE_WIDTH)),${IMG_WIDTH},${IMG_HEIGHT}" \
-        -write alpha_mask.png \
-    \) \
-    -alpha off -compose copyalpha -composite \
-    out_border0.png
+if [[ "$CUT_BOTTOM" == true ]]; then
+    # https://stackoverflow.com/a/64823099
+    # For some reason this doesn't work properly if it's included in the previous
+    # magick call
+    echo "Cropping out bottom to allow room for border to wrap dangling tails"
+    magick out_no_border.png \
+        \( \
+            +clone \
+            -alpha extract \
+            -fill black \
+            -draw "rectangle 0,$((IMG_HEIGHT - TOTAL_OUTLINE_WIDTH)),${IMG_WIDTH},${IMG_HEIGHT}" \
+            -write alpha_mask.png \
+        \) \
+        -alpha off -compose copyalpha -composite \
+        out_border0.png
+else
+    echo "Skipping bottom crop step"
+    cp out_no_border.png out_border0.png
+fi
 
 num_borders=${#OUTLINE_ARGS[@]}
 for ((i=0;i<num_borders;i++)); do

@@ -1,31 +1,14 @@
 #!/usr/bin/env bash
 
-
-IMG_WIDTH=128
-IMG_HEIGHT=16
-IMG_BPP=4
-IMG_COLORS=$((2**IMG_BPP))
-
 # ストーリーモード
-STRING="STORY MODE"
-
-echo "Generating header image for '$STRING'"
-
-echo "Cleaning old files"
-rm -rf *.png *.aseprite
-
-echo "Building raw image"
-magick \
-    -size "${IMG_WIDTH}x${IMG_HEIGHT}" \
-    xc:transparent \
-    -font Zero-Cool -pointsize 21 \
-    -fill black \
-    -gravity east \
-    -annotate -1+0 "$STRING" \
-    out_raw.png
-
-echo "Quantizing image"
-pngquant -f --output out_quant.png --speed 1 "$IMG_COLORS" -- out_raw.png
-
-echo "Converting to aseprite"
-ssmm-patcher img-to-aseprite -o texture.aseprite out_quant.png
+../build_header.sh \
+    -s "STORY MODE" \
+    -g east \
+    -w 128 \
+    -h 16 \
+    -x +6 \
+    -b 4 \
+    --font-size 21 \
+    --scale-factor 0.965 \
+    -c black \
+    --no-cut-bottom
