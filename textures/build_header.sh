@@ -90,6 +90,13 @@ while [[ $# -gt 0 ]]; do
                 color="black"
                 shift
                 shift
+            elif [[ "$2" == "tournament" ]]; then
+                method="edgeout"
+                kernel="square"
+                width="4"
+                color="'#000000ff'"
+                shift
+                shift
             else
                 method="$2"
                 kernel="$3"
@@ -101,7 +108,7 @@ while [[ $# -gt 0 ]]; do
                 shift
                 shift
             fi
-            OUTLINE_ARGS+=("\( +clone -alpha extract -morphology $method $kernel:$width -background $color -alpha shape \)")
+            OUTLINE_ARGS+=("\( +clone -alpha extract -morphology $method $kernel:$width -auto-level -background $color -alpha shape -write outline.png \)")
             TOTAL_OUTLINE_WIDTH=$((TOTAL_OUTLINE_WIDTH + width))
             ;;
         --scale-factor)

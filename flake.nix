@@ -215,6 +215,7 @@
           pkgs.comic-relief
           pkgs.sangyo_ttf
           pkgs.zerocool_ttf
+          pkgs.saman_ttf
         ];
       };
     in {
