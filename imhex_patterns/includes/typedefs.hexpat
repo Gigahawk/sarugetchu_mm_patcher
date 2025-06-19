@@ -1536,6 +1536,14 @@ struct idk_FUN_00624248 {
         idk_FUN_006268c0 idk2;
 };
 
+struct idk_FUN_00621780 {
+    // idk?FUN_00621780
+        le u32 idk1;
+        le u32 idk2;
+        // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
+            MaybeString name1;
+};
+
 struct File {
 // DO_A_LOT_OF_STUFF_WITH_OFFSETS
     // copy_file_base
@@ -1991,10 +1999,9 @@ struct File {
             idk_FUN_00621470 idk86_data[idk86_len];
 
     // idk?FUN_00621808
-        le u32 idk87;
-        if (idk87 != 0) {
-            assert(false, "Check idk?FUN_00621808");
-        }
+        le u32 idk87_len;
+        // idk?FUN_00621780 called in a loop
+            idk_FUN_00621780 idk_87_data[idk87_len];
 
     // idk?FUN_00629758
         le u32 idk88;
