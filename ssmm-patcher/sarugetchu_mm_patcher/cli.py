@@ -44,8 +44,12 @@ def _guess_hash(fname: str | Path):
     return name_hash
 
 def _parse_imhex_json(imhex_json: str | Path):
+    print(f"Opening {imhex_json}")
     with open(imhex_json) as f:
-        return json.load(f)["file"]
+        print(f"Parsing {imhex_json}")
+        data = json.load(f)["file"]
+        print(f"Parsing complete for {imhex_json}")
+        return data
 
 @cli.command()
 @click.argument(
@@ -1014,6 +1018,104 @@ def dump_strings(imhex_json, hash, output_path):
         )
 
 @cli.command()
+@click.argument(
+    "imhex_json",
+    type=click.Path()
+)
+@click.option(
+    "-h", "--hash",
+    default=None,
+    show_default=True,
+    type=str,
+)
+@click.option(
+    "-o", "--output-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+def dump_credits(imhex_json, hash, output_path):
+    imhex_json = Path(imhex_json)
+    if output_path is None:
+        output_path = Path(os.getcwd()) / imhex_json.name
+    output_path = Path(output_path)
+    csv_path = output_path.with_suffix(".strings.csv")
+    yaml_path = output_path.with_suffix(".strings.yaml")
+    if hash is None:
+        hash = _guess_hash(imhex_json)
+    data = _parse_imhex_json(imhex_json)
+    strings = data["credit_strings"]
+    try:
+        translator = EncodingTranslator(hash)
+    except KeyError:
+        click.echo(f"Warning: No encoding map defined for {hash}, falling back to default encoding")
+        translator = EncodingTranslator(encoding=BYTES_TO_CHAR_DEFAULT)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest = []
+    with open(csv_path, "w") as f:
+        for string in strings:
+            _translator = translator
+            addr = hex(int(string["__address"]))
+            index = string["index"]
+            tab_mode = string["tab_mode"]
+            alloc_len = string["str_len"]
+            if alloc_len > 0:
+                string_raw = bytes(string["string"]).strip(b'\x00')
+            else:
+                string_raw = b""
+            actual_len = len(string_raw)
+
+
+            f.write(
+                f"\"Found string at {addr} with index {index}, tab mode {tab_mode}; "
+                f"allocation length {alloc_len}; "
+                f"actual length {actual_len}\"\n"
+            )
+            if alloc_len > actual_len:
+                f.write("ALLOC BIGGER THAN STRING LEN\n")
+
+            try:
+                string_tokens = _translator.tokenize_string(string_raw)
+
+                line_out = ""
+                for token in string_tokens:
+                    line_out += f'"{token.hex().upper()}",'
+                f.write(line_out)
+                f.write("\n")
+
+                line_out = ""
+                full_str = ""
+                for token in string_tokens:
+                    char = _translator.bytes_to_char[token]
+                    if char == "\n":
+                        char = "\\n"
+                    elif char == "\f":
+                        char = "\\f"
+                    full_str += char
+                    line_out += f'"{char}",'
+                f.write(line_out)
+                f.write("\n")
+                f.write(full_str)
+                f.write("\n")
+                # Write string without furigana
+                f.write(re.sub(r"<.*?>", "", full_str))
+                f.write("\n")
+
+                manifest.append({
+                    "string": full_str,
+                    "index": index,
+                    "tab_mode": tab_mode,
+                })
+            except ValueError:
+                f.write("STRING CONTAINS INVALID TOKENS\n")
+                f.write(f'"{string_raw.hex(" ")}"\n')
+                f.write(f'"{string_raw}"\n')
+    with open(yaml_path, "w") as f:
+        f.write(
+            yaml.dump(manifest, allow_unicode=True, default_style='"')
+        )
+
+@cli.command()
 @click.option(
     "-i", "--imhex-json",
     default=None,
@@ -1232,6 +1334,7 @@ def match_font(src_hash, font_src_path, font_new_path):
                 break
         else:
             click.echo(f"Warning: no match found for new token {new_token}")
+            font_new_map[new_token] = "??"
 
     out = f"BYTES_TO_CHAR_{font_new_path.stem.upper()}"
     tokens = sorted(font_new_map.keys())

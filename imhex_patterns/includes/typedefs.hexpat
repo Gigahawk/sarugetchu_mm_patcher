@@ -1536,12 +1536,22 @@ struct idk_FUN_00624248 {
         idk_FUN_006268c0 idk2;
 };
 
-struct idk_FUN_00621780 {
+struct CreditString {
     // idk?FUN_00621780
-        le u32 idk1;
-        le u32 idk2;
+        le u32 index; // Increments on every line
+        // 1 is no tab
+        // 2 is 1 tab
+        // 0 is 2 tab
+        // 3 is centered (used for dolby image)
+        le u32 tab_mode;
         // PRIOR_TO_LOADING_SOMETHING_IMPORTANT
-            MaybeString name1;
+        // Use u8 to match EncodedString
+        // This is either a string encoded to credit.gf
+        // or an ascii string describing the name of a texture
+            le u32 str_len;
+            if (str_len != 0) {
+                le u8 string[str_len + 1];
+            }
 };
 
 struct File {
@@ -1999,9 +2009,9 @@ struct File {
             idk_FUN_00621470 idk86_data[idk86_len];
 
     // idk?FUN_00621808
-        le u32 idk87_len;
+        le u32 num_credit_strings;
         // idk?FUN_00621780 called in a loop
-            idk_FUN_00621780 idk_87_data[idk87_len];
+            CreditString credit_strings[num_credit_strings];
 
     // idk?FUN_00629758
         le u32 idk88;

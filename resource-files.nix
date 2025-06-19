@@ -1,4 +1,5 @@
 [
+  "012_c63a0383" # gz/credit.gz
   "043_b1fc2c81" # gz/game_common.gz
   "044_5c272d50" # gz/game_common.story.gz
   "045_3cecf223" # gz/game_common.vs.gz

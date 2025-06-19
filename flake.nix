@@ -548,6 +548,9 @@
           ];
 
           buildPhase = ''
+            # Suppress Fontconfig error: Cannot load default config file: No such file: (null)
+            export FONTCONFIG_FILE=${fontconfig_file}
+
             mkdir -p $out/analysis
             # Hack: this is a memory intensive process, and will fail if not
             # enough free memory is allocated to each process
@@ -563,6 +566,9 @@
             echo "Generating $max_procs imhex outputs in parallel"
             echo "${resourceFilesStr}" | \
               parallel --retries 5 -P $max_procs -I {} '
+                # Suppress Fontconfig error: No writable cache directories
+                export XDG_CACHE_HOME="$(mktemp -d)"
+
                 echo "Analyzing resource {}"
                 imhex --pl format --verbose --metadata \
                   --includes "$src/includes/" \
