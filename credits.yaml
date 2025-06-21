@@ -1,0 +1,1719 @@
+# Moby Games unfortunately does not appear to have records for Million Monkeys
+
+# HACK: '■' and '●' aren't in the minimal encoding, 
+# Use '□' and '○' instead.
+# TODO: Figure out how to pull custom characters into patch_font conveniently?
+# The lazy way would be to just use patch_textures to overwrite '□' and '○'
+
+#- string: ■スタッフ■
+- string: □Staff□
+  tab_mode: 1
+
+- string: ''
+  tab_mode: 0
+
+#- string: ●プランナー
+- string: ○Planners
+  tab_mode: 1
+
+#- string: キャラクターまわり
+- string: Characters
+  tab_mode: 2
+
+#- string: 大場 俊治
+# Apparently may also be pronounced Toshiharu Ohba, not sure.
+# Possibly refers to this guy https://www.mobygames.com/person/301789/shunji-ohba/
+- string: Shunji Ohba
+  tab_mode: 0
+
+#- string: 工藤 匡史
+# Possibly https://www.mobygames.com/person/132345/masashi-kudo/
+- string: Masashi Kudo
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ステージ設計/リアルタイムデモ
+# Pretty sure "real time demo" here refers to the in engine cutscenes
+# (like after defeating the goliath in the first mission)
+- string: Stage Design/In-Engine Cutscenes
+  tab_mode: 2
+
+#- string: 田坂 尚昭
+# Nothing comes up for this, using most likely romanization suggested by ChatGPT
+- string: Naoaki Tasaka
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: コリジョン作成
+- string: Collision
+  tab_mode: 2
+
+# Likely https://www.mobygames.com/person/118032/shuhei-hashimoto/
+- string: Shuhei Hashimoto
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ボス/カメラ/アイテム/ボーナス設定
+- string: Bosses/Camera/Items/Bonuses
+  tab_mode: 2
+
+#- string: HAPPY!サルΧトロ
+# No idea what this is, possibly just indicating that Doko Demo Issyo was
+# involved?
+- string: HAPPY! SARU Χ TORO
+  tab_mode: 2
+
+#- string: 小豆畑 裕
+# Probably https://www.mobygames.com/person/40567/yutaka-azuhata/
+- string: Yutaka Azuhata
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: メニュー
+- string: Menus
+  tab_mode: 2
+
+#- string: 松本 シン也
+# Possibly https://www.mobygames.com/person/40625/shinya-matsumoto/
+- string: Shinya Matsumoto
+  tab_mode: 0
+
+#- string: 石川 千愛
+# Possibly https://www.mobygames.com/person/417923/chiaki-ichikawa/
+- string: Chiaki Ishikawa
+  tab_mode: 0
+
+#- string: 工藤 匡史
+# Possibly https://www.mobygames.com/person/132345/masashi-kudo/
+- string: Masashi Kudo
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: サウンド
+- string: Sound
+  tab_mode: 2
+
+#- string: 石川 千愛
+# Possibly https://www.mobygames.com/person/417923/chiaki-ichikawa/
+- string: Chiaki Ishikawa
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: エネミー/サルブック/ゲッチュまわり
+# What does ゲッチュまわり mean here? Like the catch screen/animation?
+- string: Enemies/Monkey Book/Capture
+  tab_mode: 2
+
+#- string: 横田 恒宏
+# Probably https://www.mobygames.com/person/164895/tsunehiro-yokota/
+- string: Tsunehiro Yokota
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: エネミー配置/調整
+- string: Enemy Positioning/Coordination
+  tab_mode: 2
+
+#- string: 及川 怜
+# Nothing comes up, using most common romanization suggested by ChatGPT
+# Moby Games has a few entries for Rei Oikawa and other romanizations but
+# they all seem unlikely
+- string: Rei Oikawa
+  tab_mode: 0
+
+#- string: 川島 淳
+# Probably https://www.mobygames.com/person/377282/atsushi-kawashima/
+- string: Atsushi Kawashima
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ●デザイナー
+- string: ○Designers
+  tab_mode: 1
+
+- string: Art Director
+  tab_mode: 2
+
+#- string: 寺本 忠亮
+# Nothing comes up, using most common romanization suggested by ChatGPT
+- string: Tadaki Teramoto
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: キャラクターデザイン
+- string: Character Design
+  tab_mode: 2
+
+#- string: 谷口 晋也
+# Probably https://www.mobygames.com/person/401414/shinya-taniguchi/
+- string: Shinya Taniguchi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: メカデザイン
+# Possibly gadget design but GachaMecha shows up later
+# So presumably this is talking about mechs like the goliath?
+- string: Mech Design
+  tab_mode: 2
+
+#- string: 小川 太一
+# Probably https://www.mobygames.com/person/118026/taichi-ogawa/
+- string: Taichi Ogawa
+  tab_mode: 0
+
+#- string: 松本 シン也
+# Possibly https://www.mobygames.com/person/40625/shinya-matsumoto/
+- string: Shinya Matsumoto
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: モンスターデザイン
+- string: Monster Design
+  tab_mode: 2
+
+#- string: 小川 太一
+# Probably https://www.mobygames.com/person/118026/taichi-ogawa/
+- string: Taichi Ogawa
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: UIデザイン
+- string: UI Design
+  tab_mode: 2
+
+#- string: 松本 シン也
+# Possibly https://www.mobygames.com/person/40625/shinya-matsumoto/
+- string: Shinya Matsumoto
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ガチャメカ/ボーナスメカモデル
+# What are bonus mecha?
+- string: Gadget Models
+  tab_mode: 2
+
+#- string: 佐久間 英樹
+# Possibly https://www.mobygames.com/person/1636529/%E4%BD%90%E4%B9%85%E9%96%93-%E8%8B%B1%E6%A8%B9/
+# No romanization provided, using most likely suggestion from ChatGPT
+- string: Hideki Sakuma
+  tab_mode: 0
+
+#- string: 船山 征一郎
+# Probably https://www.mobygames.com/person/377300/seiichiro-funayama/
+- string: Seiichiro Funayama
+  tab_mode: 0
+
+#- string: 河口 春彦
+# Probably https://www.mobygames.com/person/377284/haruhiko-kawaguchi/
+- string: Haruhiko Kawaguchi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: アニメーション
+- string: Animation
+  tab_mode: 2
+
+#- string: おの さとし
+# Possibly https://www.mobygames.com/person/640196/satoshi-ano/
+# Why is this in hiragana? Maybe the kanji was too hard to fit in a font?
+- string: Satoshi Ano
+  tab_mode: 0
+
+#- string: 村上 晋也
+# Possibly https://www.mobygames.com/person/40632/shinya-murakami/
+- string: Shinya Murakami
+  tab_mode: 0
+
+#- string: 船山 征一郎
+# Probably https://www.mobygames.com/person/377300/seiichiro-funayama/
+- string: Seiichiro Funayama
+  tab_mode: 0
+
+#- string: 西 博樹
+# Probably https://www.mobygames.com/person/118025/hiroki-nishi/
+- string: Hiroki Nishi
+  tab_mode: 0
+
+#- string: 松谷 領真
+# Also credited on Gacha Mecha Stadium: Saru Battle https://raido.moe/staff/ps2/ps2_gacha_mecha_stadium_sarubattle.html
+# but no romanization provided, using most likely suggestion from ChatGPT
+- string: Ryoma Matsutani
+  tab_mode: 0
+
+#- string: 田中 和治
+# Probably https://www.mobygames.com/person/233020/kazuharu-tanaka/
+- string: Kazuharu Tanaka
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ステージ
+# What's the difference between this and stage design above?
+- string: Stages
+  tab_mode: 2
+
+#- string: 清水 映輔
+# Probably https://www.mobygames.com/person/78549/eisuke-shimizu/
+- string: Eisuke Shimizu
+  tab_mode: 0
+
+#- string: 根本 健一
+# Possibly https://www.mobygames.com/person/244629/kenichi-nemoto/credits/
+- string: Kenichi Nemoto
+  tab_mode: 0
+
+#- string: 藤井 慶太
+# Probably https://www.mobygames.com/person/207935/keita-fujii/
+- string: Keita Fujii
+  tab_mode: 0
+
+#- string: 女井“hix”秀久
+# Probably https://www.mobygames.com/person/40671/hidehisa-onai/
+# What does the "hix" mean?
+- string: Hidehisa "hix" Onai
+  tab_mode: 0
+
+#- string: 照井 孝芳
+# Possibly https://www.mobygames.com/person/968254/teruo-takahashi/
+- string: Teruo Takahashi
+  tab_mode: 0
+
+#- string: 宮崎 昭司
+# Probably https://www.mobygames.com/person/118033/shoji-miyazaki/
+- string: Shoji Miyazaki
+  tab_mode: 0
+
+#- string: 小柳 輝陽子
+# Probably https://www.mobygames.com/person/40605/kiyoko-koyanagi/
+# Doesn't match any of ChatGPT's suggested romanizatoins
+- string: Kiyoko Koyanagi
+  tab_mode: 0
+
+#- string: 朝戸 薫
+# Probably https://www.mobygames.com/person/226876/kaori-asado/
+- string: Kaori Asado
+  tab_mode: 0
+
+#- string: 土井 誠
+# Probably https://www.mobygames.com/person/233018/makoto-doi/
+- string: Makoto Doi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ボスモデル/モーション
+# I assume motion here means rigging?
+- string: Boss Models/Rigging
+  tab_mode: 2
+
+#- string: 河口 春彦
+# Probably https://www.mobygames.com/person/377284/haruhiko-kawaguchi/
+- string: Haruhiko Kawaguchi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: エフェクト
+# What does this even mean, like status effects (fire, metal)?
+- string: Effects
+  tab_mode: 2
+
+#- string: 藤井 泉信
+# Possibly https://www.mobygames.com/person/86509/minobu-fujii/
+- string: Minobu Fujii
+  tab_mode: 0
+
+#- string: 照井 孝芳
+# Possibly https://www.mobygames.com/person/343892/teruo-takahashi/
+# or https://www.mobygames.com/person/968254/teruo-takahashi/
+- string: Teruo Takahashi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: アイテムデザイン
+# How is this different from Item credits above?
+- string: Item Design
+  tab_mode: 2
+
+#- string: 長郷 絵美
+# Probably https://www.mobygames.com/person/233023/emi-nagou/
+- string: Emi Nagou
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ムービー
+- string: Cutscenes
+  tab_mode: 2
+
+#- string: 堀 正二郎
+# Probably https://www.mobygames.com/person/40681/shojiro-hori/
+- string: Shojiro Hori
+  tab_mode: 0
+
+#- string: 保谷 千佳
+# Nothing comes up, using ChatGPTs suggested romanization
+- string: Chika Hoya
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ●プログラマー
+- string: ○Programmers
+  tab_mode: 1
+
+#- string: メインプログラマー
+- string: Main Programmer
+  tab_mode: 2
+
+#- string: 清水 保治
+# Likely https://www.mobygames.com/person/1344639/yasuharu-shimizu/
+- string: Yasuharu Shimizu
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: キャラクター
+- string: Character Programmer
+  tab_mode: 2
+
+#- string: 中澤 伸弘
+# Probably www.mobygames.com/person/40593/nobuhiro-nakazawa/
+# The kanji doesn't quite match up for some reason? But also they have a credit
+# for character programming on pumped and primed
+- string: Nobuhiro Nakazawa
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: カメラ
+- string: Camera Programmer
+  tab_mode: 2
+
+#- string: 桑田 直文
+# Probably https://www.mobygames.com/person/207936/naofumi-kuwata/
+- string: Naofumi Kuwata
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ボス/エネミー/ステージ
+- string: Boss/Enemy/Stage Programmer
+  tab_mode: 2
+
+- string: 穂満 憲明
+# Nothing comes up, using most common romanization suggested by ChatGPT
+- string: Noriaki Homma
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: AI制御/スクリプト
+- string: AI Control/Script Programmer
+  tab_mode: 2
+
+#- string: 相澤 慎司
+# Possibly https://www.mobygames.com/person/1433823/shinji-aizawa/
+# Based on ChatGPT most common romanization
+- string: Shinji Aizawa
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: メニュー
+- string: Menu Programmer
+  tab_mode: 2
+
+#- string: 竹内 和敏
+# Possibly https://www.mobygames.com/person/535464/kazutoshi-takeuchi/
+- string: Kazutoshi Takeuchi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ツールサポート
+- string: Tool Support
+  tab_mode: 2
+
+#- string: 高橋 智之
+# Possibly https://www.mobygames.com/person/1266201/%E9%AB%98%E6%A9%8B-%E6%99%BA%E4%B9%8B/
+# Using most likely ChatGPT suggested romanization, apparently used this
+# as a source: https://researchmap.jp/read0169555
+- string: Tomoyuki Takahashi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: 描画サポート
+- string: Art Support
+  tab_mode: 2
+
+#- string: やまぐち たい
+# Why is this in hiragana? the kanji is quite simple
+# Probably https://www.mobygames.com/person/301779/tai-yamaguchi/
+- string: Tai Yamaguchi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: テクニカルディレクション
+- string: Technical Direction
+  tab_mode: 2
+
+#- string: 光田 幸司
+# Probably https://www.mobygames.com/person/54352/koji-mitsuda/
+- string: Koji Mitsuda
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ●サウンド
+- string: ○Sound
+  tab_mode: 1
+
+#- string: サウンドディレクター
+- string: Sound Director
+  tab_mode: 2
+
+#- string: 金井 貴史
+# Probably https://www.mobygames.com/person/37151/takashi-kanai/
+- string: Takashi Kanai
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: サウンドデザイン
+- string: Sound Design
+  tab_mode: 2
+
+#- string: 金井 貴史
+# Probably https://www.mobygames.com/person/37151/takashi-kanai/
+- string: Takashi Kanai
+  tab_mode: 0
+
+#- string: 増田 延朗
+# Probably https://www.mobygames.com/person/220962/noburo-masuda/
+# Kanji doesn't quite match up, but he appears to be a sound designer
+- string: Noburo Masuda
+  tab_mode: 0
+
+#- string: 中越 健太郎
+# Probably https://www.mobygames.com/person/626529/kentaro-nakagoshi/
+- string: Kentaro Nakagoshi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ムービーMA
+# ChatGPT says most likely "Motion Artist" or "Motion Animator"
+- string: Cutscene Motion Artists
+  tab_mode: 2
+
+#- string: 粕谷 浩之
+# Possibly https://www.mobygames.com/person/58201/hiroyuki-kasuya/
+- string: Hiroyuki Kasuya
+  tab_mode: 0
+
+#- string: 金井 貴史
+# Likely https://www.mobygames.com/person/37151/takashi-kanai/
+- string: Takashi Kanai
+  tab_mode: 0
+
+#- string: 山内 祐二
+# Possibly https://www.mobygames.com/person/129654/yuji-yamauchi/
+- string: Yuji Yamauchi
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ■ボイスキャスト
+- string: □Voice Cast
+  tab_mode: 1
+
+#- string: カケル
+- string: Kakeru
+  tab_mode: 2
+
+#- string: 瀧本 富土子
+# Nothing found, using romanization from ChatGPT
+- string: Tomiko Takimoto
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ハカセ
+- string: Professor
+  tab_mode: 2
+
+#- string: 八奈見 乗児
+# Probably https://www.mobygames.com/person/455136/joji-yanami/
+- string: Joji Yanami
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ナツミ
+- string: Natsumi
+  tab_mode: 2
+
+#- string: 川上 とも子
+# Probably https://www.mobygames.com/person/59179/tomoko-kawakami/
+- string: Tomoko Kawakami
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ハルカ
+- string: Haruka
+  tab_mode: 2
+
+#- string: 半場 友恵
+# Probably https://www.mobygames.com/person/481691/tomoe-hanba/
+- string: Tomoe Hanba
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: チャル
+- string: Charu
+  tab_mode: 2
+
+#- string: 川上 とも子
+# Probably https://www.mobygames.com/person/59179/tomoko-kawakami/
+- string: Tomoko Kawakami
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ヒロキ
+- string: Hiroki
+  tab_mode: 2
+
+#- string: 伊倉 一恵
+# Probably https://www.mobygames.com/person/60965/kazue-ikura/
+- string: Kazue Ikura
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: スペクター
+- string: Specter
+  tab_mode: 2
+
+#- string: 坂本 千夏
+# Probably https://www.mobygames.com/person/138351/chika-sakamoto/
+- string: Chika Sakamoto
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: 謎の男/ピポトロン達
+- string: Mystery Man/Pipotrons
+  tab_mode: 2
+
+#- string: 楠 大典
+# Probably https://www.mobygames.com/person/162218/taiten-kusunoki/
+- string: Taiten Kusunoki
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: リングコール
+# What is this, like the colosseum chants?
+- string: Ring Call
+  tab_mode: 2
+
+#- string: レニー⋅ハート
+# Likely https://www.mobygames.com/person/72420/lenne-hardt/
+- string: Lenne Hardt
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: 警備隊隊長
+# Likely the army guy in the news cutscenes
+- string: Squad Commander
+  tab_mode: 2
+
+#- string: 花輪 英司
+# Probably https://www.mobygames.com/person/231863/eiji-hanawa/
+- string: Eiji Hanawa
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: TVリポーター
+# Who is this? Doesn't seem to be the NSB News lady
+- string: TV Reporter
+  tab_mode: 2
+
+#- string: 花輪 英司
+# Probably https://www.mobygames.com/person/231863/eiji-hanawa/
+- string: Eiji Hanawa
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ミッション前アナウンス
+- string: Pre-mission Announcements
+  tab_mode: 2
+
+#- string: 川上 とも子
+# Probably https://www.mobygames.com/person/59179/tomoko-kawakami/
+- string: Tomoko Kawakami
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: Monkey Red
+  tab_mode: 2
+
+#- string: 郷里 大輔
+# Likely https://www.mobygames.com/person/452046/daisuke-gori/
+- string: Daisuke Gohri
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ウッキーピンク
+- string: Monkey Pink
+  tab_mode: 2
+
+#- string: 松下 美由紀
+# Probably https://www.mobygames.com/person/151478/miyuki-matsushita/
+- string: Miyuki Matsushita
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ボイスプロダクションマネージャー
+- string: Voice Production Manager
+  tab_mode: 2
+
+#- string: 大野 拓也(東北新社)
+# Probably https://www.mobygames.com/person/116103/takuya-ono/
+- string: Takuya Ono (Tohokushinsha Film Corp.)
+  tab_mode: 0
+
+
+#- string: 小林 見菜子(東北新社)
+# Possibly https://www.mobygames.com/person/386555/minako-kobayashi/
+# Using best guess romanization by ChatGPT
+- string: Minako Kobayashi (Tohokushinsha Film Corp.)
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+#- string: ボイスレコーディングディレクター
+- string: Voice Recording Director
+  tab_mode: 2
+
+#- string: 加藤 敏(東北新社)
+# Likely https://www.mobygames.com/person/480364/satoshi-kato/
+- string: Satoshi Kato (Tohokushinsha Film Corp.)
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ボイスレコーディングエンジニア
+  tab_mode: 2
+
+- string: 金井 貴史
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ミュージックコンポーズ
+  tab_mode: 2
+
+- string: 寺田 創一
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ミュージックスーパーバイザー
+  tab_mode: 2
+
+- string: 菊地 智敦(ソニー⋅ミュージックパブリッシング)
+  tab_mode: 0
+
+- string: 松田 芳明(ニューカム)
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ボーカル
+  tab_mode: 2
+
+- string: 金沢 明子
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: レコーディングスタジオ
+  tab_mode: 2
+
+- string: BOM Recording Studio
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: レコーディングエンジニア
+  tab_mode: 2
+
+- string: 福島 浩和
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ■ミリオンモンキーズじっしゃキャスト
+  tab_mode: 1
+
+- string: ''
+  tab_mode: 0
+
+- string: ●NSBニュースしゅつえん
+  tab_mode: 1
+
+- string: ニュースキャスター
+  tab_mode: 2
+
+- string: ターリン⋅ミーカー
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: リポーター
+  tab_mode: 2
+
+- string: 野中 美里
+  tab_mode: 0
+
+- string: ミゲル⋅スヴェトラナ
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: たいサルちきゅうぼうえいせんせん だいひょう
+  tab_mode: 2
+
+- string: イアン⋅ムーア
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: たいサルちきゅうぼうえいせんせん たいいん
+  tab_mode: 2
+
+- string: 北島 達也
+  tab_mode: 0
+
+- string: 石黒 康裕
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: せかいのひとびと
+  tab_mode: 2
+
+- string: ミハイル⋅ポルトノブ
+  tab_mode: 0
+
+- string: ケビン⋅ウィルキンス
+  tab_mode: 0
+
+- string: インゲ⋅ムラタ
+  tab_mode: 0
+
+- string: イリーナ⋅フジムラ
+  tab_mode: 0
+
+- string: アリーナ⋅フクシマ
+  tab_mode: 0
+
+- string: レイラ⋅マリエ
+  tab_mode: 0
+
+- string: ジョナサン⋅シアー
+  tab_mode: 0
+
+- string: マイケル⋅ナイシュタット
+  tab_mode: 0
+
+- string: イアン⋅ギブ
+  tab_mode: 0
+
+- string: フランシス⋅ポル
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: どうじつうやく
+  tab_mode: 2
+
+- string: 田京 恵
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ●かくとうコロシアムオープニングムービー&
+  tab_mode: 1
+
+- string: ' I Feel Loveプロモーションビデオしゅつえん'
+  tab_mode: 1
+
+- string: ''
+  tab_mode: 0
+
+- string: かしゅ
+  tab_mode: 2
+
+- string: 金沢 明子
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ピポサルダンサーズ
+  tab_mode: 2
+
+- string: 小川 久美子
+  tab_mode: 0
+
+- string: 高橋 慶子
+  tab_mode: 0
+
+- string: 若曽根 真紀
+  tab_mode: 0
+
+- string: 藁谷 円
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ●せいさくスタッフ
+  tab_mode: 1
+
+- string: かんとく
+  tab_mode: 2
+
+- string: 小山⋅ゴンザレス⋅均
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: せいさくがいしゃ
+  tab_mode: 2
+
+- string: パインズ
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: プロデューサー
+  tab_mode: 2
+
+- string: 上松 幸司
+  tab_mode: 0
+
+- string: 篠宮 章浩
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: プロダクションマネージャー
+  tab_mode: 2
+
+- string: 高山 龍一郎
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: カメラマン
+  tab_mode: 2
+
+- string: 五十嵐 明
+  tab_mode: 0
+
+- string: 田中 一博
+  tab_mode: 0
+
+- string: 三浦 徹
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: カメラマンアシスタント
+  tab_mode: 2
+
+- string: 中川 敦夫
+  tab_mode: 0
+
+- string: 土肥 桂介
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: しょうめい
+  tab_mode: 2
+
+- string: 山内 圭
+  tab_mode: 0
+
+- string: 河内 俊明
+  tab_mode: 0
+
+- string: 掛橋 司
+  tab_mode: 0
+
+- string: 佐々木 靖
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: VE
+  tab_mode: 2
+
+- string: 永井 健太
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: おんせい
+  tab_mode: 2
+
+- string: 後平 淳一
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: クレーンオペレーター
+  tab_mode: 2
+
+- string: 吉沢 譲
+  tab_mode: 0
+
+- string: 金子 総司
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ヘアメイク
+  tab_mode: 2
+
+- string: 早坂 実穂
+  tab_mode: 0
+
+- string: 橋本 よう子
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: スタイリスト
+  tab_mode: 2
+
+- string: 岡本 のりえ
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ふりつけ
+  tab_mode: 2
+
+- string: 阿部 久美子
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: びじゅつ
+  tab_mode: 2
+
+- string: 金子 修一
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ほんやく
+  tab_mode: 2
+
+- string: 島田 淳子
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: CG
+  tab_mode: 2
+
+- string: 吉田 豊
+  tab_mode: 0
+
+- string: 宮下 紀文
+  tab_mode: 0
+
+- string: 高橋 正教
+  tab_mode: 0
+
+- string: 大熊 一弘
+  tab_mode: 0
+
+- string: 秋元 純一
+  tab_mode: 0
+
+- string: 森江 康太
+  tab_mode: 0
+
+- string: 松田 圭太
+  tab_mode: 0
+
+- string: 渡辺 祐貴
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: がぞうエフェクト
+  tab_mode: 2
+
+- string: いなお とうきょう
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: がぞうエフェクトアシスタント
+  tab_mode: 2
+
+- string: 一徹
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: MA
+  tab_mode: 2
+
+- string: 渋谷 宗昭
+  tab_mode: 0
+
+- string: 萩原 千春
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: おんがく
+  tab_mode: 2
+
+- string: 寺田 創一
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: SE
+  tab_mode: 2
+
+- string: 長谷川 龍
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: きょうりょく
+  tab_mode: 2
+
+- string: アンディ スミス
+  tab_mode: 0
+
+- string: 上松 祐司
+  tab_mode: 0
+
+- string: 雄土
+  tab_mode: 0
+
+- string: 遠藤 壮彦
+  tab_mode: 0
+
+- string: 朝日ヘリコプター
+  tab_mode: 0
+
+- string: ヴェルファーレ
+  tab_mode: 0
+
+- string: カナザワオフィス
+  tab_mode: 0
+
+- string: 松竹衣装
+  tab_mode: 0
+
+- string: フェザーインターナショナル
+  tab_mode: 0
+
+- string: キャスト⋅サポート
+  tab_mode: 0
+
+- string: スタジオドールアップ
+  tab_mode: 0
+
+- string: ふなばしアンデルセン公園
+  tab_mode: 0
+
+- string: モウリ アートワークス スタジオ
+  tab_mode: 0
+
+- string: ゲッティイメージズ
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ■CGムービースタッフ
+  tab_mode: 1
+
+- string: ディレクション
+  tab_mode: 2
+
+- string: 堀 正二郎
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: モデラー/アニメーター
+  tab_mode: 2
+
+- string: 花沢 宏樹
+  tab_mode: 0
+
+- string: オクムラ ユウコ
+  tab_mode: 0
+
+- string: うもと ゆーじ(ウサギ王)
+  tab_mode: 0
+
+- string: 服部 剛(ウサギ王)
+  tab_mode: 0
+
+- string: 磯野 和沙(ウサギ王)
+  tab_mode: 0
+
+- string: 河野 達也
+  tab_mode: 0
+
+- string: 三田 邦彦
+  tab_mode: 0
+
+- string: 佐藤 千織
+  tab_mode: 0
+
+- string: 広川 由紀子
+  tab_mode: 0
+
+- string: 保谷 千佳
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: プラグイン協力
+  tab_mode: 2
+
+- string: 和田 義之
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: SARUCHIN COMPANY
+  tab_mode: 2
+
+- string: 伊勢田 誠治
+  tab_mode: 0
+
+- string: 飯田 拓也
+  tab_mode: 0
+
+- string: 福島 涼太
+  tab_mode: 0
+
+- string: 早川 有子
+  tab_mode: 0
+
+- string: 市川 量也
+  tab_mode: 0
+
+- string: 有沢 包三
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: Bear Force Graphics
+  tab_mode: 2
+
+- string: 大窪 マサヒロ
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ■QAチーム
+  tab_mode: 1
+
+- string: QA Manager
+  tab_mode: 2
+
+- string: 菅原 修
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: QA Testers
+  tab_mode: 2
+
+- string: 菅原 基
+  tab_mode: 0
+
+- string: 保坂 淳一
+  tab_mode: 0
+
+- string: 定常 奈緒美
+  tab_mode: 0
+
+- string: 峯田 寿里
+  tab_mode: 0
+
+- string: 齋藤 由香里
+  tab_mode: 0
+
+- string: 富田 浩平
+  tab_mode: 0
+
+- string: 加藤 圭子
+  tab_mode: 0
+
+- string: 香取 孝夫
+  tab_mode: 0
+
+- string: 吉井 裕介
+  tab_mode: 0
+
+- string: 鎌田 昌樹
+  tab_mode: 0
+
+- string: 福永 由美恵
+  tab_mode: 0
+
+- string: 松野 一成
+  tab_mode: 0
+
+- string: 福留 秀一郎
+  tab_mode: 0
+
+- string: 新島 暢人
+  tab_mode: 0
+
+- string: 戸谷 七生
+  tab_mode: 0
+
+- string: 飯島 努
+  tab_mode: 0
+
+- string: 中鉢 琴江
+  tab_mode: 0
+
+- string: 飛知和 清香
+  tab_mode: 0
+
+- string: 川原 央貴
+  tab_mode: 0
+
+- string: 佐藤 大輔
+  tab_mode: 0
+
+- string: 石井 秀範
+  tab_mode: 0
+
+- string: 山下 雄司
+  tab_mode: 0
+
+- string: 蛭田 直樹
+  tab_mode: 0
+
+- string: 西原 久史
+  tab_mode: 0
+
+- string: 斎藤 穣
+  tab_mode: 0
+
+- string: 坂本 淳
+  tab_mode: 0
+
+- string: 酒井 博康
+  tab_mode: 0
+
+- string: 橋川 里央
+  tab_mode: 0
+
+- string: 澤田 麻里子
+  tab_mode: 0
+
+- string: 廣瀬 制
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ■プロモーション
+  tab_mode: 1
+
+- string: 細谷 恵
+  tab_mode: 0
+
+- string: 林 夕起子
+  tab_mode: 0
+
+- string: 千葉 則夫
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ■ソフトウェアマニュアル/パッケージデザイン
+  tab_mode: 1
+
+- string: パッケージコーディネート
+  tab_mode: 2
+
+- string: 小宮 浩典
+  tab_mode: 0
+
+- string: 新居 康子
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: 河上 一明(SMC)
+  tab_mode: 0
+
+- string: 菅沼 謙二(SMC)
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: パッケージ&ソフトウェアマニュアルデザイン
+  tab_mode: 2
+
+- string: 村上 仁史(alvion)
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ソフトウェアマニュアルライティング
+  tab_mode: 2
+
+- string: 照井 一功(ブレインナビ)
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ■販売企画
+  tab_mode: 1
+
+- string: 植田 浩
+  tab_mode: 0
+
+- string: 増本 光高
+  tab_mode: 0
+
+- string: 浅川 哲朗
+  tab_mode: 0
+
+- string: 寺本 亜紀子
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ■宮業
+  tab_mode: 1
+
+- string: 上原 隆夫
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ■HAPPY!サルΧトロ委員会
+  tab_mode: 1
+
+- string: 五十峯 誠
+  tab_mode: 0
+
+- string: 北川 竜大
+  tab_mode: 0
+
+- string: 瀧村 絵理子
+  tab_mode: 0
+
+- string: 大田 径奈
+  tab_mode: 0
+
+- string: 田部井 緑子
+  tab_mode: 0
+
+- string: 林 慶太
+  tab_mode: 0
+
+- string: 佐野 淳子
+  tab_mode: 0
+
+- string: 三宅 大輔
+  tab_mode: 0
+
+- string: プラスティック⋅スクイーズ⋅ボックス
+  tab_mode: 0
+
+- string: 南治 一徳
+  tab_mode: 0
+
+- string: 星 哲哉
+  tab_mode: 0
+
+- string: BeXide,Inc.
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ■スペシャルサンクス
+  tab_mode: 1
+
+- string: XSEED JKS,Inc.
+  tab_mode: 0
+
+- string: JUN IWASAKI(XSEED)
+  tab_mode: 0
+
+- string: 中川 みゆき
+  tab_mode: 0
+
+- string: 白川 智
+  tab_mode: 0
+
+- string: 山本 博之
+  tab_mode: 0
+
+- string: 宮川 昌己
+  tab_mode: 0
+
+- string: 森 みつよ
+  tab_mode: 0
+
+- string: 吉越 巽哉
+  tab_mode: 0
+
+- string: 佐野 淳子
+  tab_mode: 0
+
+- string: 山口 晋平
+  tab_mode: 0
+
+- string: 仲村 達郎
+  tab_mode: 0
+
+- string: 土居 昌明
+  tab_mode: 0
+
+- string: 記野 直子
+  tab_mode: 0
+
+- string: 難波 優子
+  tab_mode: 0
+
+- string: 小泉 梨沙
+  tab_mode: 0
+
+- string: 馬場 舞夢
+  tab_mode: 0
+
+- string: 田村 文子
+  tab_mode: 0
+
+- string: 田邊 拓
+  tab_mode: 0
+
+- string: ピポサル委員会
+  tab_mode: 0
+
+- string: SCEIオールスタッフ
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ●ディレクター
+  tab_mode: 1
+
+- string: 上田 和仁
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ●プロデューサー
+  tab_mode: 1
+
+- string: 兼高 克志
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ●エグゼクティブプロデューサー
+  tab_mode: 1
+
+- string: 藤沢 孝史
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ●スーパーバイザー
+  tab_mode: 1
+
+- string: 小林 康秀
+  tab_mode: 0
+
+- string: 桐田 富和
+  tab_mode: 0
+
+- string: 佐々木 誠義
+  tab_mode: 0
+
+- string: 佐伯 雅司
+  tab_mode: 0
+
+- string: 竹野 文哉
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: dolby.tm2
+  tab_mode: 3
+  raw: true
