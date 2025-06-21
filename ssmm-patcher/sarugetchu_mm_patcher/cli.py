@@ -1039,7 +1039,7 @@ def dump_credits(imhex_json, hash, output_path):
     if output_path is None:
         output_path = Path(os.getcwd()) / imhex_json.name
     output_path = Path(output_path)
-    csv_path = output_path.with_suffix(".strings.csv")
+    txt_path = output_path.with_suffix(".strings.txt")
     yaml_path = output_path.with_suffix(".strings.yaml")
     if hash is None:
         hash = _guess_hash(imhex_json)
@@ -1052,38 +1052,18 @@ def dump_credits(imhex_json, hash, output_path):
         translator = EncodingTranslator(encoding=BYTES_TO_CHAR_DEFAULT)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     manifest = []
-    with open(csv_path, "w") as f:
+    with open(txt_path, "w") as f:
         for string in strings:
             _translator = translator
-            addr = hex(int(string["__address"]))
-            index = string["index"]
             tab_mode = string["tab_mode"]
             alloc_len = string["str_len"]
             if alloc_len > 0:
                 string_raw = bytes(string["string"]).strip(b'\x00')
             else:
                 string_raw = b""
-            actual_len = len(string_raw)
-
-
-            f.write(
-                f"\"Found string at {addr} with index {index}, tab mode {tab_mode}; "
-                f"allocation length {alloc_len}; "
-                f"actual length {actual_len}\"\n"
-            )
-            if alloc_len > actual_len:
-                f.write("ALLOC BIGGER THAN STRING LEN\n")
-
             try:
                 string_tokens = _translator.tokenize_string(string_raw)
 
-                line_out = ""
-                for token in string_tokens:
-                    line_out += f'"{token.hex().upper()}",'
-                f.write(line_out)
-                f.write("\n")
-
-                line_out = ""
                 full_str = ""
                 for token in string_tokens:
                     char = _translator.bytes_to_char[token]
@@ -1092,27 +1072,32 @@ def dump_credits(imhex_json, hash, output_path):
                     elif char == "\f":
                         char = "\\f"
                     full_str += char
-                    line_out += f'"{char}",'
-                f.write(line_out)
-                f.write("\n")
-                f.write(full_str)
-                f.write("\n")
-                # Write string without furigana
-                f.write(re.sub(r"<.*?>", "", full_str))
-                f.write("\n")
+                tab_mode_map = {
+                    1: "",
+                    2: "\t",
+                    0: "\t\t",
+                    3: "<CENTERED> "
+                }
+                f.write(f"{tab_mode_map[tab_mode]}{full_str}\n")
 
                 manifest.append({
                     "string": full_str,
-                    "index": index,
                     "tab_mode": tab_mode,
                 })
-            except ValueError:
+            except ValueError as e:
+                click.echo(e)
+                click.echo(e.args)
                 f.write("STRING CONTAINS INVALID TOKENS\n")
                 f.write(f'"{string_raw.hex(" ")}"\n')
                 f.write(f'"{string_raw}"\n')
+                manifest.append({
+                    "string": string_raw.decode("utf-8", errors="backslashreplace"),
+                    "tab_mode": tab_mode,
+                    "raw": True,
+                })
     with open(yaml_path, "w") as f:
         f.write(
-            yaml.dump(manifest, allow_unicode=True, default_style='"')
+            yaml.safe_dump(manifest, allow_unicode=True, sort_keys=False)
         )
 
 @cli.command()
