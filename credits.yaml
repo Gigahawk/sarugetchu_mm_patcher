@@ -778,46 +778,62 @@
 - string: ''
   tab_mode: 0
 
-- string: ボイスレコーディングエンジニア
+#- string: ボイスレコーディングエンジニア
+- string: Voice Recording Engineer
   tab_mode: 2
 
-- string: 金井 貴史
+#- string: 金井 貴史
+# Likely https://www.mobygames.com/person/37151/takashi-kanai/
+- string: Takashi Kanai
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: ミュージックコンポーズ
+#- string: ミュージックコンポーズ
+- string: Music Composition
   tab_mode: 2
 
-- string: 寺田 創一
+#- string: 寺田 創一
+# Likely https://www.mobygames.com/person/118040/soichi-terada/
+- string: Soichi Terada
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: ミュージックスーパーバイザー
+#- string: ミュージックスーパーバイザー
+- string: Music Supervisor
   tab_mode: 2
 
-- string: 菊地 智敦(ソニー⋅ミュージックパブリッシング)
+#- string: 菊地 智敦(ソニー⋅ミュージックパブリッシング)
+# Likely https://www.mobygames.com/person/182291/tomonobu-kikuchi/
+- string: Tomonobu Kikuchi (Sony Music Publishing)
   tab_mode: 0
 
-- string: 松田 芳明(ニューカム)
+#- string: 松田 芳明(ニューカム)
+# Likely https://www.mobygames.com/person/139272/yoshiaki-matsuda/
+# Company is probably https://www.newcome.net/
+- string: Yoshiaki Matsuda (NEWCOME)
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: ボーカル
+#- string: ボーカル
+- string: Vocals
   tab_mode: 2
 
-- string: 金沢 明子
+#- string: 金沢 明子
+# Probably https://www.mobygames.com/person/1580137/akiko-kanazawa/
+- string: Akiko Kanazawa
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: レコーディングスタジオ
+#- string: レコーディングスタジオ
+- string: Recording Studio
   tab_mode: 2
 
 - string: BOM Recording Studio
@@ -826,10 +842,13 @@
 - string: ''
   tab_mode: 0
 
-- string: レコーディングエンジニア
+#- string: レコーディングエンジニア
+- string: Recording Engineer
   tab_mode: 2
 
-- string: 福島 浩和
+#- string: 福島 浩和
+# Probably https://www.mobygames.com/person/139317/hirokazu-fukushima/
+- string: Hirokazu Fukushima
   tab_mode: 0
 
 - string: ''
@@ -838,31 +857,43 @@
 - string: ''
   tab_mode: 0
 
-- string: ■ミリオンモンキーズじっしゃキャスト
+#- string: ■ミリオンモンキーズじっしゃキャスト
+- string: □Million Monkeys Live Action Cast
   tab_mode: 1
 
 - string: ''
   tab_mode: 0
 
-- string: ●NSBニュースしゅつえん
+#- string: ●NSBニュースしゅつえん
+# Technically しゅつえん (出演) means appearance
+- string: ○NSB News Actors
   tab_mode: 1
 
-- string: ニュースキャスター
+#- string: ニュースキャスター
+- string: News Anchor
   tab_mode: 2
 
+#- string: ターリン⋅ミーカー
+# No clue who this is, nothing seems to really come up
 - string: ターリン⋅ミーカー
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: リポーター
+#- string: リポーター
+- string: Reporter
   tab_mode: 2
 
-- string: 野中 美里
+#- string: 野中 美里
+# Possibly https://nonakamisato.biz/
+# but honestly hard to say
+- string: Misato Nonaka
   tab_mode: 0
 
-- string: ミゲル⋅スヴェトラナ
+#- string: ミゲル⋅スヴェトラナ
+# Possibly https://www.mobygames.com/person/1841180/migel-svetlana/
+- string: Migel Svetlana
   tab_mode: 0
 
 - string: ''
