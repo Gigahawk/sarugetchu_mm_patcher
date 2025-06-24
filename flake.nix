@@ -836,7 +836,10 @@
         stdenv.mkDerivation rec {
           pname = "mm-data-patched";
           inherit version;
-          src = ./strings.yaml;
+          srcs = [
+            ./strings.yaml
+            ./credits.yaml
+          ];
           dontUnpack = true;
 
           nativeBuildInputs = [
@@ -845,6 +848,11 @@
 
 
           buildPhase = ''
+            paths=($srcs)
+            export STRINGS_PATH="''${paths[0]}"
+            export CREDITS_PATH="''${paths[1]}"
+            echo "Strings path is $STRINGS_PATH"
+            echo "Credits path is $CREDITS_PATH"
             echo "${resourceFilesStr}" | \
               xargs -P "$NIX_BUILD_CORES" -I {} bash -c '
                 name="{}"
@@ -855,7 +863,8 @@
                   "${self.packages.${system}.data-jp-extracted}/DATA1/{}"
 
                 ssmm-patcher patch-resource \
-                  -s $src \
+                  -s $STRINGS_PATH \
+                  -c $CREDITS_PATH \
                   -t ${self.packages.${system}.textures-imhex-analysis}/analysis/ \
                   "{}" \
                   "${self.packages.${system}.data-imhex-analysis}/analysis/{}.json"

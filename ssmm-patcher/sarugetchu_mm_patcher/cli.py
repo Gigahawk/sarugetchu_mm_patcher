@@ -29,8 +29,8 @@ from sarugetchu_mm_patcher.encoding import (
     ENCODING_MAP, ENCODING_LIMITS,
     BYTES_TO_CHAR_MINIMAL, BYTES_TO_CHAR_DEFAULT, BYTES_TO_CHAR_SPECIAL,
     BYTES_TO_CHAR_PASSWORD, PASSWORD_STR_IDS,
-    token_to_idx,
-    idx_to_token
+    token_to_idx, idx_to_token,
+    build_credits_bin,
 )
 from sarugetchu_mm_patcher.aseprite import AsepriteDumper
 
@@ -418,6 +418,12 @@ def flip_font_palettes(aseprite_path, output_path):
     type=click.Path(),
 )
 @click.option(
+    "-c", "--credits-path",
+    default=None,
+    show_default=True,
+    type=click.Path(),
+)
+@click.option(
     "-t", "--textures-imhex-path",
     default=None,
     show_default=True,
@@ -435,12 +441,16 @@ def flip_font_palettes(aseprite_path, output_path):
     type=click.Path(),
 )
 def patch_resource(
-    resource_path, strings_path, textures_imhex_path, hash, output_path, imhex_json
+    resource_path, strings_path, credits_path, textures_imhex_path, hash,
+    output_path, imhex_json
 ):
     imhex_analysis = _parse_imhex_json(imhex_json)
     should_patch_strings = _needs_strings_patch(imhex_analysis["texturefactory"])
     if hash is None:
         hash = _guess_hash(resource_path)
+    should_patch_credits = False
+    if hash == "C63A0383" and credits_path is not None:
+        should_patch_credits = True
     resource_path = Path(resource_path)
     if strings_path is not None:
         strings_path = Path(strings_path)
@@ -546,6 +556,26 @@ def patch_resource(
                     break
             else:
                 click.echo(f"Warning: no subfile found matching {repr(tex_path)}")
+
+    # Patch credits prior to strings since credits are near the end
+    if should_patch_credits:
+        credits_path = Path(credits_path)
+        with open(credits_path, "r") as f:
+            credits_dict = yaml.safe_load(f)
+        credits_bin = build_credits_bin(credits_dict)
+        # Start from num_credit_strings.
+        # Address isn't shown for primitive types, just grab the first item from the list
+        # and go backwards
+        credits_start_address = (
+            int(imhex_analysis["credit_strings"][0]["__address"]) - 4
+        )
+        credits_end_address = (
+            int(imhex_analysis["credit_strings"][-1]["__address"])
+            + int(imhex_analysis["credit_strings"][-1]["__size"])
+        )
+        resource_bytes[
+            credits_start_address:credits_end_address
+        ] = credits_bin
 
     if should_patch_strings:
         resource_bytes = _patch_strings(resource_bytes, hash, strings_path)

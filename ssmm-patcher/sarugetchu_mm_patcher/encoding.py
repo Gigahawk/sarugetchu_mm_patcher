@@ -8740,3 +8740,42 @@ def idx_to_token(idx: int) -> bytes:
             if token not in BYTES_TO_CHAR_SPECIAL.keys()
         }
     return _idx_to_token[idx]
+
+def build_credits_bin(
+    credits: list[dict[str,str]],
+    translator: EncodingTranslator | None=None
+) -> bytes:
+    if translator is None:
+        translator = EncodingTranslator(encoding=BYTES_TO_CHAR_MINIMAL)
+    num_lines = len(credits)
+    out = b""
+    out += num_lines.to_bytes(4, "little")
+    for idx, line in enumerate(credits):
+        out += idx.to_bytes(4, "little")
+        string: str = line["string"]
+        tab_mode: int = line["tab_mode"]
+        raw: bool = line.get("raw", False)
+        str_len_raw = len(string)
+        out += tab_mode.to_bytes(4, "little")
+        if str_len_raw != 0:
+            if not raw:
+                try:
+                    str_encoded = translator.string_to_bytes(string)[0]
+                except IndexError:
+                    string_unk = "?"*str_len_raw
+                    print(
+                        f"Warning: could not encode '{string}', using "
+                        f"'{string_unk}' instead"
+                    )
+                    str_encoded = translator.string_to_bytes(string_unk)[0]
+            else:
+                str_encoded = string.encode("utf-8")
+            str_len = len(str_encoded)
+            out += str_len.to_bytes(4, "little")
+            out += str_encoded
+            out += b"\x00"
+        else:
+            # set str_len to 0, no string is encoded
+            out += (0).to_bytes(4, "little")
+
+    return out

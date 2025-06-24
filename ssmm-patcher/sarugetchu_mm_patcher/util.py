@@ -718,5 +718,3 @@ class ImgExtractor:
         if not isinstance(self.data, bytearray):
             self.data = bytearray(self.data)
         self.data[px_start:px_start + len(pxl_data)] = pxl_data
-
-
