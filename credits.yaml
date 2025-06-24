@@ -439,7 +439,7 @@
 - string: Boss/Enemy/Stage Programmer
   tab_mode: 2
 
-- string: 穂満 憲明
+#- string: 穂満 憲明
 # Nothing comes up, using most common romanization suggested by ChatGPT
 - string: Noriaki Homma
   tab_mode: 0
@@ -1049,7 +1049,7 @@
 - string: Maki Wakasone
   tab_mode: 0
 
-- string: 藁谷 円
+#- string: 藁谷 円
 # Possibly https://www.mobygames.com/person/1579930/madoka-waragai/
 # This romanization was not suggested by ChatGPT (Madoka Waragaya), but seems
 # suspiciously close along with another ape escape credential
