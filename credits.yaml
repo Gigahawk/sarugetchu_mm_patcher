@@ -1309,53 +1309,75 @@
   tab_mode: 2
 
 #- string: 吉田 豊
-# Nothing found, using Google Translate romanization
+# Possibly https://www.mobygames.com/person/1340676/yutaka-yoshida/
 - string: Yutaka Yoshida
   tab_mode: 0
 
-- string: 宮下 紀文
+#- string: 宮下 紀文
+# Possibly https://www.mobygames.com/person/815059/yoshinari-miyashita/
+- string: Yoshinari Miyashita
   tab_mode: 0
 
-- string: 高橋 正教
+#- string: 高橋 正教
+# Possibly https://www.mobygames.com/person/81015/masanori-takahashi/
+- string: Masanori Takahashi
   tab_mode: 0
 
-- string: 大熊 一弘
+#- string: 大熊 一弘
+# Possibly https://www.mobygames.com/person/277440/kazuhiro-okuma/
+- string: Kazuhiro Okuma
   tab_mode: 0
 
-- string: 秋元 純一
+#- string: 秋元 純一
+# Possibly https://www.mobygames.com/person/997817/junichi-akimoto/
+- string: Junichi Akimoto
   tab_mode: 0
 
-- string: 森江 康太
+#- string: 森江 康太
+# Probably https://ja.wikipedia.org/wiki/%E6%A3%AE%E6%B1%9F%E5%BA%B7%E5%A4%AA
+- string: Kota Morie
   tab_mode: 0
 
-- string: 松田 圭太
+#- string: 松田 圭太
+# Probably https://keitamatsuda.ricefield.co.jp/about.html
+- string: Keita Matsuda
   tab_mode: 0
 
-- string: 渡辺 祐貴
+#- string: 渡辺 祐貴
+# Seems to be a common name, possibly https://www.mobygames.com/person/1037939/yuki-watanabe/
+- string: Yuki Watanabe
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: がぞうエフェクト
+#- string: がぞうエフェクト
+# Probably 画像 エフェクト
+- string: Image Effects
   tab_mode: 2
 
-- string: いなお とうきょう
+#- string: いなお とうきょう
+# Nothing found, but at least the romanization is unambiguous
+- string: Inao Toyko
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: がぞうエフェクトアシスタント
+#- string: がぞうエフェクトアシスタント
+- string: Image Effects Assistant
   tab_mode: 2
 
-- string: 一徹
+#- string: 一徹
+# No idea who this is, but this appears to be a surname with a standard romanization
+- string: Ittetsu
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: MA
+#- string: MA
+- string: Motion Artist
   tab_mode: 2
 
 - string: 渋谷 宗昭
