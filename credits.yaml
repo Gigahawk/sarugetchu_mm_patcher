@@ -875,7 +875,7 @@
 
 #- string: ターリン⋅ミーカー
 # No clue who this is, nothing seems to really come up
-- string: ターリン⋅ミーカー
+- string: Taryn Meeker
   tab_mode: 0
 
 - string: ''
@@ -899,268 +899,407 @@
 - string: ''
   tab_mode: 0
 
-- string: たいサルちきゅうぼうえいせんせん だいひょう
+#- string: たいサルちきゅうぼうえいせんせん だいひょう
+- string: Anti-Monkeys World Defense Spokesperson
   tab_mode: 2
 
-- string: イアン⋅ムーア
+#- string: イアン⋅ムーア
+# A lotta guys called Ian Moore tbh
+- string: Ian Moore
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: たいサルちきゅうぼうえいせんせん たいいん
+#- string: たいサルちきゅうぼうえいせんせん たいいん
+- string: Anti-Monkeys World Defense Forces
   tab_mode: 2
 
-- string: 北島 達也
+#- string: 北島 達也
+# Probably not https://www.mobygames.com/person/1642367/tatsuya-miyajima/
+# but this is the only guy who comes up for ChatGPTs suggested romanization
+- string: Tatsuya Kitajima
   tab_mode: 0
 
-- string: 石黒 康裕
+#- string: 石黒 康裕
+# Nothing comes up, using most common romanization suggested by ChatGPT
+- string: Yasuhiro Ishiguro
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: せかいのひとびと
+#- string: せかいのひとびと
+# Technically "People of the World", but I'm pretty sure this refers to
+# the monkey fanatics from ST12?
+- string: Monkey Fanatics
   tab_mode: 2
 
-- string: ミハイル⋅ポルトノブ
+#- string: ミハイル⋅ポルトノブ
+# Google Translate suggested romanization
+- string: Mikhail Portonov
   tab_mode: 0
 
-- string: ケビン⋅ウィルキンス
+#- string: ケビン⋅ウィルキンス
+# Google Translate suggested romanization
+- string: Kevin Wilkins
   tab_mode: 0
 
-- string: インゲ⋅ムラタ
+#- string: インゲ⋅ムラタ
+# Google Translate suggested romanization
+# Possibly but probably not https://www.mobygames.com/person/109855/inge-murata/
+- string: Inge Murata
   tab_mode: 0
 
-- string: イリーナ⋅フジムラ
+#- string: イリーナ⋅フジムラ
+- string: Irina Fujimura
   tab_mode: 0
 
-- string: アリーナ⋅フクシマ
+#- string: アリーナ⋅フクシマ
+- string: Arina Fukushima
   tab_mode: 0
 
-- string: レイラ⋅マリエ
+#- string: レイラ⋅マリエ
+# Google Translate suggested romanization
+- string: Leila Marie
   tab_mode: 0
 
-- string: ジョナサン⋅シアー
+#- string: ジョナサン⋅シアー
+# Google Translate suggested romanization
+- string: Jonathan Shear
   tab_mode: 0
 
-- string: マイケル⋅ナイシュタット
+#- string: マイケル⋅ナイシュタット
+# Google Translate suggested romanization
+- string: Michael Neishtadt
   tab_mode: 0
 
-- string: イアン⋅ギブ
+#- string: イアン⋅ギブ
+# Google Translate suggested romanization
+- string: Ian Gibb
   tab_mode: 0
 
-- string: フランシス⋅ポル
+#- string: フランシス⋅ポル
+# Google translate says Francis Polanco which doesn't make sense
+# ChatGPT says most likely is Paul, but that should be ポール,
+# I'll go with Pol
+- string: Francis Pol
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: どうじつうやく
+#- string: どうじつうやく
+# 同時通訳 (Simultaneous Interpreter)
+- string: Japanese Interpreter
   tab_mode: 2
 
-- string: 田京 恵
+#- string: 田京 恵
+# Nothing found, using ChatGPT suggested romanization
+# There is a wikipedia page for someone of the same name with this romanization
+# (probably not the same person?)
+# https://ja.wikipedia.org/wiki/%E7%94%B0%E4%BA%AC%E6%81%B5
+- string: Kei Takyo
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: ●かくとうコロシアムオープニングムービー&
+#- string: ●かくとうコロシアムオープニングムービー&
+# Literally "Fighting Colosseum Opening Movie"
+- string: ○Colosseum Opening Video &
   tab_mode: 1
 
-- string: ' I Feel Loveプロモーションビデオしゅつえん'
+#- string: ' I Feel Loveプロモーションビデオしゅつえん'
+- string: ' I Feel Love Promotional Video'
   tab_mode: 1
 
 - string: ''
   tab_mode: 0
 
-- string: かしゅ
+#- string: かしゅ
+# Presumably 歌手
+- string: Singer
   tab_mode: 2
 
-- string: 金沢 明子
+#- string: 金沢 明子
+# Probably https://www.mobygames.com/person/1580137/akiko-kanazawa/
+- string: Akiko Kanazawa
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: ピポサルダンサーズ
+#- string: ピポサルダンサーズ
+- string: Piposaru Dancers
   tab_mode: 2
 
-- string: 小川 久美子
+#- string: 小川 久美子
+# Nothing found using ChatGPT romanization
+- string: Kumiko Ogawa
   tab_mode: 0
 
-- string: 高橋 慶子
+#- string: 高橋 慶子
+# Probably not https://www.mobygames.com/person/63308/keiko-takahashi/
+- string: Keiko Takahashi
   tab_mode: 0
 
-- string: 若曽根 真紀
+#- string: 若曽根 真紀
+# Possibly https://www.mobygames.com/person/1398344/%E8%8B%A5%E6%9B%BD%E6%A0%B9-%E7%9C%9F%E7%B4%80/
+- string: Maki Wakasone
   tab_mode: 0
 
 - string: 藁谷 円
+# Possibly https://www.mobygames.com/person/1579930/madoka-waragai/
+# This romanization was not suggested by ChatGPT (Madoka Waragaya), but seems
+# suspiciously close along with another ape escape credential
+- string: Madoka Waragai
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: ●せいさくスタッフ
+#- string: ●せいさくスタッフ
+# Presumably 製作 くスタッフ
+- string: ○Production Staff
   tab_mode: 1
 
-- string: かんとく
+#- string: かんとく
+# Presumably 監督
+- string: Director
   tab_mode: 2
 
-- string: 小山⋅ゴンザレス⋅均
+#- string: 小山⋅ゴンザレス⋅均
+# Possibly https://www.mobygames.com/person/662216/hitoshi-koyama/
+# Nothing seems to really come up showing this middle name
+- string: Hitoshi Gonzales Koyama
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: せいさくがいしゃ
+#- string: せいさくがいしゃ
+# Presumably 製作会社
+- string: Production Company
   tab_mode: 2
 
-- string: パインズ
+#- string: パインズ
+# Probably https://web.archive.org/web/20250321140724/http://www.pinesinc.com/
+# Page no longer appears to be accessible
+- string: Pines
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: プロデューサー
+#- string: プロデューサー
+- string: Producers
   tab_mode: 2
 
-- string: 上松 幸司
+#- string: 上松 幸司
+# https://web.archive.org/web/20240416201618/https://pinesinc.com/staff/
+# Possibly https://www.mobygames.com/person/828532/koji-agematsu/
+- string: Koji Agematsu
   tab_mode: 0
 
-- string: 篠宮 章浩
+#- string: 篠宮 章浩
+# https://web.archive.org/web/20240416201618/https://pinesinc.com/staff/
+- string: Akihiro Shinomiya
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: プロダクションマネージャー
+#- string: プロダクションマネージャー
+- string: Production Manager
   tab_mode: 2
 
-- string: 高山 龍一郎
+#- string: 高山 龍一郎
+# Nothing found using Google Translate romanization
+- string: Ryuichiro Takayama
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: カメラマン
+#- string: カメラマン
+- string: Camera Operator
   tab_mode: 2
 
-- string: 五十嵐 明
+#- string: 五十嵐 明
+# Possibly https://www.mobygames.com/person/520416/aki-igarashi/
+- string: Aki Igarashi
   tab_mode: 0
 
-- string: 田中 一博
+#- string: 田中 一博
+# Using Google Translate romanization
+# Lots of people on Moby Games have a name matching this romanization
+# Probably not https://www.mobygames.com/person/139253/kazuhiro-tanaka/
+- string: Kazuhiro Tanaka
   tab_mode: 0
 
-- string: 三浦 徹
+#- string: 三浦 徹
+# Using Google Translate romanization
+# Lots of people on Moby Games have a name matching this romanization
+# Probably not https://www.mobygames.com/person/452165/tooru-miura/
+# Also a few that match the kanji but have extra chars in given name
+# Probably not https://www.mobygames.com/person/100619/tetsuya-miura/
+- string: Tooru Miura
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: カメラマンアシスタント
+#- string: カメラマンアシスタント
+- string: Assistant Camera Operator
   tab_mode: 2
 
-- string: 中川 敦夫
+#- string: 中川 敦夫
+# Using Google Translate romanization
+- string: Atsuo Nakagawa
   tab_mode: 0
 
-- string: 土肥 桂介
+#- string: 土肥 桂介
+# Using Google Translate romanization
+# Possibly https://db.epad.jp/p/25504
+- string: Keisuke Doi
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: しょうめい
+#- string: しょうめい
+# Presumably 照明 (lighting) and not 証明 (proof/verification)
+- string: Lighting
   tab_mode: 2
 
-- string: 山内 圭
+#- string: 山内 圭
+# Using Google Translate romanization
+- string: Kei Yamauchi
   tab_mode: 0
 
-- string: 河内 俊明
+#- string: 河内 俊明
+# Using Google Translate romanization
+- string: Toshiaki Kawachi
   tab_mode: 0
 
-- string: 掛橋 司
+#- string: 掛橋 司
+# Using Google Translate romanization
+- string: Tsukasa Kakehashi
   tab_mode: 0
 
-- string: 佐々木 靖
+#- string: 佐々木 靖
+# Using Google Translate romanization
+- string: Yasushi Sasaki
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: VE
+#- string: VE
+# ChatGPT says that in Japan this is usually an abbreviation for "Video Engineer"
+- string: Video Engineer
   tab_mode: 2
 
-- string: 永井 健太
+#- string: 永井 健太
+# Possibly https://learning.unity3d.jp/speaker/kenta-nagai/
+- string: Kenta Nagai
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: おんせい
+#- string: おんせい
+# Presumably 音声
+- string: Sound
   tab_mode: 2
 
+#- string: 後平 淳一
+# Nothing found, using Google Translate romanization
 - string: 後平 淳一
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: クレーンオペレーター
+#- string: クレーンオペレーター
+- string: Crane Operators
   tab_mode: 2
 
-- string: 吉沢 譲
+#- string: 吉沢 譲
+# Nothing found, using Google Translate romanization
+- string: Yuzuru Yoshizawa
   tab_mode: 0
 
-- string: 金子 総司
+#- string: 金子 総司
+# Nothing found, using Google Translate romanization
+- string: Souji Kaneko
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: ヘアメイク
+#- string: ヘアメイク
+- string: Hair & Makeup
   tab_mode: 2
 
-- string: 早坂 実穂
+#- string: 早坂 実穂
+# Nothing found, using Google Translate romanization
+- string: Miho Hayasaka
   tab_mode: 0
 
-- string: 橋本 よう子
+#- string: 橋本 よう子
+# Nothing found, using Google Translate romanization
+- string: Yoko Hashimoto
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: スタイリスト
+#- string: スタイリスト
+- string: Stylist
   tab_mode: 2
 
-- string: 岡本 のりえ
+#- string: 岡本 のりえ
+# Nothing found, using Google Translate romanization
+- string: Norie Okamoto
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: ふりつけ
+#- string: ふりつけ
+- string: Choreography
   tab_mode: 2
 
-- string: 阿部 久美子
+#- string: 阿部 久美子
+# Nothing found, using Google Translate romanization
+- string: Kumiko Abe
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: びじゅつ
+#- string: びじゅつ
+- string: Art
   tab_mode: 2
 
-- string: 金子 修一
+#- string: 金子 修一
+# Nothing found, using Google Translate romanization
+- string: Shuichi Kaneko
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: ほんやく
+#- string: ほんやく
+# Japanese to Chinese? English to Japanese?
+- string: Translation
   tab_mode: 2
 
-- string: 島田 淳子
+#- string: 島田 淳子
+# Nothing found, using Google Translate romanization
+- string: Junko Shimada
   tab_mode: 0
 
 - string: ''
@@ -1169,7 +1308,9 @@
 - string: CG
   tab_mode: 2
 
-- string: 吉田 豊
+#- string: 吉田 豊
+# Nothing found, using Google Translate romanization
+- string: Yutaka Yoshida
   tab_mode: 0
 
 - string: 宮下 紀文
