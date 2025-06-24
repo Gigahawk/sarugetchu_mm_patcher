@@ -1505,10 +1505,13 @@
 - string: ''
   tab_mode: 0
 
-- string: ■CGムービースタッフ
+#- string: ■CGムービースタッフ
+- string: □CG Movie Staff
   tab_mode: 1
 
-- string: ディレクション
+#- string: ディレクション
+# Direction?
+- string: Director
   tab_mode: 2
 
 - string: 堀 正二郎
@@ -1517,7 +1520,8 @@
 - string: ''
   tab_mode: 0
 
-- string: モデラー/アニメーター
+#- string: モデラー/アニメーター
+- string: Modelers/Animators
   tab_mode: 2
 
 - string: 花沢 宏樹
@@ -1553,7 +1557,8 @@
 - string: ''
   tab_mode: 0
 
-- string: プラグイン協力
+#- string: プラグイン協力
+- string: Plugin Support
   tab_mode: 2
 
 - string: 和田 義之
@@ -1595,7 +1600,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ■QAチーム
+#- string: ■QAチーム
+- string: □QA Team
   tab_mode: 1
 
 - string: QA Manager
@@ -1703,7 +1709,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ■プロモーション
+#- string: ■プロモーション
+- string: □Marketing
   tab_mode: 1
 
 - string: 細谷 恵
@@ -1718,10 +1725,12 @@
 - string: ''
   tab_mode: 0
 
-- string: ■ソフトウェアマニュアル/パッケージデザイン
+#- string: ■ソフトウェアマニュアル/パッケージデザイン
+- string: □Manual/Packaging Design
   tab_mode: 1
 
-- string: パッケージコーディネート
+#- string: パッケージコーディネート
+- string: Packaging Coordinators
   tab_mode: 2
 
 - string: 小宮 浩典
@@ -1742,7 +1751,8 @@
 - string: ''
   tab_mode: 0
 
-- string: パッケージ&ソフトウェアマニュアルデザイン
+#- string: パッケージ&ソフトウェアマニュアルデザイン
+- string: Packaging & Manual Design
   tab_mode: 2
 
 - string: 村上 仁史(alvion)
@@ -1751,7 +1761,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ソフトウェアマニュアルライティング
+#- string: ソフトウェアマニュアルライティング
+- string: Manual Writing
   tab_mode: 2
 
 - string: 照井 一功(ブレインナビ)
@@ -1760,7 +1771,9 @@
 - string: ''
   tab_mode: 0
 
-- string: ■販売企画
+#- string: ■販売企画
+# Marketing Planning?
+- string: □Sales Planning
   tab_mode: 1
 
 - string: 植田 浩
@@ -1778,7 +1791,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ■宮業
+#- string: ■営業
+- string: □Sales
   tab_mode: 1
 
 - string: 上原 隆夫
@@ -1787,7 +1801,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ■HAPPY!サルΧトロ委員会
+#- string: ■HAPPY!サルΧトロ委員会
+- string: □HAPPY! SARU Χ TORO Committee
   tab_mode: 1
 
 - string: 五十峯 誠
@@ -1829,7 +1844,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ■スペシャルサンクス
+#- string: ■スペシャルサンクス
+- string: □Special Thanks
   tab_mode: 1
 
 - string: XSEED JKS,Inc.
@@ -1895,7 +1911,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ●ディレクター
+#- string: ●ディレクター
+- string: ○Director
   tab_mode: 1
 
 - string: 上田 和仁
@@ -1904,7 +1921,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ●プロデューサー
+#- string: ●プロデューサー
+- string: ○Producer
   tab_mode: 1
 
 - string: 兼高 克志
@@ -1913,7 +1931,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ●エグゼクティブプロデューサー
+#- string: ●エグゼクティブプロデューサー
+- string: ○Executive Producer
   tab_mode: 1
 
 - string: 藤沢 孝史
@@ -1922,7 +1941,8 @@
 - string: ''
   tab_mode: 0
 
-- string: ●スーパーバイザー
+#- string: ●スーパーバイザー
+- string: ●Supervisors
   tab_mode: 1
 
 - string: 小林 康秀
