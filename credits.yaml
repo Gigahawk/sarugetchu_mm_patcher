@@ -1216,7 +1216,7 @@
 
 #- string: 後平 淳一
 # Nothing found, using Google Translate romanization
-- string: 後平 淳一
+- string: Junichi Gohira
   tab_mode: 0
 
 - string: ''
@@ -1377,79 +1377,126 @@
   tab_mode: 0
 
 #- string: MA
-- string: Motion Artist
+- string: Motion Artists
   tab_mode: 2
 
-- string: 渋谷 宗昭
+#- string: 渋谷 宗昭
+# Nothing found, using Google Translate romanization
+- string: Muneaki Shibuya
   tab_mode: 0
 
-- string: 萩原 千春
+#- string: 萩原 千春
+# Possibly https://www.mobygames.com/person/288502/chiharu-hagiwara/
+- string: Chiharu Hagiwara
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: おんがく
+#- string: おんがく
+# Presumably 音楽
+- string: Music
   tab_mode: 2
 
-- string: 寺田 創一
+#- string: 寺田 創一
+# Likely https://www.mobygames.com/person/118040/soichi-terada/
+- string: Soichi Terada
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: SE
+#- string: SE
+- string: Sound Effects
   tab_mode: 2
 
-- string: 長谷川 龍
+#- string: 長谷川 龍
+# Probably https://www.mobygames.com/person/482561/ryu-hasegawa/
+- string: Ryu Hasegawa
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: きょうりょく
+#- string: きょうりょく
+# Presumably 協力
+- string: Support
   tab_mode: 2
 
-- string: アンディ スミス
+#- string: アンディ スミス
+# Very common name, lots of matches on Moby Games
+- string: Andy Smith
   tab_mode: 0
 
-- string: 上松 祐司
+#- string: 上松 祐司
+# Nothing found, using ChatGPT suggested romanization
+- string: Yuji Uematsu
   tab_mode: 0
 
-- string: 雄土
+#- string: 雄土
+# No idea who/what this is
+# Using this reading https://namedic.jp/names/name/%E9%9B%84%E5%9C%9F
+- string: Yuto
   tab_mode: 0
 
-- string: 遠藤 壮彦
+#- string: 遠藤 壮彦
+# Nothing found, using Google Translate romanization
+- string: Takehiko Endo
   tab_mode: 0
 
-- string: 朝日ヘリコプター
+#- string: 朝日ヘリコプター
+# Probably https://web.archive.org/web/20130710050924/http://www.asahihelicopter.co.jp/
+# They probably provided the helicopter for the NSB news shot
+- string: Asahi Helicopter
   tab_mode: 0
 
-- string: ヴェルファーレ
+#- string: ヴェルファーレ
+# https://en.wikipedia.org/wiki/Velfarre
+# Appears to be the club where they shot 'I Feel Love'
+- string: Velfarre
   tab_mode: 0
 
-- string: カナザワオフィス
+#- string: カナザワオフィス
+# http://kanazawaakiko.com/office/
+# Probably another set location for 'I Feel Love'
+- string: Kanzawa Office
   tab_mode: 0
 
-- string: 松竹衣装
+#- string: 松竹衣装
+# https://www.shochiku-costume.co.jp/
+- string: SHOCHIKU COSTUME
   tab_mode: 0
 
-- string: フェザーインターナショナル
+#- string: フェザーインターナショナル
+# This is the first hit but is probably not it https://featherinternational.in/about-us/
+# Appears to be some kind of company based on this https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1297318412
+# Appears to be some kind of talent agency based on https://web.archive.org/web/20130215050358/https://sankei.jp.msn.com/affairs/news/121004/crm12100414170019-n1.htm
+- string: Feather International
   tab_mode: 0
 
-- string: キャスト⋅サポート
+#- string: キャスト⋅サポート
+# Name is pretty generic, hard to find info
+- string: Cast Support
   tab_mode: 0
 
-- string: スタジオドールアップ
+#- string: スタジオドールアップ
+# Probably https://dollup.jp/
+- string: Studio Doll Up
   tab_mode: 0
 
-- string: ふなばしアンデルセン公園
+#- string: ふなばしアンデルセン公園
+# https://www.park-funabashi.or.jp/and/
+- string: Funabashi Andersen Park
   tab_mode: 0
 
-- string: モウリ アートワークス スタジオ
+#- string: モウリ アートワークス スタジオ
+# Probably https://ja.wikipedia.org/wiki/%E3%83%A2%E3%82%A6%E3%83%AA%E3%82%A2%E3%83%BC%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA
+- string: Mouri Artworks Studio
   tab_mode: 0
 
-- string: ゲッティイメージズ
+#- string: ゲッティイメージズ
+# https://www.gettyimages.ca/
+- string: Getty Images
   tab_mode: 0
 
 - string: ''
