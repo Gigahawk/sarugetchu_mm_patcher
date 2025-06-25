@@ -1514,7 +1514,9 @@
 - string: Director
   tab_mode: 2
 
-- string: 堀 正二郎
+#- string: 堀 正二郎
+# Probably https://www.mobygames.com/person/40681/shojiro-hori/
+- string: Shojiro Hori
   tab_mode: 0
 
 - string: ''
@@ -1524,34 +1526,59 @@
 - string: Modelers/Animators
   tab_mode: 2
 
-- string: 花沢 宏樹
+#- string: 花沢 宏樹
+# Probably https://www.mobygames.com/person/429202/hiroki-hanazawa/
+- string: Hiroki Hanazawa
   tab_mode: 0
 
-- string: オクムラ ユウコ
+#- string: オクムラ ユウコ
+# Multiple people with this name on Moby Games
+# possibly https://www.mobygames.com/person/44159/yuko-okumura/
+# Why is this in katakana?
+- string: Yuko Okamura
   tab_mode: 0
 
-- string: うもと ゆーじ(ウサギ王)
+#- string: うもと ゆーじ(ウサギ王)
+# Probably https://www.mobygames.com/person/465204/yuji-umoto/
+# No idea why this is in hiragana
+# Company is https://usagiou.net/
+# https://usagiou.net/staff/yuji/
+- string: Yuji Umoto (usagi⋅ou)
   tab_mode: 0
 
-- string: 服部 剛(ウサギ王)
+#- string: 服部 剛(ウサギ王)
+# Probably https://www.mobygames.com/person/416467/go-hattori/
+- string: Goh Hattori (usagi⋅ou)
   tab_mode: 0
 
+#- string: 磯野 和沙(ウサギ王)
+# Possibly https://www.mobygames.com/person/437802/kazusa-isono/
 - string: 磯野 和沙(ウサギ王)
   tab_mode: 0
 
-- string: 河野 達也
+#- string: 河野 達也
+# Possibly https://www.mobygames.com/person/145662/tatsuya-kono/
+- string: Tatsuya Kono
   tab_mode: 0
 
-- string: 三田 邦彦
+#- string: 三田 邦彦
+# Possibly https://www.mobygames.com/person/534156/kunihiko-mita/
+- string: Kunihiko Mita
   tab_mode: 0
 
-- string: 佐藤 千織
+#- string: 佐藤 千織
+# Probably https://www.mobygames.com/person/856855/chiori-sato/
+- string: Chiori Sato
   tab_mode: 0
 
-- string: 広川 由紀子
+#- string: 広川 由紀子
+# Probably https://www.mobygames.com/person/78981/yukiko-hirokawa/
+- string: Yukiko Hirokawa
   tab_mode: 0
 
-- string: 保谷 千佳
+#- string: 保谷 千佳
+# Nothing comes up, using Google Translate romanization
+- string: Chika Hoya
   tab_mode: 0
 
 - string: ''
@@ -1561,40 +1588,58 @@
 - string: Plugin Support
   tab_mode: 2
 
-- string: 和田 義之
+#- string: 和田 義之
+# Possibly https://www.mobygames.com/person/954738/yoshiyuki-wada/
+- string: Yoshiyuki Wada
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
+# https://anidb.net/creator/29879
 - string: SARUCHIN COMPANY
   tab_mode: 2
 
-- string: 伊勢田 誠治
+#- string: 伊勢田 誠治
+# Probably https://www.mobygames.com/person/131061/seiji-iseda/
+- string: Seiji Iseda
   tab_mode: 0
 
-- string: 飯田 拓也
+#- string: 飯田 拓也
+# Probably https://www.mobygames.com/person/353723/takuya-iida/
+- string: Takuya Iida
   tab_mode: 0
 
-- string: 福島 涼太
+#- string: 福島 涼太
+# Possibly https://www.mobygames.com/person/1301425/ryota-fukusima/
+- string: Ryota Fukushima
   tab_mode: 0
 
-- string: 早川 有子
+#- string: 早川 有子
+# Possibly https://www.mobygames.com/person/678095/yuko-hayakawa/
+- string: Yuko Hayakawa
   tab_mode: 0
 
-- string: 市川 量也
+#- string: 市川 量也
+# Possibly https://www.mobygames.com/person/1260238/ryouya-ishikawa/
+- string: Ryoya Ichikawa
   tab_mode: 0
 
-- string: 有沢 包三
+#- string: 有沢 包三
+# Possibly www.mobygames.com/person/109726/hozo-arisawa/
+- string: Hozo Arisawa
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
+# https://www.bearforce.jp/
 - string: Bear Force Graphics
   tab_mode: 2
 
-- string: 大窪 マサヒロ
+#- string: 大窪 マサヒロ
+# Possibly https://www.mobygames.com/person/743652/masahiro-okubo/
+- string: Masahiro Okubo
   tab_mode: 0
 
 - string: ''
@@ -1607,7 +1652,9 @@
 - string: QA Manager
   tab_mode: 2
 
-- string: 菅原 修
+#- string: 菅原 修
+# Probably https://www.mobygames.com/person/213463/osamu-sugawara/
+- string: Osamu Sugawara
   tab_mode: 0
 
 - string: ''
@@ -1616,43 +1663,69 @@
 - string: QA Testers
   tab_mode: 2
 
-- string: 菅原 基
+#- string: 菅原 基
+# Nothing found, using Google Translate romanization
+- string: Motoi Sugawara
   tab_mode: 0
 
-- string: 保坂 淳一
+#- string: 保坂 淳一
+# Probably https://www.mobygames.com/person/116083/junichi-hosaka/
+- string: Junichi Hosaka
   tab_mode: 0
 
-- string: 定常 奈緒美
+#- string: 定常 奈緒美
+# Nothing found, using ChatGPT romanization
+- string: Naomi Teijo
   tab_mode: 0
 
-- string: 峯田 寿里
+#- string: 峯田 寿里
+# Probably https://www.mobygames.com/person/374863/juri-mineta/
+- string: Juri Mineta
   tab_mode: 0
 
-- string: 齋藤 由香里
+#- string: 齋藤 由香里
+# Nothing found, using Google Translate romanization
+- string: Yukari Saito
   tab_mode: 0
 
-- string: 富田 浩平
+#- string: 富田 浩平
+# Nothing found, using Google Translate romanization
+- string: Kohei Tomita
   tab_mode: 0
 
-- string: 加藤 圭子
+#- string: 加藤 圭子
+# Probably https://www.mobygames.com/person/545921/keiko-katou/
+- string: Keiko Katou
   tab_mode: 0
 
-- string: 香取 孝夫
+#- string: 香取 孝夫
+# Probably https://www.mobygames.com/person/639461/takao-katori/
+- string: Takao Katori
   tab_mode: 0
 
-- string: 吉井 裕介
+#- string: 吉井 裕介
+# Probably https://www.mobygames.com/person/335123/yusuke-yoshii/
+- string: Yusuke Yoshii
   tab_mode: 0
 
-- string: 鎌田 昌樹
+#- string: 鎌田 昌樹
+# Probably https://www.mobygames.com/person/202019/masaki-kamata/
+- string: Masaki Kamata
   tab_mode: 0
 
-- string: 福永 由美恵
+#- string: 福永 由美恵
+# Probably https://www.mobygames.com/person/253001/yumie-fukunaga/
+- string: Yumie Fukunaga
   tab_mode: 0
 
-- string: 松野 一成
+#- string: 松野 一成
+# Probably https://www.mobygames.com/person/1579939/kazunari-matsuno/
+- string: Kazunari Matsuno
   tab_mode: 0
 
-- string: 福留 秀一郎
+#- string: 福留 秀一郎
+# Probably https://www.mobygames.com/person/301700/shuichiro-fukutome/
+- string: Shuichiro Fukutome
   tab_mode: 0
 
 - string: 新島 暢人
@@ -1942,7 +2015,7 @@
   tab_mode: 0
 
 #- string: ●スーパーバイザー
-- string: ●Supervisors
+- string: ○Supervisors
   tab_mode: 1
 
 - string: 小林 康秀

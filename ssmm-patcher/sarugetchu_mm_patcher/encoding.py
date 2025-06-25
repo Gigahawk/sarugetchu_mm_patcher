@@ -8191,7 +8191,7 @@ BYTES_TO_CHAR_CREDIT = {
     b"\x8A\xF8": "浅",
     b"\x8A\xF9": "哲",
     b"\x8A\xFA": "亜",
-    b"\x8A\xFB": "宮",
+    b"\x8A\xFB": "営",
     b"\x8A\xFC": "業",
     b"\x8B\x40": "隆",
     b"\x8B\x41": "委",
