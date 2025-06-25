@@ -1553,7 +1553,7 @@
 
 #- string: 磯野 和沙(ウサギ王)
 # Possibly https://www.mobygames.com/person/437802/kazusa-isono/
-- string: 磯野 和沙(ウサギ王)
+- string: Kazusa Isono (usagi⋅ou)
   tab_mode: 0
 
 #- string: 河野 達也
@@ -1728,55 +1728,92 @@
 - string: Shuichiro Fukutome
   tab_mode: 0
 
-- string: 新島 暢人
+#- string: 新島 暢人
+# Probably https://www.mobygames.com/person/650977/nobuhito-niijima/
+- string: Nobuhito Niijima
   tab_mode: 0
 
-- string: 戸谷 七生
+#- string: 戸谷 七生
+# Nothing found, using Google Translate romanization
+- string: Nanami Toya
   tab_mode: 0
 
-- string: 飯島 努
+#- string: 飯島 努
+# Probably https://www.mobygames.com/person/139344/tsutomu-iijima/
+- string: Tsutomu Iijima
   tab_mode: 0
 
-- string: 中鉢 琴江
+#- string: 中鉢 琴江
+# Probably https://www.mobygames.com/person/230279/kotoe-chubachi/
+- string: Kotoe Chubachi
   tab_mode: 0
 
-- string: 飛知和 清香
+#- string: 飛知和 清香
+# Nothing found, using Google Translate romanization
+- string: Kiyoka Tochikazu
   tab_mode: 0
 
-- string: 川原 央貴
+#- string: 川原 央貴
+# Nothing found, using Google Translate romanization
+- string: Hirotaka Kawahara
   tab_mode: 0
 
-- string: 佐藤 大輔
+#- string: 佐藤 大輔
+# Nothing found (related to QA), but matches multiple people with consistent romanization
+# https://www.mobygames.com/person/629417/daisuke-sato/
+# https://www.mobygames.com/person/547823/daisuke-sato/
+- string: Daisuke Sato
   tab_mode: 0
 
-- string: 石井 秀範
+#- string: 石井 秀範
+# Probably https://www.mobygames.com/person/535501/hidenori-ishii/
+- string: Hidenori Ishii
   tab_mode: 0
 
-- string: 山下 雄司
+#- string: 山下 雄司
+# Possibly https://www.mobygames.com/person/1278753/yuji-yamashita/ but kanji
+# doesn't quite match up?
+- string: Yuji Yamashita
   tab_mode: 0
 
-- string: 蛭田 直樹
+#- string: 蛭田 直樹
+# Probably https://www.mobygames.com/person/302325/naoki-hiruta/
+- string: Naoki Hiruta
   tab_mode: 0
 
-- string: 西原 久史
+#- string: 西原 久史
+# Nothing found, using Google Translate romanization
+- string: Hisashi Nishihara
   tab_mode: 0
 
-- string: 斎藤 穣
+#- string: 斎藤 穣
+# Probably https://www.mobygames.com/person/108170/minoru-saitou/
+- string: Minoru Saito
   tab_mode: 0
 
-- string: 坂本 淳
+#- string: 坂本 淳
+# Possibly https://www.mobygames.com/person/1444376/jun-sakamoto/
+- string: Jun Sakamoto
   tab_mode: 0
 
-- string: 酒井 博康
+#- string: 酒井 博康
+# Nothing found, using Google Translate romanization
+- string: Hiroyasu Sakai
   tab_mode: 0
 
-- string: 橋川 里央
+#- string: 橋川 里央
+# Possibly https://www.mobygames.com/person/560990/rio-hashikawa/
+- string: Rio Hashikawa
   tab_mode: 0
 
-- string: 澤田 麻里子
+#- string: 澤田 麻里子
+# Possibly https://www.mobygames.com/person/417920/mariko-sawada/
+- string: Mariko Sawada
   tab_mode: 0
 
-- string: 廣瀬 制
+#- string: 廣瀬 制
+# Probably https://www.mobygames.com/person/301702/osamu-hirose/
+- string: Osamu Hirose
   tab_mode: 0
 
 - string: ''
