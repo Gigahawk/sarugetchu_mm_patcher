@@ -1823,13 +1823,19 @@
 - string: □Marketing
   tab_mode: 1
 
-- string: 細谷 恵
+#- string: 細谷 恵
+# Probably https://www.mobygames.com/person/56808/megumi-hosoya/
+- string: Megumi Hosoya
   tab_mode: 0
 
-- string: 林 夕起子
+#- string: 林 夕起子
+# Probably https://www.mobygames.com/person/198739/yukiko-hayashi/
+- string: Yukiko Hayashi
   tab_mode: 0
 
-- string: 千葉 則夫
+#- string: 千葉 則夫
+# Probably https://www.mobygames.com/person/202010/norio-chiba/
+- string: Norio Chiba
   tab_mode: 0
 
 - string: ''
@@ -1843,19 +1849,29 @@
 - string: Packaging Coordinators
   tab_mode: 2
 
-- string: 小宮 浩典
+#- string: 小宮 浩典
+# Possibly https://www.mobygames.com/person/37217/hironori-komiya/
+- string: Hinori Komiya
   tab_mode: 0
 
-- string: 新居 康子
+#- string: 新居 康子
+# Possibly https://www.mobygames.com/person/138324/yasuko-nii/
+- string: Yasuko Nii
   tab_mode: 0
 
 - string: ''
   tab_mode: 0
 
-- string: 河上 一明(SMC)
+#- string: 河上 一明(SMC)
+# Probably https://www.mobygames.com/person/198744/kazuaki-kawakami/
+# No idea what SMC is, ChatGPT suggests Shinano Media Communications but this
+# seems to be hallucinated
+- string: Kazuaki Kawakami (SMC)
   tab_mode: 0
 
-- string: 菅沼 謙二(SMC)
+#- string: 菅沼 謙二(SMC)
+# Probably https://www.mobygames.com/person/253009/kenji-suganuma/
+- string: Kenji Suganuma (SMC)
   tab_mode: 0
 
 - string: ''
@@ -1865,7 +1881,12 @@
 - string: Packaging & Manual Design
   tab_mode: 2
 
-- string: 村上 仁史(alvion)
+#- string: 村上 仁史(alvion)
+# Probably https://www.mobygames.com/person/433531/hitoshi-murakami/
+# Probably https://www.alvion.co.jp/
+# Not sure why the original stylized it as all lower case, it appears with
+# normal proper noun case on Wikipedia and all caps on their website
+- string: Hitoshi Murakami (ALVION)
   tab_mode: 0
 
 - string: ''
@@ -1875,7 +1896,10 @@
 - string: Manual Writing
   tab_mode: 2
 
-- string: 照井 一功(ブレインナビ)
+#- string: 照井 一功(ブレインナビ)
+# Probably https://www.mobygames.com/person/245615/kazunori-terui/
+# Possibly https://www.wedge-hd.com/bnj/
+- string: Kazunori Terui (BRAIN NAVI)
   tab_mode: 0
 
 - string: ''
@@ -1886,16 +1910,24 @@
 - string: □Sales Planning
   tab_mode: 1
 
-- string: 植田 浩
+#- string: 植田 浩
+# Possibly https://www.mobygames.com/person/253663/hiroshi-ueda/
+- string: Hiroshi Ueda
   tab_mode: 0
 
-- string: 増本 光高
+#- string: 増本 光高
+# Possibly https://www.mobygames.com/person/139351/mitsutaka-masumoto/
+- string: Mitsutaka Masumoto
   tab_mode: 0
 
-- string: 浅川 哲朗
+#- string: 浅川 哲朗
+# Probably https://www.mobygames.com/person/68622/tetsurou-asakawa/
+- string: Tetsurou Asakawa
   tab_mode: 0
 
-- string: 寺本 亜紀子
+#- string: 寺本 亜紀子
+# Probably https://www.mobygames.com/person/208163/akiko-teramoto/
+- string: Akiko Teramoto
   tab_mode: 0
 
 - string: ''
@@ -1905,7 +1937,9 @@
 - string: □Sales
   tab_mode: 1
 
-- string: 上原 隆夫
+#- string: 上原 隆夫
+# Probably https://www.mobygames.com/person/253664/takao-uehara/
+- string: Takao Uehara
   tab_mode: 0
 
 - string: ''
@@ -1915,37 +1949,61 @@
 - string: □HAPPY! SARU Χ TORO Committee
   tab_mode: 1
 
-- string: 五十峯 誠
+#- string: 五十峯 誠
+# Probably https://www.mobygames.com/person/385125/makoto-isomine/
+- string: Makoto Isomine
   tab_mode: 0
 
-- string: 北川 竜大
+#- string: 北川 竜大
+# Probably https://www.mobygames.com/person/618129/ryuuta-kitagawa/
+- string: Ryuuta Kitagawa
   tab_mode: 0
 
-- string: 瀧村 絵理子
+#- string: 瀧村 絵理子
+# Possibly https://www.mobygames.com/person/43497/eriko-takimura/
+# Worked on Doko Demo Issyo
+# https://raido.moe/staff/ps2/ps2_dokodemo_issho_toro_to_ippai.html?utm_source=chatgpt.com
+- string: Eriko Takimura
   tab_mode: 0
 
-- string: 大田 径奈
+#- string: 大田 径奈
+# Nothing found, using ChatGPT romanization
+- string: Keina Ota
   tab_mode: 0
 
-- string: 田部井 緑子
+#- string: 田部井 緑子
+# Probably https://www.mobygames.com/person/208162/noriko-tabei/
+- string: Noriko Tabei
   tab_mode: 0
 
-- string: 林 慶太
+#- string: 林 慶太
+# Probably https://www.mobygames.com/person/301972/keita-hayashi/
+- string: Keita Hayashi
   tab_mode: 0
 
-- string: 佐野 淳子
+#- string: 佐野 淳子
+# Probably https://www.mobygames.com/person/71600/junko-sano/
+- string: Junko Sano
   tab_mode: 0
 
-- string: 三宅 大輔
+#- string: 三宅 大輔
+# Probably https://www.mobygames.com/person/57288/daisuke-miyake/
+- string: Daisuke Miyake
   tab_mode: 0
 
-- string: プラスティック⋅スクイーズ⋅ボックス
+#- string: プラスティック⋅スクイーズ⋅ボックス
+# https://ja.wikipedia.org/wiki/Plus-Tech_Squeeze_Box
+- string: Plus-Tech Squeeze Box
   tab_mode: 0
 
-- string: 南治 一徳
+#- string: 南治 一徳
+# Probably https://www.mobygames.com/person/656197/kazunori-nanji/
+- string: Kazunori Nanji
   tab_mode: 0
 
-- string: 星 哲哉
+#- string: 星 哲哉
+# Probably https://www.mobygames.com/person/972841/tetsuya-hoshi/
+- string: Tetsuya Hoshi
   tab_mode: 0
 
 - string: BeXide,Inc.
@@ -1964,58 +2022,95 @@
 - string: JUN IWASAKI(XSEED)
   tab_mode: 0
 
-- string: 中川 みゆき
+#- string: 中川 みゆき
+# Probably https://www.mobygames.com/person/382907/miyuki-nakagawa/
+- string: Miyuki Nakagawa
   tab_mode: 0
 
-- string: 白川 智
+#- string: 白川 智
+# Probably https://www.mobygames.com/person/334716/satoshi-shirakawa/
+- string: Satoshi Shirakawa
   tab_mode: 0
 
-- string: 山本 博之
+#- string: 山本 博之
+# Possibly https://www.mobygames.com/person/1154787/hiroyuki-yamamoto/
+# but lots of people with matching romanization
+- string: Hiroyuki Yamamoto
   tab_mode: 0
 
-- string: 宮川 昌己
+#- string: 宮川 昌己
+# Nothing found, using Google Translate romanization
+- string: Masami Miyakama
   tab_mode: 0
 
-- string: 森 みつよ
+#- string: 森 みつよ
+# Nothing found, using Google Translate romanization
+- string: Mitsuyo Mori
   tab_mode: 0
 
-- string: 吉越 巽哉
+#- string: 吉越 巽哉
+# Probably https://vgmdb.net/artist/56271
+- string: Tatsuya Yoshigoe
   tab_mode: 0
 
-- string: 佐野 淳子
+#- string: 佐野 淳子
+# Probably https://www.mobygames.com/person/71600/junko-sano/
+- string: Junko Sano
   tab_mode: 0
 
-- string: 山口 晋平
+#- string: 山口 晋平
+# Probably https://www.mobygames.com/person/129651/shinpei-yamaguchi/
+- string: Shinpei Yamaguchi
   tab_mode: 0
 
-- string: 仲村 達郎
+#- string: 仲村 達郎
+# Possibly https://www.mobygames.com/person/1268578/tatsuro-nakamura/
+- string: Tatsuro Nakamura
   tab_mode: 0
 
-- string: 土居 昌明
+#- string: 土居 昌明
+# Probably https://www.mobygames.com/person/37198/masaaki-doi/
+- string: Masaaki Doi
   tab_mode: 0
 
-- string: 記野 直子
+#- string: 記野 直子
+# Probably https://www.mobygames.com/person/118606/naoko-kino/
+- string: Naoko Kino
   tab_mode: 0
 
-- string: 難波 優子
+#- string: 難波 優子
+# Possibly https://www.mobygames.com/person/228022/yuko-nanba/
+- string: Yuko Nanba
   tab_mode: 0
 
-- string: 小泉 梨沙
+#- string: 小泉 梨沙
+# Probably https://www.mobygames.com/person/285889/risa-koizumi/
+- string: Risa Koizumi
   tab_mode: 0
 
-- string: 馬場 舞夢
+#- string: 馬場 舞夢
+# Nothing found, using Google Translate romanization
+# This person https://www.mobygames.com/person/691233/raimu-baba/
+# has a suspiciously close name?
+- string: Maimu Baba
   tab_mode: 0
 
-- string: 田村 文子
+#- string: 田村 文子
+# Probably https://www.mobygames.com/person/253017/fumiko-tamura/
+- string: Fumiko Tamura
   tab_mode: 0
 
-- string: 田邊 拓
+#- string: 田邊 拓
+# Probably https://www.mobygames.com/person/382905/taku-tanabe/
+- string: Taku Tanabe
   tab_mode: 0
 
-- string: ピポサル委員会
+#- string: ピポサル委員会
+- string: Piposaru Committee
   tab_mode: 0
 
-- string: SCEIオールスタッフ
+#- string: SCEIオールスタッフ
+- string: SCEI Staff
   tab_mode: 0
 
 - string: ''
@@ -2025,7 +2120,10 @@
 - string: ○Director
   tab_mode: 1
 
-- string: 上田 和仁
+#- string: 上田 和仁
+# Using Google Translate romanization
+# Possibly https://www.mobygames.com/person/157264/kazuhito-ueda/
+- string: Kazuhito Ueda
   tab_mode: 0
 
 - string: ''
@@ -2035,7 +2133,9 @@
 - string: ○Producer
   tab_mode: 1
 
-- string: 兼高 克志
+#- string: 兼高 克志
+# Probably https://www.mobygames.com/person/78548/katsuyuki-kanetaka/
+- string: Katsuyuki Kanetaka
   tab_mode: 0
 
 - string: ''
@@ -2045,7 +2145,11 @@
 - string: ○Executive Producer
   tab_mode: 1
 
-- string: 藤沢 孝史
+#- string: 藤沢 孝史
+# Nothing found, using Google Translate romanization
+# Possibly https://www.mobygames.com/person/57320/takashi-fujisawa/
+# but credited roles don't seem to match
+- string: Takashi Fujisawa
   tab_mode: 0
 
 - string: ''
@@ -2055,19 +2159,29 @@
 - string: ○Supervisors
   tab_mode: 1
 
-- string: 小林 康秀
+#- string: 小林 康秀
+# Probably https://www.mobygames.com/person/37146/yasuhide-kobayashi/
+- string: Yasuhide Kobayashi
   tab_mode: 0
 
-- string: 桐田 富和
+#- string: 桐田 富和
+# Probably https://www.mobygames.com/person/67318/tomikazu-kirita/
+- string: Tomikazu Kirita
   tab_mode: 0
 
-- string: 佐々木 誠義
+#- string: 佐々木 誠義
+# Probably https://www.mobygames.com/person/245623/seigi-sasaki/
+- string: Seigi Sasaki
   tab_mode: 0
 
-- string: 佐伯 雅司
+#- string: 佐伯 雅司
+# Probably https://www.mobygames.com/person/54316/masatsuka-saeki/
+- string: Masatsuka Saeki
   tab_mode: 0
 
-- string: 竹野 文哉
+#- string: 竹野 文哉
+# Possibly https://www.mobygames.com/person/54315/fumiya-takeno/
+- string: Fumiya Takeno
   tab_mode: 0
 
 - string: ''
