@@ -874,8 +874,8 @@
   tab_mode: 2
 
 #- string: ターリン⋅ミーカー
-# No clue who this is, nothing seems to really come up
-- string: Taryn Meeker
+# Possibly https://www.imdb.com/name/nm1770003/
+- string: Tarryn Meeker
   tab_mode: 0
 
 - string: ''
