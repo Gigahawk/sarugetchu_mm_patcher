@@ -102,6 +102,7 @@ Some old notes taken during development
 
 ### Credits
 
+#### Params Storage
 Credits params appear to be stored in strings?
 Best guess at order:
 
@@ -150,6 +151,22 @@ probably tab width int 54
 idk float 0.5
 
 idk int 10
+
+#### Params from debugger
+
+From colosseum credit load (floats return to FPR f00 register)
+
+- credit.caption_b/g/r: yellow text
+- credit.post_b/g/r: yellow text
+- credit.text_b/g/r: white text
+- credit.%s.image_num: 10
+- credit.indent_post: 27
+- credit.indent_text: 54
+- credit.font_height: 18.0
+- credit.line_space: 0.5
+- credit.scroll_time: 300.0
+- credit.bg_total_time: 300.0
+
 
 ### Damage
 

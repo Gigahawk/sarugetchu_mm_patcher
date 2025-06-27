@@ -200,3 +200,15 @@ ASM_START 0x001e1d54
     beq $t7,$zero,0x80
     sw $t4,0x30($sp)
 ASM_END
+
+// Credit rendering has a custom token renderer that doesn't use the scaling
+// terms, patch the renderer directly
+ASM_START 0x0024e690
+    // Force the font to render with a width of 14
+    // Note that font is normally 18 wide, scaling by 0.75 gives 13.5
+    addiu $v0,$zero,0xE
+ASM_END
+ASM_START 0x0024eec0
+    // Force next font position to be +14
+    addiu $v0,$zero,0xE
+ASM_END

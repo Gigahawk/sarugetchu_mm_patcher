@@ -1369,12 +1369,20 @@ def match_font(src_hash, font_src_path, font_new_path):
     default="00940549",
     type=str,
 )
+@click.option(
+    "-m", "--minimal",
+    is_flag=True
+)
 @click.argument(
     "string",
     type=click.Path(),
 )
-def encode_string(hash, string):
-    encoder = EncodingTranslator(hash)
+def encode_string(hash, string, minimal):
+    if minimal:
+        encoder = EncodingTranslator(encoding=BYTES_TO_CHAR_MINIMAL)
+        hash = "MINIMAL"
+    else:
+        encoder = EncodingTranslator(hash)
     out = encoder.string_to_bytes(string)
     click.echo(f"Encoding '{string}' with encoder hash {hash}, can be one of:")
     for s in out:
