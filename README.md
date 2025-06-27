@@ -100,6 +100,57 @@ In hindsight I made a lot of bad design decisions throughout the development pro
 
 Some old notes taken during development
 
+### Credits
+
+Credits params appear to be stored in strings?
+Best guess at order:
+
+white text R int 128
+white text G int 128
+white text B int 128
+
+indent width? float 300.0
+
+font height? float 18.0
+
+idk int 10
+
+yellow text B int 64
+yellow text G int 128
+yellow text R int 128
+
+idk int 10
+
+idk float 2.0
+
+string "credit_s"
+
+idk float 2.0
+
+yellow text B int 64
+yellow text G int 128
+yellow text R int 128
+
+idk int 10
+
+string "credit_k"
+
+idk int 10
+
+string "credit_c"
+
+idk float 2.0
+
+idk float 300.0
+
+probably tab width int 27
+
+probably tab width int 54
+
+idk float 0.5
+
+idk int 10
+
 ### Damage
 
 When damage is applied, `do_damage?FUN_00154a60` gets called
