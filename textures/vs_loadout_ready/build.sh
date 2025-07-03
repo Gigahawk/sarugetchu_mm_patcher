@@ -22,8 +22,7 @@ echo "Building text image"
     -y 1 \
     -x 4 \
     -k 1 \
-    --outline "loadout" \
-    --no-cut-bottom
+    --outline "loadout"
 
 echo "Cleaning intermediate files"
 rm out_quant.png

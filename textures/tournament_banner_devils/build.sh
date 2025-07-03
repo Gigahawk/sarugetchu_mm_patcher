@@ -11,5 +11,4 @@
     -y -3 \
     --font-size 60 \
     -g "center" \
-    --no-cut-bottom \
     --outline tournament

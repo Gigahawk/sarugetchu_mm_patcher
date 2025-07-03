@@ -217,6 +217,7 @@
           pkgs.zerocool_ttf
           pkgs.saman_ttf
           pkgs.zcool-qingke-huangyou
+          pkgs.fira-sans
         ];
       };
     in {
@@ -786,7 +787,6 @@
                 ./build.sh
               '
             wait
-            #exit 1
           '';
 
           dontInstall = true;

@@ -538,6 +538,12 @@ def patch_resource(
                         img_data_start:img_data_start + len(px_data)
                     ] = px_data
 
+                    # HACK: always force patched images to be unswizzled
+                    img_psm_addr = int(img_data_meta["psm_flags"]["__address"])
+                    img_psm = resource_bytes[img_psm_addr]
+                    img_psm &= 0b10111111
+                    resource_bytes[img_psm_addr] = img_psm
+
                     if patch_palette:
                         palette_meta = (
                             subfile["metadata"]["ptr"]["*(ptr)"]

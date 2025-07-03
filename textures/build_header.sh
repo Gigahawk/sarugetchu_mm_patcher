@@ -13,7 +13,7 @@ FONTSTROKECOLOR=""
 FONTSTROKEWIDTH=0
 KERNING=0
 CLEAN=true
-CUT_BOTTOM=true
+CUT_BOTTOM=0
 TOTAL_OUTLINE_WIDTH=0
 GRAVITY=west
 XOFFSET=""
@@ -123,9 +123,9 @@ while [[ $# -gt 0 ]]; do
                 shift
                 shift
             elif [[ "$2" == "loadoutwait" ]]; then
-                method="edgeout"
+                method="edge"
                 kernel="diamond"
-                width="2"
+                width="1"
                 color="black"
                 shift
                 shift
@@ -152,8 +152,9 @@ while [[ $# -gt 0 ]]; do
             CLEAN=false
             shift
             ;;
-        --no-cut-bottom)
-            CUT_BOTTOM=false
+        --cut-bottom)
+            CUT_BOTTOM="$2"
+            shift
             shift
             ;;
         *)
@@ -231,7 +232,7 @@ magick \
     -geometry "${XOFFSET}${YOFFSET}" -composite \
     out_no_border.png
 
-if [[ "$CUT_BOTTOM" == true ]]; then
+if [[ "$CUT_BOTTOM" -gt 0 ]]; then
     # https://stackoverflow.com/a/64823099
     # For some reason this doesn't work properly if it's included in the previous
     # magick call
@@ -241,7 +242,7 @@ if [[ "$CUT_BOTTOM" == true ]]; then
             +clone \
             -alpha extract \
             -fill black \
-            -draw "rectangle 0,$((IMG_HEIGHT - TOTAL_OUTLINE_WIDTH)),${IMG_WIDTH},${IMG_HEIGHT}" \
+            -draw "rectangle 0,$((IMG_HEIGHT - CUT_BOTTOM)),${IMG_WIDTH},${IMG_HEIGHT}" \
             -write alpha_mask.png \
         \) \
         -alpha off -compose copyalpha -composite \

@@ -6,7 +6,7 @@
     -g east \
     -w 128 \
     -h 16 \
-    -y -1 \
+    -y -2 \
     --font-size 21 \
     -c black \
-    --no-cut-bottom
+    --cut-bottom 1
