@@ -9,6 +9,9 @@ STRING=""
 FONT="Zero-Cool"
 FONTSIZE=35
 FONTCOLOR="white"
+FONTSTROKECOLOR=""
+FONTSTROKEWIDTH=0
+KERNING=0
 CLEAN=true
 CUT_BOTTOM=true
 TOTAL_OUTLINE_WIDTH=0
@@ -62,6 +65,16 @@ while [[ $# -gt 0 ]]; do
             shift
             shift
             ;;
+        --font-stroke-width)
+            FONTSTROKEWIDTH="$2"
+            shift
+            shift
+            ;;
+        --font-stroke-color)
+            FONTSTROKECOLOR="$2"
+            shift
+            shift
+            ;;
         -y|--y-offset)
             YOFFSET="$2"
             shift
@@ -82,6 +95,11 @@ while [[ $# -gt 0 ]]; do
             shift
             shift
             ;;
+        -k|--kerning)
+            KERNING="$2"
+            shift
+            shift
+            ;;
         --outline)
             if [[ "$2" == "mainmenu" ]]; then
                 method="edgeout"
@@ -95,6 +113,20 @@ while [[ $# -gt 0 ]]; do
                 kernel="square"
                 width="4"
                 color="'#000000ff'"
+                shift
+                shift
+            elif [[ "$2" == "loadout" ]]; then
+                method="edge"
+                kernel="diamond"
+                width="1"
+                color="black"
+                shift
+                shift
+            elif [[ "$2" == "loadoutwait" ]]; then
+                method="edgeout"
+                kernel="diamond"
+                width="2"
+                color="black"
                 shift
                 shift
             else
@@ -140,6 +172,10 @@ if [[ -z "$IMG_COLORS" ]]; then
     IMG_COLORS=$((2**IMG_BPP))
 fi
 
+if [[ -z "$FONTSTROKECOLOR" ]]; then
+    FONTSTROKECOLOR=$FONTCOLOR
+fi
+
 
 if [[ -z "$XOFFSET" ]]; then
     # Avoid outline going past edge of font
@@ -165,6 +201,8 @@ magick \
     -background none \
     -font "$FONT" -pointsize "$FONTSIZE" \
     -fill "$FONTCOLOR" \
+    -stroke "$FONTSTROKECOLOR" -strokewidth $FONTSTROKEWIDTH \
+    -kerning "$KERNING" \
     label:"$STRING" out_unscaled.png
 
 TEXT_WIDTH=$(identify -format "%w" out_unscaled.png)

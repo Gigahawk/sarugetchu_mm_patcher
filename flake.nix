@@ -216,6 +216,7 @@
           pkgs.sangyo_ttf
           pkgs.zerocool_ttf
           pkgs.saman_ttf
+          pkgs.zcool-qingke-huangyou
         ];
       };
     in {
