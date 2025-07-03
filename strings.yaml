@@ -260,11 +260,11 @@
 "輸送<ゆそう>トレーラーを撃破<げきは>せよ!➝\n\fサル軍基地内<ぐんきちない>に運<はこ>び込<こ>まれる前<まえ>に\n動力部<どうりょくぶ>を探<さが>し破壊<はかい>してください。➝\n\f多数<たすう>の小型<こがた>レーザー砲<ほう>が設置<せっち>されています。\n小型<こがた>レーザー砲<ほう>の射撃<しゃげき>には十分注意<じゅうぶんちゅうい>してください。":
   english: "Destroy the transport trailer!➝\n\fFind and destroy the power unit\nbefore it's transported into the\nmonkey base.➝\n\fBe careful,the trailer is\nprotected by many laser cannons."
 "エンジン破壊! 残り3基です!":
-  english: "Engine destroyed!3 engines remain!"
+  english: "Engine destroyed! 3 engines remain!"
 "エンジン破壊! 残り2基です!":
-  english: "Engine destroyed!2 engines remain!"
+  english: "Engine destroyed! 2 engines remain!"
 "エンジン破壊! 残り1基です!":
-  english: "Engine destroyed!1 engine remains!"
+  english: "Engine destroyed! 1 engine remains!"
 ## Metro/Kawasaki
 "川崎方面<かわさきほうめん>にサル軍基地<ぐんきち>が建設中<けんせつちゅう>との情報<じょうほう>が入<はい>りました。 東京<とうきょう>、品川経由<しながわけいゆ>で川崎方面<かわさきほうめん>に向<む>かいます。 ただし、秋葉原<あきはばら>、東京間<とうきょうかん>の地上<ちじょう>ルートは、すでに多数<たすう>のサル達<たち>に占領<せんりょう>されており、危険<きけん>なので、地下<ちか>ルートを通<とお>って東京駅<とうきょうえき>を目指<めざ>してください。":
   english: "We've received information that a monkey army base is under construction in the Kawasaki area.Head there via Tokyo and Shinagawa.However,since a large group of monkeys has occupied the aboveground route between Akihabara and Tokyo,please take the the underground route to Tokyo Station."
@@ -320,11 +320,11 @@
 "スズキを発見しました!":
   english: "Found Suzuki!"
 "セキュリティ 機銃停止!":
-  english: "Security:Guns disabled!"
+  english: "Security: Guns disabled!"
 "セキュリティ バリア解除!":
-  english: "Security:Barrier disabled!"
+  english: "Security: Barrier disabled!"
 "セキュリティ スタンポッド停止!":
-  english: "Security:Stun pods disabled!"
+  english: "Security: Stun Pods disabled!"
 ## Yacht Harbor
 "ヨットハーバー":
   english: "Yacht Harbor"
@@ -530,6 +530,18 @@
   english: "The trailer carrying Pipotron Red,Blue,and Yellow is heading to the underground base in Akihabara.They are transporting a modified laser cannon into the base, but are under enemy attack.Provide support to the trailer and safely deliver the laser cannon to the base."
 "輸送<ゆそう>トレーラーを守<まも>れ!➝\n\f地上<ちじょう>には未確認生物<みかくにんせいぶつ>が多数出現<たすうしゅつげん>しています。➝\n\fトレーラーがこのエリアを通過<つうか>するまで\n守<まも>りきってください。":
   english: "Protect the transport trailer!➝\n\fMany strange creatures have\nappeared in this area.➝\n\fProtect the trailer until it\npasses through this area."
+"エンジン爆発! 残り3基です!":
+  # Technically 爆発 means blown up or exploded, not sure why these strings
+  # are unique from the ones in the original Akihabara mission, I guess "Engine exploded!"
+  # sorta implies that the explosion was not caused by a player action (rather it was caused
+  # player inaction, failing to kill the blobs in time etc.), but I feel like all of the other
+  # flavor text surrounding this level should be clear enough that these messages are negative
+  # in this context
+  english: "Engine destroyed! 3 engines remain!"
+"エンジン爆発! 残り2基です!":
+  english: "Engine destroyed! 2 engines remain!"
+"エンジン爆発! 残り1基です!":
+  english: "Engine destroyed! 1 engine remains!"
 ## Shinjuku
 "東京湾<とうきょうわん>に、空中戦艦<くうちゅうせんかん>が墜落<ついらく>したとの情報<じょうほう>が入<はい>りました! 空中戦艦内<くうちゅうせんかんない>には、ブロブ本体<ほんたい>があるようです。 ブロブ狙滅<せんめつ>のため、危険地帯<きけんちたい>を儀回<うかい>しながら、直<ただ>ちに現場<げんば>に急行<きゅうこう>してください。":
   english: "We have intel that the aerial battleship has crashed in Tokyo Bay! There seems to be a large blob inside the battleship.Head to the crash site and eliminate the blob."
@@ -670,7 +682,7 @@
 
 # Mode select screen warnings
 "タイトルに戻<もど>りますか?":
-  english: "Return to the Title Screen?"
+  english: "Return to the title screen?"
 
 # Password Entry screen dialogs
 "%\nこのパスワードでよろしいですか?":
@@ -688,7 +700,7 @@
 "レジェンドトーナメント":
   english: "Legend Tournament"
 "デビルズトーナメント":
-  english: "Devil's Tournament"
+  english: "Devils Tournament"
 
 # Colosseum Mode screen descriptions
 "初級者<しょきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
@@ -716,13 +728,13 @@
 "ワールド決勝ステージ":
   english: "World Finals"
 "デビルズ一次予選ステージ":
-  english: "Devil's Pre-qualifiers"
+  english: "Devils Pre-qualifiers"
 "デビルズ二次予選ステージ":
-  english: "Devil's Qualifiers"
+  english: "Devils Qualifiers"
 デビルズ準決勝ステージ:
-  english: "Devil's Semifinals"
+  english: "Devils Semifinals"
 "デビルズ決勝ステージ":
-  english: "Devil's Finals"
+  english: "Devils Finals"
 
 "ステージセレクト":
   english: "Stage Select"
@@ -833,7 +845,7 @@
 "ステージを選<えら>んでください。":
   english: Please select a stage.
 "エディットを終了<しゅうりょう>して、キャラクターセレクトに進<すす>みます。":
-  english: "Finish editing,proceed to Character Select."
+  english: "Finish editing,proceed to character select."
 "セットわく選択<せんたく>に戻<もど>ります。":
   english: "Return to round selection."
 "エントリー設定<せってい>に戻<もど>ります。":
@@ -904,41 +916,41 @@
   english:
     "fa73ce1f": "Modified Laser Cannon"
     "5b74ce1f": "Modified\nLaser Cannon"
-    # What do the rest of these do?
-    "9e4e1525": "Modified4Laser Cannon"
-    "ff4e1525": "Modified5Laser Cannon"
-    "1f285c2a": "Modified6Laser Cannon"
-    "80285c2a": "Modified7Laser Cannon"
-    "dd24a32f": "Modified8Laser Cannon"
-    "3e25a32f": "Modified9Laser Cannon"
-    "fed9e934": "Modified0Laser Cannon"
-    "5fdae934": "ModifiedALaser Cannon"
-    "02d9303a": "ModifiedBLaser Cannon"
-    "63d9303a": "ModifiedCLaser Cannon"
-    "008d773f": "ModifiedDLaser Cannon"
-    "618d773f": "ModifiedELaser Cannon"
-    "8166be44": "ModifiedFLaser Cannon"
-    "e266be44": "ModifiedGLaser Cannon"
-    "a866054a": "ModifiedHLaser Cannon"
-    "0967054a": "ModifiedILaser Cannon"
-    "6b983269": "ModifiedJLaser Cannon"
-    "cc983269": "ModifiedKLaser Cannon"
-    "0f73796e": "ModifiedLLaser Cannon"
-    "7073796e": "ModifiedMLaser Cannon"
-    "904cc073": "ModifiedNLaser Cannon"
-    "f14cc073": "ModifiedOLaser Cannon"
-    "4e490779": "ModifiedPLaser Cannon"
-    "af490779": "ModifiedQLaser Cannon"
-    "6ffe4d7e": "ModifiedRLaser Cannon"
-    "d0fe4d7e": "ModifiedSLaser Cannon"
-    "73fd9483": "ModifiedTLaser Cannon"
-    "d4fd9483": "ModifiedULaser Cannon"
-    "71b1db88": "ModifiedVLaser Cannon"
-    "d2b1db88": "ModifiedWLaser Cannon"
-    "f28a228e": "ModifiedXLaser Cannon"
-    "538b228e": "ModifiedYLaser Cannon"
-    "198b6993": "ModifiedZLaser Cannon"
-    "7a8b6993": "ModifiedaLaser Cannon"
+    # TODO: check this is correct
+    "9e4e1525": "Modified Laser Cannon"
+    "ff4e1525": "Modified\nLaser Cannon"
+    "1f285c2a": "Modified Laser Cannon"
+    "80285c2a": "Modified\nLaser Cannon"
+    "dd24a32f": "Modified Laser Cannon"
+    "3e25a32f": "Modified\nLaser Cannon"
+    "fed9e934": "Modified Laser Cannon"
+    "5fdae934": "Modified\nLaser Cannon"
+    "02d9303a": "Modified Laser Cannon"
+    "63d9303a": "Modified\nLaser Cannon"
+    "008d773f": "Modified Laser Cannon"
+    "618d773f": "Modified\nLaser Cannon"
+    "8166be44": "Modified Laser Cannon"
+    "e266be44": "Modified\nLaser Cannon"
+    "a866054a": "Modified Laser Cannon"
+    "0967054a": "Modified\nLaser Cannon"
+    "6b983269": "Modified Laser Cannon"
+    "cc983269": "Modified\nLaser Cannon"
+    "0f73796e": "Modified Laser Cannon"
+    "7073796e": "Modified\nLaser Cannon"
+    "904cc073": "Modified Laser Cannon"
+    "f14cc073": "Modified\nLaser Cannon"
+    "4e490779": "Modified Laser Cannon"
+    "af490779": "Modified\nLaser Cannon"
+    "6ffe4d7e": "Modified Laser Cannon"
+    "d0fe4d7e": "Modified\nLaser Cannon"
+    "73fd9483": "Modified Laser Cannon"
+    "d4fd9483": "Modified\nLaser Cannon"
+    "71b1db88": "Modified Laser Cannon"
+    "d2b1db88": "Modified\nLaser Cannon"
+    "f28a228e": "Modified Laser Cannon"
+    "538b228e": "Modified\nLaser Cannon"
+    "198b6993": "Modified Laser Cannon"
+    "7a8b6993": "Modified\nLaser Cannon"
 ## Kakeru
 "ディメンションブレイク":
   english: "Dimension Break"
@@ -1859,7 +1871,25 @@ Gクラッシャー:
 # Costumes screen
 ## Normal
 "ノーマル":
-  english: "Default"
+  english:
+    # (Kakeru's?) Default Costume
+    "d31cd972": "Default"
+    # TODO: should be other character's default costumes, double check
+    "f409e772": "Default"
+    "15f7f472": "Default"
+    "36e40273": "Default"
+    "57d11073": "Default"
+    "78be1e73": "Default"
+    "db854873": "Default"
+    "249aacb9": "Default"
+    "4587bab9": "Default"
+    "6674c8b9": "Default"
+    "8761d6b9": "Default"
+    "a84ee4b9": "Default"
+    "c93bf2b9": "Default"
+    "2c031cba": "Default"
+    # Story Mode "Normal" difficulty
+    "ac1930dd": "Normal"
 "お気<き>に入<い>りの服<ふく>です。 ":  # There's randomly a space at the end of this one
   # Kakeru's default
   english: "My favorite outfit."
@@ -2440,7 +2470,7 @@ Gクラッシャー:
   english: "To be honest,I'm terrible with\nheights."
 
 "サルキメデス":
-  english: "Sarchimedes"
+  english: "Archimonkes"
 "だんじき6日目":
   english: "Fasting,day 6"
 "めいそう中<ちゅう>に発見<はっけん>され\n逃<に>げ出<だ>したところをゲッチュされる。":
@@ -2456,7 +2486,7 @@ Gクラッシャー:
   english: "I thought sleeping in the corner\nwould keep me hidden..."
 
 "バーモン":
-  english: "Vermon"
+  english: "Chimp Burton"
 "ぼうけんか":
   # Probably 冒険家?
   english: "Adventurer"
@@ -2918,11 +2948,11 @@ Gクラッシャー:
 "船<ふね>の甲板<かんぱん>で\n釣<つ>りをしていたところを発見<はっけん>。":
   english: "Found fishing on a ship's deck."
 "めずらしいサカナが\nつれたみャ!":
-  english: "I caught a rare fish, meow!"
+  english: "I caught a rare fish, nya!"
 "波<なみ>にゆられながら\n魚<さかな>とたわむれているところを発見<はっけん>。":
   english: "Found playing with fish while\ndrifting on the waves."
 "ネコのしっぽは\nエサじゃないみャ!":
-  english: "A cat's tail isn't food nya!"
+  english: "A cat's tail isn't food, nya!"
 "レフトポールによじ登<のぼ>って\n球場見物<きゅうじょうけんぶつ>していたところを発見<はっけん>。":
   english: "Found climbing a light pole to see\nthe stadium."
 "野球場<やきゅうじょう>には魔物<まもの>が\n住<す>んでるのみャ♪":
@@ -2930,7 +2960,7 @@ Gクラッシャー:
 "港<みなと>の煙突<えんとつ>の上<うえ>で\nセキこんでいたところを発見<はっけん>。":
   english: "Found coughing on top of a chimney\nat the harbor."
 "見晴<みは>らしはいいけど\nケムリでまっ黒<くろ>みャ~。":
-  english: "Great view, but it's all smoky and\nblack up here, meow~"
+  english: "Great view, but it's all smoky and\nblack up here, nya~"
 "駅<えき>ビルでフリークライミングに\n挑戦<ちょうせん>しているところを発見<はっけん>。":
   english: "Found free climbing at the station\nbuilding."
 "山<やま>がそこにあるから\nのぼるのみャ!":
@@ -2938,7 +2968,7 @@ Gクラッシャー:
 "高級<こうきゅう>ホテルの一室<いっしつ>で\nエレガントに過<す>ごしているところを発見<はっけん>。":
   english: "Found living the high life in a\nfancy hotel room."
 "アーバンリゾートを\n楽<たの>しむみャ♪":
-  english: "Lovin' this resort, meow~♪"
+  english: "Lovin' this resort, nya~♪"
 
 "スズキ":
   english: "Suzuki"
@@ -3558,8 +3588,6 @@ Gクラッシャー:
   english: "Fires a large dark orb forward. Small range but high destructive power."
 "強力<きょうりょく>な閃光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
   english: "Fires a powerful flashbang, knocking down nearby enemies. No attack power."
-"エンジン爆発! 残り1基です!":
-  english: "Engine destroyed!1 left!"
 "敵<てき>1体<たい>にバナナをぶつけ、無数<むすう>のピポサルに攻撃<こうげき>させます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
   english: "Throw a banana at 1 enemy and unleash countless Pipo Monkeys to attack. Lock-on recommended for accuracy."
 "一定時間<いっていじかん>バリアを張<は>って、無敵状態<むてきじょうたい>になります。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。":
@@ -3583,10 +3611,6 @@ Gクラッシャー:
 "チェーンボーナス":
   english: "Chain Bonus"
   password: true
-"エンジン爆発! 残り3基です!":
-  english: "Engine destroyed! 3 left!"
-"エンジン爆発! 残り2基です!":
-  english: "Engine destroyed! 2 left!"
 "キャラクター名":
   english: "Character Name"
 "アーモンチェアに乗<の>って誘導<ゆうどう>ビームで攻撃<こうげき>します。 ビームを当<あ>てるには敵<てき>に近<ちか>づく必要<ひつよう>があります。":

@@ -581,9 +581,9 @@
 - string: Kakeru
   tab_mode: 2
 
-#- string: 瀧本 富土子
-# Nothing found, using romanization from ChatGPT
-- string: Tomiko Takimoto
+#- string: 瀧本 富士子
+# Probably https://www.mobygames.com/person/114148/fujiko-takimoto/
+- string: Fujiko Takimoto
   tab_mode: 0
 
 - string: ''
