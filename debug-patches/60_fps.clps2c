@@ -1,0 +1,22 @@
+// Based on https://www.youtube.com/watch?v=jSNfejSktSQ
+
+// Supposedly requires EE Cycle Rate increase, but seems to work without in
+// most cases.
+// Seems to be slight drops below 60fps with a lot of particle effects but not
+// really that noticeable.
+// Supposedly causes issues with "in game cutscenes" but I haven't noticed
+// anything in both the in engine cutscenes and the video cutscenes
+
+// Patch the story loading func?
+// patch=1,EE,201ED588,extended,24040000
+ASM_START 0x001ED588
+    // Force framerate select func to be called with mode 0 (60fps)
+    li $a0,0x0
+ASM_END
+
+// Patch the VS mode loading func?
+// patch=1,EE,201EEB88,extended,24040000
+ASM_START 0x001EEB88
+    // Force framerate select func to be called with mode 0 (60fps)
+    li $a0,0x0
+ASM_END

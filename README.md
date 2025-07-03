@@ -189,6 +189,54 @@ https://www.youtube.com/playlist?list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka
 
 Some old notes taken during development
 
+### 60 FPS
+
+Originally discovered by Crash https://www.youtube.com/watch?v=jSNfejSktSQ
+
+Default (unpatched) FPS
+
+- VS Mode:
+    - Colosseum (`50_k1`): 60
+    - Metro (`52_metro`): 30
+    - Warehouse District (`53_bay`): 30
+    - Training Room (`54_UFO`): 30
+    - Yacht Harbor (`55_park`): 30
+    - Gulf Coast (`56_daiba`): 30
+    - V.R. Space (`58_UFO2`): 30
+- Story Mode:
+    - Tokyo Teleport (`01_boss01_gori01`): 30
+    - Shinjuku (`02_city01_a`): 30
+    - Akihabara (`03_city02_a`): 30
+    - Metro (`04_metro01_a`): 30
+    - Tokyo (`05_boss02_boss`): 30
+    - Container Terminal (`06_bay01_a`): 30
+    - Industrial Complex (`07_bay02_a`): 30
+    - Yacht Harbor (`08_park01_a`): 30
+    - Stadium (`09_stadium_a`): 30
+    - Stadium (`10_boss03_fly`): 30
+    - Teleporter Room (`11_hangar01_a`): 30
+    - Equipment Hangar (`12_hangar02_a`): 30
+    - G-Hangar (`13_boss04_gori02`): 30
+    - Cargo Elevator (`14_elevator_a`): 30
+    - Bridge (`15_kakeru_spector`): 30
+    - Bridge (`16_kakeru_goritron`): 30
+    - V.R. Space 01 (`17_city01_vr`): 30
+    - V.R. Space 02 (`18_bay01_vr`): 30
+    - V.R. Space 03 (`19_park01_vr`): 30
+    - V.R. Space 04 (`20_boss07_grid`): 30
+    - Stadium (`21_stadium_b`): 30
+    - Yacht Harbor (`22_park01_b`): 30
+    - Industrial Complex (`23_bay02_b`): 30
+    - Container Terminal (`24_bay01_b`): 30
+    - Tokyo (`25_boss08_boss`): 30
+    - Metro (`26_metro01_b`): 30
+    - Akihabara (`27_city02_b`): 30
+    - Shinjuku (`28_city01_b`): 30
+    - Tokyo Teleport (`29_boss09_boss`): 30
+    - Odaiba (`30_daiba02_b`): 30
+    - Crash Site (`31_boss10_boss`): 30
+
+
 ### Credits
 
 #### Params Storage
