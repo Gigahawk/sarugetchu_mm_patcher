@@ -96,6 +96,95 @@ In hindsight I made a lot of bad design decisions throughout the development pro
     - The English characters look nicer in the Chinese release
     - The Chinese release contains a `CO00.PSS` without the Japanese subtitles, so it would have been better looking to sub that version
 
+## Play Through
+
+I have been doing a playthrough of the game as the translation has developed.
+
+### Episode Kakeru
+
+https://www.youtube.com/playlist?list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka
+
+0. https://www.youtube.com/watch?v=nkVN55UtkYA&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=1
+    - 1st Tokyo Teleport level
+    - Cutscene: ST00K, Japanese subtitles
+1. https://www.youtube.com/watch?v=62uarj5kDWA&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=2
+    - Text width reduced for better English rendering
+    - File select menu
+    - Character edit menu
+    - VS. Mode
+    - Options
+    - Loadout select
+    - VS Mode result
+    - 1st Tokyo Teleport level again (with English cutscene subtitles)
+2. https://www.youtube.com/watch?v=V8f7AuBwIV0&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=3
+    - 1st Shinjuku level
+3. https://www.youtube.com/watch?v=tRtm5_9MOz4&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=4
+    - 1st Akihabara level
+    - Cutscene: ST01
+4. https://www.youtube.com/watch?v=wFtZcO1o-10&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=5
+    - Texture patching demo (`Press START Button`)
+    - 1st Metro level
+5. https://www.youtube.com/watch?v=kczVU501pik&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=6
+    - 1st Tokyo level
+6. https://www.youtube.com/watch?v=_lxjCUQ1lIc&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=7
+    - 1st Container Terminal level
+    - `CATCH POINTS` and `COMBO CATCH` textures patched
+7. https://www.youtube.com/watch?v=N9njty7Jo7c&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=8
+    - 1st Industrial Complex level
+    - Cutscene: ST02
+8. https://www.youtube.com/watch?v=t7qTcOoUyYo&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=9
+    - 1st Yacht Harbor level
+9. https://www.youtube.com/watch?v=hk_xXk2y_bg&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=10
+    - Intro cutscenes subbed (ADxx)
+    - 1st Stadium level
+    - `CATCH` banner texture patched
+10. https://www.youtube.com/watch?v=-j_cxkmtS6g&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=11
+    - Character edit menu
+        - Chip lab
+    - 2nd Stadium level
+11. https://www.youtube.com/watch?v=iYZZixDajiQ&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=12
+    - Teleporter Room level
+    - Invincibility patch
+12. https://www.youtube.com/watch?v=ck8f74kn8yU&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=13
+    - Equipment Hangar level
+    - G-Hangar level
+    - Cargo Elevator level
+13. https://www.youtube.com/watch?v=tpvLXWiq8Xg&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=14
+    - 1st Bridge level
+    - Cutscene: ST04K, ST05K
+14. https://www.youtube.com/watch?v=7s2WsYs83ME&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=15
+    - 2nd Bridge level
+    - Cutscene: ST06
+15. https://www.youtube.com/watch?v=Sh-UmprxqjI&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=16
+    - V.R. Space 01 level
+    - Cutscene: ST07K
+    - V.R. Space 02 level
+    - V.R. Space 03 level
+    - V.R. Space 04 level
+    - Cutscene: ST09K
+    - Per cutscene subtitle styling
+16. https://www.youtube.com/watch?v=X5Tqyause6Q&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=17
+    - 2nd Stadium level
+    - 2nd Yacht Harbor level
+    - 2nd Industrial Complex level
+    - Cutscene: ST10K
+17. https://www.youtube.com/watch?v=MavvGpOq53w&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=18
+    - 2nd Container Terminal level
+    - Cutscene: ST11K
+    - 2nd Tokyo level
+    - 2nd Metro level
+    - 2nd Akihabara level
+18. https://www.youtube.com/watch?v=zbYwchsWgas&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=19
+    - 2nd Shinjuku level
+    - Cutscene: ST12
+    - 2nd Tokyo Teleport level
+    - Odaiba level
+19. https://www.youtube.com/watch?v=aT6QqEOCO2E&list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka&index=20
+    - Crash Site level
+    - Cutscene: LAST
+    - Cutscene: ST13 (no subtitles)
+    - Credits (untranslated)
+
 ## Old Notes
 
 Some old notes taken during development
