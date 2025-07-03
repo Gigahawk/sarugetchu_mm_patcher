@@ -2,7 +2,7 @@
 
 # デビルズトーナメント
 ../build_header.sh \
-    -s "DEVIL'S TOURNAMENT" \
+    -s "DEVILS TOURNAMENT" \
     -f "Saman-Dere-Regular" \
     -w 512 \
     -h 64 \
