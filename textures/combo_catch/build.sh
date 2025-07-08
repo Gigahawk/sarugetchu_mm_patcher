@@ -10,6 +10,6 @@
     -c '#00CBCCCC' \
     --font-size 18 \
     --scale-factor 1.35 \
-    -x 15 `# Technically should be 17, but taking all the space we can get` \
+    -x 17 \
     -g west \
     --outline combo
