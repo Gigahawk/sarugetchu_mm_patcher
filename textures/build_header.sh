@@ -129,6 +129,13 @@ while [[ $# -gt 0 ]]; do
                 color="black"
                 shift
                 shift
+            elif [[ "$2" == "combo" ]]; then
+                method="edgeout"
+                kernel="diamond"
+                width="2"
+                color="black"
+                shift
+                shift
             else
                 method="$2"
                 kernel="$3"
