@@ -274,7 +274,11 @@ def _patch_strings(resource_bytes, hash, strings_path):
         target_encoder = EncodingTranslator(encoding=BYTES_TO_CHAR_MINIMAL)
 
     for jap_str, info in strings_dict.items():
-        jap_bytestrs = source_encoder.string_to_bytes(jap_str)
+        raw = info.get("raw", False)
+        if raw:
+            jap_bytestrs = [jap_str.encode("utf-8")]
+        else:
+            jap_bytestrs = source_encoder.string_to_bytes(jap_str)
 
         # TODO: support other langs?
         try:
@@ -298,7 +302,10 @@ def _patch_strings(resource_bytes, hash, strings_path):
                 source_bs_wrapped = source_encoder.wrap_string(jb, id=id)
                 if source_bs_wrapped in resource_bytes:
                     try:
-                        new_bs = target_encoder.string_to_bytes(eng_str)[0]
+                        if raw:
+                            new_bs = eng_str.encode("utf-8")
+                        else:
+                            new_bs = target_encoder.string_to_bytes(eng_str)[0]
                     except IndexError as e:
                         click.echo(f"Error: could not encode {repr(eng_str)}")
                         raise e

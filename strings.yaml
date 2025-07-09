@@ -3285,6 +3285,33 @@ Gクラッシャー:
 "ネットワークパスワード":
   english: "Network Password"
 
+# Game Parameters
+# Some parameters are stored as regular ASCII strings
+"300.0":
+  raw: true
+  english:
+    # credit.scroll_time
+    # This appears to roughly correspond to the amount off time (in seconds)
+    # spent scrolling through the credit text.
+    # Based on recordings of the stock credits scene (https://www.youtube.com/watch?v=BWKKI9bBS7w&list=PLWQVIzLDYEKnZ5iRFAJ7LbwACS85kDkpw&index=27)
+    # It seems like at 300 seconds (5:00) all the text minus the final dolby.tm2
+    # image is shown. Possibly textures are not taken into account in the math
+    # to calculate the scroll speed.
+    # A 5 minute long credits scroll is honestly unbearably slow, and these days
+    # will just prompt people to skip it with emulator speedup. Turn it down
+    # to 2.5 min to make things better
+    "c62d7907": "150.0"
+
+    # credit.bg_total_time
+    # This is the total time (in seconds)spent showing the background images
+    # during the credits. Setting this is important because the final dolby.tm2
+    # image has a black background and is not transparent. If this value is too
+    # long the background images will still be visible when dolby.tm2 scrolls
+    # past it which looks bad. Because the text scroll speed seems to not
+    # account for image height the same time value happens to work in the base
+    # game, but since we are putting stuff after the image this needs to be
+    # shorter to compensate
+    "a34c39ca": "140.0"
 
 # Unknown
 "%の%を削除<さくじょ>して\n%の%をムーブします。 よろしいですか?":

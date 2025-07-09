@@ -2202,3 +2202,89 @@
 - string: dolby.tm2
   tab_mode: 3
   raw: true
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: Sarugetchu Million Monkeys Fan Translation
+  centered: true
+  tab_mode: 1
+
+- string: Main Programmer
+  tab_mode: 2
+
+- string: Gigahawk
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: Main Translator
+  tab_mode: 2
+
+- string: Gigahawk
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: Translation Feedback
+  tab_mode: 2
+
+- string: CaptainEli24
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: Textures
+  tab_mode: 2
+
+- string: Gigahawk
+  tab_mode: 0
+
+- string: BmanRulesYou21
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: Cutscenes
+  tab_mode: 2
+
+- string: Gigahawk
+  tab_mode: 0
+
+- string: Hien
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+- string: ''
+  tab_mode: 0
+
+# TODO: set this programatically
+- string: Version VERSION
+  centered: true
+  tab_mode: 1
+- string: For the latest release, visit
+  centered: true
+  tab_mode: 1
+- string: github.com/Gigahawk/sarugetchu_mm_patcher
+  centered: true
+  tab_mode: 1
+
+

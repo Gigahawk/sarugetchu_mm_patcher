@@ -8745,6 +8745,15 @@ def build_credits_bin(
     credits: list[dict[str,str]],
     translator: EncodingTranslator | None=None
 ) -> bytes:
+    # Assumes text width has been patched to be 14px
+    tab_mode_max_chars = {
+        1: 44,
+        2: 42,
+        0: 40,
+        # HACK: tab mode 3 appears to be specific to raw strings, no limit
+        3: 9999,
+    }
+    screen_max_chars = tab_mode_max_chars[1]
     if translator is None:
         translator = EncodingTranslator(encoding=BYTES_TO_CHAR_MINIMAL)
     num_lines = len(credits)
@@ -8753,9 +8762,23 @@ def build_credits_bin(
     for idx, line in enumerate(credits):
         out += idx.to_bytes(4, "little")
         string: str = line["string"]
-        tab_mode: int = line["tab_mode"]
-        raw: bool = line.get("raw", False)
         str_len_raw = len(string)
+        tab_mode: int = line["tab_mode"]
+        if (max_len := tab_mode_max_chars[tab_mode]) < str_len_raw:
+            print(
+                f"Warning: credits string '{string}' is longer "
+                f"than max allowed {max_len} for tab mode {tab_mode}"
+            )
+        raw: bool = line.get("raw", False)
+        centered: bool = line.get("centered", False)
+        if centered:
+            # Get whitespace required for centering in tab mode 1
+            whitespace = (screen_max_chars - str_len_raw) // 2
+            # Adjust for actual tab mode
+            whitespace -= (screen_max_chars - max_len)
+            if whitespace > 0:
+                string = " "*whitespace + string
+                
         out += tab_mode.to_bytes(4, "little")
         if str_len_raw != 0:
             if not raw:
