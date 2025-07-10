@@ -833,14 +833,28 @@
 
           dontFixup = true;
         };
+        credits-versioned = with import nixpkgs { inherit system; };
+        stdenv.mkDerivation rec {
+          pname = "mm-credits-versioned";
+          inherit version;
+          src = ./credits.yaml;
+          dontUnpack = true;
+
+          buildPhase = ''
+            mkdir $out
+            echo "Version is ${revStr}"
+            sed 's/VERSION_TEMPLATE/${revStr}/g' $src > $out/credits.yaml
+          '';
+
+          dontInstall = true;
+
+          dontFixup = true;
+        };
         data-patched = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
           pname = "mm-data-patched";
           inherit version;
-          srcs = [
-            ./strings.yaml
-            ./credits.yaml
-          ];
+          src = ./strings.yaml;
           dontUnpack = true;
 
           nativeBuildInputs = [
@@ -849,9 +863,8 @@
 
 
           buildPhase = ''
-            paths=($srcs)
-            export STRINGS_PATH="''${paths[0]}"
-            export CREDITS_PATH="''${paths[1]}"
+            export STRINGS_PATH=$src
+            export CREDITS_PATH=${self.packages.${system}.credits-versioned}/credits.yaml
             echo "Strings path is $STRINGS_PATH"
             echo "Credits path is $CREDITS_PATH"
             echo "${resourceFilesStr}" | \

@@ -2276,11 +2276,10 @@
 - string: ''
   tab_mode: 0
 
-# TODO: set this programatically
-- string: Version VERSION
+- string: Version VERSION_TEMPLATE
   centered: true
   tab_mode: 1
-- string: For the latest release, visit
+- string: For the latest release, please visit
   centered: true
   tab_mode: 1
 - string: github.com/Gigahawk/sarugetchu_mm_patcher
