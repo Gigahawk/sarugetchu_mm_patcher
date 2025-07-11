@@ -3312,6 +3312,14 @@ Gクラッシャー:
     # game, but since we are putting stuff after the image this needs to be
     # shorter to compensate
     "a34c39ca": "140.0"
+"54":
+  raw: true
+  english:
+    # credit.indent_text
+    # Slightly shorten indent to allow longest strings to show without being
+    # cut off
+    "cfa5c4d1": "40"
+
 
 # Unknown
 "%の%を削除<さくじょ>して\n%の%をムーブします。 よろしいですか?":

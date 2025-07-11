@@ -8749,7 +8749,7 @@ def build_credits_bin(
     tab_mode_max_chars = {
         1: 44,
         2: 42,
-        0: 40,
+        0: 41,
         # HACK: tab mode 3 appears to be specific to raw strings, no limit
         3: 9999,
     }
