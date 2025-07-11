@@ -753,14 +753,14 @@
 
 #- string: 大野 拓也(東北新社)
 # Probably https://www.mobygames.com/person/116103/takuya-ono/
-- string: Takuya Ono (Tohokushinsha Film Corp.)
+- string: Takuya Ono(Tohokushinsha Film Corp.)
   tab_mode: 0
 
 
 #- string: 小林 見菜子(東北新社)
 # Possibly https://www.mobygames.com/person/386555/minako-kobayashi/
 # Using best guess romanization by ChatGPT
-- string: Minako Kobayashi (Tohokushinsha Film Corp.)
+- string: Minako Kobayashi(Tohokushinsha Film Corp.)
   tab_mode: 0
 
 - string: ''
@@ -772,7 +772,7 @@
 
 #- string: 加藤 敏(東北新社)
 # Likely https://www.mobygames.com/person/480364/satoshi-kato/
-- string: Satoshi Kato (Tohokushinsha Film Corp.)
+- string: Satoshi Kato(Tohokushinsha Film Corp.)
   tab_mode: 0
 
 - string: ''
@@ -808,13 +808,13 @@
 
 #- string: 菊地 智敦(ソニー⋅ミュージックパブリッシング)
 # Likely https://www.mobygames.com/person/182291/tomonobu-kikuchi/
-- string: Tomonobu Kikuchi (Sony Music Publishing)
+- string: Tomonobu Kikuchi(Sony Music Publishing)
   tab_mode: 0
 
 #- string: 松田 芳明(ニューカム)
 # Likely https://www.mobygames.com/person/139272/yoshiaki-matsuda/
 # Company is probably https://www.newcome.net/
-- string: Yoshiaki Matsuda (NEWCOME)
+- string: Yoshiaki Matsuda(NEWCOME)
   tab_mode: 0
 
 - string: ''
@@ -1543,17 +1543,17 @@
 # No idea why this is in hiragana
 # Company is https://usagiou.net/
 # https://usagiou.net/staff/yuji/
-- string: Yuji Umoto (usagi⋅ou)
+- string: Yuji Umoto(usagi⋅ou)
   tab_mode: 0
 
 #- string: 服部 剛(ウサギ王)
 # Probably https://www.mobygames.com/person/416467/go-hattori/
-- string: Goh Hattori (usagi⋅ou)
+- string: Goh Hattori(usagi⋅ou)
   tab_mode: 0
 
 #- string: 磯野 和沙(ウサギ王)
 # Possibly https://www.mobygames.com/person/437802/kazusa-isono/
-- string: Kazusa Isono (usagi⋅ou)
+- string: Kazusa Isono(usagi⋅ou)
   tab_mode: 0
 
 #- string: 河野 達也
@@ -1866,12 +1866,12 @@
 # Probably https://www.mobygames.com/person/198744/kazuaki-kawakami/
 # No idea what SMC is, ChatGPT suggests Shinano Media Communications but this
 # seems to be hallucinated
-- string: Kazuaki Kawakami (SMC)
+- string: Kazuaki Kawakami(SMC)
   tab_mode: 0
 
 #- string: 菅沼 謙二(SMC)
 # Probably https://www.mobygames.com/person/253009/kenji-suganuma/
-- string: Kenji Suganuma (SMC)
+- string: Kenji Suganuma(SMC)
   tab_mode: 0
 
 - string: ''
@@ -1886,7 +1886,7 @@
 # Probably https://www.alvion.co.jp/
 # Not sure why the original stylized it as all lower case, it appears with
 # normal proper noun case on Wikipedia and all caps on their website
-- string: Hitoshi Murakami (ALVION)
+- string: Hitoshi Murakami(ALVION)
   tab_mode: 0
 
 - string: ''
@@ -1899,7 +1899,7 @@
 #- string: 照井 一功(ブレインナビ)
 # Probably https://www.mobygames.com/person/245615/kazunori-terui/
 # Possibly https://www.wedge-hd.com/bnj/
-- string: Kazunori Terui (BRAIN NAVI)
+- string: Kazunori Terui(BRAIN NAVI)
   tab_mode: 0
 
 - string: ''
