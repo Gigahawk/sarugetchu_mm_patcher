@@ -193,6 +193,18 @@ https://www.youtube.com/playlist?list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka
     - Colosseum victory screen
     - Credits
 
+### Episode Specter
+
+https://www.youtube.com/playlist?list=PLO1x50nsk5Ve1f4e1qOFWp_3Axgr0oYPH
+
+21. https://www.youtube.com/watch?v=2IUCe0wZihA&list=PLO1x50nsk5Ve1f4e1qOFWp_3Axgr0oYPH&index=1
+    - Chip Synthesis for Specter
+    - 1st Tokyo Teleport level
+    - Cutscene: ST00S
+    - 1st Shinjuku level
+    - 1st Akihabara level
+    - Cutscene: ST01
+
 ## Old Notes
 
 Some old notes taken during development
