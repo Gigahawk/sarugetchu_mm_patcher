@@ -185,6 +185,14 @@ https://www.youtube.com/playlist?list=PLO1x50nsk5Ve35ubyChvh9KaQ5zIijaka
     - Cutscene: ST13 (no subtitles)
     - Credits (untranslated)
 
+### Colosseum
+
+20. https://www.youtube.com/watch?v=vKp4OzyF390
+    - Colosseum cutscenes
+    - Most Japanese text textures patched
+    - Colosseum victory screen
+    - Credits
+
 ## Old Notes
 
 Some old notes taken during development
