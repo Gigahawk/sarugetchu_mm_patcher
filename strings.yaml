@@ -727,6 +727,14 @@
   english: "World Semifinals"
 "ワールド決勝ステージ":
   english: "World Finals"
+"レジェンド一次予選ステージ":
+  english: "Legend Pre-qualifiers"
+"レジェンド二次予選ステージ":
+  english: "Legend Qualifiers"
+"レジェンド準決勝ステージ":
+  english: "Legend Semifinals"
+"レジェンド決勝ステージ":
+  english: "Legend Finals"
 "デビルズ一次予選ステージ":
   english: "Devils Pre-qualifiers"
 "デビルズ二次予選ステージ":
@@ -3601,8 +3609,6 @@ Gクラッシャー:
   password: true
 "トロを発見しました!":
   english: "Toro found!"
-"レジェンド一次予選ステージ":
-  english: "Legend 1st prelim stage."
 "強力<きょうりょく>な'光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
   english: "Fires a powerful flashbang that stuns nearby enemies.No attack power."
 "敵<てき>を麻痺<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
@@ -3703,12 +3709,6 @@ Gクラッシャー:
   english: "Synthesis failed."
 "バリア":
   english: "Barrier"
-"レジェンド二次予選ステージ":
-  english: "Legend 2nd Qualifier Stage"
-"レジェンド準決勝ステージ":
-  english: "Legend Semifinal Stage"
-"レジェンド決勝ステージ":
-  english: "Legend Final Stage"
 "エクストララウンド結果":
   english: "Extra Round Results"
   password: true
