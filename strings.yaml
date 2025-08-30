@@ -3386,16 +3386,16 @@ Gクラッシャー:
 "進行<しんこう>ファイルはセーブできませんが\n本当<ほんとう>にキャンセルしますか?":
   english: "Your progress cannot be saved.\nDo you really want to cancel?"
 "フェイズ途中集計結果<とちゅうしゅうけいけっか>":
-  english: "Mid-Round Results"
+  english: "Mid-Phase Results"
   password: true
   "ラウンド途中集計結果<とちゅうしゅうけいけっか>":
-  english: "Mid-Round Results"
+  english: "Mid-Phase Results"
   password: true
 "ラウンド結果<けっか>":
   english: "Round Results"
   password: true
   "フェイズ最終集計結果<さいしゅうしゅうけいけっか>":
-  english: "Final Round Results"
+  english: "Final Phase Results"
   password: true
 "スロット1-A":
   english: "Slot 1-A"
