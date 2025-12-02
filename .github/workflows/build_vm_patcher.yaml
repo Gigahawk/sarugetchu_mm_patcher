@@ -77,7 +77,7 @@ jobs:
           # HACK: We cannot know the patched CRC without access to the original elf/ISO.
           # Instead, just hardcode the new filename. This will have to be updated
           # if the production patches ever change
-          cp SCPS-15115_8EFDBAEB.pnach SCPS-15115_AABE2016.pnach
+          cp SCPS-15115_8EFDBAEB.pnach SCPS-15115_52BEE2A7.pnach
 
       - name: Release
         # TODO: unpin version when this is resolved
