@@ -22,12 +22,12 @@ jobs:
       - name: Restore and cache Nix store
         uses: nix-community/cache-nix-action@v6
         with:
-          primary-key: cache-${{ runner.os }}-nix-store-${{ hashFiles('**/*.nix') }}
+          primary-key: cache-yamlcheck-${{ runner.os }}-nix-store-${{ hashFiles('**/*.nix') }}
           restore-prefixes-first-match: cache-${{ runner.os }}-nix-store-
 
       - name: Print Strings
         run: |
-          nix develop --command ssmm-patcher print-strings
+          nix develop .#minimal --command ssmm-patcher print-strings
 
   check-credits:
     runs-on: ubuntu-latest
@@ -45,10 +45,10 @@ jobs:
       - name: Restore and cache Nix store
         uses: nix-community/cache-nix-action@v6
         with:
-          primary-key: cache-${{ runner.os }}-nix-store-${{ hashFiles('**/*.nix') }}
+          primary-key: cache-yamlcheck-${{ runner.os }}-nix-store-${{ hashFiles('**/*.nix') }}
           restore-prefixes-first-match: cache-${{ runner.os }}-nix-store-
 
       - name: Print Strings
         run: |
-          nix develop --command ssmm-patcher print-strings -s credits.yaml
+          nix develop .#minimal --command ssmm-patcher print-strings -s credits.yaml
 

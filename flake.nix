@@ -1093,6 +1093,12 @@
           export FONTCONFIG_FILE=${fontconfig_file}
         '';
       };
+      # Minimal environment for CI
+      devShells.minimal = pkgs.mkShell {
+        packages = [
+          ssmm-patcher.packages.${system}.default
+        ];
+      };
       devShells.win = pkgs.mkShell {
         packages = [
           pkgs.wget
