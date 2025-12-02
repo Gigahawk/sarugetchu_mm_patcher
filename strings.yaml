@@ -1485,7 +1485,7 @@ Gクラッシャー:
 "%のキャラクターファイル%の削除<さくじょ>が完了<かんりょう>しました。":
   # TODO: Figure out if there's a way to reorder placeholders
   english: "% character File%\nhas been deleted."
- "キャラクターファイルにセーブできませんが、\n本当<ほんとうに>にキャンセルしますか?":
+"キャラクターファイルにセーブできませんが、\n本当<ほんとうに>にキャンセルしますか?":
   english: "Character file cannot be saved.\nDo you really want to cancel?"
 
 # Default character select screen
