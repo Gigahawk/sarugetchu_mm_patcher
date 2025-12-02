@@ -1,0 +1,4 @@
+ASM_START 0x00551858
+    // Force framerate select func to be called with mode 2 (invalid/10fps?)
+    li $a0,0x2
+ASM_END
