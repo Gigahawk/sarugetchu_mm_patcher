@@ -1,0 +1,4 @@
+ASM_START 0x00551858
+    // Force framerate select func to be called with mode 1 (30fps)
+    li $a0,0x1
+ASM_END
