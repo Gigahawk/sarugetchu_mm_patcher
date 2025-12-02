@@ -56,7 +56,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Nix
-        uses: cachix/install-nix-action@v31
+        uses: nixbuild/nix-quick-install-action@v34
+        with:
+          nix_version: 2.31.2
+          nix_conf: |
+            keep-env-derivations = true
+            keep-outputs = true
+
 
       - name: Restore and cache Nix store
         uses: nix-community/cache-nix-action@v6
