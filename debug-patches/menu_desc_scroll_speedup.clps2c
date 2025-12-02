@@ -1,0 +1,4 @@
+ASM_START 0x005715cc
+    // Force scroll speed to be faster (stock value seems to always be 2)
+    li $v0,0x03
+ASM_END

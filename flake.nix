@@ -1009,6 +1009,7 @@
           prodPatchNames = [
             "font_scale"
             "enable_log_print"
+            "menu_desc_scroll_speedup"
           ];
           prodPatchNamesStr = builtins.concatStringsSep "," prodPatchNames;
         in
