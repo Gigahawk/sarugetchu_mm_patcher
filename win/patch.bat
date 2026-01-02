@@ -1,3 +1,5 @@
+echo Patcher started at %date% %time%
+
 echo Creating blank iso to write to
 
 for %%I in (mm.iso) do .\qemu\qemu-img.exe create -f raw mm_patched.iso %%~zI
@@ -15,5 +17,7 @@ echo Booting patcher VM
     -device virtio-blk-pci,drive=drive3,bootindex=4 ^
     -m 8G ^
     -smp 4
+
+echo Patcher finished at %date% %time%
 
 pause
