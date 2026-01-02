@@ -1,10 +1,10 @@
 1
 00:00:00,000 --> 00:00:05,039
-You made it this far too? Quite impressive
+You made it this far too? Quite impressive.
 
 2
 00:00:06,280 --> 00:00:09,549
-Quit it already, Specter! Aren't we all in trouble?
+Quit it already, Specter! You're causing trouble for everyone!
 
 3
 00:00:10,154 --> 00:00:11,041
