@@ -904,7 +904,7 @@
           buildPhase = ''
             echo "${resourceFilesStr}" | \
               xargs -P $NIX_BUILD_CORES -I {} bash -c '
-                gzip -9 -c "${self.packages.${system}.data-patched}/DATA1_patched/{}_patched" > "{}_patched.gz"
+                ${pkgs.gzip}/bin/gzip -9 -c "${self.packages.${system}.data-patched}/DATA1_patched/{}_patched" > "{}_patched.gz"
               '
           '';
 
