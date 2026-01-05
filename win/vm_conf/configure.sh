@@ -38,6 +38,13 @@ cd /root
 git clone https://github.com/Gigahawk/sarugetchu_mm_patcher.git
 cd sarugetchu_mm_patcher
 
+if [ -n "$1" ]; then
+    echo "Checking out git sha $1"
+    git checkout "$1"
+else
+    echo "No GIT_SHA provided, staying on default branch"
+fi
+
 # We use archive.org to download a leaked PS2 SDK, probably best that I
 # don't redistribute this so blocking it for now
 echo "Blocking archive.org downloads"

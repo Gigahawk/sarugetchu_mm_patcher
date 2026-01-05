@@ -14,6 +14,9 @@ jobs:
           sudo apt-get install qemu-utils
 
       - uses: actions/checkout@v4
+        with:
+          # Pull full history for correct git sha
+          fetch-depth: 0
 
       - name: Download Windows deps
         run: |
@@ -21,6 +24,8 @@ jobs:
           ./download_deps.sh
 
       - name: Build patcher image
+        env:
+          GIT_SHA: ${{ github.sha }}
         run: |
           cd win
           ./build_vm.sh
