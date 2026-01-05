@@ -19,7 +19,7 @@ sudo ./alpine-make-vm-image \
     --fs-skel-dir vm_conf/rootfs \
     --fs-skel-chown root:root \
     --script-chroot \
-    "$IMG_NAME" -- ./vm_conf/configure.sh
+    "$IMG_NAME" -- ./vm_conf/configure.sh $GIT_SHA
 
 echo "Cleaning up"
 rm alpine-make-vm-image
