@@ -54,6 +54,31 @@ sudo iptables -A OUTPUT -d archive.org -j REJECT
 # HACK: build from scratch fails due to homeless shelter, just
 # run the build in a loop while clearing it all the time
 # https://github.com/NixOS/nix/issues/8313
+# Note we have to build this explicitly otherwise it doesn't seem
+# to get picked up?
+i=1
+while [ "$i" -le 100 ]
+do
+    echo "Clearing homeless shelter"
+    rm -rf /homeless-shelter
+
+    echo "Clearing log"
+    rm -rf output.log
+
+    echo "Prebuilding ffmpeg-det $i"
+    nix build .#ffmpeg-det --keep-going 2>&1 | tee output.log
+
+    echo "Checking output log"
+    if grep -q "please remove it to assure purity of builds without sandboxing" output.log; then
+        echo "Build failed due to homeless shelter, retrying build"
+    else
+        echo "Build completed"
+        break
+    fi
+    i=$((i + 1))
+
+done
+
 i=1
 while [ "$i" -le 100 ]
 do
