@@ -371,6 +371,8 @@
                   -i "$m2v" \
                   -vf "$subtitle_filter" \
                   -b:v "$bitrate" \
+                  -bitexact \
+                  -threads 1 \
                   "$m2v_subbed"
                 cat <<EOF > "$mux"
             pss
