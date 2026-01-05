@@ -55,6 +55,9 @@ do
     i=$((i + 1))
 done
 
+echo "Copying symlink for later inspection"
+cp --preserver=links -R result result_backup
+
 echo "Copying iso back to host"
 # qemu script will always mount the output to vdd
 dd if=result/iso/mm_patched.iso of=/dev/vdd bs=32M status=progress
