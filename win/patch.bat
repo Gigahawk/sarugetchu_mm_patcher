@@ -1,4 +1,6 @@
 echo Patcher started at %date% %time%
+rem Cache starttime for later since VM output will get rid of it
+set starttime="%date% %time%"
 
 echo Creating blank iso to write to
 
@@ -19,6 +21,7 @@ echo Booting patcher VM
     -m 8G ^
     -smp 4
 
+echo Patcher originally started at %starttime%
 echo Patcher finished at %date% %time%
 
 pause
