@@ -42,6 +42,15 @@
     flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
+      # Disable optimizations in ffmpeg to hopefully get more deterministic builds
+      ffmpeg-det = pkgs.ffmpeg.overrideAttrs (prev: {
+        configureFlags = prev.configureFlags ++ [
+          "--disable-asm"
+          "--disable-inline-asm"
+          "--disable-x86asm"
+        ];
+        doCheck = false;
+      });
       mm-jp-iso = (pkgs.requireFile {
         name = "mm.iso";
         url = "";
@@ -222,6 +231,7 @@
       };
     in {
       packages = {
+        ffmpeg-det = ffmpeg-det;
         default = self.packages.${system}.iso-patched;
         iso-jp-extracted = with import nixpkgs { inherit system; };
         stdenv.mkDerivation rec {
@@ -333,7 +343,7 @@
           nativeBuildInputs = [
             ps2str.packages.${system}.default
             pkgs.jq
-            pkgs.ffmpeg
+            ffmpeg-det
 
             # For xxd single quote hack
             pkgs.unixtools.xxd
@@ -371,6 +381,8 @@
                   -i "$m2v" \
                   -vf "$subtitle_filter" \
                   -b:v "$bitrate" \
+                  -bitexact \
+                  -threads 1 \
                   "$m2v_subbed"
                 cat <<EOF > "$mux"
             pss
