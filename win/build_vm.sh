@@ -18,6 +18,7 @@ sudo ./alpine-make-vm-image \
     --packages "$(cat vm_conf/packages)" \
     --fs-skel-dir vm_conf/rootfs \
     --fs-skel-chown root:root \
+    --serial-console \
     --script-chroot \
     "$IMG_NAME" -- ./vm_conf/configure.sh $GIT_SHA
 
