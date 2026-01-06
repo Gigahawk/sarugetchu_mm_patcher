@@ -114,4 +114,5 @@ echo 'echo "Running patcher"' >> /root/.profile
 echo "patch-ssmm" >> /root/.profile
 
 echo "Enabling auto login"
-sed -i 's|tty1::respawn:/sbin/getty 38400 tty1|tty1::respawn:/sbin/agetty --autologin root --noclear tty1|' /etc/inittab
+#sed -i 's|tty1::respawn:/sbin/getty 38400 tty1|tty1::respawn:/sbin/agetty --autologin root --noclear tty1|' /etc/inittab
+sed -i 's|ttyS0::respawn:/sbin/getty -L 115200 ttyS0|ttyS0::respawn:/sbin/agetty -L 115200 --autologin root --noclear ttyS0|' /etc/inittab

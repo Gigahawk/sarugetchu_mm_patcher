@@ -15,6 +15,7 @@ echo Booting patcher VM
     -device virtio-blk-pci,drive=drive2,bootindex=3 ^
     -drive id=drive3,file=mm_patched.iso,format=raw,if=none ^
     -device virtio-blk-pci,drive=drive3,bootindex=4 ^
+    -serial stdio ^
     -m 8G ^
     -smp 4
 
