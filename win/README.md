@@ -36,7 +36,12 @@ It is incredibly inefficient and resource intensive compared to directly running
 2. Move/copy `mm.iso` and `sdk.iso` into the same folder as `patch.bat`
 3. Double click `check_integrity.bat` to check the MD5s of your files match
 4. Double click `patch.bat` to start the patcher VM. Once the VM shuts down the patched version will be called `mm_patched.iso`.
-    - This will take forever, on my Ryzen 5 5600 (running from a harddrive), this takes over 2 hours.
+    - This will take forever, see below for benchmark results
+    
+### Benchmark results
+
+- Ryzen 5 5600, 32GB RAM, patcher VM v1.26: 2hrs 25min
+
 
 ## Troubleshooting
 
