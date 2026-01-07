@@ -21,8 +21,8 @@ It is incredibly inefficient and resource intensive compared to directly running
 
 - At least 16GB of RAM
     - The VM takes up to 8GB of RAM.
-- At least 64GB of free space.
-    - The VM image may expand up to 96GB, but in practice it should not get larger than 64GB
+- At least 65GB of free space.
+    - The VM image may expand up to 96GB, as of v1.26 it seems to come in at 64.9GB after the patcher runs to completion
     - Build times may improve with an SSD
 
 ### Personal
