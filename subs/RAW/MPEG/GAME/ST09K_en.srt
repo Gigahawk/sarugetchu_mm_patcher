@@ -64,15 +64,15 @@ What do you think you’re doing!?
 
 17
 00:02:16,244 --> 00:02:17,494
-Good evening
+Good evening.
 
 18
 00:02:17,503 --> 00:02:19,773
-This is NSB Emergency News
+This is NSB Emergency News.
 
 19
 00:02:20,513 --> 00:02:21,384
-Breaking news
+Breaking news.
 
 20
 00:02:21,853 --> 00:02:23,281
@@ -80,15 +80,15 @@ We have been able to obtain
 
 21
 00:02:23,305 --> 00:02:24,744
-the following document
+the following document.
 
 22
 00:02:25,758 --> 00:02:26,780
-Under The Monkey
+Under The Monkey,
 
 23
 00:02:27,189 --> 00:02:28,148
-With The Monkey
+With The Monkey,
 
 24
 00:02:28,840 --> 00:02:30,191
@@ -96,7 +96,7 @@ Flyers like these
 
 25
 00:02:30,215 --> 00:02:32,919
-are being distributed all over the world
+are being distributed all over the world.
 
 26
 00:02:34,781 --> 00:02:36,524
@@ -108,7 +108,7 @@ has released the following comment
 
 28
 00:02:38,472 --> 00:02:40,461
-to the entire human race
+to the entire human race.
 
 29
 00:02:42,400 --> 00:02:43,209
@@ -140,11 +140,11 @@ Local residents are forming their own civilian forces
 
 36
 00:03:00,155 --> 00:03:02,715
-aside from the Anti-Monkeys World Defense
+aside from the Anti-Monkeys World Defense.
 
 37
 00:03:03,457 --> 00:03:05,456
-Here is a report on one of the groups
+Here is a report on one of the groups.
 
 38
 00:03:13,824 --> 00:03:16,234
@@ -152,7 +152,7 @@ These villagers are training to capture monkeys
 
 39
 00:03:16,258 --> 00:03:17,685
-using homemade nets
+using homemade nets.
 
 40
 00:03:19,344 --> 00:03:23,471
@@ -160,11 +160,11 @@ We're not worried about the monkeys,
 
 41
 00:03:23,725 --> 00:03:27,858
-we need to teach them a lesson
+we need to teach them a lesson.
 
 42
 00:03:29,527 --> 00:03:32,918
-Meanwhile, these men are making a monkey trap
+Meanwhile, these men are making a monkey trap.
 
 43
 00:03:33,571 --> 00:03:35,313
@@ -180,23 +180,23 @@ After placing the banana here...
 
 46
 00:03:45,840 --> 00:03:47,324
-We wish the best for them
+We wish the best for them.
 
 47
 00:03:48,375 --> 00:03:49,947
-Next, on the news
+Next, on the news.
 
 48
 00:03:50,434 --> 00:03:54,134
-One of the huge battleships in Japan has crashed into the sea
+One of the huge battleships in Japan has crashed into the sea.
 
 49
 00:03:54,746 --> 00:03:56,454
-Details are not yet known
+Details are not yet known.
 
 50
 00:03:57,175 --> 00:03:59,940
-At the scene, we have Misato Nonaka
+At the scene, we have Misato Nonaka.
 
 51
 00:04:02,513 --> 00:04:04,918
@@ -204,7 +204,7 @@ The battleship seems to have crashed into the sea up ahead.
 
 52
 00:04:05,152 --> 00:04:06,350
-We have someone who witnessed the crash
+We have someone who witnessed the crash,
 
 53
 00:04:06,360 --> 00:04:07,921
@@ -224,7 +224,7 @@ That’s how it seemed to me.
 
 57
 00:04:18,075 --> 00:04:21,552
-This footage of the battleship was taken by an eye witness
+This footage of the battleship was taken by an eyewitness.
 
 58
 00:04:22,109 --> 00:04:24,840
@@ -232,7 +232,7 @@ As the ship explodes and crashes into the sea,
 
 59
 00:04:24,904 --> 00:04:28,687
-a green, mist-like smoke can be seen coming from it
+a green, mist-like smoke can be seen coming from it.
 
 60
 00:04:31,024 --> 00:04:32,278
@@ -244,7 +244,7 @@ there has been a completely new lifeform
 
 62
 00:04:34,987 --> 00:04:36,432
-vandalizing the cities
+vandalizing the cities.
 
 63
 00:04:37,156 --> 00:04:39,834
@@ -252,7 +252,7 @@ These creatures have never been seen on the Earth before,
 
 64
 00:04:39,986 --> 00:04:43,349
-and very little is known about these creatures at present
+and very little is known about these creatures at present.
 
 65
 00:04:44,478 --> 00:04:46,672
@@ -260,7 +260,7 @@ We warn you not to go out,
 
 66
 00:04:47,077 --> 00:04:49,923
-and to exercise extreme caution
+and to exercise extreme caution.
 
 67
 00:04:51,553 --> 00:04:53,137
@@ -268,5 +268,5 @@ I am Fraya DeVapes,
 
 68
 00:04:53,254 --> 00:04:55,428
-that was the latest news
+that was the latest news.
 
