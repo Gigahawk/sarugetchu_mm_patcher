@@ -40,11 +40,11 @@ Ow...
 
 11
 00:00:40,321 --> 00:00:42,000
-You hurt your leg
+You hurt your leg,
 
 12
 00:00:42,250 --> 00:00:43,344
-I'll treat it
+I'll treat it for you.
 
 13
 00:00:45,319 --> 00:00:46,180
@@ -64,15 +64,15 @@ I need to gather parts and data
 
 17
 00:00:56,133 --> 00:01:00,123
-from the three towers in this base
+from the three towers in this base.
 
 18
 00:01:00,271 --> 00:01:02,991
-Then let's go together
+Then let's go together,
 
 19
 00:01:03,001 --> 00:01:05,095
-It's too dangerous to go alone
+it's too dangerous to go alone.
 
 20
 00:01:05,111 --> 00:01:06,100
@@ -84,7 +84,7 @@ Thank you!
 
 22
 00:01:08,409 --> 00:01:12,003
-Okay...This should be good for now
+Okay...This should be good for now.
 
 23
 00:01:12,012 --> 00:01:14,107
@@ -92,7 +92,7 @@ Don’t worry, Haruka
 
 24
 00:01:14,118 --> 00:01:17,405
-Kakeru will be your personal guard
+Kakeru will be your personal guard.
 
 25
 00:01:17,414 --> 00:01:18,680
@@ -124,7 +124,7 @@ Enemies are closing in, we're being surrounded!
 
 32
 00:01:37,340 --> 00:01:38,636
-Yes, let's hurry
+Yes, let's hurry!
 
 33
 00:01:38,646 --> 00:01:41,134
