@@ -430,7 +430,7 @@
   english: "Defeat Fake Specter!➝\n\fPipotron Meta has transformed\ninto a perfect copy of Specter.➝\n\fBe careful of his special move."
 ## Bridge 2
 "新種<しんしゅ>のピポトロンと思<おも>われる生物<せいぶつ>が現<あらわ>れました。 敵意<てきい>をみせ、攻撃<こうげき>をしかけてくる事<こと>が予想<よそう>されます。 十分注意<じゅうぶんちゅうい>して応戦<おうせん>してください。":
-  english: "A creature thouht to be a new species of Pipotron has appeared.We think it's hostile, please respond with caution."
+  english: "A creature thought to be a new species of Pipotron has appeared.We think it's hostile, please respond with caution."
 "サル軍<ぐん>とは別<べつ>の人物<じんぶつ>が現<あらわ>れました。 十分注意<じゅうぶんちゅうい>して対応<たいおう>してください。":
   english: "Someone not from the monkey army has appeared.Please be careful when dealing with them."
 "ブリッジ PM04:36":
@@ -2305,7 +2305,7 @@ Gクラッシャー:
   english: "Empty"
 ## Toro Costume
 "トロコスチューム":
-  english: "Toro"
+  english: "Toro Set"
 "「ニャ」を思<おも>わず語尾<ごび>に付<つ>けたくなる不思議<ふしぎ>なコスチュームです。":
   english: 'A strange costume that makes you want to add "nya" to the end of your sentences.'
 "βニャγを思<おも>わず語尾<ごび>に付<つ>けたくなる不思議<ふしぎ>なコスチュームです。":
@@ -2458,7 +2458,7 @@ Gクラッシャー:
   english: "It's not my fault!\nThe gun was controlling me!"
 
 "ジャーヌ":
-  english: "Janu"
+  english: "Janus"
 "ねぶそく":
   # Probably 寝不足
   english: "Sleepy"
@@ -2479,7 +2479,7 @@ Gクラッシャー:
 "モンサルト":
   english: "Monsart"
 "まちぼうけ":
-  english: "Left Waiting"
+  english: "Left waiting"
 "新宿<しんじゅく>で待<ま>ち合<あ>わせ中<ちゅう>のところを\n発見<はっけん>されゲッチュされる。":
   english: "Caught while waiting for someone at\nShinjuku."
 "バーモンにあったら\n遅<おく>れるなら電話<でんわ>しろよって伝<つた>えてください。":
@@ -2759,14 +2759,14 @@ Gクラッシャー:
   english: "I was making sure the ship didn't\nget jacked.You should thank me~."
 
 "ウッシー":
-  english: "Ussy"
+  english: "Usshi"
 "ヨットハーバーにて眠<ねむ>りかけているところを\n発見<はっけん>されゲッチュされる。":
   english: "Caught dozing off at the Yacht\nHarbor."
 " オレはお前<まえ>に負<ま>けたんじゃないぞ!\n あったかい日差<ひざ>しに負<ま>けたんだ!":
   english: "I didn't lose to you!\nI lost to the warm sun!"
 
 "ウル":
-  english: "Ur"
+  english: "Earl"
 "プリマ志望":
   english: "Prima Aspirant"
 "ヨットハーバーの広場<ひろば>で踊<おど>っているところを\n発見<はっけん>されゲッチュされる。":
@@ -2826,7 +2826,7 @@ Gクラッシャー:
 "コーネリアス":
   english: "Cornelius"
 "きゅうか中":
-  english: "On Vacation"
+  english: "On vacation"
 "ヨットハーバーにてくつろいでいるところを\n発見<はっけん>されゲッチュされる。":
   english: "Caught at the Yacht Harbor while\nrelaxing."
 "僕<ぼく>らは休暇中<きゅうかちゅう>だったんだ。\nさぼってたわけじゃないぞ。":
@@ -2896,7 +2896,7 @@ Gクラッシャー:
 "フランソワ":
   english: "Francois"
 "まちぶせ隊":
-  english: "Ambush squad"
+  english: "Ambush Squad"
 "アツくてアツくて⋅⋅⋅。\n意識<いしき>がもうろうとしてました。":
   english: "So hot,so hot...\nI was losing consciousness."
 
@@ -2931,14 +2931,14 @@ Gクラッシャー:
   english: "Hmm. My design is flawless!\nThis guarantees my promotion!!"
 
 "サルトル":
-  english: "Saltle"
+  english: "Saltre"
 "クレーンにひっかかっているところを\n発見<はっけん>されゲッチュされる。":
   english: "Caught while stuck on a crane."
 "⋅⋅⋅何<なに>も聞<き>かないでくれよ。\nどうしてああなったのかわからないんだ。":
   english: "Don't ask me anything.\nI don't know why it happened."
 
 "サルベスタ":
-  english: "Salvesta"
+  english: "Salvester"
 "鉄骨<てっこつ>にしがみついているところを\n発見<はっけん>されゲッチュされる。":
   english: "Found clinging to a steel beam\nand caught."
 "エアコンがこわれて修理<しゅうり>してたのさ。\n怖<こわ>くてふるえてたんじゃないよ!":
@@ -2954,7 +2954,7 @@ Gクラッシャー:
   english: "My ultimate slacking skill\nfailed?! You're no ordinary foe!"
 
 "ピサル":
-  english: "Pisar"
+  english: "Pisaru"
 "まちぶせキング":
   english: "Ambush King"
 "地下街<ちかがい>にて待<ま>ち伏<ぶ>せ中<ちゅう>に\n発見<はっけん>されゲッチュされる。":
