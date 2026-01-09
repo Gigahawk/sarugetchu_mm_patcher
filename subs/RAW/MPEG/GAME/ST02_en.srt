@@ -32,7 +32,7 @@ and by whom the base has been destroyed.
 
 9
 00:00:34,234 --> 00:00:35,964
-The Anti-Monkeys World Defence
+The Anti-Monkeys World Defense
 
 10
 00:00:35,988 --> 00:00:37,874
@@ -68,7 +68,7 @@ In this way, the monkeys are preparing for a future increase
 
 18
 00:01:07,694 --> 00:01:08,630
-increase in their numbers.
+in their numbers.
 
 19
 00:01:09,910 --> 00:01:12,748
@@ -92,7 +92,7 @@ Behind me there are monkeys planting
 
 24
 00:01:24,096 --> 00:01:25,953
-bananas all over the square
+bananas all over the square.
 
 25
 00:01:26,126 --> 00:01:28,014
@@ -136,7 +136,7 @@ Well, even though they're just monkeys,
 
 35
 00:01:59,679 --> 00:02:00,467
-they've been hard to deal with
+they've been hard to deal with.
 
 36
 00:02:00,468 --> 00:02:02,132

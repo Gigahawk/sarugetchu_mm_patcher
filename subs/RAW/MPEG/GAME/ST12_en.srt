@@ -1,14 +1,14 @@
 1
 00:00:10,244 --> 00:00:11,064
-Good morning
+Good morning.
 
 2
 00:00:11,279 --> 00:00:13,867
-This is NSB Emergency News
+This is NSB Emergency News.
 
 3
 00:00:14,590 --> 00:00:16,054
-First in the news
+First in the news.
 
 4
 00:00:17,150 --> 00:00:19,301
@@ -16,7 +16,7 @@ People who have decided to join forces
 
 5
 00:00:19,325 --> 00:00:22,089
-with the monkeys have been sighted in the cities
+with the monkeys have been sighted in the cities.
 
 6
 00:00:22,786 --> 00:00:25,279
@@ -28,7 +28,7 @@ and there has been a festive mood all over the world
 
 8
 00:00:28,351 --> 00:00:30,351
-as these people increase in numbers
+as these people increase in numbers.
 
 9
 00:00:32,232 --> 00:00:33,726
@@ -56,11 +56,11 @@ Hurah for the monkeys!
 
 15
 00:00:41,806 --> 00:00:44,985
-It appears that the situation is quite chaotic
+It appears that the situation is quite chaotic.
 
 16
 00:00:46,260 --> 00:00:47,744
-Next, from Japan
+Next, from Japan.
 
 17
 00:00:48,550 --> 00:00:51,841
@@ -68,11 +68,11 @@ The mysterious creatures that have been vandalizing the cities,
 
 18
 00:00:52,242 --> 00:00:55,851
-are thought to be from the huge crashed battleship in the ocean
+are thought to be from the huge crashed battleship in the ocean.
 
 19
 00:00:56,782 --> 00:00:59,000
-We have a helicopter report from the site
+We have a helicopter report from the site.
 
 20
 00:01:00,445 --> 00:01:01,451
@@ -84,11 +84,11 @@ Nonaka-san?
 
 22
 00:01:05,572 --> 00:01:08,572
-Yes, we're currently flying over the battleship crash site
+Yes, we're currently flying over the battleship crash site.
 
 23
 00:01:08,582 --> 00:01:11,585
-It's about 5km from the coast
+It's about 5km from the coast.
 
 24
 00:01:11,979 --> 00:01:14,201
@@ -96,15 +96,15 @@ The battleship didn't sink,
 
 25
 00:01:14,225 --> 00:01:16,079
-it's currently floating on the ocean surface
+it's currently floating on the ocean surface.
 
 26
 00:01:16,089 --> 00:01:18,579
-You can see broken parts scattered around
+You can see broken parts scattered around.
 
 27
 00:01:19,061 --> 00:01:23,981
-It looks like a green gas or liquid is leaking from it
+It looks like a green gas or liquid is leaking from it.
 
 28
 00:01:23,991 --> 00:01:26,083
@@ -112,7 +112,7 @@ That green substance might be
 
 29
 00:01:26,093 --> 00:01:29,086
-the cause of the mysterious creature outbreak
+the cause of the mysterious creature outbreak.
 
 30
 00:01:29,095 --> 00:01:32,756
@@ -124,11 +124,11 @@ but it looks like a giant creature is moving around inside
 
 32
 00:01:41,238 --> 00:01:44,091
-Well it seems we're having some technical difficulties
+Well it seems we're having some technical difficulties.
 
 33
 00:01:44,531 --> 00:01:47,118
-We will get back to you later with more news
+We will get back to you later with more news.
 
 34
 00:01:48,091 --> 00:01:50,019
@@ -136,5 +136,5 @@ I am Fraya DeVapes,
 
 35
 00:01:50,215 --> 00:01:52,504
-that was the latest news
+that was the latest news.
 

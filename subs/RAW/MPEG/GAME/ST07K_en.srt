@@ -8,7 +8,7 @@ Weren't we inside the battleship?
 
 3
 00:00:08,515 --> 00:00:11,505
-Mm, this is a Virtual Space
+Mm, this is a Virtual Space.
 
 4
 00:00:11,515 --> 00:00:14,518
@@ -56,5 +56,5 @@ I can multiply as much as I want...
 
 15
 00:01:38,111 --> 00:01:40,104
-each one of them is the real me
+each one of them is the real me...
 

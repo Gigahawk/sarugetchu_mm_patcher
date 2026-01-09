@@ -1,6 +1,6 @@
 1
 00:00:09,710 --> 00:00:11,778
-This is NSB Emergency News
+This is NSB Emergency News.
 
 2
 00:00:11,802 --> 00:00:13,970
