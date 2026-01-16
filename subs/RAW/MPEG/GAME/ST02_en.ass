@@ -1,0 +1,88 @@
+[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: 
+ScriptType: v4.00+
+PlayDepth: 0
+ScaledBorderAndShadow: Yes
+PlayResX: 640
+PlayResY: 480
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,FreeSans,33.3,&H00FFFFFF,&H0000FFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,1,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:09.71,0:00:11.78,Default,,0,0,0,,This is NSB Emergency News.
+Dialogue: 0,0:00:13.08,0:00:16.02,Default,,0,0,0,,The monkey's base the near industrial complex
+Dialogue: 0,0:00:16.04,0:00:17.92,Default,,0,0,0,,that we reported on previously
+Dialogue: 0,0:00:17.94,0:00:20.96,Default,,0,0,0,,has been destroyed by an unknown force.
+Dialogue: 0,0:00:21.36,0:00:24.59,Default,,0,0,0,,Since it has been difficult to get close to this base
+Dialogue: 0,0:00:24.62,0:00:26.46,Default,,0,0,0,,due to the monkey's tight security
+Dialogue: 0,0:00:26.48,0:00:29.33,Default,,0,0,0,,we have as yet to discover how
+Dialogue: 0,0:00:29.35,0:00:32.30,Default,,0,0,0,,and by whom the base has been destroyed.
+Dialogue: 0,0:00:34.23,0:00:35.96,Default,,0,0,0,,The Anti-Monkeys World Defense
+Dialogue: 0,0:00:35.99,0:00:37.87,Default,,0,0,0,,has not a reached a conclusion either
+Dialogue: 0,0:00:37.90,0:00:39.36,Default,,0,0,0,,as to what has happened there,
+Dialogue: 0,0:00:39.53,0:00:44.75,Default,,0,0,0,,{\pos(320,40)}(???) at present, we have no more information whatsoever
+Dialogue: 0,0:00:39.53,0:00:42.11,Default,,0,0,0,,and is currently investigating the situation.
+Dialogue: 0,0:00:45.10,0:00:47.50,Default,,0,0,0,,{\pos(320,40)}regarding this destruction of the monkey's base.
+Dialogue: 0,0:00:48.10,0:00:51.32,Default,,0,0,0,,{\pos(320,40)}We will get back with you as soon as we find out more.
+Dialogue: 0,0:00:52.74,0:00:55.52,Default,,0,0,0,,In other news, the monkeys are continuing to build
+Dialogue: 0,0:00:55.54,0:00:57.52,Default,,0,0,0,,banana fields for their food supply.
+Dialogue: 0,0:00:58.10,0:01:02.03,Default,,0,0,0,,As you can see, more and more areas are being transformed
+Dialogue: 0,0:01:02.05,0:01:03.41,Default,,0,0,0,,into banana fields.
+Dialogue: 0,0:01:03.92,0:01:07.67,Default,,0,0,0,,In this way, the monkeys are preparing for a future increase
+Dialogue: 0,0:01:07.69,0:01:08.63,Default,,0,0,0,,in their numbers.
+Dialogue: 0,0:01:09.91,0:01:12.75,Default,,0,0,0,,There seems to be nothing we can do about it.
+Dialogue: 0,0:01:13.93,0:01:15.82,Default,,0,0,0,,We now have a live report from Moscow.
+Dialogue: 0,0:01:16.15,0:01:16.99,Default,,0,0,0,,Migel
+Dialogue: 0,0:01:20.51,0:01:22.04,Default,,0,0,0,,This is Red Square in Moscow.
+Dialogue: 0,0:01:22.13,0:01:24.05,Default,,0,0,0,,Behind me there are monkeys planting
+Dialogue: 0,0:01:24.10,0:01:25.95,Default,,0,0,0,,bananas all over the square.
+Dialogue: 0,0:01:26.13,0:01:28.01,Default,,0,0,0,,A total of 600 banana trees have been planted so far.
+Dialogue: 0,0:01:33.69,0:01:35.60,Default,,0,0,0,,Are you okay-Migel? Migel?
+Dialogue: 0,0:01:40.43,0:01:43.27,Default,,0,0,0,,We move on now to a live report on from the front line
+Dialogue: 0,0:01:43.29,0:01:46.21,Default,,0,0,0,,protected by the Anti-Monkeys World Defense.
+Dialogue: 0,0:01:49.12,0:01:50.12,Default,,0,0,0,,Uh, right now we are on
+Dialogue: 0,0:01:50.12,0:01:52.12,Default,,0,0,0,,the battlefield at the Port of Yokohama.
+Dialogue: 0,0:01:52.12,0:01:54.04,Default,,0,0,0,,This area has been contested by the monkeys,
+Dialogue: 0,0:01:54.04,0:01:56.13,Default,,0,0,0,,and a fierce gunfight has broken out.
+Dialogue: 0,0:01:56.60,0:01:58.77,Default,,0,0,0,,Captain, captain, how is the battle going?
+Dialogue: 0,0:01:58.79,0:01:59.65,Default,,0,0,0,,Well, even though they're just monkeys,
+Dialogue: 0,0:01:59.68,0:02:00.47,Default,,0,0,0,,they've been hard to deal with.
+Dialogue: 0,0:02:00.47,0:02:02.13,Default,,0,0,0,,We've been constantly pushing only to retreat later.
+Dialogue: 0,0:02:03.06,0:02:04.64,Default,,0,0,0,,Hurry! Take cover!
+Dialogue: 0,0:02:06.80,0:02:08.14,Default,,0,0,0,,It's dangerous! Get down! Get Down!
+Dialogue: 0,0:02:11.65,0:02:13.15,Default,,0,0,0,,Is this...a banana?
+Dialogue: 0,0:02:13.17,0:02:16.15,Default,,0,0,0,,Idiot! Throw it away! Throw it away now!
+Dialogue: 0,0:02:16.15,0:02:17.31,Default,,0,0,0,,That's a banana grenade!
+Dialogue: 0,0:02:19.15,0:02:22.16,Default,,0,0,0,,…they're just monkeys, but so hard to deal with…
+Dialogue: 0,0:02:22.16,0:02:24.99,Default,,0,0,0,,Captain! Are you okay?! Stay with me!
+Dialogue: 0,0:02:25.02,0:02:26.26,Default,,0,0,0,,Are you okay captain?!
+Dialogue: 0,0:02:26.99,0:02:28.98,Default,,0,0,0,,Nonaka-san? Nonaka-san?
+Dialogue: 0,0:02:31.53,0:02:34.86,Default,,0,0,0,,It appears to be a critical situation at the battlefront.
+Dialogue: 0,0:02:37.04,0:02:38.01,Default,,0,0,0,,This just in.
+Dialogue: 0,0:02:40.58,0:02:43.55,Default,,0,0,0,,The Anti-Monkeys World Defense has commented
+Dialogue: 0,0:02:44.02,0:02:47.96,Default,,0,0,0,,that they are engaged in a severe contact situation with the
+Dialogue: 0,0:02:47.98,0:02:52.60,Default,,0,0,0,,monkey's battleships over the cities of Los Angeles, Berlin,
+Dialogue: 0,0:02:52.62,0:02:53.87,Default,,0,0,0,,and Paris.
+Dialogue: 0,0:02:55.31,0:02:58.10,Default,,0,0,0,,The image you're seeing right now is from Los Angeles.
+Dialogue: 0,0:02:59.06,0:03:01.06,Default,,0,0,0,,A local who witnessed the battle says that
+Dialogue: 0,0:03:01.08,0:03:02.59,Default,,0,0,0,,the attack by the humans
+Dialogue: 0,0:03:02.61,0:03:05.24,Default,,0,0,0,,seemed to have no effect on the monkeys.
+Dialogue: 0,0:03:07.09,0:03:08.11,Default,,0,0,0,,From what I see,
+Dialogue: 0,0:03:08.14,0:03:11.11,Default,,0,0,0,,there's no way with all the banana, banana, banana.
+Dialogue: 0,0:03:11.99,0:03:14.60,Default,,0,0,0,,Definitely, the monkeys will win the battle.
+Dialogue: 0,0:03:16.06,0:03:17.41,Default,,0,0,0,,Back to Japan.
+Dialogue: 0,0:03:18.47,0:03:21.65,Default,,0,0,0,,Around the same time that the base at the industrial complex
+Dialogue: 0,0:03:21.68,0:03:25.10,Default,,0,0,0,,was destroyed, a huge new battleship appeared
+Dialogue: 0,0:03:25.12,0:03:26.71,Default,,0,0,0,,above the nearby stadium.
+Dialogue: 0,0:03:27.69,0:03:30.98,Default,,0,0,0,,This battleship is believed to be the one of which the monkeys'
+Dialogue: 0,0:03:31.01,0:03:33.98,Default,,0,0,0,,leader Specter was when he first arrived.
+Dialogue: 0,0:03:34.98,0:03:39.25,Default,,0,0,0,,Some specialists say that the battleship is providing resources
+Dialogue: 0,0:03:39.27,0:03:42.53,Default,,0,0,0,,to the monkeys in order to construct another base.
+Dialogue: 0,0:03:44.53,0:03:47.71,Default,,0,0,0,,As this battleship has not been seen since the initial attack,
+Dialogue: 0,0:03:47.73,0:03:51.80,Default,,0,0,0,,it's reappearance is causing tension to mount in Japan.
+Dialogue: 0,0:03:53.17,0:03:54.85,Default,,0,0,0,,I am Fraya DeVapes,
+Dialogue: 0,0:03:54.87,0:03:57.01,Default,,0,0,0,,that was the latest news.
