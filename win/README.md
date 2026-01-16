@@ -41,7 +41,8 @@ It is incredibly inefficient and resource intensive compared to directly running
 ### Benchmark results
 
 - Ryzen 5 5600, 32GB RAM, patcher VM v1.26: 2hrs 25min
-- Core i5 4300M, 16GB RAM,patcher VM v1.26: 8hrs 55min
+- Core i5 4300M, 16GB RAM, patcher VM v1.26: 8hrs 55min
+- Core i7 4910MQ, 16GB RAM. patcher VM v1.26: 5hrs 40min
 
 ## Troubleshooting
 
