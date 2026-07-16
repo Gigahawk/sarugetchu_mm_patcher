@@ -21,6 +21,10 @@
   english: "Cancel"
 マップいどう:
   english: "Move Map"
+"かくにん":
+  english: "Confirm"
+"すすむ":
+  english: "Proceed"
 
 
 # Keyboard
@@ -64,7 +68,7 @@
 "メモリーカードスロットを選<えら>んでください。":
   english: "Please select a Memory Card slot."
 "進行<しんこう>ファイルを使用<しよう>しないでゲームを始<はじ>めます。":
-  english: "Start the game without a Save File."
+  english: "Start the game without a save file."
 
 # Memory Card select warnings
 "アクセス中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししないでください。":
@@ -89,6 +93,10 @@
   english: "Creating game data!\nDo not remove the\nMemory Card in % or\npower off the console."
 "%のメモリーカード(PS2)に\nミリオンモンキーズのゲームデータを作成<さくせい>しました。":
   "english": "Game data created in Memory Card %."
+"%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
+  english: "Failed to create Million Monkeys\ngame data on %."
+"%の進行<しんこう>ファイルの\nロードに失敗<しっぱい>しました。":
+  english: "Failed to load progress\nfile on %."
 
 
 # File select screen
@@ -96,6 +104,14 @@
   english: "File"
 "空き領域":
   english: "Free Slot"
+"からふぁいる":
+  # Why is this in hiragana????
+  # Probably 空ファイル
+  english: "Empty File"
+"はそんふぁいる":
+  # Why is this in hiragana????
+  # Probably 破損ファイル
+  english: "Corrupted File"
 
 # File select screen descriptions
 "ファイルを選<えら>んでください。":
@@ -158,6 +174,8 @@
 # Story mode difficulty select screen
 "なんいど設定":
   english: "Difficulty"
+"ふつう":
+  english: "Normal"
 "ハード":
   english: "Hard"
 "ベリーハード":
@@ -165,11 +183,11 @@
 
 # Story mode difficulty select screen descriptions
 "ノーマルモードで遊<あそ>びます。":
-  english: "Play with default difficulty."
+  english: "Play on the normal difficulty."
 "ハードモードで遊<あそ>びます。":
-  english: "Play with hard difficulty."
+  english: "Play on the hard difficulty."
 "ベリーハードモードで遊<あそ>びます。":
-  english: "Play with very hard difficulty."
+  english: "Play on the very hard difficulty."
 
 # Story mode episode select screen
 "エピソードカケル":
@@ -238,7 +256,7 @@
 " PM02:16":
   "english": " 02:16PM"
 "ピエールを発見しました!":
-  english: "Found Pierre!"
+  english: "You found Pierre!"
 "新宿駅<しんじゅくえき>でピポサル軍一個小隊<ぐんいっこしょうたい>が展開中<てんかいちゅう>との情報<じょうほう>をキャッチしました! 直<ただ>ちに現場<げんば>に急行<きゅうこう>してください!!":
   "english": "We have received intel that a platoon of Piposaru troops is currently deployed at Shinjuku Station!Please rush to the scene immediately!!"
 "ターゲットをすべて倒<たお>せ!➝\n\fTARGETマークのついたサル兵<へい>を\nすべて倒<たお>してください。":
@@ -318,7 +336,7 @@
 "衛星<えいせい>レーザーの発射<はっしゃ>を阻止<そし>せよ!➝\n\f基地内<きちない>の3基<き>の発射装置<はっしゃそうち>を破壊<はかい>すれば\nレーザー砲<ほう>の発射<はっしゃ>を阻止<そし>できますが\n強力<きょうりょく>な警備<けいび>システムに守<まも>られています。➝\n\f警備<けいび>のレベルは基地外<きちがい>のエネルギー供給炉<きょうきゅうろ>と\n直結<ちょっけつ>していますので破壊<はかい>し警備<けいび>のレベルを\nダウンさせてください。":
   english: "Stop the satellite laser from\nfiring!➝\n\fDestroy the 3 terminals protected\nby the security system to disable\nthe laser.➝\n\fThe reactors outside power the\nsecurity system,destroy them to\ndisable the security system."
 "スズキを発見しました!":
-  english: "Found Suzuki!"
+  english: "You found Suzuki!"
 "セキュリティ 機銃停止!":
   english: "Security: Guns disabled!"
 "セキュリティ バリア解除!":
@@ -337,7 +355,7 @@
 " PM03:07":
   english: " 03:07PM"
 "クロを発見しました!":
-  english: "Found Kuro!"
+  english: "You found Kuro!"
 ## Stadium
 "スタジアム":
   english: "Stadium"
@@ -613,6 +631,18 @@
 "パズルボーナス":
   english: "Puzzle Bonus"
   password: true
+"撃破ボーナス":
+  english: "Defeat Bonus"
+  password: true
+"回ミス":
+  # Probably goes after a number?
+  english: "Misses"
+"ミッション結果<けっか>":
+  english: "Mission Results"
+  password: true
+"チェーンボーナス":
+  english: "Chain Bonus"
+  password: true
 
 # Load character slot select screen
 "キャラクターファイル":
@@ -659,6 +689,8 @@
   english: "Assign a final move to activate when Χ and □ are pressed together."
 "□ボタンと△ボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。":
   english: "Assign a final move to activate when □ and △ are pressed together."
+"セットする必殺技<ひっさつわざ>を選<えら>んでください。":
+  english: "Select a special move to equip."
 
 # Mode select screen descriptions
 "ストーリーで遊<あそ>ぶモードです。":
@@ -705,6 +737,10 @@
 # Colosseum Mode screen descriptions
 "初級者<しょきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
   english: "Start a beginners tournament."
+"中級者<ちゅうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
+  english: "Start an intermediate tournament."
+"上級者<じょうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
+  english: "Start a hard tournament."
 
 # Colosseum Mode character select screen descriptions
 "キャラクターファイルをロードします。":
@@ -1064,9 +1100,9 @@
     "63dc2ea2": "Gnd.Impact Bullet"
 "Wレーザーフルバースト":
   # W Laser Full Burst
-  english: "W Laser Burst"
+  english: "Dbl Laser Burst"
 "Wレーザー\nフルバースト":
-  english: "W Laser\nBurst"
+  english: "Dbl Laser\nBurst"
 ## Charu
 "ガチャメカコントロール":
   english: "Gadget Control"
@@ -1996,7 +2032,7 @@ Gクラッシャー:
 "ゴールドヘアー":
   english: "Gold Hair"
 "どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>が金色<きんいろ>です。":
-  english: "It's unclear how he got here,but his hair is golden."
+  english: "It's unclear how he got this way,but his hair is golden."
 ## Purple Style
 "パープルスタイル":
   english: "Purple Style"
@@ -2043,7 +2079,7 @@ Gクラッシャー:
 "グリーンヘアー":
   english: "Green Hair"
 "どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>がみどりです。":
-  english: "It's unclear how he got here,but his hair is green."
+  english: "It's unclear how he got this way,but his hair is green."
 ## Blue Style
 "ブルースタイル":
   english: "Blue Style"
@@ -2087,7 +2123,7 @@ Gクラッシャー:
 "パープルヘアー":
   english: "Purple Hair"
 "どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>がむらさきです。":
-  english: "It's unclear how he got here,but his hair is purple."
+  english: "It's unclear how he got this way,but his hair is purple."
 ## White Style
 "ホワイトスタイル":
   english: "White Style"
@@ -2458,7 +2494,7 @@ Gクラッシャー:
   english: "It's not my fault!\nThe gun was controlling me!"
 
 "ジャーヌ":
-  english: "Janus"
+  english: "Jeanne"
 "ねぶそく":
   # Probably 寝不足
   english: "Sleepy"
@@ -2782,7 +2818,7 @@ Gクラッシャー:
   english: "Looking at the vast ocean... I stop\nworrying about the little things."
 
 "エーテ":
-  english: "Athe"
+  english: "E.Tee"
 "へたくそ":
   english: "Clumsy"
 "ヨットハーバーにて木<き>に登<のぼ>っているところを\n発見<はっけん>されゲッチュされる。":
@@ -3037,8 +3073,14 @@ Gクラッシャー:
   english: "Breaking News 1"
 "緊急ニュース2":
   english: "Breaking News 2"
+"VS.ニセスペクター":
+  english: "VS.Fake Specter"
+"謎の男再び":
+  english: "Mysterious Man Returns"
 "VS.スペクター":
   english: "VS.Specter"
+"VS.カケル":
+  english: "VS.Kakeru"
 "VS.ピポトロンG":
   english: "VS.Pipotron G"
 "ブリッジ切り離し":
@@ -3103,6 +3145,8 @@ Gクラッシャー:
   english: "Synthesizing..."
 "合成<ごうせい>が終<お>わりました。":
   english: "Synthesis complete."
+"合成<ごうせい>に失敗<しっぱい>しました。":
+  english: "Synthesis failed."
 "レシピ一覧<いちらん>に戻<もど>ります。":
   english: "Return to the Recipe List."
 
@@ -3140,12 +3184,20 @@ Gクラッシャー:
   english: "Return to the Chip Select menu."
 "チップムーブ中<ちゅう>。":
   english: "Moving chip..."
+"削除<さくじょ>するチップを選<えら>んで、結果<けっか>をセーブします。":
+  english: "Select a chip to delete and save results."
 
 # Move Chips screen warnings
 "同<おな>じキャラクターにチップムーブはできません。":
   english: "Can't move chips to the same\ncharacter."
 "%はチップがいっぱいです!\n%をムーブするには持<も>っているチップを\nどれか1つ削除<さくじょ>しなくてはいけません。\nチップを削除<さくじょ>しますか?":
   english: "%'s chip inventory is full!\nYou must delete a chip first to move the %.\nDelete a chip?"
+"チップ合成<ごうせい>できないキャラクターなので\nムーブできません。":
+  english: "This character can't combine chips\nand cannot be moved."
+"すでにロードされた\nキャラクターは使用<しよう>できません。":
+  english: "Loaded characters\ncan't be used."
+"%の%を削除<さくじょ>して\n%の%をムーブします。 よろしいですか?":
+  english: "Deleting % from % and\nmoving % from %? Proceed?"
 
 # Move Chips screen dialogs
 "%の%を%へムーブします。\nよろしいですか?":
@@ -3174,7 +3226,7 @@ Gクラッシャー:
 "BGM":
   english: "BGM"
 "SE":
-  english: "SE"
+  english: "SFX"
 
 # Options screen warnings
 "進行<しんこう>ファイル%をセーブ中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
@@ -3347,8 +3399,6 @@ Gクラッシャー:
 
 
 # Unknown
-"%の%を削除<さくじょ>して\n%の%をムーブします。 よろしいですか?":
-  english: "Deleting % from % and\nmoving % from %? Proceed?"
 "マッチセレクトに戻<もど>ります。":
   english: "Return to the Match Select menu."
 "チップ削除":
@@ -3369,10 +3419,6 @@ Gクラッシャー:
   english: "The SP Gadget\nwill be destroyed!"
 "SPガチャメカセレクト":
   english: "SP Gadget Select"
-"VS.カケル":
-  english: "VS.Kakeru"
-"VS.ニセスペクター":
-  english: "VS.Fake Specter"
 "アタックするステージを選<えら>んでください。":
   # Where is this used? What does it mean to attack a stage?
   english: "Select the stage to attack."
@@ -3431,7 +3477,71 @@ Gクラッシャー:
   english: "Select sound output format."
 "音量<おんりょう>のバランスを選択<せんたく>してください。":
   english: "Select volume balance."
-
+"大<おお>きな翼<つばさ>の形<かたち>をしたバーニアです。 これを装備<そうび>して羽<は>ばたく様<さま>はまるで天使<てんし>のように美<うつく>しく見<み>えることでしょう。":
+  english: "Large wing-shaped jetpack.Flapping resembles a beautiful angel."
+"エクストララウンド結果":
+  english: "Extra Round Results"
+  password: true
+"ラウンド最終集計結果<さいしゅうしゅうけいけっか>":
+  english: "Final Round Results."
+  password: true
+"高<たか>く羽<は>ばたくことのできるアクマのような外見<がいけん>の翼<つばさ>。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。":
+  english: "Wings with a devilish look that let you soar high.Use them freely without energy cost."
+"トロコスチュームをゲットしました。":
+  english: "You got the Toro costume!"
+"攻撃力重視<こうげきりょくじゅうし>のロボットです。":
+  english: "A robot focused on attack power."
+"ラウンドを始<はじ>めます。":
+  english: "Round Start."
+"でちゃダメ":
+  english: "You Can't Do That"
+"属性<ぞくせい>の違<ちが>うパーツはセットできません。":
+  english: "Parts with different attributes cannot be set."
+"バイブレーションのオン⋅オフを選択<せんたく>してください。":
+  english: "Turn vibration on or off."
+"なんいど設定<せってい>":
+  english: "Difficulty settings."
+"オプション設定<せってい>":
+  english: "Options settings."
+"サバクノクニの王<おう>さま。 強力<きょうりょく>な「<のろ>いで援護<えんご>してくれます。        ":
+  english: "King of the Desert Nation.Provides strong 'curse' support."
+"％<け>り上<あ>げた相手<あいて>に一斉射撃<いっせいしゃげき>をおみまいします。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  # This seems to be a real string, but probably unused? Matches an existing string with correct kanji
+  english: "Fire a barrage at the raised enemy.Lock-on recommended for accuracy."
+"サウンドの出カ形式<しゅつりょくけいしき>を選択<せんたく>してください。":
+  english: "Choose sound output format."
+"のデータを復元中<ふくげんちゅう>。":
+  english: "Restoring data..."
+"作成中<さくせいちゅう>":
+  english: "Creating..."
+"他のボタンでとりけし":
+  english: "Cancel with another button."
+"そうさ説明":
+  english: "Control Instructions"
+"ヘルプ文章<ぶんしょう>":
+  english: "Help Text"
+"バリア":
+  english: "Barrier"
+"ガチャメカ名":
+  english: "Gadget Name"
+"トロンウィング":
+  english: "Tron Wing"
+"セットOK":
+  english: "Set OK"
+"チップを諦<あきら>めてステージセレクトに戻<もど>ります。":
+  english: "Abandon chips and return to the Stage Select menu."
+"キャラクター名":
+  english: "Character Name"
+"空移":
+  # Air dash?
+  english: "Air Move"
+"ウィルスチャル":
+  english: "Virus Charu"
+"ああああ":
+  english: "AAAA"
+"を編集中":
+  english: "is being edited"
+  
 ## Memory card text
 "次<つぎ>にステージをクリアするまで進行<しんこう>ファイルは\nセーブできませんが、本当<ほんとう>にキャンセルしますか?":
   english: "You cannot save again until the next stage.\nContinue without saving?"
@@ -3507,11 +3617,23 @@ Gクラッシャー:
   english: "Failed to access Memory Card in Slot %!"
 "チップがいっぱいです!\n%を手<て>に入<い>れるには持<も>っているチップを\nどれか1つ削除<さくじょ>しなくてはいけません。\nチップを削除<さくじょ>しますか?":
   english: "\nChip storage full!\nDelete an existing chip?\n"
+"%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "Memory Card not inserted in %.\nCannot save progress file.\nInsert the previously loaded Memory Card."
+"メモリーカード(PS2)が\n%に\n差<さ>し込<こ>まれていません。":
+  english: "\nMemory Card not inserted in %.\n"
+"%に前回<ぜんかい>ロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "Memory Card not inserted in %.\nCannot save progress file.\nPlease insert the last loaded Memory Card."
+"%のメモリーカード(PS2)がぬかれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
+  english: "Memory Card removed from %.\nFailed to save character file.\nCannot save character file.\nPlease insert the last loaded Memory Card.\nCanceling will result in lost chips."
 
 ## Probably Costume text
 "日本<にほん>のα武者<よろいむしゃ>の格好<かっこう>です。":
   # TODO: is this an encoding bug?
   english: "Dressed as a Japanese alpha warrior."
+"エンゼルセット":
+  english: "Angel Set"
+"中世<ちゅうせい>の騎土風<きしふう>の甲狙<かっちゅう>です。":
+  english: "A medieval knight-style armor."
 
 ## Probably special move text
 "上空<じょうくう>に戦艦<せんかん>をよびよせ、爆撃<ばくげき>で援護<えんご>してもらう技<わざ>です。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
@@ -3603,6 +3725,10 @@ Gクラッシャー:
   english: "Heavy Mech"
 "攻撃力重視<こうげきりょくじゅうし>のタンクです。":
   english: "An offensive-focused tank."
+"ヘビータンク":
+  english: "Heavy Tank"
+"このステージには乗<の>り物<もの>は持<も>ち込<こ>めません。":
+  english: "Vehicles cannot be brought into this stage."
 
 ## Probably in level text
 "エネルギー供給炉l号機起動!":
@@ -3613,13 +3739,21 @@ Gクラッシャー:
   english: "Reactor 3 online!"
 "改造<かいぞう>レーザー砲<ほう>が使用可能<しようかのう>になりました。\n必殺技<ひっさつわざ>セレクトで装備<そうび>できます。":
   english: "Modified Laser Cannon can now\nbe selected as a special move."
+"データA抽出完了!":
+  english: "Data A extraction complete!"
+"データB抽出完了!":
+  english: "Data B extraction complete!"
 
 ## Probably monkey text
 ### Capture text
 "ショーウィンドウで待<ま>ち伏<ぶ>せているところを\n発見<はっけん>されゲッチュされる。":
   english: "Captured while lying in wait in\na shop window."
 "ジュンを発見しました!":
-  english: "Jun has been found!"
+  english: "You found Jun!"
+"リッキーを発見しました!":
+  english: "You found Ricky!"
+"トロを発見しました!":
+  english: "You found Toro!"
 
 
 ## Monkey descriptions
@@ -3628,141 +3762,5 @@ Gクラッシャー:
   english: "Strong"
 "よわい":
   english: "Weak"
-
-# Honestly idc this is mostly AI slop hopefully it's not too bad
-"サウンドの出カ形式<しゅつりょくけいしき>を選択<せんたく>してください。":
-  english: "Choose sound output format."
-"%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
-  english: "Failed to create Million Monkeys\ngame data on %."
-"%の進行<しんこう>ファイルの\nロードに失敗<しっぱい>しました。":
-  english: "Failed to load progress\nfile on %."
-"このステージには乗<の>り物<もの>は持<も>ち込<こ>めません。":
-  english: "Vehicles cannot be brought into this stage."
-"メモリーカード(PS2)が\n%に\n差<さ>し込<こ>まれていません。":
-  english: "\nMemory Card not inserted in %.\n"
-"%に前回<ぜんかい>ロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
-  english: "Memory Card not inserted in %.\nCannot save progress file.\nPlease insert the last loaded Memory Card."
-"%のメモリーカード(PS2)がぬかれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
-  english: "Memory Card removed from %.\nFailed to save character file.\nCannot save character file.\nPlease insert the last loaded Memory Card.\nCanceling will result in lost chips."
-"削除<さくじょ>するチップを選<えら>んで、結果<けっか>をセーブします。":
-  english: "Select chip to delete and save results."
-"セットする必殺技<ひっさつわざ>を選<えら>んでください。":
-  english: "Select a special move to equip."
-"バイブレーションのオン⋅オフを選択<せんたく>してください。":
-  english: "Turn vibration on or off."
-"なんいど設定<せってい>":
-  english: "Difficulty settings."
-"オプション設定<せってい>":
-  english: "Options settings."
-"リッキーを発見しました!":
-  english: "Ricky found!"
-"ラウンド最終集計結果<さいしゅうしゅうけいけっか>":
-  english: "Final Round Results."
-  password: true
-"トロを発見しました!":
-  english: "Toro found!"
-"%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
-  english: "Memory Card not inserted in %.\nCannot save progress file.\nInsert the previously loaded Memory Card."
-"トロコスチュームをゲットしました。":
-  english: "You got the Toro costume!"
-"データA抽出完了!":
-  english: "Data A extraction complete!"
-"中世<ちゅうせい>の騎土風<きしふう>の甲狙<かっちゅう>です。":
-  english: "A medieval knight-style armor."
-"攻撃力重視<こうげきりょくじゅうし>のロボットです。":
-  english: "A robot focused on attack power."
-"高<たか>く羽<は>ばたくことのできるアクマのような外見<がいけん>の翼<つばさ>。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。":
-  english: "Wings with a devilish look that let you soar high.Use them freely without energy cost."
-"ラウンドを始<はじ>めます。":
-  english: "Round Start."
-"謎の男再び":
-  english: "Mysterious Man Returns"
-"エンゼルセット":
-  english: "Angel Set"
-"でちゃダメ":
-  english: "Don't Go Out"
-"ミッション結果<けっか>":
-  english: "Mission Results"
-  password: true
-"チェーンボーナス":
-  english: "Chain Bonus"
-  password: true
-"キャラクター名":
-  english: "Character Name"
-"大<おお>きな翼<つばさ>の形<かたち>をしたバーニアです。 これを装備<そうび>して羽<は>ばたく様<さま>はまるで天使<てんし>のように美<うつく>しく見<み>えることでしょう。":
-  english: "Large wing-shaped jetpack.Flapping resembles a beautiful angel."
-"チップを諦<あきら>めてステージセレクトに戻<もど>ります。":
-  english: "Abandon chip and return to the Stage Select menu."
-"サバクノクニの王<おう>さま。 強力<きょうりょく>な「<のろ>いで援護<えんご>してくれます。        ":
-  english: "King of the Desert Nation.Provides strong 'curse' support."
-"中級者<ちゅうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
-  english: "Start an intermediate tournament."
-"上級者<じょうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
-  english: "Start a hard tournament."
-"％<け>り上<あ>げた相手<あいて>に一斉射撃<いっせいしゃげき>をおみまいします。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
-  # This seems to be a real string, but probably unused? Matches an existing string with correct kanji
-  english: "Fire a barrage at the raised enemy.Lock-on recommended for accuracy."
-"チップ合成<ごうせい>できないキャラクターなので\nムーブできません。":
-  english: "This character can't combine chips\nand cannot be moved."
-"すでにロードされた\nキャラクターは使用<しよう>できません。":
-  english: "Loaded characters\ncan't be used."
-"データB抽出完了!":
-  english: "Data B extraction complete!"
-"他のボタンでとりけし":
-  english: "Cancel with another button."
-"そうさ説明":
-  english: "Control Instructions"
-"ヘルプ文章<ぶんしょう>":
-  english: "Help Text"
-"のデータを復元中<ふくげんちゅう>。":
-  english: "Restoring data."
-"合成<ごうせい>に失敗<しっぱい>しました。":
-  english: "Synthesis failed."
-"バリア":
-  english: "Barrier"
-"エクストララウンド結果":
-  english: "Extra Round Results"
-  password: true
-"ガチャメカ名":
-  english: "Gadget Name"
-"トロンウィング":
-  english: "Tron Wing"
-"ヘビータンク":
-  english: "Heavy Tank"
-"作成中<さくせいちゅう>":
-  english: "Creating..."
-"セットOK":
-  english: "Set OK"
-"空移":
-  # Air dash?
-  english: "Air Move"
-"ウィルスチャル":
-  english: "Virus Charu"
-"かくにん":
-  english: "Confirm"
-"すすむ":
-  english: "Proceed"
-"撃破ボーナス":
-  english: "Defeat Bonus"
-  password: true
-"回ミス":
-  # Probably goes after a number?
-  english: "Misses"
-"ふつう":
-  english: "Normal"
 "げきつよ":
   english: "Super Strong"
-"ああああ":
-  english: "AAAA"
-"からふぁいる":
-  # Why is this in hiragana????
-  # Probably 空ファイル
-  english: "Empty File"
-"はそんふぁいる":
-  # Why is this in hiragana????
-  # Probably 破損ファイル
-  english: "Corrupted File"
-"属性<ぞくせい>の違<ちが>うパーツはセットできません。":
-  english: "Parts with different attributes cannot be set."
-"を編集中":
-  english: "is being edited"
