@@ -40,11 +40,11 @@ Ow...
 
 11
 00:00:40,321 --> 00:00:42,000
-You hurt your leg,
+You must've hurt your leg.
 
 12
 00:00:42,250 --> 00:00:43,344
-I'll treat it for you.
+I'll take care of it for you.
 
 13
 00:00:45,319 --> 00:00:46,180
