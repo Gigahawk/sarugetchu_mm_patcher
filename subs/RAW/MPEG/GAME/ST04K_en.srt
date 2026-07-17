@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:05,039
-You made it this far too? Quite impressive.
+You made it this far too? I'm quite impressed.
 
 2
 00:00:06,280 --> 00:00:09,549
@@ -32,11 +32,11 @@ Now that you mention it, it does feel different from before...
 
 9
 00:00:31,338 --> 00:00:33,567
-True, until now everything's seemed
+True, until now the monkey's actions seemed
 
 10
 00:00:33,577 --> 00:00:36,113
-like the usual monkey behavior.
+like the silly things you'd expect monkeys to do.
 
 11
 00:00:36,737 --> 00:00:38,238
@@ -44,19 +44,19 @@ like the usual monkey behavior.
 
 12
 00:00:38,264 --> 00:00:39,781
-What are you talking about!
+How could you say such a thing?!
 
 13
 00:00:39,816 --> 00:00:41,601
-I always have a sense of humor!
+That's a direct insult to my refined sense of humor!
 
 14
 00:00:42,790 --> 00:00:46,683
-Right, I never forget about humor, even in battle.
+Right, even in battle, I always incorporate a sense of humor!
 
 15
 00:00:47,381 --> 00:00:51,763
-A good sense of humor is essential for world domination.
+An impeccable sense of humor is the key to world domination.
 
 16
 00:00:51,792 --> 00:00:55,632
@@ -112,5 +112,5 @@ Don’t tell me… You’re not talking about Haruka, right?
 
 29
 00:01:31,085 --> 00:01:32,125
-Let's go!
+Let's do this!
 
