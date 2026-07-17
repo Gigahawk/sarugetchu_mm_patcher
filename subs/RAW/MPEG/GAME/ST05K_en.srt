@@ -1,6 +1,6 @@
 1
 00:00:04,748 --> 00:00:07,000
-We win, Specter
+Looks like we won, Specter.
 
 2
 00:00:08,546 --> 00:00:14,027
@@ -24,7 +24,7 @@ What are you talking about? This fight's far from over!
 
 7
 00:00:23,367 --> 00:00:25,563
-Damnit, don't you dare interfere!
+You scum, don't you dare interfere!
 
 8
 00:00:26,766 --> 00:00:27,566
@@ -52,13 +52,13 @@ Professor, is it some kind of Pipotron?
 
 14
 00:00:48,796 --> 00:00:51,121
-Yes, no doubt about it
+Yes, no doubt about it.
 
 15
 00:00:52,029 --> 00:00:54,619
-Moreover, it's behaving strangely
+Moreover, it seems to be behaving strangely.
 
 16
 00:00:55,433 --> 00:00:57,922
-This may be extremely dangerous
+This creature could be extremely dangerous.
 
