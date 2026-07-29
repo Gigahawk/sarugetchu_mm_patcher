@@ -1,4 +1,4 @@
-import math
+import copy
 import re
 import shutil
 import json
@@ -167,7 +167,63 @@ def hash_to_path(csv_path, hash):
 def print_strings(strings):
     with open(strings, "r") as f:
         strings_dict = yaml.safe_load(f)
+
+    assert isinstance(strings_dict, dict)
+
+    for jp, info in copy.deepcopy(strings_dict).items():
+        click.echo(f"Checking entry {repr(jp)}")
+
+        assert isinstance(jp, str)
+
+        eng = info.pop("english")
+        if isinstance(eng, str):
+            pass
+        elif isinstance(eng, dict):
+            for str_id, _eng in eng.items():
+                assert isinstance(str_id, str)
+                # Ensure string ID is a hex number
+                int(str_id, 16)
+                assert isinstance(_eng, str)
+        else:
+            raise ValueError(f"Translation entry for {repr(jp)} is invalid: {eng}")
+
+        assert isinstance(info.pop("password", False), bool)
+        assert isinstance(info.pop("raw", False), bool)
+
+
+        if info:
+            raise ValueError(f"Item {repr(jp)} has unsupported keys: {pformat(info)}")
+
     click.echo(pformat(strings_dict))
+
+@cli.command()
+@click.option(
+    "-c", "--credits",
+    default="credits.yaml",
+    show_default=True,
+    type=click.Path(),
+)
+def print_credits(credits):
+    with open(credits, "r") as f:
+        credits_list = yaml.safe_load(f)
+
+    assert isinstance(credits_list, list)
+
+    for idx, entry in enumerate(copy.deepcopy(credits_list)):
+        click.echo(f"Checking entry index {idx}")
+
+        assert isinstance(entry, dict)
+
+        eng = entry.pop("string")
+        assert isinstance(eng, str)
+        assert isinstance(entry.pop("tab_mode"), int)
+        assert isinstance(entry.pop("raw", False), bool)
+        assert isinstance(entry.pop("centered", False), bool)
+
+        if entry:
+            raise ValueError(f"Entry at index {idx} ({repr(eng)}) has unsupported keys: {pformat(entry)}")
+
+    click.echo(pformat(credits_list))
 
 @cli.command()
 @click.argument(

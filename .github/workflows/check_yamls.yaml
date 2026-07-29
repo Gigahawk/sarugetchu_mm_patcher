@@ -27,7 +27,8 @@ jobs:
 
       - name: Print Strings
         run: |
-          nix develop .#minimal --command ssmm-patcher print-strings
+          # HACK: redirect stderr to stdout to avoid out sync issues
+          nix develop .#minimal --command ssmm-patcher print-strings 2>&1
 
   check-credits:
     runs-on: ubuntu-latest
@@ -50,5 +51,5 @@ jobs:
 
       - name: Print Strings
         run: |
-          nix develop .#minimal --command ssmm-patcher print-strings -s credits.yaml
-
+          # HACK: redirect stderr to stdout to avoid out sync issues
+          nix develop .#minimal --command ssmm-patcher print-credits 2>&1
