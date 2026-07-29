@@ -1205,7 +1205,7 @@
   english: "The Goliath Development Project Leader.Provides support with a Goliath Head."
  
   ## Doko Doko Issyo Summon Text
-  "パリで一人暮<ひとりぐ>らしを夢見<ゆめみ>る乙女<おとめ>(?)なイヌ。 占<うらな>いの結果<けっか>がいいと幸<しあわ>せをわけてくれます。":
+"パリで一人暮<ひとりぐ>らしを夢見<ゆめみ>る乙女<おとめ>(?)なイヌ。 占<うらな>いの結果<けっか>がいいと幸<しあわ>せをわけてくれます。":
   english: "A girlish(?) dog dreaming of living alone in Paris.Shares happiness when fortunes are good."
 "人間<にんげん>になることを夢<ゆめ>みる無邪気<むじゃき>なネコ。 クロたちといっしょに画面中<がめんじゅう>を走<はし>り回<まわ>ります。":
   english: "A naive cat dreaming of becoming human.Runs across the screen with Kuro and friends."
@@ -3388,13 +3388,13 @@ Gクラッシャー:
 "フェイズ途中集計結果<とちゅうしゅうけいけっか>":
   english: "Mid-Phase Results"
   password: true
-  "ラウンド途中集計結果<とちゅうしゅうけいけっか>":
+"ラウンド途中集計結果<とちゅうしゅうけいけっか>":
   english: "Mid-Phase Results"
   password: true
 "ラウンド結果<けっか>":
   english: "Round Results"
   password: true
-  "フェイズ最終集計結果<さいしゅうしゅうけいけっか>":
+"フェイズ最終集計結果<さいしゅうしゅうけいけっか>":
   english: "Final Phase Results"
   password: true
 "スロット1-A":
