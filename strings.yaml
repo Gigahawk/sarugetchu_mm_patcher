@@ -1271,7 +1271,7 @@
   english: "The Goliath Development Project Leader.Provides support with a Goliath Head."
  
   ## Doko Doko Issyo Summon Text
-  "パリで一人暮<ひとりぐ>らしを夢見<ゆめみ>る乙女<おとめ>(?)なイヌ。 占<うらな>いの結果<けっか>がいいと幸<しあわ>せをわけてくれます。":
+"パリで一人暮<ひとりぐ>らしを夢見<ゆめみ>る乙女<おとめ>(?)なイヌ。 占<うらな>いの結果<けっか>がいいと幸<しあわ>せをわけてくれます。":
   english: "A girlish(?) dog dreaming of living alone in Paris.Shares happiness when fortunes are good."
 "人間<にんげん>になることを夢<ゆめ>みる無邪気<むじゃき>なネコ。 クロたちといっしょに画面中<がめんじゅう>を走<はし>り回<まわ>ります。":
   english: "A naive cat dreaming of becoming human.Runs across the screen with Kuro and friends."
@@ -1522,7 +1522,7 @@ Gクラッシャー:
 "世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し％<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
   english: "A frog aiming to be the world's best fighter.He attacks nearby enemies with a spinning kick shockwave."
 "近<ちか>くの敵一体<てきいったい>を/<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
-  english: "Grab and throw 1 enemy, then unleash a barrage.Lock-on recommended for accuracy."
+  english: "Grabs a nearby enemy,throws them,and unleashes a barrage of shots.Lock on before activating to hit enemies more reliably."
 "一定時間<いっていじかん>レーザーをはねかえすシールドを発生<はっせい>させるパーツです。 複数<ふくすう>セットすることでシールドの持続時間<じぞくじかん>をのばすことができます。":
   english: "Generates a shield that reflects lasers for a time.Stack to extend duration."
 "強力<きょうりょく>な'光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
@@ -1538,7 +1538,7 @@ Gクラッシャー:
 "アーモンチェアに乗<の>って誘導<ゆうどう>ビームで攻撃<こうげき>します。 ビームを当<あ>てるには敵<てき>に近<ちか>づく必要<ひつよう>があります。":
   english: "Ride the armchair and attack with homing beams.Get close to enemies to hit them."
 '二丁拳銃<にちょうけんじゅう>にエネルギーを充"<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。':
-  english: "Charges energy into dual pistols and spins around to attack.Effective only on close-range foes."
+  english: "Unleashes a spin attack with charged dual pistols.Only effective at close range."
 
 # VS. Mode team member select screen
 ## Saru Team
@@ -2340,7 +2340,7 @@ Gクラッシャー:
 "トラジマのアニマル風<ふう>コスチュームです。":
   # トラジマ seems to just be a somewhat common name for cat based
   # characters? Not really sure what this is a reference to.
-  english: A tiger style costume.
+  english: "A tiger style costume."
 ## Businessman Set
 "ビジネスマンセット":
   english: "Business Set"
@@ -3517,13 +3517,13 @@ Gクラッシャー:
 "フェイズ途中集計結果<とちゅうしゅうけいけっか>":
   english: "Mid-Phase Results"
   password: true
-  "ラウンド途中集計結果<とちゅうしゅうけいけっか>":
+"ラウンド途中集計結果<とちゅうしゅうけいけっか>":
   english: "Mid-Phase Results"
   password: true
 "ラウンド結果<けっか>":
   english: "Round Results"
   password: true
-  "フェイズ最終集計結果<さいしゅうしゅうけいけっか>":
+"フェイズ最終集計結果<さいしゅうしゅうけいけっか>":
   english: "Final Phase Results"
   password: true
 "スロット1-A":
