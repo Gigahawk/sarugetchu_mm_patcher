@@ -4,11 +4,11 @@ Huh? This is weird. Where are we?
 
 2
 00:00:04,983 --> 00:00:08,042
-Weren't we inside the battleship?
+Weren't we just inside the battleship?
 
 3
 00:00:08,515 --> 00:00:11,505
-Mm, this is a Virtual Space.
+Hm, it appears we ended up in Virtual Space.
 
 4
 00:00:11,515 --> 00:00:14,518
@@ -44,7 +44,7 @@ Charu, when was the last time you connected to the network?
 
 12
 00:00:50,094 --> 00:00:51,154
-I'm fine.
+I feel fine...
 
 13
 00:00:52,355 --> 00:00:56,940

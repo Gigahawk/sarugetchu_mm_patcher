@@ -21,6 +21,10 @@
   english: "Cancel"
 マップいどう:
   english: "Move Map"
+"かくにん":
+  english: "Confirm"
+"すすむ":
+  english: "Proceed"
 
 
 # Keyboard
@@ -64,7 +68,7 @@
 "メモリーカードスロットを選<えら>んでください。":
   english: "Please select a Memory Card slot."
 "進行<しんこう>ファイルを使用<しよう>しないでゲームを始<はじ>めます。":
-  english: "Start the game without a Save File."
+  english: "Start the game without a save file."
 
 # Memory Card select warnings
 "アクセス中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししないでください。":
@@ -89,6 +93,10 @@
   english: "Creating game data!\nDo not remove the\nMemory Card in % or\npower off the console."
 "%のメモリーカード(PS2)に\nミリオンモンキーズのゲームデータを作成<さくせい>しました。":
   "english": "Game data created in Memory Card %."
+"%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
+  english: "Failed to create Million Monkeys\ngame data on %."
+"%の進行<しんこう>ファイルの\nロードに失敗<しっぱい>しました。":
+  english: "Failed to load progress\nfile on %."
 
 
 # File select screen
@@ -96,6 +104,14 @@
   english: "File"
 "空き領域":
   english: "Free Slot"
+"からふぁいる":
+  # Why is this in hiragana????
+  # Probably 空ファイル
+  english: "Empty File"
+"はそんふぁいる":
+  # Why is this in hiragana????
+  # Probably 破損ファイル
+  english: "Corrupted File"
 
 # File select screen descriptions
 "ファイルを選<えら>んでください。":
@@ -137,8 +153,6 @@
 "このエピソードでは選択<せんたく>できません。":
   english: "This character cannot be selected\nfor this episode."
 
-
-
 # Mode select screen
 "ストーリーモード":
   english: "Story Mode"
@@ -158,6 +172,8 @@
 # Story mode difficulty select screen
 "なんいど設定":
   english: "Difficulty"
+"ふつう":
+  english: "Normal"
 "ハード":
   english: "Hard"
 "ベリーハード":
@@ -165,11 +181,11 @@
 
 # Story mode difficulty select screen descriptions
 "ノーマルモードで遊<あそ>びます。":
-  english: "Play with default difficulty."
+  english: "Play on the normal difficulty."
 "ハードモードで遊<あそ>びます。":
-  english: "Play with hard difficulty."
+  english: "Play on the hard difficulty."
 "ベリーハードモードで遊<あそ>びます。":
-  english: "Play with very hard difficulty."
+  english: "Play on the very hard difficulty."
 
 # Story mode episode select screen
 "エピソードカケル":
@@ -179,7 +195,7 @@
 
 # Story mode episode select descriptions
 "カケルのストーリーで遊<あそ>びます。":
-  english: Play Kakeru's story.
+  english: "Play Kakeru's story.
 "スペクターのストーリーで遊<あそ>びます。":
   english: "Play Specter's story."
 "エピソードセレクトに戻<もど>ります。":
@@ -237,12 +253,12 @@
   "english": "Shinjuku South Entrance"
 " PM02:16":
   "english": " 02:16PM"
-"ピエールを発見しました!":
-  english: "Found Pierre!"
 "新宿駅<しんじゅくえき>でピポサル軍一個小隊<ぐんいっこしょうたい>が展開中<てんかいちゅう>との情報<じょうほう>をキャッチしました! 直<ただ>ちに現場<げんば>に急行<きゅうこう>してください!!":
   "english": "We have received intel that a platoon of Piposaru troops is currently deployed at Shinjuku Station!Please rush to the scene immediately!!"
 "ターゲットをすべて倒<たお>せ!➝\n\fTARGETマークのついたサル兵<へい>を\nすべて倒<たお>してください。":
   "english": "Defeat all targets!➝\n\fDefeat all monkey soldiers with\nTARGET marks."
+"ピエールを発見しました!":
+  english: "You found Pierre!"
 ## Akihabara
 "秋葉原":
   "english": "Akihabara"
@@ -272,6 +288,8 @@
   "english": "Metro\n06:32PM"
 " PM06:32":
   english: " 06:32PM"
+"クロを発見しました!":
+  english: "You found Kuro!"
 ## Tokyo
 "東京":
   english: "Tokyo"
@@ -317,14 +335,14 @@
   english: " 08:19AM"
 "衛星<えいせい>レーザーの発射<はっしゃ>を阻止<そし>せよ!➝\n\f基地内<きちない>の3基<き>の発射装置<はっしゃそうち>を破壊<はかい>すれば\nレーザー砲<ほう>の発射<はっしゃ>を阻止<そし>できますが\n強力<きょうりょく>な警備<けいび>システムに守<まも>られています。➝\n\f警備<けいび>のレベルは基地外<きちがい>のエネルギー供給炉<きょうきゅうろ>と\n直結<ちょっけつ>していますので破壊<はかい>し警備<けいび>のレベルを\nダウンさせてください。":
   english: "Stop the satellite laser from\nfiring!➝\n\fDestroy the 3 terminals protected\nby the security system to disable\nthe laser.➝\n\fThe reactors outside power the\nsecurity system,destroy them to\ndisable the security system."
-"スズキを発見しました!":
-  english: "Found Suzuki!"
 "セキュリティ 機銃停止!":
   english: "Security: Guns disabled!"
 "セキュリティ バリア解除!":
   english: "Security: Barrier disabled!"
 "セキュリティ スタンポッド停止!":
   english: "Security: Stun Pods disabled!"
+"スズキを発見しました!":
+  english: "You found Suzuki!"
 ## Yacht Harbor
 "ヨットハーバー":
   english: "Yacht Harbor"
@@ -336,8 +354,6 @@
   english: "Yacht Harbor\n03:07PM"
 " PM03:07":
   english: " 03:07PM"
-"クロを発見しました!":
-  english: "Found Kuro!"
 ## Stadium
 "スタジアム":
   english: "Stadium"
@@ -502,6 +518,19 @@
   english: " 02:36PM"
 "ハルカを守<まも>りきれ!➝\n\fハルカを守<まも>り、エネルギー供給炉<きょうきゅうろ>を起動<きどう>させ\n基地内<きちない>の3基<き>の端末<たんまつ>からデータを集<あつ>めてください。➝\n\fまた、端末<たんまつ>の操作<そうさ>はハルカしかできませんので\nハルカの体力<たいりょく>に注意<ちゅうい>してください。":
   english: "Protect Haruka!➝\n\fProtect Haruka, activate the\nreactor,and collect data from\nthe 3 terminals in the base.➝\n\fOnly Haruka can operate the\nterminals,so keep track of her\nstamina."
+"エネルギー供給炉l号機起動!":
+  english: "Reactor 1 online!"
+"エネルギー供給炉2号機起動!":
+  english: "Reactor 2 online!"
+"エネルギー供給炉3号機起動!":
+  english: "Reactor 3 online!"
+"データA抽出完了!":
+  english: "Data A extraction complete!"
+"データB抽出完了!":
+  english: "Data B extraction complete!"
+  # Appears after completing mission for the first time
+"改造<かいぞう>レーザー砲<ほう>が使用可能<しようかのう>になりました。\n必殺技<ひっさつわざ>セレクトで装備<そうび>できます。":
+  english: "Modified Laser Cannon can now\nbe selected as a special move."
 ## Container Terminal
 "コンテナターミナル PM05:16":
   english: "Container Terminal\n05:16PM"
@@ -509,6 +538,8 @@
   english: " 05:16PM"
 "戦艦<せんかん>の残骸<ざんがい>をすべて破壊<はかい>せよ!➝\n\f戦艦<せんかん>の残骸<ざんがい>を完全<かんぜん>に破壊<はかい>すれば\nナゾの生物<せいぶつ>の発生<はっせい>を止<と>めることができるはずです。":
   english: "Destroy all remains of the\nbattleship!➝\n\fIf the battleship is completely\ndestroyed,the mysterious\ncreatures should disappear."
+"リッキーを発見しました!":
+  english: "You found Ricky!"
 ## Tokyo
 "ピポトロンレッド、ブルー、イエローが乗<の>ったトレーラーが、秋葉原<あきはばら>の地下<ちか>サル軍基地<ぐんきち>に向<む>かっています。 改造<かいぞう>したレーザー砲台<ほうだい>を基地内<きちない>に運<はこ>び込<こ>もうとしていますが、敵<てき>の攻撃<こうげき>を受<う>けています。 東京駅<とうきょうえき>から地下<ちか>ルートを通<とお>って秋葉原<あきはばら>に向<む>かい、トレーラーを援護<えんご>してください。":
   english: "The trailer carrying Pipotron Red,Blue,and Yellow is heading to the underground base in Akihabara.They are transporting a modified laser cannon into the base, but are under enemy attack.Head to Akihabara via Tokyo Station and provide support."
@@ -525,6 +556,8 @@
   english: "Metro\n08:13AM"
 " AM08:13":
   english: " 08:13AM"
+"ジュンを発見しました!":
+  english: "You found Jun!"
 ## Akihabara
 "ピポトロンレッド、ブルー、イエローが乗<の>ったトレーラーが、秋葉原<あきはばら>の地下<ちか>サル軍基地<ぐんきち>に向<む>かっています。 改造<かいぞう>したレーザー砲台<ほうだい>を基地内<きちない>に運<はこ>び込<こ>もうとしていますが、敵<てき>の攻撃<こうげき>を受<う>けています。 トレーラーを援護<えんご>し、無事<ぶじ>、地下基地内<ちかきちない>にレーザー砲台<ほうだい>を運<はこ>び込<こ>んでください。":
   english: "The trailer carrying Pipotron Red,Blue,and Yellow is heading to the underground base in Akihabara.They are transporting a modified laser cannon into the base, but are under enemy attack.Provide support to the trailer and safely deliver the laser cannon to the base."
@@ -568,6 +601,8 @@
   english: "Odaiba 05:32PM"
 " PM05:32":
   english: " 05:32PM"
+"トロを発見しました!":
+  english: "You found Toro!"
 ## Crash Site
 "墜落地点":
   english: "Crash Site"
@@ -612,6 +647,18 @@
   password: true
 "パズルボーナス":
   english: "Puzzle Bonus"
+  password: true
+"撃破ボーナス":
+  english: "Defeat Bonus"
+  password: true
+"回ミス":
+  # Probably goes after a number?
+  english: "Misses"
+"ミッション結果<けっか>":
+  english: "Mission Results"
+  password: true
+"チェーンボーナス":
+  english: "Chain Bonus"
   password: true
 
 # Load character slot select screen
@@ -659,6 +706,8 @@
   english: "Assign a final move to activate when Χ and □ are pressed together."
 "□ボタンと△ボタンを同時<どうじ>に押<お>した時<とき>に、発動<はつどう>する必殺技<ひっさつわざ>を選<えら>んでください。":
   english: "Assign a final move to activate when □ and △ are pressed together."
+"セットする必殺技<ひっさつわざ>を選<えら>んでください。":
+  english: "Select a special move to equip."
 
 # Mode select screen descriptions
 "ストーリーで遊<あそ>ぶモードです。":
@@ -705,6 +754,10 @@
 # Colosseum Mode screen descriptions
 "初級者<しょきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
   english: "Start a beginners tournament."
+"中級者<ちゅうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
+  english: "Start an intermediate tournament."
+"上級者<じょうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
+  english: "Start a hard tournament."
 
 # Colosseum Mode character select screen descriptions
 "キャラクターファイルをロードします。":
@@ -961,13 +1014,15 @@
     "538b228e": "Modified\nLaser Cannon"
     "198b6993": "Modified Laser Cannon"
     "7a8b6993": "Modified\nLaser Cannon"
+"近距離<きんきょり>の敵<てき>に対<たい>し、技<わざ>ストックゲージを3本消費<ぼんしょうひ>して、衛星反射<えいせいはんしゃ>レーザー砲<ほう>を発射<はっしゃ>します。 必殺技<ひっさつわざ>を入力<にゅうりょく>してからレーザー砲発射<ほうはっしゃ>までには時間<じかん>がかかりますので注意<ちゅうい>してください。":
+  english: "Consumes 3 stock gauges to fire a satellite laser cannon.Takes time to activate."
 ## Kakeru
 "ディメンションブレイク":
   english: "Dimension Break"
 "ディメンション\nブレイク":
   english: "Dimension\nBreak"
 "目<め>の前<まえ>に巨大<きょだい>なメカボーを振<ふ>り下<お>ろし、衝撃波<しょうげきは>で攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>に有効<ゆうこう>です。":
-  english: "Swing down a giant Mecha Bo in front of you creating a shock wave.Effective against close-range enemies."
+  english: "Swings down a giant Mecha Bo in front of you,creating a shock wave.Effective against close-range enemies."
 "クラッシュハリケーン":
   english:
     "ca21027f": "Crash Hurricane"
@@ -981,7 +1036,7 @@
     "3c0013a2": "Crash\nHrcn."
     "237c74a2": "Crash\nHrcn."
 "高速<こうそく>で回転<かいてん>し、近<ちか>くの敵<てき>を上空<じょうくう>にまきあげます。 空中<くうちゅう>の敵<てき>にも有効<ゆうこう>です。    ":
-  english: "Spin at high speed and launch nearby enemies into the air.Also effective against airborne enemies."
+  english: "Spins at high speed and launches nearby enemies into the air.Also effective against airborne enemies."
 "ソニックレボリューション":
   english:
     "ed22027f": "Sonic Revolution"
@@ -995,13 +1050,13 @@
     "5f0113a2": "Sonic\nRev."
     "467d74a2": "Sonic\nRev."
 "巨大<きょだい>なメカボーで回転儀<かいてんぎ>りを出<だ>しながら駆<か>け抜<ぬ>けます。 地上<ちじょう>の敵<てき>に有効<ゆうこう>です。":
-  english: "Spin a giant Mecha Bo as you dash around.Effective against enemies on the ground."
+  english: "Spins a giant Mecha Bo as you dash around.Effective against enemies on the ground."
 "サンダークラック":
   english: "Thunder Crack"
 "サンダー\nクラック":
   english: "Thunder\nCrack"
 "前方一直線<ぜんぽういっちょくせん>に稲妻<いなづま>が走<はし>ります。 敵<てき>が一直線<いっちょくせん>に並<なら>んだらこの技<わざ>で一掃<いっそう>しましょう。   ":
-  english: "Shoot a lightning bolt straight ahead.Effective against enemies standing in a straight line."
+  english: "Shoots out a lightning bolt straight ahead.Effective against enemies standing in a straight line."
 ## Professor
 "プラズマ制御":
   english:
@@ -1009,12 +1064,16 @@
     "290e107f": "Plasma Control"
     "d9eb20a2": "Plasma Control"
     "3aec20a2": "Plasma\nControl"
+"巨大<きょだい>なプラズマ球<きゅう>を発生<はっせい>させます。 プラズマ球<きゅう>は操作<そうさ>して敵<てき>にぶつけることができます。":
+  english: "Summons a giant plasma ball that can be controlled and thrown at enemies."
 "電磁バリア":
   english:
     "eb0e107f": "EM Barrier"
     "4c0f107f": "EM Barrier"
     "fcec20a2": "EM Barrier"
     "5ded20a2": "EM\nBarrier"
+"一定時間<いっていじかん>バリアを張<は>って、無敵状態<むてきじょうたい>になります。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。":
+  english: "Deploys a protective barrier for a short time,making you invincible.Other special moves cannot be used while this is active."
 "大爆発":
   # Big Explosion
   english:
@@ -1022,12 +1081,16 @@
     "6f10107f": "Explosion"
     "1fee20a2": "Explosion"
     "80ee20a2": "Explsn."
+"巨大<きょだい>な爆風<ばくふう>にまわりの敵<てき>をまきこみます。 ただし、自分<じぶん>もダメージを負<お>うので注意<ちゅうい>してください。":
+  english: "Engulfs nearby enemies in a massive explosion.Be careful, you also take damage."
 "リミッター解除":
   english:
     "b94c1525": "Limit Break"
     "2a71796e": "Limit\nBreak"
     "3111107f": "Limit Break"
     "42ef20a2": "Limit Break"
+"一定時間<いっていじかん>、すべての能力<のうりょく>がパワーアップします。 パワーアップしたハンマーの攻撃力<こうげきりょく>は絶大<ぜつだい>です。":
+  english: "Boosts all abilities for a period of time.Significantly increases your hammer's attack power."
 "集中砲火":
   english:
     # Concentrated Fire
@@ -1035,6 +1098,8 @@
     "dc4d1525": "Fire Blast"
     "ec71796e": "Fire Blast"
     "4d72796e": "Fire\nBlast"
+"近<ちか>くの敵一体<てきいったい>を掴<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  english: "Grabs a nearby enemy,throws them,and unleashes a barrage of shots.Lock on before activating to hit enemies more reliably."
 ## Natsumi
 "'光音響弾":
   # No idea why 95D5 encodes to 閃 in this context,
@@ -1051,22 +1116,30 @@
   english:
     "6dfc1d7f": "Flash Ring"
     "7eda2ea2": "Flash\nRing"
+"二丁拳銃<にちょうけんじゅう>にエネルギーを充填<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。":
+  english: "Unleashes a spin attack with charged dual pistols.Only effective at close range."
 "強化弾セットアップ":
   # Enhanced Ammo Setup
   english: "Enhanced Ammo"
 "強化弾\nセットアップ":
   english: "Enhanced\nAmmo"
+"一定時間<いっていじかん>、二丁拳銃<にちょうけんじゅう>の弾<たま>が強化弾<きょうかだん>になります。 発動中<はつどうちゅう>は他<ほか>の必殺技<ひっさつわざ>を使<つか>うことができなくなるので注意<ちゅうい>してください。":
+  english: "Dual pistols fire enhanced bullets for a short time.Other special moves cannot be used while this is active."
 "対地衝撃弾":
   english:
     "3a265c2a": "Gnd.Impact\nBullet"
     "ab4ac073": "Gnd.Impct.\nBullet"
     "52fe1d7f": "Gnd.Impact Bullet"
     "63dc2ea2": "Gnd.Impact Bullet"
+"ジャンプして上空<じょうくう>から地面<じめん>に向<む>かって爆弾<ばくだん>をばらまきます。 地上<ちじょう>の敵<てき>にのみ有効<ゆうこう>です。":
+  english: "Jump into the air and drop bombs from above.Only effective against ground enemies."
 "Wレーザーフルバースト":
   # W Laser Full Burst
-  english: "W Laser Burst"
+  english: "Dbl Laser Burst"
 "Wレーザー\nフルバースト":
-  english: "W Laser\nBurst"
+  english: "Dbl Laser\nBurst"
+"蹴<け>り上<あ>げた相手<あいて>に一斉射撃<いっせいしゃげき>をおみまいします。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  english: "Kicks foes up and unleashes a barrage of shots.Lock on before activating to hit enemies more reliably."
 ## Charu
 "ガチャメカコントロール":
   english: "Gadget Control"
@@ -1080,6 +1153,8 @@
   english: "Gravity Control"
 "重力\nコントロール":
   english: "Gravity\nControl"
+"一定時間<いっていじかん>、敵<てき>の動<うご>きがスローになる技<わざ>です。 連続<れんぞく>ヒットがねらいやすくなります。":
+  english: "Briefly slows down enemies,making it easier to land combos."
 "時間コントロール":
   english: "Time Control"
 "時間\nコントロール":
@@ -1088,31 +1163,43 @@
   english: "All Range Shot"
 "オールレンジ\nショット":
   english: "All Range\nShot"
+"回転<かいてん>しながらアームショットを乱射<らんしゃ>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>することができます。":
+  english: "Wildly fires arm shots while spinning.Effective for attacking wide-spread foes."
 "イリュージョンフォース":
   english: "Illusion Force"
 "イリュージョン\nフォース":
   english: "Illusion\nForce"
+"敵一体<てきいったい>に体当<たいあ>たりした後<あと>、分身<ぶんしん>して攻撃<こうげき>する技<わざ>です。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  english: "Creates a clone to attack an enemy simultaneously.Lock on before activating to hit enemies more reliably."
 "ミラーフォース":
   english:
     "c302a32f": "Mirror Force"
     "2403a32f": "Mirror Force"
     "34270779": "Mirror Force"
     "95270779": "Mirror\nForce"
+"一定時間<いっていじかん>バリアを張<は>って防御<ぼうぎょ>する技<わざ>です。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。":
+  english: "Creates a temporary protective barrier.Other special moves cannot be used while the barrier is active."
 ## Haruka
 "サンシャインアロー":
   english: "Sunshine Arrow"
 "サンシャイン\nアロー":
   english: "Sunshine\nArrow"
+"前方<ぜんぽう>に巨大<きょだい>な矢<や>を放<はな>つ技<わざ>です。 効果範囲<こうかはんい>が小<ちい>さいかわりに高<たか>い攻撃力<こうげきりょく>を持<も>ちます。":
+  english: "Shoots a giant arrow forward.It has small range but high attack power."
 "リップルストーム":
   english: "Ripple Storm"
 "リップル\nストーム":
   english: "Ripple\nStorm"
+"ジャンプし、空中<くうちゅう>から真下<ました>に矢<や>を放<はな>ち、衝撃波<しょうげきは>で攻撃<こうげき>します。 地上<ちじょう>の敵<てき>に有効<ゆうこう>です。":
+  english: "Jump and shoot arrows straight down,creating shockwaves.Effective against ground enemies."
 "スピンショット":
   english:
     "71d7397f": "Spin Shot"
     "d2d7397f": "Spin Shot"
     "82b54aa2": "Spin Shot"
     "e3b54aa2": "Spin\nShot"
+"高速<こうそく>で回転<かいてん>しながら光<ひかり>の矢<や>を乱射<らんしゃ>します。 広範囲<こうはんい>の敵<てき>に有効<ゆうこう>ですが、空中<くうちゅう>の敵<てき>はねらえません。":
+  english: "Fires a barrage of arrows while spinning rapidly.Effective against wide-spread foes,but not airborne ones."
 "ホーミングアロー":
   english:
     "44710822": "H.Arrow"  # Gadget
@@ -1121,6 +1208,8 @@
     "3393f7fe": "H4mingArrow"
 "ホーミング\nアロー":
   english: "Homing\nArrow"
+"8本<ほん>の追尾<ついび>する光<ひかり>の矢<や>を放<はな>ちます。 空中<くうちゅう>の敵<てき>もねらえる便利<べんり>な必殺技<ひっさつわざ>です。":
+  english: "Fires 8 homing light arrows.Handy for hitting airborne foes."
 ### Summons
 ### See https://apeescape.fandom.com/wiki/Special_Attacks#Monkey_Summons
 "モンタ":
@@ -1241,6 +1330,8 @@
     "e1a158a2": "Banana\nRocket"
     "7dc667a7": "Banana Rocket"
     "dec667a7": "Banana\nRocket"
+"バナナ型<がた>のロケットに乗<の>って体当<たいあ>たりする技<わざ>です。 ロケット発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。":
+  english: "Ride on a banana-shaped rocket and ram into enemies.You cannot brake while the rocket is active,so be careful."
 "ピポサルウェーブ":
   english:
     "92c4477f": "Piposaru Wave"
@@ -1257,6 +1348,8 @@
     "04a358a2": "Piposaru\nWave"
     "676a82a2": "Piposaru\nWave"
     "01c867a7": "Piposaru\nWave"
+"サルの大群<たいぐん>を呼<よ>び寄<よ>せ、全<すべ>てをなぎ倒<たお>すすごい技<わざ>です。 地上<ちじょう>の敵<てき>に対<たい>して有効<ゆうこう>です。":
+  english: "Summon a horde of monkeys that knock everything down.Effective against ground enemies."
 "サル乱舞":
   english:
     "9ab6ed24": "Saru1Dance"
@@ -1271,6 +1364,8 @@
     "c6a358a2": "Saru Dance"
     "296b82a2": "Saru Dance"
     "c3c867a7": "Saru Dance"
+"敵<てき>1体<たい>にバナナをぶつけ、無数<むすう>のピポサルに攻撃<こうげき>させます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  english: "Throw a banana at 1 enemy and unleash countless Pipo Monkeys to attack.Lock-on recommended for accuracy."
 "ゴリアックアイ":
   english:
     "5cb7ed24": "Goliath1Eye"
@@ -1285,6 +1380,8 @@
     "51d89483": "Goliath\nEye"
     "73646993": "Goliath Eye"
     "d4646993": "Goliath\nEye"
+"ゴリアックヘッドを起動<きどう>し、レーザーで攻撃<こうげき>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>できますが、空中<くうちゅう>の敵<てき>はねらえません。":
+  english: "Activates the Goliath Head to attack with lasers.Hits a wide area but can't target airborne enemies."
 "戦艦射撃":
   english:
     "7fb8ed24": "Battleship1Canon"
@@ -1299,6 +1396,8 @@
     "74d99483": "B.ship\nCanon"
     "96656993": "Battleship Canon"
     "f7656993": "B.ship\nCanon"
+"上空<じょうくう>に戦艦<せんかん>をよびよせ、爆撃<ばくげき>で援護<えんご>してもらう技<わざ>です。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
+  english: "Calls in a battleship airstrike,attacking enemies in a wide area."
 "サルUFO":
   english: "Saru UFO"
 "ゴリアックハンド":
@@ -1311,6 +1410,8 @@
     "8e00526e": "Goliath\nHand"
     "b1fc9483": "Goliath\nHand"
     "34896993": "Goliath\nHand"
+"ゴリアックアームを起動<きどう>し、パンチと衝撃波<しょうげきは>で攻撃<こうげき>します。 パンチ直撃<ちょくげき>を狙<ねら>いましょう。":
+  english: "Activates the Goliath Arm to attack with punches and shockwaves."
 ## Pipotron
 "トロンガッシュ":
   english:
@@ -1318,12 +1419,16 @@
     "ceaf557f": "Tron Gash"
     "7e8d66a2": "Tron Gash"
     "df8d66a2": "Tron\nGash"
+"前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の牙<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
+  english: "Countless dark fangs rise ahead.Effective for attacking wide-spread foes."
 "トロンキャノン":
   english:
     "90b0557f": "Tron Cannon"
     "f1b0557f": "Tron Cannon"
     "a18e66a2": "Tron Cannon"
     "028f66a2": "Tron\nCannon"
+"前方<ぜんぽう>に大<おお>きな暗黒弾<あんこくだん>を放<はな>ちます。 効果範囲<こうかはんい>が小<ちい>さいかわりに大<おお>きな破壊力<はかいりょく>を持<も>ちます。":
+  english: "Fires a large dark orb forward.It has small range but high destructive power."
 "ダークネスストリーム":
   english:
     "b3b1557f": "Dark Stream"
@@ -1332,6 +1437,8 @@
   english:
     "14b2557f": "Dark Stream"
     "259066a2": "Dark\nStream"
+"周辺<しゅうへん>の敵<てき>を吸<す>い込<こ>む巨大<きょだい>な竜巻<たつまき>を発生<はっせい>させます。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
+  english: "Summons a massive tornado that sucks in nearby foes.Effective for attacking wide-spread foes."
 "暗黒の叫び":
   english:
     "3e8c773f": "Dark Scream"
@@ -1345,17 +1452,21 @@
     "338b717f": "Rocket Chair"
     "e36882a2": "Rocket Chair"
     "446982a2": "Rocket\nChair"
+"アーモンチェアに乗<の>って体当<たいあ>たりする技<わざ>です。 発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。":
+  english: "Ride the armchair and ram into enemies.You cannot brake while the move is active,so be careful."
 "フライングチェア":
   english: "Flying Chair"
 "フライング\nチェア":
   english: "Flying\nChair"
 "アーモンチェア":
-  # "Amon Chair" seems to be a pun on "Armchair" アームチェア, and "arm on chair", in reference to this special giving the chair several arms, hence literally being a "arm on chair". This pun doesn't really work or sound good in English, "Armed Chair" is the closest pun that makes sense and is understandable.
+  # "Amon Chair" appears to be a parody of the aeron chair brand "アーロンチェア" due to the simliar spelling in Japanese.
   english:
-    "8565054a": "Armed Chair"
-    "e665054a": "Armed Chair"
-    "f6896993": "Armed Chair"
-    "578a6993": "Armed\nChair"
+    "8565054a": "Armon Chair"
+    "e665054a": "Armon Chair"
+    "f6896993": "Armon Chair"
+    "578a6993": "Armon\nChair"
+"アーモンチェアに乗<の>って誘導<ゆうどう>ビームで攻撃<こうげき>します。 ビームを当<あ>てるには敵<てき>に近<ちか>づく必要<ひつよう>があります。":
+  english: "Ride the armchair and attack with homing beams.Get close to enemies to hit them."
 ## Pipotron G
 "スティングボール":
   english: "Sting Ball"
@@ -1420,6 +1531,37 @@ Gクラッシャー:
   english:
     "5fdfa61f": "Hyper2\nMoon Ritual"
     "d0030b69": "Hyp.Moon\nRitual"
+## Special move descriptions shared between Specter and Saru Team
+"ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。        ":
+  english: "Blast monkeys from a cannon.Hits 1 enemy repeatedly."
+"ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。       ":
+  english: "Blast monkeys from a cannon.Hits 1 enemy repeatedly."
+## Misc Special Move Text 
+  # Some of these are seemingly unused???
+"敵<てき>を麻冑<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
+  english: "Unleashes a dark cry that paralyzes enemies.Does not do damage."
+"前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の儀<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
+  english: "Countless dark rituals appear in front of you,attacking nearby enemies."
+"世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し％<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
+  english: "A frog aiming to be the world's best fighter.He attacks nearby enemies with a spinning kick shockwave."
+"近<ちか>くの敵一体<てきいったい>を/<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  english: "Grabs a nearby enemy,throws them,and unleashes a barrage of shots.Lock on before activating to hit enemies more reliably."
+"一定時間<いっていじかん>レーザーをはねかえすシールドを発生<はっせい>させるパーツです。 複数<ふくすう>セットすることでシールドの持続時間<じぞくじかん>をのばすことができます。":
+  english: "Generates a shield that reflects lasers for a time.Stack to extend duration."
+"強力<きょうりょく>な'光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
+  english: "Fires a powerful flashbang that stuns nearby enemies.Does not do damage."
+"敵<てき>を麻痺<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
+  english: "Unleashes a dark scream that paralyzes enemies.Does not do damage."
+"強力<きょうりょく>な'光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
+  english: "Fires a powerful flashbang that stuns nearby enemies.Does not do damage."
+"敵<てき>を麻痺<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
+  english: "Unleashes a dark scream that paralyzes enemies.Does not do damage."
+"強力<きょうりょく>な閃光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
+  english: "Fires a powerful flashbang,knocking down nearby enemies.Does not do damage."
+"アーモンチェアに乗<の>って誘導<ゆうどう>ビームで攻撃<こうげき>します。 ビームを当<あ>てるには敵<てき>に近<ちか>づく必要<ひつよう>があります。":
+  english: "Ride the armchair and attack with homing beams.Get close to enemies to hit them."
+'二丁拳銃<にちょうけんじゅう>にエネルギーを充"<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。':
+  english: "Unleashes a spin attack with charged dual pistols.Only effective at close range."
 
 # VS. Mode team member select screen
 ## Saru Team
@@ -1996,7 +2138,7 @@ Gクラッシャー:
 "ゴールドヘアー":
   english: "Gold Hair"
 "どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>が金色<きんいろ>です。":
-  english: "It's unclear how he got here,but his hair is golden."
+  english: "It's unclear how he got this way,but his hair is golden."
 ## Purple Style
 "パープルスタイル":
   english: "Purple Style"
@@ -2043,7 +2185,7 @@ Gクラッシャー:
 "グリーンヘアー":
   english: "Green Hair"
 "どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>がみどりです。":
-  english: "It's unclear how he got here,but his hair is green."
+  english: "It's unclear how he got this way,but his hair is green."
 ## Blue Style
 "ブルースタイル":
   english: "Blue Style"
@@ -2087,7 +2229,7 @@ Gクラッシャー:
 "パープルヘアー":
   english: "Purple Hair"
 "どのような経緯<けいい>で行<い>き着<つ>いたかは不明<ふめい>ですが髪<かみ>がむらさきです。":
-  english: "It's unclear how he got here,but his hair is purple."
+  english: "It's unclear how he got this way,but his hair is purple."
 ## White Style
 "ホワイトスタイル":
   english: "White Style"
@@ -2221,7 +2363,7 @@ Gクラッシャー:
 "トラジマのアニマル風<ふう>コスチュームです。":
   # トラジマ seems to just be a somewhat common name for cat based
   # characters? Not really sure what this is a reference to.
-  english: A tiger style costume.
+  english: "A tiger style costume."
 ## Businessman Set
 "ビジネスマンセット":
   english: "Business Set"
@@ -2458,7 +2600,7 @@ Gクラッシャー:
   english: "It's not my fault!\nThe gun was controlling me!"
 
 "ジャーヌ":
-  english: "Janus"
+  english: "Jeanne"
 "ねぶそく":
   # Probably 寝不足
   english: "Sleepy"
@@ -2782,7 +2924,7 @@ Gクラッシャー:
   english: "Looking at the vast ocean... I stop\nworrying about the little things."
 
 "エーテ":
-  english: "Athe"
+  english: "E.Tee"
 "へたくそ":
   english: "Clumsy"
 "ヨットハーバーにて木<き>に登<のぼ>っているところを\n発見<はっけん>されゲッチュされる。":
@@ -3037,8 +3179,14 @@ Gクラッシャー:
   english: "Breaking News 1"
 "緊急ニュース2":
   english: "Breaking News 2"
+"VS.ニセスペクター":
+  english: "VS.Fake Specter"
+"謎の男再び":
+  english: "Mysterious Man Returns"
 "VS.スペクター":
   english: "VS.Specter"
+"VS.カケル":
+  english: "VS.Kakeru"
 "VS.ピポトロンG":
   english: "VS.Pipotron G"
 "ブリッジ切り離し":
@@ -3103,6 +3251,8 @@ Gクラッシャー:
   english: "Synthesizing..."
 "合成<ごうせい>が終<お>わりました。":
   english: "Synthesis complete."
+"合成<ごうせい>に失敗<しっぱい>しました。":
+  english: "Synthesis failed."
 "レシピ一覧<いちらん>に戻<もど>ります。":
   english: "Return to the Recipe List."
 
@@ -3140,12 +3290,20 @@ Gクラッシャー:
   english: "Return to the Chip Select menu."
 "チップムーブ中<ちゅう>。":
   english: "Moving chip..."
+"削除<さくじょ>するチップを選<えら>んで、結果<けっか>をセーブします。":
+  english: "Select a chip to delete and save results."
 
 # Move Chips screen warnings
 "同<おな>じキャラクターにチップムーブはできません。":
   english: "Can't move chips to the same\ncharacter."
 "%はチップがいっぱいです!\n%をムーブするには持<も>っているチップを\nどれか1つ削除<さくじょ>しなくてはいけません。\nチップを削除<さくじょ>しますか?":
   english: "%'s chip inventory is full!\nYou must delete a chip first to move the %.\nDelete a chip?"
+"チップ合成<ごうせい>できないキャラクターなので\nムーブできません。":
+  english: "This character can't combine chips\nand cannot be moved."
+"すでにロードされた\nキャラクターは使用<しよう>できません。":
+  english: "Loaded characters\ncan't be used."
+"%の%を削除<さくじょ>して\n%の%をムーブします。 よろしいですか?":
+  english: "Deleting % from % and\nmoving % from %? Proceed?"
 
 # Move Chips screen dialogs
 "%の%を%へムーブします。\nよろしいですか?":
@@ -3174,7 +3332,7 @@ Gクラッシャー:
 "BGM":
   english: "BGM"
 "SE":
-  english: "SE"
+  english: "SFX"
 
 # Options screen warnings
 "進行<しんこう>ファイル%をセーブ中<ちゅう>!\n%のメモリーカード(PS2)を\n抜<ぬ>き差<さ>ししたり、本体<ほんたい>の電源<でんげん>を切<き>らないでください。":
@@ -3347,8 +3505,6 @@ Gクラッシャー:
 
 
 # Unknown
-"%の%を削除<さくじょ>して\n%の%をムーブします。 よろしいですか?":
-  english: "Deleting % from % and\nmoving % from %? Proceed?"
 "マッチセレクトに戻<もど>ります。":
   english: "Return to the Match Select menu."
 "チップ削除":
@@ -3369,10 +3525,6 @@ Gクラッシャー:
   english: "The SP Gadget\nwill be destroyed!"
 "SPガチャメカセレクト":
   english: "SP Gadget Select"
-"VS.カケル":
-  english: "VS.Kakeru"
-"VS.ニセスペクター":
-  english: "VS.Fake Specter"
 "アタックするステージを選<えら>んでください。":
   # Where is this used? What does it mean to attack a stage?
   english: "Select the stage to attack."
@@ -3419,8 +3571,6 @@ Gクラッシャー:
 "体験版<たいけんばん>では選択<せんたく>できません。":
   # There's a trial?
   english: "This option is not available in the trial version."
-"ゴリアックアームを起動<きどう>し、パンチと衝撃波<しょうげきは>で攻撃<こうげき>します。 パンチ直撃<ちょくげき>を狙<ねら>いましょう。":
-  english: "Activate the Goliath Arm to attack with punches and shockwaves."
 "セーブをキャンセルしてもキャラクターエディットで\nキャラクターファイルのセーブは可能<かのう>です。\nここでのセーブをキャンセルしますか?":
   english: "You will still be able to save\nyour character in Character Edit.\nDo you want to cancel saving here?"
 "削除<さくじょ>するチップを選<えら>んでください。":
@@ -3431,7 +3581,71 @@ Gクラッシャー:
   english: "Select sound output format."
 "音量<おんりょう>のバランスを選択<せんたく>してください。":
   english: "Select volume balance."
-
+"大<おお>きな翼<つばさ>の形<かたち>をしたバーニアです。 これを装備<そうび>して羽<は>ばたく様<さま>はまるで天使<てんし>のように美<うつく>しく見<み>えることでしょう。":
+  english: "Large wing-shaped jetpack.Flapping resembles a beautiful angel."
+"エクストララウンド結果":
+  english: "Extra Round Results"
+  password: true
+"ラウンド最終集計結果<さいしゅうしゅうけいけっか>":
+  english: "Final Round Results."
+  password: true
+"高<たか>く羽<は>ばたくことのできるアクマのような外見<がいけん>の翼<つばさ>。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。":
+  english: "Wings with a devilish look that let you soar high.Use them freely without energy cost."
+"トロコスチュームをゲットしました。":
+  english: "You got the Toro costume!"
+"攻撃力重視<こうげきりょくじゅうし>のロボットです。":
+  english: "A robot focused on attack power."
+"ラウンドを始<はじ>めます。":
+  english: "Round Start."
+"でちゃダメ":
+  english: "You Can't Do That"
+"属性<ぞくせい>の違<ちが>うパーツはセットできません。":
+  english: "Parts with different attributes cannot be set."
+"バイブレーションのオン⋅オフを選択<せんたく>してください。":
+  english: "Turn vibration on or off."
+"なんいど設定<せってい>":
+  english: "Difficulty settings."
+"オプション設定<せってい>":
+  english: "Options settings."
+"サバクノクニの王<おう>さま。 強力<きょうりょく>な「<のろ>いで援護<えんご>してくれます。        ":
+  english: "King of the Desert Nation.Provides strong 'curse' support."
+"％<け>り上<あ>げた相手<あいて>に一斉射撃<いっせいしゃげき>をおみまいします。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
+  # This seems to be a real string, but probably unused? Matches an existing string with correct kanji
+  english: "Fire a barrage at the raised enemy.Lock-on recommended for accuracy."
+"サウンドの出カ形式<しゅつりょくけいしき>を選択<せんたく>してください。":
+  english: "Choose sound output format."
+"のデータを復元中<ふくげんちゅう>。":
+  english: "Restoring data..."
+"作成中<さくせいちゅう>":
+  english: "Creating..."
+"他のボタンでとりけし":
+  english: "Cancel with another button."
+"そうさ説明":
+  english: "Control Instructions"
+"ヘルプ文章<ぶんしょう>":
+  english: "Help Text"
+"バリア":
+  english: "Barrier"
+"ガチャメカ名":
+  english: "Gadget Name"
+"トロンウィング":
+  english: "Tron Wing"
+"セットOK":
+  english: "Set OK"
+"チップを諦<あきら>めてステージセレクトに戻<もど>ります。":
+  english: "Abandon chips and return to the Stage Select menu."
+"キャラクター名":
+  english: "Character Name"
+"空移":
+  # Air dash?
+  english: "Air Move"
+"ウィルスチャル":
+  english: "Virus Charu"
+"ああああ":
+  english: "AAAA"
+"を編集中":
+  english: "is being edited"
+  
 ## Memory card text
 "次<つぎ>にステージをクリアするまで進行<しんこう>ファイルは\nセーブできませんが、本当<ほんとう>にキャンセルしますか?":
   english: "You cannot save again until the next stage.\nContinue without saving?"
@@ -3507,120 +3721,38 @@ Gクラッシャー:
   english: "Failed to access Memory Card in Slot %!"
 "チップがいっぱいです!\n%を手<て>に入<い>れるには持<も>っているチップを\nどれか1つ削除<さくじょ>しなくてはいけません。\nチップを削除<さくじょ>しますか?":
   english: "\nChip storage full!\nDelete an existing chip?\n"
+"%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "Memory Card not inserted in %.\nCannot save progress file.\nInsert the previously loaded Memory Card."
+"メモリーカード(PS2)が\n%に\n差<さ>し込<こ>まれていません。":
+  english: "\nMemory Card not inserted in %.\n"
+"%に前回<ぜんかい>ロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
+  english: "Memory Card not inserted in %.\nCannot save progress file.\nPlease insert the last loaded Memory Card."
+"%のメモリーカード(PS2)がぬかれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
+  english: "Memory Card removed from %.\nFailed to save character file.\nCannot save character file.\nPlease insert the last loaded Memory Card.\nCanceling will result in lost chips."
 
 ## Probably Costume text
 "日本<にほん>のα武者<よろいむしゃ>の格好<かっこう>です。":
   # TODO: is this an encoding bug?
   english: "Dressed as a Japanese alpha warrior."
-
-## Probably special move text
-"上空<じょうくう>に戦艦<せんかん>をよびよせ、爆撃<ばくげき>で援護<えんご>してもらう技<わざ>です。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
-  english: "Calls in a battleship airstrike,attacking enemies in a wide area."
-"敵<てき>を麻冑<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
-  english: "Unleashes a dark cry that paralyzes enemies.Does not do damage."
-"前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の儀<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
-  english: "Countless dark rituals appear in front of you,attacking nearby enemies."
-"敵一体<てきいったい>に体当<たいあ>たりした後<あと>、分身<ぶんしん>して攻撃<こうげき>する技<わざ>です。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
-  english: "Split into two and attack simultaneously.Lock on before activating to hit the enemy more reliably."
-"サルの大群<たいぐん>を呼<よ>び寄<よ>せ、全<すべ>てをなぎ倒<たお>すすごい技<わざ>です。 地上<ちじょう>の敵<てき>に対<たい>して有効<ゆうこう>です。":
-  english: "Summon a horde of monkeys that knocks everything down.Effective against ground enemies"
-"巨大<きょだい>なプラズマ球<きゅう>を発生<はっせい>させます。 プラズマ球<きゅう>は操作<そうさ>して敵<てき>にぶつけることができます。":
-  english: "Summons a giant plasma ball that can be controlled and thrown at enemies."
-"前方<ぜんぽう>に巨大<きょだい>な矢<や>を放<はな>つ技<わざ>です。 効果範囲<こうかはんい>が小<ちい>さいかわりに高<たか>い攻撃力<こうげきりょく>を持<も>ちます。":
-  english: "Shoots a giant arrow forward. It has a small range but high attack power."
-"巨大<きょだい>な爆風<ばくふう>にまわりの敵<てき>をまきこみます。 ただし、自分<じぶん>もダメージを負<お>うので注意<ちゅうい>してください。":
-  english: "Engulfs nearby enemies in a massive explosion.High attack, but you will also take damage."
-"世界一<せかいいち>の格闘家<かくとうか>をめざすカエル。 回<まわ>し％<げ>り衝撃波<しょうげきは>でまわりの敵<てき>を攻撃<こうげき>してくれます。":
-  english: "A frog aiming to be the world's best fighter.He attacks nearby enemies with a spinning kick shockwave."
-"一定時間<いっていじかん>、すべての能力<のうりょく>がパワーアップします。 パワーアップしたハンマーの攻撃力<こうげきりょく>は絶大<ぜつだい>です。":
-  english: "All abilities boosted briefly.Hammer's attack power is significantly increased."
-"一定時間<いっていじかん>、敵<てき>の動<うご>きがスローになる技<わざ>です。 連続<れんぞく>ヒットがねらいやすくなります。":
-  english: "Slows enemies briefly,making it easier to land combos."
-"一定時間<いっていじかん>バリアを張<は>って防御<ぼうぎょ>する技<わざ>です。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。":
-  english: "Creates a temporary barrier.Other special moves cannot be used while the barrier is active."
-"ジャンプして上空<じょうくう>から地面<じめん>に向<む>かって爆弾<ばくだん>をばらまきます。 地上<ちじょう>の敵<てき>にのみ有効<ゆうこう>です。":
-  english: "Jump and drop bombs from above.Effective only on ground enemies."
-"近<ちか>くの敵一体<てきいったい>を掴<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
-  english: "Grab a nearby enemy,throw it,and unleash a barrage of shots.Lock on before activating to hit the enemy more reliably."
-"一定時間<いっていじかん>、二丁拳銃<にちょうけんじゅう>の弾<たま>が強化弾<きょうかだん>になります。 発動中<はつどうちゅう>は他<ほか>の必殺技<ひっさつわざ>を使<つか>うことができなくなるので注意<ちゅうい>してください。":
-  english: "Dual pistols fire enhanced bullets briefly.Other special moves cannot be used during this time."
-"近<ちか>くの敵一体<てきいったい>を/<つか>んで放<ほう>り投<な>げ、一斉射撃<いっせいしゃげき>をたたきこみます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
-  english: "Grab and throw 1 enemy, then unleash a barrage.Lock-on recommended for accuracy."
-"一定時間<いっていじかん>レーザーをはねかえすシールドを発生<はっせい>させるパーツです。 複数<ふくすう>セットすることでシールドの持続時間<じぞくじかん>をのばすことができます。":
-  english: "Generates a shield that reflects lasers for a time.Stack to extend duration."
-"ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。        ":
-  english: "Blast monkeys with a cannon.Hits 1 enemy repeatedly."
-"ピポサルを大砲<たいほう>で乱射<らんしゃ>する荒技<あらわざ>です。 敵<てき>1体<たい>に連続<れんぞく>ヒットします。       ":
-  english: "Blast monkeys with a cannon.Hits 1 enemy repeatedly."
-"ゴリアックヘッドを起動<きどう>し、レーザーで攻撃<こうげき>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>できますが、空中<くうちゅう>の敵<てき>はねらえません。":
-  english: "Activates the Goliath Head to attack with lasers.Hits a wide area but can't target airborne enemies."
-"強力<きょうりょく>な'光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
-  english: "Fires a powerful flashbang that stuns nearby enemies.Does not do damage."
-"敵<てき>を麻痺<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
-  english: "Unleashes a dark scream that paralyzes enemies.Does not do damage."
-"強力<きょうりょく>な'光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
-  english: "Fires a powerful flashbang that stuns nearby enemies.Does not do damage."
-"敵<てき>を麻痺<まひ>させる暗黒<あんこく>の叫<さけ>びを発<はっ>します。 攻撃力<こうげきりょく>はまったくありません。    ":
-  english: "Unleashes a dark scream that paralyzes enemies.Does not do damage."
-"二丁拳銃<にちょうけんじゅう>にエネルギーを充填<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。":
-  english: "Dual pistols charge energy and spin to attack.Effective only at close range."
-"前方<ぜんぽう>に大<おお>きな暗黒弾<あんこくだん>を放<はな>ちます。 効果範囲<こうかはんい>が小<ちい>さいかわりに大<おお>きな破壊力<はかいりょく>を持<も>ちます。":
-  english: "Fires a large dark orb forward.Small range but high destructive power."
-"強力<きょうりょく>な閃光弾<せんこうだん>を発射<はっしゃ>して周囲<しゅうい>の敵<てき>をダウンさせます。 攻撃力<こうげきりょく>はまったくありません。":
-  english: "Fires a powerful flashbang,knocking down nearby enemies.Does not do damage."
-"敵<てき>1体<たい>にバナナをぶつけ、無数<むすう>のピポサルに攻撃<こうげき>させます。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
-  english: "Throw a banana at 1 enemy and unleash countless Pipo Monkeys to attack.Lock-on recommended for accuracy."
-"一定時間<いっていじかん>バリアを張<は>って、無敵状態<むてきじょうたい>になります。 バリア中<ちゅう>は他<ほか>の必殺技<ひっさつわざ>が使<つか>えませんので注意<ちゅうい>してください。":
-  english: "For a while,you'll be invincible with a barrier.But no other special moves can be used."
-"アーモンチェアに乗<の>って誘導<ゆうどう>ビームで攻撃<こうげき>します。 ビームを当<あ>てるには敵<てき>に近<ちか>づく必要<ひつよう>があります。":
-  english: "Ride an armchair and attack with a homing beam.Get close to hit enemies."
-"バナナ型<がた>のロケットに乗<の>って体当<たいあ>たりする技<わざ>です。 ロケット発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。":
-  english: "A banana-shaped rocket attack.No brakes while active,so be careful!"
-"前方<ぜんぽう>に無数<むすう>の暗黒<あんこく>の牙<きば>が立<た>ち上<あ>がります。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。    ":
-  english: "Countless dark fangs rise ahead.Attacks wide-range enemies."
-"ジャンプし、空中<くうちゅう>から真下<ました>に矢<や>を放<はな>ち、衝撃波<しょうげきは>で攻撃<こうげき>します。 地上<ちじょう>の敵<てき>に有効<ゆうこう>です。":
-  english: "Jump and shoot arrows straight down,creating shockwaves.Effective against ground enemies."
-"近距離<きんきょり>の敵<てき>に対<たい>し、技<わざ>ストックゲージを3本消費<ぼんしょうひ>して、衛星反射<えいせいはんしゃ>レーザー砲<ほう>を発射<はっしゃ>します。 必殺技<ひっさつわざ>を入力<にゅうりょく>してからレーザー砲発射<ほうはっしゃ>までには時間<じかん>がかかりますので注意<ちゅうい>してください。":
-  english: "Consumes 3 stock gauges to fire a satellite laser cannon.Takes time to activate."
-"回転<かいてん>しながらアームショットを乱射<らんしゃ>します。 広範囲<こうはんい>の敵<てき>を攻撃<こうげき>することができます。":
-  english: "Spins while firing arm shots wildly.Effective on wide-range enemies."
-"8本<ほん>の追尾<ついび>する光<ひかり>の矢<や>を放<はな>ちます。 空中<くうちゅう>の敵<てき>もねらえる便利<べんり>な必殺技<ひっさつわざ>です。":
-  english: "Fires 8 homing light arrows.Handy for hitting airborne foes."
-"高速<こうそく>で回転<かいてん>しながら光<ひかり>の矢<や>を乱射<らんしゃ>します。 広範囲<こうはんい>の敵<てき>に有効<ゆうこう>ですが、空中<くうちゅう>の敵<てき>はねらえません。":
-  english: "Rapidly spins and fires light arrows.Effective on wide-rangefoes,but not airborne ones."
-"蹴<け>り上<あ>げた相手<あいて>に一斉射撃<いっせいしゃげき>をおみまいします。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
-  english: "Kicks foes up and unleashes a barrage.Lock-on for accuracy."
-'二丁拳銃<にちょうけんじゅう>にエネルギーを充"<じゅうてん>し、回転<かいてん>して攻撃<こうげき>します。 近距離<きんきょり>の敵<てき>にのみ有効<ゆうこう>です。':
-  english: "Charges energy into dual pistols and spins around to attack.Effective only on close-range foes."
-"周辺<しゅうへん>の敵<てき>を吸<す>い込<こ>む巨大<きょだい>な竜巻<たつまき>を発生<はっせい>させます。 広範囲<こうはんい>の敵<てき>に攻撃<こうげき>することができます。":
-  english: "Summons a massive tornado to suck in nearby foes.Hits a wide area."
-"アーモンチェアに乗<の>って体当<たいあ>たりする技<わざ>です。 発動中<はつどうちゅう>はブレーキがきかないので注意<ちゅうい>してください。":
-  english: "Ride the armchair and ram into enemies! Be careful,the brakes won't work!"
-  
+"エンゼルセット":
+  english: "Angel Set"
+"中世<ちゅうせい>の騎土風<きしふう>の甲狙<かっちゅう>です。":
+  english: "A medieval knight-style armor."
 
 ## Probably gadget text
 "ヘビーメック":
   english: "Heavy Mech"
 "攻撃力重視<こうげきりょくじゅうし>のタンクです。":
   english: "An offensive-focused tank."
-
-## Probably in level text
-"エネルギー供給炉l号機起動!":
-  english: "Reactor 1 online!"
-"エネルギー供給炉2号機起動!":
-  english: "Reactor 2 online!"
-"エネルギー供給炉3号機起動!":
-  english: "Reactor 3 online!"
-"改造<かいぞう>レーザー砲<ほう>が使用可能<しようかのう>になりました。\n必殺技<ひっさつわざ>セレクトで装備<そうび>できます。":
-  english: "Modified Laser Cannon can now\nbe selected as a special move."
+"ヘビータンク":
+  english: "Heavy Tank"
+"このステージには乗<の>り物<もの>は持<も>ち込<こ>めません。":
+  english: "Vehicles cannot be brought into this stage."
 
 ## Probably monkey text
 ### Capture text
 "ショーウィンドウで待<ま>ち伏<ぶ>せているところを\n発見<はっけん>されゲッチュされる。":
   english: "Captured while lying in wait in\na shop window."
-"ジュンを発見しました!":
-  english: "Jun has been found!"
-
 
 ## Monkey descriptions
 "つよい":
@@ -3628,141 +3760,5 @@ Gクラッシャー:
   english: "Strong"
 "よわい":
   english: "Weak"
-
-# Honestly idc this is mostly AI slop hopefully it's not too bad
-"サウンドの出カ形式<しゅつりょくけいしき>を選択<せんたく>してください。":
-  english: "Choose sound output format."
-"%のミリオンモンキーズのゲームデータ作成<さくせい>に\n失敗<しっぱい>しました。":
-  english: "Failed to create Million Monkeys\ngame data on %."
-"%の進行<しんこう>ファイルの\nロードに失敗<しっぱい>しました。":
-  english: "Failed to load progress\nfile on %."
-"このステージには乗<の>り物<もの>は持<も>ち込<こ>めません。":
-  english: "Vehicles cannot be brought into this stage."
-"メモリーカード(PS2)が\n%に\n差<さ>し込<こ>まれていません。":
-  english: "\nMemory Card not inserted in %.\n"
-"%に前回<ぜんかい>ロードした\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
-  english: "Memory Card not inserted in %.\nCannot save progress file.\nPlease insert the last loaded Memory Card."
-"%のメモリーカード(PS2)がぬかれたため\nキャラクターファイルのセーブに失敗<しっぱい>しました。\nこのままではキャラクターファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。\nキャンセルすると、チップは失<うしな>われてしまいます。":
-  english: "Memory Card removed from %.\nFailed to save character file.\nCannot save character file.\nPlease insert the last loaded Memory Card.\nCanceling will result in lost chips."
-"削除<さくじょ>するチップを選<えら>んで、結果<けっか>をセーブします。":
-  english: "Select chip to delete and save results."
-"セットする必殺技<ひっさつわざ>を選<えら>んでください。":
-  english: "Select a special move to equip."
-"バイブレーションのオン⋅オフを選択<せんたく>してください。":
-  english: "Turn vibration on or off."
-"なんいど設定<せってい>":
-  english: "Difficulty settings."
-"オプション設定<せってい>":
-  english: "Options settings."
-"リッキーを発見しました!":
-  english: "Ricky found!"
-"ラウンド最終集計結果<さいしゅうしゅうけいけっか>":
-  english: "Final Round Results."
-  password: true
-"トロを発見しました!":
-  english: "Toro found!"
-"%に\nメモリーカード(PS2)が差<さ>し込<こ>まれていません。\nこのままでは進行<しんこう>ファイルのセーブができません。\n前回<ぜんかい>ロードしたメモリーカード(PS2)を差<さ>してください。":
-  english: "Memory Card not inserted in %.\nCannot save progress file.\nInsert the previously loaded Memory Card."
-"トロコスチュームをゲットしました。":
-  english: "You got the Toro costume!"
-"データA抽出完了!":
-  english: "Data A extraction complete!"
-"中世<ちゅうせい>の騎土風<きしふう>の甲狙<かっちゅう>です。":
-  english: "A medieval knight-style armor."
-"攻撃力重視<こうげきりょくじゅうし>のロボットです。":
-  english: "A robot focused on attack power."
-"高<たか>く羽<は>ばたくことのできるアクマのような外見<がいけん>の翼<つばさ>。 エネルギーを消費<しょうひ>せず、好<す>きなだけ使<つか>うことができます。":
-  english: "Wings with a devilish look that let you soar high.Use them freely without energy cost."
-"ラウンドを始<はじ>めます。":
-  english: "Round Start."
-"謎の男再び":
-  english: "Mysterious Man Returns"
-"エンゼルセット":
-  english: "Angel Set"
-"でちゃダメ":
-  english: "Don't Go Out"
-"ミッション結果<けっか>":
-  english: "Mission Results"
-  password: true
-"チェーンボーナス":
-  english: "Chain Bonus"
-  password: true
-"キャラクター名":
-  english: "Character Name"
-"大<おお>きな翼<つばさ>の形<かたち>をしたバーニアです。 これを装備<そうび>して羽<は>ばたく様<さま>はまるで天使<てんし>のように美<うつく>しく見<み>えることでしょう。":
-  english: "Large wing-shaped jetpack.Flapping resembles a beautiful angel."
-"チップを諦<あきら>めてステージセレクトに戻<もど>ります。":
-  english: "Abandon chip and return to the Stage Select menu."
-"サバクノクニの王<おう>さま。 強力<きょうりょく>な「<のろ>いで援護<えんご>してくれます。        ":
-  english: "King of the Desert Nation.Provides strong 'curse' support."
-"中級者<ちゅうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
-  english: "Start an intermediate tournament."
-"上級者<じょうきゅうしゃ>が集<あつ>まるトーナメントに参加<さんか>します。":
-  english: "Start a hard tournament."
-"％<け>り上<あ>げた相手<あいて>に一斉射撃<いっせいしゃげき>をおみまいします。 確実<かくじつ>に当<あ>てるにはロックオンがおすすめです。":
-  # This seems to be a real string, but probably unused? Matches an existing string with correct kanji
-  english: "Fire a barrage at the raised enemy.Lock-on recommended for accuracy."
-"チップ合成<ごうせい>できないキャラクターなので\nムーブできません。":
-  english: "This character can't combine chips\nand cannot be moved."
-"すでにロードされた\nキャラクターは使用<しよう>できません。":
-  english: "Loaded characters\ncan't be used."
-"データB抽出完了!":
-  english: "Data B extraction complete!"
-"他のボタンでとりけし":
-  english: "Cancel with another button."
-"そうさ説明":
-  english: "Control Instructions"
-"ヘルプ文章<ぶんしょう>":
-  english: "Help Text"
-"のデータを復元中<ふくげんちゅう>。":
-  english: "Restoring data."
-"合成<ごうせい>に失敗<しっぱい>しました。":
-  english: "Synthesis failed."
-"バリア":
-  english: "Barrier"
-"エクストララウンド結果":
-  english: "Extra Round Results"
-  password: true
-"ガチャメカ名":
-  english: "Gadget Name"
-"トロンウィング":
-  english: "Tron Wing"
-"ヘビータンク":
-  english: "Heavy Tank"
-"作成中<さくせいちゅう>":
-  english: "Creating..."
-"セットOK":
-  english: "Set OK"
-"空移":
-  # Air dash?
-  english: "Air Move"
-"ウィルスチャル":
-  english: "Virus Charu"
-"かくにん":
-  english: "Confirm"
-"すすむ":
-  english: "Proceed"
-"撃破ボーナス":
-  english: "Defeat Bonus"
-  password: true
-"回ミス":
-  # Probably goes after a number?
-  english: "Misses"
-"ふつう":
-  english: "Normal"
 "げきつよ":
   english: "Super Strong"
-"ああああ":
-  english: "AAAA"
-"からふぁいる":
-  # Why is this in hiragana????
-  # Probably 空ファイル
-  english: "Empty File"
-"はそんふぁいる":
-  # Why is this in hiragana????
-  # Probably 破損ファイル
-  english: "Corrupted File"
-"属性<ぞくせい>の違<ちが>うパーツはセットできません。":
-  english: "Parts with different attributes cannot be set."
-"を編集中":
-  english: "is being edited"
